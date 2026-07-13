@@ -1,26 +1,274 @@
 @import "tailwindcss";
 
+/* ---------------------------------------------------------------------- */
+/* Design tokens — Brand Book Dallila Camargo                             */
+/* ---------------------------------------------------------------------- */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* tema escuro (default) */
+  --bg: #2a070c;
+  --bg-alt: #380b12;
+  --surface: #3f0e17;
+  --hairline: rgba(159, 142, 135, 0.3);
+  --hairline-strong: rgba(159, 142, 135, 0.5);
+  --gold: #9f8e87;
+  --gold-bright: #c9bba8;
+  --wine: #b5495a;
+  --wine-deep: #7a2430;
+  --ink: #ddc8b3;
+  --ink-dim: #9f8e87;
+  --success: #8fa37a;
+  --error: #c2665f;
+  --warning: #d3a054;
+
+  /* tokens fixos da marca (independem de tema) */
+  --brand-vinho-porto: #2a070c;
+  --brand-marfim-rosado: #ddc8b3;
+  --brand-dourado-latao: #c9a227;
+  --brand-bordo-assinatura: #7a2430;
+  --brand-pergaminho-neutro: #9f8e87;
+
+  /* escala tipográfica (razão áurea 1.618) */
+  --text-eyebrow: 10px;
+  --text-body: 16px;
+  --text-h4: 26px;
+  --text-h3: 42px;
+  --text-h2: 68px;
+  --text-h1: 110px;
+  --text-display: 178px;
+
+  /* motion */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg: #ddc8b3;
+    --bg-alt: #d3bb9e;
+    --surface: #f2e7d8;
+    --hairline: rgba(42, 7, 12, 0.2);
+    --hairline-strong: rgba(42, 7, 12, 0.4);
+    --gold: #6e5c53;
+    --gold-bright: #4a3b34;
+    --wine: #7a2430;
+    --wine-deep: #5c1b22;
+    --ink: #2a070c;
+    --ink-dim: #6e5c53;
+    --success: #4f6b3c;
+    --error: #9c2e28;
+    --warning: #8a5a1e;
   }
 }
 
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-alt: var(--bg-alt);
+  --color-surface: var(--surface);
+  --color-hairline: var(--hairline);
+  --color-hairline-strong: var(--hairline-strong);
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-wine: var(--wine);
+  --color-wine-deep: var(--wine-deep);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-success: var(--success);
+  --color-error: var(--error);
+  --color-warning: var(--warning);
+  --color-brand-gold: var(--brand-dourado-latao);
+  --color-brand-wine: var(--brand-bordo-assinatura);
+
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --text-eyebrow: var(--text-eyebrow);
+  --text-body: var(--text-body);
+  --text-h4: var(--text-h4);
+  --text-h3: var(--text-h3);
+  --text-h2: var(--text-h2);
+  --text-h1: var(--text-h1);
+  --text-display: var(--text-display);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Base                                                                    */
+/* ---------------------------------------------------------------------- */
+
+html {
+  background: var(--bg);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.font-eyebrow {
+  font-family: var(--font-mono), monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 1;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* utilitário de viewport dinâmico (teclado virtual mobile) */
+.min-h-screen-safe {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* moldura dupla concêntrica ("enclosure nested") */
+.enclosure-nested {
+  border: 1px solid var(--hairline);
+  padding: 20px;
+}
+
+.enclosure-nested__inner {
+  border: 1px solid var(--gold);
+  background: var(--bg-alt);
+  padding: 20px;
+}
+
+/* foco visível */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Conteúdo longo (artigos do blog)                                       */
+/* ---------------------------------------------------------------------- */
+
+.prose-article {
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.prose-article > * + * {
+  margin-top: 1.25em;
+}
+
+.prose-article h2 {
+  margin-top: 2.5em;
+  font-size: var(--text-h4);
+  font-weight: 500;
+}
+
+.prose-article h3 {
+  margin-top: 2em;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.prose-article p {
+  color: var(--ink-dim);
+}
+
+.prose-article a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-article ul,
+.prose-article ol {
+  padding-left: 1.5em;
+  color: var(--ink-dim);
+}
+
+.prose-article li + li {
+  margin-top: 0.5em;
+}
+
+.prose-article ul {
+  list-style: disc;
+}
+
+.prose-article ol {
+  list-style: decimal;
+}
+
+.prose-article blockquote {
+  border-left: 2px solid var(--gold);
+  padding-left: 1.25em;
+  color: var(--ink-dim);
+  font-style: italic;
+}
+
+.prose-article strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Motion                                                                  */
+/* ---------------------------------------------------------------------- */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes step-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 1.1s var(--ease-out);
+}
+
+.animate-step-in {
+  animation: step-in 0.35s var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.2s !important;
+    animation-name: fade-in !important;
+    transition-duration: 0.2s !important;
+    scroll-behavior: auto !important;
+  }
 }
