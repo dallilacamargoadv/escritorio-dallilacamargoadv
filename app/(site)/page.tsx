@@ -39,19 +39,32 @@ export default function HomePage() {
       />
 
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
-        <Reveal>
-          <h1 className="max-w-xl text-4xl sm:text-6xl">
-            <em className="italic text-gold">Direito Digital</em> com método
-            para quem constrói negócios, marca e conteúdo na internet.
-          </h1>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="/contato">Iniciar atendimento</Button>
-            <Button href="#areas-de-atuacao" variant="secondary">
-              Áreas de Atuação
-            </Button>
-          </div>
-        </Reveal>
+      <section className="relative overflow-hidden">
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        >
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-bg/70" />
+        <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
+          <Reveal>
+            <h1 className="max-w-xl text-4xl sm:text-6xl">
+              <em className="italic text-gold">Direito Digital</em> com método
+              para quem constrói negócios, marca e conteúdo na internet.
+            </h1>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button href="/contato">Iniciar atendimento</Button>
+              <Button href="#areas-de-atuacao" variant="secondary">
+                Áreas de Atuação
+              </Button>
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       {/* Áreas de Atuação */}
