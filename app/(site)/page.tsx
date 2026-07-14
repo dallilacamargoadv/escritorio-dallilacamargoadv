@@ -59,7 +59,8 @@ export default function HomePage() {
               constrói no ambiente digital.
             </h1>
             <p className="mt-4 max-w-xl text-base text-ink-dim sm:text-lg">
-              Estratégia para estruturar antes. Atuação quando necessário.
+              Uma advocacia voltada à prevenção, à proteção de ativos e à
+              construção de relações jurídicas seguras no ambiente digital.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href="/contato">Iniciar atendimento</Button>

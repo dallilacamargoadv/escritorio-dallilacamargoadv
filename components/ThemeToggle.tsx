@@ -43,7 +43,11 @@ function getFirstVisitServerSnapshot(): boolean {
   return false;
 }
 
-export function ThemeToggle() {
+export function ThemeToggle({
+  variant = "floating",
+}: {
+  variant?: "floating" | "inline";
+}) {
   const theme = useSyncExternalStore(
     subscribe,
     getThemeSnapshot,
@@ -55,7 +59,7 @@ export function ThemeToggle() {
     getFirstVisitServerSnapshot,
   );
   const [dismissed, setDismissed] = useState(false);
-  const showCard = isFirstVisit && !dismissed;
+  const showCard = variant === "floating" && isFirstVisit && !dismissed;
 
   useEffect(() => {
     applyTheme(theme);
@@ -75,6 +79,22 @@ export function ThemeToggle() {
     window.dispatchEvent(new Event("theme-change"));
   }
 
+  const label =
+    theme === "dark" ? "Mudar para tema claro" : "Mudar para tema escuro";
+
+  if (variant === "inline") {
+    return (
+      <button
+        type="button"
+        onClick={toggle}
+        aria-label={label}
+        className="flex h-9 w-9 items-center justify-center text-ink-dim transition-colors duration-150 hover:text-gold"
+      >
+        {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+      </button>
+    );
+  }
+
   return (
     <div className="fixed bottom-6 right-6 z-[60] flex items-center">
       {showCard && (
@@ -89,9 +109,7 @@ export function ThemeToggle() {
       <button
         type="button"
         onClick={toggle}
-        aria-label={
-          theme === "dark" ? "Mudar para tema claro" : "Mudar para tema escuro"
-        }
+        aria-label={label}
         className="flex h-11 w-11 items-center justify-center border border-hairline-strong bg-surface text-ink transition-colors duration-150 hover:border-gold hover:text-gold"
       >
         {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}

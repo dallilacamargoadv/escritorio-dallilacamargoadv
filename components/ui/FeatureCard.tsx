@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { Icon, type IconName } from "@/components/ui/Icon";
 
 export function FeatureCard({
@@ -28,11 +29,17 @@ export function FeatureCard({
       <p className="mt-2 text-sm leading-relaxed text-ink-dim">
         {description}
       </p>
+      {href && (
+        <ArrowUpRight
+          size={14}
+          className="absolute bottom-6 right-6 text-ink-dim/40 transition-all duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-gold"
+        />
+      )}
     </>
   );
 
   const className =
-    "block border border-hairline p-6 transition-colors duration-150 hover:border-gold";
+    "group relative block border border-hairline p-6 transition-colors duration-150 hover:border-gold";
 
   if (href) {
     return (

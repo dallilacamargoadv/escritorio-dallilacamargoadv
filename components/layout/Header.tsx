@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { SERVICE_AREAS } from "@/lib/site-data";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -72,25 +73,29 @@ export function Header() {
           </Button>
         </nav>
 
-        <button
-          type="button"
-          className="flex h-10 w-10 items-center justify-center md:hidden"
-          aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={mobileOpen}
-          onClick={() => setMobileOpen((v) => !v)}
-        >
-          <span className="relative block h-4 w-6">
-            <span
-              className={`absolute left-0 top-0 h-px w-6 bg-ink transition-transform duration-200 ${mobileOpen ? "translate-y-[7px] rotate-45" : ""}`}
-            />
-            <span
-              className={`absolute left-0 top-[7px] h-px w-6 bg-ink transition-opacity duration-200 ${mobileOpen ? "opacity-0" : ""}`}
-            />
-            <span
-              className={`absolute left-0 top-[14px] h-px w-6 bg-ink transition-transform duration-200 ${mobileOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
-            />
-          </span>
-        </button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle variant="inline" />
+
+          <button
+            type="button"
+            className="flex h-10 w-10 items-center justify-center md:hidden"
+            aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={mobileOpen}
+            onClick={() => setMobileOpen((v) => !v)}
+          >
+            <span className="relative block h-4 w-6">
+              <span
+                className={`absolute left-0 top-0 h-px w-6 bg-ink transition-transform duration-200 ${mobileOpen ? "translate-y-[7px] rotate-45" : ""}`}
+              />
+              <span
+                className={`absolute left-0 top-[7px] h-px w-6 bg-ink transition-opacity duration-200 ${mobileOpen ? "opacity-0" : ""}`}
+              />
+              <span
+                className={`absolute left-0 top-[14px] h-px w-6 bg-ink transition-transform duration-200 ${mobileOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
+              />
+            </span>
+          </button>
+        </div>
       </div>
 
       {mobileOpen && (

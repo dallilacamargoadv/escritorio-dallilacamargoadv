@@ -1,7 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CookieConsentBanner } from "@/components/CookieConsentBanner";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { CursorGlow } from "@/components/CursorGlow";
 
 export default function SiteLayout({
@@ -17,7 +16,6 @@ export default function SiteLayout({
       <main className="flex-1">{children}</main>
       <Footer />
       <CookieConsentBanner />
-      <ThemeToggle />
     </>
   );
 }
