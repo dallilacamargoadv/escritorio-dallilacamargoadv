@@ -11,9 +11,11 @@ import { LeadCharts } from "@/components/admin/LeadCharts";
 const PAGE_SIZE = 30;
 
 const FORM_TYPE_LABELS: Record<string, string> = {
-  conta_hackeada: "Conta Hackeada",
-  contratos: "Contratos",
+  contratos: "Contratos Digitais",
   propriedade_intelectual: "Propriedade Intelectual",
+  contas_e_plataformas: "Contas e Plataformas",
+  golpes_virtuais: "Golpes Virtuais",
+  assessoria_estrategica: "Assessoria Estratégica",
 };
 
 type SortKey = "created_at" | "name" | "email" | "form_type";
@@ -151,10 +153,14 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
           className="border border-neutral-800 bg-neutral-900 px-3 py-2 text-sm text-neutral-100"
         >
           <option value="all">Todas as áreas</option>
-          <option value="conta_hackeada">Conta Hackeada</option>
-          <option value="contratos">Contratos</option>
+          <option value="contratos">Contratos Digitais</option>
           <option value="propriedade_intelectual">
             Propriedade Intelectual
+          </option>
+          <option value="contas_e_plataformas">Contas e Plataformas</option>
+          <option value="golpes_virtuais">Golpes Virtuais</option>
+          <option value="assessoria_estrategica">
+            Assessoria Estratégica
           </option>
         </select>
         <input

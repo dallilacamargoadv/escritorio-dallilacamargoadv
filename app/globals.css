@@ -43,8 +43,10 @@
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
+/* fallback automático por preferência do sistema, usado só até o
+   visitante escolher um tema explicitamente pelo botão de troca */
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme]) {
     --bg: #ddc8b3;
     --bg-alt: #d3bb9e;
     --surface: #f2e7d8;
@@ -60,6 +62,42 @@
     --error: #9c2e28;
     --warning: #8a5a1e;
   }
+}
+
+/* escolha explícita do visitante, via botão de troca de tema (sobrepõe o
+   fallback de sistema acima, em qualquer direção) */
+:root[data-theme="light"] {
+  --bg: #ddc8b3;
+  --bg-alt: #d3bb9e;
+  --surface: #f2e7d8;
+  --hairline: rgba(42, 7, 12, 0.2);
+  --hairline-strong: rgba(42, 7, 12, 0.4);
+  --gold: #6e5c53;
+  --gold-bright: #4a3b34;
+  --wine: #7a2430;
+  --wine-deep: #5c1b22;
+  --ink: #2a070c;
+  --ink-dim: #6e5c53;
+  --success: #4f6b3c;
+  --error: #9c2e28;
+  --warning: #8a5a1e;
+}
+
+:root[data-theme="dark"] {
+  --bg: #2a070c;
+  --bg-alt: #380b12;
+  --surface: #3f0e17;
+  --hairline: rgba(159, 142, 135, 0.3);
+  --hairline-strong: rgba(159, 142, 135, 0.5);
+  --gold: #9f8e87;
+  --gold-bright: #c9bba8;
+  --wine: #b5495a;
+  --wine-deep: #7a2430;
+  --ink: #ddc8b3;
+  --ink-dim: #9f8e87;
+  --success: #8fa37a;
+  --error: #c2665f;
+  --warning: #d3a054;
 }
 
 @theme inline {
@@ -99,6 +137,10 @@
 
 html {
   background: var(--bg);
+  /* evita que o navegador "compense" scroll automaticamente quando
+     imagens/seções assíncronas mudam de altura — interfere com
+     seções de scroll controlado via GSAP ScrollTrigger */
+  overflow-anchor: none;
 }
 
 body {
@@ -123,6 +165,19 @@ h4 {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   line-height: 1;
+}
+
+/* textura de grain cinematográfica, sutil, sobre todo o site público */
+.site-noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+  opacity: 0.075;
+  mix-blend-mode: soft-light;
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.15' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.65'/%3E%3C/svg%3E");
 }
 
 .tabular-nums {

@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { SERVICE_AREAS } from "@/lib/site-data";
 import { Button } from "@/components/ui/Button";
+import { Logo } from "@/components/ui/Logo";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -25,25 +25,17 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-hairline bg-bg/95 backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link
-          href="/"
-          className="flex items-center gap-2"
-          onClick={() => setMobileOpen(false)}
-        >
-          <Image
-            src="/logo-abelha.png"
-            alt=""
-            width={28}
-            height={28}
-            aria-hidden="true"
-            className="h-7 w-7"
-          />
-          <span className="hidden font-display text-lg italic text-ink sm:inline">
-            Dallila Camargo
-          </span>
+        <Link href="/" onClick={() => setMobileOpen(false)}>
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Principal">
+          <Link
+            href="/"
+            className="text-sm text-ink hover:text-gold transition-colors duration-150"
+          >
+            Início
+          </Link>
           <div className="group relative">
             <button className="text-sm text-ink hover:text-gold transition-colors duration-150">
               Áreas de Atuação
@@ -64,7 +56,7 @@ export function Header() {
             </div>
           </div>
           <Link
-            href="/#sobre-nos"
+            href="/sobre"
             className="text-sm text-ink hover:text-gold transition-colors duration-150"
           >
             Sobre
@@ -107,7 +99,14 @@ export function Header() {
             aria-label="Principal (mobile)"
             className="flex flex-col gap-1 px-4 py-6"
           >
-            <span className="font-eyebrow text-gold text-[10px] px-2 pb-2">
+            <Link
+              href="/"
+              onClick={() => setMobileOpen(false)}
+              className="border-b border-hairline px-2 py-4 text-base text-ink"
+            >
+              Início
+            </Link>
+            <span className="font-eyebrow text-gold text-[10px] px-2 pb-2 pt-4">
               Áreas de Atuação
             </span>
             {SERVICE_AREAS.map((area) => (
@@ -121,7 +120,7 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="/#sobre-nos"
+              href="/sobre"
               onClick={() => setMobileOpen(false)}
               className="border-b border-hairline px-2 py-4 text-base text-ink"
             >

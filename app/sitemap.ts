@@ -6,6 +6,7 @@ import { BLOG_CATEGORIES, CATEGORY_SLUGS, getAllPosts } from "@/lib/blog";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: BASE_URL, changeFrequency: "monthly", priority: 1 },
+    { url: `${BASE_URL}/sobre`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/contato`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/blog`, changeFrequency: "weekly", priority: 0.7 },
     {

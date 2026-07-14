@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="border-t border-hairline bg-bg-alt">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div>
             <Link href="/" className="flex items-center gap-2">
               <Image
@@ -23,10 +23,10 @@ export function Footer() {
                 Dallila Camargo
               </span>
             </Link>
-            <p className="mt-4 text-sm text-ink-dim">
-              Profissional individual, {SITE.oab} (CNPJ em fase de emissão).
+            <p className="mt-4 max-w-xs text-sm text-ink-dim">
+              Direito Digital com método para quem constrói negócios, marca
+              e conteúdo na internet.
             </p>
-            <p className="mt-2 text-sm text-ink-dim">{SITE.city}</p>
           </div>
 
           <div>
@@ -42,12 +42,18 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-eyebrow text-[10px] text-gold">Blog</h3>
+            <ul className="mt-4 space-y-3">
               <li>
                 <Link
                   href="/blog"
                   className="text-sm text-ink-dim hover:text-gold transition-colors duration-150"
                 >
-                  Blog
+                  Ver artigos
                 </Link>
               </li>
             </ul>
@@ -58,7 +64,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3">
               <li>
                 <Link
-                  href="/#sobre-nos"
+                  href="/sobre"
                   className="text-sm text-ink-dim hover:text-gold transition-colors duration-150"
                 >
                   Sobre Nós
@@ -86,7 +92,6 @@ export function Footer() {
           <div>
             <h3 className="font-eyebrow text-[10px] text-gold">Contato</h3>
             <ul className="mt-4 space-y-3 text-sm text-ink-dim">
-              <li>{SITE.phone}</li>
               <li>
                 <a
                   href={`mailto:${SITE.email}`}
@@ -109,8 +114,16 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-hairline pt-6 text-xs text-ink-dim">
-          © {year} {SITE.name}. Todos os direitos reservados.
+        <div className="mt-12 space-y-2 border-t border-hairline pt-6 text-xs text-ink-dim">
+          <p className="max-w-2xl">
+            Este site tem caráter exclusivamente informativo. As
+            informações apresentadas não constituem aconselhamento
+            jurídico individualizado e não substituem a consulta a
+            profissional habilitado. Em conformidade com o Provimento
+            205/2021 da OAB.
+          </p>
+          <p>Dallila Camargo — {SITE.oab}</p>
+          <p>© {year} Dallila Camargo I Advocacia. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

@@ -44,6 +44,15 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/recuperacao-e-reativacao-de-conta-hackeada",
+        destination: "/contas-e-plataformas",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

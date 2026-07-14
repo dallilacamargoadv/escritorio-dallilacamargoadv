@@ -1,9 +1,11 @@
 import { createClient as createSupabaseClient } from "@supabase/supabase-js";
 
 export type LeadFormType =
-  | "conta_hackeada"
   | "contratos"
-  | "propriedade_intelectual";
+  | "propriedade_intelectual"
+  | "contas_e_plataformas"
+  | "golpes_virtuais"
+  | "assessoria_estrategica";
 
 export interface InsertLeadInput {
   formType: LeadFormType;

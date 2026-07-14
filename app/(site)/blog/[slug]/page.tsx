@@ -87,7 +87,7 @@ export default async function BlogPostPage({
         <div className="mt-6 flex items-center gap-3 font-mono text-xs text-ink-dim tabular-nums">
           <time dateTime={post.date}>{formatDate(post.date)}</time>
           <span aria-hidden="true">·</span>
-          <Link href="/#sobre-nos" className="hover:text-gold">
+          <Link href="/sobre" className="hover:text-gold">
             Dallila Camargo
           </Link>
           <span aria-hidden="true">·</span>

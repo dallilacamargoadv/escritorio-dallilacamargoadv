@@ -32,24 +32,24 @@ const initialFormData: FormData = {
   professionalUse: "",
 };
 
-const TOTAL_STEPS = 7; // 1-6 = perguntas, 7 = obrigado
+const TOTAL_STEPS = 7;
 const TOTAL_QUESTIONS = 6;
 
 const INCIDENT_OPTIONS = [
   {
-    value: "invasao",
-    label: "Fui hackeado / Invadiram minha conta",
-    hint: "Perdi o acesso, mudaram e-mail/senha ou estão postando no meu lugar.",
+    value: "identidade",
+    label: "Estão usando minha identidade ou minha imagem",
+    hint: "Perfil falso criado por terceiros ou uso indevido das minhas informações.",
   },
   {
-    value: "bloqueio",
-    label: "Minha conta foi bloqueada / Suspensa",
-    hint: "A própria plataforma desativou ou baniu meu perfil por suposta violação de termos.",
+    value: "fraude_negociacao",
+    label: "Fui vítima de fraude em uma negociação",
+    hint: "Golpe envolvendo pagamento, venda ou prestação de serviço.",
   },
   {
-    value: "golpe",
-    label: "Estão aplicando golpes usando meu nome/foto",
-    hint: "Perfil fake criado por terceiros ou uso indevido da minha imagem.",
+    value: "conta_usada_por_terceiros",
+    label: "Minha conta foi usada por terceiros para aplicar golpes",
+    hint: "Após um acesso indevido, a conta foi usada para lesar outras pessoas.",
   },
   { value: "outra", label: "Outra situação" },
 ];
@@ -67,7 +67,7 @@ const PROFESSIONAL_USE_OPTIONS = [
   { value: "nao", label: "Não" },
 ];
 
-export function ContaHackeadaForm() {
+export function GolpesVirtuaisForm() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [utms] = useState<Record<string, string>>(() => getUtms());
@@ -112,7 +112,7 @@ export function ContaHackeadaForm() {
     setIsSubmitting(true);
     setError("");
     try {
-      const response = await fetch("/api/conta-hackeada-leads", {
+      const response = await fetch("/api/golpes-virtuais-leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -128,7 +128,7 @@ export function ContaHackeadaForm() {
       if (data?._eventId) {
         trackLead({
           eventId: data._eventId,
-          contentName: "Recuperação de Conta Hackeada",
+          contentName: "Golpes Virtuais",
           value: data._value ?? 0,
         });
       }
@@ -208,7 +208,7 @@ export function ContaHackeadaForm() {
 
       {step === 4 && (
         <StepFrame step={step} error={error} onBack={handlePrev}>
-          <p className="text-lg text-ink">O que aconteceu com a sua conta?</p>
+          <p className="text-lg text-ink">O que aconteceu?</p>
           <div className="mt-4 space-y-3">
             {INCIDENT_OPTIONS.map((option) => (
               <OptionButton

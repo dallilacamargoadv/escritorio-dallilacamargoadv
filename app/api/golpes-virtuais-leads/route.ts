@@ -5,7 +5,12 @@ import { insertLead } from "@/lib/db-leads";
 import { isValidEmail, isValidName, isValidWhatsapp } from "@/lib/validation";
 import { sendMetaLeadEvent } from "@/lib/tracking";
 
-const INCIDENT_VALUES = ["invasao", "bloqueio", "golpe", "outra"];
+const INCIDENT_VALUES = [
+  "identidade",
+  "fraude_negociacao",
+  "conta_usada_por_terceiros",
+  "outra",
+];
 const PLATFORM_VALUES = ["instagram", "facebook", "whatsapp", "email", "outra"];
 
 export async function POST(request: NextRequest) {
@@ -35,7 +40,7 @@ export async function POST(request: NextRequest) {
   const eventId = randomUUID();
 
   const result = await insertLead({
-    formType: "conta_hackeada",
+    formType: "golpes_virtuais",
     name,
     email,
     whatsapp,
@@ -49,7 +54,7 @@ export async function POST(request: NextRequest) {
     email,
     phone: whatsapp,
     name,
-    contentName: "Recuperação de Conta Hackeada",
+    contentName: "Golpes Virtuais",
     sourceUrl: request.headers.get("referer") ?? undefined,
     ip: metadata.ip,
     userAgent: metadata.userAgent,

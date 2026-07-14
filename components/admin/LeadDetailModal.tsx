@@ -4,9 +4,11 @@ import { MapPin, Cpu, Globe, X } from "lucide-react";
 import type { Lead } from "@/lib/db-admin";
 
 const FORM_TYPE_LABELS: Record<string, string> = {
-  conta_hackeada: "Conta Hackeada",
-  contratos: "Contratos",
+  contratos: "Contratos Digitais",
   propriedade_intelectual: "Propriedade Intelectual",
+  contas_e_plataformas: "Contas e Plataformas",
+  golpes_virtuais: "Golpes Virtuais",
+  assessoria_estrategica: "Assessoria Estratégica",
 };
 
 export function LeadDetailModal({

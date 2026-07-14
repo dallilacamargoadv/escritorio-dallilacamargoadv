@@ -7,13 +7,13 @@ export function SectionEyebrow({ children }: { children: React.ReactNode }) {
       <div className="flex items-center gap-3 shrink-0">
         <Image
           src="/logo-abelha.png"
-          width={20}
-          height={20}
+          width={32}
+          height={32}
           alt=""
           aria-hidden="true"
-          className="h-5 w-5 opacity-80"
+          className="h-8 w-8 opacity-80"
         />
-        <span className="font-eyebrow text-gold text-[10px]">{children}</span>
+        <span className="font-eyebrow text-gold text-base">{children}</span>
       </div>
       <span className="h-px flex-1 bg-hairline" />
     </div>

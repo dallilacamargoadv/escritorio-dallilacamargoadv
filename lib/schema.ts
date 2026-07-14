@@ -19,7 +19,6 @@ export function getLegalServiceSchema() {
     url: BASE_URL,
     logo: `${BASE_URL}/logo-abelha.png`,
     image: `${BASE_URL}/logo-abelha.png`,
-    telephone: SITE.phone,
     email: SITE.email,
     address: {
       "@type": "PostalAddress",
@@ -49,7 +48,7 @@ export function getPersonSchema() {
     jobTitle: "Advogada",
     description:
       "Advogada especializada em Direito Digital (OAB/PA nº 36.762), atuando em contratos digitais, propriedade intelectual e recuperação de contas comprometidas.",
-    url: `${BASE_URL}/#sobre-nos`,
+    url: `${BASE_URL}/sobre`,
     worksFor: { "@id": SCHEMA_IDS.legalService },
     identifier: SITE.oab,
     sameAs: [SITE.instagramUrl],

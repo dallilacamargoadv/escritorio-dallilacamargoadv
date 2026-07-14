@@ -7,7 +7,7 @@ import { EnclosureNested } from "@/components/ui/EnclosureNested";
 import { ThreeStepsScroll } from "@/components/ThreeStepsScroll";
 import { PointsOfAttention } from "@/components/PointsOfAttention";
 import { JsonLd } from "@/components/JsonLd";
-import { ContratosForm } from "@/components/forms/ContratosForm";
+import { GolpesVirtuaisForm } from "@/components/forms/GolpesVirtuaisForm";
 import { AREA_CONTENT } from "@/lib/area-content";
 import {
   BASE_URL,
@@ -16,31 +16,31 @@ import {
   jsonLdGraph,
 } from "@/lib/schema";
 
-const SLUG = "contratos";
+const SLUG = "golpes-virtuais";
 const PAGE_URL = `${BASE_URL}/${SLUG}`;
 const CONTENT = AREA_CONTENT[SLUG];
 
 export const metadata: Metadata = {
-  title: "Contratos Digitais",
+  title: "Golpes Virtuais",
   description:
-    "Elaboração, revisão e negociação de contratos para criadores de conteúdo, influenciadores e negócios digitais, com atenção a cláusulas, riscos e conformidade.",
+    "Atuação em situações envolvendo fraudes eletrônicas, utilização indevida de contas, engenharia social e transações fraudulentas.",
   alternates: { canonical: `/${SLUG}` },
 };
 
-export default function ContratosPage() {
+export default function GolpesVirtuaisPage() {
   return (
     <>
       <JsonLd
         data={jsonLdGraph([
           getServiceSchema({
-            name: "Contratos",
+            name: "Golpes Virtuais",
             description:
-              "Elaboração, revisão e negociação de contratos para prestadores de serviços, criadores de conteúdo e negócios digitais.",
+              "Atuação em situações envolvendo fraudes eletrônicas, utilização indevida de contas, engenharia social, transações fraudulentas e demais incidentes praticados no ambiente digital.",
             url: PAGE_URL,
           }),
           getBreadcrumbSchema([
             { name: "Home", url: BASE_URL },
-            { name: "Contratos", url: PAGE_URL },
+            { name: "Golpes Virtuais", url: PAGE_URL },
           ]),
         ])}
       />
@@ -49,13 +49,13 @@ export default function ContratosPage() {
       <section className="mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
         <Reveal>
           <h1 className="max-w-3xl text-4xl sm:text-6xl">
-            <em className="italic text-gold">Contratos</em> elaborados e
-            revisados para dar segurança às relações digitais.
+            <em className="italic text-gold">Golpes Virtuais</em> enfrentados
+            com atuação jurídica clara e estratégica.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Elaboração, revisão e negociação de contratos para prestadores de
-            serviços, criadores de conteúdo e negócios digitais, com atenção
-            a cláusulas, riscos e conformidade regulatória.
+            Atuação em situações envolvendo fraudes eletrônicas, utilização
+            indevida de contas, engenharia social, transações fraudulentas e
+            demais incidentes praticados no ambiente digital.
           </p>
           <div className="mt-8">
             <Button href="#formulario">Iniciar atendimento</Button>
@@ -95,18 +95,18 @@ export default function ContratosPage() {
           <EnclosureNested className="max-w-3xl">
             <p className="font-eyebrow text-[10px] text-gold">Nota técnica</p>
             <p className="mt-4 text-sm leading-relaxed text-ink-dim">
-              A validade e a interpretação dos contratos seguem as regras
-              gerais estabelecidas pelo Código Civil, com atenção adicional
-              às particularidades das relações formadas e executadas em
-              ambiente digital.
+              Situações envolvendo fraudes e uso indevido de contas digitais
+              também podem envolver aspectos disciplinados pelo Marco Civil
+              da Internet, que estabelece direitos e deveres para o uso da
+              internet no Brasil.
             </p>
             <a
-              href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+              href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-block text-sm text-gold underline"
             >
-              Fonte: Código Civil, Lei nº 10.406/2002
+              Fonte: Marco Civil da Internet, Lei nº 12.965/2014
             </a>
           </EnclosureNested>
         </Reveal>
@@ -127,7 +127,7 @@ export default function ContratosPage() {
               dois dias úteis.
             </p>
             <div className="mt-10">
-              <ContratosForm />
+              <GolpesVirtuaisForm />
             </div>
           </Reveal>
         </div>

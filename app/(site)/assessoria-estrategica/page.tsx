@@ -7,7 +7,7 @@ import { EnclosureNested } from "@/components/ui/EnclosureNested";
 import { ThreeStepsScroll } from "@/components/ThreeStepsScroll";
 import { PointsOfAttention } from "@/components/PointsOfAttention";
 import { JsonLd } from "@/components/JsonLd";
-import { ContratosForm } from "@/components/forms/ContratosForm";
+import { AssessoriaEstrategicaForm } from "@/components/forms/AssessoriaEstrategicaForm";
 import { AREA_CONTENT } from "@/lib/area-content";
 import {
   BASE_URL,
@@ -16,31 +16,31 @@ import {
   jsonLdGraph,
 } from "@/lib/schema";
 
-const SLUG = "contratos";
+const SLUG = "assessoria-estrategica";
 const PAGE_URL = `${BASE_URL}/${SLUG}`;
 const CONTENT = AREA_CONTENT[SLUG];
 
 export const metadata: Metadata = {
-  title: "Contratos Digitais",
+  title: "Assessoria Estratégica",
   description:
-    "Elaboração, revisão e negociação de contratos para criadores de conteúdo, influenciadores e negócios digitais, com atenção a cláusulas, riscos e conformidade.",
+    "Orientação jurídica preventiva para influenciadores, criadores de conteúdo e negócios digitais em temas de proteção de dados, LGPD e relações digitais.",
   alternates: { canonical: `/${SLUG}` },
 };
 
-export default function ContratosPage() {
+export default function AssessoriaEstrategicaPage() {
   return (
     <>
       <JsonLd
         data={jsonLdGraph([
           getServiceSchema({
-            name: "Contratos",
+            name: "Assessoria Estratégica",
             description:
-              "Elaboração, revisão e negociação de contratos para prestadores de serviços, criadores de conteúdo e negócios digitais.",
+              "Orientação jurídica preventiva para influenciadores, criadores de conteúdo, prestadores de serviços e negócios digitais em temas relacionados à proteção de dados, LGPD, relações digitais e desafios jurídicos decorrentes da tecnologia.",
             url: PAGE_URL,
           }),
           getBreadcrumbSchema([
             { name: "Home", url: BASE_URL },
-            { name: "Contratos", url: PAGE_URL },
+            { name: "Assessoria Estratégica", url: PAGE_URL },
           ]),
         ])}
       />
@@ -49,13 +49,14 @@ export default function ContratosPage() {
       <section className="mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
         <Reveal>
           <h1 className="max-w-3xl text-4xl sm:text-6xl">
-            <em className="italic text-gold">Contratos</em> elaborados e
-            revisados para dar segurança às relações digitais.
+            <em className="italic text-gold">Assessoria Estratégica</em> para
+            decisões jurídicas claras no ambiente digital.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Elaboração, revisão e negociação de contratos para prestadores de
-            serviços, criadores de conteúdo e negócios digitais, com atenção
-            a cláusulas, riscos e conformidade regulatória.
+            Orientação jurídica preventiva para influenciadores, criadores
+            de conteúdo, prestadores de serviços e negócios digitais em
+            temas relacionados à proteção de dados, LGPD, relações digitais
+            e desafios jurídicos decorrentes da tecnologia.
           </p>
           <div className="mt-8">
             <Button href="#formulario">Iniciar atendimento</Button>
@@ -95,18 +96,18 @@ export default function ContratosPage() {
           <EnclosureNested className="max-w-3xl">
             <p className="font-eyebrow text-[10px] text-gold">Nota técnica</p>
             <p className="mt-4 text-sm leading-relaxed text-ink-dim">
-              A validade e a interpretação dos contratos seguem as regras
-              gerais estabelecidas pelo Código Civil, com atenção adicional
-              às particularidades das relações formadas e executadas em
-              ambiente digital.
+              Questões relacionadas à proteção de dados pessoais são
+              disciplinadas pela Lei Geral de Proteção de Dados, que
+              estabelece princípios e regras para o tratamento de dados no
+              Brasil.
             </p>
             <a
-              href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+              href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-block text-sm text-gold underline"
             >
-              Fonte: Código Civil, Lei nº 10.406/2002
+              Fonte: Lei Geral de Proteção de Dados, Lei nº 13.709/2018
             </a>
           </EnclosureNested>
         </Reveal>
@@ -127,7 +128,7 @@ export default function ContratosPage() {
               dois dias úteis.
             </p>
             <div className="mt-10">
-              <ContratosForm />
+              <AssessoriaEstrategicaForm />
             </div>
           </Reveal>
         </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Icon, type IconName } from "@/components/ui/Icon";
 
 export function FeatureCard({
@@ -5,14 +6,16 @@ export function FeatureCard({
   number,
   title,
   description,
+  href,
 }: {
   icon: IconName;
   number: string;
   title: string;
   description: string;
+  href?: string;
 }) {
-  return (
-    <div className="border border-hairline p-6 transition-colors duration-150 hover:border-gold">
+  const content = (
+    <>
       <div className="flex items-center justify-between">
         <Icon name={icon} />
         <span className="font-mono text-xs text-ink-dim tabular-nums">
@@ -25,6 +28,19 @@ export function FeatureCard({
       <p className="mt-2 text-sm leading-relaxed text-ink-dim">
         {description}
       </p>
-    </div>
+    </>
   );
+
+  const className =
+    "block border border-hairline p-6 transition-colors duration-150 hover:border-gold";
+
+  if (href) {
+    return (
+      <Link href={href} className={className}>
+        {content}
+      </Link>
+    );
+  }
+
+  return <div className={className}>{content}</div>;
 }

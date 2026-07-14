@@ -4,9 +4,11 @@ import { FeatureCard } from "@/components/ui/FeatureCard";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { EnclosureNested } from "@/components/ui/EnclosureNested";
+import { ThreeStepsScroll } from "@/components/ThreeStepsScroll";
+import { PointsOfAttention } from "@/components/PointsOfAttention";
 import { JsonLd } from "@/components/JsonLd";
 import { PropriedadeIntelectualForm } from "@/components/forms/PropriedadeIntelectualForm";
-import type { IconName } from "@/components/ui/Icon";
+import { AREA_CONTENT } from "@/lib/area-content";
 import {
   BASE_URL,
   getBreadcrumbSchema,
@@ -16,6 +18,7 @@ import {
 
 const SLUG = "propriedade-intelectual";
 const PAGE_URL = `${BASE_URL}/${SLUG}`;
+const CONTENT = AREA_CONTENT[SLUG];
 
 export const metadata: Metadata = {
   title: "Propriedade Intelectual",
@@ -23,51 +26,6 @@ export const metadata: Metadata = {
     "Assessoria em registro de marcas, direitos autorais e licenciamento para criadores de conteúdo e negócios digitais que precisam proteger seus ativos intelectuais.",
   alternates: { canonical: `/${SLUG}` },
 };
-
-const CARDS: { icon: IconName; title: string; description: string }[] = [
-  {
-    icon: "marca",
-    title: "Registro de Marca",
-    description:
-      "Assessoria em todas as etapas do registro de marca perante o INPI, desde a análise inicial até o acompanhamento do processo.",
-  },
-  {
-    icon: "autoral",
-    title: "Direitos Autorais",
-    description:
-      "Orientação sobre proteção de obras intelectuais, conteúdos digitais, materiais criativos e demais criações protegidas por lei.",
-  },
-  {
-    icon: "licenciamento",
-    title: "Licenciamento de Marca",
-    description:
-      "Elaboração e revisão de contratos para licenciamento, cessão e autorização de uso de marcas e outros ativos intelectuais.",
-  },
-  {
-    icon: "defesa",
-    title: "Defesa de Ativos",
-    description:
-      "Atuação em conflitos envolvendo uso indevido de marcas, conteúdos e outros direitos de propriedade intelectual, nas esferas cabíveis.",
-  },
-];
-
-const STEPS = [
-  {
-    number: "01",
-    title: "Formulário curto",
-    description: "Preenchimento de formulário curto, com um breve relato da situação.",
-  },
-  {
-    number: "02",
-    title: "Agendamento",
-    description: "Agendamento de uma conversa para entendimento do caso.",
-  },
-  {
-    number: "03",
-    title: "Início do atendimento",
-    description: "Início do atendimento, com alinhamento via WhatsApp comercial.",
-  },
-];
 
 export default function PropriedadeIntelectualPage() {
   return (
@@ -105,12 +63,12 @@ export default function PropriedadeIntelectualPage() {
         </Reveal>
       </section>
 
-      {/* O Que Fazemos */}
+      {/* Nossa Atuação */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <Reveal>
-          <SectionEyebrow>O Que Fazemos</SectionEyebrow>
+          <SectionEyebrow>Nossa Atuação</SectionEyebrow>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {CARDS.map((card, index) => (
+            {CONTENT.cards.map((card, index) => (
               <FeatureCard
                 key={card.title}
                 icon={card.icon}
@@ -123,27 +81,13 @@ export default function PropriedadeIntelectualPage() {
         </Reveal>
       </section>
 
-      {/* Como Funciona */}
-      <section className="border-t border-hairline bg-bg-alt">
-        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-          <Reveal>
-            <SectionEyebrow>Como Funciona</SectionEyebrow>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-              {STEPS.map((step) => (
-                <div key={step.number}>
-                  <span className="font-mono text-2xl text-gold tabular-nums">
-                    {step.number}
-                  </span>
-                  <h3 className="mt-3 text-lg">{step.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-dim">
-                    {step.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      <ThreeStepsScroll title="Etapas" steps={CONTENT.steps} />
+
+      <PointsOfAttention
+        introTitle={CONTENT.attention.introTitle}
+        introDescription={CONTENT.attention.introDescription}
+        points={CONTENT.attention.points}
+      />
 
       {/* Nota técnica */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
@@ -174,22 +118,15 @@ export default function PropriedadeIntelectualPage() {
       >
         <div className="mx-auto max-w-2xl px-4 py-20 sm:px-6">
           <Reveal>
-            <SectionEyebrow>Iniciar Atendimento</SectionEyebrow>
-            <PropriedadeIntelectualForm />
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Fechamento */}
-      <section className="border-t border-hairline">
-        <div className="mx-auto max-w-6xl px-4 py-20 text-center sm:px-6">
-          <Reveal className="flex flex-col items-center">
             <h2 className="text-3xl sm:text-4xl">
-              Quer proteger uma marca, obra ou outro ativo intelectual do seu
-              negócio digital?
+              Vamos conversar sobre o seu caso.
             </h2>
-            <div className="mt-8">
-              <Button href="#formulario">Iniciar atendimento</Button>
+            <p className="mt-4 text-sm text-ink-dim">
+              Preencha as perguntas abaixo. A equipe entra em contato em até
+              dois dias úteis.
+            </p>
+            <div className="mt-10">
+              <PropriedadeIntelectualForm />
             </div>
           </Reveal>
         </div>
