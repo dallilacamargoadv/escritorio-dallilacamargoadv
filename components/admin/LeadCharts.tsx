@@ -21,7 +21,20 @@ import {
   computeUtmDistribution,
 } from "@/lib/chart-data";
 
-const COLORS = ["#e5e5e5", "#a3a3a3", "#737373", "#525252", "#404040"];
+const COLORS = [
+  "var(--gold)",
+  "var(--wine)",
+  "var(--gold-bright)",
+  "var(--wine-deep)",
+  "var(--ink-dim)",
+];
+
+const TOOLTIP_STYLE = {
+  background: "var(--surface)",
+  border: "1px solid var(--hairline-strong)",
+  fontSize: 12,
+  color: "var(--ink)",
+};
 
 function ChartCard({
   title,
@@ -31,10 +44,8 @@ function ChartCard({
   children: React.ReactNode;
 }) {
   return (
-    <div className="border border-neutral-800 bg-neutral-900 p-4">
-      <h3 className="text-xs font-semibold uppercase tracking-wide text-neutral-400">
-        {title}
-      </h3>
+    <div className="border border-hairline bg-surface p-4">
+      <h3 className="font-eyebrow text-[10px] text-gold">{title}</h3>
       <div className="mt-4 h-56">{children}</div>
     </div>
   );
@@ -50,23 +61,22 @@ export function LeadCharts({ leads }: { leads: Lead[] }) {
       <ChartCard title="Origem (UTM Source)">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={utmSource} layout="vertical">
-            <CartesianGrid strokeDasharray="3 3" stroke="#262626" />
-            <XAxis type="number" stroke="#737373" fontSize={11} allowDecimals={false} />
+            <CartesianGrid strokeDasharray="3 3" stroke="var(--hairline)" />
+            <XAxis
+              type="number"
+              stroke="var(--ink-dim)"
+              fontSize={11}
+              allowDecimals={false}
+            />
             <YAxis
               type="category"
               dataKey="name"
-              stroke="#737373"
+              stroke="var(--ink-dim)"
               fontSize={11}
               width={80}
             />
-            <Tooltip
-              contentStyle={{
-                background: "#171717",
-                border: "1px solid #404040",
-                fontSize: 12,
-              }}
-            />
-            <Bar dataKey="value" fill="#e5e5e5" />
+            <Tooltip contentStyle={TOOLTIP_STYLE} />
+            <Bar dataKey="value" fill="var(--gold)" />
           </BarChart>
         </ResponsiveContainer>
       </ChartCard>
@@ -85,13 +95,7 @@ export function LeadCharts({ leads }: { leads: Lead[] }) {
                 <Cell key={entry.name} fill={COLORS[index % COLORS.length]} />
               ))}
             </Pie>
-            <Tooltip
-              contentStyle={{
-                background: "#171717",
-                border: "1px solid #404040",
-                fontSize: 12,
-              }}
-            />
+            <Tooltip contentStyle={TOOLTIP_STYLE} />
           </PieChart>
         </ResponsiveContainer>
       </ChartCard>
@@ -99,21 +103,16 @@ export function LeadCharts({ leads }: { leads: Lead[] }) {
       <ChartCard title="Cadastros ao longo do tempo">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={timeline}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#262626" />
-            <XAxis dataKey="name" stroke="#737373" fontSize={10} />
-            <YAxis stroke="#737373" fontSize={11} allowDecimals={false} />
-            <Tooltip
-              contentStyle={{
-                background: "#171717",
-                border: "1px solid #404040",
-                fontSize: 12,
-              }}
-            />
+            <CartesianGrid strokeDasharray="3 3" stroke="var(--hairline)" />
+            <XAxis dataKey="name" stroke="var(--ink-dim)" fontSize={10} />
+            <YAxis stroke="var(--ink-dim)" fontSize={11} allowDecimals={false} />
+            <Tooltip contentStyle={TOOLTIP_STYLE} />
             <Area
               type="monotone"
               dataKey="value"
-              stroke="#e5e5e5"
-              fill="#404040"
+              stroke="var(--gold)"
+              fill="var(--gold)"
+              fillOpacity={0.25}
             />
           </AreaChart>
         </ResponsiveContainer>

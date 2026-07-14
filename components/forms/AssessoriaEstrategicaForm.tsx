@@ -135,8 +135,8 @@ export function AssessoriaEstrategicaForm() {
           <CheckCircle2 className="h-9 w-9 text-gold" />
         </div>
         <p className="max-w-md text-xl text-ink">
-          Recebemos suas informações. Em breve entraremos em contato para dar
-          sequência ao seu atendimento.
+          Obrigado pelas informações. Em breve alguém do nosso time entrará
+          em contato com você. Até logo.
         </p>
       </div>
     );

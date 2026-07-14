@@ -5,6 +5,7 @@ import { FeatureCard } from "@/components/ui/FeatureCard";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { CollapsibleText } from "@/components/ui/CollapsibleText";
+import { ThreeStepsScroll } from "@/components/ThreeStepsScroll";
 import { JsonLd } from "@/components/JsonLd";
 import { getAllPosts } from "@/lib/blog";
 import { formatDate } from "@/lib/format";
@@ -54,9 +55,12 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
           <Reveal>
             <h1 className="max-w-xl text-4xl sm:text-6xl">
-              <em className="italic text-gold">Direito Digital</em> com método
-              para quem constrói negócios, marca e conteúdo na internet.
+              <em className="italic text-gold">Direito Digital</em> para quem
+              constrói no ambiente digital.
             </h1>
+            <p className="mt-4 max-w-xl text-base text-ink-dim sm:text-lg">
+              Estratégia para estruturar antes. Atuação quando necessário.
+            </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href="/contato">Iniciar atendimento</Button>
               <Button href="#areas-de-atuacao" variant="secondary">
@@ -88,6 +92,8 @@ export default function HomePage() {
           </div>
         </Reveal>
       </section>
+
+      <ThreeStepsScroll closingText="Metodologia clara, do primeiro contato à atuação." />
 
       {/* Fundamentos do Escritório */}
       <section className="border-t border-hairline bg-bg-alt">

@@ -32,23 +32,21 @@ export function LeadDetailModal({
       onClick={onClose}
     >
       <div
-        className="max-h-[85vh] w-full max-w-lg overflow-y-auto border border-neutral-800 bg-neutral-900 p-6"
+        className="max-h-[85vh] w-full max-w-lg overflow-y-auto border border-hairline bg-surface p-6"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-start justify-between">
           <div>
-            <p className="text-xs text-neutral-500">
+            <p className="font-eyebrow text-[10px] text-gold">
               {FORM_TYPE_LABELS[lead.form_type] ?? lead.form_type}
             </p>
-            <h2 className="mt-1 text-lg font-semibold text-neutral-100">
-              {lead.name}
-            </h2>
+            <h2 className="mt-1 text-lg italic text-ink">{lead.name}</h2>
           </div>
           <button
             type="button"
             onClick={onClose}
             aria-label="Fechar"
-            className="text-neutral-500 hover:text-neutral-200"
+            className="text-ink-dim transition-colors duration-150 hover:text-gold"
           >
             <X size={20} />
           </button>
@@ -56,23 +54,23 @@ export function LeadDetailModal({
 
         <div className="mt-6 space-y-6 text-sm">
           <section>
-            <h3 className="flex items-center gap-2 font-semibold text-neutral-300">
+            <h3 className="flex items-center gap-2 font-eyebrow text-[10px] text-ink-dim">
               Contato
             </h3>
-            <p className="mt-1 text-neutral-100">{lead.email}</p>
-            <p className="text-neutral-100">{lead.whatsapp}</p>
+            <p className="mt-1 text-ink">{lead.email}</p>
+            <p className="text-ink">{lead.whatsapp}</p>
           </section>
 
           {Object.keys(lead.answers ?? {}).length > 0 && (
             <section>
-              <h3 className="font-semibold text-neutral-300">Respostas</h3>
+              <h3 className="font-eyebrow text-[10px] text-ink-dim">
+                Respostas
+              </h3>
               <dl className="mt-2 space-y-1">
                 {Object.entries(lead.answers).map(([key, value]) => (
                   <div key={key} className="flex justify-between gap-4">
-                    <dt className="text-neutral-500">{key}</dt>
-                    <dd className="text-right text-neutral-100">
-                      {String(value)}
-                    </dd>
+                    <dt className="text-ink-dim">{key}</dt>
+                    <dd className="text-right text-ink">{String(value)}</dd>
                   </div>
                 ))}
               </dl>
@@ -80,33 +78,33 @@ export function LeadDetailModal({
           )}
 
           <section>
-            <h3 className="flex items-center gap-2 font-semibold text-neutral-300">
-              <MapPin size={16} /> Geolocalização
+            <h3 className="flex items-center gap-2 font-eyebrow text-[10px] text-ink-dim">
+              <MapPin size={14} className="text-gold" /> Geolocalização
             </h3>
-            <p className="mt-1 text-neutral-100">{location || "—"}</p>
-            <p className="text-xs text-neutral-500">
+            <p className="mt-1 text-ink">{location || "—"}</p>
+            <p className="text-xs text-ink-dim">
               IP: {(metadata.ip as string) || "—"}
             </p>
           </section>
 
           <section>
-            <h3 className="flex items-center gap-2 font-semibold text-neutral-300">
-              <Cpu size={16} /> Tecnologia
+            <h3 className="flex items-center gap-2 font-eyebrow text-[10px] text-ink-dim">
+              <Cpu size={14} className="text-gold" /> Tecnologia
             </h3>
-            <p className="mt-1 text-neutral-100">
+            <p className="mt-1 text-ink">
               {(metadata.os as string) || "—"} ·{" "}
               {(metadata.device as string) || "—"}
             </p>
-            <p className="text-xs text-neutral-500">
+            <p className="text-xs text-ink-dim">
               {(metadata.screenResolution as string) || "—"}
             </p>
           </section>
 
           <section>
-            <h3 className="flex items-center gap-2 font-semibold text-neutral-300">
-              <Globe size={16} /> Navegador e idioma
+            <h3 className="flex items-center gap-2 font-eyebrow text-[10px] text-ink-dim">
+              <Globe size={14} className="text-gold" /> Navegador e idioma
             </h3>
-            <p className="mt-1 text-neutral-100">
+            <p className="mt-1 text-ink">
               {(metadata.browser as string) || "—"} ·{" "}
               {(metadata.language as string) || "—"}
             </p>
@@ -114,14 +112,14 @@ export function LeadDetailModal({
 
           {Object.keys(lead.utms ?? {}).length > 0 && (
             <section>
-              <h3 className="font-semibold text-neutral-300">
+              <h3 className="font-eyebrow text-[10px] text-ink-dim">
                 Origem (UTMs)
               </h3>
               <dl className="mt-2 space-y-1">
                 {Object.entries(lead.utms).map(([key, value]) => (
                   <div key={key} className="flex justify-between gap-4">
-                    <dt className="text-neutral-500">{key}</dt>
-                    <dd className="text-right text-neutral-100">{value}</dd>
+                    <dt className="text-ink-dim">{key}</dt>
+                    <dd className="text-right text-ink">{value}</dd>
                   </div>
                 ))}
               </dl>

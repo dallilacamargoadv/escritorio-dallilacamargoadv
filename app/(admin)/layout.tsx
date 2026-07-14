@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const metadata: Metadata = {
   title: "Painel Admin",
@@ -11,8 +12,9 @@ export default function AdminGroupLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen-safe flex-1 bg-neutral-950 font-sans text-neutral-100">
+    <div className="min-h-screen-safe flex-1 bg-bg font-sans text-ink">
       {children}
+      <ThemeToggle />
     </div>
   );
 }

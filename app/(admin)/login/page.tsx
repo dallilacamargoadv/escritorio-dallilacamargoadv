@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
+import { Logo } from "@/components/ui/Logo";
+import { Button } from "@/components/ui/Button";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -36,21 +38,16 @@ export default function LoginPage() {
     <div className="flex min-h-screen-safe items-center justify-center px-4">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-sm border border-neutral-800 bg-neutral-900 p-8"
+        className="w-full max-w-sm border border-hairline bg-surface p-8"
       >
-        <h1 className="text-lg font-semibold text-neutral-100">
+        <Logo />
+        <p className="mt-4 font-eyebrow text-[10px] text-gold">
           Painel Admin
-        </h1>
-        <p className="mt-1 text-sm text-neutral-400">
-          Dallila Camargo I Advogada
         </p>
 
         <div className="mt-8 space-y-4">
           <div>
-            <label
-              htmlFor="email"
-              className="block text-xs text-neutral-400"
-            >
+            <label htmlFor="email" className="block text-xs text-ink-dim">
               E-mail
             </label>
             <input
@@ -63,14 +60,11 @@ export default function LoginPage() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-2 w-full border border-neutral-700 bg-neutral-950 p-3 text-sm text-neutral-100 outline-none focus:border-neutral-400"
+              className="mt-2 w-full border border-hairline-strong bg-bg p-3 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
             />
           </div>
           <div>
-            <label
-              htmlFor="password"
-              className="block text-xs text-neutral-400"
-            >
+            <label htmlFor="password" className="block text-xs text-ink-dim">
               Senha
             </label>
             <input
@@ -80,24 +74,24 @@ export default function LoginPage() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="mt-2 w-full border border-neutral-700 bg-neutral-950 p-3 text-sm text-neutral-100 outline-none focus:border-neutral-400"
+              className="mt-2 w-full border border-hairline-strong bg-bg p-3 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
             />
           </div>
         </div>
 
         {error && (
-          <p role="alert" className="mt-4 text-sm text-red-400">
+          <p role="alert" className="mt-4 text-sm text-error">
             {error}
           </p>
         )}
 
-        <button
+        <Button
           type="submit"
           disabled={isSubmitting}
-          className="mt-6 w-full bg-neutral-100 px-6 py-3 text-sm font-medium text-neutral-950 transition-opacity disabled:opacity-50"
+          className="mt-6 w-full"
         >
           {isSubmitting ? "Entrando..." : "Entrar"}
-        </button>
+        </Button>
       </form>
     </div>
   );
