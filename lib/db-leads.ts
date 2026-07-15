@@ -1,4 +1,5 @@
-import { createClient as createSupabaseClient } from "@supabase/supabase-js";
+import { addBusinessDays } from "@/lib/business-days";
+import { getAnonClient } from "@/lib/supabase/anon";
 
 export type LeadFormType =
   | "contratos"
@@ -24,13 +25,6 @@ export type InsertLeadResult =
 
 const UNIQUE_VIOLATION = "23505";
 
-function getAnonClient() {
-  return createSupabaseClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-  );
-}
-
 export async function insertLead(
   input: InsertLeadInput,
 ): Promise<InsertLeadResult> {
@@ -45,6 +39,7 @@ export async function insertLead(
     answers: input.answers,
     utms: input.utms,
     metadata: input.metadata,
+    sla_due_at: addBusinessDays(new Date(), 2).toISOString(),
   });
 
   if (error) {

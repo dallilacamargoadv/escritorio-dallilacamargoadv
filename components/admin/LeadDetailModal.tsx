@@ -1,27 +1,87 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { MapPin, Cpu, Globe, X } from "lucide-react";
-import type { Lead } from "@/lib/db-admin";
-
-const FORM_TYPE_LABELS: Record<string, string> = {
-  contratos: "Contratos Digitais",
-  propriedade_intelectual: "Propriedade Intelectual",
-  contas_e_plataformas: "Contas e Plataformas",
-  golpes_virtuais: "Golpes Virtuais",
-  assessoria_estrategica: "Assessoria Estratégica",
-};
+import type { Lead, LeadNote, LeadStatus } from "@/lib/db-admin";
+import { FORM_TYPE_LABELS, STATUS_LABELS } from "@/lib/admin-labels";
 
 export function LeadDetailModal({
   lead,
   onClose,
+  onUpdate,
 }: {
   lead: Lead;
   onClose: () => void;
+  onUpdate: (lead: Lead) => void;
 }) {
   const metadata = lead.metadata ?? {};
   const location = [metadata.city, metadata.region, metadata.country]
     .filter(Boolean)
     .join(", ");
+
+  const [notes, setNotes] = useState<LeadNote[]>([]);
+  const [notesLoading, setNotesLoading] = useState(true);
+  const [newNote, setNewNote] = useState("");
+  const [savingNote, setSavingNote] = useState(false);
+  const [statusSaving, setStatusSaving] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/api/admin/leads/${lead.id}/notes`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (!cancelled) setNotes(data.notes ?? []);
+      })
+      .finally(() => {
+        if (!cancelled) setNotesLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [lead.id]);
+
+  async function handleStatusChange(status: LeadStatus) {
+    setStatusSaving(true);
+    try {
+      const res = await fetch(`/api/admin/leads/${lead.id}/status`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status }),
+      });
+      if (res.ok) {
+        onUpdate({
+          ...lead,
+          status,
+          first_contacted_at:
+            status !== "novo" && !lead.first_contacted_at
+              ? new Date().toISOString()
+              : lead.first_contacted_at,
+        });
+      }
+    } finally {
+      setStatusSaving(false);
+    }
+  }
+
+  async function handleAddNote() {
+    const body = newNote.trim();
+    if (!body) return;
+    setSavingNote(true);
+    try {
+      const res = await fetch(`/api/admin/leads/${lead.id}/notes`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ body }),
+      });
+      const data = await res.json();
+      if (res.ok && data.note) {
+        setNotes((prev) => [data.note, ...prev]);
+        setNewNote("");
+      }
+    } finally {
+      setSavingNote(false);
+    }
+  }
 
   return (
     <div
@@ -52,6 +112,30 @@ export function LeadDetailModal({
           </button>
         </div>
 
+        <div className="mt-5">
+          <label
+            htmlFor="lead-status"
+            className="font-eyebrow text-[10px] text-ink-dim"
+          >
+            Status
+          </label>
+          <select
+            id="lead-status"
+            value={lead.status}
+            disabled={statusSaving}
+            onChange={(e) =>
+              handleStatusChange(e.target.value as LeadStatus)
+            }
+            className="mt-2 w-full border border-hairline-strong bg-bg px-3 py-2 text-sm text-ink disabled:opacity-50"
+          >
+            {(Object.keys(STATUS_LABELS) as LeadStatus[]).map((status) => (
+              <option key={status} value={status}>
+                {STATUS_LABELS[status]}
+              </option>
+            ))}
+          </select>
+        </div>
+
         <div className="mt-6 space-y-6 text-sm">
           <section>
             <h3 className="flex items-center gap-2 font-eyebrow text-[10px] text-ink-dim">
@@ -59,6 +143,49 @@ export function LeadDetailModal({
             </h3>
             <p className="mt-1 text-ink">{lead.email}</p>
             <p className="text-ink">{lead.whatsapp}</p>
+          </section>
+
+          <section>
+            <h3 className="font-eyebrow text-[10px] text-ink-dim">Notas</h3>
+            <div className="mt-2 space-y-3">
+              {notesLoading && (
+                <p className="text-xs text-ink-dim">Carregando notas...</p>
+              )}
+              {!notesLoading && notes.length === 0 && (
+                <p className="text-xs text-ink-dim">
+                  Nenhuma nota registrada ainda.
+                </p>
+              )}
+              {notes.map((note) => (
+                <div
+                  key={note.id}
+                  className="border-l-2 border-hairline-strong pl-3"
+                >
+                  <p className="text-ink">{note.body}</p>
+                  <p className="mt-1 font-mono text-[10px] text-ink-dim">
+                    {new Date(note.created_at).toLocaleString("pt-BR")}
+                  </p>
+                </div>
+              ))}
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  value={newNote}
+                  onChange={(e) => setNewNote(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handleAddNote()}
+                  placeholder="Adicionar nota..."
+                  className="min-w-0 flex-1 border border-hairline-strong bg-bg px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
+                />
+                <button
+                  type="button"
+                  onClick={handleAddNote}
+                  disabled={savingNote || !newNote.trim()}
+                  className="border border-gold bg-gold px-4 py-2 text-xs text-bg transition-all duration-150 hover:bg-transparent hover:text-gold disabled:opacity-50"
+                >
+                  Salvar
+                </button>
+              </div>
+            </div>
           </section>
 
           {Object.keys(lead.answers ?? {}).length > 0 && (

@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-export default function HomePage() {
-  const posts = getAllPosts();
+export default async function HomePage() {
+  const posts = await getAllPosts();
   const recentPosts = posts.slice(0, 3);
   const showRecentContent = recentPosts.length >= 3;
 

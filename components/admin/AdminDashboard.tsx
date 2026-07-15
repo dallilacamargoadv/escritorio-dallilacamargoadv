@@ -1,30 +1,32 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useRouter } from "next/navigation";
-import { Monitor, LogOut } from "lucide-react";
-import type { Lead } from "@/lib/db-admin";
-import { createClient } from "@/lib/supabase/client";
-import { Logo } from "@/components/ui/Logo";
+import { Monitor } from "lucide-react";
+import type { Lead, LeadStatus } from "@/lib/db-admin";
+import { FORM_TYPE_LABELS, STATUS_COLORS, STATUS_LABELS } from "@/lib/admin-labels";
 import { LeadDetailModal } from "@/components/admin/LeadDetailModal";
 import { LeadCharts } from "@/components/admin/LeadCharts";
 
 const PAGE_SIZE = 30;
 
-const FORM_TYPE_LABELS: Record<string, string> = {
-  contratos: "Contratos Digitais",
-  propriedade_intelectual: "Propriedade Intelectual",
-  contas_e_plataformas: "Contas e Plataformas",
-  golpes_virtuais: "Golpes Virtuais",
-  assessoria_estrategica: "Assessoria Estratégica",
-};
+type SlaState = "critical" | "warning" | null;
+
+function getSlaState(lead: Lead): SlaState {
+  if (lead.status !== "novo" || !lead.sla_due_at) return null;
+  const due = new Date(lead.sla_due_at).getTime();
+  const now = Date.now();
+  if (now > due) return "critical";
+  if (due - now < 24 * 60 * 60 * 1000) return "warning";
+  return null;
+}
 
 type SortKey = "created_at" | "name" | "email" | "form_type";
 
 export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
-  const router = useRouter();
+  const [leads, setLeads] = useState(initialLeads);
   const [search, setSearch] = useState("");
   const [formTypeFilter, setFormTypeFilter] = useState("all");
+  const [statusFilter, setStatusFilter] = useState("all");
   const [utmSourceFilter, setUtmSourceFilter] = useState("");
   const [utmMediumFilter, setUtmMediumFilter] = useState("");
   const [utmCampaignFilter, setUtmCampaignFilter] = useState("");
@@ -33,11 +35,19 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
   const [page, setPage] = useState(0);
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null);
 
+  function handleLeadUpdate(updated: Lead) {
+    setLeads((prev) => prev.map((l) => (l.id === updated.id ? updated : l)));
+    setSelectedLead(updated);
+  }
+
   const filtered = useMemo(() => {
-    let result = initialLeads;
+    let result = leads;
 
     if (formTypeFilter !== "all") {
       result = result.filter((lead) => lead.form_type === formTypeFilter);
+    }
+    if (statusFilter !== "all") {
+      result = result.filter((lead) => lead.status === statusFilter);
     }
     if (search.trim()) {
       const term = search.trim().toLowerCase();
@@ -79,9 +89,10 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
 
     return sorted;
   }, [
-    initialLeads,
+    leads,
     search,
     formTypeFilter,
+    statusFilter,
     utmSourceFilter,
     utmMediumFilter,
     utmCampaignFilter,
@@ -102,34 +113,14 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
     setPage(0);
   }
 
-  async function handleLogout() {
-    const supabase = createClient();
-    await supabase.auth.signOut();
-    router.push("/login");
-    router.refresh();
-  }
-
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
-      <div className="flex items-center justify-between border-b border-hairline pb-6">
-        <div className="flex items-center gap-4">
-          <Logo />
-          <div className="hidden h-8 w-px bg-hairline sm:block" />
-          <div>
-            <h1 className="text-lg italic text-ink">Leads</h1>
-            <p className="font-mono text-xs text-ink-dim">
-              {initialLeads.length} leads no total · {filtered.length} nesta
-              visualização
-            </p>
-          </div>
-        </div>
-        <button
-          type="button"
-          onClick={handleLogout}
-          className="flex items-center gap-2 border border-hairline-strong px-4 py-2 text-xs text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold"
-        >
-          <LogOut size={14} /> Sair
-        </button>
+      <div className="border-b border-hairline pb-6">
+        <h1 className="text-lg italic text-ink">Leads</h1>
+        <p className="font-mono text-xs text-ink-dim">
+          {leads.length} leads no total · {filtered.length} nesta
+          visualização
+        </p>
       </div>
 
       <div className="mt-8">
@@ -165,6 +156,21 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
           <option value="assessoria_estrategica">
             Assessoria Estratégica
           </option>
+        </select>
+        <select
+          value={statusFilter}
+          onChange={(e) => {
+            setStatusFilter(e.target.value);
+            setPage(0);
+          }}
+          className="border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink"
+        >
+          <option value="all">Todos os status</option>
+          {(Object.keys(STATUS_LABELS) as LeadStatus[]).map((status) => (
+            <option key={status} value={status}>
+              {STATUS_LABELS[status]}
+            </option>
+          ))}
         </select>
         <input
           type="text"
@@ -227,6 +233,7 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
               >
                 Área
               </th>
+              <th className="px-4 py-3">Status</th>
               <th
                 className="cursor-pointer px-4 py-3"
                 onClick={() => toggleSort("created_at")}
@@ -237,33 +244,57 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
             </tr>
           </thead>
           <tbody>
-            {pageLeads.map((lead) => (
-              <tr key={lead.id} className="border-b border-hairline">
-                <td className="px-4 py-3 text-ink">{lead.name}</td>
-                <td className="px-4 py-3 text-ink-dim">{lead.email}</td>
-                <td className="px-4 py-3 text-ink-dim">{lead.whatsapp}</td>
-                <td className="px-4 py-3 text-ink-dim">
-                  {FORM_TYPE_LABELS[lead.form_type] ?? lead.form_type}
-                </td>
-                <td className="px-4 py-3 font-mono text-xs text-ink-dim">
-                  {new Date(lead.created_at).toLocaleString("pt-BR")}
-                </td>
-                <td className="px-4 py-3">
-                  <button
-                    type="button"
-                    aria-label="Ver inteligência técnica"
-                    onClick={() => setSelectedLead(lead)}
-                    className="text-ink-dim transition-colors duration-150 hover:text-gold"
-                  >
-                    <Monitor size={16} />
-                  </button>
-                </td>
-              </tr>
-            ))}
+            {pageLeads.map((lead) => {
+              const sla = getSlaState(lead);
+              return (
+                <tr key={lead.id} className="border-b border-hairline">
+                  <td className="px-4 py-3 text-ink">{lead.name}</td>
+                  <td className="px-4 py-3 text-ink-dim">{lead.email}</td>
+                  <td className="px-4 py-3 text-ink-dim">{lead.whatsapp}</td>
+                  <td className="px-4 py-3 text-ink-dim">
+                    {FORM_TYPE_LABELS[lead.form_type] ?? lead.form_type}
+                  </td>
+                  <td className="px-4 py-3">
+                    <div className="flex items-center gap-2">
+                      <span
+                        className={`inline-block border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide ${STATUS_COLORS[lead.status]}`}
+                      >
+                        {STATUS_LABELS[lead.status]}
+                      </span>
+                      {sla === "critical" && (
+                        <span
+                          className="h-1.5 w-1.5 shrink-0 rounded-full bg-error"
+                          title="SLA de 2 dias úteis vencido"
+                        />
+                      )}
+                      {sla === "warning" && (
+                        <span
+                          className="h-1.5 w-1.5 shrink-0 rounded-full bg-warning"
+                          title="SLA de 2 dias úteis vencendo"
+                        />
+                      )}
+                    </div>
+                  </td>
+                  <td className="px-4 py-3 font-mono text-xs text-ink-dim">
+                    {new Date(lead.created_at).toLocaleString("pt-BR")}
+                  </td>
+                  <td className="px-4 py-3">
+                    <button
+                      type="button"
+                      aria-label="Ver inteligência técnica"
+                      onClick={() => setSelectedLead(lead)}
+                      className="text-ink-dim transition-colors duration-150 hover:text-gold"
+                    >
+                      <Monitor size={16} />
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
             {pageLeads.length === 0 && (
               <tr>
                 <td
-                  colSpan={6}
+                  colSpan={7}
                   className="px-4 py-10 text-center text-sm text-ink-dim"
                 >
                   Nenhum lead encontrado com os filtros atuais.
@@ -297,6 +328,7 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
         <LeadDetailModal
           lead={selectedLead}
           onClose={() => setSelectedLead(null)}
+          onUpdate={handleLeadUpdate}
         />
       )}
     </div>

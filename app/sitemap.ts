@@ -3,7 +3,7 @@ import { BASE_URL } from "@/lib/schema";
 import { SERVICE_AREAS } from "@/lib/site-data";
 import { BLOG_CATEGORIES, CATEGORY_SLUGS, getAllPosts } from "@/lib/blog";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: BASE_URL, changeFrequency: "monthly", priority: 1 },
     { url: `${BASE_URL}/sobre`, changeFrequency: "monthly", priority: 0.7 },
@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  const postRoutes: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
+  const postRoutes: MetadataRoute.Sitemap = (await getAllPosts()).map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
     lastModified: post.updatedAt ?? post.date,
     changeFrequency: "monthly",

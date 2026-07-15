@@ -19,7 +19,7 @@ export default async function BlogIndexPage({
   const { page: pageParam } = await searchParams;
   const currentPage = Math.max(1, Number(pageParam) || 1);
 
-  const posts = getAllPosts();
+  const posts = await getAllPosts();
   const totalPages = Math.max(1, Math.ceil(posts.length / BLOG_PAGE_SIZE));
   const pagePosts = posts.slice(
     (currentPage - 1) * BLOG_PAGE_SIZE,

@@ -1,6 +1,14 @@
 import { createClient } from "@/lib/supabase/server";
 import type { LeadFormType } from "@/lib/db-leads";
 
+export type LeadStatus =
+  | "novo"
+  | "em_contato"
+  | "qualificado"
+  | "proposta"
+  | "cliente"
+  | "perdido";
+
 export interface Lead {
   id: string;
   created_at: string;
@@ -13,6 +21,18 @@ export interface Lead {
   utms: Record<string, string>;
   metadata: Record<string, unknown>;
   duplicate_of: string | null;
+  status: LeadStatus;
+  sla_due_at: string | null;
+  first_contacted_at: string | null;
+}
+
+export interface LeadNote {
+  id: string;
+  lead_id: string;
+  author_id: string | null;
+  body: string;
+  next_action_at: string | null;
+  created_at: string;
 }
 
 export async function getAllLeads(): Promise<Lead[]> {
@@ -24,4 +44,71 @@ export async function getAllLeads(): Promise<Lead[]> {
 
   if (error) throw error;
   return data as Lead[];
+}
+
+export async function updateLeadStatus(
+  leadId: string,
+  status: LeadStatus,
+): Promise<void> {
+  const supabase = await createClient();
+  const updates: Record<string, unknown> = { status };
+  if (status !== "novo") {
+    const { data: current } = await supabase
+      .from("leads")
+      .select("first_contacted_at")
+      .eq("id", leadId)
+      .single();
+    if (!current?.first_contacted_at) {
+      updates.first_contacted_at = new Date().toISOString();
+    }
+  }
+
+  const { error } = await supabase
+    .from("leads")
+    .update(updates)
+    .eq("id", leadId);
+
+  if (error) throw error;
+}
+
+export async function getNewLeadsCount(): Promise<number> {
+  const supabase = await createClient();
+  const { count, error } = await supabase
+    .from("leads")
+    .select("*", { count: "exact", head: true })
+    .eq("status", "novo");
+
+  if (error) throw error;
+  return count ?? 0;
+}
+
+export async function getLeadNotes(leadId: string): Promise<LeadNote[]> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("lead_notes")
+    .select("*")
+    .eq("lead_id", leadId)
+    .order("created_at", { ascending: false });
+
+  if (error) throw error;
+  return data as LeadNote[];
+}
+
+export async function addLeadNote(
+  leadId: string,
+  body: string,
+): Promise<LeadNote> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  const { data, error } = await supabase
+    .from("lead_notes")
+    .insert({ lead_id: leadId, body, author_id: user?.id ?? null })
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data as LeadNote;
 }

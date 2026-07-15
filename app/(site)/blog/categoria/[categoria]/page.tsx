@@ -40,7 +40,7 @@ export default async function BlogCategoryPage({
   const category = getCategoryBySlug(categoria);
   if (!category) notFound();
 
-  const posts = getPostsByCategory(category);
+  const posts = await getPostsByCategory(category);
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">

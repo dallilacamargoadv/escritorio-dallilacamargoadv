@@ -1,9 +1,5 @@
-import fs from "node:fs";
-import path from "node:path";
-import matter from "gray-matter";
 import readingTime from "reading-time";
-
-const BLOG_DIR = path.join(process.cwd(), "content/blog");
+import { getAnonClient } from "@/lib/supabase/anon";
 
 export const BLOG_CATEGORIES = [
   "Conta Hackeada e Golpes Digitais",
@@ -15,7 +11,7 @@ export const BLOG_CATEGORIES = [
 
 export type BlogCategory = (typeof BLOG_CATEGORIES)[number];
 
-function slugify(value: string): string {
+export function slugify(value: string): string {
   return value
     .normalize("NFD")
     .replace(/[̀-ͯ]/g, "")
@@ -52,48 +48,67 @@ export interface BlogPost extends BlogPostMeta {
   content: string;
 }
 
-function listMdxFiles(): string[] {
-  if (!fs.existsSync(BLOG_DIR)) return [];
-  return fs.readdirSync(BLOG_DIR).filter((file) => file.endsWith(".mdx"));
-}
-
 function formatReadingTime(minutes: number): string {
   return `${Math.max(1, Math.ceil(minutes))} min de leitura`;
 }
 
-function toMeta(file: string, raw: string): BlogPostMeta {
-  const { data, content } = matter(raw);
+interface PostRow {
+  slug: string;
+  title: string;
+  subtitle: string;
+  category: string;
+  content: string;
+  date: string;
+  updated_at: string | null;
+  faq: FaqItem[] | null;
+}
+
+function toMeta(row: PostRow): BlogPostMeta {
   return {
-    slug: file.replace(/\.mdx$/, ""),
-    title: data.title,
-    subtitle: data.subtitle,
-    category: data.category,
-    date: data.date,
-    updatedAt: data.updatedAt,
-    readingTime: formatReadingTime(readingTime(content).minutes),
-    faq: data.faq,
+    slug: row.slug,
+    title: row.title,
+    subtitle: row.subtitle,
+    category: row.category as BlogCategory,
+    date: row.date,
+    updatedAt: row.updated_at ?? undefined,
+    readingTime: formatReadingTime(readingTime(row.content).minutes),
+    faq: row.faq ?? undefined,
   };
 }
 
-export function getAllPosts(): BlogPostMeta[] {
-  return listMdxFiles()
-    .map((file) => toMeta(file, fs.readFileSync(path.join(BLOG_DIR, file), "utf-8")))
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+export async function getAllPosts(): Promise<BlogPostMeta[]> {
+  const supabase = getAnonClient();
+  const { data, error } = await supabase
+    .from("posts")
+    .select("slug, title, subtitle, category, content, date, updated_at, faq")
+    .eq("published", true)
+    .order("date", { ascending: false });
+
+  if (error) throw error;
+  return (data as PostRow[]).map(toMeta);
 }
 
-export function getPostBySlug(slug: string): BlogPost | null {
-  const filePath = path.join(BLOG_DIR, `${slug}.mdx`);
-  if (!fs.existsSync(filePath)) return null;
+export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+  const supabase = getAnonClient();
+  const { data, error } = await supabase
+    .from("posts")
+    .select("slug, title, subtitle, category, content, date, updated_at, faq")
+    .eq("slug", slug)
+    .eq("published", true)
+    .maybeSingle();
 
-  const raw = fs.readFileSync(filePath, "utf-8");
-  const { content } = matter(raw);
-  const meta = toMeta(`${slug}.mdx`, raw);
+  if (error) throw error;
+  if (!data) return null;
 
-  return { ...meta, content };
+  const row = data as PostRow;
+  return { ...toMeta(row), content: row.content };
 }
 
 export const BLOG_PAGE_SIZE = 9;
 
-export function getPostsByCategory(category: BlogCategory): BlogPostMeta[] {
-  return getAllPosts().filter((post) => post.category === category);
+export async function getPostsByCategory(
+  category: BlogCategory,
+): Promise<BlogPostMeta[]> {
+  const posts = await getAllPosts();
+  return posts.filter((post) => post.category === category);
 }
