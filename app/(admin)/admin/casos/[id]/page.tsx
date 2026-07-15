@@ -1,0 +1,36 @@
+import { notFound, redirect } from "next/navigation";
+import { getCasoById } from "@/lib/db-casos";
+import { getContratoById } from "@/lib/db-contratos";
+import { getClienteById } from "@/lib/db-clientes";
+import { CasoForm, type ContratoOption } from "@/components/admin/CasoForm";
+import { CONTRATO_TIPO_LABELS } from "@/lib/admin-labels";
+
+export default async function CasoDetailPage(
+  props: PageProps<"/admin/casos/[id]">,
+) {
+  const { id } = await props.params;
+
+  let caso;
+  let contratoFixo: ContratoOption | undefined;
+  try {
+    caso = await getCasoById(id);
+    if (caso) {
+      const contrato = await getContratoById(caso.contrato_id);
+      const cliente = contrato
+        ? await getClienteById(contrato.cliente_id)
+        : null;
+      contratoFixo = contrato
+        ? {
+            id: contrato.id,
+            label: `${cliente?.nome_razao_social ?? "Cliente"} — ${CONTRATO_TIPO_LABELS[contrato.tipo]}`,
+          }
+        : undefined;
+    }
+  } catch {
+    redirect("/login");
+  }
+
+  if (!caso) notFound();
+
+  return <CasoForm caso={caso} contratoFixo={contratoFixo} />;
+}

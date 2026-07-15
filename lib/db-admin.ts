@@ -71,6 +71,18 @@ export async function updateLeadStatus(
   if (error) throw error;
 }
 
+export async function getLeadById(id: string): Promise<Lead | null> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("leads")
+    .select("*")
+    .eq("id", id)
+    .maybeSingle();
+
+  if (error) throw error;
+  return data as Lead | null;
+}
+
 export async function getNewLeadsCount(): Promise<number> {
   const supabase = await createClient();
   const { count, error } = await supabase

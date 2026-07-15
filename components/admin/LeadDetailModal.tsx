@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { MapPin, Cpu, Globe, X } from "lucide-react";
 import type { Lead, LeadNote, LeadStatus } from "@/lib/db-admin";
 import { FORM_TYPE_LABELS, STATUS_LABELS } from "@/lib/admin-labels";
@@ -135,6 +136,13 @@ export function LeadDetailModal({
             ))}
           </select>
         </div>
+
+        <Link
+          href={`/admin/clientes/novo?leadId=${lead.id}`}
+          className="mt-4 block w-full border border-gold px-3 py-2 text-center text-sm text-gold transition-colors duration-150 hover:bg-gold hover:text-bg"
+        >
+          Converter em Cliente
+        </Link>
 
         <div className="mt-6 space-y-6 text-sm">
           <section>
