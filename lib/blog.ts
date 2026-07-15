@@ -77,31 +77,44 @@ function toMeta(row: PostRow): BlogPostMeta {
 }
 
 export async function getAllPosts(): Promise<BlogPostMeta[]> {
-  const supabase = getAnonClient();
-  const { data, error } = await supabase
-    .from("posts")
-    .select("slug, title, subtitle, category, content, date, updated_at, faq")
-    .eq("published", true)
-    .order("date", { ascending: false });
+  try {
+    const supabase = getAnonClient();
+    const { data, error } = await supabase
+      .from("posts")
+      .select("slug, title, subtitle, category, content, date, updated_at, faq")
+      .eq("published", true)
+      .order("date", { ascending: false });
 
-  if (error) throw error;
-  return (data as PostRow[]).map(toMeta);
+    if (error) throw error;
+    return (data as PostRow[]).map(toMeta);
+  } catch (err) {
+    // Não deixar o Supabase indisponível (ex.: variáveis de ambiente
+    // ausentes no momento do build) derrubar páginas que só precisam da
+    // lista de posts para renderizar o restante do conteúdo.
+    console.error("[blog] Falha ao carregar posts:", err);
+    return [];
+  }
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
-  const supabase = getAnonClient();
-  const { data, error } = await supabase
-    .from("posts")
-    .select("slug, title, subtitle, category, content, date, updated_at, faq")
-    .eq("slug", slug)
-    .eq("published", true)
-    .maybeSingle();
+  try {
+    const supabase = getAnonClient();
+    const { data, error } = await supabase
+      .from("posts")
+      .select("slug, title, subtitle, category, content, date, updated_at, faq")
+      .eq("slug", slug)
+      .eq("published", true)
+      .maybeSingle();
 
-  if (error) throw error;
-  if (!data) return null;
+    if (error) throw error;
+    if (!data) return null;
 
-  const row = data as PostRow;
-  return { ...toMeta(row), content: row.content };
+    const row = data as PostRow;
+    return { ...toMeta(row), content: row.content };
+  } catch (err) {
+    console.error("[blog] Falha ao carregar post:", err);
+    return null;
+  }
 }
 
 export const BLOG_PAGE_SIZE = 9;
