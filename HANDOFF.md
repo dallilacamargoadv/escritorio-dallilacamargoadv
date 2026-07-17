@@ -71,7 +71,7 @@ Tabelas de antes da sessão: `leads`, `lead_notes`, `posts` (sem mudança de sch
 
 4. **Feedback da cliente sobre a Onda 1** → gerou a **Onda 2**: faltava filtro por área em Clientes/Casos (só existia um `<select>` escondido em Casos); Casos precisavam de "frentes" (extrajudicial/judicial/administrativo/INPI, simultâneas ou sequenciais — confirmado que varia caso a caso); Financeiro e Notificações foram adiantadas na frente de Agenda/Documentos (que ficaram para depois, por pedido explícito da cliente).
 
-5. **Onda 2 — implementada e testada localmente, ainda NÃO commitada nem deployada** (ver seção 8, é o item mais importante para retomar):
+5. **Onda 2 — implementada, testada localmente e commitada** (commit `78deeee`, **ainda NÃO pushada nem deployada** — ver seção 8):
    - **Frentes de caso** (`caso_frentes`) — seção dentro da página de cada Caso.
    - **Pílulas de filtro de área** (`AreaFilterPills.tsx`) em Clientes (por áreas dos casos já atendidos, não a área de origem do lead) e Casos.
    - **Financeiro completo**: lista, lançamento único, **parcelado e recorrente em lote** (pedido extra da cliente — form gera N lançamentos mensais de uma vez, com `grupo_id` compartilhado), recibo imprimível com a identidade visual (`window.print()`, sem dependência de PDF nova). **Um bug de fuso horário foi encontrado e corrigido durante o teste**: o cálculo de "+N meses" usava `setMonth`/`getMonth` (fuso local do servidor) em vez de `setUTCMonth`/`getUTCMonth`, fazendo a última parcela de um lote cair um dia depois do esperado — corrigido em `app/api/admin/financeiro/route.ts`.
@@ -99,6 +99,25 @@ Tabelas de antes da sessão: `leads`, `lead_notes`, `posts` (sem mudança de sch
 - **Cron do Vercel**: 1x/dia (não a cada minuto) — bate com o plano Hobby e com a "jornada diária" real da cliente (ela confere o painel de manhã, não em tempo real).
 - Nunca commitar/pushar sem pedir permissão explícita antes — seguido à risca a sessão toda.
 - Verificação padrão antes de qualquer commit: `npx eslint .` e `npm run build` limpos, teste manual no browser local, às vezes com escrita/leitura real no Supabase de produção (sempre limpando os dados de teste depois via `execute_sql`).
+
+## 8-B. Sessão seguinte: sidebar ajustada + tela Recorrentes implementada (ainda não commitada)
+
+Continuação da sessão anterior. A cliente refinou a reestruturação de sidebar aprovada (seção 8/9 abaixo, ainda desatualizadas nesse ponto): **Financeiro é uma categoria à parte** (dinheiro, valores, vencimento, atraso) e **Contratos deveria sair de Jurídico e entrar em Financeiro**, já que um contrato é fundamentalmente sobre valor/periodicidade. Jurídico, no desenho final, será organizado pelas 5 áreas reais do site (`lib/site-data.ts::SERVICE_AREAS`), não por "Contratos" como item único — isso ainda não foi implementado (ver nota de escopo abaixo).
+
+Duas revisões de mockup de sidebar foram aprovadas nesta sessão (Artifact "Proposta de Sidebar — Painel Admin", atualizado in-place, revisão 2 confirmada com "ISSSOOOOO, ficou show!"). A cliente escolheu meio-termo de escopo: **implementar agora só o necessário para a tela Recorrentes existir**, deixando a divisão de Jurídico por área, o grupo Site (Páginas SEO/Glossário/FAQs) e Prazos para depois.
+
+**Implementado e testado localmente nesta sessão (lint + build limpos, testado no browser local com escrita/leitura real no Supabase depois limpa via `execute_sql`):**
+
+- **`components/admin/AdminSidebar.tsx`**: grupo "Jurídico" removido (só tinha Contratos). Grupo "Negócio" virou **"Finanças"**, contendo Contratos (movido), **Recorrentes (novo)**, Financeiro. Blog moveu de Negócio para o grupo Sistema (ao lado de Notificações), já que Blog não é financeiro nem jurídico.
+- **Tela nova `/admin/recorrentes`** (`app/(admin)/admin/recorrentes/page.tsx` + `components/admin/RecorrentesAdminList.tsx`): filtra `contratos.tipo = 'recorrente'`, cruza com `financeiro_lancamentos` para achar o próximo vencimento pendente por contrato (destacado em vermelho se atrasado, via `isLancamentoAtrasado` já existente), conta casos vinculados. 3 KPIs no topo (MRR ativo em R$, clientes ativos, aguardando assinatura) + pills de filtro por status do contrato + tabela. Reaproveita exatamente os padrões visuais de `ContratosAdminList`/`FinanceiroAdminList` (nenhum componente/estilo novo inventado).
+- Nenhuma migração de banco foi necessária — `contratos.tipo = 'recorrente'` já existia desde a Onda 1.
+
+**Ainda não commitado, não pushado.** Junto com a Onda 2 (seção 8 abaixo), precisa de autorização explícita da cliente antes de commitar.
+
+**Escopo explicitamente adiado por pedido da cliente** (não implementar sem novo pedido):
+- Dividir Jurídico pelas 5 áreas reais (cada uma linkando para Casos filtrado por área) — mockup já aprovado, só falta construir.
+- Grupo "Site" (Páginas SEO, Glossário, FAQs), grupo "Plataforma" (Controle de Acesso, Relatórios, Configurações), grupo "Prazos" — nenhum desenhado em detalhe ainda além do mockup de alto nível.
+- **Nota de visão de futuro da cliente, capturada mas não desenhada**: cada área jurídica tem uma dinâmica de atendimento própria — ela deu o exemplo de "Contratos Digitais" tendo um kanban interno (Cliente → Análise → Elaboração → Envio → Reanálise). Isso é sobre a tela de **Casos filtrada por área**, não sobre Contratos. Não desenhar nem implementar sem pedido explícito — a cliente foi clara que não é para agora.
 
 ## 8. 🔴 Estado atual em aberto (prioridade da próxima sessão)
 

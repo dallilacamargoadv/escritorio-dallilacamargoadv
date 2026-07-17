@@ -10,6 +10,7 @@ import {
   FileText,
   Newspaper,
   Wallet,
+  Repeat,
   Bell,
   LogOut,
 } from "lucide-react";
@@ -37,21 +38,17 @@ export function AdminSidebar({
       ],
     },
     {
-      label: "Jurídico",
+      label: "Finanças",
       items: [
         { href: "/admin/contratos", label: "Contratos", icon: FileText, exact: false, badge: 0 },
-      ],
-    },
-    {
-      label: "Negócio",
-      items: [
+        { href: "/admin/recorrentes", label: "Recorrentes", icon: Repeat, exact: false, badge: 0 },
         { href: "/admin/financeiro", label: "Financeiro", icon: Wallet, exact: false, badge: 0 },
-        { href: "/admin/blog", label: "Blog", icon: Newspaper, exact: false, badge: 0 },
       ],
     },
     {
       label: "Sistema",
       items: [
+        { href: "/admin/blog", label: "Blog", icon: Newspaper, exact: false, badge: 0 },
         {
           href: "/admin/notificacoes",
           label: "Notificações",
