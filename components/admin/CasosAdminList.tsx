@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { Caso, CasoStatus } from "@/lib/db-casos";
 import { CASO_STATUS_LABELS, CASO_STATUS_COLORS, FORM_TYPE_LABELS } from "@/lib/admin-labels";
 import { formatDate } from "@/lib/format";
+import { AreaFilterPills } from "@/components/admin/AreaFilterPills";
 
 export interface CasoRow extends Caso {
   clienteNome: string;
@@ -13,7 +14,7 @@ export interface CasoRow extends Caso {
 export function CasosAdminList({ initialCasos }: { initialCasos: CasoRow[] }) {
   const [casos] = useState(initialCasos);
   const [statusFilter, setStatusFilter] = useState<CasoStatus | "all">("all");
-  const [areaFilter, setAreaFilter] = useState<string>("all");
+  const [areaFilter, setAreaFilter] = useState("all");
 
   const filtered = useMemo(() => {
     return casos.filter((caso) => {
@@ -40,19 +41,8 @@ export function CasosAdminList({ initialCasos }: { initialCasos: CasoRow[] }) {
         </Link>
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-3">
-        <select
-          value={areaFilter}
-          onChange={(e) => setAreaFilter(e.target.value)}
-          className="border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink"
-        >
-          <option value="all">Todas as áreas</option>
-          {Object.entries(FORM_TYPE_LABELS).map(([value, label]) => (
-            <option key={value} value={value}>
-              {label}
-            </option>
-          ))}
-        </select>
+      <div className="mt-6 space-y-3">
+        <AreaFilterPills value={areaFilter} onChange={setAreaFilter} />
         <select
           value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value as CasoStatus | "all")}

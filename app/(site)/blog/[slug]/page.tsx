@@ -103,13 +103,8 @@ export default async function BlogPostPage({
           <p className="text-sm leading-relaxed text-ink-dim">
             Este conteúdo tem caráter informativo e não substitui a consulta
             jurídica especializada. Dallila Camargo I Advogada atua em
-            Direito Digital, incluindo contratos, propriedade intelectual e
-            recuperação de contas comprometidas. Para análise de caso
-            concreto,{" "}
-            <Link href="/contato" className="text-gold underline">
-              entre em contato
-            </Link>
-            .
+            Direito Digital. Mais informações sobre as áreas de atuação do
+            escritório estão disponíveis neste site.
           </p>
         </EnclosureNested>
 

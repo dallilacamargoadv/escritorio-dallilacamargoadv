@@ -6,14 +6,9 @@ import {
   type CasoStatus,
 } from "@/lib/db-casos";
 import type { LeadFormType } from "@/lib/db-leads";
+import { FORM_TYPE_LABELS } from "@/lib/admin-labels";
 
-const VALID_AREAS: LeadFormType[] = [
-  "contratos",
-  "propriedade_intelectual",
-  "contas_e_plataformas",
-  "golpes_virtuais",
-  "assessoria_estrategica",
-];
+const VALID_AREAS = Object.keys(FORM_TYPE_LABELS) as LeadFormType[];
 
 const VALID_STATUSES: CasoStatus[] = [
   "aberto",

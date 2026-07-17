@@ -1,10 +1,10 @@
-# Handoff — Site institucional Dallila Camargo I Advocacia
+# Handoff — Site institucional + Sistema Operacional Jurídico, Dallila Camargo I Advocacia
 
 > Documento de continuidade de sessão. Cole este arquivo (ou peça para o Claude ler `HANDOFF.md` na raiz do projeto) no início de uma nova conversa para retomar exatamente de onde paramos, sem precisar reprocessar todo o histórico anterior.
 
 ## 1. Quem é a cliente e o que é o projeto
 
-**Dallila Camargo** — advogada sócia única, especialista em **Direito Digital**, OAB/PA nº 36.762, sediada em Redenção/PA, atendimento 100% remoto em todo o Brasil. O projeto é o site institucional completo do escritório (landing pages de captação + blog + painel administrativo), construído do zero nesta sessão de trabalho com Claude Code.
+**Dallila Camargo** — advogada sócia única, especialista em **Direito Digital**, OAB/PA nº 36.762, sediada em Redenção/PA, atendimento 100% remoto em todo o Brasil. O projeto começou como o site institucional (landing pages + blog) e evoluiu, dentro desta mesma sessão, para um **sistema operacional de escritório** completo (CRM, gestão de casos/contratos, financeiro, notificações) — a cliente pediu explicitamente para o painel deixar de ser "um formulário de captação bonito" e virar uma ferramenta de operação real do escritório.
 
 - **Repositório**: `github.com/dallilacamargoadv/escritorio-dallilacamargoadv` (público)
 - **Deploy**: Vercel, projeto `escritorio-dallilacamargoadv` (`prj_oWeeWYZYerDMaefVIbBbtGhaqZVD`, team `team_AUWkl211AzsfpkSeCj38JNhY`)
@@ -14,144 +14,118 @@
 
 ## 2. Stack técnica
 
-- **Next.js 16.2.10** (App Router, Turbopack) — atenção: breaking changes vs. Next.js "clássico" que o modelo conhece por treinamento. `middleware.ts` virou **`proxy.ts`** (export `proxy`, não `middleware`), `params`/`searchParams` são `Promise` (sempre `await`), tipos ajudantes `PageProps<'/rota/[id]'>` e `RouteContext<'/rota/[id]'>` gerados automaticamente. Há um `AGENTS.md` no repo avisando disso — sempre checar `node_modules/next/dist/docs/` antes de usar uma API que "parece familiar".
-- **React 19.2**, **Tailwind CSS v4** (config via `@theme inline` em `app/globals.css`, não há `tailwind.config.ts`)
-- **Supabase**: Postgres com RLS + Supabase Auth (login do admin) + `@supabase/ssr` para client de servidor com cookies
-- **GSAP + ScrollTrigger** para a animação de scroll "3 Passos Iniciais" / "Etapas"
-- **Recharts** para os gráficos do admin, **lucide-react** para ícones, **xlsx** (SheetJS) para exportação, **next-mdx-remote/rsc** para renderizar o conteúdo dos posts do blog (que agora vem do banco, não de arquivos)
-- **Vercel Cron** ainda não usado (cogitado para lembretes de prazo em fase futura)
+- **Next.js 16.2.10** (App Router, Turbopack) — breaking changes vs. Next.js "clássico": `proxy.ts` (não `middleware.ts`, export `proxy`), `params`/`searchParams` são `Promise` (sempre `await`), tipos `PageProps<'/rota/[id]'>` e `RouteContext<'/rota/[id]'>` gerados automaticamente. Há um `AGENTS.md` no repo avisando disso.
+- **React 19.2**, **Tailwind CSS v4** (`@theme inline` em `app/globals.css`, sem `tailwind.config.ts`)
+- **Supabase**: Postgres com RLS + Supabase Auth + `@supabase/ssr`. Cliente de service role (`lib/supabase/service.ts`, novo nesta sessão) para contextos sem sessão de usuário (o cron de notificações).
+- **GSAP + ScrollTrigger**, **Recharts**, **lucide-react**, **xlsx**, **next-mdx-remote/rsc** (blog)
+- **Vercel Cron** — agora em uso (`vercel.json`, novo nesta sessão): `/api/cron/notificacoes`, 1x/dia às 11h UTC (~8h em Redenção/PA)
 
-## 3. Identidade visual (brand book)
+## 3. Identidade visual (brand book) — inalterada nesta sessão
 
-- **Cores** (dark theme, default): `--bg: #2a070c` (vinho porto), `--bg-alt: #380b12`, `--surface: #3f0e17`, `--gold: #9f8e87` (dourado do tema escuro), `--gold-bright: #c9bba8`, `--wine: #b5495a`, `--ink: #ddc8b3` (texto principal), `--ink-dim: #9f8e87`. Tokens fixos de marca: `--brand-dourado-latao: #c9a227`, `--brand-bordo-assinatura: #7a2430`.
-- **Light theme**: `--bg: #ddc8b3`, `--ink: #2a070c`, `--gold: #6e5c53`, etc. — trocado via `data-theme="light"|"dark"` no `<html>`, com fallback por `prefers-color-scheme`.
-- **Cores semânticas** (separadas do accent dourado): `--success`, `--warning`, `--error` (mapeadas em `@theme inline` como `text-success`, `border-error`, etc.)
-- **Tipografia**: **Fraunces** (display/serif, itálico usado para dar ênfase em palavras-chave — ex. `<em className="italic text-gold">Direito Digital</em>`), **Inter** (corpo/sans), **JetBrains Mono** (rótulos "eyebrow" em caixa alta com tracking, dados tabulares). Classe utilitária `.font-eyebrow` já pronta.
-- **Logo**: abelha/mariposa dourada. Padrão "assinatura de e-mail" (componente `components/ui/Logo.tsx`): abelha + "Dallila Camargo" em itálico Fraunces + "Advogada · OAB/PA Nº 36.762" em mono caps — usado no Header do site público e agora também no painel admin (login + sidebar).
-- **Textura de grain**: `.site-noise` (SVG turbulence, opacity 0.06, `mix-blend-mode: soft-light`, `z-index: 40`), só no site público.
-- **Efeito de cursor**: `components/CursorGlow.tsx` — glow sutil (radial-gradient `rgba(201,187,168,0.18)`) que segue o mouse via `mousemove`, `mix-blend-mode: soft-light`, desativado em touch (`pointer: coarse`) e com `prefers-reduced-motion`.
+Dark theme default (`--bg: #2a070c`, `--gold: #9f8e87`, `--wine: #b5495a`, `--ink: #ddc8b3`), light theme via `data-theme`. Tipografia: **Fraunces** (display/serif), **Inter** (corpo), **JetBrains Mono** (eyebrow/dados tabulares). Logo abelha/mariposa dourada (`components/ui/Logo.tsx`). Ver `app/globals.css` para os tokens completos — nada disso mudou nesta sessão, só foi reaproveitado.
 
 ## 4. Estrutura de rotas atual
 
-**Site público** (grupo de rotas `app/(site)/`, layout com Header + Footer + CookieConsentBanner + CursorGlow + grain):
-- `/` — Home (Hero com vídeo de fundo, Áreas de Atuação, 3 Passos Iniciais, Fundamentos do Escritório, A Fundadora, Conteúdo Recente condicional, Fechamento)
-- `/sobre` — Sobre o Escritório, 3 Passos Iniciais, A Fundadora, Fechamento (mesmas seções também aparecem na Home, por pedido explícito da cliente)
-- `/contato` — hub de triagem com os 5 cards de área, cada um linkando para `/[área]#formulario`
-- `/contratos`, `/propriedade-intelectual`, `/contas-e-plataformas`, `/golpes-virtuais`, `/assessoria-estrategica` — as 5 landing pages de área, cada uma com: Hero, Nossa Atuação (4 cards), Etapas (scroll GSAP com 3 passos específicos da área), Pontos que Merecem Atenção (5 itens), Nota técnica (base legal), formulário multi-step
-- `/blog`, `/blog/[slug]`, `/blog/categoria/[categoria]` — blog, agora **alimentado pelo Supabase** (não mais por arquivos `.mdx`)
-- `/politica-de-privacidade`, `/termos-de-uso`
-- `/robots.ts`, `/sitemap.ts` (dinâmico, inclui posts do blog)
+**Site público** (`app/(site)/`): `/`, `/sobre`, `/contato`, as **5 áreas** (`/contratos`, `/propriedade-intelectual`, `/contas-e-plataformas`, `/golpes-virtuais`, `/assessoria-estrategica`), `/blog`, `/blog/[slug]`, `/blog/categoria/[categoria]`, páginas legais. **Continuam sendo 5 áreas** — uma 6ª área ("Assessoria Recorrente") foi construída e depois **totalmente revertida** nesta sessão (ver seção 6, item 5). O único resquício é um valor de enum órfão e inofensivo no Postgres (`assessoria_recorrente` em `lead_form_type`, sem nenhum lead usando).
 
-**Painel admin** (grupo `app/(admin)/`, protegido por `proxy.ts`):
-- `/login` — Supabase Auth (e-mail/senha)
-- `/admin` — Visão Geral: KPIs (leads na semana, aguardando contato, % SLA cumprido) + lista de leads recentes
-- `/admin/leads` — dashboard completo de leads (antiga página `/admin`): 3 gráficos (Recharts), filtros (busca, área, status, UTMs), tabela com paginação, modal de detalhes/notas/status, exportação CSV/XLSX
-- `/admin/blog`, `/admin/blog/novo`, `/admin/blog/[id]` — CRUD completo de posts do blog
+O rodapé de artigos do blog (`app/(site)/blog/[slug]/page.tsx`) foi reescrito nesta sessão: removido o link "entre em contato" do aviso de fechamento, por questão de conformidade com o Provimento 205/2021 da OAB (captação de clientela). O texto agora só menciona a área de atuação do escritório, sem CTA direto.
 
-**API routes**:
-- `/api/{contratos|propriedade-intelectual|contas-e-plataformas|golpes-virtuais|assessoria-estrategica}-leads` — recebem os formulários públicos
-- `/api/admin/leads/export` — CSV/XLSX
-- `/api/admin/leads/[id]/status` (PATCH) — muda status do lead
-- `/api/admin/leads/[id]/notes` (GET/POST) — notas internas
-- `/api/admin/posts` (GET/POST), `/api/admin/posts/[id]` (GET/PATCH/DELETE) — CRUD do blog
+**Painel admin** (`app/(admin)/`, protegido por `proxy.ts`) — cresceu muito nesta sessão:
+
+```
+/admin                      Visão Geral (KPIs + sino de notificações no canto superior direito)
+/admin/leads                 Dashboard de leads (já existia)
+/admin/clientes, /novo, /[id], /[id]/editar      NOVO — cadastro de clientes
+/admin/casos, /novo, /[id]                        NOVO — casos jurídicos + frentes (ver seção 5)
+/admin/contratos, /novo, /[id]                     NOVO — contratos (projeto/recorrente)
+/admin/financeiro, /novo, /[id], /[id]/recibo      NOVO — lançamentos financeiros + recibo imprimível
+/admin/notificacoes                                 NOVO — central de notificações
+/admin/blog/*                                        já existia
+```
+
+**API routes novas** (todas em `app/api/admin/` ou `app/api/cron/`):
+`clientes`, `clientes/[id]`, `contratos`, `contratos/[id]`, `casos`, `casos/[id]`, `casos/[id]/frentes`, `casos/[id]/frentes/[frenteId]`, `financeiro`, `financeiro/[id]`, `notificacoes`, `notificacoes/[id]`, `cron/notificacoes`.
 
 ## 5. Banco de dados (Supabase — projeto `zojcjeinftoscpmkwtdi`)
 
-### Tabela `leads`
-Campos originais: `id, created_at, form_type (enum lead_form_type: contratos|propriedade_intelectual|contas_e_plataformas|golpes_virtuais|assessoria_estrategica), scope_key, name, email, whatsapp, answers (jsonb), utms (jsonb), metadata (jsonb), duplicate_of`.
-Campos adicionados nesta sessão (CRM Fase 1): `status (enum lead_status: novo|em_contato|qualificado|proposta|cliente|perdido, default 'novo'), sla_due_at (timestamptz), first_contacted_at (timestamptz)`.
-Dedup: índices únicos em `lower(email), scope_key` e `whatsapp, scope_key` — insert duplicado retorna `{duplicate: true}` em vez de erro (código Postgres `23505`).
-RLS: `INSERT` liberado para `anon`; `SELECT/UPDATE/DELETE` só para `authenticated`.
+Tabelas de antes da sessão: `leads`, `lead_notes`, `posts` (sem mudança de schema nesta sessão, exceto o enum `lead_form_type` que ganhou e depois manteve um valor órfão `assessoria_recorrente`).
 
-### Tabela `lead_notes` (nova)
-`id, lead_id (FK leads), author_id (FK auth.users), body, next_action_at, created_at`. RLS: tudo restrito a `authenticated`.
+**Tabelas novas desta sessão** (todas com RLS: `select/insert/update` restritos a `authenticated`, nunca `anon`):
 
-### Tabela `posts` (nova — substituiu os arquivos `.mdx`)
-`id, slug (unique), title, subtitle, category (text, valores = `BLOG_CATEGORIES` de `lib/blog.ts`), content (markdown/MDX), faq (jsonb), published (boolean, default false), date, updated_at, created_at`.
-RLS: `anon` só enxerga `published = true`; `authenticated` enxerga e edita tudo.
+- **`clientes`**: `id, lead_id (nullable, FK leads), tipo_pessoa (pf|pj), nome_razao_social, documento, email, whatsapp, endereco (jsonb), area_origem (lead_form_type, nullable), created_at`. Nasce de um Lead convertido (preserva `lead_id`) ou é criado direto (indicação).
+- **`contratos`**: `id, cliente_id (FK, restrict), tipo (projeto|recorrente), status (rascunho|enviado|assinado|encerrado|cancelado), valor, periodicidade (texto livre), assinado_em, created_at`. `assinado_em` é auto-carimbado na primeira vez que o status vira `assinado`.
+- **`casos`**: `id, contrato_id (FK, restrict — obrigatório: só existe caso com contrato assinado, regra de negócio confirmada com a cliente), area (lead_form_type), titulo, status (aberto|em_andamento|aguardando_cliente|concluido|arquivado), aberto_em, encerrado_em`.
+- **`caso_frentes`** (novo): `id, caso_id (FK, cascade), tipo (extrajudicial|judicial|administrativo), orgao (texto livre, ex. "INPI"/"TJPA"), numero_processo, status (aberta|em_andamento|concluida|arquivada), aberta_em, encerrada_em`. Um Caso pode ter **múltiplas frentes simultâneas ou sequenciais** (confirmado com a cliente — ex.: processo no INPI rodando junto com uma ação judicial do mesmo caso).
+- **`financeiro_lancamentos`**: `id, contrato_id (FK, restrict), cliente_id (FK, restrict — redundante de propósito, evita join), descricao, valor, vencimento, status (pendente|pago), pago_em, grupo_id (nullable, uuid — marca lançamentos criados juntos num lote parcelado/recorrente)`. "Atrasado" é **calculado na tela** (pendente + vencimento no passado), não é um status guardado.
+- **`notificacoes`**: `id, tipo (lead_sla|financeiro_vencimento|blog_rascunho), titulo, lead_id/financeiro_id/post_id (FKs nullable, múltiplas — nunca polimorfismo genérico, é o princípio arquitetural repetido em todo o sistema), lida, created_at`.
 
-## 6. Cronologia do que foi feito (resumo por marco)
+**Princípio de schema repetido em todo o sistema**: sempre que uma entidade precisa referenciar "uma de várias outras tabelas", usa **múltiplas FKs nullable** (uma coluna por tabela-alvo possível), nunca uma coluna genérica tipo `entidade_tipo`/`entidade_id`. Mantém integridade referencial de verdade e RLS simples.
 
-1. **Build inicial completo** (Fases 0–10 do plano original): scaffolding Next.js, schema Supabase, sistema de UI (`Button`, `EnclosureNested`, `SectionEyebrow`, `Icon`), Header/Footer, Home, as landing pages (originalmente 3: Conta Hackeada, Contratos, Propriedade Intelectual), `/contato`, infraestrutura do blog em MDX (sem posts), páginas legais (Política de Privacidade a partir de PDF fornecido, Termos de Uso redigido do zero), SEO técnico (robots.txt com allowlist de bots de IA, sitemap, JSON-LD, llms.txt), painel admin básico (login, tabela de leads, 3 gráficos, export CSV/XLSX). Deploy inicial no Vercel após resolver: autenticação GitHub via PAT, e um bug de Framework Preset "Other" em vez de "Next.js" causando 404 em produção.
+## 6. Cronologia desta sessão (mais recente por último)
 
-2. **Iteração — grain, animação, tema**: textura de grain sitewide, seção "3 Passos Iniciais" com animação GSAP ScrollTrigger (círculo central + 3 arcos preenchendo), reposicionada para logo após Áreas de Atuação, accordion mobile para Missão/Visão/Valores (desktop intocado), toggle de tema claro/escuro (criado do zero, com card expandido nos primeiros 4s). Bug crítico resolvido: scroll autônomo da página ao carregar (causado por conflito entre scroll-anchoring nativo do browser e o pin do GSAP ScrollTrigger) — fix foi `overflow-anchor: none` no `html`.
+1. **Resolvido o bug de produção do handoff anterior** (Supabase env vars): a causa raiz real era o *valor* de `NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY` estar incorreto no Vercel (havia até duas variáveis-lixo nomeadas literalmente `Key`/`Value`, sinal de preenchimento errado) — não era cache de build, embora essa hipótese tenha sido testada primeiro. Corrigido colando os valores certos (obtidos via MCP do Supabase) e redeploy sem cache. `/admin`, `/login`, `/blog` voltaram a 200.
 
-3. **Iteração — reestruturação para 5 áreas**: de 3 para 5 áreas de atuação (Contratos Digitais, Propriedade Intelectual, Contas e Plataformas, Golpes Virtuais, Assessoria Estratégica), com migração de enum no Postgres, 3 formulários novos, header/footer/logo redesenhados (assinatura de e-mail), Home reescrita (Hero mais estreito, Fundamentos do Escritório, A Fundadora), `PointsOfAttention` (Pontos que Merecem Atenção) em cada área, fechamento simplificado. Depois disso, `/sobre` foi criada como página dedicada, e "Sobre o Escritório"/"3 Passos Iniciais"/"A Fundadora" foram movidos pra lá — mas a cliente pediu para manter "3 Passos Iniciais" e "A Fundadora" **também** na Home (estão nos dois lugares hoje).
+2. **Arquitetura em 14 fases** (conversa, sem código): a cliente pediu um desenho completo de "sistema operacional jurídico" — Dashboard, CRM (Leads/Clientes), Casos, Contratos, Documentos, Agenda, Financeiro, Blog, Usuários/Permissões, Notificações, Configurações, Auditoria, Roadmap. Aprovado fase a fase. Documento visual publicado como Artifact. Esse desenho é a referência de fundo para tudo que veio depois, mas **a implementação seguiu por ondas priorizadas pela cliente, não pela ordem das 14 fases**.
 
-4. **Iteração — vídeo, admin, ajustes finos**: vídeo de fundo na Hero (convertido de HEVC/.mov para H.264/.mp4 via `avconvert`, com overlay `bg-bg/70`). Diagnóstico e correção do 500 em produção no `/admin` (env vars do Supabase nunca haviam sido configuradas no Vercel — **isso voltou a ser problema, ver seção 8**). Restyle completo do painel admin com a identidade da marca (antes era neutro grafite/branco, decisão original do projeto). Mensagem de agradecimento padronizada nos 5 formulários. Efeito de luz no cursor, grain mais fino, cards de Fundamentos com hover-expand no desktop (mantendo tap no mobile). Seta discreta nos cards clicáveis de Áreas de Atuação. Toggle de tema movido do canto flutuante da tela para dentro do Header (o admin manteve a versão flutuante). Novos textos de Hero/subtítulo da Home (2 rodadas de ajuste de copy).
+3. **Onda 1 — Clientes, Contratos, Casos** (commit `595a93d`, **já no ar em produção**): ciclo de vida completo Lead → Cliente → Contrato → Caso. Conversão de Lead em Cliente (botão no modal do lead, preserva `lead_id`, nunca duplica cadastro). Regra de negócio: Caso só existe com Contrato assinado. Sidebar reorganizada em grupos (Operação/Jurídico/Negócio/Sistema, versão inicial). Testado localmente e em produção, deploy confirmado com `200` em todas as rotas.
 
-5. **Plano de evolução do painel (Legal Ops)**: a cliente pediu, atuando eu como "especialista sênior em Legal Ops", um plano completo de evolução do admin. Entrei em Plan Mode, mapeei um roadmap de 10 fases (CRM essencial → navegação modular → gestão de casos → agenda/prazos → documentos → automação de comunicação → equipe/permissões → auditoria/LGPD → analytics avançado → portal do cliente), priorizado por impacto x esforço. A cliente aprovou o plano com foco em implementar só a Fase 1 primeiro.
+4. **Feedback da cliente sobre a Onda 1** → gerou a **Onda 2**: faltava filtro por área em Clientes/Casos (só existia um `<select>` escondido em Casos); Casos precisavam de "frentes" (extrajudicial/judicial/administrativo/INPI, simultâneas ou sequenciais — confirmado que varia caso a caso); Financeiro e Notificações foram adiantadas na frente de Agenda/Documentos (que ficaram para depois, por pedido explícito da cliente).
 
-6. **Implementação da Fase 1 + extras** (commit `58380ff` em diante): status do lead (pipeline), notas internas, indicador de SLA — tudo testado direto no Supabase de produção (e limpo depois). Na sequência, a cliente comparou o resultado com um material de outra fonte (prints de um spec bem mais ambicioso — CRM completo, contratos com assinatura eletrônica, faturamento, portal do cliente, múltiplos papéis) e ficou insatisfeita com o tamanho da entrega. Alinhamos via `AskUserQuestion`: manter o roadmap incremental, mas **antecipar** 3 itens: barra lateral (Fase 2), notificação de novo lead, e publicação do blog pelo painel (que nunca tinha sido planejada em nenhuma fase). Isso virou o commit `1475f9c`: barra lateral com Visão Geral/Leads/Blog, KPIs, badge de leads aguardando contato, e migração completa do blog de arquivos `.mdx` para o Supabase com CRUD pelo painel.
+5. **Onda 2 — implementada e testada localmente, ainda NÃO commitada nem deployada** (ver seção 8, é o item mais importante para retomar):
+   - **Frentes de caso** (`caso_frentes`) — seção dentro da página de cada Caso.
+   - **Pílulas de filtro de área** (`AreaFilterPills.tsx`) em Clientes (por áreas dos casos já atendidos, não a área de origem do lead) e Casos.
+   - **Financeiro completo**: lista, lançamento único, **parcelado e recorrente em lote** (pedido extra da cliente — form gera N lançamentos mensais de uma vez, com `grupo_id` compartilhado), recibo imprimível com a identidade visual (`window.print()`, sem dependência de PDF nova). **Um bug de fuso horário foi encontrado e corrigido durante o teste**: o cálculo de "+N meses" usava `setMonth`/`getMonth` (fuso local do servidor) em vez de `setUTCMonth`/`getUTCMonth`, fazendo a última parcela de um lote cair um dia depois do esperado — corrigido em `app/api/admin/financeiro/route.ts`.
+   - **Notificações**: sino com badge na sidebar + preview das últimas 4 na Visão Geral (canto superior direito, "Ver todas" → `/admin/notificacoes`) + página completa + motor de regras via `app/api/cron/notificacoes/route.ts` (protegido por `CRON_SECRET`, usa `lib/supabase/service.ts` com a service role key pra escrever sem sessão de usuário).
+   - **Sidebar** ganhou os grupos Financeiro (dentro de Negócio) e Sistema/Notificações.
+   - **Blog**: removido o CTA "entre em contato" do rodapé do artigo (ver seção 4).
 
-7. **Bug de build + variáveis de ambiente (situação atual, ver seção 8)**.
+6. **Tentativa de 6ª área "Assessoria Recorrente" — construída e depois totalmente revertida** na mesma sessão. A cliente pediu inicialmente uma nova área pública (landing + formulário + entrada no enum), fizemos a entrevista de copy completa (adaptando a skill `landing-page-advogados-tlbc`), implementamos tudo (página, formulário multi-step, API route, entrada em `lib/site-data.ts`/`lib/area-content.ts`/`lib/admin-labels.ts`), testamos em produção local com sucesso — e então a cliente percebeu que **não precisava disso como área pública** (já é coberta pela área "Assessoria Estratégica" existente); o que ela realmente queria era só uma forma de identificar esses clientes **dentro do CRM**. Tudo foi revertido (arquivos deletados, entradas removidas dos arrays/labels). **Único resquício**: o enum `lead_form_type` no Postgres ganhou o valor `assessoria_recorrente` via `ALTER TYPE ... ADD VALUE`, que não tem como ser removido sem recriar o tipo inteiro — foi deixado órfão de propósito, é inofensivo (não aparece em nenhum lugar da UI, nenhum lead usa).
+
+7. **Descoberta importante, ainda não resolvida**: `contratos.tipo` já suporta `"recorrente"` desde a Onda 1 (`ContratoTipo = "projeto" | "recorrente"`, com label em `lib/admin-labels.ts`). Ou seja, o conceito de "cliente com assessoria recorrente" **já existe no schema** — só falta a **visão dedicada** no admin (uma tela ou filtro que mostre só clientes/contratos com `tipo = 'recorrente'`). Esse é o próximo pedido da cliente, ainda não iniciado.
 
 ## 7. Padrões e convenções importantes do código
 
-- **`useSyncExternalStore`** é o padrão usado sempre que um valor depende de `window`/`localStorage`/`matchMedia` (tema, `prefers-reduced-motion`, etc.), para evitar mismatch de hidratação SSR/client. **Nunca** usar `useState` + `useEffect` pra isso.
-- **ESLint `react-hooks/set-state-in-effect`** é estrito neste template — proíbe chamar `setState` de forma síncrona direto no corpo de um `useEffect`. Sempre que aparecer, resolver com `useSyncExternalStore`, callback assíncrono (`setTimeout`), ou derivando o valor no render em vez de guardar em state.
-- **`RouteContext<'/api/rota/[id]'>`** é o tipo correto pra `params` em route handlers (`app/api/.../route.ts`) no Next 16 — sempre `const { id } = await ctx.params`.
-- **`PageProps<'/rota/[id]'>`** é o tipo correto pra páginas (`page.tsx`) com parâmetros dinâmicos.
-- Todas as tabelas novas no Supabase seguem o padrão: RLS habilitado, policy de leitura pública restrita ao necessário (`published = true`, por ex.), CRUD completo só pra `authenticated`.
-- Os labels/cores compartilhados do admin (nome das áreas, nome/cor dos status de lead) ficam centralizados em `lib/admin-labels.ts` — evitar duplicar esses `Record<>` em componentes.
-- Cliente Supabase anônimo reutilizável (sem depender de cookies de request) está em `lib/supabase/anon.ts` — **obrigatório** usar esse em qualquer código que rode em `generateStaticParams` ou em contexto de build, porque `lib/supabase/server.ts` (baseado em `cookies()`) só funciona dentro de uma requisição real.
-- `getAllPosts()`/`getPostBySlug()` em `lib/blog.ts` têm `try/catch` que devolve `[]`/`null` em vez de propagar erro — decisão deliberada pra não derrubar o build inteiro se o Supabase estiver inacessível no momento do build (ver seção 8, foi exatamente esse bug que motivou a mudança).
-- Nunca commitar/pushar sem pedir permissão explícita antes — esse padrão foi seguido a risca a sessão toda (a cliente sempre confirma com "Sim"/"Pode preparar" antes de cada commit+push).
-- Verificação padrão antes de qualquer commit: `npx eslint .` e `npm run build` limpos, mais teste manual no browser local (`http://localhost:3000`), às vezes com escrita/leitura real no Supabase de produção (sempre limpando os dados de teste depois).
+- **`useSyncExternalStore`** para qualquer valor dependente de `window`/`localStorage`/`matchMedia`. Nunca `useState`+`useEffect` pra isso.
+- **ESLint `react-hooks/purity`** (apareceu nesta sessão, além do já conhecido `set-state-in-effect`): proíbe chamar funções impuras (`Date.now()`, `Math.random()`) **diretamente dentro do corpo de um componente/hook** durante a renderização. A correção é extrair a lógica pra uma função auxiliar de módulo (não-componente, sem PascalCase) — ex.: `lib/financeiro-utils.ts::isLancamentoAtrasado()`, chamada de dentro do componente em vez de calcular inline. Isso já existia implicitamente em `getSlaState()` de `AdminDashboard.tsx` (por isso aquele nunca deu erro), só ficou explícito agora.
+- **Fronteira Server/Client**: cuidado ao importar de um arquivo `lib/db-*.ts` (que usa `lib/supabase/server.ts`, que usa `next/headers`) dentro de um Client Component — mesmo que você só use um `import type`, se o **mesmo import também trouxer uma função/valor real** daquele módulo, o bundler tenta empacotar o arquivo inteiro (incluindo `next/headers`) pro browser, e o build quebra. Solução: extrair funções puras usadas por Client Components para um arquivo separado sem imports de servidor (ex.: `lib/financeiro-utils.ts`), e importar o *tipo* via `import type` do arquivo original (isso é seguro, é apagado em tempo de compilação).
+- **`RouteContext<'/api/rota/[id]'>`** pra `params` em route handlers; **`PageProps<'/rota/[id]'>`** pra páginas — sempre `await`.
+- **RLS**: todas as tabelas novas seguem authenticated-only (nunca anon), diferente de `leads` que aceita insert anônimo do site público.
+- **FKs múltiplas nullable em vez de polimorfismo genérico** — repetido em Documentos (conceitual), Agenda (conceitual), e já implementado em `notificacoes`. É a assinatura arquitetural do sistema.
+- **`on delete restrict` vs `cascade`**: `casos→contratos`, `contratos→clientes`, `financeiro_lancamentos→contratos/clientes` são `restrict` (apagar o "pai" não pode apagar silenciosamente o "filho" que tem valor jurídico/financeiro próprio). `caso_frentes→casos` é `cascade` (frente não tem sentido sem o caso).
+- **Padrão de arquivo por entidade**: `lib/db-<entidade>.ts` (interfaces + `getAll`/`getById`/`create`/`update`, cliente Supabase de servidor) + `app/api/admin/<entidade>/route.ts` (GET lista, POST cria) + `.../[id]/route.ts` (GET um, PATCH atualiza) + componente de lista (`"use client"`, recebe `initial<Entidade>s`) + componente de formulário único que serve create *e* edit (prop opcional `entidade?`, branch `entidade ? PATCH : POST`) + páginas Server Component finas que só buscam dado e fazem `redirect("/login")` no catch.
+- **Labels/cores compartilhados do admin** ficam centralizados em `lib/admin-labels.ts` — nunca duplicar esses `Record<>` em componentes. Onde antes havia lista hardcoded de áreas duplicada em 3+ lugares (`AdminDashboard.tsx`, `app/api/admin/casos/*`), foi refatorado pra ler de `FORM_TYPE_LABELS` dinamicamente — só editar em um lugar (`lib/admin-labels.ts` e `lib/site-data.ts`) quando uma área mudar no futuro.
+- **`lib/site-data.ts::SERVICE_AREAS`** é a fonte única das 5 áreas públicas — Home, `/contato`, Header, Footer e `sitemap.ts` leem dinamicamente dali. Só `lib/db-leads.ts::LeadFormType` (o tipo TS) e `lib/admin-labels.ts::FORM_TYPE_LABELS` (os labels) precisam de edição manual se uma área for adicionada/removida de verdade.
+- **Recibo em PDF sem biblioteca nova**: página HTML normal estilizada com os tokens de marca + `@media print` + botão que chama `window.print()`. O navegador salva como PDF nativamente.
+- **Cron do Vercel**: 1x/dia (não a cada minuto) — bate com o plano Hobby e com a "jornada diária" real da cliente (ela confere o painel de manhã, não em tempo real).
+- Nunca commitar/pushar sem pedir permissão explícita antes — seguido à risca a sessão toda.
+- Verificação padrão antes de qualquer commit: `npx eslint .` e `npm run build` limpos, teste manual no browser local, às vezes com escrita/leitura real no Supabase de produção (sempre limpando os dados de teste depois via `execute_sql`).
 
-## 8. ✅ RESOLVIDO (2026-07-15) — problema de produção que estava em aberto
+## 8. 🔴 Estado atual em aberto (prioridade da próxima sessão)
 
-Causa raiz real: os valores de `NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY` salvos no Vercel estavam incorretos/vazios (havia inclusive duas variáveis-lixo nomeadas literalmente `Key` e `Value`, sobra de um preenchimento errado — sinal de que o valor real pode ter ido parar no campo errado). Não era problema de cache de build, embora tenhamos testado essa hipótese primeiro. Corrigido reeditando as duas variáveis com os valores corretos obtidos direto do Supabase (`get_project_url`/`get_publishable_keys`) e fazendo um redeploy sem cache. Confirmado: `/`, `/admin`, `/login`, `/blog` retornam 200 e não há mais erros de runtime.
+**O código local está à frente do que está commitado.** Último commit em produção: `595a93d` (Onda 1, já deployada). Tudo da Onda 2 (seção 6, item 5) está **implementado, testado localmente, com lint/build limpos — mas não commitado, não pushado, não deployado**. `git status` na raiz do projeto mostra a lista exata de arquivos modificados/novos.
 
-<details>
-<summary>Histórico do diagnóstico (mantido para referência)</summary>
+**Antes de fazer qualquer commit desta Onda 2**, ela precisa de autorização explícita da cliente (padrão da sessão toda) — pergunte primeiro.
 
-### 🔴 PROBLEMA ATUAL EM ABERTO (prioridade da próxima sessão) — texto original, já resolvido acima
+**Passo manual da cliente, necessário antes do cron de Notificações funcionar em produção** (não posso fazer isso por ela, não tenho permissão para criar variáveis de ambiente): adicionar no Vercel, além do que já existe, duas variáveis novas:
+- `CRON_SECRET` (qualquer valor aleatório — protege o endpoint `/api/cron/notificacoes` de ser chamado por qualquer um)
+- `SUPABASE_SERVICE_ROLE_KEY` (a chave *service role*, não a anon/publishable — pegar em Supabase → Settings → API. É secreta, nunca deve ir para `NEXT_PUBLIC_*`)
 
-**Sintoma**: em produção (`https://escritorio-dallilacamargoadv.vercel.app`), as rotas `/admin`, `/login` e `/api/admin/*` retornam **500**. A causa raiz, confirmada nos logs do Vercel (`get_runtime_errors`), é:
+**Pedido em aberto, ainda não iniciado**: a cliente quer uma **visão dedicada no admin para clientes/contratos com `tipo = 'recorrente'`** (ver seção 6, item 7 — o campo já existe, só falta a tela/filtro). Foi o último pedido antes desta sessão ser encerrada por limite de contexto.
 
-```
-Error running the exported Web Handler: Error: Your project's URL and Key are required to create a Supabase client!
-```
+**Também em aberto, aprovado mas não implementado**: a reestruturação completa da sidebar que a cliente confirmou via mockup visual (Jurídico dividido por área + Casos geral, grupo Site com Leads/Blog/Páginas SEO/Glossário/FAQs, grupo Plataforma com Controle de Acesso/Notificações/Relatórios/Configurações, grupo Finanças, grupo Prazos próprio). Isso é MUITO trabalho (8 módulos novos, a maioria ainda nem desenhada em detalhe) — a cliente pediu pra priorizar "Prazos" e "Assessoria Recorrente" primeiro; o segundo item mudou de escopo (não é mais área pública, é a visão de CRM do parágrafo acima). **Prazos (Agenda)** ainda não tem nem uma conversa de design nesta sessão além da menção original nas 14 fases — precisa ser desenhado do zero (frentes de agenda, o que conta como "prazo", como se relaciona com Casos/Contratos/Leads) antes de implementar.
 
-Esse erro acontece dentro do `proxy.ts` (middleware, roda em Edge Runtime, protege `/admin/:path*`, `/login`, `/api/admin/:path*`) porque `process.env.NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` não estão chegando até ele.
+**Arquivo de plano** em `/Users/dallilacamargo/.claude/plans/binary-herding-tiger.md` está **desatualizado** — contém o plano da Assessoria Recorrente que foi revertida. Ignorar ou sobrescrever no próximo ciclo de planejamento.
 
-**O que já foi tentado**:
-1. Orientei a cliente a adicionar as 3 variáveis (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `NEXT_PUBLIC_SITE_URL`) em Vercel → Settings → Environment Variables, marcando Production/Preview/Development.
-2. Ela confirmou que adicionou e fez um **Redeploy** manual (Deployments → "..." → Redeploy). Isso gerou um novo deployment (`dpl_4V8BPhwuBMojppM2VU8yrsfmWrXw`, commit `002844c`, `state: READY`).
-3. Mesmo assim, o erro **persiste** nesse novo deployment — confirmado tanto no middleware quanto (achado tardio, ver correção abaixo) na própria função Node normal.
+## 9. Preferências da cliente importantes para a próxima sessão
 
-**Correção de diagnóstico**: eu inicialmente disse à cliente que "`/blog` já está funcionando (200)", concluindo erroneamente que as env vars tinham pegado só pro middleware não. **Isso estava errado.** Reexaminando os logs depois, o mesmo erro (`supabaseUrl is required`) apareceu também associado à rota `/blog`, no mesmo deployment novo — só não derrubou a página porque `getAllPosts()` em `lib/blog.ts` tem um `try/catch` que devolve `[]` silenciosamente (proteção que eu mesmo adicionei no commit `002844c` para não travar o *build*, mas que também mascara o problema em *runtime*). Ou seja: **as variáveis de ambiente não estão disponíveis em nenhum contexto desse deployment**, não é um problema isolado do Edge Runtime/middleware.
-
-**Hipóteses mais prováveis** (nenhuma confirmada ainda — faltou a cliente mandar o screenshot da tela de env vars do Vercel antes da sessão acabar):
-- Uma das 3 variáveis não ficou com a caixinha **Production** marcada (só Preview/Development, por exemplo)
-- Erro de digitação no nome da chave (tem que ser exatamente `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `NEXT_PUBLIC_SITE_URL`)
-- Espaço em branco colado junto com o valor
-- As variáveis foram salvas em um **Environment** errado dentro do Vercel (ex.: só num "Preview" específico, ou associadas à branch errada)
-- Pouco provável, mas possível: o botão "Save" de alguma delas não foi de fato confirmado
-
-**Próximo passo imediato**: pedir para a cliente mandar um screenshot de Vercel → Settings → Environment Variables (a lista completa, com as colunas de ambiente visíveis) para diagnosticar visualmente. Depois de corrigido, fazer mais um Redeploy e validar com:
-```bash
-curl -s -o /dev/null -w "%{http_code}\n" https://escritorio-dallilacamargoadv.vercel.app/admin
-curl -s -o /dev/null -w "%{http_code}\n" https://escritorio-dallilacamargoadv.vercel.app/login
-```
-Ambos devem virar `200` (ou redirect esperado), não `500`. Também vale checar `get_runtime_errors` (MCP Vercel) pra confirmar que o erro de `supabaseUrl is required` parou de aparecer.
-
-**Não é um problema de código** — o app já foi validado localmente (com `.env.local`) e até com uma simulação deliberada de ausência das variáveis (`env -u NEXT_PUBLIC_SUPABASE_URL -u NEXT_PUBLIC_SUPABASE_ANON_KEY npm run build`), confirmando que o build sempre completa. O problema é 100% de configuração no painel do Vercel.
-
-</details>
-
-## 9. Outras coisas pendentes / não feitas ainda
-
-- Domínio próprio `dallilacamargoadv.com.br` ainda não configurado no Vercel (site está só no `.vercel.app`)
-- Categoria do blog "Conta Hackeada e Golpes Digitais" ainda existe em `lib/blog.ts` (`BLOG_CATEGORIES`) mas não corresponde a nenhuma área de atuação atual (foi renomeada pra "Golpes Virtuais" nas áreas, mas a categoria do blog não foi atualizada) — vale perguntar à cliente se quer ajustar
-- Fases 2 (parcialmente feita — só a barra lateral, faltam os módulos "Casos"/"Agenda"/"Documentos"/"Relatórios" mencionados nela) a 10 do roadmap de Legal Ops seguem como plano futuro, sem implementação
-- Nenhum post real foi publicado no blog ainda (só um post de teste, criado e removido durante a verificação)
-- A cliente ainda não criou uma segunda conta de usuário no Supabase Auth (arquitetura já suporta via campo `assigned_to` preparado, mas RBAC de verdade é a Fase 7, não implementada)
+- **"Quero sempre que você me mostre antes"** — pedido explícito: para qualquer mudança estrutural ou visual (reorganização de menu, nova tela, mudança de layout), apresentar um mockup/visualização (Artifact) **antes** de escrever código, não só descrever em texto. Mudanças pequenas e bem especificadas (um campo novo num formulário já existente, por exemplo) não precisam desse tratamento — usar julgamento.
+- A cliente é bem direta ao dar feedback e não hesita em pedir para desfazer algo (aconteceu com a Assessoria Recorrente) — trate isso como normal, sem fricção, principalmente quando nada foi commitado ainda.
+- Prefere que decisões de copy jurídica/institucional sejam extraídas dela via pergunta estruturada, não inventadas — daí o uso adaptado da skill `landing-page-advogados-tlbc` mesmo fora do fluxo original dela (site novo → 1 área nova num site existente).
+- Atenção a compliance da OAB (Provimento 205/2021) em qualquer copy pública nova — evitar qualquer linguagem que soe como captação direta/indireta de cliente.
 
 ## 10. Como retomar
 
-Ao começar a nova conversa, o Claude deve:
 1. Ler este arquivo primeiro.
-2. Resolver o problema da seção 8 (variáveis de ambiente no Vercel) como prioridade — é o único bloqueador de produção.
-3. Depois disso, seguir o roadmap de Legal Ops (seção 6.5 / plano salvo em `/Users/dallilacamargo/.claude/plans/binary-kindling-falcon.md`) só se a cliente pedir explicitamente — não presumir que ela quer continuar implementando fases sem perguntar.
+2. Confirmar com a cliente se quer commitar/pushar a Onda 2 (código já pronto e testado localmente) antes de seguir com trabalho novo.
+3. Perguntar se o próximo passo é: (a) a visão de "clientes com assessoria recorrente" no CRM (pedido mais recente, provavelmente pequeno), ou (b) começar o design de Prazos/Agenda, ou (c) outra coisa.
+4. Não presumir a ordem — a cliente muda de prioridade com frequência nesta sessão, e isso é esperado.

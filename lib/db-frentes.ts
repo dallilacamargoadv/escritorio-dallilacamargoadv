@@ -1,0 +1,89 @@
+import { createClient } from "@/lib/supabase/server";
+
+export type FrenteTipo = "extrajudicial" | "judicial" | "administrativo";
+export type FrenteStatus = "aberta" | "em_andamento" | "concluida" | "arquivada";
+
+export interface Frente {
+  id: string;
+  caso_id: string;
+  tipo: FrenteTipo;
+  orgao: string | null;
+  numero_processo: string | null;
+  status: FrenteStatus;
+  aberta_em: string;
+  encerrada_em: string | null;
+}
+
+export interface FrenteInput {
+  tipo: FrenteTipo;
+  orgao: string;
+  numero_processo: string;
+  status: FrenteStatus;
+}
+
+export async function getAllFrentes(casoId: string): Promise<Frente[]> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("caso_frentes")
+    .select("*")
+    .eq("caso_id", casoId)
+    .order("aberta_em", { ascending: false });
+
+  if (error) throw error;
+  return data as Frente[];
+}
+
+export async function createFrente(
+  casoId: string,
+  input: FrenteInput,
+): Promise<Frente> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("caso_frentes")
+    .insert({
+      caso_id: casoId,
+      tipo: input.tipo,
+      orgao: input.orgao,
+      numero_processo: input.numero_processo,
+      status: input.status,
+    })
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data as Frente;
+}
+
+export async function updateFrente(
+  id: string,
+  input: FrenteInput,
+): Promise<Frente> {
+  const supabase = await createClient();
+  const updates: Record<string, unknown> = {
+    tipo: input.tipo,
+    orgao: input.orgao,
+    numero_processo: input.numero_processo,
+    status: input.status,
+  };
+
+  if (input.status === "concluida" || input.status === "arquivada") {
+    const { data: current } = await supabase
+      .from("caso_frentes")
+      .select("encerrada_em")
+      .eq("id", id)
+      .single();
+    if (!current?.encerrada_em) {
+      updates.encerrada_em = new Date().toISOString();
+    }
+  }
+
+  const { data, error } = await supabase
+    .from("caso_frentes")
+    .update(updates)
+    .eq("id", id)
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data as Frente;
+}

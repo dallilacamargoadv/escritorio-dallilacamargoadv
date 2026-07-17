@@ -1,7 +1,15 @@
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import { Bell } from "lucide-react";
 import { getAllLeads, type Lead } from "@/lib/db-admin";
-import { FORM_TYPE_LABELS, STATUS_COLORS, STATUS_LABELS } from "@/lib/admin-labels";
+import { getAllNotificacoes } from "@/lib/db-notificacoes";
+import {
+  FORM_TYPE_LABELS,
+  NOTIFICACAO_TIPO_LABELS,
+  STATUS_COLORS,
+  STATUS_LABELS,
+} from "@/lib/admin-labels";
+import { formatDate } from "@/lib/format";
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
 
@@ -30,22 +38,68 @@ function computeKpis(leads: Lead[]) {
 
 export default async function AdminOverviewPage() {
   let leads: Lead[];
+  let notificacoes;
   try {
     leads = await getAllLeads();
+    notificacoes = await getAllNotificacoes();
   } catch {
     redirect("/login");
   }
 
   const { leadsThisWeek, awaitingContact, slaPercent } = computeKpis(leads);
   const recentLeads = leads.slice(0, 6);
+  const recentNotificacoes = notificacoes.slice(0, 4);
+  const unreadCount = notificacoes.filter((n) => !n.lida).length;
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
-      <div className="border-b border-hairline pb-6">
-        <h1 className="text-lg italic text-ink">Visão Geral</h1>
-        <p className="font-mono text-xs text-ink-dim">
-          Resumo da operação do escritório
-        </p>
+      <div className="flex items-start justify-between gap-6 border-b border-hairline pb-6">
+        <div>
+          <h1 className="text-lg italic text-ink">Visão Geral</h1>
+          <p className="font-mono text-xs text-ink-dim">
+            Resumo da operação do escritório
+          </p>
+        </div>
+
+        <div className="w-72 shrink-0 border border-hairline">
+          <div className="flex items-center gap-2 border-b border-hairline px-3 py-2">
+            <Bell size={13} className="text-gold" />
+            <span className="font-eyebrow text-[10px] text-ink-dim">
+              Notificações
+            </span>
+            {unreadCount > 0 && (
+              <span className="ml-auto font-mono text-[10px] text-bg bg-gold px-1.5 py-0.5">
+                {unreadCount}
+              </span>
+            )}
+          </div>
+          {recentNotificacoes.length === 0 && (
+            <p className="px-3 py-4 text-center text-xs text-ink-dim">
+              Nenhuma notificação ainda.
+            </p>
+          )}
+          {recentNotificacoes.map((n, index) => (
+            <div
+              key={n.id}
+              className={`px-3 py-2 text-xs ${
+                index !== recentNotificacoes.length - 1
+                  ? "border-b border-hairline"
+                  : ""
+              } ${n.lida ? "opacity-60" : ""}`}
+            >
+              <p className="truncate text-ink">{n.titulo}</p>
+              <p className="mt-0.5 font-mono text-[9px] uppercase text-ink-dim">
+                {NOTIFICACAO_TIPO_LABELS[n.tipo]} · {formatDate(n.created_at)}
+              </p>
+            </div>
+          ))}
+          <Link
+            href="/admin/notificacoes"
+            className="block border-t border-hairline px-3 py-2 text-center text-xs text-gold transition-colors duration-150 hover:underline"
+          >
+            Ver todas →
+          </Link>
+        </div>
       </div>
 
       <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">

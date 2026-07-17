@@ -2,6 +2,9 @@ import type { LeadStatus } from "@/lib/db-admin";
 import type { TipoPessoa } from "@/lib/db-clientes";
 import type { ContratoTipo, ContratoStatus } from "@/lib/db-contratos";
 import type { CasoStatus } from "@/lib/db-casos";
+import type { FrenteTipo, FrenteStatus } from "@/lib/db-frentes";
+import type { FinanceiroStatus } from "@/lib/db-financeiro";
+import type { NotificacaoTipo } from "@/lib/db-notificacoes";
 
 export const FORM_TYPE_LABELS: Record<string, string> = {
   contratos: "Contratos Digitais",
@@ -69,4 +72,35 @@ export const CASO_STATUS_COLORS: Record<CasoStatus, string> = {
   aguardando_cliente: "text-warning border-warning",
   concluido: "text-success border-success",
   arquivado: "text-ink-dim border-hairline-strong",
+};
+
+export const FRENTE_TIPO_LABELS: Record<FrenteTipo, string> = {
+  extrajudicial: "Extrajudicial",
+  judicial: "Judicial",
+  administrativo: "Administrativo (ex.: INPI)",
+};
+
+export const FRENTE_STATUS_LABELS: Record<FrenteStatus, string> = {
+  aberta: "Aberta",
+  em_andamento: "Em andamento",
+  concluida: "Concluída",
+  arquivada: "Arquivada",
+};
+
+export const FRENTE_STATUS_COLORS: Record<FrenteStatus, string> = {
+  aberta: "text-gold border-gold",
+  em_andamento: "text-warning border-warning",
+  concluida: "text-success border-success",
+  arquivada: "text-ink-dim border-hairline-strong",
+};
+
+export const FINANCEIRO_STATUS_LABELS: Record<FinanceiroStatus, string> = {
+  pendente: "Pendente",
+  pago: "Pago",
+};
+
+export const NOTIFICACAO_TIPO_LABELS: Record<NotificacaoTipo, string> = {
+  lead_sla: "SLA de lead",
+  financeiro_vencimento: "Vencimento financeiro",
+  blog_rascunho: "Rascunho de blog parado",
 };

@@ -9,38 +9,59 @@ import {
   Briefcase,
   FileText,
   Newspaper,
+  Wallet,
+  Bell,
   LogOut,
 } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { createClient } from "@/lib/supabase/client";
 
-const NAV_GROUPS = [
-  {
-    label: "Operação",
-    items: [
-      { href: "/admin", label: "Visão Geral", icon: LayoutGrid, exact: true },
-      { href: "/admin/leads", label: "Leads", icon: Users, exact: false },
-      { href: "/admin/clientes", label: "Clientes", icon: UserSquare2, exact: false },
-      { href: "/admin/casos", label: "Casos", icon: Briefcase, exact: false },
-    ],
-  },
-  {
-    label: "Jurídico",
-    items: [
-      { href: "/admin/contratos", label: "Contratos", icon: FileText, exact: false },
-    ],
-  },
-  {
-    label: "Negócio",
-    items: [
-      { href: "/admin/blog", label: "Blog", icon: Newspaper, exact: false },
-    ],
-  },
-];
-
-export function AdminSidebar({ newLeadsCount }: { newLeadsCount: number }) {
+export function AdminSidebar({
+  newLeadsCount,
+  unreadNotificacoesCount,
+}: {
+  newLeadsCount: number;
+  unreadNotificacoesCount: number;
+}) {
   const pathname = usePathname();
   const router = useRouter();
+
+  const NAV_GROUPS = [
+    {
+      label: "Operação",
+      items: [
+        { href: "/admin", label: "Visão Geral", icon: LayoutGrid, exact: true, badge: 0 },
+        { href: "/admin/leads", label: "Leads", icon: Users, exact: false, badge: newLeadsCount },
+        { href: "/admin/clientes", label: "Clientes", icon: UserSquare2, exact: false, badge: 0 },
+        { href: "/admin/casos", label: "Casos", icon: Briefcase, exact: false, badge: 0 },
+      ],
+    },
+    {
+      label: "Jurídico",
+      items: [
+        { href: "/admin/contratos", label: "Contratos", icon: FileText, exact: false, badge: 0 },
+      ],
+    },
+    {
+      label: "Negócio",
+      items: [
+        { href: "/admin/financeiro", label: "Financeiro", icon: Wallet, exact: false, badge: 0 },
+        { href: "/admin/blog", label: "Blog", icon: Newspaper, exact: false, badge: 0 },
+      ],
+    },
+    {
+      label: "Sistema",
+      items: [
+        {
+          href: "/admin/notificacoes",
+          label: "Notificações",
+          icon: Bell,
+          exact: false,
+          badge: unreadNotificacoesCount,
+        },
+      ],
+    },
+  ];
 
   async function handleLogout() {
     const supabase = createClient();
@@ -50,7 +71,7 @@ export function AdminSidebar({ newLeadsCount }: { newLeadsCount: number }) {
   }
 
   return (
-    <aside className="flex w-56 shrink-0 flex-col border-r border-hairline px-4 py-6">
+    <aside className="flex w-56 shrink-0 flex-col border-r border-hairline px-4 py-6 print:hidden">
       <Link href="/admin" className="px-2">
         <Logo />
       </Link>
@@ -81,9 +102,9 @@ export function AdminSidebar({ newLeadsCount }: { newLeadsCount: number }) {
                       <Icon size={15} />
                       {item.label}
                     </span>
-                    {item.href === "/admin/leads" && newLeadsCount > 0 && (
+                    {item.badge > 0 && (
                       <span className="font-mono text-[10px] text-bg bg-gold px-1.5 py-0.5">
-                        {newLeadsCount}
+                        {item.badge}
                       </span>
                     )}
                   </Link>

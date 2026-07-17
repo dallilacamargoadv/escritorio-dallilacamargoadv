@@ -1,14 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createCaso, getAllCasos, type CasoInput } from "@/lib/db-casos";
 import type { LeadFormType } from "@/lib/db-leads";
+import { FORM_TYPE_LABELS } from "@/lib/admin-labels";
 
-const VALID_AREAS: LeadFormType[] = [
-  "contratos",
-  "propriedade_intelectual",
-  "contas_e_plataformas",
-  "golpes_virtuais",
-  "assessoria_estrategica",
-];
+const VALID_AREAS = Object.keys(FORM_TYPE_LABELS) as LeadFormType[];
 
 export async function GET(request: NextRequest) {
   const contratoId = request.nextUrl.searchParams.get("contratoId") ?? undefined;

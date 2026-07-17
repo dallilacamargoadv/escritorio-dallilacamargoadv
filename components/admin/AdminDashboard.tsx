@@ -147,15 +147,11 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
           className="border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink"
         >
           <option value="all">Todas as áreas</option>
-          <option value="contratos">Contratos Digitais</option>
-          <option value="propriedade_intelectual">
-            Propriedade Intelectual
-          </option>
-          <option value="contas_e_plataformas">Contas e Plataformas</option>
-          <option value="golpes_virtuais">Golpes Virtuais</option>
-          <option value="assessoria_estrategica">
-            Assessoria Estratégica
-          </option>
+          {Object.entries(FORM_TYPE_LABELS).map(([value, label]) => (
+            <option key={value} value={value}>
+              {label}
+            </option>
+          ))}
         </select>
         <select
           value={statusFilter}

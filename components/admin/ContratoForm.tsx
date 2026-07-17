@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import type { Contrato, ContratoStatus, ContratoTipo } from "@/lib/db-contratos";
 import type { Caso } from "@/lib/db-casos";
+import type { Lancamento } from "@/lib/db-financeiro";
 import {
   CASO_STATUS_LABELS,
   CONTRATO_STATUS_LABELS,
@@ -21,11 +22,13 @@ export function ContratoForm({
   clienteFixo,
   clienteOptions,
   casos,
+  lancamentos,
 }: {
   contrato?: Contrato;
   clienteFixo?: ClienteOption;
   clienteOptions?: ClienteOption[];
   casos?: Caso[];
+  lancamentos?: Lancamento[];
 }) {
   const router = useRouter();
   const [clienteId, setClienteId] = useState(
@@ -250,6 +253,48 @@ export function ContratoForm({
                 <span>{caso.titulo}</span>
                 <span className="font-mono text-[10px] uppercase text-ink-dim">
                   {CASO_STATUS_LABELS[caso.status]}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {contrato && (
+        <div className="mt-10 border-t border-hairline pt-6">
+          <div className="flex items-center justify-between">
+            <span className="font-eyebrow text-[10px] text-ink-dim">
+              Lançamentos financeiros
+            </span>
+            <Link
+              href={`/admin/financeiro/novo?contratoId=${contrato.id}`}
+              className="text-xs text-gold transition-colors duration-150 hover:underline"
+            >
+              + Novo lançamento
+            </Link>
+          </div>
+          <div className="mt-3 border border-hairline">
+            {(lancamentos ?? []).length === 0 && (
+              <p className="px-4 py-6 text-center text-sm text-ink-dim">
+                Nenhum lançamento vinculado a este contrato ainda.
+              </p>
+            )}
+            {(lancamentos ?? []).map((lancamento, index) => (
+              <Link
+                key={lancamento.id}
+                href={`/admin/financeiro/${lancamento.id}`}
+                className={`flex items-center justify-between px-4 py-3 text-sm text-ink transition-colors duration-150 hover:text-gold ${
+                  index !== (lancamentos ?? []).length - 1
+                    ? "border-b border-hairline"
+                    : ""
+                }`}
+              >
+                <span>{lancamento.descricao}</span>
+                <span className="font-mono text-[10px] uppercase text-ink-dim">
+                  {lancamento.valor.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
                 </span>
               </Link>
             ))}

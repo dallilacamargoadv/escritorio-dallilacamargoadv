@@ -3,27 +3,38 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { Cliente } from "@/lib/db-clientes";
-import { TIPO_PESSOA_LABELS } from "@/lib/admin-labels";
+import type { LeadFormType } from "@/lib/db-leads";
+import { TIPO_PESSOA_LABELS, FORM_TYPE_LABELS } from "@/lib/admin-labels";
 import { formatDate } from "@/lib/format";
+import { AreaFilterPills } from "@/components/admin/AreaFilterPills";
+
+export interface ClienteRow extends Cliente {
+  areas: LeadFormType[];
+}
 
 export function ClientesAdminList({
   initialClientes,
 }: {
-  initialClientes: Cliente[];
+  initialClientes: ClienteRow[];
 }) {
   const [clientes] = useState(initialClientes);
   const [search, setSearch] = useState("");
+  const [areaFilter, setAreaFilter] = useState("all");
 
   const filtered = useMemo(() => {
     const term = search.trim().toLowerCase();
-    if (!term) return clientes;
-    return clientes.filter(
-      (cliente) =>
+    return clientes.filter((cliente) => {
+      if (areaFilter !== "all" && !cliente.areas.includes(areaFilter as LeadFormType)) {
+        return false;
+      }
+      if (!term) return true;
+      return (
         cliente.nome_razao_social.toLowerCase().includes(term) ||
         cliente.email.toLowerCase().includes(term) ||
-        (cliente.documento ?? "").toLowerCase().includes(term),
-    );
-  }, [clientes, search]);
+        (cliente.documento ?? "").toLowerCase().includes(term)
+      );
+    });
+  }, [clientes, search, areaFilter]);
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
@@ -42,7 +53,8 @@ export function ClientesAdminList({
         </Link>
       </div>
 
-      <div className="mt-6">
+      <div className="mt-6 space-y-3">
+        <AreaFilterPills value={areaFilter} onChange={setAreaFilter} />
         <input
           type="text"
           value={search}
@@ -60,6 +72,7 @@ export function ClientesAdminList({
               <th className="px-4 py-3">Tipo</th>
               <th className="px-4 py-3">Documento</th>
               <th className="px-4 py-3">E-mail</th>
+              <th className="px-4 py-3">Áreas atendidas</th>
               <th className="px-4 py-3">Cliente desde</th>
             </tr>
           </thead>
@@ -81,6 +94,21 @@ export function ClientesAdminList({
                   {cliente.documento || "—"}
                 </td>
                 <td className="px-4 py-3 text-ink-dim">{cliente.email}</td>
+                <td className="px-4 py-3">
+                  <div className="flex flex-wrap gap-1">
+                    {cliente.areas.length === 0 && (
+                      <span className="text-ink-dim">—</span>
+                    )}
+                    {cliente.areas.map((area) => (
+                      <span
+                        key={area}
+                        className="border border-hairline-strong px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wide text-ink-dim"
+                      >
+                        {FORM_TYPE_LABELS[area] ?? area}
+                      </span>
+                    ))}
+                  </div>
+                </td>
                 <td className="px-4 py-3 font-mono text-xs text-ink-dim">
                   {formatDate(cliente.created_at)}
                 </td>
@@ -88,7 +116,7 @@ export function ClientesAdminList({
             ))}
             {filtered.length === 0 && (
               <tr>
-                <td colSpan={5} className="px-4 py-10 text-center text-sm text-ink-dim">
+                <td colSpan={6} className="px-4 py-10 text-center text-sm text-ink-dim">
                   Nenhum cliente encontrado.
                 </td>
               </tr>
