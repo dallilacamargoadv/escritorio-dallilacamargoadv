@@ -1,15 +1,17 @@
 import { AdminSidebar } from "@/components/admin/AdminSidebar";
 import { getNewLeadsCount } from "@/lib/db-admin";
 import { getUnreadNotificacoesCount } from "@/lib/db-notificacoes";
+import { getUrgentPrazosCount } from "@/lib/db-prazos";
 
 export default async function AdminAreaLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [newLeadsCount, unreadNotificacoesCount] = await Promise.all([
+  const [newLeadsCount, unreadNotificacoesCount, urgentPrazosCount] = await Promise.all([
     getNewLeadsCount().catch(() => 0),
     getUnreadNotificacoesCount().catch(() => 0),
+    getUrgentPrazosCount().catch(() => 0),
   ]);
 
   return (
@@ -17,6 +19,7 @@ export default async function AdminAreaLayout({
       <AdminSidebar
         newLeadsCount={newLeadsCount}
         unreadNotificacoesCount={unreadNotificacoesCount}
+        urgentPrazosCount={urgentPrazosCount}
       />
       <div className="min-w-0 flex-1">{children}</div>
     </div>

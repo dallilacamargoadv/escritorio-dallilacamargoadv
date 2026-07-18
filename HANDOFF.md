@@ -128,11 +128,34 @@ Depois do deploy de 8-B, a cliente escolheu esse item como próximo passo (das o
 
 **Nota de ferramenta**: a verificação final no browser local usou navegação direta por URL (`/admin/casos?area=...`) em vez de clique nos links da sidebar, porque os cliques via automação erraram coordenadas (problema da ferramenta de automação, não do app) e um deles acabou clicando "Sair" sem querer — a sessão de login local foi encerrada como efeito colateral inofensivo (não afeta produção, não requer ação da cliente). A navegação direta por URL já confirmou que tanto o destaque da área ativa na sidebar quanto o pill de filtro pré-selecionado na tela de Casos funcionam corretamente.
 
-**Ainda não commitado, não pushado** — pedir autorização antes de commitar, como sempre.
+**Commitado (`07c3279`), pushado e deployado em produção nesta sessão** — build Vercel `READY`.
 
 **Escopo ainda adiado por pedido da cliente** (não implementar sem novo pedido):
-- Grupo "Site" (Páginas SEO, Glossário, FAQs), grupo "Plataforma" (Controle de Acesso, Relatórios, Configurações), grupo "Prazos" — nenhum desenhado em detalhe ainda além do mockup de alto nível.
+- Grupo "Site" (Páginas SEO, Glossário, FAQs), grupo "Plataforma" (Controle de Acesso, Relatórios, Configurações) — nenhum desenhado em detalhe ainda além do mockup de alto nível.
 - **Nota de visão de futuro da cliente, capturada mas não desenhada**: cada área jurídica tem uma dinâmica de atendimento própria — ela deu o exemplo de "Contratos Digitais" tendo um kanban interno (Cliente → Análise → Elaboração → Envio → Reanálise). Isso é sobre a tela de **Casos filtrada por área**, não sobre Contratos. Não desenhar nem implementar sem pedido explícito — a cliente foi clara que não é para agora.
+
+## 8-D. Mesma sessão, passo seguinte: módulo de Prazos — implementado, testado, ainda não commitado
+
+Depois do deploy de 8-C, a cliente escolheu "Prazos/Agenda" como próximo passo. Antes de codar, entrevista estruturada + mockup (Artifact "Módulo de Prazos", aprovado com "Ok"):
+
+- **O que conta como "prazo"**: os 3 tipos — processual/administrativo (vinculado a uma frente), compromisso (reunião/audiência, com horário), tarefa (lembrete geral sem prazo legal formal). Confirmado pela cliente, multi-select.
+- **Sem cálculo de dias úteis**: ela digita a data final já calculada (mais simples, decisão dela — não construir regra de contagem de prazo processual/feriado forense).
+- **Visualização**: lista ordenada por data (não calendário) — mesmo padrão do resto do admin.
+
+**Implementado, testado localmente com dado real no Supabase (inserido e depois limpo via `execute_sql`), lint + build limpos:**
+
+- **Migração `create_prazos_table`**: enums `prazo_tipo` (processual/compromisso/tarefa) e `prazo_status` (pendente/concluido/cancelado); tabela `prazos` com `data` (date), `hora` (time, nullable — só relevante pra compromisso), e **3 FKs nullable** `caso_frente_id`/`caso_id`/`cliente_id` (`on delete cascade`, mesmo princípio arquitetural do resto do sistema — um prazo pode ser avulso ou vinculado a exatamente um desses). RLS idêntico ao padrão authenticated-only já usado em todas as outras tabelas (os avisos do `get_advisors` sobre `USING (true)` são os mesmos que já existem em `casos`/`contratos`/etc., não é regressão).
+- **`lib/db-prazos.ts`**: CRUD completo. `updatePrazo` auto-carimba `concluido_em` na primeira vez que o status vira `concluido` (mesmo padrão de `assinado_em` em Contratos e `encerrado_em` em Casos/Frentes). `getUrgentPrazosCount()` conta pendentes com `data <= hoje+7` (atrasados + próximos 7 dias juntos) — vira o badge da sidebar.
+- **`lib/prazos-utils.ts`**: `isPrazoAtrasado`/`isPrazoProximo`, sem imports de servidor, mesmo padrão de `financeiro-utils.ts`.
+- **`lib/db-frentes.ts`**: `getAllFrentes` ganhou parâmetro `casoId` opcional (antes era obrigatório) — sem quebrar nenhum chamador existente — pra poder buscar todas as frentes do sistema de uma vez (necessário pra resolver o texto "Vinculado a" na lista de Prazos e popular o select de frentes no formulário).
+- **Tela `/admin/prazos`** (`PrazosAdminList.tsx`): 3 KPIs (atrasados, próximos 7 dias, pendentes no total) + pills de tipo + select de status + tabela com coluna "Vinculado a" que resolve o nome do caso/frente/cliente. Segue exatamente o padrão visual de `ContratosAdminList`/`FinanceiroAdminList`.
+- **Formulário `/admin/prazos/novo` e `/admin/prazos/[id]`** (`PrazoForm.tsx`, padrão idêntico a `CasoForm.tsx`): campo "Vincular a" com um select de tipo de vínculo (nenhum/cliente/caso/frente) que troca dinamicamente as opções do select seguinte.
+- **Sidebar**: novo grupo "Prazos" no topo (antes de Jurídico), com badge de contagem urgente. Precisou de nova prop `urgentPrazosCount` em `AdminSidebar`, calculada em `app/(admin)/admin/layout.tsx` via `getUrgentPrazosCount()`.
+- Testado ponta a ponta no browser local: criação via formulário (com vínculo a cliente), edição pra "Concluído" (confirmado `concluido_em` carimbado no Postgres), lista com os 3 tipos, estilo de atrasado em vermelho, badge da sidebar atualizando.
+
+**Ainda não commitado, não pushado** — pedir autorização antes de commitar, como sempre.
+
+**Deixado de fora desta rodada, por decisão explícita** (ver mockup): notificação de prazo próximo estendendo o cron já existente (`app/api/cron/notificacoes/route.ts`) — o campo está pronto pra isso (`getUrgentPrazosCount` já existe), mas não foi pedido.
 
 ## 8. 🔴 Estado atual em aberto (prioridade da próxima sessão)
 

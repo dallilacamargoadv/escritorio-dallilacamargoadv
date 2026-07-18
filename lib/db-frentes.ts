@@ -21,14 +21,18 @@ export interface FrenteInput {
   status: FrenteStatus;
 }
 
-export async function getAllFrentes(casoId: string): Promise<Frente[]> {
+export async function getAllFrentes(casoId?: string): Promise<Frente[]> {
   const supabase = await createClient();
-  const { data, error } = await supabase
+  let query = supabase
     .from("caso_frentes")
     .select("*")
-    .eq("caso_id", casoId)
     .order("aberta_em", { ascending: false });
 
+  if (casoId) {
+    query = query.eq("caso_id", casoId);
+  }
+
+  const { data, error } = await query;
   if (error) throw error;
   return data as Frente[];
 }

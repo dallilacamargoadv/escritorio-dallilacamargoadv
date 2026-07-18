@@ -12,6 +12,7 @@ import {
   Newspaper,
   Wallet,
   Repeat,
+  CalendarClock,
   Bell,
   LogOut,
 } from "lucide-react";
@@ -22,9 +23,11 @@ import { JuridicoAreaSubnav } from "@/components/admin/JuridicoAreaSubnav";
 export function AdminSidebar({
   newLeadsCount,
   unreadNotificacoesCount,
+  urgentPrazosCount,
 }: {
   newLeadsCount: number;
   unreadNotificacoesCount: number;
+  urgentPrazosCount: number;
 }) {
   const pathname = usePathname();
   const router = useRouter();
@@ -35,6 +38,18 @@ export function AdminSidebar({
       items: [
         { href: "/admin", label: "Visão Geral", icon: LayoutGrid, exact: true, badge: 0 },
         { href: "/admin/leads", label: "Leads", icon: Users, exact: false, badge: newLeadsCount },
+      ],
+    },
+    {
+      label: "Prazos",
+      items: [
+        {
+          href: "/admin/prazos",
+          label: "Prazos",
+          icon: CalendarClock,
+          exact: false,
+          badge: urgentPrazosCount,
+        },
       ],
     },
     {
