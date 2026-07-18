@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { getAllLeads } from "@/lib/db-admin";
-import { AdminDashboard } from "@/components/admin/AdminDashboard";
+import { LeadsPageClient } from "@/components/admin/LeadsPageClient";
 
 export default async function AdminLeadsPage() {
   let leads;
@@ -10,5 +10,5 @@ export default async function AdminLeadsPage() {
     redirect("/login");
   }
 
-  return <AdminDashboard initialLeads={leads} />;
+  return <LeadsPageClient initialLeads={leads} />;
 }

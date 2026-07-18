@@ -1,14 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { updateLeadStatus, type LeadStatus } from "@/lib/db-admin";
+import { STATUS_LABELS } from "@/lib/admin-labels";
 
-const VALID_STATUSES: LeadStatus[] = [
-  "novo",
-  "em_contato",
-  "qualificado",
-  "proposta",
-  "cliente",
-  "perdido",
-];
+const VALID_STATUSES = Object.keys(STATUS_LABELS) as LeadStatus[];
 
 export async function PATCH(
   request: NextRequest,

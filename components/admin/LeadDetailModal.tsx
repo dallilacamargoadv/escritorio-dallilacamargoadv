@@ -54,7 +54,7 @@ export function LeadDetailModal({
           ...lead,
           status,
           first_contacted_at:
-            status !== "novo" && !lead.first_contacted_at
+            status !== "leads" && !lead.first_contacted_at
               ? new Date().toISOString()
               : lead.first_contacted_at,
         });

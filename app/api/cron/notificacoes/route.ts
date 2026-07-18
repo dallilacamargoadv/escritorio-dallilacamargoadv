@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
   const { data: leads } = await supabase
     .from("leads")
     .select("id, name, sla_due_at")
-    .eq("status", "novo")
+    .eq("status", "leads")
     .lte("sla_due_at", new Date(now.getTime() + DIA_MS).toISOString());
 
   for (const lead of leads ?? []) {

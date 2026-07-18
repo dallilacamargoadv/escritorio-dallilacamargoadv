@@ -36,7 +36,7 @@ function computeLeadKpis(leads: Lead[]) {
   ).length;
 
   const metSla = leads.filter((lead) => {
-    if (lead.status === "novo") {
+    if (lead.status === "leads") {
       return !lead.sla_due_at || new Date(lead.sla_due_at).getTime() > now;
     }
     if (!lead.first_contacted_at || !lead.sla_due_at) return true;

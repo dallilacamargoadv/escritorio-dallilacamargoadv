@@ -12,7 +12,7 @@ const PAGE_SIZE = 30;
 type SlaState = "critical" | "warning" | null;
 
 function getSlaState(lead: Lead): SlaState {
-  if (lead.status !== "novo" || !lead.sla_due_at) return null;
+  if (lead.status !== "leads" || !lead.sla_due_at) return null;
   const due = new Date(lead.sla_due_at).getTime();
   const now = Date.now();
   if (now > due) return "critical";
@@ -114,16 +114,12 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
-      <div className="border-b border-hairline pb-6">
-        <h1 className="text-lg italic text-ink">Leads</h1>
-        <p className="font-mono text-xs text-ink-dim">
-          {leads.length} leads no total · {filtered.length} nesta
-          visualização
-        </p>
-      </div>
+    <div>
+      <p className="font-mono text-xs text-ink-dim">
+        {filtered.length} nesta visualização
+      </p>
 
-      <div className="mt-8">
+      <div>
         <LeadCharts leads={filtered} />
       </div>
 

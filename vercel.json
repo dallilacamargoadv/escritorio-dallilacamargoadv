@@ -4,6 +4,10 @@
     {
       "path": "/api/cron/notificacoes",
       "schedule": "0 11 * * *"
+    },
+    {
+      "path": "/api/cron/leads-cadencia",
+      "schedule": "5 11 * * *"
     }
   ]
 }

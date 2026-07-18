@@ -1,13 +1,26 @@
 import { createClient } from "@/lib/supabase/server";
+import { addBusinessDays } from "@/lib/business-days";
 import type { LeadFormType } from "@/lib/db-leads";
 
 export type LeadStatus =
-  | "novo"
-  | "em_contato"
-  | "qualificado"
-  | "proposta"
-  | "cliente"
-  | "perdido";
+  | "leads"
+  | "contactados"
+  | "em_andamento"
+  | "proposta_enviada"
+  | "link_enviado"
+  | "f1_01_dia"
+  | "f2_02_dias"
+  | "f3_03_dias"
+  | "f4_05_dias"
+  | "f5_07_dias"
+  | "f6_10_dias"
+  | "f7_12_dias"
+  | "f8_15_dias"
+  | "grupo_criado"
+  | "reuniao_agendada"
+  | "salesfarming"
+  | "perdido"
+  | "cliente";
 
 export interface Lead {
   id: string;
@@ -52,7 +65,7 @@ export async function updateLeadStatus(
 ): Promise<void> {
   const supabase = await createClient();
   const updates: Record<string, unknown> = { status };
-  if (status !== "novo") {
+  if (status !== "leads") {
     const { data: current } = await supabase
       .from("leads")
       .select("first_contacted_at")
@@ -69,6 +82,37 @@ export async function updateLeadStatus(
     .eq("id", leadId);
 
   if (error) throw error;
+}
+
+export interface CreateLeadManualInput {
+  formType: LeadFormType;
+  name: string;
+  email: string;
+  whatsapp: string;
+}
+
+export async function createLeadManual(
+  input: CreateLeadManualInput,
+): Promise<Lead> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("leads")
+    .insert({
+      form_type: input.formType,
+      scope_key: "manual",
+      name: input.name.trim(),
+      email: input.email.trim().toLowerCase(),
+      whatsapp: input.whatsapp.replace(/\D/g, ""),
+      answers: {},
+      utms: {},
+      metadata: { origem: "cadastro_manual" },
+      sla_due_at: addBusinessDays(new Date(), 2).toISOString(),
+    })
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data as Lead;
 }
 
 export async function getLeadById(id: string): Promise<Lead | null> {
@@ -88,7 +132,7 @@ export async function getNewLeadsCount(): Promise<number> {
   const { count, error } = await supabase
     .from("leads")
     .select("*", { count: "exact", head: true })
-    .eq("status", "novo");
+    .eq("status", "leads");
 
   if (error) throw error;
   return count ?? 0;
