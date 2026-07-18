@@ -1,244 +1,214 @@
 # Handoff — Site institucional + Sistema Operacional Jurídico, Dallila Camargo I Advocacia
 
-> Documento de continuidade de sessão. Cole este arquivo (ou peça para o Claude ler `HANDOFF.md` na raiz do projeto) no início de uma nova conversa para retomar exatamente de onde paramos, sem precisar reprocessar todo o histórico anterior.
+> Documento de continuidade de sessão. Cole este arquivo (ou peça para o Claude ler `HANDOFF.md` na raiz do projeto) no início de uma nova conversa para retomar exatamente de onde paramos, sem precisar reprocessar todo o histórico anterior. **Consolidado em 2026-07-18** a partir de uma sessão muito longa — o texto abaixo é o estado atual, não uma narrativa cronológica completa (essa fica resumida na seção 9, se precisar).
 
 ## 1. Quem é a cliente e o que é o projeto
 
-**Dallila Camargo** — advogada sócia única, especialista em **Direito Digital**, OAB/PA nº 36.762, sediada em Redenção/PA, atendimento 100% remoto em todo o Brasil. O projeto começou como o site institucional (landing pages + blog) e evoluiu, dentro desta mesma sessão, para um **sistema operacional de escritório** completo (CRM, gestão de casos/contratos, financeiro, notificações) — a cliente pediu explicitamente para o painel deixar de ser "um formulário de captação bonito" e virar uma ferramenta de operação real do escritório.
+**Dallila Camargo** — advogada sócia única, especialista em **Direito Digital**, OAB/PA nº 36.762, sediada em Redenção/PA, atendimento 100% remoto em todo o Brasil. O projeto é ao mesmo tempo (a) o site institucional público (landing pages + blog) e (b) um **sistema operacional de escritório** completo (CRM, gestão de casos/contratos, financeiro, notificações, analytics) — ela pediu explicitamente para o painel deixar de ser "um formulário de captação bonito" e virar uma ferramenta de operação real do escritório.
 
 - **Repositório**: `github.com/dallilacamargoadv/escritorio-dallilacamargoadv` (público)
 - **Deploy**: Vercel, projeto `escritorio-dallilacamargoadv` (`prj_oWeeWYZYerDMaefVIbBbtGhaqZVD`, team `team_AUWkl211AzsfpkSeCj38JNhY`)
 - **URL de produção**: `https://escritorio-dallilacamargoadv.vercel.app` (domínio próprio `dallilacamargoadv.com.br` ainda não configurado)
 - **Banco de dados**: Supabase, projeto `zojcjeinftoscpmkwtdi`, região `sa-east-1`
 - **Diretório local do projeto**: `/Users/dallilacamargo/Documents/CLAUDE CODE - ESTRUTURACAO/escritorio-dallilacamargoadv`
+- **Fuso horário do negócio**: `America/Belem` (UTC-3 fixo, Brasil não tem mais horário de verão) — usado em qualquer cálculo de data/hora que precise refletir "o dia da cliente", nunca UTC puro.
 
 ## 2. Stack técnica
 
-- **Next.js 16.2.10** (App Router, Turbopack) — breaking changes vs. Next.js "clássico": `proxy.ts` (não `middleware.ts`, export `proxy`), `params`/`searchParams` são `Promise` (sempre `await`), tipos `PageProps<'/rota/[id]'>` e `RouteContext<'/rota/[id]'>` gerados automaticamente. Há um `AGENTS.md` no repo avisando disso.
+- **Next.js 16.2.10** (App Router, Turbopack) — breaking changes vs. Next.js "clássico": `proxy.ts` (não `middleware.ts`, export `proxy`), `params`/`searchParams` são `Promise` (sempre `await`), tipos `PageProps<'/rota/[id]'>` e `RouteContext<'/rota/[id]'>` gerados automaticamente. Há um `AGENTS.md` no repo avisando disso — **leia antes de mexer em rotas**.
 - **React 19.2**, **Tailwind CSS v4** (`@theme inline` em `app/globals.css`, sem `tailwind.config.ts`)
-- **Supabase**: Postgres com RLS + Supabase Auth + `@supabase/ssr`. Cliente de service role (`lib/supabase/service.ts`, novo nesta sessão) para contextos sem sessão de usuário (o cron de notificações).
-- **GSAP + ScrollTrigger**, **Recharts**, **lucide-react**, **xlsx**, **next-mdx-remote/rsc** (blog)
-- **Vercel Cron** — agora em uso (`vercel.json`, novo nesta sessão): `/api/cron/notificacoes`, 1x/dia às 11h UTC (~8h em Redenção/PA)
+- **Supabase**: Postgres com RLS + Supabase Auth + `@supabase/ssr`. Cliente de service role (`lib/supabase/service.ts`) para contextos sem sessão de usuário (os crons).
+- **GSAP + ScrollTrigger**, **Recharts**, **lucide-react**, **xlsx**, **next-mdx-remote/rsc** (blog), **@dnd-kit/core + @dnd-kit/utilities** (Kanban de Leads — `@dnd-kit/sortable` NÃO é usado, foi instalado por engano e removido)
+- **Vercel Cron** (`vercel.json`): `/api/cron/notificacoes` (11h UTC) e `/api/cron/leads-cadencia` (11h05 UTC) — ambos 1x/dia, bate com o plano Hobby e com a rotina real da cliente (confere o painel de manhã).
 
-## 3. Identidade visual (brand book) — inalterada nesta sessão
+## 3. Identidade visual (brand book)
 
-Dark theme default (`--bg: #2a070c`, `--gold: #9f8e87`, `--wine: #b5495a`, `--ink: #ddc8b3`), light theme via `data-theme`. Tipografia: **Fraunces** (display/serif), **Inter** (corpo), **JetBrains Mono** (eyebrow/dados tabulares). Logo abelha/mariposa dourada (`components/ui/Logo.tsx`). Ver `app/globals.css` para os tokens completos — nada disso mudou nesta sessão, só foi reaproveitado.
+Dark theme default (`--bg: #2a070c`, `--gold: #9f8e87`, `--wine: #b5495a`, `--ink: #ddc8b3`), light theme via `data-theme`. Tipografia: **Fraunces** (display/serif), **Inter** (corpo), **JetBrains Mono** (eyebrow/dados tabulares). Logo abelha/mariposa dourada (`components/ui/Logo.tsx`).
+
+**Paleta categórica de gráficos**: `app/globals.css` define `--chart-1`..`--chart-6` (fixas entre temas, não trocam com light/dark) mapeadas em `lib/admin-labels.ts::FORM_TYPE_CHART_COLORS` pras 5 áreas + `CHART_COLOR_OUTROS` pro resto. Construída e **validada com o script de acessibilidade da skill `dataviz`** (contraste + separação por daltonismo contra os dois fundos da marca) — não escolhida no olho. Ordem fixa: Contratos Digitais → Propriedade Intelectual → Contas e Plataformas → Golpes Virtuais → Assessoria Estratégica → Outros. **Ao adicionar um gráfico novo com múltiplas séries, reusar essa paleta em vez de inventar cores.**
+
+**Padrão de gráfico com Recharts**: `components/admin/LeadCharts.tsx` é a referência original (BarChart horizontal, PieChart/donut, AreaChart). `components/admin/OverviewCharts.tsx` estendeu o padrão com `RadialBarChart` (gauge de percentual, ex.: SLA cumprido). Sempre dentro de `ResponsiveContainer`, cores via CSS vars, `Tooltip contentStyle` com o mesmo objeto de estilo (`background: var(--surface)`, `border: 1px solid var(--hairline-strong)`, `fontSize: 12`, `color: var(--ink)`).
+
+Ver `app/globals.css` para os tokens completos.
 
 ## 4. Estrutura de rotas atual
 
-**Site público** (`app/(site)/`): `/`, `/sobre`, `/contato`, as **5 áreas** (`/contratos`, `/propriedade-intelectual`, `/contas-e-plataformas`, `/golpes-virtuais`, `/assessoria-estrategica`), `/blog`, `/blog/[slug]`, `/blog/categoria/[categoria]`, páginas legais. **Continuam sendo 5 áreas** — uma 6ª área ("Assessoria Recorrente") foi construída e depois **totalmente revertida** nesta sessão (ver seção 6, item 5). O único resquício é um valor de enum órfão e inofensivo no Postgres (`assessoria_recorrente` em `lead_form_type`, sem nenhum lead usando).
+**Site público** (`app/(site)/`): `/`, `/sobre`, `/contato`, as **5 áreas** (`/contratos`, `/propriedade-intelectual`, `/contas-e-plataformas`, `/golpes-virtuais`, `/assessoria-estrategica`), `/blog`, `/blog/[slug]`, `/blog/categoria/[categoria]`, páginas legais. `lib/site-data.ts::SERVICE_AREAS` é a fonte única dessas 5 áreas. Rodapé de artigos do blog não tem CTA de contato direto (conformidade Provimento 205/2021 da OAB).
 
-O rodapé de artigos do blog (`app/(site)/blog/[slug]/page.tsx`) foi reescrito nesta sessão: removido o link "entre em contato" do aviso de fechamento, por questão de conformidade com o Provimento 205/2021 da OAB (captação de clientela). O texto agora só menciona a área de atuação do escritório, sem CTA direto.
-
-**Painel admin** (`app/(admin)/`, protegido por `proxy.ts`) — cresceu muito nesta sessão:
+**Painel admin** (`app/(admin)/`, protegido por `proxy.ts`):
 
 ```
-/admin                      Visão Geral (KPIs + sino de notificações no canto superior direito)
-/admin/leads                 Dashboard de leads (já existia)
-/admin/clientes, /novo, /[id], /[id]/editar      NOVO — cadastro de clientes
-/admin/casos, /novo, /[id]                        NOVO — casos jurídicos + frentes (ver seção 5)
-/admin/contratos, /novo, /[id]                     NOVO — contratos (projeto/recorrente)
-/admin/financeiro, /novo, /[id], /[id]/recibo      NOVO — lançamentos financeiros + recibo imprimível
-/admin/notificacoes                                 NOVO — central de notificações
-/admin/blog/*                                        já existia
+/admin                             Visão Geral — 12 KPIs clicáveis (drill-down em modal) em 3 blocos
+                                    (Financeiro/Operação/Funil), Operação e Funil com alternância
+                                    Cards/Gráfico, filtro de período, notificações, refresh 30min
+/admin/leads                       Toggle Kanban (17 colunas) / Lista, com filtro de período
+/admin/analise-aprofundada         Tráfego/UTMs/canais/geografia/comportamento dos leads
+/admin/prazos, /novo, /[id]        Prazos (processual/compromisso/tarefa), filtro de período
+/admin/clientes, /novo, /[id], /[id]/editar
+/admin/casos, /novo, /[id]         + frentes (judicial/extrajudicial/administrativo), filtro de
+                                    período, cada frente com toggle "visível pro cliente"
+/admin/casos/[id]/relatorio        NOVO — relatório interno do caso (print-first, tudo)
+/admin/casos/[id]/relatorio-cliente NOVO — relatório curado pro cliente (só o marcado como visível)
+/admin/relatorios                  NOVO — lista de casos com link direto pros dois relatórios
+/admin/contratos, /novo, /[id]     (tipo projeto|recorrente)
+/admin/recorrentes                 Visão dedicada de contratos recorrentes (MRR, vencimentos)
+/admin/financeiro                  REMODELADO — ver seção 8, item "Financeiro Fase 1"
+/admin/financeiro/novo, /[id], /[id]/recibo
+/admin/metas                       NOVO — Painel de Metas, 5 tiers de faturamento fixos
+/admin/links                       NOVO — Hub de Links (grupos + bookmarks com preview embutido)
+/admin/notificacoes                Abas Ativas/Arquivo (arquivar não apaga, só sai da lista)
+/admin/blog/*
 ```
 
-**API routes novas** (todas em `app/api/admin/` ou `app/api/cron/`):
-`clientes`, `clientes/[id]`, `contratos`, `contratos/[id]`, `casos`, `casos/[id]`, `casos/[id]/frentes`, `casos/[id]/frentes/[frenteId]`, `financeiro`, `financeiro/[id]`, `notificacoes`, `notificacoes/[id]`, `cron/notificacoes`.
+**Sidebar** (`components/admin/AdminSidebar.tsx`), grupos e ordem atual:
+- **Operação**: Visão Geral, Leads, Análise Aprofundada
+- **Prazos**: Prazos (badge = atrasados + próximos 7 dias)
+- **Jurídico**: Clientes, Casos, Relatórios, + sub-itens das 5 áreas reais (linkam pra `/admin/casos?area=<formType>`, via `JuridicoAreaSubnav.tsx`)
+- **Finanças**: Contratos, Recorrentes, Financeiro, Metas
+- **Sistema**: Blog, Links, Notificações (badge = não lidas)
+
+**API routes** (`app/api/admin/*` e `app/api/cron/*`): `clientes`, `clientes/[id]`, `contratos`, `contratos/[id]`, `casos`, `casos/[id]`, `casos/[id]/frentes`, `casos/[id]/frentes/[frenteId]`, `casos/[id]/frentes/[frenteId]/visibilidade` (toggle visível-pro-cliente), `financeiro`, `financeiro/[id]`, `financeiro/[id]/cancelar` (NOVO), `despesas`, `despesas/[id]` (NOVO), `link-grupos`, `link-grupos/[id]` (NOVO), `links`, `links/[id]`, `links/metadata` (busca título da URL) (NOVO), `notificacoes`, `notificacoes/[id]`, `prazos`, `prazos/[id]`, `leads` (POST cadastro manual), `leads/[id]/status`, `leads/[id]/notes`, `leads/export`, `cron/notificacoes`, `cron/leads-cadencia`.
 
 ## 5. Banco de dados (Supabase — projeto `zojcjeinftoscpmkwtdi`)
 
-Tabelas de antes da sessão: `leads`, `lead_notes`, `posts` (sem mudança de schema nesta sessão, exceto o enum `lead_form_type` que ganhou e depois manteve um valor órfão `assessoria_recorrente`).
+**Princípio de schema repetido em todo o sistema**: sempre que uma entidade precisa referenciar "uma de várias outras tabelas", usa **múltiplas FKs nullable** (uma coluna por tabela-alvo possível), nunca uma coluna genérica tipo `entidade_tipo`/`entidade_id`. Repetido em `notificacoes`, `prazos`.
 
-**Tabelas novas desta sessão** (todas com RLS: `select/insert/update` restritos a `authenticated`, nunca `anon`):
+- **`leads`**: `id, created_at, form_type (enum lead_form_type), scope_key, name, email, whatsapp, answers (jsonb), utms (jsonb), metadata (jsonb), duplicate_of, status (enum lead_status), sla_due_at, first_contacted_at`. RLS: `anon` insert (form público), `authenticated` select/insert/update/delete.
+  - **`status` (enum `lead_status`)**: `leads, contactados, em_andamento, proposta_enviada, link_enviado, f1_01_dia..f8_15_dias, grupo_criado, reuniao_agendada, salesfarming, perdido, cliente` (18 valores). F1-F8 avançam automaticamente via cron (`app/api/cron/leads-cadencia/route.ts`).
+- **`lead_notes`**: notas internas por lead.
+- **`clientes`**: `id, lead_id (nullable, FK leads), tipo_pessoa (pf|pj), nome_razao_social, documento, email, whatsapp, endereco (jsonb), area_origem (lead_form_type, nullable), created_at`.
+- **`contratos`**: `id, cliente_id (FK, restrict), tipo (projeto|recorrente), status (rascunho|enviado|assinado|encerrado|cancelado), valor, periodicidade (texto livre), assinado_em, created_at`.
+- **`casos`**: `id, contrato_id (FK, restrict — só existe caso com contrato assinado), area (lead_form_type), titulo, status (aberto|em_andamento|aguardando_cliente|concluido|arquivado), aberto_em, encerrado_em`.
+- **`caso_frentes`**: `id, caso_id (FK, cascade), tipo (extrajudicial|judicial|administrativo), orgao, numero_processo, status (aberta|em_andamento|concluida|arquivada), aberta_em, encerrada_em, visivel_cliente (boolean, default true — NOVO)`.
+- **`financeiro_lancamentos`**: `id, contrato_id (FK, restrict), cliente_id (FK, restrict), descricao, valor, vencimento, status (enum financeiro_status: pendente|pago|**cancelado** — NOVO valor adicionado via `alter type ... add value`), pago_em, grupo_id`. "Atrasado" é **calculado na tela** (`lib/financeiro-utils.ts::isLancamentoAtrasado`), não é status guardado.
+- **`prazos`**: `id, tipo (processual|compromisso|tarefa), titulo, data, hora (nullable), caso_frente_id/caso_id/cliente_id (3 FKs nullable, cascade), status (pendente|concluido|cancelado), concluido_em, visivel_cliente (boolean, default true — NOVO)`.
+- **`notificacoes`**: `id, tipo (lead_sla|financeiro_vencimento|blog_rascunho), titulo, lead_id/financeiro_id/post_id (FKs nullable), lida, created_at`.
+- **`posts`**: blog.
+- **`link_grupos`** (NOVA): `id, titulo, posicao, created_at`.
+- **`links`** (NOVA): `id, grupo_id (FK, cascade), titulo, url, tipo (enum: google_docs|google_sheets|google_slides|youtube|pdf|generico, auto-detectado por regex na URL ao criar), posicao, created_at`.
+- **`despesas`** (NOVA): `id, categoria (text, taxonomia fixa em `lib/despesas-categorias.ts`, ~11 categorias × subcategorias, não é CHECK constraint no banco — flexível de propósito), subcategoria (text, nullable), descricao, fornecedor (text, nullable), valor, vencimento (date), pago_em (timestamptz, nullable), status (enum despesa_status: a_pagar|pago|cancelado), forma_pagamento (text, nullable), recorrencia (enum despesa_recorrencia: nenhuma|mensal|trimestral|semestral|anual), centro_custo (text, nullable), observacoes (text, nullable), grupo_id (uuid, nullable — reservado pra uso futuro), created_at`. "Vencida" é calculada na tela (`lib/financeiro-utils.ts::isDespesaVencida`), mesmo princípio da `financeiro_lancamentos`.
 
-- **`clientes`**: `id, lead_id (nullable, FK leads), tipo_pessoa (pf|pj), nome_razao_social, documento, email, whatsapp, endereco (jsonb), area_origem (lead_form_type, nullable), created_at`. Nasce de um Lead convertido (preserva `lead_id`) ou é criado direto (indicação).
-- **`contratos`**: `id, cliente_id (FK, restrict), tipo (projeto|recorrente), status (rascunho|enviado|assinado|encerrado|cancelado), valor, periodicidade (texto livre), assinado_em, created_at`. `assinado_em` é auto-carimbado na primeira vez que o status vira `assinado`.
-- **`casos`**: `id, contrato_id (FK, restrict — obrigatório: só existe caso com contrato assinado, regra de negócio confirmada com a cliente), area (lead_form_type), titulo, status (aberto|em_andamento|aguardando_cliente|concluido|arquivado), aberto_em, encerrado_em`.
-- **`caso_frentes`** (novo): `id, caso_id (FK, cascade), tipo (extrajudicial|judicial|administrativo), orgao (texto livre, ex. "INPI"/"TJPA"), numero_processo, status (aberta|em_andamento|concluida|arquivada), aberta_em, encerrada_em`. Um Caso pode ter **múltiplas frentes simultâneas ou sequenciais** (confirmado com a cliente — ex.: processo no INPI rodando junto com uma ação judicial do mesmo caso).
-- **`financeiro_lancamentos`**: `id, contrato_id (FK, restrict), cliente_id (FK, restrict — redundante de propósito, evita join), descricao, valor, vencimento, status (pendente|pago), pago_em, grupo_id (nullable, uuid — marca lançamentos criados juntos num lote parcelado/recorrente)`. "Atrasado" é **calculado na tela** (pendente + vencimento no passado), não é um status guardado.
-- **`notificacoes`**: `id, tipo (lead_sla|financeiro_vencimento|blog_rascunho), titulo, lead_id/financeiro_id/post_id (FKs nullable, múltiplas — nunca polimorfismo genérico, é o princípio arquitetural repetido em todo o sistema), lida, created_at`.
+**RLS**: todas as tabelas de negócio (incluindo as 3 novas: `link_grupos`, `links`, `despesas`) são **`authenticated`-only** pra select/insert/update/delete — **nunca** `auth.uid() = user_id` (esse projeto tem uma única usuária, não é multi-tenant; esse ponto já foi mal-sugerido uma vez num briefing externo e corrigido conscientemente, ver seção 8). Exceção de sempre: `leads` aceita `insert` de `anon` também (form público).
 
-**Princípio de schema repetido em todo o sistema**: sempre que uma entidade precisa referenciar "uma de várias outras tabelas", usa **múltiplas FKs nullable** (uma coluna por tabela-alvo possível), nunca uma coluna genérica tipo `entidade_tipo`/`entidade_id`. Mantém integridade referencial de verdade e RLS simples.
+**Enum órfão inofensivo**: `lead_form_type` tem um valor `assessoria_recorrente` que sobrou de uma tentativa revertida de 6ª área pública — não vale a pena remover.
 
-## 6. Cronologia desta sessão (mais recente por último)
-
-1. **Resolvido o bug de produção do handoff anterior** (Supabase env vars): a causa raiz real era o *valor* de `NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY` estar incorreto no Vercel (havia até duas variáveis-lixo nomeadas literalmente `Key`/`Value`, sinal de preenchimento errado) — não era cache de build, embora essa hipótese tenha sido testada primeiro. Corrigido colando os valores certos (obtidos via MCP do Supabase) e redeploy sem cache. `/admin`, `/login`, `/blog` voltaram a 200.
-
-2. **Arquitetura em 14 fases** (conversa, sem código): a cliente pediu um desenho completo de "sistema operacional jurídico" — Dashboard, CRM (Leads/Clientes), Casos, Contratos, Documentos, Agenda, Financeiro, Blog, Usuários/Permissões, Notificações, Configurações, Auditoria, Roadmap. Aprovado fase a fase. Documento visual publicado como Artifact. Esse desenho é a referência de fundo para tudo que veio depois, mas **a implementação seguiu por ondas priorizadas pela cliente, não pela ordem das 14 fases**.
-
-3. **Onda 1 — Clientes, Contratos, Casos** (commit `595a93d`, **já no ar em produção**): ciclo de vida completo Lead → Cliente → Contrato → Caso. Conversão de Lead em Cliente (botão no modal do lead, preserva `lead_id`, nunca duplica cadastro). Regra de negócio: Caso só existe com Contrato assinado. Sidebar reorganizada em grupos (Operação/Jurídico/Negócio/Sistema, versão inicial). Testado localmente e em produção, deploy confirmado com `200` em todas as rotas.
-
-4. **Feedback da cliente sobre a Onda 1** → gerou a **Onda 2**: faltava filtro por área em Clientes/Casos (só existia um `<select>` escondido em Casos); Casos precisavam de "frentes" (extrajudicial/judicial/administrativo/INPI, simultâneas ou sequenciais — confirmado que varia caso a caso); Financeiro e Notificações foram adiantadas na frente de Agenda/Documentos (que ficaram para depois, por pedido explícito da cliente).
-
-5. **Onda 2 — implementada, testada localmente e commitada** (commit `78deeee`, **ainda NÃO pushada nem deployada** — ver seção 8):
-   - **Frentes de caso** (`caso_frentes`) — seção dentro da página de cada Caso.
-   - **Pílulas de filtro de área** (`AreaFilterPills.tsx`) em Clientes (por áreas dos casos já atendidos, não a área de origem do lead) e Casos.
-   - **Financeiro completo**: lista, lançamento único, **parcelado e recorrente em lote** (pedido extra da cliente — form gera N lançamentos mensais de uma vez, com `grupo_id` compartilhado), recibo imprimível com a identidade visual (`window.print()`, sem dependência de PDF nova). **Um bug de fuso horário foi encontrado e corrigido durante o teste**: o cálculo de "+N meses" usava `setMonth`/`getMonth` (fuso local do servidor) em vez de `setUTCMonth`/`getUTCMonth`, fazendo a última parcela de um lote cair um dia depois do esperado — corrigido em `app/api/admin/financeiro/route.ts`.
-   - **Notificações**: sino com badge na sidebar + preview das últimas 4 na Visão Geral (canto superior direito, "Ver todas" → `/admin/notificacoes`) + página completa + motor de regras via `app/api/cron/notificacoes/route.ts` (protegido por `CRON_SECRET`, usa `lib/supabase/service.ts` com a service role key pra escrever sem sessão de usuário).
-   - **Sidebar** ganhou os grupos Financeiro (dentro de Negócio) e Sistema/Notificações.
-   - **Blog**: removido o CTA "entre em contato" do rodapé do artigo (ver seção 4).
-
-6. **Tentativa de 6ª área "Assessoria Recorrente" — construída e depois totalmente revertida** na mesma sessão. A cliente pediu inicialmente uma nova área pública (landing + formulário + entrada no enum), fizemos a entrevista de copy completa (adaptando a skill `landing-page-advogados-tlbc`), implementamos tudo (página, formulário multi-step, API route, entrada em `lib/site-data.ts`/`lib/area-content.ts`/`lib/admin-labels.ts`), testamos em produção local com sucesso — e então a cliente percebeu que **não precisava disso como área pública** (já é coberta pela área "Assessoria Estratégica" existente); o que ela realmente queria era só uma forma de identificar esses clientes **dentro do CRM**. Tudo foi revertido (arquivos deletados, entradas removidas dos arrays/labels). **Único resquício**: o enum `lead_form_type` no Postgres ganhou o valor `assessoria_recorrente` via `ALTER TYPE ... ADD VALUE`, que não tem como ser removido sem recriar o tipo inteiro — foi deixado órfão de propósito, é inofensivo (não aparece em nenhum lugar da UI, nenhum lead usa).
-
-7. **Descoberta importante, ainda não resolvida**: `contratos.tipo` já suporta `"recorrente"` desde a Onda 1 (`ContratoTipo = "projeto" | "recorrente"`, com label em `lib/admin-labels.ts`). Ou seja, o conceito de "cliente com assessoria recorrente" **já existe no schema** — só falta a **visão dedicada** no admin (uma tela ou filtro que mostre só clientes/contratos com `tipo = 'recorrente'`). Esse é o próximo pedido da cliente, ainda não iniciado.
-
-## 7. Padrões e convenções importantes do código
+## 6. Padrões e convenções importantes do código
 
 - **`useSyncExternalStore`** para qualquer valor dependente de `window`/`localStorage`/`matchMedia`. Nunca `useState`+`useEffect` pra isso.
-- **ESLint `react-hooks/purity`** (apareceu nesta sessão, além do já conhecido `set-state-in-effect`): proíbe chamar funções impuras (`Date.now()`, `Math.random()`) **diretamente dentro do corpo de um componente/hook** durante a renderização. A correção é extrair a lógica pra uma função auxiliar de módulo (não-componente, sem PascalCase) — ex.: `lib/financeiro-utils.ts::isLancamentoAtrasado()`, chamada de dentro do componente em vez de calcular inline. Isso já existia implicitamente em `getSlaState()` de `AdminDashboard.tsx` (por isso aquele nunca deu erro), só ficou explícito agora.
-- **Fronteira Server/Client**: cuidado ao importar de um arquivo `lib/db-*.ts` (que usa `lib/supabase/server.ts`, que usa `next/headers`) dentro de um Client Component — mesmo que você só use um `import type`, se o **mesmo import também trouxer uma função/valor real** daquele módulo, o bundler tenta empacotar o arquivo inteiro (incluindo `next/headers`) pro browser, e o build quebra. Solução: extrair funções puras usadas por Client Components para um arquivo separado sem imports de servidor (ex.: `lib/financeiro-utils.ts`), e importar o *tipo* via `import type` do arquivo original (isso é seguro, é apagado em tempo de compilação).
+- **ESLint `react-hooks/purity`**: proíbe chamar funções impuras (`Date.now()`, `Math.random()`) ou mutar variável diretamente no corpo de um componente durante a renderização. Correção: extrair pra função auxiliar de módulo (não-componente) e chamar de dentro. Exemplos: `isLancamentoAtrasado`/`isDespesaVencida`/`isPrazoAtrasado`, `computeDonutSegments` em `lib/analytics.ts`.
+- **Fronteira Server/Client**: importar de um `lib/db-*.ts` (usa `next/headers`) num Client Component só é seguro com `import type` **puro** (nenhum valor real do mesmo import) — o bundler erasa tipos automaticamente. Se precisar de uma função pura também, ela tem que morar num arquivo sem import de servidor (`lib/financeiro-utils.ts`, `lib/prazos-utils.ts`, `lib/analytics.ts`, `lib/date-range.ts`, `lib/overview-kpis.ts`, `lib/metas.ts`, `lib/financeiro-fase1.ts`, `lib/link-tipo.ts`, `lib/despesas-categorias.ts`).
+- **`useSearchParams()` em Client Component num layout amplo** quebra o build de prerender. Solução: isolar num componente-folha + `<Suspense fallback={null}>` (ver `JuridicoAreaSubnav.tsx`).
+- **`@dnd-kit` + SSR**: hydration mismatch inofensivo pelos ids de acessibilidade. Solução: `next/dynamic(..., { ssr: false })` a partir de um Client Component pai.
+- **Timezone**: sempre `America/Belem` explícito, nunca `new Date()` cru. Cuidado com `new Date("YYYY-MM-DD")` (interpretado como meia-noite UTC) — reconstruir com offset explícito `` `${dataStr}T00:00:00-03:00` ``.
 - **`RouteContext<'/api/rota/[id]'>`** pra `params` em route handlers; **`PageProps<'/rota/[id]'>`** pra páginas — sempre `await`.
-- **RLS**: todas as tabelas novas seguem authenticated-only (nunca anon), diferente de `leads` que aceita insert anônimo do site público.
-- **FKs múltiplas nullable em vez de polimorfismo genérico** — repetido em Documentos (conceitual), Agenda (conceitual), e já implementado em `notificacoes`. É a assinatura arquitetural do sistema.
-- **`on delete restrict` vs `cascade`**: `casos→contratos`, `contratos→clientes`, `financeiro_lancamentos→contratos/clientes` são `restrict` (apagar o "pai" não pode apagar silenciosamente o "filho" que tem valor jurídico/financeiro próprio). `caso_frentes→casos` é `cascade` (frente não tem sentido sem o caso).
-- **Padrão de arquivo por entidade**: `lib/db-<entidade>.ts` (interfaces + `getAll`/`getById`/`create`/`update`, cliente Supabase de servidor) + `app/api/admin/<entidade>/route.ts` (GET lista, POST cria) + `.../[id]/route.ts` (GET um, PATCH atualiza) + componente de lista (`"use client"`, recebe `initial<Entidade>s`) + componente de formulário único que serve create *e* edit (prop opcional `entidade?`, branch `entidade ? PATCH : POST`) + páginas Server Component finas que só buscam dado e fazem `redirect("/login")` no catch.
-- **Labels/cores compartilhados do admin** ficam centralizados em `lib/admin-labels.ts` — nunca duplicar esses `Record<>` em componentes. Onde antes havia lista hardcoded de áreas duplicada em 3+ lugares (`AdminDashboard.tsx`, `app/api/admin/casos/*`), foi refatorado pra ler de `FORM_TYPE_LABELS` dinamicamente — só editar em um lugar (`lib/admin-labels.ts` e `lib/site-data.ts`) quando uma área mudar no futuro.
-- **`lib/site-data.ts::SERVICE_AREAS`** é a fonte única das 5 áreas públicas — Home, `/contato`, Header, Footer e `sitemap.ts` leem dinamicamente dali. Só `lib/db-leads.ts::LeadFormType` (o tipo TS) e `lib/admin-labels.ts::FORM_TYPE_LABELS` (os labels) precisam de edição manual se uma área for adicionada/removida de verdade.
-- **Recibo em PDF sem biblioteca nova**: página HTML normal estilizada com os tokens de marca + `@media print` + botão que chama `window.print()`. O navegador salva como PDF nativamente.
-- **Cron do Vercel**: 1x/dia (não a cada minuto) — bate com o plano Hobby e com a "jornada diária" real da cliente (ela confere o painel de manhã, não em tempo real).
-- Nunca commitar/pushar sem pedir permissão explícita antes — seguido à risca a sessão toda.
-- Verificação padrão antes de qualquer commit: `npx eslint .` e `npm run build` limpos, teste manual no browser local, às vezes com escrita/leitura real no Supabase de produção (sempre limpando os dados de teste depois via `execute_sql`).
+- **FKs múltiplas nullable em vez de polimorfismo genérico**.
+- **`on delete restrict` vs `cascade`**: "pai tem valor jurídico/financeiro próprio" → `restrict`. "Filho não faz sentido sem o pai" → `cascade`.
+- **Padrão de arquivo por entidade**: `lib/db-<entidade>.ts` + `app/api/admin/<entidade>/route.ts` + `.../[id]/route.ts` + componente de lista (`"use client"`) + formulário único create/edit + página Server Component fina.
+- **Labels/cores compartilhados** em `lib/admin-labels.ts` — nunca duplicar `Record<>` em componentes.
+- **Filtro de período reutilizável**: `lib/date-range.ts` + `components/admin/DateRangeFilter.tsx` — usado em Leads/Casos/Prazos/Financeiro/Análise Aprofundada. **Não é usado** na régua de KPIs do Financeiro nem no Painel de Metas — esses dois são sempre "mês corrente vs. mês anterior" (bucket por mês, ver `lib/metas.ts` e `lib/financeiro-fase1.ts`), um padrão diferente e deliberado.
+- **Drill-down por modal**: `components/admin/QuickViewModal.tsx` (genérico: `QuickViewModal` + `QuickViewRow` + `QuickViewEmpty`) é o padrão pra "card clicável → lista filtrada → linha leva pra página completa ou abre outro modal". Usado hoje só na Visão Geral (`AdminOverviewClient.tsx`); reaproveitar em vez de criar modal novo se surgir outro drill-down. Segue o mesmo estilo visual do `LeadDetailModal.tsx` (`fixed inset-0 z-50 bg-black/70`, painel `border-hairline bg-surface`, `role="dialog"`).
+- **Bug real já corrigido — nunca aninhar `<button>` dentro de `<button>`/`<a>`**: HTML inválido, causa hydration error e cliques inconsistentes/perdidos no React (aconteceu no Hub de Links, card de link clicável com botão de excluir dentro). Sempre estruturar como elementos irmãos dentro de um `<div>` `position:relative`, nunca aninhados.
+- **CSP em `next.config.ts`**: qualquer embed externo novo (iframe, `<img>` de domínio de terceiro) precisa entrar explicitamente em `img-src`/`frame-src` da Content-Security-Policy, senão funciona em dev e quebra silenciosamente em produção. Já tem `img.youtube.com` (thumbnail) e `docs.google.com`/`youtube.com` (embed) liberados pro Hub de Links.
+- **Recibo em PDF / Relatório de caso, sem biblioteca nova**: página HTML estilizada com os tokens de marca + `window.print()`, sem CSS de impressão especial (`print:hidden` no Tailwind pra esconder sidebar/chrome). Mesmo princípio nos dois relatórios de caso.
+- Nunca commitar/pushar/deployar sem pedir permissão explícita antes — **cada vez**, mesmo em sequência, mesmo que o passo anterior tenha sido aprovado segundos atrás.
+- Verificação padrão antes de qualquer commit: `npx eslint .` e `npm run build` limpos, teste manual no browser local com escrita/leitura real no Supabase (inserindo dado de teste variado, conferindo os números na tela, **sempre limpando os dados de teste depois via `execute_sql`**). Esse hábito já pegou bugs reais (fuso horário em parcelamento financeiro e em volume semanal do analytics) e confirmou cálculos complexos (régua financeira, projeção de metas).
+- **Ferramenta de automação de browser** tem dificuldade com drag-and-drop e às vezes fica instável quando duas sessões editam o mesmo dev server ao mesmo tempo (HMR concorrente pode fazer cliques "sumirem"). Nesses casos: (a) teste a chamada de API diretamente via `javascript_tool` com `fetch(...)` em vez de insistir no clique, ou (b) use `document.querySelectorAll` + `.click()` via `javascript_tool` pra disparar o handler React direto, contornando problemas de scroll/posição do elemento. Ambos validados nesta sessão com sucesso.
+- **Tabelas largas** (`overflow-x-auto`): a ferramenta de scroll horizontal da automação de browser é limitada (`scroll_amount` máximo 10) — pode não revelar colunas de ação à direita. Prefira `javascript_tool` pra localizar/clicar botões dentro de uma tabela larga em vez de tentar scrollar até lá.
 
-## 8-B. Sessão seguinte: sidebar ajustada + tela Recorrentes implementada (ainda não commitada)
+## 7. Estado atual em produção
 
-Continuação da sessão anterior. A cliente refinou a reestruturação de sidebar aprovada (seção 8/9 abaixo, ainda desatualizadas nesse ponto): **Financeiro é uma categoria à parte** (dinheiro, valores, vencimento, atraso) e **Contratos deveria sair de Jurídico e entrar em Financeiro**, já que um contrato é fundamentalmente sobre valor/periodicidade. Jurídico, no desenho final, será organizado pelas 5 áreas reais do site (`lib/site-data.ts::SERVICE_AREAS`), não por "Contratos" como item único — isso ainda não foi implementado (ver nota de escopo abaixo).
+**Tudo commitado, pushado e em produção (Vercel, `READY`)** até o commit `d82fb72`. Isso inclui, em ordem cronológica desta sessão longa:
+- Kanban de Leads (17 colunas) + cadência automática — já estava em produção antes desta sessão.
+- Análise Aprofundada (`78dfaa7`).
+- **Item 1** — Filtros de período clicáveis em Leads/Casos/Prazos/Financeiro/Visão Geral (`67e1325`).
+- **Item 2** — Relatórios de caso interno + cliente, com controle de visibilidade por frente/prazo (`28368ee`), mais a tela "Relatórios" na sidebar pra escolher o caso primeiro (`72898c3`, pedido depois que ela testou e achou difícil de achar).
+- **Item 3** — Painel de Metas, 5 tiers fixos R$20k/30k/40k/60k/80k (`b617284`).
+- **Item 4** — Hub de Links (`337de88`).
+- Drill-down por modal + gráficos (donut/barra/gauge) nos 12 KPIs da Visão Geral (`49532fc`).
+- Financeiro remodelado, Fase 1 — despesas, régua de KPIs, Receita x Despesa, tabela unificada (`d82fb72`).
 
-Duas revisões de mockup de sidebar foram aprovadas nesta sessão (Artifact "Proposta de Sidebar — Painel Admin", atualizado in-place, revisão 2 confirmada com "ISSSOOOOO, ficou show!"). A cliente escolheu meio-termo de escopo: **implementar agora só o necessário para a tela Recorrentes existir**, deixando a divisão de Jurídico por área, o grupo Site (Páginas SEO/Glossário/FAQs) e Prazos para depois.
+**Arquivo estranho, sem decisão**: `components/admin/AdminSidebar 2.tsx` (untracked, provável duplicata de conflito do iCloud Drive) — já foi apontado pra cliente, ela ainda não decidiu se apaga. Não mexer sem perguntar de novo.
 
-**Implementado e testado localmente nesta sessão (lint + build limpos, testado no browser local com escrita/leitura real no Supabase depois limpa via `execute_sql`):**
+**Duas variáveis de ambiente pendentes no Vercel** (só a cliente pode configurar):
+- `CRON_SECRET` (protege os dois endpoints de cron)
+- `SUPABASE_SERVICE_ROLE_KEY` (Settings → API, secreta, nunca em `NEXT_PUBLIC_*`)
 
-- **`components/admin/AdminSidebar.tsx`**: grupo "Jurídico" removido (só tinha Contratos). Grupo "Negócio" virou **"Finanças"**, contendo Contratos (movido), **Recorrentes (novo)**, Financeiro. Blog moveu de Negócio para o grupo Sistema (ao lado de Notificações), já que Blog não é financeiro nem jurídico.
-- **Tela nova `/admin/recorrentes`** (`app/(admin)/admin/recorrentes/page.tsx` + `components/admin/RecorrentesAdminList.tsx`): filtra `contratos.tipo = 'recorrente'`, cruza com `financeiro_lancamentos` para achar o próximo vencimento pendente por contrato (destacado em vermelho se atrasado, via `isLancamentoAtrasado` já existente), conta casos vinculados. 3 KPIs no topo (MRR ativo em R$, clientes ativos, aguardando assinatura) + pills de filtro por status do contrato + tabela. Reaproveita exatamente os padrões visuais de `ContratosAdminList`/`FinanceiroAdminList` (nenhum componente/estilo novo inventado).
-- Nenhuma migração de banco foi necessária — `contratos.tipo = 'recorrente'` já existia desde a Onda 1.
+Sem essas duas, os crons diários não funcionam em produção — o resto do painel funciona normal. **Ainda não confirmado se ela configurou** — perguntar se for relevante (ex.: se notificações de vencimento não estiverem chegando).
 
-**Commitado (`6dc9a0a`), pushado e deployado em produção nesta sessão** — build Vercel `READY`. Autorização explícita da cliente foi dada ("sim, faça o commit" / "sim" para push+deploy).
+## 8. Pedidos grandes — estado por item
 
-## 8-C. Mesma sessão, passo seguinte: Jurídico dividido pelas 5 áreas — implementado, ainda não commitado
+### 8.1 Fila original de 6 itens (sequenciada 6→1→2→3→4) — **TODOS CONCLUÍDOS**
 
-Depois do deploy de 8-B, a cliente escolheu esse item como próximo passo (das opções: Jurídico por área / desenhar Prazos / outra coisa).
+1. ✅ Filtros de período — `lib/date-range.ts` + `DateRangeFilter.tsx`, aplicado em Leads/Casos/Prazos/Financeiro/Visão Geral.
+2. ✅ Relatórios de caso — dois relatórios por caso (interno completo / cliente curado), toggle "visível pro cliente" por frente e por prazo, tela "Relatórios" na sidebar pra escolher o caso primeiro.
+3. ✅ Painel de Metas — 5 tiers fixos, faturamento pago do mês corrente, histórico de 6 meses.
+4. ✅ Hub de Links — grupos + links com preview embutido (Google Docs/Sheets/Slides/YouTube), auto-save, detecção automática de tipo e busca de título.
+5. ✅ Captura de dados ocultos do lead — já estava pronto antes desta sessão.
+6. ✅ Análise Aprofundada — tráfego/canais/geografia/comportamento.
 
-**Implementado e testado localmente (lint + build limpos, testado no browser local via navegação direta por URL — ver nota de ferramenta abaixo):**
+### 8.2 Drill-down + gráficos na Visão Geral — **CONCLUÍDO**
 
-- **`components/admin/AdminSidebar.tsx`**: grupo Jurídico agora tem Clientes, Casos, e — abaixo, como sub-itens sem ícone, indentados — as 5 áreas puxadas dinamicamente de `lib/site-data.ts::SERVICE_AREAS` (`menuLabel`/`formType`), cada uma linkando para `/admin/casos?area=<formType>`.
-- **Novo `components/admin/JuridicoAreaSubnav.tsx`**: isola o único trecho que precisa de `useSearchParams()` (para destacar a área ativa). Isso foi necessário porque colocar `useSearchParams()` direto em `AdminSidebar` (renderizado em todo layout `/admin/*`) quebrava o build com `useSearchParams() should be wrapped in a suspense boundary` especificamente na página `/admin/blog` — corrigido isolando o hook num componente-folha envolto em `<Suspense fallback={null}>`, conforme a própria doc do Next.js em `node_modules/next/dist/docs`.
-- **`app/(admin)/admin/casos/page.tsx`**: agora lê `searchParams: Promise<{ area?: string }>` (padrão `await`, igual ao já usado em `/blog`) e passa `initialArea` pro componente de lista. Precisou de **`key={area ?? "all"}`** no `<CasosAdminList>` — sem isso, clicar em um link de área diferente não reseta o filtro, porque o `useState(initialArea)` só usa o valor inicial no primeiro mount, não em re-renders com prop nova. Confirmado via teste: sem a key, o pill de área ficava preso em "Todas"; com a key, sincroniza certinho.
-- `components/admin/CasosAdminList.tsx`: prop `initialArea` opcional, vira o valor inicial do filtro de área.
-- Nenhuma migração de banco, nenhuma tabela nova.
+Pedido novo, veio depois da fila original: "ao clicar em qualquer card, abrir modal com os itens; clicar num item abre o detalhe" + "adicionar gráficos (tabela/pizza/barra/gauge) onde fizer sentido". Escopo **combinado e reduzido** antes de codar (ela confirmou todas as opções recomendadas):
+- Só a Visão Geral por enquanto (não o painel inteiro).
+- Modais são visualização rápida — não substituem as páginas completas de edição já existentes.
+- Gráficos só na Visão Geral primeiro (Funil → donut, Operação → barra, SLA → gauge; Financeiro fica só como cards, escalas de R$ muito diferentes pra um gráfico comparativo).
 
-**Nota de ferramenta**: a verificação final no browser local usou navegação direta por URL (`/admin/casos?area=...`) em vez de clique nos links da sidebar, porque os cliques via automação erraram coordenadas (problema da ferramenta de automação, não do app) e um deles acabou clicando "Sair" sem querer — a sessão de login local foi encerrada como efeito colateral inofensivo (não afeta produção, não requer ação da cliente). A navegação direta por URL já confirmou que tanto o destaque da área ativa na sidebar quanto o pill de filtro pré-selecionado na tela de Casos funcionam corretamente.
+Entregue: `QuickViewModal.tsx` (genérico), `OverviewCharts.tsx` (donut/barra/gauge via Recharts), `lib/overview-kpis.ts` estendido pra expor as listas por trás de cada contagem, `AdminOverviewClient.tsx` reescrito.
 
-**Commitado (`07c3279`), pushado e deployado em produção nesta sessão** — build Vercel `READY`.
+### 8.3 Financeiro remodelado — **FASE 1 CONCLUÍDA, FASE 2 PENDENTE**
 
-**Escopo ainda adiado por pedido da cliente** (não implementar sem novo pedido):
-- Grupo "Site" (Páginas SEO, Glossário, FAQs), grupo "Plataforma" (Controle de Acesso, Relatórios, Configurações) — nenhum desenhado em detalhe ainda além do mockup de alto nível.
-- **Nota de visão de futuro da cliente, capturada mas não desenhada**: cada área jurídica tem uma dinâmica de atendimento própria — ela deu o exemplo de "Contratos Digitais" tendo um kanban interno (Cliente → Análise → Elaboração → Envio → Reanálise). Isso é sobre a tela de **Casos filtrada por área**, não sobre Contratos. Não desenhar nem implementar sem pedido explícito — a cliente foi clara que não é para agora.
+Pedido veio como um briefing muito denso (19 seções, com schema Supabase completo sugerido) — **claramente adaptado de outro projeto/contexto SaaS multi-tenant**, precisou de tradução arquitetural cuidadosa antes de implementar, não implementação literal. Duas decisões críticas tomadas **antes de codar**, com autorização explícita dela pra eu corrigir o que estivesse errado:
 
-## 8-D. Mesma sessão, passo seguinte: módulo de Prazos — implementado, testado, ainda não commitado
+- **RLS**: o texto sugeria `auth.uid() = user_id` (modelo multi-tenant). **Errado pra esse projeto** — uma usuária só, todas as outras tabelas já usam `authenticated`-only. Segui o padrão do resto do sistema.
+- **Schema**: o texto sugeria criar `financial_transactions` + `invoices` do zero, o que teria **fragmentado** os dados financeiros de tudo que já lê `financeiro_lancamentos` (Contratos, Recorrentes, Metas, drill-down da Visão Geral, Relatórios de caso). Em vez disso: **reaproveitei** `financeiro_lancamentos` como base de receita/fatura (só ganhou o status `cancelado` a mais) e criei **só o que era genuinamente novo**: a tabela `despesas`.
 
-Depois do deploy de 8-C, a cliente escolheu "Prazos/Agenda" como próximo passo. Antes de codar, entrevista estruturada + mockup (Artifact "Módulo de Prazos", aprovado com "Ok"):
+**Fase 1 (entregue, commit `d82fb72`)**:
+- Tabela `despesas` nova + status `cancelado` em `financeiro_lancamentos`.
+- Categorias/subcategorias de despesa **fixas no código** (`lib/despesas-categorias.ts`), não uma tabela editável pelo painel — decisão consciente de escopo.
+- `FinanceiroDashboard.tsx` (substituiu `FinanceiroAdminList.tsx`, que foi apagado por ficar órfão): banner de alertas de vencimento, 6 KPIs com comparativo vs. mês anterior (Receita/Despesas/Resultado líquido/Em aberto/Inadimplência/Projeção), bloco Receita x Despesa, tabela unificada (receita + despesa) com filtros, empty state melhorado.
+- Botão único "Novo lançamento" → modal de escolha Receita/Despesa (Receita leva pro formulário que já existia; Despesa abre `DespesaModal.tsx` novo).
+- Despesa: editar/marcar pago/excluir inline na tabela. Receita: continua indo pra página de detalhe já existente, que ganhou a ação "Cancelar lançamento".
 
-- **O que conta como "prazo"**: os 3 tipos — processual/administrativo (vinculado a uma frente), compromisso (reunião/audiência, com horário), tarefa (lembrete geral sem prazo legal formal). Confirmado pela cliente, multi-select.
-- **Sem cálculo de dias úteis**: ela digita a data final já calculada (mais simples, decisão dela — não construir regra de contagem de prazo processual/feriado forense).
-- **Visualização**: lista ordenada por data (não calendário) — mesmo padrão do resto do admin.
+**Fase 2 — NÃO iniciada, é o próximo passo natural se ela quiser continuar no Financeiro**:
+- Projeções trimestrais/semestrais/anuais (a lógica proposta no briefing original é simples — receitas recorrentes + faturas abertas + média histórica — dá pra seguir ela quase literalmente quando chegar a hora).
+- Bloco "Análise financeira" / insights (maior categoria de despesa, cliente com maior receita, alertas de benchmark tipo "despesas consumiram X% da receita").
+- Categorias de despesa editáveis pelo painel (hoje fixas no código).
+- Sugestão automática de categoria ao digitar a descrição da despesa.
 
-**Implementado, testado localmente com dado real no Supabase (inserido e depois limpo via `execute_sql`), lint + build limpos:**
+## 9. Cronologia resumida (mais recente por último) — visão de alto nível
 
-- **Migração `create_prazos_table`**: enums `prazo_tipo` (processual/compromisso/tarefa) e `prazo_status` (pendente/concluido/cancelado); tabela `prazos` com `data` (date), `hora` (time, nullable — só relevante pra compromisso), e **3 FKs nullable** `caso_frente_id`/`caso_id`/`cliente_id` (`on delete cascade`, mesmo princípio arquitetural do resto do sistema — um prazo pode ser avulso ou vinculado a exatamente um desses). RLS idêntico ao padrão authenticated-only já usado em todas as outras tabelas (os avisos do `get_advisors` sobre `USING (true)` são os mesmos que já existem em `casos`/`contratos`/etc., não é regressão).
-- **`lib/db-prazos.ts`**: CRUD completo. `updatePrazo` auto-carimba `concluido_em` na primeira vez que o status vira `concluido` (mesmo padrão de `assinado_em` em Contratos e `encerrado_em` em Casos/Frentes). `getUrgentPrazosCount()` conta pendentes com `data <= hoje+7` (atrasados + próximos 7 dias juntos) — vira o badge da sidebar.
-- **`lib/prazos-utils.ts`**: `isPrazoAtrasado`/`isPrazoProximo`, sem imports de servidor, mesmo padrão de `financeiro-utils.ts`.
-- **`lib/db-frentes.ts`**: `getAllFrentes` ganhou parâmetro `casoId` opcional (antes era obrigatório) — sem quebrar nenhum chamador existente — pra poder buscar todas as frentes do sistema de uma vez (necessário pra resolver o texto "Vinculado a" na lista de Prazos e popular o select de frentes no formulário).
-- **Tela `/admin/prazos`** (`PrazosAdminList.tsx`): 3 KPIs (atrasados, próximos 7 dias, pendentes no total) + pills de tipo + select de status + tabela com coluna "Vinculado a" que resolve o nome do caso/frente/cliente. Segue exatamente o padrão visual de `ContratosAdminList`/`FinanceiroAdminList`.
-- **Formulário `/admin/prazos/novo` e `/admin/prazos/[id]`** (`PrazoForm.tsx`, padrão idêntico a `CasoForm.tsx`): campo "Vincular a" com um select de tipo de vínculo (nenhum/cliente/caso/frente) que troca dinamicamente as opções do select seguinte.
-- **Sidebar**: novo grupo "Prazos" no topo (antes de Jurídico), com badge de contagem urgente. Precisou de nova prop `urgentPrazosCount` em `AdminSidebar`, calculada em `app/(admin)/admin/layout.tsx` via `getUrgentPrazosCount()`.
-- Testado ponta a ponta no browser local: criação via formulário (com vínculo a cliente), edição pra "Concluído" (confirmado `concluido_em` carimbado no Postgres), lista com os 3 tipos, estilo de atrasado em vermelho, badge da sidebar atualizando.
+1. Site institucional completo + CRM básico de leads (sessões anteriores).
+2. Arquitetura em 14 fases desenhada com a cliente — referência de fundo, implementação seguiu por ondas priorizadas por ela.
+3. **Onda 1**: ciclo Lead→Cliente→Contrato→Caso.
+4. **Onda 2**: Frentes de caso, Financeiro completo, Notificações + cron diário.
+5. Tentativa de 6ª área pública revertida na mesma sessão (resquício: enum órfão inofensivo).
+6. Sidebar reorganizada + tela Recorrentes.
+7. Jurídico dividido pelas 5 áreas reais.
+8. Módulo de Prazos do zero.
+9. Notificações arquiváveis + Visão Geral com 12 KPIs.
+10. Kanban de Leads (17 colunas) + cadência automática.
+11. Fila de 6 itens grandes — **todos concluídos** (seção 8.1).
+12. Drill-down por modal + gráficos na Visão Geral (seção 8.2) — **concluído**.
+13. Financeiro remodelado, Fase 1 (seção 8.3) — **concluído**, Fase 2 pendente.
 
-**Ainda não commitado, não pushado** — pedir autorização antes de commitar, como sempre.
+## 10. Preferências e padrões de trabalho da cliente
 
-**Deixado de fora desta rodada, por decisão explícita** (ver mockup): notificação de prazo próximo estendendo o cron já existente (`app/api/cron/notificacoes/route.ts`) — o campo está pronto pra isso (`getUrgentPrazosCount` já existe), mas não foi pedido.
+- **"Quero sempre que você me mostre antes"** — mockup/Artifact antes de qualquer mudança estrutural ou visual. Mudanças pequenas e bem especificadas não precisam. Confirmado repetidamente durante toda a sessão — nunca pular esse passo em telas novas ou reformulações grandes.
+- **É direta e não hesita em pedir ajuste**, inclusive depois de aprovar um mockup e ver a coisa implementada — ex.: aprovou o desenho dos Relatórios de caso, mas depois de usar pediu um ponto de entrada mais fácil (tela "Relatórios" na sidebar). Tratar pedidos de ajuste pós-entrega como normais, sem fricção.
+- **Traz briefings às vezes claramente adaptados de outro contexto/projeto** (a fila original de 6 itens, e principalmente o briefing do Financeiro com schema multi-tenant sugerido). Ela mesma já disse explicitamente pra eu confiar no meu raciocínio sobre a arquitetura real do app mais do que no texto literal dela nesses casos — mas sempre **traduzir e confirmar o escopo antes de codar**, nunca implementar literalmente sem checar contra o que já existe.
+- **Pedidos grandes devem ser fatiados**: quando o pedido é denso (muitas seções, muitos componentes), propor fases/escopo reduzido via `AskUserQuestion` com opção recomendada, em vez de tentar entregar tudo de uma vez. Ela sempre aceitou a fase reduzida quando bem justificada.
+- Prefere que decisões de copy jurídica/institucional sejam extraídas dela via pergunta estruturada, não inventadas.
+- Atenção a compliance da OAB (Provimento 205/2021) em qualquer copy pública nova.
+- Muda de prioridade com frequência — sempre perguntar qual o próximo passo em vez de presumir.
+- **Sempre pede confirmação explícita antes de cada commit e de cada push/deploy**, mesmo em sequência — nunca presumir aprovação prévia se estende ao próximo passo. Confirmado à risca a sessão toda.
 
-## 8-E. Mesma sessão: painel de referência externo (imagem) → notificações arquiváveis + nova Visão Geral com 12 KPIs
+## 11. Como retomar
 
-A cliente colou um print de um dashboard de outra ferramenta (tema claro, genérico) pedindo "algo como" aquilo, mais um Kanban de Leads de 17 colunas (16 dela + "Perdido", sugestão minha aprovada) e arquivamento de notificações. Dado o tamanho, foi sequenciado como **C → A → B**: (C) Notificações, (A) Visão Geral, (B) Kanban de Leads — B ainda não iniciado, é o maior e mais arriscado dos três (troca o enum de status do lead inteiro, precisa de lib de drag-and-drop nova, e um motor de avanço automático por dias).
-
-**(C) Notificações arquiváveis — implementado, testado, sem migração** (o campo `lida` já existia):
-- `components/admin/NotificacoesList.tsx`: duas abas, "Ativas" (lida=false, com botão de check pra arquivar) e "Arquivo" (lida=true, somente leitura). Arquivar uma notificação não apaga nada, só sai da aba Ativas.
-- `app/(admin)/admin/page.tsx`: a prévia de notificações no canto superior direito agora só mostra as não-lidas (antes mostrava as 4 mais recentes independente do status).
-
-**(A) Nova Visão Geral com 12 KPIs em 3 blocos (Financeiro/Operação/Funil) — implementado, testado com dado real, sem migração**:
-- Todo o dado já existia nas tabelas de Contratos/Financeiro/Clientes/Casos/Prazos/Leads — nenhuma tabela nova.
-- **Financeiro**: MRR (mês corrente, soma de contratos recorrentes assinados), Inadimplência (soma + contagem de lançamentos vencidos, reusa `isLancamentoAtrasado`), Receita (30D, lançamentos pagos nos últimos 30 dias por `pago_em`), SLA cumprido (30D, mesma lógica de SLA de lead já existente, mas agora escopada a leads criados nos últimos 30 dias em vez de todos os leads já criados).
-- **Operação**: Clientes ativos (tem ≥1 contrato assinado), Contratos ativos (+ quantos recorrentes têm o lançamento pendente mais próximo vencendo nos próximos 30 dias — mesma lógica de "próximo vencimento" já usada em Recorrentes), Casos em aberto (aberto+em_andamento+aguardando_cliente, sem alegar SLA porque Casos não tem SLA calculado), Prazos (30D, pendentes vencendo em até 30 dias — **generalizado pra todas as áreas**, não só Propriedade Intelectual como na imagem de referência, porque não fazia sentido restringir só a uma área nas outras métricas operacionais).
-- **Funil (7 dias)**: Leads (7D) + conversões nos últimos 30 dias (calculado via `clientes.lead_id is not null and clientes.created_at` dentro da janela — não existe timestamp de conversão dedicado, essa é a aproximação), mais uma contagem de leads dos últimos 7 dias por cada uma das 5 áreas reais (a imagem de referência só mostrava 3 áreas de um negócio diferente).
-- **Novo `components/admin/DashboardAutoRefresh.tsx`**: client component que chama `router.refresh()` a cada 30 minutos (`setInterval` num `useEffect`), igual ao rodapé "refresh automático a cada 30min" da imagem de referência. O timestamp "atualizado em" é formatado explicitamente em `America/Belem` (fuso da cliente), não UTC.
-- **"Atividade recente" (log tipo "Sistema criou Lead X") ficou de fora por decisão explícita da cliente** — precisaria de uma tabela de auditoria nova instrumentada em todo `create`/`update`/`delete` do sistema, escopo grande, tratado como próximo item depois do Kanban de Leads.
-- Testado com dado real no Supabase (cliente, 2 contratos recorrentes, lançamentos pago/vencido/a vencer, caso, prazo, cliente convertido de lead) confirmando cada um dos 12 números bate — depois tudo limpo via `execute_sql`.
-
-**(C) e (A) commitados (`d69e788`), pushados e deployados em produção** — build Vercel `READY`, autorização dada pela cliente.
-
-## 8-F. Mesma sessão, passo seguinte: (B) Kanban de Leads com 17 colunas — implementado e testado, ainda não commitado
-
-Mockup aprovado ("Ok perfeito") mostrando as 17 colunas, toggle Kanban/Lista preservando a tabela existente, e as decisões de congelamento/F8 confirmadas na rodada anterior (ver 8-E). Implementação completa:
-
-**Migração `migrate_lead_status_to_kanban_stages`** (Supabase): enum `lead_status` recriado do zero (só havia 1 lead real no banco, `perdido` — migração de baixíssimo risco) com as 17 colunas + `cliente` (18 valores no total; `cliente` fica fora do Kanban de propósito). Mapeamento do enum antigo: `novo→leads`, `em_contato→contactados`, `qualificado→em_andamento`, `proposta→proposta_enviada`, `cliente`/`perdido` sem mudança de nome. **Faltava uma policy de RLS** — só `anon` podia inserir em `leads` (via formulário público), então o cadastro manual (autenticado) falhava com 401 até eu adicionar `authenticated can insert leads` numa segunda migração.
-
-**`lib/db-admin.ts`**: `LeadStatus` com as 18 opções. `updateLeadStatus`/`getNewLeadsCount` atualizados de `"novo"` pra `"leads"`. Nova `createLeadManual()` pro cadastro manual (usa `addBusinessDays` igual o insert público, mas com `scope_key: "manual"` e client autenticado em vez do anônimo).
-
-**`lib/leads-cadencia.ts`** (novo, sem dependência de servidor — mesmo padrão de `financeiro-utils.ts`/`prazos-utils.ts`): `CADENCIA_STATUSES` (as 8 colunas F) e `STATUS_CONGELADOS` (as que o motor automático nunca toca) vivem aqui, não em `db-admin.ts` — colocá-las lá quebrava o build porque um Client Component (`LeadsKanbanBoard`) importando qualquer valor real de `db-admin.ts` puxa o módulo inteiro, incluindo `next/headers` via `lib/supabase/server.ts`. `computeCadenciaStatus(dias)` mapeia dias-desde-contato pro degrau certo (1→F1, 2→F2, 3→F3, 5→F4, 7→F5, 10→F6, 12→F7, 15→F8), testado isoladamente com `tsx` pra todos os valores de fronteira.
-
-**`app/api/cron/leads-cadencia/route.ts`** (novo, protegido por `CRON_SECRET`, mesmo padrão do cron de notificações): busca todo lead com `first_contacted_at` preenchido, pula os que estão em status congelado, recalcula o degrau e atualiza se mudou. Agendado em `vercel.json` às 11h05 UTC (5 min depois do cron de notificações, pra não rodar junto). **Não consegui testar a chamada HTTP completa localmente** — falta a `SUPABASE_SERVICE_ROLE_KEY` (nem localmente, nem em produção ainda, é a mesma pendência já registrada na seção 8 sobre o cron de notificações) — testei a lógica pura (`computeCadenciaStatus`) isolada com `tsx` em vez disso, e confirmei que o endpoint de status (`PATCH /api/admin/leads/[id]/status`, o mesmo que o cron chama) carimba `first_contacted_at` corretamente.
-
-**`components/admin/LeadsKanbanBoard.tsx`** (novo, usa `@dnd-kit/core` + `@dnd-kit/utilities` — dependências novas no projeto; `@dnd-kit/sortable` foi instalado por engano e removido de novo, o board não precisa de reordenação dentro da coluna): 17 colunas, drag-and-drop entre elas chama `PATCH /api/admin/leads/[id]/status`, atualização otimista no estado local. Cliente convertido (`status === "cliente"`) é filtrado e nunca aparece no board. Clicar num card abre o mesmo `LeadDetailModal` já usado na Lista.
-- **Renderizado via `next/dynamic` com `ssr: false`** em `components/admin/LeadsPageClient.tsx` — `@dnd-kit` gera ids internos de acessibilidade (`aria-describedby="DndDescribedBy-N"`) a partir de um contador que diverge entre o processo de servidor e o cliente, causando um warning de hydration mismatch inofensivo mas evitável só desativando SSR pra esse componente.
-
-**`components/admin/NovoLeadModal.tsx`** (novo): formulário mínimo (nome, e-mail, WhatsApp, área) que cria o lead direto na coluna "Leads" via `POST /api/admin/leads`.
-
-**`components/admin/LeadsPageClient.tsx`** (novo): toggle Kanban/Lista. A Lista é o `AdminDashboard.tsx` de sempre — **removi o wrapper `<div className="mx-auto max-w-7xl...">` e o `<h1>Leads</h1>` duplicado dele**, já que agora o cabeçalho da página vive só no `LeadsPageClient`. **Limitação aceita conscientemente**: Kanban e Lista mantêm cada um seu próprio estado local (`useState(initialLeads)`), sem sincronização ao vivo entre eles — igual o resto do painel já se comporta (ex.: badges da sidebar), uma troca de aba só reflete mudança feita na outra aba depois de um reload completo da página. Pra uma usuária solo isso não deve ser um problema na prática.
-
-**Testado ponta a ponta com dado real** (cliente + lead de teste, limpos depois via `execute_sql`): cadastro manual funcionando (incluindo a correção da policy de RLS), avanço de status via API confirmado com `first_contacted_at` carimbado, board renderizando as 17 colunas com o lead real (`perdido`) na coluna certa, aba Lista sem regressão visual. **O drag-and-drop em si não foi testado via automação do navegador** (a ferramenta de clique/arrastar não simula um gesto de mouse contínuo o bastante pro `@dnd-kit` trocar de coluna — tentei duas vezes, o item sempre voltava pra coluna de origem) — validei a peça que realmente importa (a chamada à API que o drag dispara) diretamente. Vale a cliente confirmar o arrastar-e-soltar de verdade assim que testar.
-
-**Ainda não commitado, não pushado** — pedir autorização antes de commitar, como sempre.
-
-## 8-G. Mesma sessão: pedido de 6 itens grandes — sequenciado, item 6 implementado
-
-A cliente trouxe um pedido denso de 6 itens (texto longo, claramente adaptado de specs de outro projeto/contexto — precisou de tradução cuidadosa pro nosso domínio, não implementação literal):
-1. Filtros de período clicáveis (Todo o tempo/Hoje/7d/30d/90d/Personalizado) em vários blocos do painel.
-2. Módulo de Relatórios single-entity, print-first, server-aggregated (spec bem detalhada, veio de outro contexto — linguagem de "fases/tarefas" não é literal do nosso domínio).
-3. Painel de Metas com tiers de faturamento (valores de exemplo do texto dela — R$20k/30k/40k/60k/80k — **são placeholder, não os números reais do escritório**, ela confirmou usar como exemplo por enquanto).
-4. Hub de Links persistente (bookmark manager interno).
-5. Garantir captura de dados "ocultos" do lead (UTMs/localização/sistema/dispositivo/browser/idioma/IP).
-6. Nova aba "Análise Aprofundada" em Operação — análise de tráfego/UTMs no nível de gestor de tráfego sênior.
-
-**Sequenciamento acordado com a cliente: 6 → 1 → 2 → 3 → 4.** Duas decisões já tomadas com ela antes de desenhar:
-- **Item 2 (Relatórios)**: a entidade reportável escolhida foi **Caso** (tem fases/status/frentes/prazos, mapeia bem no conceito de "jornada"). Ainda não iniciado.
-- **Item 3 (Metas)**: usar os valores de exemplo do texto dela como placeholder por enquanto — **não são reais, não commitar como se fossem**. Ainda não iniciado.
-
-**Item 5 (captura de dados do lead) — já estava pronto, só verificado**: `lib/utms.ts` (as 5 UTMs, last-touch com persistência em `localStorage`) e `lib/metadata.ts` (IP, cidade/região/país via headers de geo do Vercel, browser/SO/dispositivo parseados do user-agent, idioma, resolução de tela) já eram capturados pelos 5 formulários públicos desde antes desta sessão, e o `LeadDetailModal` já exibia tudo isso. Confirmado com dado real no Supabase — nenhum código novo necessário. (Cidade/região/país só populam em produção, os headers `x-vercel-ip-*` não existem em dev local — isso é esperado, não é bug.)
-
-**Item 6 (Análise Aprofundada) — implementado, testado com dado real, sem migração**:
-- Mockup aprovado ("perfeito") mostrando: KPIs (leads no período com Δ vs. período anterior, taxa de conversão, canal líder, área líder), Perfil por Serviço (donut das 5 áreas), Performance por Canal (utm_source+utm_medium combinados, com conversão), Top Campanhas/Terms/Content, Distribuição Geográfica, Volume Semanal, heatmap Dia×Hora, e Análise de Respostas por Serviço (genérica, lê as chaves de `answers` dinamicamente — não hard-coded por formulário).
-- **Nova paleta categórica de 5+1 cores** em `app/globals.css` (`--chart-1`..`--chart-6`) e `lib/admin-labels.ts::FORM_TYPE_CHART_COLORS` — construída e **validada com o script de acessibilidade da skill `dataviz`** (contraste + separação por daltonismo, contra os dois fundos da marca) em vez de escolhida no olho. Passa com WARN mitigável (exige rótulo visível, que já é o padrão usado em todo o gráfico).
-- **Novo `lib/date-range.ts`** (puro, sem dependência de servidor): resolve as chaves Todo o tempo/Hoje/7d/30d/90d/Personalizado em datas reais, sempre no fuso `America/Belem` — **esse arquivo e o `components/admin/DateRangeFilter.tsx`** são a base compartilhada que o item 1 vai reaproveitar diretamente.
-- **Novo `lib/analytics.ts`**: todas as agregações (canal, top UTMs, cidades, volume semanal, matriz dia×hora, perfil de área, frequência de respostas, taxa de conversão) — puro, roda client-side sobre os leads já buscados, mesmo padrão de `AdminDashboard.tsx`/`LeadCharts.tsx` já existentes (não precisou de endpoint novo).
-- **Bug real encontrado e corrigido durante o teste**: `computeWeeklyVolume` fazia `new Date("YYYY-MM-DD")` (que o JS sempre lê como meia-noite UTC) e depois reformatava no fuso de Belém (UTC-3) — isso "vazava" a semana atual pro dia anterior, fazendo a última barra do gráfico sempre aparecer uma semana atrasada. Corrigido fixando `-03:00` explícito na reconstrução do Date. Sem esse teste com dado real, esse bug não teria aparecido só olhando o código.
-- Duas correções de pureza de render (`react-hooks/purity`, mesmo lint já visto antes na sessão): acúmulo de offset do donut e uso de `Date.now()` extraídos pra funções puras de módulo (`computeDonutSegments`, `countLeadsInPreviousPeriod` em `lib/analytics.ts`).
-- Testado com dado real variado (6 leads de teste cobrindo as 5 áreas, 4 canais diferentes, 3 cidades, 1 conversão) — todos os números conferidos manualmente, batem certinho. Limpo depois via `execute_sql`.
-- **Simplificação aceita conscientemente**: os valores de resposta (`answers`) são "prettificados" genericamente (`snake_case` → `Title Case`), não usam os labels exatos dos formulários (que têm acentos, ex. "Elaboração" aparece como "Elaboracao"). Se a cliente quiser labels exatos, precisaria extrair os arrays de opção de cada formulário público pra um arquivo compartilhado — não fiz isso agora pra não aumentar o escopo sem pedido.
-
-**Ainda não commitado, não pushado** — pedir autorização antes de commitar.
-
-**Próximo da fila: item 1 (filtros de período nos outros blocos do painel — Operação/Jurídico/Prazos/Financeiro/Leads)** — reaproveita `lib/date-range.ts` e `DateRangeFilter.tsx` recém-criados, não precisa desenhar do zero.
-
-## 9. Preferências da cliente importantes para a próxima sessão
-
-- **"Quero sempre que você me mostre antes"** — pedido explícito: para qualquer mudança estrutural ou visual (reorganização de menu, nova tela, mudança de layout), apresentar um mockup/visualização (Artifact) **antes** de escrever código, não só descrever em texto. Mudanças pequenas e bem especificadas (um campo novo num formulário já existente, por exemplo) não precisam desse tratamento — usar julgamento.
-- A cliente é bem direta ao dar feedback e não hesita em pedir para desfazer algo (aconteceu com a Assessoria Recorrente) — trate isso como normal, sem fricção, principalmente quando nada foi commitado ainda.
-- Prefere que decisões de copy jurídica/institucional sejam extraídas dela via pergunta estruturada, não inventadas — daí o uso adaptado da skill `landing-page-advogados-tlbc` mesmo fora do fluxo original dela (site novo → 1 área nova num site existente).
-- Atenção a compliance da OAB (Provimento 205/2021) em qualquer copy pública nova — evitar qualquer linguagem que soe como captação direta/indireta de cliente.
-
-## 10. Como retomar
-
-1. Ler este arquivo primeiro.
-2. Confirmar com a cliente se quer commitar/pushar a Onda 2 (código já pronto e testado localmente) antes de seguir com trabalho novo.
-3. Perguntar se o próximo passo é: (a) a visão de "clientes com assessoria recorrente" no CRM (pedido mais recente, provavelmente pequeno), ou (b) começar o design de Prazos/Agenda, ou (c) outra coisa.
-4. Não presumir a ordem — a cliente muda de prioridade com frequência nesta sessão, e isso é esperado.
+1. Ler este arquivo primeiro (auto-suficiente).
+2. Confirmar com a cliente qual é o próximo passo — as opções mais prováveis:
+   - **Financeiro Fase 2** (projeções, insights, categorias editáveis, sugestão automática) — próximo passo natural do que acabou de ser entregue.
+   - Ajuste em algo já entregue.
+   - Uma ideia nova.
+3. Se for Fase 2 do Financeiro: reaproveitar `lib/financeiro-fase1.ts` (já tem o padrão de bucket por mês em `America/Belem`) e o padrão de `lib/metas.ts` pra projeções; mockup antes de codar, como sempre.
+4. Não tocar em `components/admin/AdminSidebar 2.tsx` (arquivo estranho, sem decisão) nem em `HANDOFF.md`-adjacent sem perguntar.
+5. Verificação padrão antes de qualquer commit: `npx eslint .` + `npm run build` limpos + teste manual no browser com dado real no Supabase (sempre limpar depois).
