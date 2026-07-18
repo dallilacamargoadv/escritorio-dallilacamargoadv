@@ -199,6 +199,36 @@ Mockup aprovado ("Ok perfeito") mostrando as 17 colunas, toggle Kanban/Lista pre
 
 **Ainda não commitado, não pushado** — pedir autorização antes de commitar, como sempre.
 
+## 8-G. Mesma sessão: pedido de 6 itens grandes — sequenciado, item 6 implementado
+
+A cliente trouxe um pedido denso de 6 itens (texto longo, claramente adaptado de specs de outro projeto/contexto — precisou de tradução cuidadosa pro nosso domínio, não implementação literal):
+1. Filtros de período clicáveis (Todo o tempo/Hoje/7d/30d/90d/Personalizado) em vários blocos do painel.
+2. Módulo de Relatórios single-entity, print-first, server-aggregated (spec bem detalhada, veio de outro contexto — linguagem de "fases/tarefas" não é literal do nosso domínio).
+3. Painel de Metas com tiers de faturamento (valores de exemplo do texto dela — R$20k/30k/40k/60k/80k — **são placeholder, não os números reais do escritório**, ela confirmou usar como exemplo por enquanto).
+4. Hub de Links persistente (bookmark manager interno).
+5. Garantir captura de dados "ocultos" do lead (UTMs/localização/sistema/dispositivo/browser/idioma/IP).
+6. Nova aba "Análise Aprofundada" em Operação — análise de tráfego/UTMs no nível de gestor de tráfego sênior.
+
+**Sequenciamento acordado com a cliente: 6 → 1 → 2 → 3 → 4.** Duas decisões já tomadas com ela antes de desenhar:
+- **Item 2 (Relatórios)**: a entidade reportável escolhida foi **Caso** (tem fases/status/frentes/prazos, mapeia bem no conceito de "jornada"). Ainda não iniciado.
+- **Item 3 (Metas)**: usar os valores de exemplo do texto dela como placeholder por enquanto — **não são reais, não commitar como se fossem**. Ainda não iniciado.
+
+**Item 5 (captura de dados do lead) — já estava pronto, só verificado**: `lib/utms.ts` (as 5 UTMs, last-touch com persistência em `localStorage`) e `lib/metadata.ts` (IP, cidade/região/país via headers de geo do Vercel, browser/SO/dispositivo parseados do user-agent, idioma, resolução de tela) já eram capturados pelos 5 formulários públicos desde antes desta sessão, e o `LeadDetailModal` já exibia tudo isso. Confirmado com dado real no Supabase — nenhum código novo necessário. (Cidade/região/país só populam em produção, os headers `x-vercel-ip-*` não existem em dev local — isso é esperado, não é bug.)
+
+**Item 6 (Análise Aprofundada) — implementado, testado com dado real, sem migração**:
+- Mockup aprovado ("perfeito") mostrando: KPIs (leads no período com Δ vs. período anterior, taxa de conversão, canal líder, área líder), Perfil por Serviço (donut das 5 áreas), Performance por Canal (utm_source+utm_medium combinados, com conversão), Top Campanhas/Terms/Content, Distribuição Geográfica, Volume Semanal, heatmap Dia×Hora, e Análise de Respostas por Serviço (genérica, lê as chaves de `answers` dinamicamente — não hard-coded por formulário).
+- **Nova paleta categórica de 5+1 cores** em `app/globals.css` (`--chart-1`..`--chart-6`) e `lib/admin-labels.ts::FORM_TYPE_CHART_COLORS` — construída e **validada com o script de acessibilidade da skill `dataviz`** (contraste + separação por daltonismo, contra os dois fundos da marca) em vez de escolhida no olho. Passa com WARN mitigável (exige rótulo visível, que já é o padrão usado em todo o gráfico).
+- **Novo `lib/date-range.ts`** (puro, sem dependência de servidor): resolve as chaves Todo o tempo/Hoje/7d/30d/90d/Personalizado em datas reais, sempre no fuso `America/Belem` — **esse arquivo e o `components/admin/DateRangeFilter.tsx`** são a base compartilhada que o item 1 vai reaproveitar diretamente.
+- **Novo `lib/analytics.ts`**: todas as agregações (canal, top UTMs, cidades, volume semanal, matriz dia×hora, perfil de área, frequência de respostas, taxa de conversão) — puro, roda client-side sobre os leads já buscados, mesmo padrão de `AdminDashboard.tsx`/`LeadCharts.tsx` já existentes (não precisou de endpoint novo).
+- **Bug real encontrado e corrigido durante o teste**: `computeWeeklyVolume` fazia `new Date("YYYY-MM-DD")` (que o JS sempre lê como meia-noite UTC) e depois reformatava no fuso de Belém (UTC-3) — isso "vazava" a semana atual pro dia anterior, fazendo a última barra do gráfico sempre aparecer uma semana atrasada. Corrigido fixando `-03:00` explícito na reconstrução do Date. Sem esse teste com dado real, esse bug não teria aparecido só olhando o código.
+- Duas correções de pureza de render (`react-hooks/purity`, mesmo lint já visto antes na sessão): acúmulo de offset do donut e uso de `Date.now()` extraídos pra funções puras de módulo (`computeDonutSegments`, `countLeadsInPreviousPeriod` em `lib/analytics.ts`).
+- Testado com dado real variado (6 leads de teste cobrindo as 5 áreas, 4 canais diferentes, 3 cidades, 1 conversão) — todos os números conferidos manualmente, batem certinho. Limpo depois via `execute_sql`.
+- **Simplificação aceita conscientemente**: os valores de resposta (`answers`) são "prettificados" genericamente (`snake_case` → `Title Case`), não usam os labels exatos dos formulários (que têm acentos, ex. "Elaboração" aparece como "Elaboracao"). Se a cliente quiser labels exatos, precisaria extrair os arrays de opção de cada formulário público pra um arquivo compartilhado — não fiz isso agora pra não aumentar o escopo sem pedido.
+
+**Ainda não commitado, não pushado** — pedir autorização antes de commitar.
+
+**Próximo da fila: item 1 (filtros de período nos outros blocos do painel — Operação/Jurídico/Prazos/Financeiro/Leads)** — reaproveita `lib/date-range.ts` e `DateRangeFilter.tsx` recém-criados, não precisa desenhar do zero.
+
 ## 9. Preferências da cliente importantes para a próxima sessão
 
 - **"Quero sempre que você me mostre antes"** — pedido explícito: para qualquer mudança estrutural ou visual (reorganização de menu, nova tela, mudança de layout), apresentar um mockup/visualização (Artifact) **antes** de escrever código, não só descrever em texto. Mudanças pequenas e bem especificadas (um campo novo num formulário já existente, por exemplo) não precisam desse tratamento — usar julgamento.

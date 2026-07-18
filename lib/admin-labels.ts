@@ -15,6 +15,16 @@ export const FORM_TYPE_LABELS: Record<string, string> = {
   assessoria_estrategica: "Assessoria Estratégica",
 };
 
+/** Paleta categórica fixa das 5 áreas — ver nota de validação em app/globals.css. */
+export const FORM_TYPE_CHART_COLORS: Record<string, string> = {
+  contratos: "var(--chart-1)",
+  propriedade_intelectual: "var(--chart-2)",
+  contas_e_plataformas: "var(--chart-3)",
+  golpes_virtuais: "var(--chart-4)",
+  assessoria_estrategica: "var(--chart-5)",
+};
+export const CHART_COLOR_OUTROS = "var(--chart-6)";
+
 export const STATUS_LABELS: Record<LeadStatus, string> = {
   leads: "Leads",
   contactados: "Contactados",

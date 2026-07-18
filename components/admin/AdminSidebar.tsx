@@ -13,6 +13,7 @@ import {
   Wallet,
   Repeat,
   CalendarClock,
+  TrendingUp,
   Bell,
   LogOut,
 } from "lucide-react";
@@ -38,6 +39,13 @@ export function AdminSidebar({
       items: [
         { href: "/admin", label: "Visão Geral", icon: LayoutGrid, exact: true, badge: 0 },
         { href: "/admin/leads", label: "Leads", icon: Users, exact: false, badge: newLeadsCount },
+        {
+          href: "/admin/analise-aprofundada",
+          label: "Análise Aprofundada",
+          icon: TrendingUp,
+          exact: false,
+          badge: 0,
+        },
       ],
     },
     {

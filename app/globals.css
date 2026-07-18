@@ -28,6 +28,18 @@
   --brand-bordo-assinatura: #7a2430;
   --brand-pergaminho-neutro: #9f8e87;
 
+  /* paleta categórica de gráficos (5 áreas + "outros"), fixa entre temas —
+     validada com o script de acessibilidade da skill dataviz (CVD + contraste
+     contra os dois fundos da marca); usar sempre com rótulo/legenda visível,
+     nunca só a cor. Ordem: Contratos Digitais, Propriedade Intelectual,
+     Contas e Plataformas, Golpes Virtuais, Assessoria Estratégica, Outros. */
+  --chart-1: #a87f1a;
+  --chart-2: #b5495a;
+  --chart-3: #1f8f6f;
+  --chart-4: #c86a3a;
+  --chart-5: #9668b3;
+  --chart-6: #2e5f99;
+
   /* escala tipográfica (razão áurea 1.618) */
   --text-eyebrow: 10px;
   --text-body: 16px;
@@ -117,6 +129,12 @@
   --color-warning: var(--warning);
   --color-brand-gold: var(--brand-dourado-latao);
   --color-brand-wine: var(--brand-bordo-assinatura);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
 
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
