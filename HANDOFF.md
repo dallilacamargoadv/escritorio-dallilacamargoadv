@@ -157,19 +157,31 @@ Depois do deploy de 8-C, a cliente escolheu "Prazos/Agenda" como próximo passo.
 
 **Deixado de fora desta rodada, por decisão explícita** (ver mockup): notificação de prazo próximo estendendo o cron já existente (`app/api/cron/notificacoes/route.ts`) — o campo está pronto pra isso (`getUrgentPrazosCount` já existe), mas não foi pedido.
 
-## 8. 🔴 Estado atual em aberto (prioridade da próxima sessão)
+## 8-E. Mesma sessão: painel de referência externo (imagem) → notificações arquiváveis + nova Visão Geral com 12 KPIs
 
-**Onda 2 + Recorrentes (seção 8-B) já estão em produção.** O item em aberto agora é a divisão de Jurídico por área (seção 8-C), implementada e testada localmente mas ainda não commitada — peça autorização antes de commitar.
+A cliente colou um print de um dashboard de outra ferramenta (tema claro, genérico) pedindo "algo como" aquilo, mais um Kanban de Leads de 17 colunas (16 dela + "Perdido", sugestão minha aprovada) e arquivamento de notificações. Dado o tamanho, foi sequenciado como **C → A → B**: (C) Notificações, (A) Visão Geral, (B) Kanban de Leads — B ainda não iniciado, é o maior e mais arriscado dos três (troca o enum de status do lead inteiro, precisa de lib de drag-and-drop nova, e um motor de avanço automático por dias).
 
-**Passo manual da cliente, necessário antes do cron de Notificações funcionar em produção** (não posso fazer isso por ela, não tenho permissão para criar variáveis de ambiente): adicionar no Vercel, além do que já existe, duas variáveis novas:
-- `CRON_SECRET` (qualquer valor aleatório — protege o endpoint `/api/cron/notificacoes` de ser chamado por qualquer um)
-- `SUPABASE_SERVICE_ROLE_KEY` (a chave *service role*, não a anon/publishable — pegar em Supabase → Settings → API. É secreta, nunca deve ir para `NEXT_PUBLIC_*`)
+**(C) Notificações arquiváveis — implementado, testado, sem migração** (o campo `lida` já existia):
+- `components/admin/NotificacoesList.tsx`: duas abas, "Ativas" (lida=false, com botão de check pra arquivar) e "Arquivo" (lida=true, somente leitura). Arquivar uma notificação não apaga nada, só sai da aba Ativas.
+- `app/(admin)/admin/page.tsx`: a prévia de notificações no canto superior direito agora só mostra as não-lidas (antes mostrava as 4 mais recentes independente do status).
 
-**Pedido em aberto, ainda não iniciado**: a cliente quer uma **visão dedicada no admin para clientes/contratos com `tipo = 'recorrente'`** (ver seção 6, item 7 — o campo já existe, só falta a tela/filtro). Foi o último pedido antes desta sessão ser encerrada por limite de contexto.
+**(A) Nova Visão Geral com 12 KPIs em 3 blocos (Financeiro/Operação/Funil) — implementado, testado com dado real, sem migração**:
+- Todo o dado já existia nas tabelas de Contratos/Financeiro/Clientes/Casos/Prazos/Leads — nenhuma tabela nova.
+- **Financeiro**: MRR (mês corrente, soma de contratos recorrentes assinados), Inadimplência (soma + contagem de lançamentos vencidos, reusa `isLancamentoAtrasado`), Receita (30D, lançamentos pagos nos últimos 30 dias por `pago_em`), SLA cumprido (30D, mesma lógica de SLA de lead já existente, mas agora escopada a leads criados nos últimos 30 dias em vez de todos os leads já criados).
+- **Operação**: Clientes ativos (tem ≥1 contrato assinado), Contratos ativos (+ quantos recorrentes têm o lançamento pendente mais próximo vencendo nos próximos 30 dias — mesma lógica de "próximo vencimento" já usada em Recorrentes), Casos em aberto (aberto+em_andamento+aguardando_cliente, sem alegar SLA porque Casos não tem SLA calculado), Prazos (30D, pendentes vencendo em até 30 dias — **generalizado pra todas as áreas**, não só Propriedade Intelectual como na imagem de referência, porque não fazia sentido restringir só a uma área nas outras métricas operacionais).
+- **Funil (7 dias)**: Leads (7D) + conversões nos últimos 30 dias (calculado via `clientes.lead_id is not null and clientes.created_at` dentro da janela — não existe timestamp de conversão dedicado, essa é a aproximação), mais uma contagem de leads dos últimos 7 dias por cada uma das 5 áreas reais (a imagem de referência só mostrava 3 áreas de um negócio diferente).
+- **Novo `components/admin/DashboardAutoRefresh.tsx`**: client component que chama `router.refresh()` a cada 30 minutos (`setInterval` num `useEffect`), igual ao rodapé "refresh automático a cada 30min" da imagem de referência. O timestamp "atualizado em" é formatado explicitamente em `America/Belem` (fuso da cliente), não UTC.
+- **"Atividade recente" (log tipo "Sistema criou Lead X") ficou de fora por decisão explícita da cliente** — precisaria de uma tabela de auditoria nova instrumentada em todo `create`/`update`/`delete` do sistema, escopo grande, tratado como próximo item depois do Kanban de Leads.
+- Testado com dado real no Supabase (cliente, 2 contratos recorrentes, lançamentos pago/vencido/a vencer, caso, prazo, cliente convertido de lead) confirmando cada um dos 12 números bate — depois tudo limpo via `execute_sql`.
 
-**Também em aberto, aprovado mas não implementado**: a reestruturação completa da sidebar que a cliente confirmou via mockup visual (Jurídico dividido por área + Casos geral, grupo Site com Leads/Blog/Páginas SEO/Glossário/FAQs, grupo Plataforma com Controle de Acesso/Notificações/Relatórios/Configurações, grupo Finanças, grupo Prazos próprio). Isso é MUITO trabalho (8 módulos novos, a maioria ainda nem desenhada em detalhe) — a cliente pediu pra priorizar "Prazos" e "Assessoria Recorrente" primeiro; o segundo item mudou de escopo (não é mais área pública, é a visão de CRM do parágrafo acima). **Prazos (Agenda)** ainda não tem nem uma conversa de design nesta sessão além da menção original nas 14 fases — precisa ser desenhado do zero (frentes de agenda, o que conta como "prazo", como se relaciona com Casos/Contratos/Leads) antes de implementar.
+**Ainda não commitado, não pushado** — pedir autorização antes de commitar, como sempre.
 
-**Arquivo de plano** em `/Users/dallilacamargo/.claude/plans/binary-herding-tiger.md` está **desatualizado** — contém o plano da Assessoria Recorrente que foi revertida. Ignorar ou sobrescrever no próximo ciclo de planejamento.
+**Próximo item da fila, ainda não iniciado**: **(B) Kanban de Leads/Contatos com 17 colunas** — troca o `LeadStatus` atual (6 valores: novo/em_contato/qualificado/proposta/cliente/perdido) pelas 17 novas (Leads/Contactados/Em andamento/Proposta enviada/Link enviado/F1 01 dia/F2 02 dias/F3 03 dias/F4 05 dias/F5 07 dias/F6 10 dias/F7 12 dias/F8 15 dias (encerramento)/Grupo criado/Reunião agendada/Salesfarming/**Perdido**). Decisões já confirmadas com a cliente:
+- "Virou cliente" **sai do Kanban** quando convertido (comportamento já existente via `convertLeadToCliente`, não vira coluna).
+- "Perdido" é coluna própria, separada de "Salesfarming" (lead adormecida ≠ lead perdida).
+- **F1→F8 avançam automaticamente por dias corridos, contados a partir de `first_contacted_at`** (não `created_at`, não a última movimentação manual) — precisa de um motor parecido com o cron de notificações já existente, rodando diariamente, que recalcula o status de todo lead em F1–F8 e o move.
+- Precisa de biblioteca de drag-and-drop (não existe nenhuma no projeto ainda) e de decidir se o cadastro manual de lead (pedido da cliente, hoje só existe inserção anônima via formulário público) usa o mesmo `lib/db-leads.ts::insertLead` ou uma função nova autenticada.
+- **Ainda não desenhado em mockup** — fazer isso antes de tocar em código, inclusive a migração do enum de status (decidir o que acontece com leads que já têm status atual `qualificado`/`proposta`/`cliente`/`perdido` no banco).
 
 ## 9. Preferências da cliente importantes para a próxima sessão
 
