@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { LancamentoRow } from "@/lib/db-financeiro";
 import type { Despesa } from "@/lib/db-despesas";
+import type { Contrato } from "@/lib/db-contratos";
 import { isLancamentoAtrasado, isDespesaVencida } from "@/lib/financeiro-utils";
 import { computeFinanceiroAlertas, computeFinanceiroCards } from "@/lib/financeiro-fase1";
 import { formatDate } from "@/lib/format";
@@ -17,6 +18,7 @@ import { DateRangeFilter } from "@/components/admin/DateRangeFilter";
 import { resolveDateRange, isWithinRange, type DateRangeValue } from "@/lib/date-range";
 import { FinanceiroSummaryCards } from "@/components/admin/FinanceiroSummaryCards";
 import { RevenueExpenseRatio } from "@/components/admin/RevenueExpenseRatio";
+import { FinanceiroProjecoes } from "@/components/admin/FinanceiroProjecoes";
 import { FinanceiroAlerts } from "@/components/admin/FinanceiroAlerts";
 import { DespesaModal } from "@/components/admin/DespesaModal";
 import { NovoLancamentoChoiceModal } from "@/components/admin/NovoLancamentoChoiceModal";
@@ -109,9 +111,11 @@ function despesaToRow(d: Despesa): RowDespesa {
 export function FinanceiroDashboard({
   initialLancamentos,
   initialDespesas,
+  contratos,
 }: {
   initialLancamentos: LancamentoRow[];
   initialDespesas: Despesa[];
+  contratos: Contrato[];
 }) {
   const [lancamentos] = useState(initialLancamentos);
   const [despesas, setDespesas] = useState(initialDespesas);
@@ -246,6 +250,15 @@ export function FinanceiroDashboard({
           <p className="mt-8 font-eyebrow text-[10px] text-ink-dim">Receita x Despesa</p>
           <div className="mt-2">
             <RevenueExpenseRatio cards={cards} />
+          </div>
+
+          <p className="mt-8 font-eyebrow text-[10px] text-ink-dim">Projeções</p>
+          <div className="mt-2">
+            <FinanceiroProjecoes
+              lancamentos={lancamentos}
+              despesas={despesas}
+              contratos={contratos}
+            />
           </div>
 
           <p className="mt-8 font-eyebrow text-[10px] text-ink-dim">Lançamentos financeiros</p>

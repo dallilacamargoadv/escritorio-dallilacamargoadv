@@ -2,17 +2,20 @@ import { redirect } from "next/navigation";
 import { getAllLancamentos, type LancamentoRow } from "@/lib/db-financeiro";
 import { getAllDespesas } from "@/lib/db-despesas";
 import { getAllClientes } from "@/lib/db-clientes";
+import { getAllContratos } from "@/lib/db-contratos";
 import { FinanceiroDashboard } from "@/components/admin/FinanceiroDashboard";
 
 export default async function AdminFinanceiroPage() {
   let lancamentos;
   let despesas;
   let clientes;
+  let contratos;
   try {
-    [lancamentos, despesas, clientes] = await Promise.all([
+    [lancamentos, despesas, clientes, contratos] = await Promise.all([
       getAllLancamentos(),
       getAllDespesas(),
       getAllClientes(),
+      getAllContratos(),
     ]);
   } catch {
     redirect("/login");
@@ -27,5 +30,11 @@ export default async function AdminFinanceiroPage() {
     clienteNome: clienteNomeById.get(lancamento.cliente_id) ?? "—",
   }));
 
-  return <FinanceiroDashboard initialLancamentos={rows} initialDespesas={despesas} />;
+  return (
+    <FinanceiroDashboard
+      initialLancamentos={rows}
+      initialDespesas={despesas}
+      contratos={contratos}
+    />
+  );
 }
