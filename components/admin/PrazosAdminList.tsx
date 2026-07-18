@@ -6,6 +6,8 @@ import type { Prazo, PrazoStatus, PrazoTipo } from "@/lib/db-prazos";
 import { PRAZO_STATUS_COLORS, PRAZO_STATUS_LABELS, PRAZO_TIPO_LABELS } from "@/lib/admin-labels";
 import { isPrazoAtrasado, isPrazoProximo } from "@/lib/prazos-utils";
 import { formatDate } from "@/lib/format";
+import { DateRangeFilter } from "@/components/admin/DateRangeFilter";
+import { resolveDateRange, isWithinRange, type DateRangeValue } from "@/lib/date-range";
 
 export interface PrazoRow extends Prazo {
   vinculo: string;
@@ -15,14 +17,17 @@ export function PrazosAdminList({ initialPrazos }: { initialPrazos: PrazoRow[] }
   const [prazos] = useState(initialPrazos);
   const [tipoFilter, setTipoFilter] = useState<PrazoTipo | "all">("all");
   const [statusFilter, setStatusFilter] = useState<PrazoStatus | "all">("all");
+  const [range, setRange] = useState<DateRangeValue>({ key: "all", from: null, to: null });
 
   const filtered = useMemo(() => {
+    const resolved = resolveDateRange(range);
     return prazos.filter((prazo) => {
       if (tipoFilter !== "all" && prazo.tipo !== tipoFilter) return false;
       if (statusFilter !== "all" && prazo.status !== statusFilter) return false;
+      if (!isWithinRange(prazo.data, resolved)) return false;
       return true;
     });
-  }, [prazos, tipoFilter, statusFilter]);
+  }, [prazos, tipoFilter, statusFilter, range]);
 
   const pendentes = prazos.filter((p) => p.status === "pendente");
   const atrasados = pendentes.filter(isPrazoAtrasado);
@@ -99,6 +104,7 @@ export function PrazosAdminList({ initialPrazos }: { initialPrazos: PrazoRow[] }
             </option>
           ))}
         </select>
+        <DateRangeFilter value={range} onChange={setRange} />
       </div>
 
       <div className="mt-6 overflow-x-auto border border-hairline">

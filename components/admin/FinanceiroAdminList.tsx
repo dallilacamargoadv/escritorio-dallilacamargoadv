@@ -5,6 +5,8 @@ import Link from "next/link";
 import type { Lancamento } from "@/lib/db-financeiro";
 import { isLancamentoAtrasado as isAtrasado } from "@/lib/financeiro-utils";
 import { formatDate } from "@/lib/format";
+import { DateRangeFilter } from "@/components/admin/DateRangeFilter";
+import { resolveDateRange, isWithinRange, type DateRangeValue } from "@/lib/date-range";
 
 export interface LancamentoRow extends Lancamento {
   clienteNome: string;
@@ -23,15 +25,18 @@ export function FinanceiroAdminList({
 }) {
   const [lancamentos] = useState(initialLancamentos);
   const [statusFilter, setStatusFilter] = useState<StatusFiltro>("all");
+  const [range, setRange] = useState<DateRangeValue>({ key: "all", from: null, to: null });
 
   const filtered = useMemo(() => {
+    const resolved = resolveDateRange(range);
     return lancamentos.filter((l) => {
+      if (!isWithinRange(l.vencimento, resolved)) return false;
       if (statusFilter === "all") return true;
       if (statusFilter === "atrasado") return isAtrasado(l);
       if (statusFilter === "pendente") return l.status === "pendente" && !isAtrasado(l);
       return l.status === "pago";
     });
-  }, [lancamentos, statusFilter]);
+  }, [lancamentos, statusFilter, range]);
 
   const totalPendente = lancamentos
     .filter((l) => l.status === "pendente")
@@ -96,6 +101,7 @@ export function FinanceiroAdminList({
             {label}
           </button>
         ))}
+        <DateRangeFilter value={range} onChange={setRange} />
       </div>
 
       <div className="mt-6 overflow-x-auto border border-hairline">

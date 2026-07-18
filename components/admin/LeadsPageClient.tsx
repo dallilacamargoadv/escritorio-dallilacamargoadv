@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import type { Lead } from "@/lib/db-admin";
 import { AdminDashboard } from "@/components/admin/AdminDashboard";
+import { DateRangeFilter } from "@/components/admin/DateRangeFilter";
+import { resolveDateRange, isWithinRange, type DateRangeValue } from "@/lib/date-range";
 
 // ssr: false de propósito — @dnd-kit gera ids internos de acessibilidade
 // (aria-describedby) a partir de um contador que diverge entre o processo
@@ -21,16 +23,23 @@ type Aba = "kanban" | "lista";
 
 export function LeadsPageClient({ initialLeads }: { initialLeads: Lead[] }) {
   const [aba, setAba] = useState<Aba>("kanban");
+  const [range, setRange] = useState<DateRangeValue>({ key: "all", from: null, to: null });
+
+  const leads = useMemo(() => {
+    const resolved = resolveDateRange(range);
+    return initialLeads.filter((lead) => isWithinRange(lead.created_at, resolved));
+  }, [initialLeads, range]);
 
   return (
     <div className="mx-auto max-w-[1400px] px-4 py-8 sm:px-6">
-      <div className="flex items-center justify-between border-b border-hairline pb-6">
+      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-hairline pb-6">
         <div>
           <h1 className="text-lg italic text-ink">Leads / Contatos</h1>
           <p className="font-mono text-xs text-ink-dim">
-            {initialLeads.length} leads no total
+            {leads.length} lead(s) no período
           </p>
         </div>
+        <DateRangeFilter value={range} onChange={setRange} />
         <div className="flex border border-hairline-strong">
           <button
             type="button"
@@ -55,9 +64,9 @@ export function LeadsPageClient({ initialLeads }: { initialLeads: Lead[] }) {
 
       <div className="mt-6">
         {aba === "kanban" ? (
-          <LeadsKanbanBoard initialLeads={initialLeads} />
+          <LeadsKanbanBoard initialLeads={leads} />
         ) : (
-          <AdminDashboard initialLeads={initialLeads} />
+          <AdminDashboard initialLeads={leads} />
         )}
       </div>
     </div>
