@@ -1,6 +1,6 @@
 # Handoff — Site institucional + Sistema Operacional Jurídico, Dallila Camargo I Advocacia
 
-> Documento de continuidade de sessão. Cole este arquivo (ou peça para o Claude ler `HANDOFF.md` na raiz do projeto) no início de uma nova conversa para retomar exatamente de onde paramos, sem precisar reprocessar todo o histórico anterior. **Consolidado em 2026-07-18** a partir de uma sessão muito longa — o texto abaixo é o estado atual, não uma narrativa cronológica completa (essa fica resumida na seção 9, se precisar).
+> Documento de continuidade de sessão. Cole este arquivo (ou peça para o Claude ler `HANDOFF.md` na raiz do projeto) no início de uma nova conversa para retomar exatamente de onde paramos, sem precisar reprocessar todo o histórico anterior. **Atualizado em 2026-07-18** (mesmo dia da consolidação anterior, sessão seguinte) — o texto abaixo é o estado atual, não uma narrativa cronológica completa (essa fica resumida na seção 9, se precisar).
 
 ## 1. Quem é a cliente e o que é o projeto
 
@@ -67,7 +67,7 @@ Ver `app/globals.css` para os tokens completos.
 - **Finanças**: Contratos, Recorrentes, Financeiro, Metas
 - **Sistema**: Blog, Links, Notificações (badge = não lidas)
 
-**API routes** (`app/api/admin/*` e `app/api/cron/*`): `clientes`, `clientes/[id]`, `contratos`, `contratos/[id]`, `casos`, `casos/[id]`, `casos/[id]/frentes`, `casos/[id]/frentes/[frenteId]`, `casos/[id]/frentes/[frenteId]/visibilidade` (toggle visível-pro-cliente), `financeiro`, `financeiro/[id]`, `financeiro/[id]/cancelar` (NOVO), `despesas`, `despesas/[id]` (NOVO), `link-grupos`, `link-grupos/[id]` (NOVO), `links`, `links/[id]`, `links/metadata` (busca título da URL) (NOVO), `notificacoes`, `notificacoes/[id]`, `prazos`, `prazos/[id]`, `leads` (POST cadastro manual), `leads/[id]/status`, `leads/[id]/notes`, `leads/export`, `cron/notificacoes`, `cron/leads-cadencia`.
+**API routes** (`app/api/admin/*` e `app/api/cron/*`): `clientes`, `clientes/[id]`, `contratos`, `contratos/[id]`, `casos`, `casos/[id]`, `casos/[id]/frentes`, `casos/[id]/frentes/[frenteId]`, `casos/[id]/frentes/[frenteId]/visibilidade` (toggle visível-pro-cliente), `financeiro`, `financeiro/[id]`, `financeiro/[id]/cancelar`, `despesas`, `despesas/[id]`, `despesa-categorias`, `despesa-categorias/[id]`, `despesa-categorias/[id]/subcategorias`, `despesa-categorias/[id]/subcategorias/[subId]` (NOVO, Financeiro Fase 2), `link-grupos`, `link-grupos/[id]`, `links`, `links/[id]`, `links/metadata` (busca título da URL), `notificacoes`, `notificacoes/[id]`, `prazos`, `prazos/[id]`, `leads` (POST cadastro manual), `leads/[id]/status`, `leads/[id]/notes`, `leads/export`, `cron/notificacoes`, `cron/leads-cadencia`.
 
 ## 5. Banco de dados (Supabase — projeto `zojcjeinftoscpmkwtdi`)
 
@@ -86,9 +86,11 @@ Ver `app/globals.css` para os tokens completos.
 - **`posts`**: blog.
 - **`link_grupos`** (NOVA): `id, titulo, posicao, created_at`.
 - **`links`** (NOVA): `id, grupo_id (FK, cascade), titulo, url, tipo (enum: google_docs|google_sheets|google_slides|youtube|pdf|generico, auto-detectado por regex na URL ao criar), posicao, created_at`.
-- **`despesas`** (NOVA): `id, categoria (text, taxonomia fixa em `lib/despesas-categorias.ts`, ~11 categorias × subcategorias, não é CHECK constraint no banco — flexível de propósito), subcategoria (text, nullable), descricao, fornecedor (text, nullable), valor, vencimento (date), pago_em (timestamptz, nullable), status (enum despesa_status: a_pagar|pago|cancelado), forma_pagamento (text, nullable), recorrencia (enum despesa_recorrencia: nenhuma|mensal|trimestral|semestral|anual), centro_custo (text, nullable), observacoes (text, nullable), grupo_id (uuid, nullable — reservado pra uso futuro), created_at`. "Vencida" é calculada na tela (`lib/financeiro-utils.ts::isDespesaVencida`), mesmo princípio da `financeiro_lancamentos`.
+- **`despesas`**: `id, categoria (text, livre — desde a Fase 2 do Financeiro guarda o `nome` de uma linha de `despesa_categorias`, não mais um slug fixo; continua sem CHECK constraint no banco, de propósito), subcategoria (text, nullable, idem pro `nome` de `despesa_subcategorias`), descricao, fornecedor (text, nullable), valor, vencimento (date), pago_em (timestamptz, nullable), status (enum despesa_status: a_pagar|pago|cancelado), forma_pagamento (text, nullable), recorrencia (enum despesa_recorrencia: nenhuma|mensal|trimestral|semestral|anual), centro_custo (text, nullable), observacoes (text, nullable), grupo_id (uuid, nullable — reservado pra uso futuro), created_at`. "Vencida" é calculada na tela (`lib/financeiro-utils.ts::isDespesaVencida`), mesmo princípio da `financeiro_lancamentos`.
+- **`despesa_categorias`** (NOVA, Financeiro Fase 2): `id, nome (text, unique), posicao (int), created_at`. Substituiu a taxonomia fixa que existia em `lib/despesas-categorias.ts` — as 11 categorias originais foram migradas pra cá via seed na própria migration, nada perdido. Editável pelo painel (modal "Gerenciar categorias" em `/admin/financeiro`).
+- **`despesa_subcategorias`** (NOVA, Financeiro Fase 2): `id, categoria_id (FK despesa_categorias, cascade), nome (text), posicao (int), created_at`, `unique(categoria_id, nome)`. Mesma relação categoria→subcategoria de antes, agora em tabela em vez de objeto estático.
 
-**RLS**: todas as tabelas de negócio (incluindo as 3 novas: `link_grupos`, `links`, `despesas`) são **`authenticated`-only** pra select/insert/update/delete — **nunca** `auth.uid() = user_id` (esse projeto tem uma única usuária, não é multi-tenant; esse ponto já foi mal-sugerido uma vez num briefing externo e corrigido conscientemente, ver seção 8). Exceção de sempre: `leads` aceita `insert` de `anon` também (form público).
+**RLS**: todas as tabelas de negócio (incluindo `link_grupos`, `links`, `despesas`, `despesa_categorias`, `despesa_subcategorias`) são **`authenticated`-only** pra select/insert/update/delete — **nunca** `auth.uid() = user_id` (esse projeto tem uma única usuária, não é multi-tenant; esse ponto já foi mal-sugerido uma vez num briefing externo e corrigido conscientemente, ver seção 8). Exceção de sempre: `leads` aceita `insert` de `anon` também (form público).
 
 **Enum órfão inofensivo**: `lead_form_type` tem um valor `assessoria_recorrente` que sobrou de uma tentativa revertida de 6ª área pública — não vale a pena remover.
 
@@ -96,7 +98,7 @@ Ver `app/globals.css` para os tokens completos.
 
 - **`useSyncExternalStore`** para qualquer valor dependente de `window`/`localStorage`/`matchMedia`. Nunca `useState`+`useEffect` pra isso.
 - **ESLint `react-hooks/purity`**: proíbe chamar funções impuras (`Date.now()`, `Math.random()`) ou mutar variável diretamente no corpo de um componente durante a renderização. Correção: extrair pra função auxiliar de módulo (não-componente) e chamar de dentro. Exemplos: `isLancamentoAtrasado`/`isDespesaVencida`/`isPrazoAtrasado`, `computeDonutSegments` em `lib/analytics.ts`.
-- **Fronteira Server/Client**: importar de um `lib/db-*.ts` (usa `next/headers`) num Client Component só é seguro com `import type` **puro** (nenhum valor real do mesmo import) — o bundler erasa tipos automaticamente. Se precisar de uma função pura também, ela tem que morar num arquivo sem import de servidor (`lib/financeiro-utils.ts`, `lib/prazos-utils.ts`, `lib/analytics.ts`, `lib/date-range.ts`, `lib/overview-kpis.ts`, `lib/metas.ts`, `lib/financeiro-fase1.ts`, `lib/link-tipo.ts`, `lib/despesas-categorias.ts`).
+- **Fronteira Server/Client**: importar de um `lib/db-*.ts` (usa `next/headers`) num Client Component só é seguro com `import type` **puro** (nenhum valor real do mesmo import) — o bundler erasa tipos automaticamente. Se precisar de uma função pura também, ela tem que morar num arquivo sem import de servidor (`lib/financeiro-utils.ts`, `lib/prazos-utils.ts`, `lib/analytics.ts`, `lib/date-range.ts`, `lib/overview-kpis.ts`, `lib/metas.ts`, `lib/financeiro-fase1.ts`, `lib/financeiro-projecoes.ts`, `lib/financeiro-insights.ts`, `lib/categoria-sugestao.ts`, `lib/link-tipo.ts`, `lib/despesas-categorias.ts`).
 - **`useSearchParams()` em Client Component num layout amplo** quebra o build de prerender. Solução: isolar num componente-folha + `<Suspense fallback={null}>` (ver `JuridicoAreaSubnav.tsx`).
 - **`@dnd-kit` + SSR**: hydration mismatch inofensivo pelos ids de acessibilidade. Solução: `next/dynamic(..., { ssr: false })` a partir de um Client Component pai.
 - **Timezone**: sempre `America/Belem` explícito, nunca `new Date()` cru. Cuidado com `new Date("YYYY-MM-DD")` (interpretado como meia-noite UTC) — reconstruir com offset explícito `` `${dataStr}T00:00:00-03:00` ``.
@@ -117,7 +119,7 @@ Ver `app/globals.css` para os tokens completos.
 
 ## 7. Estado atual em produção
 
-**Tudo commitado, pushado e em produção (Vercel, `READY`)** até o commit `d82fb72`. Isso inclui, em ordem cronológica desta sessão longa:
+**Tudo commitado, pushado e em produção (Vercel)** até o commit `10af2c6` (`ae11eec` e `10af2c6` — Financeiro Fase 2 completa — foram pushados nesta sessão seguinte à consolidação; confira `vercel list_deployments` se precisar confirmar que o build mais recente terminou `READY`). Isso inclui, em ordem cronológica das duas sessões:
 - Kanban de Leads (17 colunas) + cadência automática — já estava em produção antes desta sessão.
 - Análise Aprofundada (`78dfaa7`).
 - **Item 1** — Filtros de período clicáveis em Leads/Casos/Prazos/Financeiro/Visão Geral (`67e1325`).
@@ -126,6 +128,7 @@ Ver `app/globals.css` para os tokens completos.
 - **Item 4** — Hub de Links (`337de88`).
 - Drill-down por modal + gráficos (donut/barra/gauge) nos 12 KPIs da Visão Geral (`49532fc`).
 - Financeiro remodelado, Fase 1 — despesas, régua de KPIs, Receita x Despesa, tabela unificada (`d82fb72`).
+- **Financeiro Fase 2, completa** — Projeções trimestre/semestre/ano (`ae11eec`); Análise financeira (insights) + categorias de despesa editáveis + sugestão automática de categoria (`10af2c6`).
 
 **Arquivo estranho, sem decisão**: `components/admin/AdminSidebar 2.tsx` (untracked, provável duplicata de conflito do iCloud Drive) — já foi apontado pra cliente, ela ainda não decidiu se apaga. Não mexer sem perguntar de novo.
 
@@ -169,11 +172,14 @@ Pedido veio como um briefing muito denso (19 seções, com schema Supabase compl
 - Botão único "Novo lançamento" → modal de escolha Receita/Despesa (Receita leva pro formulário que já existia; Despesa abre `DespesaModal.tsx` novo).
 - Despesa: editar/marcar pago/excluir inline na tabela. Receita: continua indo pra página de detalhe já existente, que ganhou a ação "Cancelar lançamento".
 
-**Fase 2 — NÃO iniciada, é o próximo passo natural se ela quiser continuar no Financeiro**:
-- Projeções trimestrais/semestrais/anuais (a lógica proposta no briefing original é simples — receitas recorrentes + faturas abertas + média histórica — dá pra seguir ela quase literalmente quando chegar a hora).
-- Bloco "Análise financeira" / insights (maior categoria de despesa, cliente com maior receita, alertas de benchmark tipo "despesas consumiram X% da receita").
-- Categorias de despesa editáveis pelo painel (hoje fixas no código).
-- Sugestão automática de categoria ao digitar a descrição da despesa.
+**Fase 2 — CONCLUÍDA** (sessão seguinte à consolidação, mesmo dia 2026-07-18). As 4 frentes, sequenciadas com confirmação de escopo antes de cada uma (padrão já estabelecido):
+
+- ✅ **Projeções** (`ae11eec`) — `lib/financeiro-projecoes.ts` + `components/admin/FinanceiroProjecoes.tsx`, bloco na tela Financeiro com toggle Trimestre/Semestre/Ano. "Confirmado" = contratos recorrentes ativos (por `contrato_id`, sem duplicar com fatura já emitida no mês) + faturas/despesas já lançadas no período; "estimado" = média dos últimos 3 meses fechados de receita/despesa avulsa, só nos meses sem lançamento ainda. Gráfico de barras empilhadas (confirmado sólido + estimado translúcido) via Recharts.
+- ✅ **Análise financeira / insights** (`10af2c6`) — `lib/financeiro-insights.ts` + `components/admin/FinanceiroInsightsBlock.tsx`: maior categoria de despesa do mês (com %), cliente com maior receita do mês, alerta de benchmark despesa/receita com 3 faixas de cor (até 50% saudável / 50–80% atenção / acima de 80% alerta).
+- ✅ **Categorias de despesa editáveis** (`10af2c6`) — antes fixas em `lib/despesas-categorias.ts` (`CATEGORIAS_DESPESA`), agora em duas tabelas novas (`despesa_categorias` + `despesa_subcategorias`, ver seção 5), seedadas com as mesmas 11 categorias/71 subcategorias que já existiam — nada foi perdido na migração. Modal "Gerenciar categorias" (`components/admin/CategoriasDespesaModal.tsx`, botão na tela Financeiro) permite criar/renomear/excluir categoria e subcategoria. `despesas.categoria`/`subcategoria` continuam texto livre (sem FK) — guardam o `nome` da categoria/subcategoria escolhida no momento, então excluir uma categoria depois não quebra despesas antigas.
+- ✅ **Sugestão automática de categoria** (`10af2c6`) — `lib/categoria-sugestao.ts` (função pura `sugerirCategoria`, sem import de servidor): ao sair do campo descrição (`onBlur`) de uma despesa nova, compara palavras da descrição digitada com as despesas já lançadas (ignorando stopwords/palavras curtas) e, se achar uma parecida, pré-preenche categoria/subcategoria com base nela — só dispara se o usuário ainda não tiver mexido manualmente na categoria (`categoriaTocada`). Decisão consciente: aprende do histórico real em vez de manter uma lista de palavras-chave fixa no código.
+
+**Nota de teste desta sessão**: a ferramenta de automação de browser não dispara eventos reais de blur/focus via `.blur()` sintético neste ambiente (confirmado — `document.activeElement` muda mas nenhum evento é despachado). Pra testar campos com `onBlur` no futuro, disparar manualmente via `el.dispatchEvent(new FocusEvent('focusout', { bubbles: true }))` em vez de `el.blur()`.
 
 ## 9. Cronologia resumida (mais recente por último) — visão de alto nível
 
@@ -189,7 +195,8 @@ Pedido veio como um briefing muito denso (19 seções, com schema Supabase compl
 10. Kanban de Leads (17 colunas) + cadência automática.
 11. Fila de 6 itens grandes — **todos concluídos** (seção 8.1).
 12. Drill-down por modal + gráficos na Visão Geral (seção 8.2) — **concluído**.
-13. Financeiro remodelado, Fase 1 (seção 8.3) — **concluído**, Fase 2 pendente.
+13. Financeiro remodelado, Fase 1 (seção 8.3) — **concluído**.
+14. Financeiro Fase 2 completa: Projeções, Análise financeira, categorias de despesa editáveis, sugestão automática (seção 8.3) — **concluído**, sessão seguinte, mesmo dia.
 
 ## 10. Preferências e padrões de trabalho da cliente
 
@@ -205,10 +212,7 @@ Pedido veio como um briefing muito denso (19 seções, com schema Supabase compl
 ## 11. Como retomar
 
 1. Ler este arquivo primeiro (auto-suficiente).
-2. Confirmar com a cliente qual é o próximo passo — as opções mais prováveis:
-   - **Financeiro Fase 2** (projeções, insights, categorias editáveis, sugestão automática) — próximo passo natural do que acabou de ser entregue.
-   - Ajuste em algo já entregue.
-   - Uma ideia nova.
-3. Se for Fase 2 do Financeiro: reaproveitar `lib/financeiro-fase1.ts` (já tem o padrão de bucket por mês em `America/Belem`) e o padrão de `lib/metas.ts` pra projeções; mockup antes de codar, como sempre.
-4. Não tocar em `components/admin/AdminSidebar 2.tsx` (arquivo estranho, sem decisão) nem em `HANDOFF.md`-adjacent sem perguntar.
-5. Verificação padrão antes de qualquer commit: `npx eslint .` + `npm run build` limpos + teste manual no browser com dado real no Supabase (sempre limpar depois).
+2. Confirmar com a cliente qual é o próximo passo — a Fase 2 do Financeiro (seção 8.3) está **inteiramente concluída**, não há próximo passo óbvio pré-definido nessa frente. Perguntar antes de presumir; ela muda de prioridade com frequência.
+3. Não tocar em `components/admin/AdminSidebar 2.tsx` (arquivo estranho, sem decisão) nem em `HANDOFF.md`-adjacent sem perguntar.
+4. Verificação padrão antes de qualquer commit: `npx eslint .` + `npm run build` limpos + teste manual no browser com dado real no Supabase (sempre limpar depois).
+5. Se for testar um campo com `onBlur` via automação de browser, ver a nota de teste no fim da seção 8.3 — `.blur()` sintético não dispara o evento nesse ambiente, usar `dispatchEvent(new FocusEvent('focusout', { bubbles: true }))`.
