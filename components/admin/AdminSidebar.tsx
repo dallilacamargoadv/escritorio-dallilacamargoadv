@@ -15,6 +15,7 @@ import {
   CalendarClock,
   TrendingUp,
   Target,
+  Link2,
   Bell,
   LogOut,
 } from "lucide-react";
@@ -82,6 +83,7 @@ export function AdminSidebar({
       label: "Sistema",
       items: [
         { href: "/admin/blog", label: "Blog", icon: Newspaper, exact: false, badge: 0 },
+        { href: "/admin/links", label: "Links", icon: Link2, exact: false, badge: 0 },
         {
           href: "/admin/notificacoes",
           label: "Notificações",

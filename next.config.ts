@@ -7,9 +7,10 @@ const csp = `
   default-src 'self';
   script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""};
   style-src 'self' 'unsafe-inline';
-  img-src 'self' data: blob:;
+  img-src 'self' data: blob: https://img.youtube.com;
   font-src 'self' data:;
   connect-src 'self' ${supabaseUrl};
+  frame-src 'self' https://docs.google.com https://www.youtube.com;
   object-src 'none';
   base-uri 'self';
   form-action 'self';
