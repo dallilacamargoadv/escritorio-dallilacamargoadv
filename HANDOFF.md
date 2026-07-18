@@ -112,18 +112,31 @@ Duas revisões de mockup de sidebar foram aprovadas nesta sessão (Artifact "Pro
 - **Tela nova `/admin/recorrentes`** (`app/(admin)/admin/recorrentes/page.tsx` + `components/admin/RecorrentesAdminList.tsx`): filtra `contratos.tipo = 'recorrente'`, cruza com `financeiro_lancamentos` para achar o próximo vencimento pendente por contrato (destacado em vermelho se atrasado, via `isLancamentoAtrasado` já existente), conta casos vinculados. 3 KPIs no topo (MRR ativo em R$, clientes ativos, aguardando assinatura) + pills de filtro por status do contrato + tabela. Reaproveita exatamente os padrões visuais de `ContratosAdminList`/`FinanceiroAdminList` (nenhum componente/estilo novo inventado).
 - Nenhuma migração de banco foi necessária — `contratos.tipo = 'recorrente'` já existia desde a Onda 1.
 
-**Ainda não commitado, não pushado.** Junto com a Onda 2 (seção 8 abaixo), precisa de autorização explícita da cliente antes de commitar.
+**Commitado (`6dc9a0a`), pushado e deployado em produção nesta sessão** — build Vercel `READY`. Autorização explícita da cliente foi dada ("sim, faça o commit" / "sim" para push+deploy).
 
-**Escopo explicitamente adiado por pedido da cliente** (não implementar sem novo pedido):
-- Dividir Jurídico pelas 5 áreas reais (cada uma linkando para Casos filtrado por área) — mockup já aprovado, só falta construir.
+## 8-C. Mesma sessão, passo seguinte: Jurídico dividido pelas 5 áreas — implementado, ainda não commitado
+
+Depois do deploy de 8-B, a cliente escolheu esse item como próximo passo (das opções: Jurídico por área / desenhar Prazos / outra coisa).
+
+**Implementado e testado localmente (lint + build limpos, testado no browser local via navegação direta por URL — ver nota de ferramenta abaixo):**
+
+- **`components/admin/AdminSidebar.tsx`**: grupo Jurídico agora tem Clientes, Casos, e — abaixo, como sub-itens sem ícone, indentados — as 5 áreas puxadas dinamicamente de `lib/site-data.ts::SERVICE_AREAS` (`menuLabel`/`formType`), cada uma linkando para `/admin/casos?area=<formType>`.
+- **Novo `components/admin/JuridicoAreaSubnav.tsx`**: isola o único trecho que precisa de `useSearchParams()` (para destacar a área ativa). Isso foi necessário porque colocar `useSearchParams()` direto em `AdminSidebar` (renderizado em todo layout `/admin/*`) quebrava o build com `useSearchParams() should be wrapped in a suspense boundary` especificamente na página `/admin/blog` — corrigido isolando o hook num componente-folha envolto em `<Suspense fallback={null}>`, conforme a própria doc do Next.js em `node_modules/next/dist/docs`.
+- **`app/(admin)/admin/casos/page.tsx`**: agora lê `searchParams: Promise<{ area?: string }>` (padrão `await`, igual ao já usado em `/blog`) e passa `initialArea` pro componente de lista. Precisou de **`key={area ?? "all"}`** no `<CasosAdminList>` — sem isso, clicar em um link de área diferente não reseta o filtro, porque o `useState(initialArea)` só usa o valor inicial no primeiro mount, não em re-renders com prop nova. Confirmado via teste: sem a key, o pill de área ficava preso em "Todas"; com a key, sincroniza certinho.
+- `components/admin/CasosAdminList.tsx`: prop `initialArea` opcional, vira o valor inicial do filtro de área.
+- Nenhuma migração de banco, nenhuma tabela nova.
+
+**Nota de ferramenta**: a verificação final no browser local usou navegação direta por URL (`/admin/casos?area=...`) em vez de clique nos links da sidebar, porque os cliques via automação erraram coordenadas (problema da ferramenta de automação, não do app) e um deles acabou clicando "Sair" sem querer — a sessão de login local foi encerrada como efeito colateral inofensivo (não afeta produção, não requer ação da cliente). A navegação direta por URL já confirmou que tanto o destaque da área ativa na sidebar quanto o pill de filtro pré-selecionado na tela de Casos funcionam corretamente.
+
+**Ainda não commitado, não pushado** — pedir autorização antes de commitar, como sempre.
+
+**Escopo ainda adiado por pedido da cliente** (não implementar sem novo pedido):
 - Grupo "Site" (Páginas SEO, Glossário, FAQs), grupo "Plataforma" (Controle de Acesso, Relatórios, Configurações), grupo "Prazos" — nenhum desenhado em detalhe ainda além do mockup de alto nível.
 - **Nota de visão de futuro da cliente, capturada mas não desenhada**: cada área jurídica tem uma dinâmica de atendimento própria — ela deu o exemplo de "Contratos Digitais" tendo um kanban interno (Cliente → Análise → Elaboração → Envio → Reanálise). Isso é sobre a tela de **Casos filtrada por área**, não sobre Contratos. Não desenhar nem implementar sem pedido explícito — a cliente foi clara que não é para agora.
 
 ## 8. 🔴 Estado atual em aberto (prioridade da próxima sessão)
 
-**O código local está à frente do que está commitado.** Último commit em produção: `595a93d` (Onda 1, já deployada). Tudo da Onda 2 (seção 6, item 5) está **implementado, testado localmente, com lint/build limpos — mas não commitado, não pushado, não deployado**. `git status` na raiz do projeto mostra a lista exata de arquivos modificados/novos.
-
-**Antes de fazer qualquer commit desta Onda 2**, ela precisa de autorização explícita da cliente (padrão da sessão toda) — pergunte primeiro.
+**Onda 2 + Recorrentes (seção 8-B) já estão em produção.** O item em aberto agora é a divisão de Jurídico por área (seção 8-C), implementada e testada localmente mas ainda não commitada — peça autorização antes de commitar.
 
 **Passo manual da cliente, necessário antes do cron de Notificações funcionar em produção** (não posso fazer isso por ela, não tenho permissão para criar variáveis de ambiente): adicionar no Vercel, além do que já existe, duas variáveis novas:
 - `CRON_SECRET` (qualquer valor aleatório — protege o endpoint `/api/cron/notificacoes` de ser chamado por qualquer um)

@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
@@ -16,6 +17,7 @@ import {
 } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { createClient } from "@/lib/supabase/client";
+import { JuridicoAreaSubnav } from "@/components/admin/JuridicoAreaSubnav";
 
 export function AdminSidebar({
   newLeadsCount,
@@ -33,9 +35,15 @@ export function AdminSidebar({
       items: [
         { href: "/admin", label: "Visão Geral", icon: LayoutGrid, exact: true, badge: 0 },
         { href: "/admin/leads", label: "Leads", icon: Users, exact: false, badge: newLeadsCount },
+      ],
+    },
+    {
+      label: "Jurídico",
+      items: [
         { href: "/admin/clientes", label: "Clientes", icon: UserSquare2, exact: false, badge: 0 },
         { href: "/admin/casos", label: "Casos", icon: Briefcase, exact: false, badge: 0 },
       ],
+      areaSubnav: true,
     },
     {
       label: "Finanças",
@@ -107,6 +115,11 @@ export function AdminSidebar({
                   </Link>
                 );
               })}
+              {group.areaSubnav && (
+                <Suspense fallback={null}>
+                  <JuridicoAreaSubnav />
+                </Suspense>
+              )}
             </div>
           </div>
         ))}

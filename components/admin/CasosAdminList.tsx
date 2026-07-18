@@ -11,10 +11,16 @@ export interface CasoRow extends Caso {
   clienteNome: string;
 }
 
-export function CasosAdminList({ initialCasos }: { initialCasos: CasoRow[] }) {
+export function CasosAdminList({
+  initialCasos,
+  initialArea = "all",
+}: {
+  initialCasos: CasoRow[];
+  initialArea?: string;
+}) {
   const [casos] = useState(initialCasos);
   const [statusFilter, setStatusFilter] = useState<CasoStatus | "all">("all");
-  const [areaFilter, setAreaFilter] = useState("all");
+  const [areaFilter, setAreaFilter] = useState(initialArea);
 
   const filtered = useMemo(() => {
     return casos.filter((caso) => {

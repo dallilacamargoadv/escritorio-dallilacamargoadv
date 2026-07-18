@@ -4,7 +4,13 @@ import { getAllContratos } from "@/lib/db-contratos";
 import { getAllClientes } from "@/lib/db-clientes";
 import { CasosAdminList, type CasoRow } from "@/components/admin/CasosAdminList";
 
-export default async function AdminCasosPage() {
+export default async function AdminCasosPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ area?: string }>;
+}) {
+  const { area } = await searchParams;
+
   let casos;
   let contratos;
   let clientes;
@@ -31,5 +37,7 @@ export default async function AdminCasosPage() {
     };
   });
 
-  return <CasosAdminList initialCasos={rows} />;
+  return (
+    <CasosAdminList key={area ?? "all"} initialCasos={rows} initialArea={area ?? "all"} />
+  );
 }
