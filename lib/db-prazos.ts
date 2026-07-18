@@ -15,6 +15,7 @@ export interface Prazo {
   status: PrazoStatus;
   concluido_em: string | null;
   created_at: string;
+  visivel_cliente: boolean;
 }
 
 export interface PrazoInput {
@@ -26,6 +27,7 @@ export interface PrazoInput {
   caso_id: string | null;
   cliente_id: string | null;
   status: PrazoStatus;
+  visivel_cliente: boolean;
 }
 
 export async function getUrgentPrazosCount(): Promise<number> {
@@ -67,6 +69,26 @@ export async function getPrazoById(id: string): Promise<Prazo | null> {
   return data as Prazo | null;
 }
 
+export async function getPrazosByCaso(
+  casoId: string,
+  frenteIds: string[],
+): Promise<Prazo[]> {
+  const supabase = await createClient();
+  const filtros = [`caso_id.eq.${casoId}`];
+  if (frenteIds.length > 0) {
+    filtros.push(`caso_frente_id.in.(${frenteIds.join(",")})`);
+  }
+
+  const { data, error } = await supabase
+    .from("prazos")
+    .select("*")
+    .or(filtros.join(","))
+    .order("data", { ascending: true });
+
+  if (error) throw error;
+  return data as Prazo[];
+}
+
 export async function createPrazo(input: PrazoInput): Promise<Prazo> {
   const supabase = await createClient();
   const { data, error } = await supabase
@@ -80,6 +102,7 @@ export async function createPrazo(input: PrazoInput): Promise<Prazo> {
       caso_id: input.caso_id,
       cliente_id: input.cliente_id,
       status: input.status,
+      visivel_cliente: input.visivel_cliente,
     })
     .select()
     .single();
@@ -99,6 +122,7 @@ export async function updatePrazo(id: string, input: PrazoInput): Promise<Prazo>
     caso_id: input.caso_id,
     cliente_id: input.cliente_id,
     status: input.status,
+    visivel_cliente: input.visivel_cliente,
   };
 
   if (input.status === "concluido") {

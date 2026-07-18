@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import type { Caso, CasoStatus } from "@/lib/db-casos";
 import type { LeadFormType } from "@/lib/db-leads";
 import { CASO_STATUS_LABELS, FORM_TYPE_LABELS } from "@/lib/admin-labels";
@@ -64,10 +65,28 @@ export function CasoForm({
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
-      <div className="border-b border-hairline pb-6">
+      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-hairline pb-6">
         <h1 className="text-lg italic text-ink">
           {caso ? "Editar caso" : "Novo caso"}
         </h1>
+        {caso && (
+          <div className="flex gap-2">
+            <Link
+              href={`/admin/casos/${caso.id}/relatorio`}
+              target="_blank"
+              className="border border-hairline-strong px-3 py-1.5 text-xs text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold"
+            >
+              Relatório interno
+            </Link>
+            <Link
+              href={`/admin/casos/${caso.id}/relatorio-cliente`}
+              target="_blank"
+              className="border border-hairline-strong px-3 py-1.5 text-xs text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold"
+            >
+              Relatório do cliente
+            </Link>
+          </div>
+        )}
       </div>
 
       <div className="mt-8 space-y-5">

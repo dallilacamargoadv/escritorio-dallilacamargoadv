@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
 import type { Frente, FrenteStatus, FrenteTipo } from "@/lib/db-frentes";
 import {
   FRENTE_STATUS_COLORS,
@@ -22,6 +23,7 @@ export function CasoFrentes({
   const [numeroProcesso, setNumeroProcesso] = useState("");
   const [saving, setSaving] = useState(false);
   const [statusSavingId, setStatusSavingId] = useState<string | null>(null);
+  const [visibilidadeSavingId, setVisibilidadeSavingId] = useState<string | null>(null);
 
   async function handleAddFrente() {
     setSaving(true);
@@ -72,6 +74,28 @@ export function CasoFrentes({
       }
     } finally {
       setStatusSavingId(null);
+    }
+  }
+
+  async function handleToggleVisibilidade(frente: Frente) {
+    setVisibilidadeSavingId(frente.id);
+    try {
+      const res = await fetch(
+        `/api/admin/casos/${casoId}/frentes/${frente.id}/visibilidade`,
+        {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ visivel_cliente: !frente.visivel_cliente }),
+        },
+      );
+      const data = await res.json();
+      if (res.ok && data.frente) {
+        setFrentes((prev) =>
+          prev.map((f) => (f.id === frente.id ? data.frente : f)),
+        );
+      }
+    } finally {
+      setVisibilidadeSavingId(null);
     }
   }
 
@@ -165,22 +189,41 @@ export function CasoFrentes({
                 </p>
               )}
             </div>
-            <select
-              value={frente.status}
-              disabled={statusSavingId === frente.id}
-              onChange={(e) =>
-                handleStatusChange(frente, e.target.value as FrenteStatus)
-              }
-              className={`shrink-0 border bg-transparent px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide disabled:opacity-50 ${FRENTE_STATUS_COLORS[frente.status]}`}
-            >
-              {(Object.keys(FRENTE_STATUS_LABELS) as FrenteStatus[]).map(
-                (status) => (
-                  <option key={status} value={status}>
-                    {FRENTE_STATUS_LABELS[status]}
-                  </option>
-                ),
-              )}
-            </select>
+            <div className="flex shrink-0 items-center gap-2">
+              <button
+                type="button"
+                onClick={() => handleToggleVisibilidade(frente)}
+                disabled={visibilidadeSavingId === frente.id}
+                title={
+                  frente.visivel_cliente
+                    ? "Visível pro cliente — clique para ocultar"
+                    : "Oculto do cliente — clique para mostrar"
+                }
+                className={`transition-colors duration-150 disabled:opacity-50 ${
+                  frente.visivel_cliente
+                    ? "text-success hover:text-ink-dim"
+                    : "text-ink-dim hover:text-success"
+                }`}
+              >
+                {frente.visivel_cliente ? <Eye size={14} /> : <EyeOff size={14} />}
+              </button>
+              <select
+                value={frente.status}
+                disabled={statusSavingId === frente.id}
+                onChange={(e) =>
+                  handleStatusChange(frente, e.target.value as FrenteStatus)
+                }
+                className={`border bg-transparent px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide disabled:opacity-50 ${FRENTE_STATUS_COLORS[frente.status]}`}
+              >
+                {(Object.keys(FRENTE_STATUS_LABELS) as FrenteStatus[]).map(
+                  (status) => (
+                    <option key={status} value={status}>
+                      {FRENTE_STATUS_LABELS[status]}
+                    </option>
+                  ),
+                )}
+              </select>
+            </div>
           </div>
         ))}
       </div>

@@ -27,6 +27,7 @@ export async function POST(request: NextRequest) {
     typeof body?.caso_frente_id === "string" ? body.caso_frente_id : null;
   const casoId = typeof body?.caso_id === "string" ? body.caso_id : null;
   const clienteId = typeof body?.cliente_id === "string" ? body.cliente_id : null;
+  const visivelCliente = body?.visivel_cliente !== false;
 
   if (!tipo || !titulo || !data) {
     return NextResponse.json(
@@ -44,6 +45,7 @@ export async function POST(request: NextRequest) {
     caso_id: casoId,
     cliente_id: clienteId,
     status: "pendente",
+    visivel_cliente: visivelCliente,
   };
 
   try {

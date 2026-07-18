@@ -41,6 +41,7 @@ export function PrazoForm({
   const [vinculoId, setVinculoId] = useState(
     prazo?.caso_frente_id ?? prazo?.caso_id ?? prazo?.cliente_id ?? "",
   );
+  const [visivelCliente, setVisivelCliente] = useState(prazo?.visivel_cliente ?? true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
 
@@ -87,6 +88,7 @@ export function PrazoForm({
           caso_frente_id: vinculoTipo === "frente" ? vinculoId : null,
           caso_id: vinculoTipo === "caso" ? vinculoId : null,
           cliente_id: vinculoTipo === "cliente" ? vinculoId : null,
+          visivel_cliente: visivelCliente,
         }),
       });
       const json = await res.json();
@@ -194,6 +196,18 @@ export function PrazoForm({
               ))}
             </select>
           </div>
+        )}
+
+        {(vinculoTipo === "caso" || vinculoTipo === "frente") && (
+          <label className="flex items-center gap-2 text-sm text-ink">
+            <input
+              type="checkbox"
+              checked={visivelCliente}
+              onChange={(e) => setVisivelCliente(e.target.checked)}
+              className="h-4 w-4 border-hairline-strong"
+            />
+            Visível no relatório do cliente
+          </label>
         )}
 
         <div>

@@ -12,6 +12,7 @@ export interface Frente {
   status: FrenteStatus;
   aberta_em: string;
   encerrada_em: string | null;
+  visivel_cliente: boolean;
 }
 
 export interface FrenteInput {
@@ -84,6 +85,22 @@ export async function updateFrente(
   const { data, error } = await supabase
     .from("caso_frentes")
     .update(updates)
+    .eq("id", id)
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data as Frente;
+}
+
+export async function setFrenteVisivelCliente(
+  id: string,
+  visivelCliente: boolean,
+): Promise<Frente> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("caso_frentes")
+    .update({ visivel_cliente: visivelCliente })
     .eq("id", id)
     .select()
     .single();

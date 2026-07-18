@@ -49,6 +49,7 @@ export async function PATCH(
   const status: PrazoStatus = VALID_STATUSES.includes(body?.status)
     ? body.status
     : "pendente";
+  const visivelCliente = body?.visivel_cliente !== false;
 
   if (!tipo || !titulo || !data) {
     return NextResponse.json(
@@ -66,6 +67,7 @@ export async function PATCH(
     caso_id: casoId,
     cliente_id: clienteId,
     status,
+    visivel_cliente: visivelCliente,
   };
 
   try {
