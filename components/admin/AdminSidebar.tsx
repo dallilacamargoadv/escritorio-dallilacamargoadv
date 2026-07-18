@@ -14,6 +14,7 @@ import {
   Repeat,
   CalendarClock,
   TrendingUp,
+  Target,
   Bell,
   LogOut,
 } from "lucide-react";
@@ -74,6 +75,7 @@ export function AdminSidebar({
         { href: "/admin/contratos", label: "Contratos", icon: FileText, exact: false, badge: 0 },
         { href: "/admin/recorrentes", label: "Recorrentes", icon: Repeat, exact: false, badge: 0 },
         { href: "/admin/financeiro", label: "Financeiro", icon: Wallet, exact: false, badge: 0 },
+        { href: "/admin/metas", label: "Metas", icon: Target, exact: false, badge: 0 },
       ],
     },
     {
