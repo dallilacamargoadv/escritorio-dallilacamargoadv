@@ -3,17 +3,11 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import type { Despesa, DespesaRecorrencia, DespesaStatus } from "@/lib/db-despesas";
-import {
-  CATEGORIA_DESPESA_LABELS,
-  CATEGORIAS_DESPESA,
-  CENTROS_CUSTO,
-  FORMAS_PAGAMENTO,
-  subcategoriasDaCategoria,
-  type CategoriaDespesaKey,
-} from "@/lib/despesas-categorias";
+import type { DespesaCategoria } from "@/lib/db-despesa-categorias";
+import { CENTROS_CUSTO, FORMAS_PAGAMENTO } from "@/lib/despesas-categorias";
+import { sugerirCategoria } from "@/lib/categoria-sugestao";
 import { DESPESA_RECORRENCIA_LABELS, DESPESA_STATUS_LABELS } from "@/lib/admin-labels";
 
-const CATEGORIA_KEYS = Object.keys(CATEGORIAS_DESPESA) as CategoriaDespesaKey[];
 const STATUS_KEYS: DespesaStatus[] = ["a_pagar", "pago", "cancelado"];
 const RECORRENCIA_KEYS: DespesaRecorrencia[] = [
   "nenhuma",
@@ -33,16 +27,18 @@ function FieldGroupLabel({ children }: { children: React.ReactNode }) {
 
 export function DespesaModal({
   despesa,
+  categorias,
+  despesasHistorico,
   onClose,
   onSaved,
 }: {
   despesa?: Despesa;
+  categorias: DespesaCategoria[];
+  despesasHistorico: Despesa[];
   onClose: () => void;
   onSaved: (despesa: Despesa) => void;
 }) {
-  const [categoria, setCategoria] = useState<CategoriaDespesaKey>(
-    (despesa?.categoria as CategoriaDespesaKey) ?? CATEGORIA_KEYS[0],
-  );
+  const [categoria, setCategoria] = useState(despesa?.categoria ?? categorias[0]?.nome ?? "");
   const [subcategoria, setSubcategoria] = useState(despesa?.subcategoria ?? "");
   const [descricao, setDescricao] = useState(despesa?.descricao ?? "");
   const [fornecedor, setFornecedor] = useState(despesa?.fornecedor ?? "");
@@ -57,12 +53,36 @@ export function DespesaModal({
   const [observacoes, setObservacoes] = useState(despesa?.observacoes ?? "");
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
+  const [categoriaTocada, setCategoriaTocada] = useState(Boolean(despesa));
+  const [sugestao, setSugestao] = useState<{ categoria: string; subcategoria: string | null } | null>(
+    null,
+  );
 
-  const subcategorias = subcategoriasDaCategoria(categoria);
+  const subcategorias = categorias.find((c) => c.nome === categoria)?.subcategorias ?? [];
 
-  function handleCategoriaChange(next: CategoriaDespesaKey) {
+  function handleCategoriaChange(next: string) {
     setCategoria(next);
     setSubcategoria("");
+    setCategoriaTocada(true);
+    setSugestao(null);
+  }
+
+  function handleDescricaoBlur() {
+    if (categoriaTocada || !descricao.trim()) return;
+    const resultado = sugerirCategoria(
+      descricao,
+      despesasHistorico.map((d) => ({
+        descricao: d.descricao,
+        categoria: d.categoria,
+        subcategoria: d.subcategoria,
+        created_at: d.created_at,
+      })),
+    );
+    if (resultado) {
+      setCategoria(resultado.categoria);
+      setSubcategoria(resultado.subcategoria ?? "");
+      setSugestao(resultado);
+    }
   }
 
   async function handleSave() {
@@ -138,12 +158,12 @@ export function DespesaModal({
               <label className="font-eyebrow text-[10px] text-ink-dim">Categoria</label>
               <select
                 value={categoria}
-                onChange={(e) => handleCategoriaChange(e.target.value as CategoriaDespesaKey)}
+                onChange={(e) => handleCategoriaChange(e.target.value)}
                 className="mt-1.5 w-full border border-hairline-strong bg-bg px-3 py-2 text-sm text-ink"
               >
-                {CATEGORIA_KEYS.map((key) => (
-                  <option key={key} value={key}>
-                    {CATEGORIA_DESPESA_LABELS[key]}
+                {categorias.map((cat) => (
+                  <option key={cat.id} value={cat.nome}>
+                    {cat.nome}
                   </option>
                 ))}
               </select>
@@ -152,13 +172,17 @@ export function DespesaModal({
               <label className="font-eyebrow text-[10px] text-ink-dim">Subcategoria</label>
               <select
                 value={subcategoria}
-                onChange={(e) => setSubcategoria(e.target.value)}
+                onChange={(e) => {
+                  setSubcategoria(e.target.value);
+                  setCategoriaTocada(true);
+                  setSugestao(null);
+                }}
                 className="mt-1.5 w-full border border-hairline-strong bg-bg px-3 py-2 text-sm text-ink"
               >
                 <option value="">—</option>
                 {subcategorias.map((sub) => (
-                  <option key={sub} value={sub}>
-                    {sub}
+                  <option key={sub.id} value={sub.nome}>
+                    {sub.nome}
                   </option>
                 ))}
               </select>
@@ -170,9 +194,17 @@ export function DespesaModal({
               type="text"
               value={descricao}
               onChange={(e) => setDescricao(e.target.value)}
+              onBlur={handleDescricaoBlur}
               placeholder="Ex.: assinatura mensal do banco de dados"
               className="mt-1.5 w-full border border-hairline-strong bg-bg px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
             />
+            {sugestao && (
+              <p className="mt-1.5 text-xs text-success">
+                ↳ sugerido: {sugestao.categoria}
+                {sugestao.subcategoria ? ` · ${sugestao.subcategoria}` : ""} (baseado em despesa
+                anterior)
+              </p>
+            )}
           </div>
           <div className="mt-3 grid grid-cols-2 gap-3">
             <div>

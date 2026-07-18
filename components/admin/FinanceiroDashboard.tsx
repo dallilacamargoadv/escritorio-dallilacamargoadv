@@ -7,21 +7,20 @@ import type { Despesa } from "@/lib/db-despesas";
 import type { Contrato } from "@/lib/db-contratos";
 import { isLancamentoAtrasado, isDespesaVencida } from "@/lib/financeiro-utils";
 import { computeFinanceiroAlertas, computeFinanceiroCards } from "@/lib/financeiro-fase1";
+import { computeFinanceiroInsights } from "@/lib/financeiro-insights";
 import { formatDate } from "@/lib/format";
-import {
-  CATEGORIA_DESPESA_LABELS,
-  CATEGORIAS_DESPESA,
-  type CategoriaDespesaKey,
-} from "@/lib/despesas-categorias";
 import { DESPESA_RECORRENCIA_LABELS } from "@/lib/admin-labels";
 import { DateRangeFilter } from "@/components/admin/DateRangeFilter";
 import { resolveDateRange, isWithinRange, type DateRangeValue } from "@/lib/date-range";
 import { FinanceiroSummaryCards } from "@/components/admin/FinanceiroSummaryCards";
 import { RevenueExpenseRatio } from "@/components/admin/RevenueExpenseRatio";
 import { FinanceiroProjecoes } from "@/components/admin/FinanceiroProjecoes";
+import { FinanceiroInsightsBlock } from "@/components/admin/FinanceiroInsightsBlock";
 import { FinanceiroAlerts } from "@/components/admin/FinanceiroAlerts";
 import { DespesaModal } from "@/components/admin/DespesaModal";
 import { NovoLancamentoChoiceModal } from "@/components/admin/NovoLancamentoChoiceModal";
+import { CategoriasDespesaModal } from "@/components/admin/CategoriasDespesaModal";
+import type { DespesaCategoria } from "@/lib/db-despesa-categorias";
 
 function formatBRL(valor: number) {
   return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
@@ -90,7 +89,7 @@ function despesaToRow(d: Despesa): RowDespesa {
     tipo: "despesa",
     id: d.id,
     data: d.vencimento,
-    categoriaLabel: `${CATEGORIA_DESPESA_LABELS[d.categoria as CategoriaDespesaKey] ?? d.categoria}${d.subcategoria ? ` · ${d.subcategoria}` : ""}`,
+    categoriaLabel: `${d.categoria}${d.subcategoria ? ` · ${d.subcategoria}` : ""}`,
     descricao: d.descricao,
     contraparte: d.fornecedor ?? "—",
     statusLabel: d.status === "pago" ? "Pago" : d.status === "cancelado" ? "Cancelado" : vencida ? "Vencido" : "A pagar",
@@ -112,13 +111,16 @@ export function FinanceiroDashboard({
   initialLancamentos,
   initialDespesas,
   contratos,
+  initialCategorias,
 }: {
   initialLancamentos: LancamentoRow[];
   initialDespesas: Despesa[];
   contratos: Contrato[];
+  initialCategorias: DespesaCategoria[];
 }) {
   const [lancamentos] = useState(initialLancamentos);
   const [despesas, setDespesas] = useState(initialDespesas);
+  const [categorias, setCategorias] = useState(initialCategorias);
 
   const [tipoFilter, setTipoFilter] = useState<TipoFiltro>("all");
   const [statusFilter, setStatusFilter] = useState<StatusFiltro>("all");
@@ -128,6 +130,7 @@ export function FinanceiroDashboard({
 
   const [showChoiceModal, setShowChoiceModal] = useState(false);
   const [despesaModal, setDespesaModal] = useState<{ despesa?: Despesa } | null>(null);
+  const [showCategoriasModal, setShowCategoriasModal] = useState(false);
 
   const cards = useMemo(
     () => computeFinanceiroCards({ lancamentos, despesas }),
@@ -135,6 +138,10 @@ export function FinanceiroDashboard({
   );
   const alertas = useMemo(
     () => computeFinanceiroAlertas({ lancamentos, despesas }),
+    [lancamentos, despesas],
+  );
+  const insights = useMemo(
+    () => computeFinanceiroInsights({ lancamentos, despesas }),
     [lancamentos, despesas],
   );
 
@@ -247,6 +254,11 @@ export function FinanceiroDashboard({
             <FinanceiroSummaryCards cards={cards} />
           </div>
 
+          <p className="mt-8 font-eyebrow text-[10px] text-ink-dim">Análise financeira</p>
+          <div className="mt-2">
+            <FinanceiroInsightsBlock insights={insights} percentualDespesas={cards.percentualDespesas} />
+          </div>
+
           <p className="mt-8 font-eyebrow text-[10px] text-ink-dim">Receita x Despesa</p>
           <div className="mt-2">
             <RevenueExpenseRatio cards={cards} />
@@ -289,9 +301,9 @@ export function FinanceiroDashboard({
               className="border border-hairline-strong bg-surface px-3 py-2 text-xs text-ink"
             >
               <option value="all">Todas as categorias</option>
-              {(Object.keys(CATEGORIAS_DESPESA) as CategoriaDespesaKey[]).map((key) => (
-                <option key={key} value={key}>
-                  {CATEGORIA_DESPESA_LABELS[key]}
+              {categorias.map((cat) => (
+                <option key={cat.id} value={cat.nome}>
+                  {cat.nome}
                 </option>
               ))}
             </select>
@@ -303,6 +315,13 @@ export function FinanceiroDashboard({
               placeholder="Buscar cliente, fornecedor, descrição…"
               className="min-w-[200px] flex-1 border border-hairline-strong bg-surface px-3 py-2 text-xs text-ink outline-none focus:border-gold"
             />
+            <button
+              type="button"
+              onClick={() => setShowCategoriasModal(true)}
+              className="border border-hairline-strong px-3 py-2 text-xs text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold"
+            >
+              Gerenciar categorias
+            </button>
           </div>
 
           <div className="mt-3 overflow-x-auto border border-hairline">
@@ -415,8 +434,18 @@ export function FinanceiroDashboard({
       {despesaModal && (
         <DespesaModal
           despesa={despesaModal.despesa}
+          categorias={categorias}
+          despesasHistorico={despesas}
           onClose={() => setDespesaModal(null)}
           onSaved={handleDespesaSaved}
+        />
+      )}
+
+      {showCategoriasModal && (
+        <CategoriasDespesaModal
+          categorias={categorias}
+          onChange={setCategorias}
+          onClose={() => setShowCategoriasModal(false)}
         />
       )}
     </div>

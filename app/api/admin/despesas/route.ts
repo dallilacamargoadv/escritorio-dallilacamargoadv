@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createDespesa, getAllDespesas, type DespesaInput } from "@/lib/db-despesas";
-import { CATEGORIAS_DESPESA, type CategoriaDespesaKey } from "@/lib/despesas-categorias";
 
-const VALID_CATEGORIAS = Object.keys(CATEGORIAS_DESPESA) as CategoriaDespesaKey[];
 const VALID_STATUSES = ["a_pagar", "pago", "cancelado"];
 const VALID_RECORRENCIAS = ["nenhuma", "mensal", "trimestral", "semestral", "anual"];
 
@@ -19,9 +17,7 @@ export async function GET() {
 }
 
 function parseInput(body: Record<string, unknown>): DespesaInput | null {
-  const categoria = VALID_CATEGORIAS.includes(body?.categoria as CategoriaDespesaKey)
-    ? (body.categoria as string)
-    : undefined;
+  const categoria = typeof body?.categoria === "string" ? body.categoria.trim() || undefined : undefined;
   const descricao = typeof body?.descricao === "string" ? body.descricao.trim() : "";
   const valor = typeof body?.valor === "number" ? body.valor : NaN;
   const vencimento = typeof body?.vencimento === "string" ? body.vencimento : "";
