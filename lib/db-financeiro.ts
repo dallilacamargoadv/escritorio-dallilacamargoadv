@@ -1,6 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 
-export type FinanceiroStatus = "pendente" | "pago";
+export type FinanceiroStatus = "pendente" | "pago" | "cancelado";
 
 export interface Lancamento {
   id: string;
@@ -12,6 +12,10 @@ export interface Lancamento {
   status: FinanceiroStatus;
   pago_em: string | null;
   grupo_id: string | null;
+}
+
+export interface LancamentoRow extends Lancamento {
+  clienteNome: string;
 }
 
 export interface LancamentoInput {
@@ -103,6 +107,19 @@ export async function marcarComoPago(id: string): Promise<Lancamento> {
   const { data, error } = await supabase
     .from("financeiro_lancamentos")
     .update({ status: "pago", pago_em: new Date().toISOString() })
+    .eq("id", id)
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data as Lancamento;
+}
+
+export async function cancelarLancamento(id: string): Promise<Lancamento> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("financeiro_lancamentos")
+    .update({ status: "cancelado" })
     .eq("id", id)
     .select()
     .single();

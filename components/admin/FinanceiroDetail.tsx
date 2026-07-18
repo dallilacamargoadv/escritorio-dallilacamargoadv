@@ -32,6 +32,21 @@ export function FinanceiroDetail({
     }
   }
 
+  async function handleCancelar() {
+    if (!confirm("Cancelar este lançamento? Ele deixa de contar nos indicadores financeiros.")) {
+      return;
+    }
+    setSaving(true);
+    try {
+      const res = await fetch(`/api/admin/financeiro/${lancamento.id}/cancelar`, {
+        method: "PATCH",
+      });
+      if (res.ok) router.refresh();
+    } finally {
+      setSaving(false);
+    }
+  }
+
   return (
     <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6">
       <div className="border-b border-hairline pb-6">
@@ -61,12 +76,20 @@ export function FinanceiroDetail({
             className={`mt-1 ${
               lancamento.status === "pago"
                 ? "text-success"
-                : atrasado
-                  ? "text-error"
-                  : "text-gold"
+                : lancamento.status === "cancelado"
+                  ? "text-ink-dim"
+                  : atrasado
+                    ? "text-error"
+                    : "text-gold"
             }`}
           >
-            {lancamento.status === "pago" ? "Pago" : atrasado ? "Atrasado" : "Pendente"}
+            {lancamento.status === "pago"
+              ? "Pago"
+              : lancamento.status === "cancelado"
+                ? "Cancelado"
+                : atrasado
+                  ? "Atrasado"
+                  : "Pendente"}
           </p>
         </div>
         {lancamento.pago_em && (
@@ -77,8 +100,8 @@ export function FinanceiroDetail({
         )}
       </div>
 
-      <div className="mt-8 flex gap-3">
-        {lancamento.status === "pendente" ? (
+      <div className="mt-8 flex flex-wrap gap-3">
+        {lancamento.status === "pendente" && (
           <button
             type="button"
             onClick={handleMarcarPago}
@@ -87,7 +110,8 @@ export function FinanceiroDetail({
           >
             {saving ? "Salvando..." : "Marcar como pago"}
           </button>
-        ) : (
+        )}
+        {lancamento.status === "pago" && (
           <Link
             href={`/admin/financeiro/${lancamento.id}/recibo`}
             target="_blank"
@@ -95,6 +119,16 @@ export function FinanceiroDetail({
           >
             Emitir recibo
           </Link>
+        )}
+        {lancamento.status === "pendente" && (
+          <button
+            type="button"
+            onClick={handleCancelar}
+            disabled={saving}
+            className="border border-hairline-strong px-5 py-2.5 text-sm text-error transition-colors duration-150 hover:border-error disabled:opacity-50"
+          >
+            Cancelar lançamento
+          </button>
         )}
         <button
           type="button"

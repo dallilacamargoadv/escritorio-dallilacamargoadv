@@ -6,6 +6,7 @@ import type { FrenteTipo, FrenteStatus } from "@/lib/db-frentes";
 import type { FinanceiroStatus } from "@/lib/db-financeiro";
 import type { NotificacaoTipo } from "@/lib/db-notificacoes";
 import type { PrazoTipo, PrazoStatus } from "@/lib/db-prazos";
+import type { DespesaStatus, DespesaRecorrencia } from "@/lib/db-despesas";
 
 export const FORM_TYPE_LABELS: Record<string, string> = {
   contratos: "Contratos Digitais",
@@ -132,6 +133,33 @@ export const FRENTE_STATUS_COLORS: Record<FrenteStatus, string> = {
 export const FINANCEIRO_STATUS_LABELS: Record<FinanceiroStatus, string> = {
   pendente: "Pendente",
   pago: "Pago",
+  cancelado: "Cancelado",
+};
+
+export const FINANCEIRO_STATUS_COLORS: Record<FinanceiroStatus, string> = {
+  pendente: "text-gold border-gold",
+  pago: "text-success border-success",
+  cancelado: "text-ink-dim border-hairline-strong",
+};
+
+export const DESPESA_STATUS_LABELS: Record<DespesaStatus, string> = {
+  a_pagar: "A pagar",
+  pago: "Pago",
+  cancelado: "Cancelado",
+};
+
+export const DESPESA_STATUS_COLORS: Record<DespesaStatus, string> = {
+  a_pagar: "text-gold border-gold",
+  pago: "text-success border-success",
+  cancelado: "text-ink-dim border-hairline-strong",
+};
+
+export const DESPESA_RECORRENCIA_LABELS: Record<DespesaRecorrencia, string> = {
+  nenhuma: "Não recorrente",
+  mensal: "Mensal",
+  trimestral: "Trimestral",
+  semestral: "Semestral",
+  anual: "Anual",
 };
 
 export const NOTIFICACAO_TIPO_LABELS: Record<NotificacaoTipo, string> = {
