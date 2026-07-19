@@ -11,6 +11,7 @@ const csp = `
   font-src 'self' data:;
   connect-src 'self' ${supabaseUrl};
   frame-src 'self' https://docs.google.com https://www.youtube.com;
+  manifest-src 'self';
   object-src 'none';
   base-uri 'self';
   form-action 'self';

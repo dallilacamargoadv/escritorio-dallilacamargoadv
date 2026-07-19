@@ -23,6 +23,7 @@ import {
 import { Logo } from "@/components/ui/Logo";
 import { createClient } from "@/lib/supabase/client";
 import { JuridicoAreaSubnav } from "@/components/admin/JuridicoAreaSubnav";
+import { InstallAppButton } from "@/components/admin/InstallAppButton";
 
 export function AdminSidebar({
   newLeadsCount,
@@ -154,13 +155,16 @@ export function AdminSidebar({
         ))}
       </nav>
 
-      <button
-        type="button"
-        onClick={handleLogout}
-        className="flex items-center gap-2 border border-hairline-strong px-3 py-2.5 text-xs text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold"
-      >
-        <LogOut size={14} /> Sair
-      </button>
+      <div className="flex flex-col gap-2">
+        <InstallAppButton />
+        <button
+          type="button"
+          onClick={handleLogout}
+          className="flex items-center gap-2 border border-hairline-strong px-3 py-2.5 text-xs text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold"
+        >
+          <LogOut size={14} /> Sair
+        </button>
+      </div>
     </aside>
   );
 }
