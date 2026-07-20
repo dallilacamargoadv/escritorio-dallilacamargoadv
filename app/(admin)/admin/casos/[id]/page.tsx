@@ -3,8 +3,10 @@ import { getCasoById } from "@/lib/db-casos";
 import { getContratoById } from "@/lib/db-contratos";
 import { getClienteById } from "@/lib/db-clientes";
 import { getAllFrentes } from "@/lib/db-frentes";
+import { getDocumentosByCaso } from "@/lib/db-documentos";
 import { CasoForm, type ContratoOption } from "@/components/admin/CasoForm";
 import { CasoFrentes } from "@/components/admin/CasoFrentes";
+import { CasoDocumentos } from "@/components/admin/CasoDocumentos";
 import { CONTRATO_TIPO_LABELS } from "@/lib/admin-labels";
 
 export default async function CasoDetailPage(
@@ -15,6 +17,7 @@ export default async function CasoDetailPage(
   let caso;
   let contratoFixo: ContratoOption | undefined;
   let frentes;
+  let documentos;
   try {
     caso = await getCasoById(id);
     if (caso) {
@@ -29,6 +32,7 @@ export default async function CasoDetailPage(
           }
         : undefined;
       frentes = await getAllFrentes(caso.id);
+      documentos = await getDocumentosByCaso(caso.id);
     }
   } catch {
     redirect("/login");
@@ -40,6 +44,7 @@ export default async function CasoDetailPage(
     <>
       <CasoForm caso={caso} contratoFixo={contratoFixo} />
       <CasoFrentes casoId={caso.id} initialFrentes={frentes ?? []} />
+      <CasoDocumentos casoId={caso.id} initialDocumentos={documentos ?? []} />
     </>
   );
 }
