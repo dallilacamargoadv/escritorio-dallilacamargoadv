@@ -58,6 +58,28 @@ export function AtividadesAdminList({
     await fetch(`/api/admin/atividades/${atividade.id}`, { method: "DELETE" });
   }
 
+  async function handleToggleConcluido(atividade: AtividadeRow) {
+    const novoStatus = atividade.status === "concluido" ? "pendente" : "concluido";
+    setAtividades((prev) =>
+      prev.map((a) => (a.id === atividade.id ? { ...a, status: novoStatus } : a)),
+    );
+    await fetch(`/api/admin/atividades/${atividade.id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        tipo: atividade.tipo,
+        titulo: atividade.titulo,
+        data: atividade.data,
+        hora: atividade.hora,
+        caso_frente_id: atividade.caso_frente_id,
+        caso_id: atividade.caso_id,
+        cliente_id: atividade.cliente_id,
+        status: novoStatus,
+        visivel_cliente: atividade.visivel_cliente,
+      }),
+    });
+  }
+
   const filtered = useMemo(() => {
     const resolved = resolveDateRange(range);
     return atividades.filter((atividade) => {
@@ -222,6 +244,7 @@ export function AtividadesAdminList({
           <table className="w-full text-left text-sm">
             <thead>
               <tr className="border-b border-hairline font-eyebrow text-[10px] text-ink-dim">
+                <th className="w-8 px-4 py-3" />
                 <th className="px-4 py-3">Título</th>
                 <th className="px-4 py-3">Tipo</th>
                 <th className="px-4 py-3">Vinculado a</th>
@@ -234,12 +257,27 @@ export function AtividadesAdminList({
             <tbody>
               {filtered.map((atividade) => {
                 const atrasada = isAtividadeAtrasada(atividade);
+                const concluida = atividade.status === "concluido";
                 return (
                   <tr key={atividade.id} className="border-b border-hairline">
+                    <td className="px-4 py-3">
+                      <input
+                        type="checkbox"
+                        checked={concluida}
+                        onChange={() => handleToggleConcluido(atividade)}
+                        aria-label={
+                          concluida
+                            ? `Reabrir "${atividade.titulo}"`
+                            : `Marcar "${atividade.titulo}" como concluída`
+                        }
+                        disabled={atividade.status === "cancelado"}
+                        className="h-4 w-4 accent-gold disabled:opacity-40"
+                      />
+                    </td>
                     <td className="px-4 py-3 text-ink">
                       <Link
                         href={`/admin/atividades/${atividade.id}`}
-                        className="transition-colors duration-150 hover:text-gold"
+                        className={`transition-colors duration-150 hover:text-gold ${concluida ? "line-through text-ink-dim" : ""}`}
                       >
                         {atividade.titulo}
                       </Link>
@@ -277,7 +315,7 @@ export function AtividadesAdminList({
               })}
               {filtered.length === 0 && (
                 <tr>
-                  <td colSpan={7} className="px-4 py-10 text-center text-sm text-ink-dim">
+                  <td colSpan={8} className="px-4 py-10 text-center text-sm text-ink-dim">
                     Nenhuma atividade encontrada.
                   </td>
                 </tr>
