@@ -3,9 +3,14 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import type { Caso, CasoStatus } from "@/lib/db-casos";
+import type { Caso, CasoStatus, CasoPrioridade } from "@/lib/db-casos";
 import type { LeadFormType } from "@/lib/db-leads";
-import { CASO_STATUS_LABELS, FORM_TYPE_LABELS } from "@/lib/admin-labels";
+import {
+  CASO_STATUS_LABELS,
+  CASO_PRIORIDADE_LABELS,
+  CASO_PRIORIDADE_COLORS,
+  FORM_TYPE_LABELS,
+} from "@/lib/admin-labels";
 
 export interface ContratoOption {
   id: string;
@@ -28,6 +33,14 @@ export function CasoForm({
   const [area, setArea] = useState<LeadFormType | "">(caso?.area ?? "");
   const [titulo, setTitulo] = useState(caso?.titulo ?? "");
   const [status, setStatus] = useState<CasoStatus>(caso?.status ?? "aberto");
+  const [prioridade, setPrioridade] = useState<CasoPrioridade>(
+    caso?.prioridade ?? "media",
+  );
+  const [slaHoras, setSlaHoras] = useState(
+    caso?.sla_horas != null ? String(caso.sla_horas) : "",
+  );
+  const [categoria, setCategoria] = useState(caso?.categoria ?? "");
+  const [responsavel, setResponsavel] = useState(caso?.responsavel ?? "");
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
 
@@ -49,7 +62,16 @@ export function CasoForm({
       const res = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ contrato_id: contratoId, area, titulo, status }),
+        body: JSON.stringify({
+          contrato_id: contratoId,
+          area,
+          titulo,
+          status,
+          prioridade,
+          sla_horas: slaHoras.trim() ? Number(slaHoras) : null,
+          categoria: categoria.trim() || null,
+          responsavel: responsavel.trim() || null,
+        }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Erro ao salvar");
@@ -162,6 +184,71 @@ export function CasoForm({
               </option>
             ))}
           </select>
+        </div>
+
+        <div>
+          <label className="font-eyebrow text-[10px] text-ink-dim">
+            Prioridade
+          </label>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {(Object.keys(CASO_PRIORIDADE_LABELS) as CasoPrioridade[]).map(
+              (p) => (
+                <button
+                  key={p}
+                  type="button"
+                  onClick={() => setPrioridade(p)}
+                  className={`border px-3 py-1.5 font-mono text-[11px] uppercase tracking-wide transition-colors duration-150 ${
+                    prioridade === p
+                      ? CASO_PRIORIDADE_COLORS[p]
+                      : "border-hairline-strong text-ink-dim hover:border-gold hover:text-gold"
+                  }`}
+                >
+                  {CASO_PRIORIDADE_LABELS[p]}
+                </button>
+              ),
+            )}
+          </div>
+        </div>
+
+        <div className="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label className="font-eyebrow text-[10px] text-ink-dim">
+              SLA — prazo pra próxima ação (horas)
+            </label>
+            <input
+              type="number"
+              min={0}
+              value={slaHoras}
+              onChange={(e) => setSlaHoras(e.target.value)}
+              placeholder="ex.: 48"
+              className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
+            />
+          </div>
+          <div>
+            <label className="font-eyebrow text-[10px] text-ink-dim">
+              Responsável
+            </label>
+            <input
+              type="text"
+              value={responsavel}
+              onChange={(e) => setResponsavel(e.target.value)}
+              placeholder="ex.: Dallila Camargo"
+              className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label className="font-eyebrow text-[10px] text-ink-dim">
+            Categoria
+          </label>
+          <input
+            type="text"
+            value={categoria}
+            onChange={(e) => setCategoria(e.target.value)}
+            placeholder="ex.: Revisão de Termos de Uso"
+            className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
+          />
         </div>
 
         {error && (

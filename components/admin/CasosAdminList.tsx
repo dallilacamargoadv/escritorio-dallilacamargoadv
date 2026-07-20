@@ -3,7 +3,13 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { Caso, CasoStatus } from "@/lib/db-casos";
-import { CASO_STATUS_LABELS, CASO_STATUS_COLORS, FORM_TYPE_LABELS } from "@/lib/admin-labels";
+import {
+  CASO_STATUS_LABELS,
+  CASO_STATUS_COLORS,
+  CASO_PRIORIDADE_LABELS,
+  CASO_PRIORIDADE_COLORS,
+  FORM_TYPE_LABELS,
+} from "@/lib/admin-labels";
 import { formatDate } from "@/lib/format";
 import { AreaFilterPills } from "@/components/admin/AreaFilterPills";
 import { DateRangeFilter } from "@/components/admin/DateRangeFilter";
@@ -78,6 +84,7 @@ export function CasosAdminList({
               <th className="px-4 py-3">Título</th>
               <th className="px-4 py-3">Cliente</th>
               <th className="px-4 py-3">Área</th>
+              <th className="px-4 py-3">Prioridade</th>
               <th className="px-4 py-3">Status</th>
               <th className="px-4 py-3">Aberto em</th>
             </tr>
@@ -99,6 +106,13 @@ export function CasosAdminList({
                 </td>
                 <td className="px-4 py-3">
                   <span
+                    className={`border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide ${CASO_PRIORIDADE_COLORS[caso.prioridade]}`}
+                  >
+                    {CASO_PRIORIDADE_LABELS[caso.prioridade]}
+                  </span>
+                </td>
+                <td className="px-4 py-3">
+                  <span
                     className={`border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide ${CASO_STATUS_COLORS[caso.status]}`}
                   >
                     {CASO_STATUS_LABELS[caso.status]}
@@ -111,7 +125,7 @@ export function CasosAdminList({
             ))}
             {filtered.length === 0 && (
               <tr>
-                <td colSpan={5} className="px-4 py-10 text-center text-sm text-ink-dim">
+                <td colSpan={6} className="px-4 py-10 text-center text-sm text-ink-dim">
                   Nenhum caso encontrado.
                 </td>
               </tr>

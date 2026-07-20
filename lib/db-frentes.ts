@@ -13,6 +13,19 @@ export interface Frente {
   aberta_em: string;
   encerrada_em: string | null;
   visivel_cliente: boolean;
+  tribunal: string | null;
+  vara: string | null;
+  comarca: string | null;
+  classe_processual: string | null;
+  assunto: string | null;
+  polo_ativo: string | null;
+  polo_passivo: string | null;
+  valor_causa: number | null;
+  data_distribuicao: string | null;
+  ultima_movimentacao: string | null;
+  ultima_movimentacao_em: string | null;
+  etiquetas: string[];
+  segredo_justica: boolean;
 }
 
 export interface FrenteInput {
@@ -20,6 +33,19 @@ export interface FrenteInput {
   orgao: string;
   numero_processo: string;
   status: FrenteStatus;
+  tribunal: string | null;
+  vara: string | null;
+  comarca: string | null;
+  classe_processual: string | null;
+  assunto: string | null;
+  polo_ativo: string | null;
+  polo_passivo: string | null;
+  valor_causa: number | null;
+  data_distribuicao: string | null;
+  ultima_movimentacao: string | null;
+  ultima_movimentacao_em: string | null;
+  etiquetas: string[];
+  segredo_justica: boolean;
 }
 
 export async function getAllFrentes(casoId?: string): Promise<Frente[]> {
@@ -51,6 +77,19 @@ export async function createFrente(
       orgao: input.orgao,
       numero_processo: input.numero_processo,
       status: input.status,
+      tribunal: input.tribunal,
+      vara: input.vara,
+      comarca: input.comarca,
+      classe_processual: input.classe_processual,
+      assunto: input.assunto,
+      polo_ativo: input.polo_ativo,
+      polo_passivo: input.polo_passivo,
+      valor_causa: input.valor_causa,
+      data_distribuicao: input.data_distribuicao,
+      ultima_movimentacao: input.ultima_movimentacao,
+      ultima_movimentacao_em: input.ultima_movimentacao_em,
+      etiquetas: input.etiquetas,
+      segredo_justica: input.segredo_justica,
     })
     .select()
     .single();
@@ -69,6 +108,19 @@ export async function updateFrente(
     orgao: input.orgao,
     numero_processo: input.numero_processo,
     status: input.status,
+    tribunal: input.tribunal,
+    vara: input.vara,
+    comarca: input.comarca,
+    classe_processual: input.classe_processual,
+    assunto: input.assunto,
+    polo_ativo: input.polo_ativo,
+    polo_passivo: input.polo_passivo,
+    valor_causa: input.valor_causa,
+    data_distribuicao: input.data_distribuicao,
+    ultima_movimentacao: input.ultima_movimentacao,
+    ultima_movimentacao_em: input.ultima_movimentacao_em,
+    etiquetas: input.etiquetas,
+    segredo_justica: input.segredo_justica,
   };
 
   if (input.status === "concluida" || input.status === "arquivada") {

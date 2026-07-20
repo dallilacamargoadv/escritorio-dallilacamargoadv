@@ -8,6 +8,8 @@ export type CasoStatus =
   | "concluido"
   | "arquivado";
 
+export type CasoPrioridade = "baixa" | "media" | "alta" | "urgente";
+
 export interface Caso {
   id: string;
   contrato_id: string;
@@ -16,6 +18,10 @@ export interface Caso {
   status: CasoStatus;
   aberto_em: string;
   encerrado_em: string | null;
+  prioridade: CasoPrioridade;
+  sla_horas: number | null;
+  categoria: string | null;
+  responsavel: string | null;
 }
 
 export interface CasoInput {
@@ -23,6 +29,10 @@ export interface CasoInput {
   area: LeadFormType;
   titulo: string;
   status: CasoStatus;
+  prioridade: CasoPrioridade;
+  sla_horas: number | null;
+  categoria: string | null;
+  responsavel: string | null;
 }
 
 export async function getAllCasos(contratoId?: string): Promise<Caso[]> {
@@ -74,6 +84,10 @@ export async function createCaso(input: CasoInput): Promise<Caso> {
       area: input.area,
       titulo: input.titulo,
       status: input.status,
+      prioridade: input.prioridade,
+      sla_horas: input.sla_horas,
+      categoria: input.categoria,
+      responsavel: input.responsavel,
     })
     .select()
     .single();
@@ -88,6 +102,10 @@ export async function updateCaso(id: string, input: CasoInput): Promise<Caso> {
     area: input.area,
     titulo: input.titulo,
     status: input.status,
+    prioridade: input.prioridade,
+    sla_horas: input.sla_horas,
+    categoria: input.categoria,
+    responsavel: input.responsavel,
   };
 
   if (input.status === "concluido" || input.status === "arquivado") {

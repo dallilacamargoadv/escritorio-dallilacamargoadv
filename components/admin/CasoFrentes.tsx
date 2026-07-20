@@ -1,13 +1,253 @@
 "use client";
 
 import { useState } from "react";
-import { Eye, EyeOff } from "lucide-react";
-import type { Frente, FrenteStatus, FrenteTipo } from "@/lib/db-frentes";
+import { Eye, EyeOff, Search, Lock } from "lucide-react";
+import type { Frente, FrenteInput, FrenteStatus, FrenteTipo } from "@/lib/db-frentes";
 import {
   FRENTE_STATUS_COLORS,
   FRENTE_STATUS_LABELS,
   FRENTE_TIPO_LABELS,
 } from "@/lib/admin-labels";
+
+function comunicaPjeUrl(numeroProcesso: string): string {
+  const digits = numeroProcesso.replace(/\D/g, "");
+  return `https://comunica.pje.jus.br/consulta?numeroProcesso=${digits}`;
+}
+
+interface FrenteFormState {
+  tipo: FrenteTipo;
+  orgao: string;
+  numeroProcesso: string;
+  tribunal: string;
+  vara: string;
+  comarca: string;
+  classeProcessual: string;
+  assunto: string;
+  poloAtivo: string;
+  poloPassivo: string;
+  valorCausa: string;
+  dataDistribuicao: string;
+  ultimaMovimentacao: string;
+  ultimaMovimentacaoEm: string;
+  etiquetas: string;
+  segredoJustica: boolean;
+}
+
+const EMPTY_FORM: FrenteFormState = {
+  tipo: "extrajudicial",
+  orgao: "",
+  numeroProcesso: "",
+  tribunal: "",
+  vara: "",
+  comarca: "",
+  classeProcessual: "",
+  assunto: "",
+  poloAtivo: "",
+  poloPassivo: "",
+  valorCausa: "",
+  dataDistribuicao: "",
+  ultimaMovimentacao: "",
+  ultimaMovimentacaoEm: "",
+  etiquetas: "",
+  segredoJustica: false,
+};
+
+function toFrenteInput(form: FrenteFormState, status: FrenteStatus): FrenteInput {
+  return {
+    tipo: form.tipo,
+    orgao: form.orgao,
+    numero_processo: form.numeroProcesso,
+    status,
+    tribunal: form.tribunal.trim() || null,
+    vara: form.vara.trim() || null,
+    comarca: form.comarca.trim() || null,
+    classe_processual: form.classeProcessual.trim() || null,
+    assunto: form.assunto.trim() || null,
+    polo_ativo: form.poloAtivo.trim() || null,
+    polo_passivo: form.poloPassivo.trim() || null,
+    valor_causa: form.valorCausa.trim() ? Number(form.valorCausa) : null,
+    data_distribuicao: form.dataDistribuicao.trim() || null,
+    ultima_movimentacao: form.ultimaMovimentacao.trim() || null,
+    ultima_movimentacao_em: form.ultimaMovimentacaoEm.trim() || null,
+    etiquetas: form.etiquetas
+      .split(",")
+      .map((t) => t.trim())
+      .filter(Boolean),
+    segredo_justica: form.segredoJustica,
+  };
+}
+
+const inputClass =
+  "mt-2 w-full border border-hairline-strong bg-bg px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold";
+const labelClass = "font-eyebrow text-[10px] text-ink-dim";
+
+function CamposProcessuais({
+  form,
+  onChange,
+}: {
+  form: FrenteFormState;
+  onChange: (patch: Partial<FrenteFormState>) => void;
+}) {
+  return (
+    <div className="space-y-3 border-t border-hairline pt-3">
+      <div className="flex items-center justify-between gap-3">
+        <label className={labelClass}>Número do processo</label>
+        {form.numeroProcesso.replace(/\D/g, "") && (
+          <a
+            href={comunicaPjeUrl(form.numeroProcesso)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-[11px] text-gold transition-colors duration-150 hover:text-gold-bright"
+          >
+            <Search size={12} /> Consultar no Comunica PJe
+          </a>
+        )}
+      </div>
+      <input
+        type="text"
+        value={form.numeroProcesso}
+        onChange={(e) => onChange({ numeroProcesso: e.target.value })}
+        placeholder="0000000-00.0000.0.00.0000"
+        className="w-full border border-hairline-strong bg-bg px-3 py-2 font-mono text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
+      />
+
+      <label className="flex items-center gap-2 pt-1 text-xs text-ink-dim">
+        <input
+          type="checkbox"
+          checked={form.segredoJustica}
+          onChange={(e) => onChange({ segredoJustica: e.target.checked })}
+        />
+        Segredo de Justiça
+      </label>
+
+      <div className="grid gap-3 sm:grid-cols-2">
+        <div>
+          <label className={labelClass}>Tribunal</label>
+          <input
+            type="text"
+            value={form.tribunal}
+            onChange={(e) => onChange({ tribunal: e.target.value })}
+            placeholder="ex.: TJPA"
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label className={labelClass}>Vara</label>
+          <input
+            type="text"
+            value={form.vara}
+            onChange={(e) => onChange({ vara: e.target.value })}
+            placeholder="ex.: 3ª Vara Cível"
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label className={labelClass}>Comarca</label>
+          <input
+            type="text"
+            value={form.comarca}
+            onChange={(e) => onChange({ comarca: e.target.value })}
+            placeholder="ex.: Redenção/PA"
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label className={labelClass}>Classe processual</label>
+          <input
+            type="text"
+            value={form.classeProcessual}
+            onChange={(e) => onChange({ classeProcessual: e.target.value })}
+            className={inputClass}
+          />
+        </div>
+      </div>
+
+      <div>
+        <label className={labelClass}>Assunto</label>
+        <input
+          type="text"
+          value={form.assunto}
+          onChange={(e) => onChange({ assunto: e.target.value })}
+          className={inputClass}
+        />
+      </div>
+
+      <div className="grid gap-3 sm:grid-cols-2">
+        <div>
+          <label className={labelClass}>Polo ativo</label>
+          <input
+            type="text"
+            value={form.poloAtivo}
+            onChange={(e) => onChange({ poloAtivo: e.target.value })}
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label className={labelClass}>Polo passivo</label>
+          <input
+            type="text"
+            value={form.poloPassivo}
+            onChange={(e) => onChange({ poloPassivo: e.target.value })}
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label className={labelClass}>Valor da causa</label>
+          <input
+            type="number"
+            min={0}
+            step="0.01"
+            value={form.valorCausa}
+            onChange={(e) => onChange({ valorCausa: e.target.value })}
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label className={labelClass}>Data de distribuição</label>
+          <input
+            type="date"
+            value={form.dataDistribuicao}
+            onChange={(e) => onChange({ dataDistribuicao: e.target.value })}
+            className={inputClass}
+          />
+        </div>
+      </div>
+
+      <div className="grid gap-3 sm:grid-cols-[1fr_auto]">
+        <div>
+          <label className={labelClass}>Última movimentação</label>
+          <input
+            type="text"
+            value={form.ultimaMovimentacao}
+            onChange={(e) => onChange({ ultimaMovimentacao: e.target.value })}
+            placeholder='ex.: "Audiência de conciliação designada"'
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label className={labelClass}>Data</label>
+          <input
+            type="date"
+            value={form.ultimaMovimentacaoEm}
+            onChange={(e) => onChange({ ultimaMovimentacaoEm: e.target.value })}
+            className={inputClass}
+          />
+        </div>
+      </div>
+
+      <div>
+        <label className={labelClass}>Etiquetas (separadas por vírgula)</label>
+        <input
+          type="text"
+          value={form.etiquetas}
+          onChange={(e) => onChange({ etiquetas: e.target.value })}
+          placeholder="consumidor, urgente-cliente-vip, recurso"
+          className={inputClass}
+        />
+      </div>
+    </div>
+  );
+}
 
 export function CasoFrentes({
   casoId,
@@ -18,12 +258,14 @@ export function CasoFrentes({
 }) {
   const [frentes, setFrentes] = useState(initialFrentes);
   const [showForm, setShowForm] = useState(false);
-  const [tipo, setTipo] = useState<FrenteTipo>("extrajudicial");
-  const [orgao, setOrgao] = useState("");
-  const [numeroProcesso, setNumeroProcesso] = useState("");
+  const [form, setForm] = useState<FrenteFormState>(EMPTY_FORM);
   const [saving, setSaving] = useState(false);
   const [statusSavingId, setStatusSavingId] = useState<string | null>(null);
   const [visibilidadeSavingId, setVisibilidadeSavingId] = useState<string | null>(null);
+
+  function patchForm(patch: Partial<FrenteFormState>) {
+    setForm((prev) => ({ ...prev, ...patch }));
+  }
 
   async function handleAddFrente() {
     setSaving(true);
@@ -31,18 +273,12 @@ export function CasoFrentes({
       const res = await fetch(`/api/admin/casos/${casoId}/frentes`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          tipo,
-          orgao,
-          numero_processo: numeroProcesso,
-          status: "aberta",
-        }),
+        body: JSON.stringify(toFrenteInput(form, "aberta")),
       });
       const data = await res.json();
       if (res.ok && data.frente) {
         setFrentes((prev) => [data.frente, ...prev]);
-        setOrgao("");
-        setNumeroProcesso("");
+        setForm(EMPTY_FORM);
         setShowForm(false);
       }
     } finally {
@@ -63,6 +299,19 @@ export function CasoFrentes({
             orgao: frente.orgao,
             numero_processo: frente.numero_processo,
             status,
+            tribunal: frente.tribunal,
+            vara: frente.vara,
+            comarca: frente.comarca,
+            classe_processual: frente.classe_processual,
+            assunto: frente.assunto,
+            polo_ativo: frente.polo_ativo,
+            polo_passivo: frente.polo_passivo,
+            valor_causa: frente.valor_causa,
+            data_distribuicao: frente.data_distribuicao,
+            ultima_movimentacao: frente.ultima_movimentacao,
+            ultima_movimentacao_em: frente.ultima_movimentacao_em,
+            etiquetas: frente.etiquetas,
+            segredo_justica: frente.segredo_justica,
           }),
         },
       );
@@ -118,10 +367,10 @@ export function CasoFrentes({
       {showForm && (
         <div className="mt-3 space-y-3 border border-hairline-strong bg-surface p-4">
           <div>
-            <label className="font-eyebrow text-[10px] text-ink-dim">Tipo</label>
+            <label className={labelClass}>Tipo</label>
             <select
-              value={tipo}
-              onChange={(e) => setTipo(e.target.value as FrenteTipo)}
+              value={form.tipo}
+              onChange={(e) => patchForm({ tipo: e.target.value as FrenteTipo })}
               className="mt-2 w-full border border-hairline-strong bg-bg px-3 py-2 text-sm text-ink"
             >
               {(Object.keys(FRENTE_TIPO_LABELS) as FrenteTipo[]).map((t) => (
@@ -132,28 +381,30 @@ export function CasoFrentes({
             </select>
           </div>
           <div>
-            <label className="font-eyebrow text-[10px] text-ink-dim">
-              Órgão / Tribunal
-            </label>
+            <label className={labelClass}>Órgão / Tribunal</label>
             <input
               type="text"
-              value={orgao}
-              onChange={(e) => setOrgao(e.target.value)}
+              value={form.orgao}
+              onChange={(e) => patchForm({ orgao: e.target.value })}
               placeholder="INPI, TJPA, TRF1..."
-              className="mt-2 w-full border border-hairline-strong bg-bg px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
+              className={inputClass}
             />
           </div>
-          <div>
-            <label className="font-eyebrow text-[10px] text-ink-dim">
-              Número do processo
-            </label>
-            <input
-              type="text"
-              value={numeroProcesso}
-              onChange={(e) => setNumeroProcesso(e.target.value)}
-              className="mt-2 w-full border border-hairline-strong bg-bg px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
-            />
-          </div>
+
+          {form.tipo === "judicial" ? (
+            <CamposProcessuais form={form} onChange={patchForm} />
+          ) : (
+            <div>
+              <label className={labelClass}>Número do processo</label>
+              <input
+                type="text"
+                value={form.numeroProcesso}
+                onChange={(e) => patchForm({ numeroProcesso: e.target.value })}
+                className={inputClass}
+              />
+            </div>
+          )}
+
           <button
             type="button"
             onClick={handleAddFrente}
@@ -179,13 +430,29 @@ export function CasoFrentes({
             }`}
           >
             <div className="min-w-0">
-              <p className="text-ink">
+              <p className="flex flex-wrap items-center gap-2 text-ink">
                 {FRENTE_TIPO_LABELS[frente.tipo]}
                 {frente.orgao ? ` — ${frente.orgao}` : ""}
+                {frente.segredo_justica && (
+                  <span className="flex items-center gap-1 border border-warning px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wide text-warning">
+                    <Lock size={10} /> Segredo de Justiça
+                  </span>
+                )}
               </p>
               {frente.numero_processo && (
-                <p className="font-mono text-xs text-ink-dim">
+                <p className="flex items-center gap-2 font-mono text-xs text-ink-dim">
                   {frente.numero_processo}
+                  {frente.tipo === "judicial" && (
+                    <a
+                      href={comunicaPjeUrl(frente.numero_processo)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Consultar no Comunica PJe"
+                      className="text-gold transition-colors duration-150 hover:text-gold-bright"
+                    >
+                      <Search size={11} />
+                    </a>
+                  )}
                 </p>
               )}
             </div>

@@ -1,6 +1,6 @@
 # Handoff — Site institucional + Sistema Operacional Jurídico, Dallila Camargo I Advocacia
 
-> Documento de continuidade de sessão. Cole este arquivo (ou peça para o Claude ler `HANDOFF.md` na raiz do projeto) no início de uma nova conversa para retomar exatamente de onde paramos, sem precisar reprocessar todo o histórico anterior. **Atualizado em 2026-07-20**, ao final de uma sessão muito longa que cobriu PWA e o início de um roadmap grande de CRM jurídico — o texto abaixo é o estado atual, não uma narrativa cronológica completa (essa fica resumida na seção 9, se precisar).
+> Documento de continuidade de sessão. Cole este arquivo (ou peça para o Claude ler `HANDOFF.md` na raiz do projeto) no início de uma nova conversa para retomar exatamente de onde paramos, sem precisar reprocessar todo o histórico anterior. **Atualizado em 2026-07-20**, ao final de uma sessão que implementou a Onda 3 do roadmap de CRM jurídico (Serviços enriquecidos) — o texto abaixo é o estado atual, não uma narrativa cronológica completa (essa fica resumida na seção 9, se precisar).
 
 ## 1. Quem é a cliente e o que é o projeto
 
@@ -48,8 +48,10 @@ Ver `app/globals.css` para os tokens completos.
                                     ver seção 8.5 onda 2
 /admin/clientes, /novo, /[id], /[id]/editar
 /admin/casos, /novo, /[id]         + frentes (judicial/extrajudicial/administrativo), filtro de
-                                    período, cada frente com toggle "visível pro cliente", NOVO:
-                                    seção de documentos anexados (ver seção 8.5 onda 1)
+                                    período, cada frente com toggle "visível pro cliente",
+                                    documentos anexados (onda 1), campos processuais completos +
+                                    prioridade/SLA/categoria/responsável + segredo de justiça +
+                                    consulta ao Comunica PJe + Anamnese Jurídica (onda 3)
 /admin/casos/[id]/relatorio        Relatório interno do caso (print-first, tudo)
 /admin/casos/[id]/relatorio-cliente Relatório curado pro cliente (só o marcado como visível)
 /admin/relatorios                  Lista de casos com link direto pros dois relatórios
@@ -72,7 +74,7 @@ Ver `app/globals.css` para os tokens completos.
 - **Sistema**: Blog, Links, Notificações (badge = não lidas)
 - Rodapé da sidebar: botão **"Instalar app"** (só aparece quando aplicável — ver seção 8.4) + "Sair"
 
-**API routes** (`app/api/admin/*` e `app/api/cron/*`): `clientes`, `clientes/[id]`, `contratos`, `contratos/[id]`, `casos`, `casos/[id]`, `casos/[id]/frentes`, `casos/[id]/frentes/[frenteId]`, `casos/[id]/frentes/[frenteId]/visibilidade`, `financeiro`, `financeiro/[id]`, `financeiro/[id]/cancelar`, `despesas`, `despesas/[id]`, `despesa-categorias`, `despesa-categorias/[id]`, `despesa-categorias/[id]/subcategorias`, `despesa-categorias/[id]/subcategorias/[subId]`, `documentos`, `documentos/[id]`, `documentos/[id]/download` (NOVO, onda 1), `atividades`, `atividades/[id]` (RENOMEADO de `prazos`, onda 2), `link-grupos`, `link-grupos/[id]`, `links`, `links/[id]`, `links/metadata`, `notificacoes`, `notificacoes/[id]`, `leads` (POST cadastro manual), `leads/[id]/status`, `leads/[id]/notes`, `leads/export`, `cron/notificacoes`, `cron/leads-cadencia`.
+**API routes** (`app/api/admin/*` e `app/api/cron/*`): `clientes`, `clientes/[id]`, `contratos`, `contratos/[id]`, `casos`, `casos/[id]`, `casos/[id]/frentes`, `casos/[id]/frentes/[frenteId]`, `casos/[id]/frentes/[frenteId]/visibilidade`, `financeiro`, `financeiro/[id]`, `financeiro/[id]/cancelar`, `despesas`, `despesas/[id]`, `despesa-categorias`, `despesa-categorias/[id]`, `despesa-categorias/[id]/subcategorias`, `despesa-categorias/[id]/subcategorias/[subId]`, `documentos`, `documentos/[id]`, `documentos/[id]/download` (onda 1), `casos/[id]/historico` (NOVO, onda 3 — só GET/POST, sem rota de PATCH/DELETE de propósito), `atividades`, `atividades/[id]` (RENOMEADO de `prazos`, onda 2), `link-grupos`, `link-grupos/[id]`, `links`, `links/[id]`, `links/metadata`, `notificacoes`, `notificacoes/[id]`, `leads` (POST cadastro manual), `leads/[id]/status`, `leads/[id]/notes`, `leads/export`, `cron/notificacoes`, `cron/leads-cadencia`.
 
 **Arquivos PWA** (só afetam `/admin`, ver seção 8.4): `public/manifest-admin.webmanifest`, `public/sw-admin.js`, `public/icons/*.png`.
 
@@ -85,8 +87,9 @@ Ver `app/globals.css` para os tokens completos.
 - **`lead_notes`**: notas internas por lead.
 - **`clientes`**: `id, lead_id (nullable, FK leads), tipo_pessoa (pf|pj), nome_razao_social, documento, email, whatsapp, endereco (jsonb), area_origem (lead_form_type, nullable), created_at`.
 - **`contratos`**: `id, cliente_id (FK, restrict), tipo (projeto|recorrente), status (rascunho|enviado|assinado|encerrado|cancelado), valor, periodicidade (texto livre), assinado_em, created_at`.
-- **`casos`**: `id, contrato_id (FK, restrict — só existe caso com contrato assinado), area (lead_form_type), titulo, status (aberto|em_andamento|aguardando_cliente|concluido|arquivado), aberto_em, encerrado_em`. **Faltam** (pendente, seção 8.5 onda 3): `prioridade`, `sla_horas`, `categoria` própria, `responsavel`.
-- **`caso_frentes`**: `id, caso_id (FK, cascade), tipo (extrajudicial|judicial|administrativo), orgao, numero_processo, status (aberta|em_andamento|concluida|arquivada), aberta_em, encerrada_em, visivel_cliente (boolean, default true)`. **Faltam** os campos processuais completos pra frente judicial (tribunal, vara, comarca, classe_processual, assunto, polo_ativo, polo_passivo, valor_causa, data_distribuicao, ultima_movimentacao, etiquetas) — pendente, seção 8.5 onda 3.
+- **`casos`**: `id, contrato_id (FK, restrict — só existe caso com contrato assinado), area (lead_form_type), titulo, status (aberto|em_andamento|aguardando_cliente|concluido|arquivado), aberto_em, encerrado_em, prioridade (enum caso_prioridade: baixa|media|alta|urgente, default media, NOVO onda 3), sla_horas (int nullable, prazo em horas pra próxima ação, NOVO onda 3), categoria (text nullable, subcategoria livre dentro da área, NOVO onda 3), responsavel (text nullable, sem tabela de usuários — single user hoje, NOVO onda 3)`.
+- **`caso_frentes`**: `id, caso_id (FK, cascade), tipo (extrajudicial|judicial|administrativo), orgao, numero_processo, status (aberta|em_andamento|concluida|arquivada), aberta_em, encerrada_em, visivel_cliente (boolean, default true)`. **Onda 3 adicionou** (todos nullable, só preenchidos quando `tipo = judicial` — a UI só mostra a seção nesse caso): `tribunal, vara, comarca, classe_processual, assunto, polo_ativo, polo_passivo, valor_causa (numeric), data_distribuicao (date), ultima_movimentacao (text), ultima_movimentacao_em (date), etiquetas (text[], default '{}')`. Mais `segredo_justica (boolean, not null default false)` — vira só um selo visual (🔒) nas telas internas, **não esconde nada automaticamente** (decisão explícita da cliente — o que já é mostrado/escondido do cliente continua controlado só por `visivel_cliente`).
+- **`caso_historico`** (NOVA, onda 3 — "Anamnese Jurídica"): `id, caso_id (FK casos, cascade), texto (text), autor (text, default 'Dallila Camargo' — sem tabela de usuários), created_at`. **Append-only por design**: RLS só tem policy de `select` e `insert`, **sem `update`/`delete`** — imutabilidade garantida no próprio banco, não só escondida na UI. Na tela (`CasoAnamnese.tsx`), a entrada mais antiga de cada caso é rotulada "Anamnese" (computado por ordem cronológica, não é uma coluna `tipo`) e as seguintes "Atualização". Correção de erro entra como entrada nova, nunca edita a anterior — pedido explícito da cliente.
 - **`documentos`** (NOVA, onda 1 desta sessão): `id, caso_id (FK casos, cascade), nome_arquivo (text), storage_path (text), tamanho (int, bytes), tipo_mime (text), descricao (text, nullable), created_at`. RLS `authenticated`-only. Arquivo de verdade mora no **Supabase Storage, bucket `documentos`** (privado, `public: false`), path `casos/{caso_id}/{uuid}-{nome_arquivo}`. Download via signed URL (`createSignedUrl`, expira em 60s, gerada sob demanda pela API, nunca guardada). Upload limitado a 20MB. Essa é a **primeira e única tabela que usa Supabase Storage no projeto até agora** — qualquer feature futura que precise de arquivo (imagem de blog, anexo de etapa de fluxo) deve reaproveitar esse mesmo bucket com um novo prefixo de path, não criar bucket novo sem necessidade clara.
 - **`financeiro_lancamentos`**: `id, contrato_id (FK, restrict), cliente_id (FK, restrict), descricao, valor, vencimento, status (enum financeiro_status: pendente|pago|cancelado), pago_em, grupo_id`. "Atrasado" é **calculado na tela** (`lib/financeiro-utils.ts::isLancamentoAtrasado`), não é status guardado.
 - **`atividades`** (RENOMEADA de `prazos` nesta sessão, via `alter table prazos rename to atividades` — sem perda de dado): `id, tipo (enum atividade_tipo, renomeado de prazo_tipo: processual|compromisso|tarefa|documento_pendente|tarefa_delegada|checklist_diario — os 3 últimos NOVOS), titulo, data, hora (nullable), caso_frente_id/caso_id/cliente_id (3 FKs nullable, cascade), status (enum atividade_status, renomeado de prazo_status: pendente|concluido|cancelado), concluido_em, visivel_cliente (boolean, default true), created_at`. **Agora tem política de DELETE** (não tinha antes — só dava pra mudar status). Nos relatórios de caso (`CasoRelatorio.tsx`), a seção que lista essas atividades **continua rotulada "Prazos"** de propósito — é terminologia jurídica específica pra um relatório formal, decisão deliberada, não inconsistência.
@@ -140,13 +143,15 @@ Ver `app/globals.css` para os tokens completos.
 
 ## 7. Estado atual em produção
 
-**Tudo commitado, pushado e em produção (Vercel, `READY`)** até o commit `b640cfb`. Domínio próprio `dallilacamargoadv.com.br` confirmado ativo e servindo o deployment mais recente. Em ordem cronológica (sessões recentes):
+**Commitado/pushado/em produção (Vercel, `READY`)** até o commit `b640cfb`. Domínio próprio `dallilacamargoadv.com.br` confirmado ativo e servindo o deployment mais recente. Em ordem cronológica (sessões recentes):
 
 - Financeiro Fase 1 (`d82fb72`) e Fase 2 completa — Projeções (`ae11eec`), Análise financeira + categorias editáveis + sugestão automática (`10af2c6`).
 - HANDOFF.md consolidado (`d1b4243`).
 - **PWA do painel admin** (`82a0e85`) — ver seção 8.4.
 - **Onda 1 do roadmap de CRM jurídico: Storage + Documentos do caso** (`35d015f`) — ver seção 8.5.
 - **Onda 2: rename Prazos→Atividades + Central de Atividades + Kanban + Agenda + exclusão** (`b640cfb`) — ver seção 8.5.
+
+**⚠️ Pendente de commit**: a **Onda 3 (Serviços enriquecidos)** já está implementada e testada nesta sessão (migração aplicada no Supabase, código, eslint/build limpos), mas **ainda não foi commitada nem pushada** — faltava decidir com a cliente. Ver seção 8.5 pro detalhe completo do que foi feito.
 
 **Arquivo estranho, sem decisão**: `components/admin/AdminSidebar 2.tsx` (untracked, provável duplicata de conflito do iCloud Drive) — ainda sem decisão da cliente. Não mexer sem perguntar de novo. Achado também nesta sessão: `.git/refs/heads/main 2` (mesma família de arquivo duplicado do iCloud) — também não mexido, só registrado.
 
@@ -178,7 +183,7 @@ Sem pendência aberta nessa frente.
 **Antes de codar qualquer coisa**, foi feito um diagnóstico crítico completo (analisando o código de verdade, não supondo) e apresentado como documento — validou a intuição das 3 entidades (é o caminho certo, "Serviços" é evolução de `caso_frentes`, não substituição), e corrigiu duas percepções erradas da cliente: **o recibo de pagamento já existe** (`/admin/financeiro/[id]/recibo`) e **as respostas do lead/UTMs já aparecem** no modal de detalhe — os dois eram problema de descoberta, não ausência.
 
 **Decisões confirmadas pela cliente** (importante não re-perguntar):
-- **Integração de tribunal**: usar a opção gratuita — **DataJud (CNJ)**, não um serviço pago (Escavador/Judit/Codilo). Ainda não implementado (onda 8).
+- **Integração de tribunal**: usar a opção gratuita, mas **não o DataJud** — a cliente testou e prefere o **Comunica PJe** (CNJ), que traz informação mais completa. API pública confirmada nesta sessão: `https://comunicaapi.pje.jus.br/api/v1/comunicacao?numeroProcesso=<só dígitos>`, sem chave/autenticação, retorna JSON (`items[]` com `data_disponibilizacao`, `siglaTribunal`, `tipoComunicacao`, `nomeOrgao`, `texto` em HTML). Testado ao vivo com um processo real, funcionou. Ainda não implementado (onda 8) — quando for construído, usar essa API via cron (padrão igual aos crons existentes), não o DataJud.
 - **Financeiro pessoal**: **tabelas fisicamente separadas** das do escritório, nunca uma coluna `escopo` numa tabela só — ela foi explícita que não quer misturar de jeito nenhum, nem na Visão Geral. Ainda não implementado (onda 7).
 - **Portal do cliente (login)**: **fora de escopo por enquanto** — ela prefere continuar mandando relatório manualmente. Não incluir em nenhuma onda a menos que ela peça de novo.
 - **Minutas/templates de documento**: em vez de gerar documento automaticamente, ela só quer um **link pra uma pasta do Google Drive** (que ainda não existe) — hoje já dá pra fazer isso manualmente no Hub de Links (`/admin/links`, criar grupo "Minutas"); quando a onda 4 (motor de fluxo) for construída, adicionar um campo de link de minutas por categoria/template pra ficar contextual na tela do caso.
@@ -188,12 +193,12 @@ Sem pendência aberta nessa frente.
 
 1. ✅ **Storage** — fundação de arquivo, destrava blog/anexos futuros.
 2. ✅ **Atividades** — substitui Prazos, vira central operacional.
-3. ⏳ **Serviços enriquecidos** — campos judiciais completos + prioridade/SLA/categoria/responsável em `caso_frentes`. Próximo passo natural.
-4. ⏳ **Motor de fluxo** — etapas customizáveis por categoria (fluxo_templates/fluxo_etapas_template/servico_etapas + checklist/anexo/comentário por etapa), link de minutas, alerta de SLA por etapa, cobrança por hora. Depende da onda 3.
+3. ✅ **Serviços enriquecidos** — campos judiciais completos + prioridade/SLA/categoria/responsável em `casos`/`caso_frentes`, segredo de justiça, consulta ao Comunica PJe, Anamnese Jurídica. Ver seção abaixo.
+4. ⏳ **Motor de fluxo** — etapas customizáveis por categoria (fluxo_templates/fluxo_etapas_template/servico_etapas + checklist/anexo/comentário por etapa), link de minutas, alerta de SLA por etapa, cobrança por hora. Próximo passo natural agora que a onda 3 está pronta.
 5. ⏳ **Leads**: campo `origem` (site|instagram|linkedin|whatsapp|indicacao|organico|outro), Kanban separado pros canais fora do site (o de 17 colunas com cadência F1-F8 continua exclusivo pra `origem = site`), funil de vendas agregado.
 6. ⏳ **Blog rich-text + SEO + Configurações** — editor Tiptap (ou similar) no lugar do textarea, upload de imagem via o bucket `documentos` já existente, tela de meta title/description por página, hub de configurações unificado (hoje espalhado: categorias de despesa tem modal próprio, por exemplo).
 7. ⏳ **Financeiro pessoal** — tabelas espelhadas e separadas (ver decisão acima).
-8. ⏳ **Integração CNJ (DataJud)** — última onda, depende só de implementação (já com a decisão de usar a opção gratuita).
+8. ⏳ **Integração com Comunica PJe** — última onda, puxa movimentação automaticamente a partir do número do processo (a cliente decidiu trocar o DataJud pelo Comunica PJe nesta sessão — ver decisão acima e API confirmada). Depende só de implementação.
 
 #### Onda 1 — Storage e Documentos do caso (`35d015f`) — **CONCLUÍDA**
 
@@ -208,6 +213,19 @@ Bucket privado `documentos` no Supabase Storage (RLS `authenticated`-only) + tab
 - **Exclusão de atividade**: nova política de DELETE no banco (não existia), botão "excluir" na lista e na tela de edição.
 
 Tudo testado com dados variados (atrasada/hoje/vencendo/futura/concluída) direto no Supabase antes do commit, dados de teste sempre limpos depois.
+
+#### Onda 3 — Serviços enriquecidos (ainda não commitada) — **CONCLUÍDA**
+
+Migração `onda3_servicos_enriquecidos` aplicada no Supabase. Detalhes de schema na seção 5 (`casos`, `caso_frentes`, `caso_historico`).
+
+- **Prioridade/SLA/categoria/responsável em `casos`**: pills de prioridade (baixa/média/alta/urgente, cores via `CASO_PRIORIDADE_COLORS`) no `CasoForm.tsx`, coluna nova na lista (`CasosAdminList.tsx`).
+- **Campos processuais em `caso_frentes`**: `CasoFrentes.tsx` só mostra o bloco de campos judiciais (tribunal, vara, comarca, classe processual, assunto, polos, valor da causa, data de distribuição, última movimentação, etiquetas) quando `tipo === "judicial"` — mesmo princípio de "seção condicional" já usado em Onda 3 da Anamnese.
+- **Segredo de Justiça**: checkbox no formulário da frente, vira selo 🔒 na listagem. Só etiqueta visual, de propósito — não esconde nada automaticamente (decisão explícita da cliente, ver seção 8.5).
+- **Consulta ao Comunica PJe**: botão/link que abre `https://comunica.pje.jus.br/consulta?numeroProcesso=<número sem pontuação>` em nova aba — atalho manual, sem gravar nada de volta no sistema. Parâmetro de URL descoberto testando o site ao vivo nesta sessão (não documentado publicamente em lugar óbvio). Aparece tanto no formulário de nova frente quanto na listagem de frentes já salvas.
+- **Anamnese Jurídica** (`caso_historico`, `CasoAnamnese.tsx`): timeline append-only por caso — ver seção 5 pro detalhe de RLS sem update/delete. Primeira entrada = "Anamnese" (rótulo computado, não é coluna), demais = "Atualização". Sem botão de editar/excluir na UI de propósito.
+- **Onda 8 (fora de escopo desta sessão, só decisão registrada)**: cliente decidiu usar o **Comunica PJe** em vez do DataJud pra puxar movimentação automática — ver decisão + API confirmada na seção 8.5.
+
+Testado via SQL direto no Supabase (não deu pra testar clicando na UI — sessão não tinha as credenciais de login da cliente): criada uma cadeia completa cliente→contrato→caso→frente judicial→2 entradas de histórico, todos os campos novos gravaram e leram certo, cascade de exclusão (`caso_frentes`/`caso_historico` ao apagar `casos`) confirmado, política de RLS do `caso_historico` confirmada como só `select`+`insert`. Dados de teste todos limpos depois. `npx eslint .` e `npm run build` limpos. **Ainda falta**: testar clicando de verdade na UI (pedir pra cliente confirmar visualmente), e decidir se commita.
 
 ### 8.6 Domínio próprio conectado (fora do roadmap de ondas, resolvido em paralelo)
 
@@ -242,8 +260,8 @@ A cliente comprou `dallilacamargoadv.com.br` e pediu ajuda pra conectar na Verce
 ## 11. Como retomar
 
 1. Ler este arquivo primeiro (auto-suficiente).
-2. **Próximo passo mais provável**: continuar o roadmap de CRM jurídico pela **onda 3** (Serviços enriquecidos: campos judiciais + prioridade/SLA/categoria/responsável em `caso_frentes`) — mas **perguntar antes de presumir**, ela muda de prioridade com frequência e pode querer pular pra outra onda ou trazer algo novo.
-3. Se for continuar o roadmap: reler a seção 8.5 inteira antes de começar (tem as decisões já confirmadas — não re-perguntar sobre CNJ/financeiro pessoal/portal do cliente/minutas).
+2. **Próximo passo mais provável**: a Onda 3 está pronta e testada via SQL, mas **ainda não commitada** — perguntar se a cliente já conseguiu ver/testar clicando na UI e se pode commitar/pushar. Se sim, seguir pro commit (perguntando antes, como sempre) e depois perguntar se quer já engatar a **onda 4** (Motor de fluxo) ou pular pra outra coisa.
+3. Se for continuar o roadmap: reler a seção 8.5 inteira antes de começar (tem as decisões já confirmadas — não re-perguntar sobre financeiro pessoal/portal do cliente/minutas/fonte de integração de tribunal, que agora é Comunica PJe, não DataJud).
 4. Não tocar em `components/admin/AdminSidebar 2.tsx` nem `.git/refs/heads/main 2` (arquivos estranhos, sem decisão) nem em `HANDOFF.md`-adjacent sem perguntar.
 5. Verificação padrão antes de qualquer commit: `npx eslint .` + `npm run build` limpos + teste manual no browser com dado real no Supabase (sempre limpar depois).
 6. Ver seção 6 pras notas de teste via automação de browser (drag-and-drop, `onBlur`, inputs controlados, cache de console) antes de gastar tempo debugando algo que pode ser só limitação da ferramenta.

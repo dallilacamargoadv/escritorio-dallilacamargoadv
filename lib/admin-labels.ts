@@ -1,7 +1,7 @@
 import type { LeadStatus } from "@/lib/db-admin";
 import type { TipoPessoa } from "@/lib/db-clientes";
 import type { ContratoTipo, ContratoStatus } from "@/lib/db-contratos";
-import type { CasoStatus } from "@/lib/db-casos";
+import type { CasoStatus, CasoPrioridade } from "@/lib/db-casos";
 import type { FrenteTipo, FrenteStatus } from "@/lib/db-frentes";
 import type { FinanceiroStatus } from "@/lib/db-financeiro";
 import type { NotificacaoTipo } from "@/lib/db-notificacoes";
@@ -108,6 +108,20 @@ export const CASO_STATUS_COLORS: Record<CasoStatus, string> = {
   aguardando_cliente: "text-warning border-warning",
   concluido: "text-success border-success",
   arquivado: "text-ink-dim border-hairline-strong",
+};
+
+export const CASO_PRIORIDADE_LABELS: Record<CasoPrioridade, string> = {
+  baixa: "Baixa",
+  media: "Média",
+  alta: "Alta",
+  urgente: "Urgente",
+};
+
+export const CASO_PRIORIDADE_COLORS: Record<CasoPrioridade, string> = {
+  baixa: "text-success border-success",
+  media: "text-gold border-gold",
+  alta: "text-warning border-warning",
+  urgente: "text-error border-error",
 };
 
 export const FRENTE_TIPO_LABELS: Record<FrenteTipo, string> = {

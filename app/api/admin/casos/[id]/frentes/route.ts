@@ -4,6 +4,22 @@ import { createFrente, getAllFrentes, type FrenteInput } from "@/lib/db-frentes"
 const VALID_TIPOS = ["extrajudicial", "judicial", "administrativo"];
 const VALID_STATUSES = ["aberta", "em_andamento", "concluida", "arquivada"];
 
+function optionalText(value: unknown): string | null {
+  return typeof value === "string" && value.trim() ? value.trim() : null;
+}
+
+function optionalNumber(value: unknown): number | null {
+  return typeof value === "number" && Number.isFinite(value) ? value : null;
+}
+
+function optionalEtiquetas(value: unknown): string[] {
+  if (!Array.isArray(value)) return [];
+  return value
+    .filter((v): v is string => typeof v === "string")
+    .map((v) => v.trim())
+    .filter(Boolean);
+}
+
 export async function GET(
   _request: NextRequest,
   ctx: RouteContext<"/api/admin/casos/[id]/frentes">,
@@ -41,6 +57,19 @@ export async function POST(
         ? body.numero_processo.trim()
         : "",
     status: VALID_STATUSES.includes(body?.status) ? body.status : "aberta",
+    tribunal: optionalText(body?.tribunal),
+    vara: optionalText(body?.vara),
+    comarca: optionalText(body?.comarca),
+    classe_processual: optionalText(body?.classe_processual),
+    assunto: optionalText(body?.assunto),
+    polo_ativo: optionalText(body?.polo_ativo),
+    polo_passivo: optionalText(body?.polo_passivo),
+    valor_causa: optionalNumber(body?.valor_causa),
+    data_distribuicao: optionalText(body?.data_distribuicao),
+    ultima_movimentacao: optionalText(body?.ultima_movimentacao),
+    ultima_movimentacao_em: optionalText(body?.ultima_movimentacao_em),
+    etiquetas: optionalEtiquetas(body?.etiquetas),
+    segredo_justica: Boolean(body?.segredo_justica),
   };
 
   try {
