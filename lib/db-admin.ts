@@ -2,6 +2,15 @@ import { createClient } from "@/lib/supabase/server";
 import { addBusinessDays } from "@/lib/business-days";
 import type { LeadFormType } from "@/lib/db-leads";
 
+export type LeadOrigem =
+  | "site"
+  | "instagram"
+  | "linkedin"
+  | "whatsapp"
+  | "indicacao"
+  | "organico"
+  | "outro";
+
 export type LeadStatus =
   | "leads"
   | "contactados"
@@ -34,6 +43,7 @@ export interface Lead {
   utms: Record<string, string>;
   metadata: Record<string, unknown>;
   duplicate_of: string | null;
+  origem: LeadOrigem;
   status: LeadStatus;
   sla_due_at: string | null;
   first_contacted_at: string | null;
@@ -89,6 +99,7 @@ export interface CreateLeadManualInput {
   name: string;
   email: string;
   whatsapp: string;
+  origem: LeadOrigem;
 }
 
 export async function createLeadManual(
@@ -105,7 +116,8 @@ export async function createLeadManual(
       whatsapp: input.whatsapp.replace(/\D/g, ""),
       answers: {},
       utms: {},
-      metadata: { origem: "cadastro_manual" },
+      metadata: {},
+      origem: input.origem,
       sla_due_at: addBusinessDays(new Date(), 2).toISOString(),
     })
     .select()

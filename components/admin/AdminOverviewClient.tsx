@@ -24,6 +24,7 @@ import {
   ATIVIDADE_TIPO_LABELS,
   ATIVIDADE_STATUS_LABELS,
   ATIVIDADE_STATUS_COLORS,
+  ORIGEM_CHART_COLORS,
 } from "@/lib/admin-labels";
 import { formatDate } from "@/lib/format";
 import { isLancamentoAtrasado } from "@/lib/financeiro-utils";
@@ -654,6 +655,43 @@ export function AdminOverviewClient({
           />
         </div>
       )}
+
+      <div className="mt-10">
+        <p className="font-eyebrow text-[10px] text-ink-dim">
+          Funil por origem ({periodoLabel})
+        </p>
+        <div className="mt-3 flex flex-col gap-2.5">
+          {kpis.leadsPorOrigemPeriodo.map((origem) => {
+            const max = Math.max(
+              1,
+              ...kpis.leadsPorOrigemPeriodo.map((o) => o.count),
+            );
+            const largura = origem.count === 0 ? 0 : Math.max(6, (origem.count / max) * 100);
+            const taxa =
+              origem.count > 0 ? Math.round((origem.conversoes / origem.count) * 100) : 0;
+            return (
+              <div key={origem.origem} className="flex items-center gap-3">
+                <span className="w-24 shrink-0 text-xs text-ink-dim">{origem.label}</span>
+                <div className="h-6 flex-1 border border-hairline bg-surface">
+                  <div
+                    className="flex h-full items-center pl-2 text-[10px] font-bold text-bg"
+                    style={{
+                      width: `${largura}%`,
+                      background: ORIGEM_CHART_COLORS[origem.origem],
+                    }}
+                  >
+                    {origem.count > 0 && origem.count}
+                  </div>
+                </div>
+                <span className="w-36 shrink-0 text-right font-mono text-xs text-ink-dim">
+                  <span className="text-success">{origem.conversoes} conversões</span> ·{" "}
+                  {taxa}%
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
 
       <div className="mt-10">
         <div className="flex items-center justify-between">

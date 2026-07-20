@@ -19,7 +19,15 @@ const LeadsKanbanBoard = dynamic(
   { ssr: false },
 );
 
-type Aba = "kanban" | "lista";
+const OutrosCanaisKanbanBoard = dynamic(
+  () =>
+    import("@/components/admin/OutrosCanaisKanbanBoard").then(
+      (mod) => mod.OutrosCanaisKanbanBoard,
+    ),
+  { ssr: false },
+);
+
+type Aba = "kanban" | "outros" | "lista";
 
 export function LeadsPageClient({ initialLeads }: { initialLeads: Lead[] }) {
   const [aba, setAba] = useState<Aba>("kanban");
@@ -29,6 +37,12 @@ export function LeadsPageClient({ initialLeads }: { initialLeads: Lead[] }) {
     const resolved = resolveDateRange(range);
     return initialLeads.filter((lead) => isWithinRange(lead.created_at, resolved));
   }, [initialLeads, range]);
+
+  const leadsSite = useMemo(() => leads.filter((l) => l.origem === "site"), [leads]);
+  const leadsOutrosCanais = useMemo(
+    () => leads.filter((l) => l.origem !== "site"),
+    [leads],
+  );
 
   return (
     <div className="mx-auto max-w-[1400px] px-4 py-8 sm:px-6">
@@ -48,12 +62,21 @@ export function LeadsPageClient({ initialLeads }: { initialLeads: Lead[] }) {
               aba === "kanban" ? "bg-gold text-bg" : "text-ink-dim hover:text-gold"
             }`}
           >
-            Kanban
+            Kanban (Site)
+          </button>
+          <button
+            type="button"
+            onClick={() => setAba("outros")}
+            className={`border-l border-hairline-strong px-4 py-2 text-sm transition-colors duration-150 ${
+              aba === "outros" ? "bg-gold text-bg" : "text-ink-dim hover:text-gold"
+            }`}
+          >
+            Outros canais
           </button>
           <button
             type="button"
             onClick={() => setAba("lista")}
-            className={`px-4 py-2 text-sm transition-colors duration-150 ${
+            className={`border-l border-hairline-strong px-4 py-2 text-sm transition-colors duration-150 ${
               aba === "lista" ? "bg-gold text-bg" : "text-ink-dim hover:text-gold"
             }`}
           >
@@ -63,11 +86,9 @@ export function LeadsPageClient({ initialLeads }: { initialLeads: Lead[] }) {
       </div>
 
       <div className="mt-6">
-        {aba === "kanban" ? (
-          <LeadsKanbanBoard initialLeads={leads} />
-        ) : (
-          <AdminDashboard initialLeads={leads} />
-        )}
+        {aba === "kanban" && <LeadsKanbanBoard initialLeads={leadsSite} />}
+        {aba === "outros" && <OutrosCanaisKanbanBoard initialLeads={leadsOutrosCanais} />}
+        {aba === "lista" && <AdminDashboard initialLeads={leads} />}
       </div>
     </div>
   );

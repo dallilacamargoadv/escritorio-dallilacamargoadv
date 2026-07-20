@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { X } from "lucide-react";
-import type { Lead } from "@/lib/db-admin";
+import type { Lead, LeadOrigem } from "@/lib/db-admin";
 import type { LeadFormType } from "@/lib/db-leads";
-import { FORM_TYPE_LABELS } from "@/lib/admin-labels";
+import { FORM_TYPE_LABELS, ORIGEM_LABELS } from "@/lib/admin-labels";
+
+const ORIGENS = Object.keys(ORIGEM_LABELS) as LeadOrigem[];
 
 export function NovoLeadModal({
   onClose,
@@ -14,6 +16,7 @@ export function NovoLeadModal({
   onCreated: (lead: Lead) => void;
 }) {
   const [formType, setFormType] = useState<LeadFormType | "">("");
+  const [origem, setOrigem] = useState<LeadOrigem | "">("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
@@ -21,8 +24,8 @@ export function NovoLeadModal({
   const [error, setError] = useState("");
 
   async function handleSave() {
-    if (!name.trim() || !email.trim() || !whatsapp.trim() || !formType) {
-      setError("Nome, e-mail, WhatsApp e área são obrigatórios.");
+    if (!name.trim() || !email.trim() || !whatsapp.trim() || !formType || !origem) {
+      setError("Nome, e-mail, WhatsApp, área e origem são obrigatórios.");
       return;
     }
 
@@ -33,7 +36,7 @@ export function NovoLeadModal({
       const res = await fetch("/api/admin/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, whatsapp, form_type: formType }),
+        body: JSON.stringify({ name, email, whatsapp, form_type: formType, origem }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Erro ao salvar");
@@ -113,6 +116,25 @@ export function NovoLeadModal({
                 </option>
               ))}
             </select>
+          </div>
+          <div>
+            <label className="font-eyebrow text-[10px] text-ink-dim">Origem</label>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {ORIGENS.map((o) => (
+                <button
+                  key={o}
+                  type="button"
+                  onClick={() => setOrigem(o)}
+                  className={`border px-3 py-1.5 text-xs transition-colors duration-150 ${
+                    origem === o
+                      ? "border-gold-bright bg-gold-bright text-bg"
+                      : "border-hairline-strong text-ink-dim hover:border-gold hover:text-gold"
+                  }`}
+                >
+                  {ORIGEM_LABELS[o]}
+                </button>
+              ))}
+            </div>
           </div>
 
           {error && (

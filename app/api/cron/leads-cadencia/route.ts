@@ -20,6 +20,7 @@ export async function GET(request: NextRequest) {
   const { data: leads, error } = await supabase
     .from("leads")
     .select("id, status, first_contacted_at")
+    .eq("origem", "site")
     .not("first_contacted_at", "is", null);
 
   if (error) {

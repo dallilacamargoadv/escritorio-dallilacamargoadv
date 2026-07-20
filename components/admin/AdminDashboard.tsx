@@ -2,8 +2,13 @@
 
 import { useMemo, useState } from "react";
 import { Monitor } from "lucide-react";
-import type { Lead, LeadStatus } from "@/lib/db-admin";
-import { FORM_TYPE_LABELS, STATUS_COLORS, STATUS_LABELS } from "@/lib/admin-labels";
+import type { Lead, LeadOrigem, LeadStatus } from "@/lib/db-admin";
+import {
+  FORM_TYPE_LABELS,
+  ORIGEM_LABELS,
+  STATUS_COLORS,
+  STATUS_LABELS,
+} from "@/lib/admin-labels";
 import { LeadDetailModal } from "@/components/admin/LeadDetailModal";
 import { LeadCharts } from "@/components/admin/LeadCharts";
 
@@ -26,6 +31,7 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
   const [leads, setLeads] = useState(initialLeads);
   const [search, setSearch] = useState("");
   const [formTypeFilter, setFormTypeFilter] = useState("all");
+  const [origemFilter, setOrigemFilter] = useState("all");
   const [statusFilter, setStatusFilter] = useState("all");
   const [utmSourceFilter, setUtmSourceFilter] = useState("");
   const [utmMediumFilter, setUtmMediumFilter] = useState("");
@@ -45,6 +51,9 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
 
     if (formTypeFilter !== "all") {
       result = result.filter((lead) => lead.form_type === formTypeFilter);
+    }
+    if (origemFilter !== "all") {
+      result = result.filter((lead) => lead.origem === origemFilter);
     }
     if (statusFilter !== "all") {
       result = result.filter((lead) => lead.status === statusFilter);
@@ -92,6 +101,7 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
     leads,
     search,
     formTypeFilter,
+    origemFilter,
     statusFilter,
     utmSourceFilter,
     utmMediumFilter,
@@ -146,6 +156,21 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
           {Object.entries(FORM_TYPE_LABELS).map(([value, label]) => (
             <option key={value} value={value}>
               {label}
+            </option>
+          ))}
+        </select>
+        <select
+          value={origemFilter}
+          onChange={(e) => {
+            setOrigemFilter(e.target.value);
+            setPage(0);
+          }}
+          className="border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink"
+        >
+          <option value="all">Todas as origens</option>
+          {(Object.keys(ORIGEM_LABELS) as LeadOrigem[]).map((origem) => (
+            <option key={origem} value={origem}>
+              {ORIGEM_LABELS[origem]}
             </option>
           ))}
         </select>
@@ -225,6 +250,7 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
               >
                 Área
               </th>
+              <th className="px-4 py-3">Origem</th>
               <th className="px-4 py-3">Status</th>
               <th
                 className="cursor-pointer px-4 py-3"
@@ -245,6 +271,9 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
                   <td className="px-4 py-3 text-ink-dim">{lead.whatsapp}</td>
                   <td className="px-4 py-3 text-ink-dim">
                     {FORM_TYPE_LABELS[lead.form_type] ?? lead.form_type}
+                  </td>
+                  <td className="px-4 py-3 text-ink-dim">
+                    {ORIGEM_LABELS[lead.origem]}
                   </td>
                   <td className="px-4 py-3">
                     <div className="flex items-center gap-2">
@@ -286,7 +315,7 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
             {pageLeads.length === 0 && (
               <tr>
                 <td
-                  colSpan={7}
+                  colSpan={8}
                   className="px-4 py-10 text-center text-sm text-ink-dim"
                 >
                   Nenhum lead encontrado com os filtros atuais.

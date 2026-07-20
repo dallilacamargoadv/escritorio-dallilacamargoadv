@@ -1,4 +1,4 @@
-import type { LeadStatus } from "@/lib/db-admin";
+import type { LeadStatus, LeadOrigem } from "@/lib/db-admin";
 import type { TipoPessoa } from "@/lib/db-clientes";
 import type { ContratoTipo, ContratoStatus } from "@/lib/db-contratos";
 import type { CasoStatus, CasoPrioridade } from "@/lib/db-casos";
@@ -25,6 +25,29 @@ export const FORM_TYPE_CHART_COLORS: Record<string, string> = {
   assessoria_estrategica: "var(--chart-5)",
 };
 export const CHART_COLOR_OUTROS = "var(--chart-6)";
+
+export const ORIGEM_LABELS: Record<LeadOrigem, string> = {
+  site: "Site",
+  instagram: "Instagram",
+  linkedin: "LinkedIn",
+  whatsapp: "WhatsApp",
+  indicacao: "Indicação",
+  organico: "Orgânico",
+  outro: "Outro",
+};
+
+/** Reaproveita a mesma paleta categórica já validada das 5 áreas (seção 3 do
+ * HANDOFF) — não é uma paleta nova, só um mapeamento diferente dos mesmos
+ * tokens fixos, já que são no máximo 6 valores relevantes (+ "outro"). */
+export const ORIGEM_CHART_COLORS: Record<LeadOrigem, string> = {
+  site: "var(--chart-1)",
+  instagram: "var(--chart-2)",
+  linkedin: "var(--chart-3)",
+  whatsapp: "var(--chart-4)",
+  indicacao: "var(--chart-5)",
+  organico: "var(--chart-6)",
+  outro: "var(--ink-dim)",
+};
 
 export const STATUS_LABELS: Record<LeadStatus, string> = {
   leads: "Leads",

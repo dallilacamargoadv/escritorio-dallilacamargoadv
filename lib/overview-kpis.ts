@@ -1,4 +1,4 @@
-import type { Lead } from "@/lib/db-admin";
+import type { Lead, LeadOrigem } from "@/lib/db-admin";
 import type { LeadFormType } from "@/lib/db-leads";
 import type { Contrato } from "@/lib/db-contratos";
 import type { Cliente } from "@/lib/db-clientes";
@@ -6,7 +6,7 @@ import type { Caso } from "@/lib/db-casos";
 import type { Lancamento } from "@/lib/db-financeiro";
 import type { Atividade } from "@/lib/db-atividades";
 import { isLancamentoAtrasado } from "@/lib/financeiro-utils";
-import { FORM_TYPE_LABELS } from "@/lib/admin-labels";
+import { FORM_TYPE_LABELS, ORIGEM_LABELS } from "@/lib/admin-labels";
 import { isWithinRange, type ResolvedRange } from "@/lib/date-range";
 
 const DAY_MS = 24 * 60 * 60 * 1000;
@@ -54,6 +54,12 @@ export interface OverviewKpis {
     label: string;
     count: number;
     leads: Lead[];
+  }[];
+  leadsPorOrigemPeriodo: {
+    origem: LeadOrigem;
+    label: string;
+    count: number;
+    conversoes: number;
   }[];
 }
 
@@ -136,6 +142,22 @@ export function computeOverviewKpis({
     (c) => c.lead_id && isWithinRange(c.created_at, range),
   );
 
+  const leadsPorOrigemPeriodo = (Object.keys(ORIGEM_LABELS) as LeadOrigem[]).map(
+    (origem) => {
+      const leadsDaOrigem = leadsPeriodoList.filter((l) => l.origem === origem);
+      const leadIds = new Set(leadsDaOrigem.map((l) => l.id));
+      const conversoes = conversoesPeriodoList.filter(
+        (c) => c.lead_id && leadIds.has(c.lead_id),
+      ).length;
+      return {
+        origem,
+        label: ORIGEM_LABELS[origem],
+        count: leadsDaOrigem.length,
+        conversoes,
+      };
+    },
+  );
+
   return {
     mrr,
     contratosRecorrentesAtivos,
@@ -159,5 +181,6 @@ export function computeOverviewKpis({
     conversoesPeriodo: conversoesPeriodoList.length,
     conversoesPeriodoList,
     leadsPorAreaPeriodo,
+    leadsPorOrigemPeriodo,
   };
 }

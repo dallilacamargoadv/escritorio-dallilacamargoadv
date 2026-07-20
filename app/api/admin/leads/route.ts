@@ -1,9 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createLeadManual, type CreateLeadManualInput } from "@/lib/db-admin";
+import {
+  createLeadManual,
+  type CreateLeadManualInput,
+  type LeadOrigem,
+} from "@/lib/db-admin";
 import type { LeadFormType } from "@/lib/db-leads";
-import { FORM_TYPE_LABELS } from "@/lib/admin-labels";
+import { FORM_TYPE_LABELS, ORIGEM_LABELS } from "@/lib/admin-labels";
 
 const VALID_AREAS = Object.keys(FORM_TYPE_LABELS) as LeadFormType[];
+const VALID_ORIGENS = Object.keys(ORIGEM_LABELS) as LeadOrigem[];
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
@@ -13,15 +18,18 @@ export async function POST(request: NextRequest) {
   const formType: LeadFormType | undefined = VALID_AREAS.includes(body?.form_type)
     ? body.form_type
     : undefined;
+  const origem: LeadOrigem | undefined = VALID_ORIGENS.includes(body?.origem)
+    ? body.origem
+    : undefined;
 
-  if (!name || !email || !whatsapp || !formType) {
+  if (!name || !email || !whatsapp || !formType || !origem) {
     return NextResponse.json(
-      { error: "Nome, e-mail, WhatsApp e área são obrigatórios" },
+      { error: "Nome, e-mail, WhatsApp, área e origem são obrigatórios" },
       { status: 400 },
     );
   }
 
-  const input: CreateLeadManualInput = { formType, name, email, whatsapp };
+  const input: CreateLeadManualInput = { formType, name, email, whatsapp, origem };
 
   try {
     const lead = await createLeadManual(input);
