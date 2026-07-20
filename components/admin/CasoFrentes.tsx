@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Eye, EyeOff, Search, Lock } from "lucide-react";
+import { Eye, EyeOff, Search, Lock, ListChecks } from "lucide-react";
 import type { Frente, FrenteInput, FrenteStatus, FrenteTipo } from "@/lib/db-frentes";
+import { FrenteEtapasStepper } from "@/components/admin/FrenteEtapasStepper";
 import {
   FRENTE_STATUS_COLORS,
   FRENTE_STATUS_LABELS,
@@ -262,6 +263,7 @@ export function CasoFrentes({
   const [saving, setSaving] = useState(false);
   const [statusSavingId, setStatusSavingId] = useState<string | null>(null);
   const [visibilidadeSavingId, setVisibilidadeSavingId] = useState<string | null>(null);
+  const [etapasAbertasId, setEtapasAbertasId] = useState<string | null>(null);
 
   function patchForm(patch: Partial<FrenteFormState>) {
     setForm((prev) => ({ ...prev, ...patch }));
@@ -425,72 +427,89 @@ export function CasoFrentes({
         {frentes.map((frente, index) => (
           <div
             key={frente.id}
-            className={`flex items-center justify-between gap-4 px-4 py-3 text-sm ${
-              index !== frentes.length - 1 ? "border-b border-hairline" : ""
-            }`}
+            className={index !== frentes.length - 1 ? "border-b border-hairline" : ""}
           >
-            <div className="min-w-0">
-              <p className="flex flex-wrap items-center gap-2 text-ink">
-                {FRENTE_TIPO_LABELS[frente.tipo]}
-                {frente.orgao ? ` — ${frente.orgao}` : ""}
-                {frente.segredo_justica && (
-                  <span className="flex items-center gap-1 border border-warning px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wide text-warning">
-                    <Lock size={10} /> Segredo de Justiça
-                  </span>
-                )}
-              </p>
-              {frente.numero_processo && (
-                <p className="flex items-center gap-2 font-mono text-xs text-ink-dim">
-                  {frente.numero_processo}
-                  {frente.tipo === "judicial" && (
-                    <a
-                      href={comunicaPjeUrl(frente.numero_processo)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title="Consultar no Comunica PJe"
-                      className="text-gold transition-colors duration-150 hover:text-gold-bright"
-                    >
-                      <Search size={11} />
-                    </a>
+            <div className="flex items-center justify-between gap-4 px-4 py-3 text-sm">
+              <div className="min-w-0">
+                <p className="flex flex-wrap items-center gap-2 text-ink">
+                  {FRENTE_TIPO_LABELS[frente.tipo]}
+                  {frente.orgao ? ` — ${frente.orgao}` : ""}
+                  {frente.segredo_justica && (
+                    <span className="flex items-center gap-1 border border-warning px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wide text-warning">
+                      <Lock size={10} /> Segredo de Justiça
+                    </span>
                   )}
                 </p>
-              )}
-            </div>
-            <div className="flex shrink-0 items-center gap-2">
-              <button
-                type="button"
-                onClick={() => handleToggleVisibilidade(frente)}
-                disabled={visibilidadeSavingId === frente.id}
-                title={
-                  frente.visivel_cliente
-                    ? "Visível pro cliente — clique para ocultar"
-                    : "Oculto do cliente — clique para mostrar"
-                }
-                className={`transition-colors duration-150 disabled:opacity-50 ${
-                  frente.visivel_cliente
-                    ? "text-success hover:text-ink-dim"
-                    : "text-ink-dim hover:text-success"
-                }`}
-              >
-                {frente.visivel_cliente ? <Eye size={14} /> : <EyeOff size={14} />}
-              </button>
-              <select
-                value={frente.status}
-                disabled={statusSavingId === frente.id}
-                onChange={(e) =>
-                  handleStatusChange(frente, e.target.value as FrenteStatus)
-                }
-                className={`border bg-transparent px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide disabled:opacity-50 ${FRENTE_STATUS_COLORS[frente.status]}`}
-              >
-                {(Object.keys(FRENTE_STATUS_LABELS) as FrenteStatus[]).map(
-                  (status) => (
-                    <option key={status} value={status}>
-                      {FRENTE_STATUS_LABELS[status]}
-                    </option>
-                  ),
+                {frente.numero_processo && (
+                  <p className="flex items-center gap-2 font-mono text-xs text-ink-dim">
+                    {frente.numero_processo}
+                    {frente.tipo === "judicial" && (
+                      <a
+                        href={comunicaPjeUrl(frente.numero_processo)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Consultar no Comunica PJe"
+                        className="text-gold transition-colors duration-150 hover:text-gold-bright"
+                      >
+                        <Search size={11} />
+                      </a>
+                    )}
+                  </p>
                 )}
-              </select>
+              </div>
+              <div className="flex shrink-0 items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setEtapasAbertasId((prev) => (prev === frente.id ? null : frente.id))
+                  }
+                  title="Etapas do processo"
+                  className={`transition-colors duration-150 ${
+                    etapasAbertasId === frente.id
+                      ? "text-gold"
+                      : "text-ink-dim hover:text-gold"
+                  }`}
+                >
+                  <ListChecks size={14} />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleToggleVisibilidade(frente)}
+                  disabled={visibilidadeSavingId === frente.id}
+                  title={
+                    frente.visivel_cliente
+                      ? "Visível pro cliente — clique para ocultar"
+                      : "Oculto do cliente — clique para mostrar"
+                  }
+                  className={`transition-colors duration-150 disabled:opacity-50 ${
+                    frente.visivel_cliente
+                      ? "text-success hover:text-ink-dim"
+                      : "text-ink-dim hover:text-success"
+                  }`}
+                >
+                  {frente.visivel_cliente ? <Eye size={14} /> : <EyeOff size={14} />}
+                </button>
+                <select
+                  value={frente.status}
+                  disabled={statusSavingId === frente.id}
+                  onChange={(e) =>
+                    handleStatusChange(frente, e.target.value as FrenteStatus)
+                  }
+                  className={`border bg-transparent px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide disabled:opacity-50 ${FRENTE_STATUS_COLORS[frente.status]}`}
+                >
+                  {(Object.keys(FRENTE_STATUS_LABELS) as FrenteStatus[]).map(
+                    (status) => (
+                      <option key={status} value={status}>
+                        {FRENTE_STATUS_LABELS[status]}
+                      </option>
+                    ),
+                  )}
+                </select>
+              </div>
             </div>
+            {etapasAbertasId === frente.id && (
+              <FrenteEtapasStepper casoId={casoId} frenteId={frente.id} />
+            )}
           </div>
         ))}
       </div>

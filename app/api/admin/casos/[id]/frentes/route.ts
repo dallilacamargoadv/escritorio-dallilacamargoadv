@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createFrente, getAllFrentes, type FrenteInput } from "@/lib/db-frentes";
+import { getCasoById } from "@/lib/db-casos";
+import { copiarEtapasDoTemplate } from "@/lib/db-frente-etapas";
 
 const VALID_TIPOS = ["extrajudicial", "judicial", "administrativo"];
 const VALID_STATUSES = ["aberta", "em_andamento", "concluida", "arquivada"];
@@ -74,6 +76,10 @@ export async function POST(
 
   try {
     const frente = await createFrente(id, input);
+    const caso = await getCasoById(id);
+    if (caso) {
+      await copiarEtapasDoTemplate(frente.id, caso.area, frente.tipo);
+    }
     return NextResponse.json({ frente });
   } catch {
     return NextResponse.json(
