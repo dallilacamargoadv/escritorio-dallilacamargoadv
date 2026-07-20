@@ -65,6 +65,7 @@ export async function createContrato(input: ContratoInput): Promise<Contrato> {
       status: input.status,
       valor: input.valor,
       periodicidade: input.periodicidade,
+      assinado_em: input.status === "assinado" ? new Date().toISOString() : null,
     })
     .select()
     .single();

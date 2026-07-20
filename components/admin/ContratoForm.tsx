@@ -168,26 +168,29 @@ export function ContratoForm({
           />
         </div>
 
-        {contrato && (
-          <div>
-            <label className="font-eyebrow text-[10px] text-ink-dim">
-              Status
-            </label>
-            <select
-              value={status}
-              onChange={(e) => setStatus(e.target.value as ContratoStatus)}
-              className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink"
-            >
-              {(Object.keys(CONTRATO_STATUS_LABELS) as ContratoStatus[]).map(
-                (s) => (
-                  <option key={s} value={s}>
-                    {CONTRATO_STATUS_LABELS[s]}
-                  </option>
-                ),
-              )}
-            </select>
-          </div>
-        )}
+        <div>
+          <label className="font-eyebrow text-[10px] text-ink-dim">
+            Status
+          </label>
+          <select
+            value={status}
+            onChange={(e) => setStatus(e.target.value as ContratoStatus)}
+            className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink"
+          >
+            {(Object.keys(CONTRATO_STATUS_LABELS) as ContratoStatus[]).map(
+              (s) => (
+                <option key={s} value={s}>
+                  {CONTRATO_STATUS_LABELS[s]}
+                </option>
+              ),
+            )}
+          </select>
+          {!contrato && status === "assinado" && (
+            <p className="mt-2 text-xs text-ink-dim">
+              Já marca a data de assinatura como agora.
+            </p>
+          )}
+        </div>
 
         {error && (
           <p role="alert" className="text-sm text-error">
