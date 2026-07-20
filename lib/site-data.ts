@@ -59,6 +59,24 @@ export const SERVICE_AREAS: ServiceArea[] = [
   },
 ];
 
+export interface PageSeoEntry {
+  slug: string;
+  label: string;
+  path: string;
+}
+
+// Páginas fixas cobertas pela tela de SEO do admin (/admin/seo).
+export const PAGE_SEO_ENTRIES: PageSeoEntry[] = [
+  { slug: "home", label: "Home", path: "/" },
+  { slug: "sobre", label: "Sobre", path: "/sobre" },
+  { slug: "contato", label: "Contato", path: "/contato" },
+  ...SERVICE_AREAS.map((area) => ({
+    slug: area.slug,
+    label: area.menuLabel,
+    path: `/${area.slug}`,
+  })),
+];
+
 export const SITE = {
   name: "Dallila Camargo I Advogada",
   oab: "OAB/PA nº 36.762",

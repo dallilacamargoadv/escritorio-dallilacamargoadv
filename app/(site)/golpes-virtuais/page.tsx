@@ -9,6 +9,7 @@ import { PointsOfAttention } from "@/components/PointsOfAttention";
 import { JsonLd } from "@/components/JsonLd";
 import { GolpesVirtuaisForm } from "@/components/forms/GolpesVirtuaisForm";
 import { AREA_CONTENT } from "@/lib/area-content";
+import { getPageMetadata } from "@/lib/page-metadata";
 import {
   BASE_URL,
   getBreadcrumbSchema,
@@ -20,12 +21,15 @@ const SLUG = "golpes-virtuais";
 const PAGE_URL = `${BASE_URL}/${SLUG}`;
 const CONTENT = AREA_CONTENT[SLUG];
 
-export const metadata: Metadata = {
-  title: "Golpes Virtuais",
-  description:
-    "Atuação em situações envolvendo fraudes eletrônicas, utilização indevida de contas, engenharia social e transações fraudulentas.",
-  alternates: { canonical: `/${SLUG}` },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return getPageMetadata({
+    slug: SLUG,
+    path: `/${SLUG}`,
+    fallbackTitle: "Golpes Virtuais",
+    fallbackDescription:
+      "Atuação em situações envolvendo fraudes eletrônicas, utilização indevida de contas, engenharia social e transações fraudulentas.",
+  });
+}
 
 export default function GolpesVirtuaisPage() {
   return (

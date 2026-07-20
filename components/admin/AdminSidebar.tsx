@@ -21,6 +21,7 @@ import {
   Bell,
   LogOut,
   Workflow,
+  Search,
 } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { createClient } from "@/lib/supabase/client";
@@ -99,6 +100,7 @@ export function AdminSidebar({
       label: "Sistema",
       items: [
         { href: "/admin/blog", label: "Blog", icon: Newspaper, exact: false, badge: 0 },
+        { href: "/admin/seo", label: "SEO", icon: Search, exact: false, badge: 0 },
         { href: "/admin/links", label: "Links", icon: Link2, exact: false, badge: 0 },
         {
           href: "/admin/notificacoes",

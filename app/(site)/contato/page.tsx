@@ -3,14 +3,18 @@ import Link from "next/link";
 import { Icon } from "@/components/ui/Icon";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { Reveal } from "@/components/ui/Reveal";
+import { getPageMetadata } from "@/lib/page-metadata";
 import { SERVICE_AREAS, SITE } from "@/lib/site-data";
 
-export const metadata: Metadata = {
-  title: "Contato",
-  description:
-    "Inicie seu atendimento com a Dallila Camargo I Advogada. Escolha a área que melhor descreve a sua necessidade.",
-  alternates: { canonical: "/contato" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return getPageMetadata({
+    slug: "contato",
+    path: "/contato",
+    fallbackTitle: "Contato",
+    fallbackDescription:
+      "Inicie seu atendimento com a Dallila Camargo I Advogada. Escolha a área que melhor descreve a sua necessidade.",
+  });
+}
 
 export default function ContatoPage() {
   return (

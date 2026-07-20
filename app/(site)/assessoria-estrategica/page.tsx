@@ -9,6 +9,7 @@ import { PointsOfAttention } from "@/components/PointsOfAttention";
 import { JsonLd } from "@/components/JsonLd";
 import { AssessoriaEstrategicaForm } from "@/components/forms/AssessoriaEstrategicaForm";
 import { AREA_CONTENT } from "@/lib/area-content";
+import { getPageMetadata } from "@/lib/page-metadata";
 import {
   BASE_URL,
   getBreadcrumbSchema,
@@ -20,12 +21,15 @@ const SLUG = "assessoria-estrategica";
 const PAGE_URL = `${BASE_URL}/${SLUG}`;
 const CONTENT = AREA_CONTENT[SLUG];
 
-export const metadata: Metadata = {
-  title: "Assessoria Estratégica",
-  description:
-    "Orientação jurídica preventiva para influenciadores, criadores de conteúdo e negócios digitais em temas de proteção de dados, LGPD e relações digitais.",
-  alternates: { canonical: `/${SLUG}` },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return getPageMetadata({
+    slug: SLUG,
+    path: `/${SLUG}`,
+    fallbackTitle: "Assessoria Estratégica",
+    fallbackDescription:
+      "Orientação jurídica preventiva para influenciadores, criadores de conteúdo e negócios digitais em temas de proteção de dados, LGPD e relações digitais.",
+  });
+}
 
 export default function AssessoriaEstrategicaPage() {
   return (

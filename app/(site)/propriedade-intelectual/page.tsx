@@ -9,6 +9,7 @@ import { PointsOfAttention } from "@/components/PointsOfAttention";
 import { JsonLd } from "@/components/JsonLd";
 import { PropriedadeIntelectualForm } from "@/components/forms/PropriedadeIntelectualForm";
 import { AREA_CONTENT } from "@/lib/area-content";
+import { getPageMetadata } from "@/lib/page-metadata";
 import {
   BASE_URL,
   getBreadcrumbSchema,
@@ -20,12 +21,15 @@ const SLUG = "propriedade-intelectual";
 const PAGE_URL = `${BASE_URL}/${SLUG}`;
 const CONTENT = AREA_CONTENT[SLUG];
 
-export const metadata: Metadata = {
-  title: "Propriedade Intelectual",
-  description:
-    "Assessoria em registro de marcas, direitos autorais e licenciamento para criadores de conteúdo e negócios digitais que precisam proteger seus ativos intelectuais.",
-  alternates: { canonical: `/${SLUG}` },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return getPageMetadata({
+    slug: SLUG,
+    path: `/${SLUG}`,
+    fallbackTitle: "Propriedade Intelectual",
+    fallbackDescription:
+      "Assessoria em registro de marcas, direitos autorais e licenciamento para criadores de conteúdo e negócios digitais que precisam proteger seus ativos intelectuais.",
+  });
+}
 
 export default function PropriedadeIntelectualPage() {
   return (

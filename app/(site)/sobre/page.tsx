@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { getPageMetadata } from "@/lib/page-metadata";
 import { Button } from "@/components/ui/Button";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { Reveal } from "@/components/ui/Reveal";
@@ -13,12 +14,15 @@ import {
 } from "@/lib/schema";
 import { SITE } from "@/lib/site-data";
 
-export const metadata: Metadata = {
-  title: "Sobre",
-  description:
-    "Conheça a Dallila Camargo I Advocacia: escritório especializado em Direito Digital, Contratos e Propriedade Intelectual, sediado em Redenção, Pará, com atendimento em todo o Brasil.",
-  alternates: { canonical: "/sobre" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return getPageMetadata({
+    slug: "sobre",
+    path: "/sobre",
+    fallbackTitle: "Sobre",
+    fallbackDescription:
+      "Conheça a Dallila Camargo I Advocacia: escritório especializado em Direito Digital, Contratos e Propriedade Intelectual, sediado em Redenção, Pará, com atendimento em todo o Brasil.",
+  });
+}
 
 export default function SobrePage() {
   return (

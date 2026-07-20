@@ -42,6 +42,8 @@ export interface BlogPostMeta {
   updatedAt?: string;
   readingTime: string;
   faq?: FaqItem[];
+  metaTitle: string | null;
+  metaDescription: string | null;
 }
 
 export interface BlogPost extends BlogPostMeta {
@@ -61,6 +63,8 @@ interface PostRow {
   date: string;
   updated_at: string | null;
   faq: FaqItem[] | null;
+  meta_title: string | null;
+  meta_description: string | null;
 }
 
 function toMeta(row: PostRow): BlogPostMeta {
@@ -73,6 +77,8 @@ function toMeta(row: PostRow): BlogPostMeta {
     updatedAt: row.updated_at ?? undefined,
     readingTime: formatReadingTime(readingTime(row.content).minutes),
     faq: row.faq ?? undefined,
+    metaTitle: row.meta_title,
+    metaDescription: row.meta_description,
   };
 }
 
@@ -81,7 +87,9 @@ export async function getAllPosts(): Promise<BlogPostMeta[]> {
     const supabase = getAnonClient();
     const { data, error } = await supabase
       .from("posts")
-      .select("slug, title, subtitle, category, content, date, updated_at, faq")
+      .select(
+        "slug, title, subtitle, category, content, date, updated_at, faq, meta_title, meta_description",
+      )
       .eq("published", true)
       .order("date", { ascending: false });
 
@@ -101,7 +109,9 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     const supabase = getAnonClient();
     const { data, error } = await supabase
       .from("posts")
-      .select("slug, title, subtitle, category, content, date, updated_at, faq")
+      .select(
+        "slug, title, subtitle, category, content, date, updated_at, faq, meta_title, meta_description",
+      )
       .eq("slug", slug)
       .eq("published", true)
       .maybeSingle();

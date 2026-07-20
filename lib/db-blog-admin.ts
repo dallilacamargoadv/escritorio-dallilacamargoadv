@@ -13,6 +13,8 @@ export interface AdminPost {
   date: string;
   updated_at: string | null;
   created_at: string;
+  meta_title: string | null;
+  meta_description: string | null;
 }
 
 export interface PostInput {
@@ -22,6 +24,8 @@ export interface PostInput {
   category: BlogCategory;
   content: string;
   published: boolean;
+  meta_title: string | null;
+  meta_description: string | null;
 }
 
 export async function getAllPostsAdmin(): Promise<AdminPost[]> {
@@ -58,6 +62,8 @@ export async function createPost(input: PostInput): Promise<AdminPost> {
       category: input.category,
       content: input.content,
       published: input.published,
+      meta_title: input.meta_title,
+      meta_description: input.meta_description,
       date: new Date().toISOString(),
     })
     .select()
@@ -81,6 +87,8 @@ export async function updatePost(
       category: input.category,
       content: input.content,
       published: input.published,
+      meta_title: input.meta_title,
+      meta_description: input.meta_description,
       updated_at: new Date().toISOString(),
     })
     .eq("id", id)

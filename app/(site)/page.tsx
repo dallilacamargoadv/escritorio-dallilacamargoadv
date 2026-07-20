@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/page-metadata";
 import { Button } from "@/components/ui/Button";
 import { FeatureCard } from "@/components/ui/FeatureCard";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
@@ -17,12 +18,15 @@ import {
 } from "@/lib/schema";
 import { SERVICE_AREAS, SITE } from "@/lib/site-data";
 
-export const metadata: Metadata = {
-  title: "Direito Digital",
-  description:
-    "Assessoria jurídica em Direito Digital para criadores de conteúdo, profissionais liberais e negócios digitais: contratos, marcas e proteção de dados.",
-  alternates: { canonical: "/" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return getPageMetadata({
+    slug: "home",
+    path: "/",
+    fallbackTitle: "Direito Digital",
+    fallbackDescription:
+      "Assessoria jurídica em Direito Digital para criadores de conteúdo, profissionais liberais e negócios digitais: contratos, marcas e proteção de dados.",
+  });
+}
 
 export default async function HomePage() {
   const posts = await getAllPosts();

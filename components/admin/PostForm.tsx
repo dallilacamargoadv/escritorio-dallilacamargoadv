@@ -15,6 +15,8 @@ export function PostForm({ post }: { post?: AdminPost }) {
   );
   const [content, setContent] = useState(post?.content ?? "");
   const [published, setPublished] = useState(post?.published ?? false);
+  const [metaTitle, setMetaTitle] = useState(post?.meta_title ?? "");
+  const [metaDescription, setMetaDescription] = useState(post?.meta_description ?? "");
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
 
@@ -34,7 +36,15 @@ export function PostForm({ post }: { post?: AdminPost }) {
       const res = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ title, subtitle, category, content, published }),
+        body: JSON.stringify({
+          title,
+          subtitle,
+          category,
+          content,
+          published,
+          meta_title: metaTitle,
+          meta_description: metaDescription,
+        }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Erro ao salvar");
@@ -106,6 +116,44 @@ export function PostForm({ post }: { post?: AdminPost }) {
             <RichTextEditor value={content} onChange={setContent} />
           </div>
         </div>
+
+        <details className="border border-hairline-strong bg-surface">
+          <summary className="cursor-pointer list-none px-4 py-3 text-sm text-ink marker:content-none [&::-webkit-details-marker]:hidden">
+            SEO (opcional — em branco usa o título/subtítulo do post)
+          </summary>
+          <div className="space-y-4 border-t border-hairline p-4">
+            <div>
+              <label className="font-eyebrow text-[10px] text-ink-dim">
+                Meta título
+              </label>
+              <input
+                type="text"
+                value={metaTitle}
+                placeholder={title}
+                onChange={(e) => setMetaTitle(e.target.value)}
+                className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
+              />
+              <p className="mt-1 text-right font-mono text-[10px] text-ink-dim">
+                {metaTitle.length}/60
+              </p>
+            </div>
+            <div>
+              <label className="font-eyebrow text-[10px] text-ink-dim">
+                Meta descrição
+              </label>
+              <textarea
+                value={metaDescription}
+                placeholder={subtitle}
+                onChange={(e) => setMetaDescription(e.target.value)}
+                rows={3}
+                className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
+              />
+              <p className="mt-1 text-right font-mono text-[10px] text-ink-dim">
+                {metaDescription.length}/155
+              </p>
+            </div>
+          </div>
+        </details>
 
         <label className="flex items-center gap-2 text-sm text-ink">
           <input

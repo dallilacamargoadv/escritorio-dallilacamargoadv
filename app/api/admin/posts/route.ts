@@ -21,6 +21,13 @@ export async function POST(request: NextRequest) {
   const category = body?.category;
   const content = typeof body?.content === "string" ? body.content : "";
   const published = Boolean(body?.published);
+  const metaTitle = typeof body?.meta_title === "string" && body.meta_title.trim()
+    ? body.meta_title.trim()
+    : null;
+  const metaDescription =
+    typeof body?.meta_description === "string" && body.meta_description.trim()
+      ? body.meta_description.trim()
+      : null;
 
   if (!title || !BLOG_CATEGORIES.includes(category)) {
     return NextResponse.json(
@@ -36,6 +43,8 @@ export async function POST(request: NextRequest) {
     category,
     content,
     published,
+    meta_title: metaTitle,
+    meta_description: metaDescription,
   };
 
   try {

@@ -41,6 +41,13 @@ export async function PATCH(
   const slug = typeof body?.slug === "string" && body.slug.trim()
     ? slugify(body.slug)
     : slugify(title);
+  const metaTitle = typeof body?.meta_title === "string" && body.meta_title.trim()
+    ? body.meta_title.trim()
+    : null;
+  const metaDescription =
+    typeof body?.meta_description === "string" && body.meta_description.trim()
+      ? body.meta_description.trim()
+      : null;
 
   if (!title || !BLOG_CATEGORIES.includes(category)) {
     return NextResponse.json(
@@ -49,7 +56,16 @@ export async function PATCH(
     );
   }
 
-  const input: PostInput = { slug, title, subtitle, category, content, published };
+  const input: PostInput = {
+    slug,
+    title,
+    subtitle,
+    category,
+    content,
+    published,
+    meta_title: metaTitle,
+    meta_description: metaDescription,
+  };
 
   try {
     const post = await updatePost(id, input);

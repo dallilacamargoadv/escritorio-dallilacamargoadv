@@ -9,6 +9,7 @@ import { PointsOfAttention } from "@/components/PointsOfAttention";
 import { JsonLd } from "@/components/JsonLd";
 import { ContratosForm } from "@/components/forms/ContratosForm";
 import { AREA_CONTENT } from "@/lib/area-content";
+import { getPageMetadata } from "@/lib/page-metadata";
 import {
   BASE_URL,
   getBreadcrumbSchema,
@@ -20,12 +21,15 @@ const SLUG = "contratos";
 const PAGE_URL = `${BASE_URL}/${SLUG}`;
 const CONTENT = AREA_CONTENT[SLUG];
 
-export const metadata: Metadata = {
-  title: "Contratos Digitais",
-  description:
-    "Elaboração, revisão e negociação de contratos para criadores de conteúdo, influenciadores e negócios digitais, com atenção a cláusulas, riscos e conformidade.",
-  alternates: { canonical: `/${SLUG}` },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return getPageMetadata({
+    slug: SLUG,
+    path: `/${SLUG}`,
+    fallbackTitle: "Contratos Digitais",
+    fallbackDescription:
+      "Elaboração, revisão e negociação de contratos para criadores de conteúdo, influenciadores e negócios digitais, com atenção a cláusulas, riscos e conformidade.",
+  });
+}
 
 export default function ContratosPage() {
   return (

@@ -9,6 +9,7 @@ import { PointsOfAttention } from "@/components/PointsOfAttention";
 import { JsonLd } from "@/components/JsonLd";
 import { ContasEPlataformasForm } from "@/components/forms/ContasEPlataformasForm";
 import { AREA_CONTENT } from "@/lib/area-content";
+import { getPageMetadata } from "@/lib/page-metadata";
 import {
   BASE_URL,
   getBreadcrumbSchema,
@@ -20,12 +21,15 @@ const SLUG = "contas-e-plataformas";
 const PAGE_URL = `${BASE_URL}/${SLUG}`;
 const CONTENT = AREA_CONTENT[SLUG];
 
-export const metadata: Metadata = {
-  title: "Contas e Plataformas",
-  description:
-    "Atuação jurídica em casos de contas comprometidas, bloqueios, suspensões, strikes e conflitos com plataformas digitais.",
-  alternates: { canonical: `/${SLUG}` },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return getPageMetadata({
+    slug: SLUG,
+    path: `/${SLUG}`,
+    fallbackTitle: "Contas e Plataformas",
+    fallbackDescription:
+      "Atuação jurídica em casos de contas comprometidas, bloqueios, suspensões, strikes e conflitos com plataformas digitais.",
+  });
+}
 
 export default function ContasEPlataformasPage() {
   return (
