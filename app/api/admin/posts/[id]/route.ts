@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import {
   deletePost,
   getPostByIdAdmin,
   updatePost,
   type PostInput,
 } from "@/lib/db-blog-admin";
-import { slugify, BLOG_CATEGORIES } from "@/lib/blog";
+import { slugify, BLOG_CATEGORIES, CATEGORY_SLUGS } from "@/lib/blog";
 
 export async function GET(
   _request: NextRequest,
@@ -68,7 +69,19 @@ export async function PATCH(
   };
 
   try {
+    const previous = await getPostByIdAdmin(id);
     const post = await updatePost(id, input);
+
+    revalidatePath("/blog");
+    revalidatePath(`/blog/${post.slug}`);
+    revalidatePath(`/blog/categoria/${CATEGORY_SLUGS[post.category]}`);
+    if (previous && previous.slug !== post.slug) {
+      revalidatePath(`/blog/${previous.slug}`);
+    }
+    if (previous && previous.category !== post.category) {
+      revalidatePath(`/blog/categoria/${CATEGORY_SLUGS[previous.category]}`);
+    }
+
     return NextResponse.json({ post });
   } catch {
     return NextResponse.json(
@@ -85,7 +98,15 @@ export async function DELETE(
   const { id } = await ctx.params;
 
   try {
+    const post = await getPostByIdAdmin(id);
     await deletePost(id);
+
+    revalidatePath("/blog");
+    if (post) {
+      revalidatePath(`/blog/${post.slug}`);
+      revalidatePath(`/blog/categoria/${CATEGORY_SLUGS[post.category]}`);
+    }
+
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json(

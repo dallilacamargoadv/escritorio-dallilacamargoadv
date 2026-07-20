@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { createPost, getAllPostsAdmin, type PostInput } from "@/lib/db-blog-admin";
-import { slugify, BLOG_CATEGORIES } from "@/lib/blog";
+import { slugify, BLOG_CATEGORIES, CATEGORY_SLUGS } from "@/lib/blog";
 
 export async function GET() {
   try {
@@ -49,6 +50,9 @@ export async function POST(request: NextRequest) {
 
   try {
     const post = await createPost(input);
+    revalidatePath("/blog");
+    revalidatePath(`/blog/${post.slug}`);
+    revalidatePath(`/blog/categoria/${CATEGORY_SLUGS[post.category]}`);
     return NextResponse.json({ post });
   } catch {
     return NextResponse.json(
