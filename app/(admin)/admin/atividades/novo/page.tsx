@@ -2,10 +2,22 @@ import { redirect } from "next/navigation";
 import { getAllClientes } from "@/lib/db-clientes";
 import { getAllCasos } from "@/lib/db-casos";
 import { getAllFrentes } from "@/lib/db-frentes";
-import { FRENTE_TIPO_LABELS } from "@/lib/admin-labels";
+import { FRENTE_TIPO_LABELS, ATIVIDADE_TIPO_LABELS } from "@/lib/admin-labels";
+import type { AtividadeTipo } from "@/lib/db-atividades";
 import { AtividadeForm, type LinkOption } from "@/components/admin/AtividadeForm";
 
-export default async function NewAtividadePage() {
+const VALID_TIPOS = Object.keys(ATIVIDADE_TIPO_LABELS) as AtividadeTipo[];
+
+export default async function NewAtividadePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ tipo?: string; voltar?: string }>;
+}) {
+  const { tipo, voltar } = await searchParams;
+  const tipoInicial = VALID_TIPOS.includes(tipo as AtividadeTipo)
+    ? (tipo as AtividadeTipo)
+    : undefined;
+
   let clienteOptions: LinkOption[];
   let casoOptions: LinkOption[];
   let frenteOptions: LinkOption[];
@@ -39,6 +51,8 @@ export default async function NewAtividadePage() {
       clienteOptions={clienteOptions}
       casoOptions={casoOptions}
       frenteOptions={frenteOptions}
+      tipoInicial={tipoInicial}
+      voltarHref={voltar === "agenda" ? "/admin/agenda" : undefined}
     />
   );
 }

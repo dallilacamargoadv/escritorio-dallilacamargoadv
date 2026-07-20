@@ -13,6 +13,9 @@ const VALID_TIPOS: AtividadeTipo[] = [
   "documento_pendente",
   "tarefa_delegada",
   "checklist_diario",
+  "audiencia",
+  "reuniao_cliente",
+  "peca_prazo",
 ];
 
 export async function GET() {

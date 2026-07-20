@@ -13,6 +13,7 @@ import {
   Wallet,
   Repeat,
   ListChecks,
+  CalendarDays,
   TrendingUp,
   Target,
   Link2,
@@ -29,10 +30,12 @@ export function AdminSidebar({
   newLeadsCount,
   unreadNotificacoesCount,
   urgentAtividadesCount,
+  urgentAudienciasCount,
 }: {
   newLeadsCount: number;
   unreadNotificacoesCount: number;
   urgentAtividadesCount: number;
+  urgentAudienciasCount: number;
 }) {
   const pathname = usePathname();
   const router = useRouter();
@@ -61,6 +64,14 @@ export function AdminSidebar({
           icon: ListChecks,
           exact: false,
           badge: urgentAtividadesCount,
+        },
+        {
+          href: "/admin/agenda",
+          label: "Agenda",
+          icon: CalendarDays,
+          exact: false,
+          badge: urgentAudienciasCount,
+          badgeAlert: true,
         },
       ],
     },
@@ -138,7 +149,13 @@ export function AdminSidebar({
                       {item.label}
                     </span>
                     {item.badge > 0 && (
-                      <span className="font-mono text-[10px] text-bg bg-gold px-1.5 py-0.5">
+                      <span
+                        className={`font-mono text-[10px] text-bg px-1.5 py-0.5 ${
+                          "badgeAlert" in item && item.badgeAlert
+                            ? "bg-audiencia"
+                            : "bg-gold"
+                        }`}
+                      >
                         {item.badge}
                       </span>
                     )}

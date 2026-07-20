@@ -25,14 +25,21 @@ export function AtividadeForm({
   clienteOptions,
   casoOptions,
   frenteOptions,
+  tipoInicial,
+  voltarHref,
 }: {
   atividade?: Atividade;
   clienteOptions: LinkOption[];
   casoOptions: LinkOption[];
   frenteOptions: LinkOption[];
+  tipoInicial?: AtividadeTipo;
+  voltarHref?: string;
 }) {
   const router = useRouter();
-  const [tipo, setTipo] = useState<AtividadeTipo>(atividade?.tipo ?? "processual");
+  const destino = voltarHref ?? "/admin/atividades";
+  const [tipo, setTipo] = useState<AtividadeTipo>(
+    atividade?.tipo ?? tipoInicial ?? "processual",
+  );
   const [titulo, setTitulo] = useState(atividade?.titulo ?? "");
   const [data, setData] = useState(atividade?.data ?? "");
   const [hora, setHora] = useState(atividade?.hora?.slice(0, 5) ?? "");
@@ -96,7 +103,7 @@ export function AtividadeForm({
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || "Erro ao salvar");
 
-      router.push("/admin/atividades");
+      router.push(destino);
       router.refresh();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Erro ao salvar");
@@ -112,7 +119,7 @@ export function AtividadeForm({
     setSaving(true);
     try {
       await fetch(`/api/admin/atividades/${atividade.id}`, { method: "DELETE" });
-      router.push("/admin/atividades");
+      router.push(destino);
       router.refresh();
     } finally {
       setSaving(false);
@@ -258,7 +265,7 @@ export function AtividadeForm({
           </button>
           <button
             type="button"
-            onClick={() => router.push("/admin/atividades")}
+            onClick={() => router.push(destino)}
             className="border border-hairline-strong px-5 py-2.5 text-sm text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold"
           >
             Cancelar

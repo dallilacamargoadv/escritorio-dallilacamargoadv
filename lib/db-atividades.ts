@@ -6,7 +6,10 @@ export type AtividadeTipo =
   | "tarefa"
   | "documento_pendente"
   | "tarefa_delegada"
-  | "checklist_diario";
+  | "checklist_diario"
+  | "audiencia"
+  | "reuniao_cliente"
+  | "peca_prazo";
 export type AtividadeStatus = "pendente" | "concluido" | "cancelado";
 
 export interface Atividade {
@@ -45,6 +48,23 @@ export async function getUrgentAtividadesCount(): Promise<number> {
   const { count, error } = await supabase
     .from("atividades")
     .select("*", { count: "exact", head: true })
+    .eq("status", "pendente")
+    .lte("data", limite);
+
+  if (error) throw error;
+  return count ?? 0;
+}
+
+export async function getUrgentAudienciasCount(): Promise<number> {
+  const supabase = await createClient();
+  const limite = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
+    .toISOString()
+    .slice(0, 10);
+
+  const { count, error } = await supabase
+    .from("atividades")
+    .select("*", { count: "exact", head: true })
+    .eq("tipo", "audiencia")
     .eq("status", "pendente")
     .lte("data", limite);
 

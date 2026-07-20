@@ -15,6 +15,9 @@ const VALID_TIPOS: AtividadeTipo[] = [
   "documento_pendente",
   "tarefa_delegada",
   "checklist_diario",
+  "audiencia",
+  "reuniao_cliente",
+  "peca_prazo",
 ];
 const VALID_STATUSES: AtividadeStatus[] = ["pendente", "concluido", "cancelado"];
 

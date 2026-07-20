@@ -4,7 +4,7 @@ import { InstallBanner } from "@/components/admin/InstallBanner";
 import { ServiceWorkerRegister } from "@/components/admin/ServiceWorkerRegister";
 import { getNewLeadsCount } from "@/lib/db-admin";
 import { getUnreadNotificacoesCount } from "@/lib/db-notificacoes";
-import { getUrgentAtividadesCount } from "@/lib/db-atividades";
+import { getUrgentAtividadesCount, getUrgentAudienciasCount } from "@/lib/db-atividades";
 
 export const metadata: Metadata = {
   manifest: "/manifest-admin.webmanifest",
@@ -27,10 +27,16 @@ export default async function AdminAreaLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [newLeadsCount, unreadNotificacoesCount, urgentAtividadesCount] = await Promise.all([
+  const [
+    newLeadsCount,
+    unreadNotificacoesCount,
+    urgentAtividadesCount,
+    urgentAudienciasCount,
+  ] = await Promise.all([
     getNewLeadsCount().catch(() => 0),
     getUnreadNotificacoesCount().catch(() => 0),
     getUrgentAtividadesCount().catch(() => 0),
+    getUrgentAudienciasCount().catch(() => 0),
   ]);
 
   return (
@@ -42,6 +48,7 @@ export default async function AdminAreaLayout({
           newLeadsCount={newLeadsCount}
           unreadNotificacoesCount={unreadNotificacoesCount}
           urgentAtividadesCount={urgentAtividadesCount}
+          urgentAudienciasCount={urgentAudienciasCount}
         />
         <div className="min-w-0 flex-1">{children}</div>
       </div>

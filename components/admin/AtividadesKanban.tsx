@@ -18,6 +18,7 @@ import { ATIVIDADE_TIPO_LABELS } from "@/lib/admin-labels";
 import {
   addDaysToDateString,
   colunaDaAtividade,
+  isAudiencia,
   todayBelemDateString,
   type AtividadeColuna,
 } from "@/lib/atividades-utils";
@@ -189,17 +190,23 @@ function AtividadeCard({
   atividade: AtividadeRow;
   dragging?: boolean;
 }) {
+  const audiencia = isAudiencia(atividade);
   return (
     <Link
       href={`/admin/atividades/${atividade.id}`}
-      className={`block border border-hairline bg-surface p-2 text-left text-xs transition-colors duration-150 hover:border-gold ${
-        dragging ? "shadow-lg" : ""
-      } ${atividade.status === "concluido" ? "opacity-60" : ""}`}
+      className={`block border p-2 text-left text-xs transition-colors duration-150 ${
+        audiencia
+          ? "border-audiencia bg-audiencia/15 hover:border-audiencia"
+          : "border-hairline bg-surface hover:border-gold"
+      } ${dragging ? "shadow-lg" : ""} ${atividade.status === "concluido" ? "opacity-60" : ""}`}
     >
       <p className={`truncate text-ink ${atividade.status === "concluido" ? "line-through" : ""}`}>
+        {audiencia ? "⚠ " : ""}
         {atividade.titulo}
       </p>
-      <p className="mt-0.5 truncate text-[10px] text-ink-dim">
+      <p
+        className={`mt-0.5 truncate text-[10px] ${audiencia ? "font-bold text-audiencia" : "text-ink-dim"}`}
+      >
         {ATIVIDADE_TIPO_LABELS[atividade.tipo]} · {formatDate(atividade.data)}
       </p>
     </Link>

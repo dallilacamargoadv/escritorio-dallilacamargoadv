@@ -28,6 +28,12 @@
   --brand-bordo-assinatura: #7a2430;
   --brand-pergaminho-neutro: #9f8e87;
 
+  /* cor de alerta pra Audiência (Agenda) — fixa entre temas de propósito,
+     precisa continuar chamativa e nunca se confundir com --error/--warning
+     usados no resto do painel pra atraso genérico. Valor por tema logo
+     abaixo, junto dos outros blocos de tema. */
+  --audiencia: #ff4d4d;
+
   /* paleta categórica de gráficos (5 áreas + "outros"), fixa entre temas —
      validada com o script de acessibilidade da skill dataviz (CVD + contraste
      contra os dois fundos da marca); usar sempre com rótulo/legenda visível,
@@ -73,6 +79,7 @@
     --success: #4f6b3c;
     --error: #9c2e28;
     --warning: #8a5a1e;
+    --audiencia: #d1272a;
   }
 }
 
@@ -93,6 +100,7 @@
   --success: #4f6b3c;
   --error: #9c2e28;
   --warning: #8a5a1e;
+  --audiencia: #d1272a;
 }
 
 :root[data-theme="dark"] {
@@ -110,6 +118,7 @@
   --success: #8fa37a;
   --error: #c2665f;
   --warning: #d3a054;
+  --audiencia: #ff4d4d;
 }
 
 @theme inline {
@@ -127,6 +136,7 @@
   --color-success: var(--success);
   --color-error: var(--error);
   --color-warning: var(--warning);
+  --color-audiencia: var(--audiencia);
   --color-brand-gold: var(--brand-dourado-latao);
   --color-brand-wine: var(--brand-bordo-assinatura);
   --color-chart-1: var(--chart-1);

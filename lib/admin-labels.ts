@@ -189,6 +189,9 @@ export const ATIVIDADE_TIPO_LABELS: Record<AtividadeTipo, string> = {
   documento_pendente: "Documento pendente",
   tarefa_delegada: "Tarefa delegada",
   checklist_diario: "Checklist diário",
+  audiencia: "Audiência",
+  reuniao_cliente: "Reunião com cliente",
+  peca_prazo: "Prazo de peça",
 };
 
 export const ATIVIDADE_STATUS_LABELS: Record<AtividadeStatus, string> = {

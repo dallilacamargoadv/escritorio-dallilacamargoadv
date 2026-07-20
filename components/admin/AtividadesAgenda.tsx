@@ -7,6 +7,7 @@ import type { AtividadeRow } from "@/components/admin/AtividadesAdminList";
 import {
   addDaysToDateString,
   colunaDaAtividade,
+  isAudiencia,
   todayBelemDateString,
   type AtividadeColuna,
 } from "@/lib/atividades-utils";
@@ -126,15 +127,17 @@ export function AtividadesAgenda({ atividades }: { atividades: AtividadeRow[] })
               <div className="mt-1 flex flex-col gap-0.5">
                 {visiveis.map((atividade) => {
                   const coluna = colunaDaAtividade(atividade, hojeStr, limite7) ?? "proximos";
+                  const audiencia = isAudiencia(atividade);
                   return (
                     <Link
                       key={atividade.id}
                       href={`/admin/atividades/${atividade.id}`}
                       title={atividade.titulo}
-                      className={`truncate px-1 py-0.5 text-[9px] transition-opacity duration-150 hover:opacity-80 ${COLUNA_CLASSES[coluna]} ${
-                        atividade.status === "concluido" ? "line-through opacity-60" : ""
-                      }`}
+                      className={`truncate px-1 py-0.5 text-[9px] font-semibold transition-opacity duration-150 hover:opacity-80 ${
+                        audiencia ? "bg-audiencia text-bg" : COLUNA_CLASSES[coluna]
+                      } ${atividade.status === "concluido" ? "line-through opacity-60" : ""}`}
                     >
+                      {audiencia ? "⚠ " : ""}
                       {atividade.titulo}
                     </Link>
                   );
@@ -147,6 +150,10 @@ export function AtividadesAgenda({ atividades }: { atividades: AtividadeRow[] })
           );
         })}
       </div>
+      <p className="mt-3 flex items-center gap-1.5 font-mono text-[9px] text-ink-dim">
+        <span className="inline-block h-2.5 w-2.5 bg-audiencia" /> ⚠ Audiência — cor de alerta
+        fixa, não muda com a urgência: não pode passar batido.
+      </p>
     </div>
   );
 }
