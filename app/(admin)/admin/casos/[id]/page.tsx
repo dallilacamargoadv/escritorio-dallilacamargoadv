@@ -5,10 +5,11 @@ import { getClienteById } from "@/lib/db-clientes";
 import { getAllFrentes } from "@/lib/db-frentes";
 import { getDocumentosByCaso } from "@/lib/db-documentos";
 import { getHistoricoByCaso } from "@/lib/db-caso-historico";
+import { getAtividadesByCaso } from "@/lib/db-atividades";
 import { CasoForm, type ContratoOption } from "@/components/admin/CasoForm";
 import { CasoFrentes } from "@/components/admin/CasoFrentes";
-import { CasoDocumentos } from "@/components/admin/CasoDocumentos";
-import { CasoAnamnese } from "@/components/admin/CasoAnamnese";
+import { CasoTimeline } from "@/components/admin/CasoTimeline";
+import { CollapsibleSection } from "@/components/admin/CollapsibleSection";
 import { CONTRATO_TIPO_LABELS } from "@/lib/admin-labels";
 
 export default async function CasoDetailPage(
@@ -21,6 +22,7 @@ export default async function CasoDetailPage(
   let frentes;
   let documentos;
   let historico;
+  let atividades;
   try {
     caso = await getCasoById(id);
     if (caso) {
@@ -37,6 +39,10 @@ export default async function CasoDetailPage(
       frentes = await getAllFrentes(caso.id);
       documentos = await getDocumentosByCaso(caso.id);
       historico = await getHistoricoByCaso(caso.id);
+      atividades = await getAtividadesByCaso(
+        caso.id,
+        frentes.map((f) => f.id),
+      );
     }
   } catch {
     redirect("/login");
@@ -47,9 +53,15 @@ export default async function CasoDetailPage(
   return (
     <>
       <CasoForm caso={caso} contratoFixo={contratoFixo} />
-      <CasoFrentes casoId={caso.id} initialFrentes={frentes ?? []} />
-      <CasoDocumentos casoId={caso.id} initialDocumentos={documentos ?? []} />
-      <CasoAnamnese casoId={caso.id} initialHistorico={historico ?? []} />
+      <CollapsibleSection title="Frentes / Dados processuais" defaultOpen>
+        <CasoFrentes casoId={caso.id} initialFrentes={frentes ?? []} />
+      </CollapsibleSection>
+      <CasoTimeline
+        casoId={caso.id}
+        initialHistorico={historico ?? []}
+        initialAtividades={atividades ?? []}
+        initialDocumentos={documentos ?? []}
+      />
     </>
   );
 }

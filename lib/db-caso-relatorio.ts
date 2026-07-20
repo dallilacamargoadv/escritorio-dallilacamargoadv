@@ -4,6 +4,7 @@ import { getClienteById, type Cliente } from "@/lib/db-clientes";
 import { getAllFrentes, type Frente } from "@/lib/db-frentes";
 import { getAtividadesByCaso, type Atividade } from "@/lib/db-atividades";
 import { getAllLancamentos, type Lancamento } from "@/lib/db-financeiro";
+import { getDocumentosByCaso, type Documento } from "@/lib/db-documentos";
 
 export interface CasoRelatorioData {
   caso: Caso;
@@ -12,6 +13,7 @@ export interface CasoRelatorioData {
   frentes: Frente[];
   prazos: Atividade[];
   lancamentos: Lancamento[];
+  documentos: Documento[];
 }
 
 export async function getCasoRelatorioData(
@@ -25,14 +27,15 @@ export async function getCasoRelatorioData(
     getAllFrentes(caso.id),
   ]);
 
-  const [cliente, prazos, lancamentos] = await Promise.all([
+  const [cliente, prazos, lancamentos, documentos] = await Promise.all([
     contrato ? getClienteById(contrato.cliente_id) : Promise.resolve(null),
     getAtividadesByCaso(
       caso.id,
       frentes.map((f) => f.id),
     ),
     getAllLancamentos(undefined, caso.contrato_id),
+    getDocumentosByCaso(caso.id),
   ]);
 
-  return { caso, contrato, cliente, frentes, prazos, lancamentos };
+  return { caso, contrato, cliente, frentes, prazos, lancamentos, documentos };
 }

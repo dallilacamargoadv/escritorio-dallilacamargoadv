@@ -12,6 +12,7 @@ export interface Documento {
   tipo_mime: string;
   descricao: string | null;
   created_at: string;
+  marco_cliente: string | null;
 }
 
 export async function getDocumentosByCaso(casoId: string): Promise<Documento[]> {
@@ -30,10 +31,12 @@ export async function uploadDocumento({
   casoId,
   file,
   descricao,
+  marcoCliente,
 }: {
   casoId: string;
   file: File;
   descricao: string | null;
+  marcoCliente: string | null;
 }): Promise<Documento> {
   const supabase = await createClient();
   const storagePath = `casos/${casoId}/${crypto.randomUUID()}-${file.name}`;
@@ -53,6 +56,7 @@ export async function uploadDocumento({
       tamanho: file.size,
       tipo_mime: file.type || "application/octet-stream",
       descricao,
+      marco_cliente: marcoCliente,
     })
     .select()
     .single();

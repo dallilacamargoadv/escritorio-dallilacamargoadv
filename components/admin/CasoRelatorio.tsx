@@ -4,6 +4,7 @@ import type { Cliente } from "@/lib/db-clientes";
 import type { Frente } from "@/lib/db-frentes";
 import type { Atividade } from "@/lib/db-atividades";
 import type { Lancamento } from "@/lib/db-financeiro";
+import type { Documento } from "@/lib/db-documentos";
 import { isLancamentoAtrasado } from "@/lib/financeiro-utils";
 import {
   CASO_STATUS_LABELS,
@@ -25,6 +26,11 @@ function formatBRL(valor: number) {
   return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 }
 
+interface Marco {
+  label: string;
+  data: string;
+}
+
 export function CasoRelatorio({
   caso,
   contrato,
@@ -32,6 +38,7 @@ export function CasoRelatorio({
   frentes,
   prazos,
   lancamentos,
+  documentos,
   variant,
 }: {
   caso: Caso;
@@ -40,12 +47,26 @@ export function CasoRelatorio({
   frentes: Frente[];
   prazos: Atividade[];
   lancamentos: Lancamento[];
+  documentos: Documento[];
   variant: "interno" | "cliente";
 }) {
   const frentesVisiveis =
     variant === "cliente" ? frentes.filter((f) => f.visivel_cliente) : frentes;
   const prazosVisiveis =
     variant === "cliente" ? prazos.filter((p) => p.visivel_cliente) : prazos;
+
+  const marcos: Marco[] = [
+    { label: "Atendimento", data: caso.aberto_em },
+    ...(contrato?.status === "assinado" && contrato.assinado_em
+      ? [{ label: "Contrato fechado", data: contrato.assinado_em }]
+      : []),
+    ...lancamentos
+      .filter((l) => l.status === "pago" && l.pago_em)
+      .map((l) => ({ label: `Pagamento confirmado — ${l.descricao}`, data: l.pago_em! })),
+    ...documentos
+      .filter((d) => d.marco_cliente)
+      .map((d) => ({ label: d.marco_cliente!, data: d.created_at })),
+  ].sort((a, b) => new Date(a.data).getTime() - new Date(b.data).getTime());
 
   const totalPago = lancamentos
     .filter((l) => l.status === "pago")
@@ -183,40 +204,68 @@ export function CasoRelatorio({
           ))}
         </div>
 
-        <p className="mt-8 font-eyebrow text-[10px] text-ink-dim">
-          Prazos ({prazosVisiveis.length}
-          {variant === "cliente" && prazosVisiveis.length !== prazos.length
-            ? ` de ${prazos.length}`
-            : ""}
-          )
-        </p>
-        <div className="mt-2 border border-hairline">
-          {prazosVisiveis.length === 0 && (
-            <p className="px-4 py-4 text-center text-xs text-ink-dim">
-              Nenhum prazo.
+        {variant === "cliente" && (
+          <>
+            <p className="mt-8 font-eyebrow text-[10px] text-ink-dim">
+              Marcos ({marcos.length})
             </p>
-          )}
-          {prazosVisiveis.map((prazo, index) => (
-            <div
-              key={prazo.id}
-              className={`flex items-center justify-between gap-4 px-4 py-2 text-xs ${
-                index !== prazosVisiveis.length - 1 ? "border-b border-hairline" : ""
-              }`}
-            >
-              <div className="min-w-0">
-                <p className="text-ink">{prazo.titulo}</p>
-                <p className="font-mono text-[10px] text-ink-dim">
-                  {ATIVIDADE_TIPO_LABELS[prazo.tipo]} · {formatDate(prazo.data)}
+            <div className="mt-2 border border-hairline">
+              {marcos.length === 0 && (
+                <p className="px-4 py-4 text-center text-xs text-ink-dim">
+                  Nenhum marco ainda.
                 </p>
-              </div>
-              <span
-                className={`shrink-0 border px-2 py-0.5 font-mono text-[9px] uppercase tracking-wide ${ATIVIDADE_STATUS_COLORS[prazo.status]}`}
-              >
-                {ATIVIDADE_STATUS_LABELS[prazo.status]}
-              </span>
+              )}
+              {marcos.map((marco, index) => (
+                <div
+                  key={`${marco.label}-${marco.data}`}
+                  className={`flex items-center justify-between gap-4 px-4 py-2 text-xs ${
+                    index !== marcos.length - 1 ? "border-b border-hairline" : ""
+                  }`}
+                >
+                  <p className="text-ink">{marco.label}</p>
+                  <span className="shrink-0 font-mono text-[10px] text-ink-dim">
+                    {formatDate(marco.data)}
+                  </span>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        )}
+
+        {variant === "interno" && (
+          <>
+            <p className="mt-8 font-eyebrow text-[10px] text-ink-dim">
+              Prazos ({prazosVisiveis.length})
+            </p>
+            <div className="mt-2 border border-hairline">
+              {prazosVisiveis.length === 0 && (
+                <p className="px-4 py-4 text-center text-xs text-ink-dim">
+                  Nenhum prazo.
+                </p>
+              )}
+              {prazosVisiveis.map((prazo, index) => (
+                <div
+                  key={prazo.id}
+                  className={`flex items-center justify-between gap-4 px-4 py-2 text-xs ${
+                    index !== prazosVisiveis.length - 1 ? "border-b border-hairline" : ""
+                  }`}
+                >
+                  <div className="min-w-0">
+                    <p className="text-ink">{prazo.titulo}</p>
+                    <p className="font-mono text-[10px] text-ink-dim">
+                      {ATIVIDADE_TIPO_LABELS[prazo.tipo]} · {formatDate(prazo.data)}
+                    </p>
+                  </div>
+                  <span
+                    className={`shrink-0 border px-2 py-0.5 font-mono text-[9px] uppercase tracking-wide ${ATIVIDADE_STATUS_COLORS[prazo.status]}`}
+                  >
+                    {ATIVIDADE_STATUS_LABELS[prazo.status]}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
 
         <p className="mt-8 font-eyebrow text-[10px] text-ink-dim">Financeiro</p>
         <div className="mt-2 border border-hairline">

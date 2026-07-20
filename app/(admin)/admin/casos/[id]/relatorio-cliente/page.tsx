@@ -24,6 +24,7 @@ export default async function CasoRelatorioClientePage(
       frentes={dados.frentes}
       prazos={dados.prazos}
       lancamentos={dados.lancamentos}
+      documentos={dados.documentos}
       variant="cliente"
     />
   );

@@ -25,13 +25,15 @@ export async function POST(
   const { id } = await ctx.params;
   const body = await request.json();
   const texto = typeof body?.texto === "string" ? body.texto.trim() : "";
+  const retificaId =
+    typeof body?.retifica_id === "string" && body.retifica_id ? body.retifica_id : null;
 
   if (!texto) {
     return NextResponse.json({ error: "Texto é obrigatório" }, { status: 400 });
   }
 
   try {
-    const entry = await createHistoricoEntry(id, texto);
+    const entry = await createHistoricoEntry(id, texto, retificaId);
     return NextResponse.json({ entry });
   } catch {
     return NextResponse.json(

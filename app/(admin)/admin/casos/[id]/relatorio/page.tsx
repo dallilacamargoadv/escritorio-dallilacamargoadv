@@ -24,6 +24,7 @@ export default async function CasoRelatorioInternoPage(
       frentes={dados.frentes}
       prazos={dados.prazos}
       lancamentos={dados.lancamentos}
+      documentos={dados.documentos}
       variant="interno"
     />
   );

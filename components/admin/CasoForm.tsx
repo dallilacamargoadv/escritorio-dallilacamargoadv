@@ -103,9 +103,9 @@ export function CasoForm({
             <Link
               href={`/admin/casos/${caso.id}/relatorio-cliente`}
               target="_blank"
-              className="border border-hairline-strong px-3 py-1.5 text-xs text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold"
+              className="border border-gold bg-gold px-3 py-1.5 text-xs font-semibold text-bg transition-all duration-150 hover:bg-transparent hover:text-gold"
             >
-              Relatório do cliente
+              📄 Abrir relatório do cliente
             </Link>
           </div>
         )}

@@ -8,6 +8,7 @@ export async function POST(request: NextRequest) {
   const casoId = formData.get("caso_id");
   const file = formData.get("file");
   const descricao = formData.get("descricao");
+  const marcoCliente = formData.get("marco_cliente");
 
   if (typeof casoId !== "string" || !casoId || !(file instanceof File)) {
     return NextResponse.json(
@@ -28,6 +29,10 @@ export async function POST(request: NextRequest) {
       casoId,
       file,
       descricao: typeof descricao === "string" && descricao.trim() ? descricao.trim() : null,
+      marcoCliente:
+        typeof marcoCliente === "string" && marcoCliente.trim()
+          ? marcoCliente.trim()
+          : null,
     });
     return NextResponse.json({ documento });
   } catch {

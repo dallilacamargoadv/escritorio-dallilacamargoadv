@@ -6,6 +6,7 @@ export interface CasoHistoricoEntry {
   texto: string;
   autor: string;
   created_at: string;
+  retifica_id: string | null;
 }
 
 /** Ordenado do mais antigo pro mais recente — a primeira entrada é a Anamnese. */
@@ -26,11 +27,12 @@ export async function getHistoricoByCaso(
 export async function createHistoricoEntry(
   casoId: string,
   texto: string,
+  retificaId: string | null,
 ): Promise<CasoHistoricoEntry> {
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("caso_historico")
-    .insert({ caso_id: casoId, texto })
+    .insert({ caso_id: casoId, texto, retifica_id: retificaId })
     .select()
     .single();
 
