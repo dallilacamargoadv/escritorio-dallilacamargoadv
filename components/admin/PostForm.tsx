@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { BLOG_CATEGORIES, type BlogCategory } from "@/lib/blog";
 import type { AdminPost } from "@/lib/db-blog-admin";
+import { RichTextEditor } from "@/components/admin/RichTextEditor";
 
 export function PostForm({ post }: { post?: AdminPost }) {
   const router = useRouter();
@@ -99,14 +100,11 @@ export function PostForm({ post }: { post?: AdminPost }) {
 
         <div>
           <label className="font-eyebrow text-[10px] text-ink-dim">
-            Conteúdo (Markdown)
+            Conteúdo
           </label>
-          <textarea
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            rows={16}
-            className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 font-mono text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
-          />
+          <div className="mt-2">
+            <RichTextEditor value={content} onChange={setContent} />
+          </div>
         </div>
 
         <label className="flex items-center gap-2 text-sm text-ink">

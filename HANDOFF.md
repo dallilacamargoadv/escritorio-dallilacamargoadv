@@ -1,6 +1,6 @@
 # Handoff — Site institucional + Sistema Operacional Jurídico, Dallila Camargo I Advocacia
 
-> Documento de continuidade de sessão. Cole este arquivo (ou peça para o Claude ler `HANDOFF.md` na raiz do projeto) no início de uma nova conversa para retomar exatamente de onde paramos, sem precisar reprocessar todo o histórico anterior. **Atualizado em 2026-07-20**, ao final de uma sessão que implementou a Onda 3 do roadmap de CRM jurídico (Serviços enriquecidos) — o texto abaixo é o estado atual, não uma narrativa cronológica completa (essa fica resumida na seção 9, se precisar).
+> Documento de continuidade de sessão. Cole este arquivo (ou peça para o Claude ler `HANDOFF.md` na raiz do projeto) no início de uma nova conversa para retomar exatamente de onde paramos, sem precisar reprocessar todo o histórico anterior. **Atualizado em 2026-07-20**, ao final de uma sessão muito longa e densa que implementou a Onda 3 completa do roadmap de CRM jurídico, corrigiu dois bugs reais em Contratos, e entregou adiantada praticamente toda a "reorganização" que a cliente pediu no meio da sessão (Agenda independente, tela do caso com linha do tempo única + retificação + marcos no relatório do cliente, Motor de Fluxo completo com minutas/SLA/cronômetro) e a Onda 5 (Leads: origem/Kanban separado/funil) — o texto abaixo é o estado atual e final da sessão, não uma narrativa cronológica completa (essa fica resumida na seção 9, se precisar). **Se você está começando uma conversa nova a partir deste arquivo: leia a seção 11 primeiro, ela diz exatamente por onde retomar.**
 
 ## 1. Quem é a cliente e o que é o projeto
 
@@ -148,19 +148,27 @@ Ver `app/globals.css` para os tokens completos.
 
 ## 7. Estado atual em produção
 
-**Commitado/pushado/em produção (Vercel, `READY`)** até o commit `b640cfb`. Domínio próprio `dallilacamargoadv.com.br` confirmado ativo e servindo o deployment mais recente. Em ordem cronológica (sessões recentes):
+**Tudo commitado, pushado e em produção (Vercel, `READY`)** até o commit `f70e469` — **nada pendente de commit ao final desta sessão**. Domínio próprio `dallilacamargoadv.com.br` confirmado ativo e servindo o deployment mais recente (cada commit abaixo foi verificado individualmente com `list_deployments`/`get_deployment` até `READY` antes de seguir pro próximo). Em ordem cronológica:
 
 - Financeiro Fase 1 (`d82fb72`) e Fase 2 completa — Projeções (`ae11eec`), Análise financeira + categorias editáveis + sugestão automática (`10af2c6`).
 - HANDOFF.md consolidado (`d1b4243`).
 - **PWA do painel admin** (`82a0e85`) — ver seção 8.4.
 - **Onda 1 do roadmap de CRM jurídico: Storage + Documentos do caso** (`35d015f`) — ver seção 8.5.
 - **Onda 2: rename Prazos→Atividades + Central de Atividades + Kanban + Agenda + exclusão** (`b640cfb`) — ver seção 8.5.
-
-**⚠️ Pendente de commit**: a **Onda 3 (Serviços enriquecidos)** já está implementada e testada nesta sessão (migração aplicada no Supabase, código, eslint/build limpos), mas **ainda não foi commitada nem pushada** — faltava decidir com a cliente. Ver seção 8.5 pro detalhe completo do que foi feito.
+- **Onda 3: Serviços enriquecidos** (`3889523`) — prioridade/SLA/categoria/responsável, dados processuais, segredo de justiça, Comunica PJe, Anamnese Jurídica. Ver seção 8.5.
+- **2 correções de bug em Contratos** (`5792fed`, `282eb4a`) — status preso em Rascunho + rota que ignorava o status enviado + periodicidade virou seleção. Ver seção 8.7.
+- **Agenda independente — entrega 1/3 da reorganização adiantada** (`37d2fe1`) — ver seção 8.7.
+- **Checkbox de conclusão rápida em Atividades** (`4e23711`) — pedido pontual da cliente depois de testar a Agenda.
+- **Tela do caso reorganizada (linha do tempo única) — entrega 2/3** (`79bb287`) — inclui retificação de Anamnese e marcos no relatório do cliente. Ver seção 8.7.
+- **Motor de Fluxo — entrega 3/3** (`ae773db`) — ver seção 8.7.
+- **Onda 4 completa: minutas/SLA/cronômetro por etapa** (`165591f`) — ver seção 8.7.
+- **Onda 5: Leads (origem, Kanban separado, funil)** (`f70e469`) — ver seção 8.7.
 
 **Arquivo estranho, sem decisão**: `components/admin/AdminSidebar 2.tsx` (untracked, provável duplicata de conflito do iCloud Drive) — ainda sem decisão da cliente. Não mexer sem perguntar de novo. Achado também nesta sessão: `.git/refs/heads/main 2` (mesma família de arquivo duplicado do iCloud) — também não mexido, só registrado.
 
 **Duas variáveis de ambiente pendentes no Vercel** (só a cliente pode configurar): `CRON_SECRET` e `SUPABASE_SERVICE_ROLE_KEY`. Ainda não confirmado se ela configurou — perguntar se for relevante.
+
+**Limitação conhecida desta sessão**: em nenhum momento houve acesso às credenciais de login da cliente no painel — **todo teste foi feito via SQL direto no Supabase** (inserção/leitura/exclusão simulando exatamente o que a UI faz), nunca clicando de verdade na interface. A cliente testou na UI de verdade depois de cada deploy e confirmou funcionando ("ficou show"/"perfeito"), mas isso é informação pra próxima sessão saber: se algo visual/de interação parecer estranho que uma checagem de banco não pegaria, é a primeira hipótese a considerar.
 
 ## 8. Pedidos grandes — estado por item
 
@@ -299,6 +307,11 @@ A cliente comprou `dallilacamargoadv.com.br` e pediu ajuda pra conectar na Verce
 15. **PWA do painel admin** — **concluído** (seção 8.4).
 16. **Domínio próprio conectado** (Cloudflare + Vercel) — **concluído** (seção 8.6).
 17. **Diagnóstico crítico + roadmap de CRM jurídico definido em 8 ondas** — ondas 1 (Storage/Documentos) e 2 (Atividades: rename/Central/Kanban/Agenda/exclusão) **concluídas**; ondas 3–8 pendentes (seção 8.5).
+18. **Onda 3: Serviços enriquecidos** — **concluída** (seção 8.5).
+19. **2 bugs de Contrato corrigidos** (status preso em Rascunho + rota ignorando status enviado) — **concluído** (seção 8.7).
+20. **Reorganização adiantada** (pedido novo da cliente no meio da sessão, puxando partes da Onda 4 pra agora): **Agenda independente** (entrega 1), **tela do caso com linha do tempo única + retificação de Anamnese + marcos no relatório do cliente** (entrega 2), **Motor de Fluxo** (entrega 3) — as 3 **concluídas** (seção 8.7).
+21. **Onda 4 completa** (o que tinha ficado faltando do Motor de Fluxo: link de minutas, alerta de SLA, cronômetro por etapa) — **concluída**, pedida pela cliente logo depois de aprovar a entrega 3 (seção 8.7).
+22. **Onda 5: Leads** (origem estruturada, Kanban separado pros outros canais, funil por origem na Visão Geral) — **concluída** (seção 8.7). **Sessão encerrada neste ponto** — próximo passo é escolher entre Ondas 6-8 ou outro pedido novo, ver seção 11.
 
 ## 10. Preferências e padrões de trabalho da cliente
 
@@ -312,11 +325,14 @@ A cliente comprou `dallilacamargoadv.com.br` e pediu ajuda pra conectar na Verce
 - Muda de prioridade com frequência — sempre perguntar qual o próximo passo em vez de presumir.
 - **Sempre pede confirmação explícita antes de cada commit e de cada push/deploy**, mesmo em sequência. Confirmado à risca durante toda a sessão, incluindo quando o deploy da Vercel travou e precisou de redeploy manual.
 - **Quando algo trava fora do meu controle (ex.: fila da Vercel)**, ela prefere ser informada com clareza do que é e não é problema do código, e decidir junto se vale esperar ou agir — não gosta de ficar no escuro sobre o que está acontecendo.
+- **"Posso ver?"** costuma significar que ela foi olhar em produção e não achou a mudança — quase sempre porque ainda não foi commitado/pushado (ela não distingue "codado" de "no ar"), não um bug. Confirmado várias vezes nesta sessão. Primeira reação: checar se já tem commit pendente de push, não sair debugando.
+- **Aprovações vagas** ("pode seguir", "continuar") depois de eu oferecer várias opções nem sempre significam "escolha por conta própria" — às vezes ela só não percebeu que era uma pergunta de múltipla escolha. Confirmado nesta sessão (perguntei qual onda entre 4 opções, ela respondeu "pose seguir", precisei perguntar de novo qual especificamente). Vale re-perguntar de forma fechada em vez de presumir qual opção ela quis dizer.
+- **Ela aceita bem quando eu levo a fundo um pedido vago dela**: no pedido da "reorganização adiantada" (linha do tempo, Motor de Fluxo, Agenda), a mensagem original dela misturava termos genéricos de SaaS com o vocabulário real do projeto — precisei fazer perguntas estruturadas (`AskUserQuestion`) pra fechar cada decisão de schema/UX antes de codar, e ela respondeu bem a isso, inclusive corrigindo minha recomendação quando não batia exatamente com o que queria (ex.: cronômetro "não é pra cobrar a mais", edição de etapas "pode ser misto").
 
 ## 11. Como retomar
 
-1. Ler este arquivo primeiro (auto-suficiente).
-2. **Próximo passo mais provável**: a reorganização adiantada completa (Agenda, tela do caso, Motor de Fluxo com minutas/SLA/cronômetro) e a Onda 5 (Leads: origem/Kanban separado/funil) já foram feitas, junto com a Onda 3 — ver seção 8.7. **Verificar se a Onda 5 já foi commitada/pushada** antes de assumir produção (pode ter ficado pendente de confirmação no fim da sessão). Depois, **perguntar o que ela quer a seguir** — não presumir, ela muda de prioridade com frequência. Candidatos naturais: Ondas 6-8 do roadmap original (Blog/Financeiro pessoal/Comunica PJe automático, seção 8.5).
+1. Ler este arquivo primeiro (auto-suficiente) — a seção 7 já confirma que está tudo commitado/pushado/em produção até `f70e469`, não precisa checar de novo a menos que desconfie de algo.
+2. **Próximo passo**: a sessão terminou logo depois da cliente confirmar a Onda 5 funcionando ("Ok, perfeito!"), **sem ela ter dito qual é a próxima prioridade ainda**. Comece a próxima conversa **perguntando o que ela quer fazer agora** — não presumir. Candidatos naturais do roadmap original: Onda 6 (Blog rich-text/SEO/Configurações), Onda 7 (Financeiro pessoal, tabelas separadas), Onda 8 (integração automática com o Comunica PJe — ver decisão de fonte na seção 8.5, já testada e com endpoint confirmado). Mas ela também pode trazer algo totalmente novo, ou um ajuste fino em algo já entregue — trate com a mesma seriedade (ver seção 10, ela é direta sobre pedir ajustes pós-entrega).
 3. Se for continuar a reorganização adiantada ou o roadmap de ondas: reler a seção 8.5 e a 8.7 inteiras antes de começar (têm as decisões já confirmadas — não re-perguntar sobre financeiro pessoal/portal do cliente/minutas/fonte de integração de tribunal (Comunica PJe, não DataJud)/layout da linha do tempo do caso/estrutura do Motor de Fluxo/Agenda separada).
 4. Não tocar em `components/admin/AdminSidebar 2.tsx` nem `.git/refs/heads/main 2` (arquivos estranhos, sem decisão) nem em `HANDOFF.md`-adjacent sem perguntar.
 5. Verificação padrão antes de qualquer commit: `npx eslint .` + `npm run build` limpos + teste manual no browser com dado real no Supabase (sempre limpar depois).

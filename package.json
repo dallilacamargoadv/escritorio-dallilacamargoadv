@@ -13,6 +13,10 @@
     "@dnd-kit/utilities": "^3.2.2",
     "@supabase/ssr": "^0.12.1",
     "@supabase/supabase-js": "^2.110.3",
+    "@tiptap/extension-image": "^3.28.0",
+    "@tiptap/extension-link": "^3.28.0",
+    "@tiptap/react": "^3.28.0",
+    "@tiptap/starter-kit": "^3.28.0",
     "gray-matter": "^4.0.3",
     "gsap": "^3.15.0",
     "lucide-react": "^1.24.0",
@@ -22,6 +26,7 @@
     "react-dom": "19.2.4",
     "reading-time": "^1.5.0",
     "recharts": "^3.9.2",
+    "tiptap-markdown": "^0.9.0",
     "xlsx": "^0.18.5",
     "zod": "^4.4.3"
   },
