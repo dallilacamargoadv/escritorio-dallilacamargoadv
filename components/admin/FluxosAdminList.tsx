@@ -50,11 +50,19 @@ export function FluxosAdminList({
     nome: string,
     ordem: number,
     checklist: string[],
+    slaDias: number | null,
+    minutaUrl: string | null,
   ) {
     const res = await fetch(`/api/admin/fluxos/${templateId}/etapas`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ nome, ordem, checklist }),
+      body: JSON.stringify({
+        nome,
+        ordem,
+        checklist,
+        sla_dias: slaDias,
+        minuta_url: minutaUrl,
+      }),
     });
     const data = await res.json();
     if (res.ok && data.etapa) {
@@ -148,8 +156,15 @@ export function FluxosAdminList({
             key={template.id}
             template={template}
             onDeleteTemplate={() => handleDeleteTemplate(template.id)}
-            onAddEtapa={(nome, checklist) =>
-              handleAddEtapa(template.id, nome, template.etapas.length, checklist)
+            onAddEtapa={(nome, checklist, slaDias, minutaUrl) =>
+              handleAddEtapa(
+                template.id,
+                nome,
+                template.etapas.length,
+                checklist,
+                slaDias,
+                minutaUrl,
+              )
             }
             onDeleteEtapa={(etapaId) => handleDeleteEtapa(template.id, etapaId)}
           />
@@ -167,11 +182,18 @@ function TemplateCard({
 }: {
   template: FluxoTemplateComEtapas;
   onDeleteTemplate: () => void;
-  onAddEtapa: (nome: string, checklist: string[]) => void;
+  onAddEtapa: (
+    nome: string,
+    checklist: string[],
+    slaDias: number | null,
+    minutaUrl: string | null,
+  ) => void;
   onDeleteEtapa: (etapaId: string) => void;
 }) {
   const [novaEtapa, setNovaEtapa] = useState("");
   const [novoChecklist, setNovoChecklist] = useState("");
+  const [novoSla, setNovoSla] = useState("");
+  const [novaMinuta, setNovaMinuta] = useState("");
 
   return (
     <div className="border border-hairline-strong bg-surface p-4">
@@ -207,6 +229,21 @@ function TemplateCard({
                 {etapa.checklist.length} itens de checklist
               </span>
             )}
+            {etapa.sla_dias != null && (
+              <span className="font-mono text-[9px] text-warning">
+                SLA {etapa.sla_dias}d
+              </span>
+            )}
+            {etapa.minuta_url && (
+              <a
+                href={etapa.minuta_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-[9px] text-gold hover:underline"
+              >
+                minuta ↗
+              </a>
+            )}
             <button
               type="button"
               onClick={() => onDeleteEtapa(etapa.id)}
@@ -231,6 +268,21 @@ function TemplateCard({
             placeholder="Checklist, separado por vírgula (opcional)"
             className="min-w-[200px] flex-1 border border-hairline-strong bg-bg px-2 py-1 text-xs text-ink outline-none focus:border-gold"
           />
+          <input
+            type="number"
+            min={0}
+            value={novoSla}
+            onChange={(e) => setNovoSla(e.target.value)}
+            placeholder="SLA (dias)"
+            className="w-24 border border-hairline-strong bg-bg px-2 py-1 text-xs text-ink outline-none focus:border-gold"
+          />
+          <input
+            type="text"
+            value={novaMinuta}
+            onChange={(e) => setNovaMinuta(e.target.value)}
+            placeholder="Link da minuta (opcional)"
+            className="min-w-[160px] flex-1 border border-hairline-strong bg-bg px-2 py-1 text-xs text-ink outline-none focus:border-gold"
+          />
           <button
             type="button"
             onClick={() => {
@@ -239,9 +291,16 @@ function TemplateCard({
                 .split(",")
                 .map((c) => c.trim())
                 .filter(Boolean);
-              onAddEtapa(novaEtapa.trim(), checklist);
+              onAddEtapa(
+                novaEtapa.trim(),
+                checklist,
+                novoSla.trim() ? Number(novoSla) : null,
+                novaMinuta.trim() || null,
+              );
               setNovaEtapa("");
               setNovoChecklist("");
+              setNovoSla("");
+              setNovaMinuta("");
             }}
             className="border border-hairline-strong px-3 py-1 text-xs text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold"
           >

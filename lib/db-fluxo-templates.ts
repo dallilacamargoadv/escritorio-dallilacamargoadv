@@ -8,6 +8,8 @@ export interface FluxoEtapaTemplate {
   nome: string;
   ordem: number;
   checklist: string[];
+  sla_dias: number | null;
+  minuta_url: string | null;
 }
 
 export interface FluxoTemplate {
@@ -90,11 +92,20 @@ export async function createFluxoEtapaTemplate(
   nome: string,
   ordem: number,
   checklist: string[],
+  slaDias: number | null,
+  minutaUrl: string | null,
 ): Promise<FluxoEtapaTemplate> {
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("fluxo_etapas_template")
-    .insert({ template_id: templateId, nome, ordem, checklist })
+    .insert({
+      template_id: templateId,
+      nome,
+      ordem,
+      checklist,
+      sla_dias: slaDias,
+      minuta_url: minutaUrl,
+    })
     .select()
     .single();
 
@@ -106,11 +117,13 @@ export async function updateFluxoEtapaTemplate(
   id: string,
   nome: string,
   checklist: string[],
+  slaDias: number | null,
+  minutaUrl: string | null,
 ): Promise<FluxoEtapaTemplate> {
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("fluxo_etapas_template")
-    .update({ nome, checklist })
+    .update({ nome, checklist, sla_dias: slaDias, minuta_url: minutaUrl })
     .eq("id", id)
     .select()
     .single();

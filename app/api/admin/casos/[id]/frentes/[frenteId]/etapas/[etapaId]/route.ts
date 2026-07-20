@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import {
   deleteFrenteEtapa,
+  iniciarTimerEtapa,
+  pausarTimerEtapa,
   setFrenteEtapaChecklist,
   setFrenteEtapaDocumento,
   setFrenteEtapaStatus,
@@ -17,6 +19,16 @@ export async function PATCH(
   const body = await request.json();
 
   try {
+    if (body?.timer_action === "start") {
+      const etapa = await iniciarTimerEtapa(etapaId);
+      return NextResponse.json({ etapa });
+    }
+
+    if (body?.timer_action === "stop") {
+      const etapa = await pausarTimerEtapa(etapaId);
+      return NextResponse.json({ etapa });
+    }
+
     if (VALID_STATUSES.includes(body?.status)) {
       const etapa = await setFrenteEtapaStatus(etapaId, id, body.status);
       return NextResponse.json({ etapa });

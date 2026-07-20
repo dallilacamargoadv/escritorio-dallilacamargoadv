@@ -2,6 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { FrenteEtapa } from "@/lib/db-frente-etapas";
+import {
+  formatSegundos,
+  isEtapaAtrasada,
+  tempoExibidoEtapa,
+} from "@/lib/frente-etapas-utils";
 
 export function FrenteEtapasStepper({
   casoId,
@@ -13,6 +18,7 @@ export function FrenteEtapasStepper({
   const [etapas, setEtapas] = useState<FrenteEtapa[] | null>(null);
   const [novaEtapa, setNovaEtapa] = useState("");
   const [saving, setSaving] = useState(false);
+  const [, setTick] = useState(0);
   const fileInputs = useRef<Record<string, HTMLInputElement | null>>({});
 
   useEffect(() => {
@@ -20,6 +26,32 @@ export function FrenteEtapasStepper({
       .then((res) => res.json())
       .then((data) => setEtapas(data.etapas ?? []));
   }, [casoId, frenteId]);
+
+  useEffect(() => {
+    const algumRodando = etapas?.some((e) => e.timer_iniciado_em);
+    if (!algumRodando) return;
+    const interval = setInterval(() => setTick((t) => t + 1), 1000);
+    return () => clearInterval(interval);
+  }, [etapas]);
+
+  async function handleToggleTimer(etapa: FrenteEtapa) {
+    const acao = etapa.timer_iniciado_em ? "stop" : "start";
+    const res = await fetch(
+      `/api/admin/casos/${casoId}/frentes/${frenteId}/etapas/${etapa.id}`,
+      {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ timer_action: acao }),
+      },
+    );
+    const data = await res.json();
+    if (data.etapa) {
+      setEtapas((prev) =>
+        prev ? prev.map((e) => (e.id === etapa.id ? data.etapa : e)) : prev,
+      );
+    }
+  }
+
 
   async function handleToggleStatus(etapa: FrenteEtapa) {
     const novoStatus = etapa.status === "concluida" ? "pendente" : "concluida";
@@ -140,6 +172,8 @@ export function FrenteEtapasStepper({
       <div className="flex flex-col">
         {etapas.map((etapa, index) => {
           const done = etapa.status === "concluida";
+          const atrasada = isEtapaAtrasada(etapa);
+          const timerRodando = Boolean(etapa.timer_iniciado_em);
           return (
             <div
               key={etapa.id}
@@ -170,6 +204,21 @@ export function FrenteEtapasStepper({
                   >
                     {done ? "Concluída" : "Pendente"}
                   </span>
+                  {atrasada && (
+                    <span className="border border-error px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wide text-error">
+                      Atrasada (SLA {etapa.sla_dias}d)
+                    </span>
+                  )}
+                  {etapa.minuta_url && (
+                    <a
+                      href={etapa.minuta_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-mono text-[9px] text-gold hover:underline"
+                    >
+                      minuta ↗
+                    </a>
+                  )}
                   <button
                     type="button"
                     onClick={() => handleDeleteEtapa(etapa)}
@@ -203,7 +252,20 @@ export function FrenteEtapasStepper({
                   </div>
                 )}
 
-                <div className="mt-1.5 flex flex-wrap items-center gap-2">
+                <div className="mt-1.5 flex flex-wrap items-center gap-3">
+                  <button
+                    type="button"
+                    onClick={() => handleToggleTimer(etapa)}
+                    className={`flex items-center gap-1.5 border px-2 py-0.5 font-mono text-[10px] transition-colors duration-150 ${
+                      timerRodando
+                        ? "border-warning text-warning"
+                        : "border-hairline-strong text-ink-dim hover:border-gold hover:text-gold"
+                    }`}
+                    title="Cronômetro — referência de tempo gasto, não gera cobrança"
+                  >
+                    {timerRodando ? "⏸ Pausar" : "▶ Iniciar"}
+                    <span className="tabular-nums">{formatSegundos(tempoExibidoEtapa(etapa))}</span>
+                  </button>
                   <input
                     ref={(el) => {
                       fileInputs.current[etapa.id] = el;

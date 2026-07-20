@@ -9,6 +9,14 @@ function parseChecklist(value: unknown): string[] {
     .filter(Boolean);
 }
 
+function optionalNumber(value: unknown): number | null {
+  return typeof value === "number" && Number.isFinite(value) ? value : null;
+}
+
+function optionalText(value: unknown): string | null {
+  return typeof value === "string" && value.trim() ? value.trim() : null;
+}
+
 export async function POST(
   request: NextRequest,
   ctx: RouteContext<"/api/admin/fluxos/[id]/etapas">,
@@ -18,13 +26,22 @@ export async function POST(
   const nome = typeof body?.nome === "string" ? body.nome.trim() : "";
   const ordem = typeof body?.ordem === "number" ? body.ordem : 0;
   const checklist = parseChecklist(body?.checklist);
+  const slaDias = optionalNumber(body?.sla_dias);
+  const minutaUrl = optionalText(body?.minuta_url);
 
   if (!nome) {
     return NextResponse.json({ error: "Nome é obrigatório" }, { status: 400 });
   }
 
   try {
-    const etapa = await createFluxoEtapaTemplate(id, nome, ordem, checklist);
+    const etapa = await createFluxoEtapaTemplate(
+      id,
+      nome,
+      ordem,
+      checklist,
+      slaDias,
+      minutaUrl,
+    );
     return NextResponse.json({ etapa });
   } catch {
     return NextResponse.json(
