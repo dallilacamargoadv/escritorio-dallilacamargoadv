@@ -113,14 +113,12 @@ function CategoriaBloco({
   );
 }
 
-export function CategoriasDespesaModal({
+export function CategoriasDespesaEditor({
   categorias,
   onChange,
-  onClose,
 }: {
   categorias: DespesaCategoria[];
   onChange: (categorias: DespesaCategoria[]) => void;
-  onClose: () => void;
 }) {
   const [novaCategoria, setNovaCategoria] = useState("");
   const [criando, setCriando] = useState(false);
@@ -197,6 +195,57 @@ export function CategoriasDespesaModal({
   }
 
   return (
+    <div>
+      {categorias.map((categoria) => (
+        <CategoriaBloco
+          key={categoria.id}
+          categoria={categoria}
+          onRenameCategoria={(nome) => handleRenameCategoria(categoria.id, nome)}
+          onDeleteCategoria={() => handleDeleteCategoria(categoria.id)}
+          onAddSubcategoria={(nome) => handleAddSubcategoria(categoria.id, nome)}
+          onDeleteSubcategoria={(subId) => handleDeleteSubcategoria(categoria.id, subId)}
+        />
+      ))}
+
+      <p className="mb-1.5 mt-4 font-eyebrow text-[10px] text-ink-dim">Nova categoria</p>
+      <div className="flex gap-1.5">
+        <input
+          value={novaCategoria}
+          onChange={(e) => setNovaCategoria(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") handleAddCategoria();
+          }}
+          placeholder="Ex.: Seguros"
+          className="flex-1 border border-hairline-strong bg-bg px-3 py-2 text-xs text-ink outline-none focus:border-gold"
+        />
+        <button
+          type="button"
+          onClick={handleAddCategoria}
+          disabled={!novaCategoria.trim() || criando}
+          className="border border-gold bg-gold px-3.5 py-2 text-xs text-bg transition-all duration-150 hover:bg-transparent hover:text-gold disabled:opacity-50"
+        >
+          + criar
+        </button>
+      </div>
+
+      <p className="mt-4 text-[11px] text-ink-dim">
+        Excluir uma categoria também remove as subcategorias dela. Despesas já lançadas com essa
+        categoria continuam com o texto salvo.
+      </p>
+    </div>
+  );
+}
+
+export function CategoriasDespesaModal({
+  categorias,
+  onChange,
+  onClose,
+}: {
+  categorias: DespesaCategoria[];
+  onChange: (categorias: DespesaCategoria[]) => void;
+  onClose: () => void;
+}) {
+  return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
       onClick={onClose}
@@ -220,42 +269,7 @@ export function CategoriasDespesaModal({
         </div>
 
         <div className="flex-1 overflow-y-auto px-5 py-4">
-          {categorias.map((categoria) => (
-            <CategoriaBloco
-              key={categoria.id}
-              categoria={categoria}
-              onRenameCategoria={(nome) => handleRenameCategoria(categoria.id, nome)}
-              onDeleteCategoria={() => handleDeleteCategoria(categoria.id)}
-              onAddSubcategoria={(nome) => handleAddSubcategoria(categoria.id, nome)}
-              onDeleteSubcategoria={(subId) => handleDeleteSubcategoria(categoria.id, subId)}
-            />
-          ))}
-
-          <p className="mb-1.5 mt-4 font-eyebrow text-[10px] text-ink-dim">Nova categoria</p>
-          <div className="flex gap-1.5">
-            <input
-              value={novaCategoria}
-              onChange={(e) => setNovaCategoria(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") handleAddCategoria();
-              }}
-              placeholder="Ex.: Seguros"
-              className="flex-1 border border-hairline-strong bg-bg px-3 py-2 text-xs text-ink outline-none focus:border-gold"
-            />
-            <button
-              type="button"
-              onClick={handleAddCategoria}
-              disabled={!novaCategoria.trim() || criando}
-              className="border border-gold bg-gold px-3.5 py-2 text-xs text-bg transition-all duration-150 hover:bg-transparent hover:text-gold disabled:opacity-50"
-            >
-              + criar
-            </button>
-          </div>
-        </div>
-
-        <div className="border-t border-hairline px-5 py-3 text-[11px] text-ink-dim">
-          Excluir uma categoria também remove as subcategorias dela. Despesas já lançadas com essa
-          categoria continuam com o texto salvo.
+          <CategoriasDespesaEditor categorias={categorias} onChange={onChange} />
         </div>
       </div>
     </div>

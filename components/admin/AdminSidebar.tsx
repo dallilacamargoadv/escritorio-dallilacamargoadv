@@ -22,6 +22,7 @@ import {
   LogOut,
   Workflow,
   Search,
+  Settings,
 } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { createClient } from "@/lib/supabase/client";
@@ -108,6 +109,13 @@ export function AdminSidebar({
           icon: Bell,
           exact: false,
           badge: unreadNotificacoesCount,
+        },
+        {
+          href: "/admin/configuracoes",
+          label: "Configurações",
+          icon: Settings,
+          exact: false,
+          badge: 0,
         },
       ],
     },
