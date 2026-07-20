@@ -12,7 +12,7 @@ import {
   Newspaper,
   Wallet,
   Repeat,
-  CalendarClock,
+  ListChecks,
   TrendingUp,
   Target,
   Link2,
@@ -28,11 +28,11 @@ import { InstallAppButton } from "@/components/admin/InstallAppButton";
 export function AdminSidebar({
   newLeadsCount,
   unreadNotificacoesCount,
-  urgentPrazosCount,
+  urgentAtividadesCount,
 }: {
   newLeadsCount: number;
   unreadNotificacoesCount: number;
-  urgentPrazosCount: number;
+  urgentAtividadesCount: number;
 }) {
   const pathname = usePathname();
   const router = useRouter();
@@ -53,14 +53,14 @@ export function AdminSidebar({
       ],
     },
     {
-      label: "Prazos",
+      label: "Atividades",
       items: [
         {
-          href: "/admin/prazos",
-          label: "Prazos",
-          icon: CalendarClock,
+          href: "/admin/atividades",
+          label: "Atividades",
+          icon: ListChecks,
           exact: false,
-          badge: urgentPrazosCount,
+          badge: urgentAtividadesCount,
         },
       ],
     },

@@ -1,30 +1,30 @@
 import { notFound, redirect } from "next/navigation";
-import { getPrazoById } from "@/lib/db-prazos";
+import { getAtividadeById } from "@/lib/db-atividades";
 import { getAllClientes } from "@/lib/db-clientes";
 import { getAllCasos } from "@/lib/db-casos";
 import { getAllFrentes } from "@/lib/db-frentes";
 import { FRENTE_TIPO_LABELS } from "@/lib/admin-labels";
-import { PrazoForm, type LinkOption } from "@/components/admin/PrazoForm";
+import { AtividadeForm, type LinkOption } from "@/components/admin/AtividadeForm";
 
-export default async function PrazoDetailPage(
-  props: PageProps<"/admin/prazos/[id]">,
+export default async function AtividadeDetailPage(
+  props: PageProps<"/admin/atividades/[id]">,
 ) {
   const { id } = await props.params;
 
-  let prazo;
+  let atividade;
   let clienteOptions: LinkOption[];
   let casoOptions: LinkOption[];
   let frenteOptions: LinkOption[];
 
   try {
-    const [prazoData, clientes, casos, frentes] = await Promise.all([
-      getPrazoById(id),
+    const [atividadeData, clientes, casos, frentes] = await Promise.all([
+      getAtividadeById(id),
       getAllClientes(),
       getAllCasos(),
       getAllFrentes(),
     ]);
 
-    prazo = prazoData;
+    atividade = atividadeData;
 
     clienteOptions = clientes.map((cliente) => ({
       id: cliente.id,
@@ -43,11 +43,11 @@ export default async function PrazoDetailPage(
     redirect("/login");
   }
 
-  if (!prazo) notFound();
+  if (!atividade) notFound();
 
   return (
-    <PrazoForm
-      prazo={prazo}
+    <AtividadeForm
+      atividade={atividade}
       clienteOptions={clienteOptions}
       casoOptions={casoOptions}
       frenteOptions={frenteOptions}

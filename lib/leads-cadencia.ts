@@ -40,7 +40,7 @@ const DEGRAUS: [dias: number, status: LeadStatus][] = [
 
 /**
  * Sem dependências de servidor de propósito — mesmo padrão de
- * financeiro-utils.ts / prazos-utils.ts.
+ * financeiro-utils.ts / atividades-utils.ts.
  */
 export function computeCadenciaStatus(diasDesdeContato: number): LeadStatus | null {
   for (const [dias, status] of DEGRAUS) {

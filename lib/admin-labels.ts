@@ -5,7 +5,7 @@ import type { CasoStatus } from "@/lib/db-casos";
 import type { FrenteTipo, FrenteStatus } from "@/lib/db-frentes";
 import type { FinanceiroStatus } from "@/lib/db-financeiro";
 import type { NotificacaoTipo } from "@/lib/db-notificacoes";
-import type { PrazoTipo, PrazoStatus } from "@/lib/db-prazos";
+import type { AtividadeTipo, AtividadeStatus } from "@/lib/db-atividades";
 import type { DespesaStatus, DespesaRecorrencia } from "@/lib/db-despesas";
 
 export const FORM_TYPE_LABELS: Record<string, string> = {
@@ -168,19 +168,22 @@ export const NOTIFICACAO_TIPO_LABELS: Record<NotificacaoTipo, string> = {
   blog_rascunho: "Rascunho de blog parado",
 };
 
-export const PRAZO_TIPO_LABELS: Record<PrazoTipo, string> = {
+export const ATIVIDADE_TIPO_LABELS: Record<AtividadeTipo, string> = {
   processual: "Processual",
   compromisso: "Compromisso",
   tarefa: "Tarefa",
+  documento_pendente: "Documento pendente",
+  tarefa_delegada: "Tarefa delegada",
+  checklist_diario: "Checklist diário",
 };
 
-export const PRAZO_STATUS_LABELS: Record<PrazoStatus, string> = {
+export const ATIVIDADE_STATUS_LABELS: Record<AtividadeStatus, string> = {
   pendente: "Pendente",
   concluido: "Concluído",
   cancelado: "Cancelado",
 };
 
-export const PRAZO_STATUS_COLORS: Record<PrazoStatus, string> = {
+export const ATIVIDADE_STATUS_COLORS: Record<AtividadeStatus, string> = {
   pendente: "text-gold border-gold",
   concluido: "text-success border-success",
   cancelado: "text-ink-dim border-hairline-strong",

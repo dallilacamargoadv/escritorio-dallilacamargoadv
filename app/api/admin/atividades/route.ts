@@ -1,42 +1,35 @@
 import { NextRequest, NextResponse } from "next/server";
 import {
-  getPrazoById,
-  updatePrazo,
-  type PrazoInput,
-  type PrazoTipo,
-  type PrazoStatus,
-} from "@/lib/db-prazos";
+  createAtividade,
+  getAllAtividades,
+  type AtividadeInput,
+  type AtividadeTipo,
+} from "@/lib/db-atividades";
 
-const VALID_TIPOS: PrazoTipo[] = ["processual", "compromisso", "tarefa"];
-const VALID_STATUSES: PrazoStatus[] = ["pendente", "concluido", "cancelado"];
+const VALID_TIPOS: AtividadeTipo[] = [
+  "processual",
+  "compromisso",
+  "tarefa",
+  "documento_pendente",
+  "tarefa_delegada",
+  "checklist_diario",
+];
 
-export async function GET(
-  _request: NextRequest,
-  ctx: RouteContext<"/api/admin/prazos/[id]">,
-) {
-  const { id } = await ctx.params;
-
+export async function GET() {
   try {
-    const prazo = await getPrazoById(id);
-    if (!prazo) {
-      return NextResponse.json({ error: "Prazo não encontrado" }, { status: 404 });
-    }
-    return NextResponse.json({ prazo });
+    const atividades = await getAllAtividades();
+    return NextResponse.json({ atividades });
   } catch {
     return NextResponse.json(
-      { error: "Não foi possível carregar o prazo" },
+      { error: "Não foi possível carregar as atividades" },
       { status: 401 },
     );
   }
 }
 
-export async function PATCH(
-  request: NextRequest,
-  ctx: RouteContext<"/api/admin/prazos/[id]">,
-) {
-  const { id } = await ctx.params;
+export async function POST(request: NextRequest) {
   const body = await request.json();
-  const tipo: PrazoTipo | undefined = VALID_TIPOS.includes(body?.tipo)
+  const tipo: AtividadeTipo | undefined = VALID_TIPOS.includes(body?.tipo)
     ? body.tipo
     : undefined;
   const titulo = typeof body?.titulo === "string" ? body.titulo.trim() : "";
@@ -46,9 +39,6 @@ export async function PATCH(
     typeof body?.caso_frente_id === "string" ? body.caso_frente_id : null;
   const casoId = typeof body?.caso_id === "string" ? body.caso_id : null;
   const clienteId = typeof body?.cliente_id === "string" ? body.cliente_id : null;
-  const status: PrazoStatus = VALID_STATUSES.includes(body?.status)
-    ? body.status
-    : "pendente";
   const visivelCliente = body?.visivel_cliente !== false;
 
   if (!tipo || !titulo || !data) {
@@ -58,7 +48,7 @@ export async function PATCH(
     );
   }
 
-  const input: PrazoInput = {
+  const input: AtividadeInput = {
     tipo,
     titulo,
     data,
@@ -66,16 +56,16 @@ export async function PATCH(
     caso_frente_id: casoFrenteId,
     caso_id: casoId,
     cliente_id: clienteId,
-    status,
+    status: "pendente",
     visivel_cliente: visivelCliente,
   };
 
   try {
-    const prazo = await updatePrazo(id, input);
-    return NextResponse.json({ prazo });
+    const atividade = await createAtividade(input);
+    return NextResponse.json({ atividade });
   } catch {
     return NextResponse.json(
-      { error: "Não foi possível atualizar o prazo" },
+      { error: "Não foi possível criar a atividade" },
       { status: 401 },
     );
   }

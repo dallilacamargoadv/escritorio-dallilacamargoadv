@@ -20,3 +20,9 @@ export function isDespesaVencida(despesa: Despesa): boolean {
     new Date(despesa.vencimento).getTime() < Date.now()
   );
 }
+
+export function isDespesaProxima(despesa: Despesa, dias: number): boolean {
+  if (despesa.status !== "a_pagar") return false;
+  const limite = Date.now() + dias * 24 * 60 * 60 * 1000;
+  return new Date(despesa.vencimento).getTime() <= limite;
+}

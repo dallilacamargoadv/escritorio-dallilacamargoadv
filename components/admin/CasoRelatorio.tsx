@@ -2,7 +2,7 @@ import type { Caso } from "@/lib/db-casos";
 import type { Contrato } from "@/lib/db-contratos";
 import type { Cliente } from "@/lib/db-clientes";
 import type { Frente } from "@/lib/db-frentes";
-import type { Prazo } from "@/lib/db-prazos";
+import type { Atividade } from "@/lib/db-atividades";
 import type { Lancamento } from "@/lib/db-financeiro";
 import { isLancamentoAtrasado } from "@/lib/financeiro-utils";
 import {
@@ -13,9 +13,9 @@ import {
   FRENTE_STATUS_COLORS,
   FRENTE_STATUS_LABELS,
   FRENTE_TIPO_LABELS,
-  PRAZO_STATUS_COLORS,
-  PRAZO_STATUS_LABELS,
-  PRAZO_TIPO_LABELS,
+  ATIVIDADE_STATUS_COLORS,
+  ATIVIDADE_STATUS_LABELS,
+  ATIVIDADE_TIPO_LABELS,
 } from "@/lib/admin-labels";
 import { formatDate } from "@/lib/format";
 import { Logo } from "@/components/ui/Logo";
@@ -38,7 +38,7 @@ export function CasoRelatorio({
   contrato: Contrato | null;
   cliente: Cliente | null;
   frentes: Frente[];
-  prazos: Prazo[];
+  prazos: Atividade[];
   lancamentos: Lancamento[];
   variant: "interno" | "cliente";
 }) {
@@ -206,13 +206,13 @@ export function CasoRelatorio({
               <div className="min-w-0">
                 <p className="text-ink">{prazo.titulo}</p>
                 <p className="font-mono text-[10px] text-ink-dim">
-                  {PRAZO_TIPO_LABELS[prazo.tipo]} · {formatDate(prazo.data)}
+                  {ATIVIDADE_TIPO_LABELS[prazo.tipo]} · {formatDate(prazo.data)}
                 </p>
               </div>
               <span
-                className={`shrink-0 border px-2 py-0.5 font-mono text-[9px] uppercase tracking-wide ${PRAZO_STATUS_COLORS[prazo.status]}`}
+                className={`shrink-0 border px-2 py-0.5 font-mono text-[9px] uppercase tracking-wide ${ATIVIDADE_STATUS_COLORS[prazo.status]}`}
               >
-                {PRAZO_STATUS_LABELS[prazo.status]}
+                {ATIVIDADE_STATUS_LABELS[prazo.status]}
               </span>
             </div>
           ))}

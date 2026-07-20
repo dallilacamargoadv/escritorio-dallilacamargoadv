@@ -3,9 +3,9 @@ import { getAllClientes } from "@/lib/db-clientes";
 import { getAllCasos } from "@/lib/db-casos";
 import { getAllFrentes } from "@/lib/db-frentes";
 import { FRENTE_TIPO_LABELS } from "@/lib/admin-labels";
-import { PrazoForm, type LinkOption } from "@/components/admin/PrazoForm";
+import { AtividadeForm, type LinkOption } from "@/components/admin/AtividadeForm";
 
-export default async function NewPrazoPage() {
+export default async function NewAtividadePage() {
   let clienteOptions: LinkOption[];
   let casoOptions: LinkOption[];
   let frenteOptions: LinkOption[];
@@ -35,7 +35,7 @@ export default async function NewPrazoPage() {
   }
 
   return (
-    <PrazoForm
+    <AtividadeForm
       clienteOptions={clienteOptions}
       casoOptions={casoOptions}
       frenteOptions={frenteOptions}

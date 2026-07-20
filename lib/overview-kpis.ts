@@ -4,7 +4,7 @@ import type { Contrato } from "@/lib/db-contratos";
 import type { Cliente } from "@/lib/db-clientes";
 import type { Caso } from "@/lib/db-casos";
 import type { Lancamento } from "@/lib/db-financeiro";
-import type { Prazo } from "@/lib/db-prazos";
+import type { Atividade } from "@/lib/db-atividades";
 import { isLancamentoAtrasado } from "@/lib/financeiro-utils";
 import { FORM_TYPE_LABELS } from "@/lib/admin-labels";
 import { isWithinRange, type ResolvedRange } from "@/lib/date-range";
@@ -39,8 +39,8 @@ export interface OverviewKpis {
   aRenovar30d: number;
   casosAbertos: number;
   casosAbertosList: Caso[];
-  prazos30d: number;
-  prazos30dList: Prazo[];
+  atividades30d: number;
+  atividades30dList: Atividade[];
   // "período" — respondem ao filtro selecionado
   receitaPeriodo: number;
   receitaPeriodoList: Lancamento[];
@@ -63,7 +63,7 @@ export function computeOverviewKpis({
   clientes,
   casos,
   lancamentos,
-  prazos,
+  atividades,
   range,
 }: {
   leads: Lead[];
@@ -71,7 +71,7 @@ export function computeOverviewKpis({
   clientes: Cliente[];
   casos: Caso[];
   lancamentos: Lancamento[];
-  prazos: Prazo[];
+  atividades: Atividade[];
   range: ResolvedRange;
 }): OverviewKpis {
   const now = Date.now();
@@ -110,8 +110,8 @@ export function computeOverviewKpis({
     ["aberto", "em_andamento", "aguardando_cliente"].includes(c.status),
   );
 
-  const prazos30dList = prazos.filter(
-    (p) => p.status === "pendente" && new Date(p.data).getTime() <= now + 30 * DAY_MS,
+  const atividades30dList = atividades.filter(
+    (a) => a.status === "pendente" && new Date(a.data).getTime() <= now + 30 * DAY_MS,
   );
 
   const receitaPeriodoList = lancamentos.filter(
@@ -149,8 +149,8 @@ export function computeOverviewKpis({
     aRenovar30d,
     casosAbertos: casosAbertosList.length,
     casosAbertosList,
-    prazos30d: prazos30dList.length,
-    prazos30dList,
+    atividades30d: atividades30dList.length,
+    atividades30dList,
     receitaPeriodo,
     receitaPeriodoList,
     slaPercentPeriodo,

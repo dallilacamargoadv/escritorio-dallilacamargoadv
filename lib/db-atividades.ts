@@ -1,43 +1,49 @@
 import { createClient } from "@/lib/supabase/server";
 
-export type PrazoTipo = "processual" | "compromisso" | "tarefa";
-export type PrazoStatus = "pendente" | "concluido" | "cancelado";
+export type AtividadeTipo =
+  | "processual"
+  | "compromisso"
+  | "tarefa"
+  | "documento_pendente"
+  | "tarefa_delegada"
+  | "checklist_diario";
+export type AtividadeStatus = "pendente" | "concluido" | "cancelado";
 
-export interface Prazo {
+export interface Atividade {
   id: string;
-  tipo: PrazoTipo;
+  tipo: AtividadeTipo;
   titulo: string;
   data: string;
   hora: string | null;
   caso_frente_id: string | null;
   caso_id: string | null;
   cliente_id: string | null;
-  status: PrazoStatus;
+  status: AtividadeStatus;
   concluido_em: string | null;
   created_at: string;
   visivel_cliente: boolean;
 }
 
-export interface PrazoInput {
-  tipo: PrazoTipo;
+export interface AtividadeInput {
+  tipo: AtividadeTipo;
   titulo: string;
   data: string;
   hora: string | null;
   caso_frente_id: string | null;
   caso_id: string | null;
   cliente_id: string | null;
-  status: PrazoStatus;
+  status: AtividadeStatus;
   visivel_cliente: boolean;
 }
 
-export async function getUrgentPrazosCount(): Promise<number> {
+export async function getUrgentAtividadesCount(): Promise<number> {
   const supabase = await createClient();
   const limite = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
     .toISOString()
     .slice(0, 10);
 
   const { count, error } = await supabase
-    .from("prazos")
+    .from("atividades")
     .select("*", { count: "exact", head: true })
     .eq("status", "pendente")
     .lte("data", limite);
@@ -46,33 +52,33 @@ export async function getUrgentPrazosCount(): Promise<number> {
   return count ?? 0;
 }
 
-export async function getAllPrazos(): Promise<Prazo[]> {
+export async function getAllAtividades(): Promise<Atividade[]> {
   const supabase = await createClient();
   const { data, error } = await supabase
-    .from("prazos")
+    .from("atividades")
     .select("*")
     .order("data", { ascending: true });
 
   if (error) throw error;
-  return data as Prazo[];
+  return data as Atividade[];
 }
 
-export async function getPrazoById(id: string): Promise<Prazo | null> {
+export async function getAtividadeById(id: string): Promise<Atividade | null> {
   const supabase = await createClient();
   const { data, error } = await supabase
-    .from("prazos")
+    .from("atividades")
     .select("*")
     .eq("id", id)
     .maybeSingle();
 
   if (error) throw error;
-  return data as Prazo | null;
+  return data as Atividade | null;
 }
 
-export async function getPrazosByCaso(
+export async function getAtividadesByCaso(
   casoId: string,
   frenteIds: string[],
-): Promise<Prazo[]> {
+): Promise<Atividade[]> {
   const supabase = await createClient();
   const filtros = [`caso_id.eq.${casoId}`];
   if (frenteIds.length > 0) {
@@ -80,19 +86,19 @@ export async function getPrazosByCaso(
   }
 
   const { data, error } = await supabase
-    .from("prazos")
+    .from("atividades")
     .select("*")
     .or(filtros.join(","))
     .order("data", { ascending: true });
 
   if (error) throw error;
-  return data as Prazo[];
+  return data as Atividade[];
 }
 
-export async function createPrazo(input: PrazoInput): Promise<Prazo> {
+export async function createAtividade(input: AtividadeInput): Promise<Atividade> {
   const supabase = await createClient();
   const { data, error } = await supabase
-    .from("prazos")
+    .from("atividades")
     .insert({
       tipo: input.tipo,
       titulo: input.titulo,
@@ -108,10 +114,13 @@ export async function createPrazo(input: PrazoInput): Promise<Prazo> {
     .single();
 
   if (error) throw error;
-  return data as Prazo;
+  return data as Atividade;
 }
 
-export async function updatePrazo(id: string, input: PrazoInput): Promise<Prazo> {
+export async function updateAtividade(
+  id: string,
+  input: AtividadeInput,
+): Promise<Atividade> {
   const supabase = await createClient();
   const updates: Record<string, unknown> = {
     tipo: input.tipo,
@@ -127,7 +136,7 @@ export async function updatePrazo(id: string, input: PrazoInput): Promise<Prazo>
 
   if (input.status === "concluido") {
     const { data: current } = await supabase
-      .from("prazos")
+      .from("atividades")
       .select("concluido_em")
       .eq("id", id)
       .single();
@@ -137,12 +146,18 @@ export async function updatePrazo(id: string, input: PrazoInput): Promise<Prazo>
   }
 
   const { data, error } = await supabase
-    .from("prazos")
+    .from("atividades")
     .update(updates)
     .eq("id", id)
     .select()
     .single();
 
   if (error) throw error;
-  return data as Prazo;
+  return data as Atividade;
+}
+
+export async function deleteAtividade(id: string): Promise<void> {
+  const supabase = await createClient();
+  const { error } = await supabase.from("atividades").delete().eq("id", id);
+  if (error) throw error;
 }

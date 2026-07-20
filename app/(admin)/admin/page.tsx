@@ -5,7 +5,7 @@ import { getAllContratos } from "@/lib/db-contratos";
 import { getAllClientes } from "@/lib/db-clientes";
 import { getAllCasos } from "@/lib/db-casos";
 import { getAllLancamentos } from "@/lib/db-financeiro";
-import { getAllPrazos } from "@/lib/db-prazos";
+import { getAllAtividades } from "@/lib/db-atividades";
 import { AdminOverviewClient } from "@/components/admin/AdminOverviewClient";
 
 export default async function AdminOverviewPage() {
@@ -15,9 +15,9 @@ export default async function AdminOverviewPage() {
   let clientes;
   let casos;
   let lancamentos;
-  let prazos;
+  let atividades;
   try {
-    [leads, notificacoes, contratos, clientes, casos, lancamentos, prazos] =
+    [leads, notificacoes, contratos, clientes, casos, lancamentos, atividades] =
       await Promise.all([
         getAllLeads(),
         getAllNotificacoes(),
@@ -25,7 +25,7 @@ export default async function AdminOverviewPage() {
         getAllClientes(),
         getAllCasos(),
         getAllLancamentos(),
-        getAllPrazos(),
+        getAllAtividades(),
       ]);
   } catch {
     redirect("/login");
@@ -48,7 +48,7 @@ export default async function AdminOverviewPage() {
       clientes={clientes}
       casos={casos}
       lancamentos={lancamentos}
-      prazos={prazos}
+      atividades={atividades}
       atualizadoEm={atualizadoEm}
     />
   );

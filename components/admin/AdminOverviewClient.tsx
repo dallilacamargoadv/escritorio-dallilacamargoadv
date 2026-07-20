@@ -8,7 +8,7 @@ import type { Contrato } from "@/lib/db-contratos";
 import type { Cliente } from "@/lib/db-clientes";
 import type { Caso } from "@/lib/db-casos";
 import type { Lancamento } from "@/lib/db-financeiro";
-import type { Prazo } from "@/lib/db-prazos";
+import type { Atividade } from "@/lib/db-atividades";
 import type { Notificacao } from "@/lib/db-notificacoes";
 import type { LeadFormType } from "@/lib/db-leads";
 import {
@@ -21,9 +21,9 @@ import {
   CONTRATO_TIPO_LABELS,
   CONTRATO_STATUS_LABELS,
   CONTRATO_STATUS_COLORS,
-  PRAZO_TIPO_LABELS,
-  PRAZO_STATUS_LABELS,
-  PRAZO_STATUS_COLORS,
+  ATIVIDADE_TIPO_LABELS,
+  ATIVIDADE_STATUS_LABELS,
+  ATIVIDADE_STATUS_COLORS,
 } from "@/lib/admin-labels";
 import { formatDate } from "@/lib/format";
 import { isLancamentoAtrasado } from "@/lib/financeiro-utils";
@@ -51,12 +51,17 @@ type ModalKey =
   | "clientesAtivos"
   | "contratosAtivos"
   | "casosAbertos"
-  | "prazos30d"
+  | "atividades30d"
   | "leadsPeriodo"
   | "conversoes"
   | { area: LeadFormType };
 
-const OPERACAO_KEYS = ["clientesAtivos", "contratosAtivos", "casosAbertos", "prazos30d"] as const;
+const OPERACAO_KEYS = [
+  "clientesAtivos",
+  "contratosAtivos",
+  "casosAbertos",
+  "atividades30d",
+] as const;
 
 export function AdminOverviewClient({
   leads,
@@ -65,7 +70,7 @@ export function AdminOverviewClient({
   clientes,
   casos,
   lancamentos,
-  prazos,
+  atividades,
   atualizadoEm,
 }: {
   leads: Lead[];
@@ -74,7 +79,7 @@ export function AdminOverviewClient({
   clientes: Cliente[];
   casos: Caso[];
   lancamentos: Lancamento[];
-  prazos: Prazo[];
+  atividades: Atividade[];
   atualizadoEm: string;
 }) {
   const [range, setRange] = useState<DateRangeValue>({ key: "7d", from: null, to: null });
@@ -97,10 +102,10 @@ export function AdminOverviewClient({
         clientes,
         casos,
         lancamentos,
-        prazos,
+        atividades,
         range: resolveDateRange(range),
       }),
-    [leadsState, contratos, clientes, casos, lancamentos, prazos, range],
+    [leadsState, contratos, clientes, casos, lancamentos, atividades, range],
   );
 
   const clienteNomeById = useMemo(
@@ -126,7 +131,7 @@ export function AdminOverviewClient({
     { key: "clientesAtivos", label: "Clientes ativos", value: kpis.clientesAtivos },
     { key: "contratosAtivos", label: "Contratos ativos", value: kpis.contratosAtivos },
     { key: "casosAbertos", label: "Casos em aberto", value: kpis.casosAbertos },
-    { key: "prazos30d", label: "Prazos (30D)", value: kpis.prazos30d },
+    { key: "atividades30d", label: "Atividades (30D)", value: kpis.atividades30d },
   ];
 
   function openLead(lead: Lead) {
@@ -193,15 +198,15 @@ export function AdminOverviewClient({
     );
   }
 
-  function renderPrazoRow(prazo: Prazo) {
+  function renderAtividadeRow(atividade: Atividade) {
     return (
       <QuickViewRow
-        key={prazo.id}
-        href={`/admin/prazos/${prazo.id}`}
-        label={prazo.titulo}
-        meta={`${PRAZO_TIPO_LABELS[prazo.tipo]} · ${formatDate(prazo.data)}`}
-        pill={PRAZO_STATUS_LABELS[prazo.status]}
-        pillClassName={PRAZO_STATUS_COLORS[prazo.status]}
+        key={atividade.id}
+        href={`/admin/atividades/${atividade.id}`}
+        label={atividade.titulo}
+        meta={`${ATIVIDADE_TIPO_LABELS[atividade.tipo]} · ${formatDate(atividade.data)}`}
+        pill={ATIVIDADE_STATUS_LABELS[atividade.status]}
+        pillClassName={ATIVIDADE_STATUS_COLORS[atividade.status]}
       />
     );
   }
@@ -356,18 +361,18 @@ export function AdminOverviewClient({
             )}
           </QuickViewModal>
         );
-      case "prazos30d":
+      case "atividades30d":
         return (
           <QuickViewModal
-            title="Prazos (30 dias)"
-            subtitle={`${kpis.prazos30dList.length} prazo(s) pendente(s)`}
-            footerHref="/admin/prazos"
+            title="Atividades (30 dias)"
+            subtitle={`${kpis.atividades30dList.length} atividade(s) pendente(s)`}
+            footerHref="/admin/atividades"
             onClose={() => setActiveModal(null)}
           >
-            {kpis.prazos30dList.length === 0 ? (
-              <QuickViewEmpty label="Nenhum prazo nos próximos 30 dias." />
+            {kpis.atividades30dList.length === 0 ? (
+              <QuickViewEmpty label="Nenhuma atividade nos próximos 30 dias." />
             ) : (
-              kpis.prazos30dList.map(renderPrazoRow)
+              kpis.atividades30dList.map(renderAtividadeRow)
             )}
           </QuickViewModal>
         );
@@ -551,7 +556,7 @@ export function AdminOverviewClient({
               className="border border-hairline p-5 text-left transition-colors duration-150 hover:border-gold"
             >
               <p
-                className={`font-mono text-xl tabular-nums ${key === "prazos30d" ? "text-warning" : "text-ink"}`}
+                className={`font-mono text-xl tabular-nums ${key === "atividades30d" ? "text-warning" : "text-ink"}`}
               >
                 {kpis[key]}
               </p>
@@ -559,7 +564,7 @@ export function AdminOverviewClient({
                 {key === "clientesAtivos" && "Clientes ativos"}
                 {key === "contratosAtivos" && "Contratos ativos"}
                 {key === "casosAbertos" && "Casos em aberto"}
-                {key === "prazos30d" && "Prazos (30D)"}
+                {key === "atividades30d" && "Atividades (30D)"}
               </p>
               {key === "contratosAtivos" && (
                 <p className="mt-1 text-xs text-ink-dim">

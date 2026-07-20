@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import type { Prazo, PrazoStatus, PrazoTipo } from "@/lib/db-prazos";
-import { PRAZO_STATUS_LABELS, PRAZO_TIPO_LABELS } from "@/lib/admin-labels";
+import type { Atividade, AtividadeStatus, AtividadeTipo } from "@/lib/db-atividades";
+import { ATIVIDADE_STATUS_LABELS, ATIVIDADE_TIPO_LABELS } from "@/lib/admin-labels";
 
 export interface LinkOption {
   id: string;
@@ -12,36 +12,38 @@ export interface LinkOption {
 
 type VinculoTipo = "nenhum" | "cliente" | "caso" | "frente";
 
-function vinculoTipoInicial(prazo?: Prazo): VinculoTipo {
-  if (!prazo) return "nenhum";
-  if (prazo.caso_frente_id) return "frente";
-  if (prazo.caso_id) return "caso";
-  if (prazo.cliente_id) return "cliente";
+function vinculoTipoInicial(atividade?: Atividade): VinculoTipo {
+  if (!atividade) return "nenhum";
+  if (atividade.caso_frente_id) return "frente";
+  if (atividade.caso_id) return "caso";
+  if (atividade.cliente_id) return "cliente";
   return "nenhum";
 }
 
-export function PrazoForm({
-  prazo,
+export function AtividadeForm({
+  atividade,
   clienteOptions,
   casoOptions,
   frenteOptions,
 }: {
-  prazo?: Prazo;
+  atividade?: Atividade;
   clienteOptions: LinkOption[];
   casoOptions: LinkOption[];
   frenteOptions: LinkOption[];
 }) {
   const router = useRouter();
-  const [tipo, setTipo] = useState<PrazoTipo>(prazo?.tipo ?? "processual");
-  const [titulo, setTitulo] = useState(prazo?.titulo ?? "");
-  const [data, setData] = useState(prazo?.data ?? "");
-  const [hora, setHora] = useState(prazo?.hora?.slice(0, 5) ?? "");
-  const [status, setStatus] = useState<PrazoStatus>(prazo?.status ?? "pendente");
-  const [vinculoTipo, setVinculoTipo] = useState<VinculoTipo>(vinculoTipoInicial(prazo));
-  const [vinculoId, setVinculoId] = useState(
-    prazo?.caso_frente_id ?? prazo?.caso_id ?? prazo?.cliente_id ?? "",
+  const [tipo, setTipo] = useState<AtividadeTipo>(atividade?.tipo ?? "processual");
+  const [titulo, setTitulo] = useState(atividade?.titulo ?? "");
+  const [data, setData] = useState(atividade?.data ?? "");
+  const [hora, setHora] = useState(atividade?.hora?.slice(0, 5) ?? "");
+  const [status, setStatus] = useState<AtividadeStatus>(atividade?.status ?? "pendente");
+  const [vinculoTipo, setVinculoTipo] = useState<VinculoTipo>(
+    vinculoTipoInicial(atividade),
   );
-  const [visivelCliente, setVisivelCliente] = useState(prazo?.visivel_cliente ?? true);
+  const [vinculoId, setVinculoId] = useState(
+    atividade?.caso_frente_id ?? atividade?.caso_id ?? atividade?.cliente_id ?? "",
+  );
+  const [visivelCliente, setVisivelCliente] = useState(atividade?.visivel_cliente ?? true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
 
@@ -72,8 +74,8 @@ export function PrazoForm({
     setSaving(true);
     setError("");
 
-    const url = prazo ? `/api/admin/prazos/${prazo.id}` : "/api/admin/prazos";
-    const method = prazo ? "PATCH" : "POST";
+    const url = atividade ? `/api/admin/atividades/${atividade.id}` : "/api/admin/atividades";
+    const method = atividade ? "PATCH" : "POST";
 
     try {
       const res = await fetch(url, {
@@ -94,10 +96,24 @@ export function PrazoForm({
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || "Erro ao salvar");
 
-      router.push("/admin/prazos");
+      router.push("/admin/atividades");
       router.refresh();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Erro ao salvar");
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function handleDelete() {
+    if (!atividade) return;
+    if (!confirm(`Excluir "${atividade.titulo}"? Essa ação não pode ser desfeita.`)) return;
+
+    setSaving(true);
+    try {
+      await fetch(`/api/admin/atividades/${atividade.id}`, { method: "DELETE" });
+      router.push("/admin/atividades");
+      router.refresh();
     } finally {
       setSaving(false);
     }
@@ -107,7 +123,7 @@ export function PrazoForm({
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
       <div className="border-b border-hairline pb-6">
         <h1 className="text-lg italic text-ink">
-          {prazo ? "Editar prazo" : "Novo prazo"}
+          {atividade ? "Editar atividade" : "Nova atividade"}
         </h1>
       </div>
 
@@ -116,12 +132,12 @@ export function PrazoForm({
           <label className="font-eyebrow text-[10px] text-ink-dim">Tipo</label>
           <select
             value={tipo}
-            onChange={(e) => setTipo(e.target.value as PrazoTipo)}
+            onChange={(e) => setTipo(e.target.value as AtividadeTipo)}
             className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink"
           >
-            {(Object.keys(PRAZO_TIPO_LABELS) as PrazoTipo[]).map((t) => (
+            {(Object.keys(ATIVIDADE_TIPO_LABELS) as AtividadeTipo[]).map((t) => (
               <option key={t} value={t}>
-                {PRAZO_TIPO_LABELS[t]}
+                {ATIVIDADE_TIPO_LABELS[t]}
               </option>
             ))}
           </select>
@@ -214,12 +230,12 @@ export function PrazoForm({
           <label className="font-eyebrow text-[10px] text-ink-dim">Status</label>
           <select
             value={status}
-            onChange={(e) => setStatus(e.target.value as PrazoStatus)}
+            onChange={(e) => setStatus(e.target.value as AtividadeStatus)}
             className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink"
           >
-            {(Object.keys(PRAZO_STATUS_LABELS) as PrazoStatus[]).map((s) => (
+            {(Object.keys(ATIVIDADE_STATUS_LABELS) as AtividadeStatus[]).map((s) => (
               <option key={s} value={s}>
-                {PRAZO_STATUS_LABELS[s]}
+                {ATIVIDADE_STATUS_LABELS[s]}
               </option>
             ))}
           </select>
@@ -242,11 +258,21 @@ export function PrazoForm({
           </button>
           <button
             type="button"
-            onClick={() => router.push("/admin/prazos")}
+            onClick={() => router.push("/admin/atividades")}
             className="border border-hairline-strong px-5 py-2.5 text-sm text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold"
           >
             Cancelar
           </button>
+          {atividade && (
+            <button
+              type="button"
+              onClick={handleDelete}
+              disabled={saving}
+              className="ml-auto border border-error px-5 py-2.5 text-sm text-error transition-colors duration-150 hover:bg-error hover:text-bg disabled:opacity-50"
+            >
+              Excluir
+            </button>
+          )}
         </div>
       </div>
     </div>
