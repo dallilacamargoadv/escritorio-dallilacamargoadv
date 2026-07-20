@@ -17,6 +17,17 @@ export interface ClienteOption {
   label: string;
 }
 
+const PERIODICIDADE_PRESETS = [
+  "à vista",
+  "mensal",
+  "2x",
+  "3x",
+  "4x",
+  "6x",
+  "12x",
+];
+const PERIODICIDADE_OUTRO = "outro";
+
 export function ContratoForm({
   contrato,
   clienteFixo,
@@ -41,9 +52,19 @@ export function ContratoForm({
   const [valor, setValor] = useState(
     contrato?.valor != null ? String(contrato.valor) : "",
   );
-  const [periodicidade, setPeriodicidade] = useState(
-    contrato?.periodicidade ?? "",
+  const periodicidadeInicial = contrato?.periodicidade ?? "";
+  const periodicidadeEhPreset =
+    !periodicidadeInicial || PERIODICIDADE_PRESETS.includes(periodicidadeInicial);
+  const [periodicidadeSelecao, setPeriodicidadeSelecao] = useState(
+    periodicidadeEhPreset ? periodicidadeInicial : PERIODICIDADE_OUTRO,
   );
+  const [periodicidadeCustom, setPeriodicidadeCustom] = useState(
+    periodicidadeEhPreset ? "" : periodicidadeInicial,
+  );
+  const periodicidade =
+    periodicidadeSelecao === PERIODICIDADE_OUTRO
+      ? periodicidadeCustom
+      : periodicidadeSelecao;
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
 
@@ -159,13 +180,28 @@ export function ContratoForm({
           <label className="font-eyebrow text-[10px] text-ink-dim">
             Periodicidade
           </label>
-          <input
-            type="text"
-            placeholder="à vista, mensal, 3x..."
-            value={periodicidade}
-            onChange={(e) => setPeriodicidade(e.target.value)}
-            className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
-          />
+          <select
+            value={periodicidadeSelecao}
+            onChange={(e) => setPeriodicidadeSelecao(e.target.value)}
+            className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink"
+          >
+            <option value="">—</option>
+            {PERIODICIDADE_PRESETS.map((p) => (
+              <option key={p} value={p}>
+                {p}
+              </option>
+            ))}
+            <option value={PERIODICIDADE_OUTRO}>Outro...</option>
+          </select>
+          {periodicidadeSelecao === PERIODICIDADE_OUTRO && (
+            <input
+              type="text"
+              placeholder="ex.: semestral, 5x..."
+              value={periodicidadeCustom}
+              onChange={(e) => setPeriodicidadeCustom(e.target.value)}
+              className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
+            />
+          )}
         </div>
 
         <div>

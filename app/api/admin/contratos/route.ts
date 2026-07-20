@@ -3,7 +3,16 @@ import {
   createContrato,
   getAllContratos,
   type ContratoInput,
+  type ContratoStatus,
 } from "@/lib/db-contratos";
+
+const VALID_STATUSES: ContratoStatus[] = [
+  "rascunho",
+  "enviado",
+  "assinado",
+  "encerrado",
+  "cancelado",
+];
 
 export async function GET(request: NextRequest) {
   const clienteId = request.nextUrl.searchParams.get("clienteId") ?? undefined;
@@ -32,10 +41,14 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  const status: ContratoStatus = VALID_STATUSES.includes(body?.status)
+    ? body.status
+    : "rascunho";
+
   const input: ContratoInput = {
     cliente_id: clienteId,
     tipo,
-    status: "rascunho",
+    status,
     valor: typeof body?.valor === "number" ? body.valor : null,
     periodicidade:
       typeof body?.periodicidade === "string" ? body.periodicidade.trim() : "",
