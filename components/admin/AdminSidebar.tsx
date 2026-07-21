@@ -23,6 +23,7 @@ import {
   Workflow,
   Search,
   Settings,
+  PiggyBank,
 } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { createClient } from "@/lib/supabase/client";
@@ -95,6 +96,18 @@ export function AdminSidebar({
         { href: "/admin/recorrentes", label: "Recorrentes", icon: Repeat, exact: false, badge: 0 },
         { href: "/admin/financeiro", label: "Financeiro", icon: Wallet, exact: false, badge: 0 },
         { href: "/admin/metas", label: "Metas", icon: Target, exact: false, badge: 0 },
+      ],
+    },
+    {
+      label: "Pessoal",
+      items: [
+        {
+          href: "/admin/financeiro-pessoal",
+          label: "Financeiro Pessoal",
+          icon: PiggyBank,
+          exact: false,
+          badge: 0,
+        },
       ],
     },
     {
