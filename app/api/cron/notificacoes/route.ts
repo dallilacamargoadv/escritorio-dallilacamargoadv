@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getServiceRoleClient } from "@/lib/supabase/service";
+import { fetchComunicaPje, resumoComunicaPjeItem } from "@/lib/comunica-pje";
 
 const DIA_MS = 24 * 60 * 60 * 1000;
 
@@ -93,5 +94,64 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  return NextResponse.json({ ok: true, created });
+  // Onda 8: consulta automática ao Comunica PJe (CNJ) das frentes judiciais
+  // ativas com número de processo — puxa movimentação nova, registra na
+  // linha do tempo do caso (caso_historico) e atualiza ultima_movimentacao.
+  let pjeAtualizacoes = 0;
+  const { data: frentesJudiciais } = await supabase
+    .from("caso_frentes")
+    .select("id, caso_id, numero_processo, ultima_movimentacao_em")
+    .eq("tipo", "judicial")
+    .not("numero_processo", "is", null)
+    .not("status", "in", "(concluida,arquivada)");
+
+  for (const frente of frentesJudiciais ?? []) {
+    if (!frente.numero_processo) continue;
+
+    let items;
+    try {
+      items = await fetchComunicaPje(frente.numero_processo);
+    } catch {
+      continue;
+    }
+    if (items.length === 0) continue;
+
+    const ultimaVista = frente.ultima_movimentacao_em
+      ? new Date(frente.ultima_movimentacao_em).getTime()
+      : null;
+
+    const novos = items
+      .filter((item) => {
+        const t = new Date(item.data_disponibilizacao).getTime();
+        return ultimaVista === null || t > ultimaVista;
+      })
+      .sort(
+        (a, b) =>
+          new Date(a.data_disponibilizacao).getTime() -
+          new Date(b.data_disponibilizacao).getTime(),
+      );
+
+    if (novos.length === 0) continue;
+
+    for (const item of novos) {
+      await supabase.from("caso_historico").insert({
+        caso_id: frente.caso_id,
+        texto: resumoComunicaPjeItem(item),
+        autor: "Comunica PJe (automático)",
+      });
+    }
+
+    const ultimo = novos[novos.length - 1];
+    await supabase
+      .from("caso_frentes")
+      .update({
+        ultima_movimentacao: resumoComunicaPjeItem(ultimo),
+        ultima_movimentacao_em: ultimo.data_disponibilizacao.slice(0, 10),
+      })
+      .eq("id", frente.id);
+
+    pjeAtualizacoes += novos.length;
+  }
+
+  return NextResponse.json({ ok: true, created, pjeAtualizacoes });
 }
