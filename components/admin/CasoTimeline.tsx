@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
-import { Paperclip, Download, Trash2 } from "lucide-react";
+import { Paperclip, Download, Trash2, Eye, EyeOff, Pencil } from "lucide-react";
 import type { CasoHistoricoEntry } from "@/lib/db-caso-historico";
 import type { Atividade } from "@/lib/db-atividades";
 import type { Documento } from "@/lib/db-documentos";
@@ -19,6 +19,7 @@ interface TimelineItem {
 
 interface AnamneseItem extends TimelineItem {
   kind: "anamnese";
+  entry: CasoHistoricoEntry;
   texto: string;
   autor: string;
   isFirst: boolean;
@@ -88,6 +89,13 @@ export function CasoTimeline({
   const [textoRetificacao, setTextoRetificacao] = useState("");
   const [savingRetificacao, setSavingRetificacao] = useState(false);
 
+  const [visibilidadeSavingId, setVisibilidadeSavingId] = useState<string | null>(null);
+
+  const [editandoMarcoId, setEditandoMarcoId] = useState<string | null>(null);
+  const [marcoEditAtivo, setMarcoEditAtivo] = useState(false);
+  const [marcoEditTexto, setMarcoEditTexto] = useState("");
+  const [savingMarcoId, setSavingMarcoId] = useState<string | null>(null);
+
   const items = useMemo<(AnamneseItem | AtividadeItem | DocumentoItem)[]>(() => {
     const retificacoesPorAlvo = new Map<string, CasoHistoricoEntry>();
     for (const entry of historico) {
@@ -101,6 +109,7 @@ export function CasoTimeline({
     const anamneseItems: AnamneseItem[] = entriesOriginais.map((entry, index) => ({
       kind: "anamnese",
       id: entry.id,
+      entry,
       data: entry.created_at,
       texto: entry.texto,
       autor: entry.autor,
@@ -175,6 +184,56 @@ export function CasoTimeline({
       setError(err instanceof Error ? err.message : "Erro ao salvar");
     } finally {
       setSavingRetificacao(false);
+    }
+  }
+
+  async function handleToggleVisivelCliente(entry: CasoHistoricoEntry) {
+    setVisibilidadeSavingId(entry.id);
+    try {
+      const res = await fetch(
+        `/api/admin/casos/${casoId}/historico/${entry.id}/visibilidade`,
+        {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ visivel_cliente: !entry.visivel_cliente }),
+        },
+      );
+      const data = await res.json();
+      if (res.ok && data.entry) {
+        setHistorico((prev) =>
+          prev.map((h) => (h.id === entry.id ? data.entry : h)),
+        );
+      }
+    } finally {
+      setVisibilidadeSavingId(null);
+    }
+  }
+
+  function handleAbrirEdicaoMarco(documento: Documento) {
+    setEditandoMarcoId(documento.id);
+    setMarcoEditAtivo(!!documento.marco_cliente);
+    setMarcoEditTexto(documento.marco_cliente ?? "");
+  }
+
+  async function handleSalvarMarco(documento: Documento) {
+    setSavingMarcoId(documento.id);
+    try {
+      const res = await fetch(`/api/admin/documentos/${documento.id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          marco_cliente: marcoEditAtivo ? marcoEditTexto.trim() : null,
+        }),
+      });
+      const data = await res.json();
+      if (res.ok && data.documento) {
+        setDocumentos((prev) =>
+          prev.map((d) => (d.id === documento.id ? data.documento : d)),
+        );
+        setEditandoMarcoId(null);
+      }
+    } finally {
+      setSavingMarcoId(null);
     }
   }
 
@@ -352,6 +411,30 @@ export function CasoTimeline({
                       {formatDateTime(item.data)}
                     </span>
                     <span className="text-xs text-ink-dim">· {item.autor}</span>
+                    {!item.retificacao && (
+                      <button
+                        type="button"
+                        onClick={() => handleToggleVisivelCliente(item.entry)}
+                        disabled={visibilidadeSavingId === item.entry.id}
+                        title={
+                          item.entry.visivel_cliente
+                            ? "Visível pro cliente — clique para ocultar"
+                            : "Oculto do cliente — clique para mostrar"
+                        }
+                        className={`ml-auto flex items-center gap-1 font-mono text-[10px] uppercase tracking-wide transition-colors duration-150 disabled:opacity-50 ${
+                          item.entry.visivel_cliente
+                            ? "text-success hover:text-ink-dim"
+                            : "text-ink-dim hover:text-success"
+                        }`}
+                      >
+                        {item.entry.visivel_cliente ? (
+                          <Eye size={12} />
+                        ) : (
+                          <EyeOff size={12} />
+                        )}
+                        {item.entry.visivel_cliente ? "Visível pro cliente" : "Oculto do cliente"}
+                      </button>
+                    )}
                   </div>
                   <p
                     className={`mt-1.5 whitespace-pre-wrap text-sm ${
@@ -458,6 +541,14 @@ export function CasoTimeline({
                     <div className="flex shrink-0 items-center gap-3">
                       <button
                         type="button"
+                        onClick={() => handleAbrirEdicaoMarco(item.documento)}
+                        aria-label={`Editar marco de ${item.documento.nome_arquivo}`}
+                        className="text-ink-dim transition-colors duration-150 hover:text-gold"
+                      >
+                        <Pencil size={14} />
+                      </button>
+                      <button
+                        type="button"
                         onClick={() => handleDownload(item.documento)}
                         aria-label={`Baixar ${item.documento.nome_arquivo}`}
                         className="text-gold transition-colors duration-150 hover:text-gold-bright"
@@ -481,6 +572,48 @@ export function CasoTimeline({
                     📄 {item.documento.nome_arquivo} ·{" "}
                     {formatTamanho(item.documento.tamanho)}
                   </p>
+
+                  {editandoMarcoId === item.documento.id && (
+                    <div className="mt-3 space-y-2 border-l-2 border-hairline-strong pl-3">
+                      <label className="flex items-center gap-1.5 text-[11px] text-ink-dim">
+                        <input
+                          type="checkbox"
+                          checked={marcoEditAtivo}
+                          onChange={(e) => setMarcoEditAtivo(e.target.checked)}
+                        />
+                        Marcar como marco pro relatório do cliente
+                      </label>
+                      {marcoEditAtivo && (
+                        <input
+                          type="text"
+                          value={marcoEditTexto}
+                          onChange={(e) => setMarcoEditTexto(e.target.value)}
+                          placeholder='ex.: "Petição inicial protocolada"'
+                          className="w-full border border-hairline-strong bg-bg px-2 py-1 text-xs text-ink outline-none focus:border-gold"
+                        />
+                      )}
+                      <div className="flex gap-2">
+                        <button
+                          type="button"
+                          onClick={() => handleSalvarMarco(item.documento)}
+                          disabled={
+                            savingMarcoId === item.documento.id ||
+                            (marcoEditAtivo && !marcoEditTexto.trim())
+                          }
+                          className="border border-gold px-3 py-1 text-[11px] text-gold transition-colors duration-150 hover:bg-gold hover:text-bg disabled:opacity-50"
+                        >
+                          {savingMarcoId === item.documento.id ? "Salvando..." : "Salvar"}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setEditandoMarcoId(null)}
+                          className="px-3 py-1 text-[11px] text-ink-dim hover:text-ink"
+                        >
+                          Voltar
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </>
               )}
             </div>

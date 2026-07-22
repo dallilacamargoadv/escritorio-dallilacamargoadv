@@ -69,6 +69,22 @@ export async function uploadDocumento({
   return data as Documento;
 }
 
+export async function updateDocumentoMarcoCliente(
+  id: string,
+  marcoCliente: string | null,
+): Promise<Documento> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("documentos")
+    .update({ marco_cliente: marcoCliente })
+    .eq("id", id)
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data as Documento;
+}
+
 export async function deleteDocumento(id: string): Promise<void> {
   const supabase = await createClient();
   const { data: documento, error: fetchError } = await supabase

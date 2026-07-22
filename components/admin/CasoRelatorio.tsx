@@ -5,6 +5,7 @@ import type { Frente } from "@/lib/db-frentes";
 import type { Atividade } from "@/lib/db-atividades";
 import type { Lancamento } from "@/lib/db-financeiro";
 import type { Documento } from "@/lib/db-documentos";
+import type { CasoHistoricoEntry } from "@/lib/db-caso-historico";
 import { isLancamentoAtrasado } from "@/lib/financeiro-utils";
 import {
   CASO_STATUS_LABELS,
@@ -39,6 +40,7 @@ export function CasoRelatorio({
   prazos,
   lancamentos,
   documentos,
+  historico,
   variant,
 }: {
   caso: Caso;
@@ -48,12 +50,19 @@ export function CasoRelatorio({
   prazos: Atividade[];
   lancamentos: Lancamento[];
   documentos: Documento[];
+  historico: CasoHistoricoEntry[];
   variant: "interno" | "cliente";
 }) {
   const frentesVisiveis =
     variant === "cliente" ? frentes.filter((f) => f.visivel_cliente) : frentes;
   const prazosVisiveis =
     variant === "cliente" ? prazos.filter((p) => p.visivel_cliente) : prazos;
+  const retificadasIds = new Set(
+    historico.filter((h) => h.retifica_id).map((h) => h.retifica_id),
+  );
+  const atualizacoesVisiveis = historico
+    .filter((h) => h.visivel_cliente && !h.retifica_id && !retificadasIds.has(h.id))
+    .sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime());
 
   const marcos: Marco[] = [
     { label: "Atendimento", data: caso.aberto_em },
@@ -225,6 +234,36 @@ export function CasoRelatorio({
                   <p className="text-ink">{marco.label}</p>
                   <span className="shrink-0 font-mono text-[10px] text-ink-dim">
                     {formatDate(marco.data)}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
+        {variant === "cliente" && (
+          <>
+            <p className="mt-8 font-eyebrow text-[10px] text-ink-dim">
+              Atualizações ({atualizacoesVisiveis.length})
+            </p>
+            <div className="mt-2 border border-hairline">
+              {atualizacoesVisiveis.length === 0 && (
+                <p className="px-4 py-4 text-center text-xs text-ink-dim">
+                  Nenhuma atualização compartilhada ainda.
+                </p>
+              )}
+              {atualizacoesVisiveis.map((entry, index) => (
+                <div
+                  key={entry.id}
+                  className={`px-4 py-2 text-xs ${
+                    index !== atualizacoesVisiveis.length - 1
+                      ? "border-b border-hairline"
+                      : ""
+                  }`}
+                >
+                  <p className="whitespace-pre-wrap text-ink">{entry.texto}</p>
+                  <span className="mt-1 block font-mono text-[10px] text-ink-dim">
+                    {formatDate(entry.created_at)}
                   </span>
                 </div>
               ))}

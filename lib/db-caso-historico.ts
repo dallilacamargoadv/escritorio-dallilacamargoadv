@@ -7,6 +7,7 @@ export interface CasoHistoricoEntry {
   autor: string;
   created_at: string;
   retifica_id: string | null;
+  visivel_cliente: boolean;
 }
 
 /** Ordenado do mais antigo pro mais recente — a primeira entrada é a Anamnese. */
@@ -33,6 +34,22 @@ export async function createHistoricoEntry(
   const { data, error } = await supabase
     .from("caso_historico")
     .insert({ caso_id: casoId, texto, retifica_id: retificaId })
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data as CasoHistoricoEntry;
+}
+
+export async function setHistoricoVisivelCliente(
+  id: string,
+  visivelCliente: boolean,
+): Promise<CasoHistoricoEntry> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("caso_historico")
+    .update({ visivel_cliente: visivelCliente })
+    .eq("id", id)
     .select()
     .single();
 
