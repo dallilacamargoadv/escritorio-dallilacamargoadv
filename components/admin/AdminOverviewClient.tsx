@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { Bell } from "lucide-react";
 import type { Lead } from "@/lib/db-admin";
 import type { Contrato } from "@/lib/db-contratos";
 import type { Cliente } from "@/lib/db-clientes";
@@ -13,7 +12,6 @@ import type { Notificacao } from "@/lib/db-notificacoes";
 import type { LeadFormType } from "@/lib/db-leads";
 import {
   FORM_TYPE_LABELS,
-  NOTIFICACAO_TIPO_LABELS,
   STATUS_COLORS,
   STATUS_LABELS,
   CASO_STATUS_LABELS,
@@ -125,9 +123,6 @@ export function AdminOverviewClient({
 
   const periodoLabel = DATE_RANGE_LABELS[range.key];
   const recentLeads = leadsState.slice(0, 6);
-  const unreadNotificacoes = notificacoes.filter((n) => !n.lida);
-  const recentNotificacoes = unreadNotificacoes.slice(0, 4);
-  const unreadCount = unreadNotificacoes.length;
 
   const operacaoChartData = [
     { key: "clientesAtivos", label: "Clientes ativos", value: kpis.clientesAtivos },
@@ -420,50 +415,11 @@ export function AdminOverviewClient({
       <AdminPageBanner
         title="Visão Geral"
         subtitle="Resumo da operação do escritório"
+        notificacoes={notificacoes}
       />
 
-      <div className="mt-6 flex flex-wrap items-start justify-end gap-6 border-b border-hairline pb-6">
+      <div className="mt-6 flex flex-wrap items-start gap-6 border-b border-hairline pb-6">
         <DateRangeFilter value={range} onChange={setRange} />
-
-        <div className="w-72 shrink-0 border border-hairline">
-          <div className="flex items-center gap-2 border-b border-hairline px-3 py-2">
-            <Bell size={13} className="text-gold" />
-            <span className="font-eyebrow text-[10px] text-ink-dim">
-              Notificações
-            </span>
-            {unreadCount > 0 && (
-              <span className="ml-auto font-mono text-[10px] text-bg bg-gold px-1.5 py-0.5">
-                {unreadCount}
-              </span>
-            )}
-          </div>
-          {recentNotificacoes.length === 0 && (
-            <p className="px-3 py-4 text-center text-xs text-ink-dim">
-              Nenhuma notificação ainda.
-            </p>
-          )}
-          {recentNotificacoes.map((n, index) => (
-            <div
-              key={n.id}
-              className={`px-3 py-2 text-xs ${
-                index !== recentNotificacoes.length - 1
-                  ? "border-b border-hairline"
-                  : ""
-              }`}
-            >
-              <p className="truncate text-ink">{n.titulo}</p>
-              <p className="mt-0.5 font-mono text-[9px] uppercase text-ink-dim">
-                {NOTIFICACAO_TIPO_LABELS[n.tipo]} · {formatDate(n.created_at)}
-              </p>
-            </div>
-          ))}
-          <Link
-            href="/admin/notificacoes"
-            className="block border-t border-hairline px-3 py-2 text-center text-xs text-gold transition-colors duration-150 hover:underline"
-          >
-            Ver todas →
-          </Link>
-        </div>
       </div>
 
       <p className="mt-8 font-eyebrow text-[10px] text-ink-dim">Financeiro</p>
