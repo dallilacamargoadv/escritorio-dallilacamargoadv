@@ -43,8 +43,29 @@ export function CasoForm({
   const [responsavel, setResponsavel] = useState(caso?.responsavel ?? "");
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
+  const [arquivando, setArquivando] = useState(false);
 
   const contratoLocked = Boolean(contratoFixo);
+
+  async function handleToggleArquivado() {
+    if (!caso) return;
+    const novoStatus: CasoStatus = caso.status === "arquivado" ? "aberto" : "arquivado";
+    setArquivando(true);
+    try {
+      const res = await fetch(`/api/admin/casos/${caso.id}/status`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status: novoStatus }),
+      });
+      if (res.ok) {
+        setStatus(novoStatus);
+        router.push("/admin/casos");
+        router.refresh();
+      }
+    } finally {
+      setArquivando(false);
+    }
+  }
 
   async function handleSave() {
     if (!contratoId || !area || !titulo.trim()) {
@@ -92,7 +113,15 @@ export function CasoForm({
           {caso ? "Editar caso" : "Novo caso"}
         </h1>
         {caso && (
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={handleToggleArquivado}
+              disabled={arquivando}
+              className="border border-hairline-strong px-3 py-1.5 text-xs text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold disabled:opacity-50"
+            >
+              {caso.status === "arquivado" ? "Reabrir caso" : "Arquivar caso"}
+            </button>
             <Link
               href={`/admin/casos/${caso.id}/relatorio`}
               target="_blank"

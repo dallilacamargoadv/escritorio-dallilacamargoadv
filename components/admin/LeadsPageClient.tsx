@@ -32,11 +32,16 @@ type Aba = "kanban" | "outros" | "lista";
 export function LeadsPageClient({ initialLeads }: { initialLeads: Lead[] }) {
   const [aba, setAba] = useState<Aba>("kanban");
   const [range, setRange] = useState<DateRangeValue>({ key: "all", from: null, to: null });
+  const [mostrarArquivados, setMostrarArquivados] = useState(false);
 
   const leads = useMemo(() => {
     const resolved = resolveDateRange(range);
-    return initialLeads.filter((lead) => isWithinRange(lead.created_at, resolved));
-  }, [initialLeads, range]);
+    return initialLeads.filter(
+      (lead) =>
+        isWithinRange(lead.created_at, resolved) &&
+        (mostrarArquivados || !lead.arquivado),
+    );
+  }, [initialLeads, range, mostrarArquivados]);
 
   const leadsSite = useMemo(() => leads.filter((l) => l.origem === "site"), [leads]);
   const leadsOutrosCanais = useMemo(
@@ -54,6 +59,15 @@ export function LeadsPageClient({ initialLeads }: { initialLeads: Lead[] }) {
           </p>
         </div>
         <DateRangeFilter value={range} onChange={setRange} />
+        <label className="flex items-center gap-2 text-xs text-ink-dim">
+          <input
+            type="checkbox"
+            checked={mostrarArquivados}
+            onChange={(e) => setMostrarArquivados(e.target.checked)}
+            className="h-3.5 w-3.5 accent-gold"
+          />
+          Mostrar arquivados
+        </label>
         <div className="flex border border-hairline-strong">
           <button
             type="button"

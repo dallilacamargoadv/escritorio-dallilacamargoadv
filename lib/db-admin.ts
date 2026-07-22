@@ -47,6 +47,7 @@ export interface Lead {
   status: LeadStatus;
   sla_due_at: string | null;
   first_contacted_at: string | null;
+  arquivado: boolean;
 }
 
 export interface LeadNote {
@@ -89,6 +90,19 @@ export async function updateLeadStatus(
   const { error } = await supabase
     .from("leads")
     .update(updates)
+    .eq("id", leadId);
+
+  if (error) throw error;
+}
+
+export async function setLeadArquivado(
+  leadId: string,
+  arquivado: boolean,
+): Promise<void> {
+  const supabase = await createClient();
+  const { error } = await supabase
+    .from("leads")
+    .update({ arquivado })
     .eq("id", leadId);
 
   if (error) throw error;

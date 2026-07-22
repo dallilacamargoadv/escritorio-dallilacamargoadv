@@ -30,16 +30,21 @@ export function CasosAdminList({
   const [statusFilter, setStatusFilter] = useState<CasoStatus | "all">("all");
   const [areaFilter, setAreaFilter] = useState(initialArea);
   const [range, setRange] = useState<DateRangeValue>({ key: "all", from: null, to: null });
+  const [mostrarArquivados, setMostrarArquivados] = useState(false);
 
   const filtered = useMemo(() => {
     const resolved = resolveDateRange(range);
     return casos.filter((caso) => {
-      if (statusFilter !== "all" && caso.status !== statusFilter) return false;
+      if (statusFilter !== "all") {
+        if (caso.status !== statusFilter) return false;
+      } else if (caso.status === "arquivado" && !mostrarArquivados) {
+        return false;
+      }
       if (areaFilter !== "all" && caso.area !== areaFilter) return false;
       if (!isWithinRange(caso.aberto_em, resolved)) return false;
       return true;
     });
-  }, [casos, statusFilter, areaFilter, range]);
+  }, [casos, statusFilter, areaFilter, range, mostrarArquivados]);
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
@@ -74,6 +79,15 @@ export function CasosAdminList({
             ))}
           </select>
           <DateRangeFilter value={range} onChange={setRange} />
+          <label className="flex items-center gap-2 text-xs text-ink-dim">
+            <input
+              type="checkbox"
+              checked={mostrarArquivados}
+              onChange={(e) => setMostrarArquivados(e.target.checked)}
+              className="h-3.5 w-3.5 accent-gold"
+            />
+            Mostrar arquivados
+          </label>
         </div>
       </div>
 

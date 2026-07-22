@@ -96,6 +96,32 @@ export async function createCaso(input: CasoInput): Promise<Caso> {
   return data as Caso;
 }
 
+export async function setCasoStatus(id: string, status: CasoStatus): Promise<Caso> {
+  const supabase = await createClient();
+  const updates: Record<string, unknown> = { status };
+
+  if (status === "concluido" || status === "arquivado") {
+    const { data: current } = await supabase
+      .from("casos")
+      .select("encerrado_em")
+      .eq("id", id)
+      .single();
+    if (!current?.encerrado_em) {
+      updates.encerrado_em = new Date().toISOString();
+    }
+  }
+
+  const { data, error } = await supabase
+    .from("casos")
+    .update(updates)
+    .eq("id", id)
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data as Caso;
+}
+
 export async function updateCaso(id: string, input: CasoInput): Promise<Caso> {
   const supabase = await createClient();
   const updates: Record<string, unknown> = {

@@ -25,6 +25,7 @@ export function LeadDetailModal({
   const [newNote, setNewNote] = useState("");
   const [savingNote, setSavingNote] = useState(false);
   const [statusSaving, setStatusSaving] = useState(false);
+  const [arquivarSaving, setArquivarSaving] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -61,6 +62,23 @@ export function LeadDetailModal({
       }
     } finally {
       setStatusSaving(false);
+    }
+  }
+
+  async function handleToggleArquivado() {
+    const arquivado = !lead.arquivado;
+    setArquivarSaving(true);
+    try {
+      const res = await fetch(`/api/admin/leads/${lead.id}/arquivar`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ arquivado }),
+      });
+      if (res.ok) {
+        onUpdate({ ...lead, arquivado });
+      }
+    } finally {
+      setArquivarSaving(false);
     }
   }
 
@@ -135,6 +153,14 @@ export function LeadDetailModal({
               </option>
             ))}
           </select>
+          <button
+            type="button"
+            onClick={handleToggleArquivado}
+            disabled={arquivarSaving}
+            className="mt-2 border border-hairline-strong px-3 py-1.5 text-xs text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold disabled:opacity-50"
+          >
+            {lead.arquivado ? "Desarquivar" : "Arquivar"}
+          </button>
         </div>
 
         <Link
