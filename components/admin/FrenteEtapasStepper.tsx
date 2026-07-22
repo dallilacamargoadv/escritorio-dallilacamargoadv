@@ -19,6 +19,8 @@ export function FrenteEtapasStepper({
   const [novaEtapa, setNovaEtapa] = useState("");
   const [saving, setSaving] = useState(false);
   const [, setTick] = useState(0);
+  const [aplicandoModelo, setAplicandoModelo] = useState(false);
+  const [erroModelo, setErroModelo] = useState("");
   const fileInputs = useRef<Record<string, HTMLInputElement | null>>({});
 
   useEffect(() => {
@@ -33,6 +35,24 @@ export function FrenteEtapasStepper({
     const interval = setInterval(() => setTick((t) => t + 1), 1000);
     return () => clearInterval(interval);
   }, [etapas]);
+
+  async function handleAplicarModelo() {
+    setAplicandoModelo(true);
+    setErroModelo("");
+    try {
+      const res = await fetch(
+        `/api/admin/casos/${casoId}/frentes/${frenteId}/aplicar-modelo`,
+        { method: "POST" },
+      );
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Erro ao aplicar modelo");
+      setEtapas(data.etapas);
+    } catch (err) {
+      setErroModelo(err instanceof Error ? err.message : "Erro ao aplicar modelo");
+    } finally {
+      setAplicandoModelo(false);
+    }
+  }
 
   async function handleToggleTimer(etapa: FrenteEtapa) {
     const acao = etapa.timer_iniciado_em ? "stop" : "start";
@@ -164,10 +184,25 @@ export function FrenteEtapasStepper({
   return (
     <div className="border-t border-hairline bg-bg-alt px-4 py-3">
       {etapas.length === 0 && (
-        <p className="text-xs text-ink-dim">
-          Nenhuma etapa ainda (sem modelo cadastrado pra essa área/tipo, ou nenhuma
-          adicionada na mão).
-        </p>
+        <div>
+          <p className="text-xs text-ink-dim">
+            Nenhuma etapa ainda (sem modelo cadastrado pra essa área/tipo, ou nenhuma
+            adicionada na mão).
+          </p>
+          <button
+            type="button"
+            onClick={handleAplicarModelo}
+            disabled={aplicandoModelo}
+            className="mt-2 border border-hairline-strong px-3 py-1.5 text-xs text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold disabled:opacity-50"
+          >
+            {aplicandoModelo ? "Aplicando…" : "Aplicar modelo"}
+          </button>
+          {erroModelo && (
+            <p role="alert" className="mt-1.5 text-xs text-error">
+              {erroModelo}
+            </p>
+          )}
+        </div>
       )}
       <div className="flex flex-col">
         {etapas.map((etapa, index) => {
