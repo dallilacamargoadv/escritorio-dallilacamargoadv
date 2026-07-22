@@ -275,7 +275,11 @@ export function CasoForm({
             type="text"
             value={categoria}
             onChange={(e) => setCategoria(e.target.value)}
-            placeholder="ex.: Revisão de Termos de Uso"
+            placeholder={
+              area === "outros"
+                ? 'Qual matéria? ex.: "Direito de Família"'
+                : "ex.: Revisão de Termos de Uso"
+            }
             className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
           />
         </div>

@@ -15,6 +15,7 @@ export const FORM_TYPE_LABELS: Record<string, string> = {
   contas_e_plataformas: "Contas e Plataformas",
   golpes_virtuais: "Golpes Virtuais",
   assessoria_estrategica: "Assessoria Estratégica",
+  outros: "Outros",
 };
 
 /** Paleta categórica fixa das 5 áreas — ver nota de validação em app/globals.css. */

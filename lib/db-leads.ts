@@ -6,7 +6,8 @@ export type LeadFormType =
   | "propriedade_intelectual"
   | "contas_e_plataformas"
   | "golpes_virtuais"
-  | "assessoria_estrategica";
+  | "assessoria_estrategica"
+  | "outros";
 
 export interface InsertLeadInput {
   formType: LeadFormType;
