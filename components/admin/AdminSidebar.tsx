@@ -17,7 +17,6 @@ import {
   TrendingUp,
   Target,
   Link2,
-  FileBarChart,
   Bell,
   LogOut,
   Workflow,
@@ -84,7 +83,6 @@ export function AdminSidebar({
       items: [
         { href: "/admin/clientes", label: "Clientes", icon: UserSquare2, exact: false, badge: 0 },
         { href: "/admin/casos", label: "Casos", icon: Briefcase, exact: false, badge: 0 },
-        { href: "/admin/relatorios", label: "Relatórios", icon: FileBarChart, exact: false, badge: 0 },
         { href: "/admin/fluxos", label: "Modelos de fluxo", icon: Workflow, exact: false, badge: 0 },
       ],
       areaSubnav: true,

@@ -29,6 +29,7 @@ import {
 import { formatDate } from "@/lib/format";
 import { isLancamentoAtrasado } from "@/lib/financeiro-utils";
 import { DashboardAutoRefresh } from "@/components/admin/DashboardAutoRefresh";
+import { AdminPageBanner } from "@/components/admin/AdminPageBanner";
 import { DateRangeFilter } from "@/components/admin/DateRangeFilter";
 import {
   DATE_RANGE_LABELS,
@@ -416,14 +417,12 @@ export function AdminOverviewClient({
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
       <DashboardAutoRefresh />
 
-      <div className="flex flex-wrap items-start justify-between gap-6 border-b border-hairline pb-6">
-        <div>
-          <h1 className="text-lg italic text-ink">Visão Geral</h1>
-          <p className="font-mono text-xs text-ink-dim">
-            Resumo da operação do escritório
-          </p>
-        </div>
+      <AdminPageBanner
+        title="Visão Geral"
+        subtitle="Resumo da operação do escritório"
+      />
 
+      <div className="mt-6 flex flex-wrap items-start justify-end gap-6 border-b border-hairline pb-6">
         <DateRangeFilter value={range} onChange={setRange} />
 
         <div className="w-72 shrink-0 border border-hairline">
