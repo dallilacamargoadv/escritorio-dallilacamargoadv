@@ -23,6 +23,7 @@ import {
   Search,
   Settings,
   PiggyBank,
+  Handshake,
 } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { createClient } from "@/lib/supabase/client";
@@ -82,6 +83,7 @@ export function AdminSidebar({
       label: "Jurídico",
       items: [
         { href: "/admin/clientes", label: "Clientes", icon: UserSquare2, exact: false, badge: 0 },
+        { href: "/admin/parcerias", label: "Parcerias", icon: Handshake, exact: false, badge: 0 },
         { href: "/admin/casos", label: "Casos", icon: Briefcase, exact: false, badge: 0 },
         { href: "/admin/fluxos", label: "Modelos de fluxo", icon: Workflow, exact: false, badge: 0 },
       ],

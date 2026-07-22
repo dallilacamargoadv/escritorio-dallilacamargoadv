@@ -7,6 +7,7 @@ import type { FinanceiroStatus } from "@/lib/db-financeiro";
 import type { NotificacaoTipo } from "@/lib/db-notificacoes";
 import type { AtividadeTipo, AtividadeStatus } from "@/lib/db-atividades";
 import type { DespesaStatus, DespesaRecorrencia } from "@/lib/db-despesas";
+import type { IndicacaoDirecao } from "@/lib/db-indicacoes";
 
 export const FORM_TYPE_LABELS: Record<string, string> = {
   contratos: "Contratos Digitais",
@@ -94,6 +95,16 @@ export const STATUS_COLORS: Record<LeadStatus, string> = {
 export const TIPO_PESSOA_LABELS: Record<TipoPessoa, string> = {
   pf: "Pessoa Física",
   pj: "Pessoa Jurídica",
+};
+
+export const INDICACAO_DIRECAO_LABELS: Record<IndicacaoDirecao, string> = {
+  enviada: "Enviada",
+  recebida: "Recebida",
+};
+
+export const INDICACAO_DIRECAO_COLORS: Record<IndicacaoDirecao, string> = {
+  enviada: "text-wine border-wine",
+  recebida: "text-success border-success",
 };
 
 export const CONTRATO_TIPO_LABELS: Record<ContratoTipo, string> = {
