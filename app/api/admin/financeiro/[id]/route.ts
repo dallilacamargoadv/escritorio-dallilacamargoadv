@@ -25,13 +25,15 @@ export async function GET(
 }
 
 export async function PATCH(
-  _request: NextRequest,
+  request: NextRequest,
   ctx: RouteContext<"/api/admin/financeiro/[id]">,
 ) {
   const { id } = await ctx.params;
+  const body = await request.json().catch(() => null);
+  const pagoEm = typeof body?.pago_em === "string" && body.pago_em ? body.pago_em : undefined;
 
   try {
-    const lancamento = await marcarComoPago(id);
+    const lancamento = await marcarComoPago(id, pagoEm);
     return NextResponse.json({ lancamento });
   } catch {
     return NextResponse.json(

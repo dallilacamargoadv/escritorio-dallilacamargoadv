@@ -6,6 +6,7 @@ import Link from "next/link";
 import type { Contrato, ContratoStatus, ContratoTipo } from "@/lib/db-contratos";
 import type { Caso } from "@/lib/db-casos";
 import type { Lancamento } from "@/lib/db-financeiro";
+import { parseCurrencyInput } from "@/lib/currency-input";
 import {
   CASO_STATUS_LABELS,
   CONTRATO_STATUS_LABELS,
@@ -96,7 +97,7 @@ export function ContratoForm({
           cliente_id: clienteId,
           tipo,
           status,
-          valor: valor.trim() ? Number(valor) : null,
+          valor: valor.trim() ? parseCurrencyInput(valor) : null,
           periodicidade,
         }),
       });
@@ -168,8 +169,9 @@ export function ContratoForm({
             Valor (R$)
           </label>
           <input
-            type="number"
-            step="0.01"
+            type="text"
+            inputMode="decimal"
+            placeholder="ex.: 4.500 ou 4500,50"
             value={valor}
             onChange={(e) => setValor(e.target.value)}
             className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"

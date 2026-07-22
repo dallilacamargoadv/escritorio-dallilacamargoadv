@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import type { LancamentoPessoal, FinanceiroPessoalStatus } from "@/lib/db-financeiro-pessoal";
+import { parseCurrencyInput } from "@/lib/currency-input";
 
 const STATUS_KEYS: FinanceiroPessoalStatus[] = ["pendente", "pago", "cancelado"];
 const STATUS_LABELS: Record<FinanceiroPessoalStatus, string> = {
@@ -28,7 +29,7 @@ export function ReceitaPessoalModal({
   const [error, setError] = useState("");
 
   async function handleSave() {
-    const valorNumerico = Number(valor.replace(",", "."));
+    const valorNumerico = parseCurrencyInput(valor);
     if (!descricao.trim() || !valorNumerico || !vencimento) {
       setError("Descrição, valor e vencimento são obrigatórios.");
       return;

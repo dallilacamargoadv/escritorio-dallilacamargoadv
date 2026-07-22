@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { parseCurrencyInput } from "@/lib/currency-input";
 
 export interface ContratoOption {
   id: string;
@@ -54,7 +55,7 @@ export function FinanceiroForm({
           contrato_id: selected.id,
           cliente_id: selected.clienteId,
           descricao,
-          valor: Number(valor),
+          valor: parseCurrencyInput(valor),
           vencimento: new Date(vencimento).toISOString(),
           tipo,
           quantidade: tipo === "unico" ? 1 : Number(quantidade),
@@ -144,8 +145,9 @@ export function FinanceiroForm({
               Valor de cada parcela (R$)
             </label>
             <input
-              type="number"
-              step="0.01"
+              type="text"
+              inputMode="decimal"
+              placeholder="ex.: 4.500 ou 4500,50"
               value={valor}
               onChange={(e) => setValor(e.target.value)}
               className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"

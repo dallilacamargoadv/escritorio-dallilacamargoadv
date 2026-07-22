@@ -18,6 +18,7 @@ export function FinanceiroDetail({
 }) {
   const router = useRouter();
   const [saving, setSaving] = useState(false);
+  const [pagoEm, setPagoEm] = useState(() => new Date().toISOString().slice(0, 10));
   const atrasado = isLancamentoAtrasado(lancamento);
 
   async function handleMarcarPago() {
@@ -25,6 +26,8 @@ export function FinanceiroDetail({
     try {
       const res = await fetch(`/api/admin/financeiro/${lancamento.id}`, {
         method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ pago_em: pagoEm }),
       });
       if (res.ok) router.refresh();
     } finally {
@@ -102,14 +105,27 @@ export function FinanceiroDetail({
 
       <div className="mt-8 flex flex-wrap gap-3">
         {lancamento.status === "pendente" && (
-          <button
-            type="button"
-            onClick={handleMarcarPago}
-            disabled={saving}
-            className="border border-gold bg-gold px-5 py-2.5 text-sm text-bg transition-all duration-150 hover:bg-transparent hover:text-gold disabled:opacity-50"
-          >
-            {saving ? "Salvando..." : "Marcar como pago"}
-          </button>
+          <div className="flex flex-wrap items-end gap-2">
+            <div>
+              <label className="font-eyebrow text-[10px] text-ink-dim">
+                Pago em
+              </label>
+              <input
+                type="date"
+                value={pagoEm}
+                onChange={(e) => setPagoEm(e.target.value)}
+                className="mt-1.5 block border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink"
+              />
+            </div>
+            <button
+              type="button"
+              onClick={handleMarcarPago}
+              disabled={saving}
+              className="border border-gold bg-gold px-5 py-2.5 text-sm text-bg transition-all duration-150 hover:bg-transparent hover:text-gold disabled:opacity-50"
+            >
+              {saving ? "Salvando..." : "Marcar como pago"}
+            </button>
+          </div>
         )}
         {lancamento.status === "pago" && (
           <Link

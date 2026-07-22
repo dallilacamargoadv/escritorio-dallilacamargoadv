@@ -11,6 +11,7 @@ import type { DespesaCategoria } from "@/lib/db-despesa-categorias";
 import { FORMAS_PAGAMENTO } from "@/lib/despesas-categorias";
 import { sugerirCategoria } from "@/lib/categoria-sugestao";
 import { DESPESA_RECORRENCIA_LABELS, DESPESA_STATUS_LABELS } from "@/lib/admin-labels";
+import { parseCurrencyInput } from "@/lib/currency-input";
 
 const STATUS_KEYS: DespesaPessoalStatus[] = ["a_pagar", "pago", "cancelado"];
 const RECORRENCIA_KEYS: DespesaPessoalRecorrencia[] = [
@@ -89,7 +90,7 @@ export function DespesaPessoalModal({
   }
 
   async function handleSave() {
-    const valorNumerico = Number(valor.replace(",", "."));
+    const valorNumerico = parseCurrencyInput(valor);
     if (!descricao.trim() || !valorNumerico || !vencimento) {
       setError("Descrição, valor e vencimento são obrigatórios.");
       return;

@@ -102,11 +102,17 @@ export async function createLancamentosLote(
   return data as Lancamento[];
 }
 
-export async function marcarComoPago(id: string): Promise<Lancamento> {
+export async function marcarComoPago(
+  id: string,
+  pagoEm?: string,
+): Promise<Lancamento> {
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("financeiro_lancamentos")
-    .update({ status: "pago", pago_em: new Date().toISOString() })
+    .update({
+      status: "pago",
+      pago_em: pagoEm ? new Date(pagoEm).toISOString() : new Date().toISOString(),
+    })
     .eq("id", id)
     .select()
     .single();
