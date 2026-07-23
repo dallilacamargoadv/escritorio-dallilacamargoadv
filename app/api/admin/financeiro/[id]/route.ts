@@ -16,7 +16,8 @@ export async function GET(
       );
     }
     return NextResponse.json({ lancamento });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar o lançamento" },
       { status: 401 },
@@ -35,7 +36,8 @@ export async function PATCH(
   try {
     const lancamento = await marcarComoPago(id, pagoEm);
     return NextResponse.json({ lancamento });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível marcar como pago" },
       { status: 401 },

@@ -31,7 +31,8 @@ export async function GET(
   try {
     const frentes = await getAllFrentes(id);
     return NextResponse.json({ frentes });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar as frentes" },
       { status: 401 },
@@ -81,7 +82,8 @@ export async function POST(
       await copiarEtapasDoTemplate(frente.id, caso.area, frente.tipo);
     }
     return NextResponse.json({ frente });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível criar a frente" },
       { status: 401 },

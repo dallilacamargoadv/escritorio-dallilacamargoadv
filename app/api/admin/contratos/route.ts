@@ -20,7 +20,8 @@ export async function GET(request: NextRequest) {
   try {
     const contratos = await getAllContratos(clienteId);
     return NextResponse.json({ contratos });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar os contratos" },
       { status: 401 },
@@ -57,7 +58,8 @@ export async function POST(request: NextRequest) {
   try {
     const contrato = await createContrato(input);
     return NextResponse.json({ contrato });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível criar o contrato" },
       { status: 401 },

@@ -33,7 +33,8 @@ export async function GET(
       return NextResponse.json({ error: "Caso não encontrado" }, { status: 404 });
     }
     return NextResponse.json({ caso });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar o caso" },
       { status: 401 },
@@ -94,7 +95,8 @@ export async function PATCH(
   try {
     const caso = await updateCaso(id, input);
     return NextResponse.json({ caso });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar o caso" },
       { status: 401 },

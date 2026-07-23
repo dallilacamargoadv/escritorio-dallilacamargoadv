@@ -30,7 +30,8 @@ export async function POST(request: NextRequest) {
   try {
     const link = await createLink({ grupo_id: grupoId, titulo, url, tipo });
     return NextResponse.json({ link });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível criar o link" },
       { status: 401 },

@@ -10,7 +10,8 @@ export async function DELETE(
   try {
     await deleteDespesaSubcategoriaPessoal(subId);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível excluir a subcategoria" },
       { status: 401 },

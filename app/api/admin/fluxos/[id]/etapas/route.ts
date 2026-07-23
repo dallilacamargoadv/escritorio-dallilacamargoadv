@@ -43,7 +43,8 @@ export async function POST(
       minutaUrl,
     );
     return NextResponse.json({ etapa });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível criar a etapa" },
       { status: 401 },

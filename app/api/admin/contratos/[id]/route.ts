@@ -29,7 +29,8 @@ export async function GET(
       );
     }
     return NextResponse.json({ contrato });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar o contrato" },
       { status: 401 },
@@ -69,7 +70,8 @@ export async function PATCH(
   try {
     const contrato = await updateContrato(id, input);
     return NextResponse.json({ contrato });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar o contrato" },
       { status: 401 },

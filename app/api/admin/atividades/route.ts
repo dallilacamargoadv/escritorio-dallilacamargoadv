@@ -22,7 +22,8 @@ export async function GET() {
   try {
     const atividades = await getAllAtividades();
     return NextResponse.json({ atividades });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar as atividades" },
       { status: 401 },
@@ -66,7 +67,8 @@ export async function POST(request: NextRequest) {
   try {
     const atividade = await createAtividade(input);
     return NextResponse.json({ atividade });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível criar a atividade" },
       { status: 401 },

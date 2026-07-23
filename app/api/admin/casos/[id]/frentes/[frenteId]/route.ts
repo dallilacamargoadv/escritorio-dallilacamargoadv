@@ -58,7 +58,8 @@ export async function PATCH(
   try {
     const frente = await updateFrente(frenteId, input);
     return NextResponse.json({ frente });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar a frente" },
       { status: 401 },

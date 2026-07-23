@@ -5,7 +5,8 @@ export async function GET() {
   try {
     const parceiros = await getAllParceiros();
     return NextResponse.json({ parceiros });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar os parceiros" },
       { status: 401 },
@@ -34,7 +35,8 @@ export async function POST(request: NextRequest) {
   try {
     const parceiro = await createParceiro(input);
     return NextResponse.json({ parceiro });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível criar o parceiro" },
       { status: 401 },

@@ -10,7 +10,8 @@ export async function PATCH(
   try {
     const lancamento = await cancelarLancamento(id);
     return NextResponse.json({ lancamento });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível cancelar o lançamento" },
       { status: 401 },

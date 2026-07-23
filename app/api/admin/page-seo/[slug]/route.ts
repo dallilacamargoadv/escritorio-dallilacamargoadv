@@ -28,7 +28,8 @@ export async function PATCH(
     const entry = PAGE_SEO_ENTRIES.find((e) => e.slug === slug);
     if (entry) revalidatePath(entry.path);
     return NextResponse.json({ page });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar o SEO da página" },
       { status: 401 },

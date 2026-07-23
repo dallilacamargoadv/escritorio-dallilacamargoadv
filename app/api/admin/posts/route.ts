@@ -7,7 +7,8 @@ export async function GET() {
   try {
     const posts = await getAllPostsAdmin();
     return NextResponse.json({ posts });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar os posts" },
       { status: 401 },
@@ -54,7 +55,8 @@ export async function POST(request: NextRequest) {
     revalidatePath(`/blog/${post.slug}`);
     revalidatePath(`/blog/categoria/${CATEGORY_SLUGS[post.category]}`);
     return NextResponse.json({ post });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível criar o post" },
       { status: 401 },

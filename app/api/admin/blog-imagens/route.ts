@@ -22,7 +22,8 @@ export async function POST(request: NextRequest) {
   try {
     const url = await uploadBlogImagem(file);
     return NextResponse.json({ url });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível enviar a imagem" },
       { status: 401 },

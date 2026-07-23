@@ -20,7 +20,8 @@ export async function GET(
       );
     }
     return NextResponse.json({ cliente });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar o cliente" },
       { status: 401 },
@@ -65,7 +66,8 @@ export async function PATCH(
   try {
     const cliente = await updateCliente(id, input);
     return NextResponse.json({ cliente });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar o cliente" },
       { status: 401 },

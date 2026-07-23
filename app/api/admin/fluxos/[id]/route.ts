@@ -10,7 +10,8 @@ export async function DELETE(
   try {
     await deleteFluxoTemplate(id);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível excluir o modelo" },
       { status: 401 },

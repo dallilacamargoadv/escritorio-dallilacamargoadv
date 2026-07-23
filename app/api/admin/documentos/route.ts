@@ -35,7 +35,8 @@ export async function POST(request: NextRequest) {
           : null,
     });
     return NextResponse.json({ documento });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível enviar o documento" },
       { status: 401 },

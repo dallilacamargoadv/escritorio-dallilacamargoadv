@@ -111,7 +111,8 @@ export async function GET(request: NextRequest) {
     let items;
     try {
       items = await fetchComunicaPje(frente.numero_processo);
-    } catch {
+    } catch (error) {
+      console.error(error);
       continue;
     }
     if (items.length === 0) continue;

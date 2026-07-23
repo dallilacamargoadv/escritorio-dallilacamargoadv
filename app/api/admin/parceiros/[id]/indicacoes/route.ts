@@ -14,7 +14,8 @@ export async function GET(
   try {
     const indicacoes = await getIndicacoesByParceiro(id);
     return NextResponse.json({ indicacoes });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar as indicações" },
       { status: 401 },
@@ -50,7 +51,8 @@ export async function POST(
   try {
     const indicacao = await createIndicacao(id, input);
     return NextResponse.json({ indicacao });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível salvar a indicação" },
       { status: 401 },

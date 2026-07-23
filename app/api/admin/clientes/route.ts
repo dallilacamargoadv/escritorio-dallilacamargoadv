@@ -10,7 +10,8 @@ export async function GET() {
   try {
     const clientes = await getAllClientes();
     return NextResponse.json({ clientes });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar os clientes" },
       { status: 401 },
@@ -54,7 +55,8 @@ export async function POST(request: NextRequest) {
       ? await convertLeadToCliente(leadId, input)
       : await createCliente(input);
     return NextResponse.json({ cliente });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível criar o cliente" },
       { status: 401 },

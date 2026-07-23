@@ -8,7 +8,8 @@ export async function GET() {
   try {
     const despesas = await getAllDespesas();
     return NextResponse.json({ despesas });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar as despesas" },
       { status: 401 },
@@ -59,7 +60,8 @@ export async function POST(request: NextRequest) {
   try {
     const despesa = await createDespesa(input);
     return NextResponse.json({ despesa });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível criar a despesa" },
       { status: 401 },

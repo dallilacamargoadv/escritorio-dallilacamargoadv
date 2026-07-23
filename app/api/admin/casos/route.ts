@@ -17,7 +17,8 @@ export async function GET(request: NextRequest) {
   try {
     const casos = await getAllCasos(contratoId);
     return NextResponse.json({ casos });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar os casos" },
       { status: 401 },

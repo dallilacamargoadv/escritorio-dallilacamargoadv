@@ -16,7 +16,8 @@ export async function PATCH(
   try {
     await updateLinkGrupoTitulo(id, titulo);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar o grupo" },
       { status: 401 },
@@ -33,7 +34,8 @@ export async function DELETE(
   try {
     await deleteLinkGrupo(id);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível excluir o grupo" },
       { status: 401 },

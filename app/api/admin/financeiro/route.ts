@@ -12,7 +12,8 @@ export async function GET(request: NextRequest) {
   try {
     const lancamentos = await getAllLancamentos(clienteId);
     return NextResponse.json({ lancamentos });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar o financeiro" },
       { status: 401 },
@@ -82,7 +83,8 @@ export async function POST(request: NextRequest) {
 
     const lancamentos = await createLancamentosLote(inputs);
     return NextResponse.json({ lancamentos });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível criar o(s) lançamento(s)" },
       { status: 401 },

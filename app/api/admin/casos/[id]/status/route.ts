@@ -24,7 +24,8 @@ export async function PATCH(
   try {
     const caso = await setCasoStatus(id, status);
     return NextResponse.json({ caso });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar o status" },
       { status: 401 },

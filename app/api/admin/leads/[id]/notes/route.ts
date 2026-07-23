@@ -10,7 +10,8 @@ export async function GET(
   try {
     const notes = await getLeadNotes(id);
     return NextResponse.json({ notes });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar as notas" },
       { status: 401 },
@@ -36,7 +37,8 @@ export async function POST(
   try {
     const note = await addLeadNote(id, noteBody);
     return NextResponse.json({ note });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível salvar a nota" },
       { status: 401 },

@@ -18,7 +18,8 @@ export async function PATCH(
   try {
     const frente = await setFrenteVisivelCliente(frenteId, body.visivel_cliente);
     return NextResponse.json({ frente });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar a visibilidade" },
       { status: 401 },

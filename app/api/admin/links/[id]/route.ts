@@ -16,7 +16,8 @@ export async function PATCH(
   try {
     await updateLinkTitulo(id, titulo);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar o link" },
       { status: 401 },
@@ -33,7 +34,8 @@ export async function DELETE(
   try {
     await deleteLink(id);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível excluir o link" },
       { status: 401 },

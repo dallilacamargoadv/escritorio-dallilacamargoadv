@@ -20,7 +20,8 @@ export async function GET(
       return NextResponse.json({ error: "Lançamento não encontrado" }, { status: 404 });
     }
     return NextResponse.json({ lancamento });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar o lançamento" },
       { status: 401 },
@@ -53,7 +54,8 @@ export async function PATCH(
   try {
     const lancamento = await updateLancamentoPessoal(id, input);
     return NextResponse.json({ lancamento });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar o lançamento" },
       { status: 401 },
@@ -70,7 +72,8 @@ export async function DELETE(
   try {
     await deleteLancamentoPessoal(id);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível excluir o lançamento" },
       { status: 401 },

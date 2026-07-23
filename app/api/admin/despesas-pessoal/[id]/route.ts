@@ -21,7 +21,8 @@ export async function GET(
       return NextResponse.json({ error: "Despesa não encontrada" }, { status: 404 });
     }
     return NextResponse.json({ despesa });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar a despesa" },
       { status: 401 },
@@ -71,7 +72,8 @@ export async function PATCH(
   try {
     const despesa = await updateDespesaPessoal(id, input);
     return NextResponse.json({ despesa });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar a despesa" },
       { status: 401 },
@@ -88,7 +90,8 @@ export async function DELETE(
   try {
     await deleteDespesaPessoal(id);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível excluir a despesa" },
       { status: 401 },

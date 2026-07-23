@@ -17,7 +17,8 @@ export async function POST(request: NextRequest) {
   let parsed: URL;
   try {
     parsed = new URL(url);
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json({ error: "URL inválida" }, { status: 400 });
   }
   if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
@@ -43,7 +44,8 @@ export async function POST(request: NextRequest) {
         titulo = decodeHtmlEntities(match[1].trim());
       }
     }
-  } catch {
+  } catch (error) {
+    console.error(error);
     // Falha ao buscar o título — segue com o fallback (domínio).
   }
 

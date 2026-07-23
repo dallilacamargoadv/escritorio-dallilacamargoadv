@@ -16,7 +16,8 @@ export async function POST(
   try {
     const subcategoria = await createDespesaSubcategoriaPessoal(id, nome);
     return NextResponse.json({ subcategoria });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível criar a subcategoria" },
       { status: 401 },

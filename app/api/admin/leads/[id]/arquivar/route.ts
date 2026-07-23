@@ -12,7 +12,8 @@ export async function PATCH(
   try {
     await setLeadArquivado(id, arquivado);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar o lead" },
       { status: 401 },

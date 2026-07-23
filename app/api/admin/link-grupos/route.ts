@@ -5,7 +5,8 @@ export async function GET() {
   try {
     const grupos = await getAllLinkGrupos();
     return NextResponse.json({ grupos });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar os grupos" },
       { status: 401 },
@@ -24,7 +25,8 @@ export async function POST(request: NextRequest) {
   try {
     const grupo = await createLinkGrupo(titulo);
     return NextResponse.json({ grupo });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível criar o grupo" },
       { status: 401 },

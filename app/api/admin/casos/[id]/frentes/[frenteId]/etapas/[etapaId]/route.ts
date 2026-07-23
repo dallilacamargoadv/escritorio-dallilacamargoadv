@@ -49,7 +49,8 @@ export async function PATCH(
     }
 
     return NextResponse.json({ error: "Nada pra atualizar" }, { status: 400 });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar a etapa" },
       { status: 401 },
@@ -66,7 +67,8 @@ export async function DELETE(
   try {
     await deleteFrenteEtapa(etapaId);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível excluir a etapa" },
       { status: 401 },

@@ -23,7 +23,8 @@ export async function PATCH(
   try {
     const documento = await updateDocumentoMarcoCliente(id, marcoCliente);
     return NextResponse.json({ documento });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar o documento" },
       { status: 401 },
@@ -40,7 +41,8 @@ export async function DELETE(
   try {
     await deleteDocumento(id);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível excluir o documento" },
       { status: 401 },

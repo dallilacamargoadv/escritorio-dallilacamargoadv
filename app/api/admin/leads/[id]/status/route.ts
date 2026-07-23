@@ -19,7 +19,8 @@ export async function PATCH(
   try {
     await updateLeadStatus(id, status);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar o status" },
       { status: 401 },

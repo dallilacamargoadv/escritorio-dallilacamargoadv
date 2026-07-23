@@ -10,7 +10,8 @@ export async function GET(
   try {
     const etapas = await getEtapasByFrente(frenteId);
     return NextResponse.json({ etapas });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar as etapas" },
       { status: 401 },
@@ -34,7 +35,8 @@ export async function POST(
   try {
     const etapa = await createFrenteEtapa(frenteId, nome, ordem);
     return NextResponse.json({ etapa });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível criar a etapa" },
       { status: 401 },

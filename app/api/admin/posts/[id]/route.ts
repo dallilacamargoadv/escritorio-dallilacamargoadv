@@ -20,7 +20,8 @@ export async function GET(
       return NextResponse.json({ error: "Post não encontrado" }, { status: 404 });
     }
     return NextResponse.json({ post });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar o post" },
       { status: 401 },
@@ -83,7 +84,8 @@ export async function PATCH(
     }
 
     return NextResponse.json({ post });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar o post" },
       { status: 401 },
@@ -108,7 +110,8 @@ export async function DELETE(
     }
 
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível excluir o post" },
       { status: 401 },

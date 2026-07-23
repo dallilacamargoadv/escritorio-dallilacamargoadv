@@ -34,7 +34,8 @@ export async function POST(request: NextRequest) {
   try {
     const lead = await createLeadManual(input);
     return NextResponse.json({ lead });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível criar o lead" },
       { status: 401 },

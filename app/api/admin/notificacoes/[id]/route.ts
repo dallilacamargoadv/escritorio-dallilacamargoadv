@@ -10,7 +10,8 @@ export async function PATCH(
   try {
     await markNotificacaoAsRead(id);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível marcar como lida" },
       { status: 401 },

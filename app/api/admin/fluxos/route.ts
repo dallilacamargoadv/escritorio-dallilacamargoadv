@@ -14,7 +14,8 @@ export async function GET() {
   try {
     const templates = await getAllFluxoTemplates();
     return NextResponse.json({ templates });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar os modelos de fluxo" },
       { status: 401 },
@@ -37,7 +38,8 @@ export async function POST(request: NextRequest) {
   try {
     const template = await createFluxoTemplate(area, tipoFrente);
     return NextResponse.json({ template });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível criar o modelo (já existe um pra essa combinação?)" },
       { status: 401 },

@@ -16,7 +16,8 @@ export async function PATCH(
   try {
     await updateDespesaCategoriaNome(id, nome);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar a categoria" },
       { status: 401 },
@@ -33,7 +34,8 @@ export async function DELETE(
   try {
     await deleteDespesaCategoria(id);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível excluir a categoria" },
       { status: 401 },

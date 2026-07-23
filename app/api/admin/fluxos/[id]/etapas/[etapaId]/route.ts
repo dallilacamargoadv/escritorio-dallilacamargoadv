@@ -38,7 +38,8 @@ export async function PATCH(
   try {
     const etapa = await updateFluxoEtapaTemplate(etapaId, nome, checklist, slaDias, minutaUrl);
     return NextResponse.json({ etapa });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar a etapa" },
       { status: 401 },
@@ -55,7 +56,8 @@ export async function DELETE(
   try {
     await deleteFluxoEtapaTemplate(etapaId);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível excluir a etapa" },
       { status: 401 },

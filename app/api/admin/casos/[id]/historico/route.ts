@@ -10,7 +10,8 @@ export async function GET(
   try {
     const historico = await getHistoricoByCaso(id);
     return NextResponse.json({ historico });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar o histórico" },
       { status: 401 },
@@ -35,7 +36,8 @@ export async function POST(
   try {
     const entry = await createHistoricoEntry(id, texto, retificaId);
     return NextResponse.json({ entry });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível salvar a entrada" },
       { status: 401 },

@@ -41,7 +41,8 @@ export async function POST(
     await copiarEtapasDoTemplate(frenteId, caso.area, frente.tipo);
     const etapas = await getEtapasByFrente(frenteId);
     return NextResponse.json({ etapas });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível aplicar o modelo" },
       { status: 401 },

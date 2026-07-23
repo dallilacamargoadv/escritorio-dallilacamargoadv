@@ -33,7 +33,8 @@ export async function GET(
       return NextResponse.json({ error: "Atividade não encontrada" }, { status: 404 });
     }
     return NextResponse.json({ atividade });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível carregar a atividade" },
       { status: 401 },
@@ -84,7 +85,8 @@ export async function PATCH(
   try {
     const atividade = await updateAtividade(id, input);
     return NextResponse.json({ atividade });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível atualizar a atividade" },
       { status: 401 },
@@ -101,7 +103,8 @@ export async function DELETE(
   try {
     await deleteAtividade(id);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível excluir a atividade" },
       { status: 401 },

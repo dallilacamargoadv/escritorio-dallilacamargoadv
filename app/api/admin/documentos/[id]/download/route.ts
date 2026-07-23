@@ -10,7 +10,8 @@ export async function GET(
   try {
     const url = await getDocumentoDownloadUrl(id);
     return NextResponse.json({ url });
-  } catch {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Não foi possível gerar o link de download" },
       { status: 401 },
