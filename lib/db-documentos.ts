@@ -39,7 +39,8 @@ export async function uploadDocumento({
   marcoCliente: string | null;
 }): Promise<Documento> {
   const supabase = await createClient();
-  const storagePath = `casos/${casoId}/${crypto.randomUUID()}-${file.name}`;
+  const safeName = file.name.replace(/[/\\]/g, "_");
+  const storagePath = `casos/${casoId}/${crypto.randomUUID()}-${safeName}`;
 
   const { error: uploadError } = await supabase.storage
     .from(BUCKET)
