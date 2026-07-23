@@ -1,6 +1,6 @@
 # Handoff — Site institucional + Sistema Operacional Jurídico, Dallila Camargo I Advocacia
 
-> Documento de continuidade de sessão. Cole este arquivo (ou peça para o Claude ler `HANDOFF.md` na raiz do projeto) no início de uma nova conversa para retomar exatamente de onde paramos, sem precisar reprocessar todo o histórico anterior. **Atualizado em 2026-07-22.** O **roadmap de 8 ondas do CRM jurídico** e os **7 itens do pedido novo pós-roadmap** (seção 8.8) estão **todos concluídos e em produção**. Só fica pendente um pedido extra de UI (badge de notificações no banner) que a própria cliente pediu pra deixar pra depois — ver seção 8.8. **Não há fila de trabalho no momento** — a próxima sessão deve perguntar prioridade do zero (ver seção 11).
+> Documento de continuidade de sessão. Cole este arquivo (ou peça para o Claude ler `HANDOFF.md` na raiz do projeto) no início de uma nova conversa para retomar exatamente de onde paramos, sem precisar reprocessar todo o histórico anterior. **Atualizado em 2026-07-22.** O **roadmap de 8 ondas do CRM jurídico** e os **7 itens do pedido novo pós-roadmap** (seção 8.8) estão **todos concluídos e em produção**. O pedido extra de UI que estava adiado (badge de notificações no banner) **também foi concluído** nesta mesma data, junto com 2 correções/melhorias avulsas em Contratos/Financeiro/Recibo — ver seção 8.9. **Não há fila de trabalho no momento** — a próxima sessão deve perguntar prioridade do zero (ver seção 11).
 
 ## 1. Quem é a cliente e o que é o projeto
 
@@ -174,7 +174,7 @@ Ver `app/globals.css` para os tokens completos.
 
 ## 7. Estado atual em produção
 
-**Tudo commitado, pushado e em produção (Vercel, `READY`)** até o commit `4fca60f` — **nada pendente de commit no momento em que este handoff foi escrito** (checar `git status` mesmo assim ao retomar, por segurança). Domínio próprio `dallilacamargoadv.com.br` confirmado ativo e servindo o deployment mais recente (cada commit abaixo foi verificado individualmente com `list_deployments`/`get_deployment` até `READY` antes de seguir pro próximo). Em ordem cronológica:
+**Tudo commitado, pushado e em produção (Vercel, `READY`)** até o commit `48c68fc` — **nada pendente de commit no momento em que este handoff foi escrito** (checar `git status` mesmo assim ao retomar, por segurança). Domínio próprio `dallilacamargoadv.com.br` confirmado ativo e servindo o deployment mais recente (cada commit abaixo foi verificado individualmente com `list_deployments`/`get_deployment` até `READY` antes de seguir pro próximo). Em ordem cronológica:
 
 - Financeiro Fase 1 (`d82fb72`) e Fase 2 completa — Projeções (`ae11eec`), Análise financeira + categorias editáveis + sugestão automática (`10af2c6`).
 - HANDOFF.md consolidado (`d1b4243`).
@@ -204,6 +204,10 @@ Ver `app/globals.css` para os tokens completos.
 - **Item 3 do pedido novo: marcar retroativamente documentos e atualizações pro relatório do cliente** (`da56f7d`) — `caso_historico` ganha `visivel_cliente` (sem tocar em texto/autor), documentos ganham PATCH pra editar `marco_cliente` depois do upload, relatório do cliente ganha seção "Atualizações". Ver seção 8.8.
 - **Item 4 do pedido novo: módulo de Parcerias** (`4483f80`) — cadastro de parceiros + indicações nos dois sentidos (enviada/recebida), com vínculo opcional a lead/cliente existente. Ver seção 8.8.
 - **Item 5 do pedido novo: categoria "Outros"** (`4fca60f`) — 6ª opção de área só como classificação interna, sem página pública. **Fecha os 7 itens do pedido pós-roadmap inteiro.** Ver seção 8.8.
+- **HANDOFF.md atualizado com a conclusão dos 7 itens do pedido pós-roadmap** (`0ddb694`).
+- **Pedido extra: badge de notificações movido pro banner** (`c0b959b`) — item que tinha ficado explicitamente adiado (seção 8.8) foi retomado e concluído na mesma sessão. Ver seção 8.9.
+- **Correção: campo Valor (locale pt-BR) + backdate de pagamento** (`ee137a8`) — ver seção 8.9.
+- **Melhoria no recibo em PDF: CPF/CNPJ + valor por extenso + versão formal** (`48c68fc`) — ver seção 8.9.
 
 **Arquivo estranho, sem decisão**: `components/admin/AdminSidebar 2.tsx` (untracked, provável duplicata de conflito do iCloud Drive) — ainda sem decisão da cliente. Não mexer sem perguntar de novo. Achado também nesta sessão: `.git/refs/heads/main 2` (mesma família de arquivo duplicado do iCloud) — também não mexido, só registrado.
 
@@ -391,8 +395,8 @@ A cliente comprou `dallilacamargoadv.com.br` e pediu ajuda pra conectar na Verce
 6. ✅ **Remover a página "Relatórios"** da sidebar — concluído.
 7. ✅ **Banner superior no admin** — concluído, só na Visão Geral por decisão dela.
 
-Mais um pedido extra que veio **depois** desses 7, explicitamente adiado por ela mesma ("vou falar somente para depois você arrumar"):
-- **Badge/mini-painel de notificações dentro do banner**: ela quer que o sininho de notificações saia de onde está hoje (canto da Visão Geral) e vá pro banner novo, mostrando quantas notificações estão pendentes, com um dropdown ao clicar mostrando as últimas 5 + link "ver todas". **Não fazer isso até ela pedir de novo** — só está aqui pra não esquecer.
+Mais um pedido extra que veio **depois** desses 7, inicialmente adiado por ela mesma ("vou falar somente para depois você arrumar") e **retomado e concluído na mesma sessão** (`c0b959b`) — ver seção 8.9:
+- ✅ **Badge/mini-painel de notificações dentro do banner** — concluído.
 
 ---
 
@@ -433,6 +437,22 @@ Mais um pedido extra que veio **depois** desses 7, explicitamente adiado por ela
 - Campo `categoria` de `casos` (texto livre, já existia) ganhou um placeholder condicional em `CasoForm.tsx` ("Qual matéria? ex.: Direito de Família") quando `area === "outros"` — é onde a matéria de verdade fica registrada, sem campo novo.
 - Testado via SQL direto: enum aceita o valor novo (`enum_range` confirmou os 8 valores, incluindo `outros`), caso criado com `area = 'outros'` + `categoria` preenchida gravou e leu certo. `npx eslint .` pegou um erro de tipo (`LeadFormType` sem `"outros"`) corrigido antes do build passar limpo.
 
+### 8.9 Pedido extra do banner + correções avulsas em Contratos/Financeiro/Recibo (mesma sessão, depois do item 5) — CONCLUÍDO
+
+**Badge de notificações no banner (`c0b959b`) — CONCLUÍDO**: o sino de notificações saiu do painel fixo que ficava ao lado do filtro de período na Visão Geral e foi pro canto direito do `AdminPageBanner.tsx`, como ícone com contador. Clique abre um dropdown com as 5 notificações não lidas mais recentes + link "Ver todas" (antes era um painel sempre expandido mostrando 4); clique fora fecha. Testado com dados fake numa rota temporária fora de `/admin` (sem sessão de login ativa) — badge, dropdown e fechar ao clicar fora confirmados, sem erro de console, rota apagada depois.
+
+**Correção: campo Valor (locale pt-BR) + backdate de pagamento (`ee137a8`) — CONCLUÍDO**:
+- **Bug real**: o campo Valor usava `type="number"`, que em locale pt-BR trata "." como decimal — digitar "4.500" virava `4,5` em vez de `4500`. Corrigido trocando por `type="text"` com parser próprio (`lib/currency-input.ts`, "." vira separador de milhar, "," vira decimal). Mesmo bug e mesmo fix aplicados em **Contrato, Financeiro, Despesas, Despesas Pessoal e Receita Pessoal** (mesma causa raiz repetida nos 5 formulários).
+- **Segundo bug**: "Marcar como pago" sempre gravava a data de hoje em `pago_em`, sem opção de informar a data real — contrato antigo com pagamento retroativo não tinha como emitir recibo com a data certa nem contar no mês/ano certo nos relatórios financeiros. Corrigido: botão "Marcar como pago" ganhou campo de data (padrão hoje, editável/backdate) em `FinanceiroDetail.tsx`.
+- Testado via SQL direto (parse de valores + backdate de `pago_em`) e no browser com dados fake — sem sessão de login ativa.
+
+**Melhoria no recibo em PDF: CPF/CNPJ + valor por extenso + versão formal (`48c68fc`) — CONCLUÍDO** (mockup aprovado antes de codar; pedido da cliente depois de testar o backdate — "recibo saía muito pequeno e não mostrava o CPF"):
+- `lib/extenso.ts` (novo, sem lib externa): converte valor e data pra texto por extenso em português (ex.: "quatro mil e quinhentos reais", "20 de março de 2019").
+- Tela do admin ganhou campos de CPF/CNPJ e valor por extenso, mantendo o tema escuro padrão. **Ao gerar o PDF** (`print:hidden`/`print:block`, `window.print()` como sempre — ver seção 6), troca pro formato clássico de recibo brasileiro: fundo branco, fonte maior, texto "Recebi de [cliente], CPF/CNPJ nº [documento], a importância de R$ [valor] ([por extenso]), referente a [descrição]." — sem linha de assinatura, trocada por "Documento emitido pelo sistema de Dallila Camargo I Advocacia" (ela assina/emite direto pelo sistema).
+- Testado no browser com dados fake (conteúdo do bloco de impressão, oculto na tela e só visível em `@media print`, conferido via `innerText`) — sem sessão de login ativa.
+
+**Observação**: os 3 commits acima foram feitos **depois** do handoff anterior (`0ddb694`) ter sido escrito, numa continuação da mesma sessão — por isso não estavam documentados até esta atualização. Nenhuma decisão de escopo nova ficou pendente de confirmação.
+
 ## 9. Cronologia resumida (mais recente por último) — visão de alto nível
 
 1. Site institucional completo + CRM básico de leads (sessões anteriores).
@@ -460,7 +480,10 @@ Mais um pedido extra que veio **depois** desses 7, explicitamente adiado por ela
 30. **Item 1 do pedido novo**: arquivamento (reversível) de leads e casos — **concluído** (`fe91796`). Sessão encerrada neste ponto por limite de janela de contexto (não porque o trabalho acabou) — handoff escrito (`668753d`) com os itens 3, 4 e 5 ainda pendentes.
 31. **Item 3 do pedido novo**: relatório do cliente marcar retroativamente (`caso_historico.visivel_cliente` + `documentos.marco_cliente` editável via `PATCH` + seção "Atualizações" no relatório) — **concluído** (`da56f7d`), sessão seguinte.
 32. **Item 4 do pedido novo**: módulo de Parcerias (cadastro de parceiros + indicações enviada/recebida, vínculo opcional a lead/cliente) — **concluído** (`4483f80`).
-33. **Item 5 do pedido novo**: categoria "Outros" (6ª opção de área, só classificação interna, sem página pública) — **concluído** (`4fca60f`). **Fecha os 7 itens do pedido pós-roadmap inteiro.** Resta só o pedido extra do badge de notificações no banner, explicitamente adiado pela própria cliente. Ver seção 11.
+33. **Item 5 do pedido novo**: categoria "Outros" (6ª opção de área, só classificação interna, sem página pública) — **concluído** (`4fca60f`). **Fecha os 7 itens do pedido pós-roadmap inteiro.**
+34. **Pedido extra do badge de notificações no banner** — inicialmente adiado, **retomado e concluído na mesma sessão** (`c0b959b`). Ver seção 8.9.
+35. **Correção de bug: campo Valor em locale pt-BR + backdate de pagamento** (`ee137a8`) — mesma causa raiz corrigida em 5 formulários (Contrato/Financeiro/Despesas/Despesas Pessoal/Receita Pessoal). Ver seção 8.9.
+36. **Melhoria no recibo em PDF**: CPF/CNPJ, valor por extenso, versão formal (`48c68fc`) — **concluído**. Ver seção 8.9. **Não há fila de trabalho no momento.** Ver seção 11.
 
 ## 10. Preferências e padrões de trabalho da cliente
 
@@ -480,15 +503,15 @@ Mais um pedido extra que veio **depois** desses 7, explicitamente adiado por ela
 
 ## 11. Como retomar
 
-1. Ler este arquivo primeiro (auto-suficiente) — a seção 7 confirma que está tudo commitado/pushado/em produção até `4fca60f`. Rodar `git status` mesmo assim antes de mexer em qualquer coisa, por segurança.
-2. **Não há fila de trabalho no momento** — o roadmap de 8 ondas do CRM jurídico e os 7 itens do pedido pós-roadmap (seção 8.8) estão todos concluídos e em produção. **Perguntar prioridade do zero** quando a cliente trouxer o próximo pedido, sem presumir qual é o próximo passo.
-3. **Único item pendente conhecido**: o badge/mini-painel de notificações no banner (pedido extra, seção 8.8) — **não implementar** a menos que a cliente peça de novo, ela mesma disse pra deixar pra depois.
-4. Se ela trouxer algo relacionado ao que já foi construído (roadmap de 8 ondas, ou os itens 1–5 do pedido pós-roadmap: arquivamento, aplicar modelo, relatório do cliente retroativo, Parcerias, Outros): reler a seção 8.5/8.8 inteira antes de começar — a maioria das decisões de escopo já foi confirmada com a cliente e não deveria ser reaberta sem motivo novo.
-5. Não tocar em `components/admin/AdminSidebar 2.tsx` nem `.git/refs/heads/main 2` (arquivos estranhos, sem decisão) nem em `HANDOFF.md`-adjacent sem perguntar.
-6. Verificação padrão antes de qualquer commit: `npx eslint .` + `npm run build` limpos + teste manual no browser com dado real no Supabase (sempre limpar depois) — ou via SQL direto quando não houver sessão de login ativa (checar `document.cookie` primeiro, ver seção 6).
-7. Ver seção 6 pras notas de teste via automação de browser (drag-and-drop, `onBlur`, inputs controlados, cache de console, escala de coordenadas) antes de gastar tempo debugando algo que pode ser só limitação da ferramenta.
-8. Se o deploy da Vercel travar em "Initializing": não é o código, ver nota no fim da seção 6 — esperar ou checar a conta da cliente, nunca assumir que preciso corrigir algo.
-9. **Nova rota de API que edita dado consumido por uma página do site público**: checar se essa página é estática (`○`/`●` no build) e, se for, chamar `revalidatePath()` depois de salvar — ver nota na seção 6. Esquecer isso é um bug real e silencioso (a mudança "não aparece" e parece um erro de código, mas só falta revalidar).
-10. **Tarefas em background**: a cliente pode iniciar, a partir de uma sugestão minha (`spawn_task`), uma tarefa que roda numa sessão separada mas edita os mesmos arquivos deste repositório local. Se ela disser algo como "terminou" ou o sistema notificar uma tarefa concluída, rodar `git status`/`git diff` pra ver o que mudou antes de continuar — não presumir que o working directory está do jeito que eu deixei.
-11. **Sempre pedir confirmação explícita antes de cada commit e de cada push/deploy**, mesmo em sequência — ela confirma quase sempre com respostas curtas ("Sim", "Pode", "Aham!"), mas nunca pular a pergunta.
-12. **Enum novo adicionado a `lead_form_type`** (`outros`, item 5): lembrar que o tipo TypeScript `LeadFormType` em `lib/db-leads.ts` é escrito à mão, não gerado do banco — qualquer valor novo de enum no Postgres precisa ser espelhado lá manualmente, senão o build quebra por erro de tipo (aconteceu nesta sessão, corrigido antes do commit).
+1. Ler este arquivo primeiro (auto-suficiente) — a seção 7 confirma que está tudo commitado/pushado/em produção até `48c68fc`. Rodar `git status` mesmo assim antes de mexer em qualquer coisa, por segurança.
+2. **Não há fila de trabalho no momento** — o roadmap de 8 ondas do CRM jurídico, os 7 itens do pedido pós-roadmap (seção 8.8) e o pedido extra do badge + as 2 correções avulsas de Contratos/Financeiro/Recibo (seção 8.9) estão todos concluídos e em produção. **Perguntar prioridade do zero** quando a cliente trouxer o próximo pedido, sem presumir qual é o próximo passo.
+3. Se ela trouxer algo relacionado ao que já foi construído (roadmap de 8 ondas, itens 1–5 do pedido pós-roadmap, ou o pedido extra/correções da seção 8.9): reler a seção 8.5/8.8/8.9 inteira antes de começar — a maioria das decisões de escopo já foi confirmada com a cliente e não deveria ser reaberta sem motivo novo.
+4. Não tocar em `components/admin/AdminSidebar 2.tsx` nem `.git/refs/heads/main 2` (arquivos estranhos, sem decisão) nem em `HANDOFF.md`-adjacent sem perguntar.
+5. Verificação padrão antes de qualquer commit: `npx eslint .` + `npm run build` limpos + teste manual no browser com dado real no Supabase (sempre limpar depois) — ou via SQL direto quando não houver sessão de login ativa (checar `document.cookie` primeiro, ver seção 6).
+6. Ver seção 6 pras notas de teste via automação de browser (drag-and-drop, `onBlur`, inputs controlados, cache de console, escala de coordenadas) antes de gastar tempo debugando algo que pode ser só limitação da ferramenta.
+7. Se o deploy da Vercel travar em "Initializing": não é o código, ver nota no fim da seção 6 — esperar ou checar a conta da cliente, nunca assumir que preciso corrigir algo.
+8. **Nova rota de API que edita dado consumido por uma página do site público**: checar se essa página é estática (`○`/`●` no build) e, se for, chamar `revalidatePath()` depois de salvar — ver nota na seção 6. Esquecer isso é um bug real e silencioso (a mudança "não aparece" e parece um erro de código, mas só falta revalidar).
+9. **Tarefas em background**: a cliente pode iniciar, a partir de uma sugestão minha (`spawn_task`), uma tarefa que roda numa sessão separada mas edita os mesmos arquivos deste repositório local. Se ela disser algo como "terminou" ou o sistema notificar uma tarefa concluída, rodar `git status`/`git diff` pra ver o que mudou antes de continuar — não presumir que o working directory está do jeito que eu deixei.
+10. **Sempre pedir confirmação explícita antes de cada commit e de cada push/deploy**, mesmo em sequência — ela confirma quase sempre com respostas curtas ("Sim", "Pode", "Aham!"), mas nunca pular a pergunta.
+11. **Enum novo adicionado a `lead_form_type`** (`outros`, item 5): lembrar que o tipo TypeScript `LeadFormType` em `lib/db-leads.ts` é escrito à mão, não gerado do banco — qualquer valor novo de enum no Postgres precisa ser espelhado lá manualmente, senão o build quebra por erro de tipo (aconteceu nesta sessão, corrigido antes do commit).
+12. **Formulários de valor monetário (Contrato/Financeiro/Despesas)**: usam `type="text"` + parser próprio (`lib/currency-input.ts`), nunca `type="number"` — `type="number"` em locale pt-BR trata "." como decimal e corrompe valores como "4.500" (bug real corrigido na seção 8.9, não reintroduzir).
