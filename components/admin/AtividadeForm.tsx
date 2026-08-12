@@ -4,6 +4,20 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import type { Atividade, AtividadeStatus, AtividadeTipo } from "@/lib/db-atividades";
 import { ATIVIDADE_STATUS_LABELS, ATIVIDADE_TIPO_LABELS } from "@/lib/admin-labels";
+import { calcularDataFatal, type TipoContagem } from "@/lib/prazo-calculo";
+
+/** Tipos de atividade em que faz sentido oferecer a calculadora de data fatal. */
+const TIPOS_COM_CALCULADORA: AtividadeTipo[] = ["processual", "peca_prazo"];
+
+function formatarDataBR(dateStr: string): string {
+  const [ano, mes, dia] = dateStr.split("-").map(Number);
+  const data = new Date(Date.UTC(ano, mes - 1, dia));
+  const diaSemana = new Intl.DateTimeFormat("pt-BR", {
+    timeZone: "UTC",
+    weekday: "long",
+  }).format(data);
+  return `${String(dia).padStart(2, "0")}/${String(mes).padStart(2, "0")}/${ano} (${diaSemana})`;
+}
 
 export interface LinkOption {
   id: string;
@@ -53,6 +67,23 @@ export function AtividadeForm({
   const [visivelCliente, setVisivelCliente] = useState(atividade?.visivel_cliente ?? true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
+
+  // Calculadora de data fatal (opcional) — só sugere, nunca trava o campo Data.
+  const [marcoInicial, setMarcoInicial] = useState("");
+  const [diasQtd, setDiasQtd] = useState("");
+  const [tipoContagem, setTipoContagem] = useState<TipoContagem>("uteis");
+  const [resultadoCalculo, setResultadoCalculo] = useState<{
+    dataFatal: string;
+    diasPulados: number;
+  } | null>(null);
+
+  function handleCalcularPrazo() {
+    const dias = parseInt(diasQtd, 10);
+    if (!marcoInicial || !dias || dias <= 0) return;
+    const resultado = calcularDataFatal(marcoInicial, dias, tipoContagem);
+    setResultadoCalculo(resultado);
+    setData(resultado.dataFatal);
+  }
 
   const vinculoOptions =
     vinculoTipo === "cliente"
@@ -159,6 +190,85 @@ export function AtividadeForm({
             className="mt-2 w-full border border-hairline-strong bg-surface px-3 py-2 text-sm text-ink outline-none transition-colors duration-150 focus:border-gold"
           />
         </div>
+
+        {TIPOS_COM_CALCULADORA.includes(tipo) && (
+          <div className="border border-dashed border-wine bg-wine/[0.06] px-4 py-4">
+            <p className="mb-3 text-xs text-ink">Calcular data fatal (opcional)</p>
+            <div className="grid grid-cols-3 gap-3">
+              <div>
+                <label className="font-eyebrow text-[10px] text-ink-dim">
+                  Marco inicial
+                </label>
+                <input
+                  type="date"
+                  value={marcoInicial}
+                  onChange={(e) => setMarcoInicial(e.target.value)}
+                  className="mt-2 w-full border border-hairline-strong bg-bg px-3 py-2 text-sm text-ink"
+                />
+              </div>
+              <div>
+                <label className="font-eyebrow text-[10px] text-ink-dim">Dias</label>
+                <input
+                  type="number"
+                  min={1}
+                  value={diasQtd}
+                  onChange={(e) => setDiasQtd(e.target.value)}
+                  className="mt-2 w-full border border-hairline-strong bg-bg px-3 py-2 text-sm text-ink"
+                />
+              </div>
+              <div>
+                <label className="font-eyebrow text-[10px] text-ink-dim">Contagem</label>
+                <div className="mt-2 flex gap-1.5">
+                  <button
+                    type="button"
+                    onClick={() => setTipoContagem("uteis")}
+                    className={`font-mono text-[10.5px] px-2.5 py-1.5 border ${
+                      tipoContagem === "uteis"
+                        ? "border-gold text-gold bg-gold/10"
+                        : "border-hairline-strong text-ink-dim"
+                    }`}
+                  >
+                    Úteis
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setTipoContagem("corridos")}
+                    className={`font-mono text-[10.5px] px-2.5 py-1.5 border ${
+                      tipoContagem === "corridos"
+                        ? "border-gold text-gold bg-gold/10"
+                        : "border-hairline-strong text-ink-dim"
+                    }`}
+                  >
+                    Corridos
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={handleCalcularPrazo}
+              className="mt-3.5 bg-gold px-4 py-2 font-mono text-[11.5px] text-bg transition-opacity duration-150 hover:opacity-90"
+            >
+              Calcular e preencher data →
+            </button>
+            {resultadoCalculo && (
+              <p className="mt-3 border-l-2 border-gold pl-3 text-xs leading-relaxed text-ink-dim">
+                Data fatal:{" "}
+                <span className="font-mono text-ink">
+                  {formatarDataBR(resultadoCalculo.dataFatal)}
+                </span>
+                {tipoContagem === "uteis" &&
+                  ` · contando ${diasQtd} dias úteis a partir de ${
+                    marcoInicial ? formatarDataBR(marcoInicial).split(" ")[0] : ""
+                  }${
+                    resultadoCalculo.diasPulados > 0
+                      ? `, pulando ${resultadoCalculo.diasPulados} dia(s) de fim de semana/feriado`
+                      : ""
+                  }.`}
+              </p>
+            )}
+          </div>
+        )}
 
         <div className="grid grid-cols-2 gap-4">
           <div>
