@@ -22,28 +22,28 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
   contratos: {
     cards: [
       {
-        icon: "contrato",
-        title: "Contratos de Prestação",
+        icon: "moeda",
+        title: "Contratos de Monetização",
         description:
-          "Elaboração e revisão de contratos para prestadores de serviços, profissionais autônomos e negócios digitais.",
+          "Patrocínio, agenciamento, endorsement e parceria (collab, publipost, presença VIP), cada um com a lógica de remuneração e risco específica do modelo.",
       },
       {
-        icon: "parceria",
-        title: "Parcerias Comerciais",
+        icon: "dados",
+        title: "Confidencialidade e Publicidade",
         description:
-          "Instrumentos jurídicos para colaborações, coproduções, patrocínios e demais relações negociais.",
+          "NDA e contratos de publicidade, com atenção às regras do CONAR sobre publi e conteúdo patrocinado.",
       },
       {
-        icon: "digital",
-        title: "Influenciadores Digitais",
+        icon: "licenciamento",
+        title: "Licenciamento e Coprodução",
         description:
-          "Contratos para campanhas publicitárias, publicidade, licenciamento de imagem e produção de conteúdo.",
+          "Licenciamento de imagem e direitos de personalidade, contratos de coprodução e compartilhamento de base de leads, com atenção à LGPD.",
       },
       {
-        icon: "processo",
+        icon: "protecao",
         title: "Revisão Contratual",
         description:
-          "Análise técnica de contratos existentes para identificar riscos, inconsistências e oportunidades de aprimoramento.",
+          "Análise técnica de contrato existente, incluindo a cláusula que mais falta: o que acontece se a marca — ou você — entrar em crise.",
       },
     ],
     steps: [
@@ -85,9 +85,9 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
         },
         {
           number: "03",
-          title: "As cláusulas existiam, mas não protegiam",
+          title: "Não existia saída se a marca — ou você — entrasse em crise",
           description:
-            "Uma cláusula mal estruturada pode gerar falsa sensação de segurança. Não basta que ela exista; é necessário que seja compatível com a legislação e com a realidade da contratação.",
+            "Contrato de parceria sem cláusula de segurança prende as duas partes uma à outra mesmo quando continuar junto vira risco de reputação. Prever a saída antes que ela seja necessária é parte da proteção, não desconfiança.",
         },
         {
           number: "04",
@@ -130,6 +130,12 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
         title: "Defesa de Ativos",
         description:
           "Atuação em conflitos envolvendo uso indevido de marcas, conteúdos e outros direitos de propriedade intelectual, nas esferas cabíveis.",
+      },
+      {
+        icon: "protecao",
+        title: "Clearance de Conteúdo",
+        description:
+          "Análise preventiva de campanhas e conteúdo antes de ir ao ar, verificando direitos autorais, de imagem e de marca envolvidos.",
       },
     ],
     steps: [
@@ -195,21 +201,27 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
     cards: [
       {
         icon: "acesso",
-        title: "Conta Comprometida",
+        title: "Meta (Instagram, Facebook, WhatsApp)",
         description:
-          "Atuação jurídica em casos de invasão, acesso indevido e comprometimento de contas em plataformas digitais.",
+          "Atuação em conta hackeada, desativada ou com restrição/shadowban — do pedido administrativo à ação judicial com tutela de urgência.",
       },
       {
         icon: "bloqueio",
-        title: "Conta Bloqueada / Suspensa",
+        title: "Marketplaces (Mercado Livre, Shopee e outros)",
         description:
-          "Assessoria em situações de suspensão, bloqueio ou restrição de acesso por plataformas digitais.",
+          "Bloqueio ou suspensão de conta vendedora, retenção de valores e desbloqueio de operação em plataformas de venda.",
       },
       {
         icon: "alerta",
-        title: "Strikes e Restrições",
+        title: "Perfil Falso / Fake",
         description:
-          "Orientação em casos de remoção de publicações, limitação de alcance ou avisos de violação de termos.",
+          "Identificação e remoção de perfil falso, clonagem de identidade ou uso indevido de nome e imagem em conta de terceiro.",
+      },
+      {
+        icon: "bloqueio",
+        title: "Strikes e Restrições (YouTube, Instagram, TikTok)",
+        description:
+          "Orientação e defesa em casos de strike por direito autoral, remoção de publicação, limitação de alcance ou aviso de violação de diretrizes.",
       },
       {
         icon: "defesa",
@@ -281,9 +293,9 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
     cards: [
       {
         icon: "alerta",
-        title: "Uso Indevido de Identidade",
+        title: "Golpe do PIX / Phishing",
         description:
-          "Atuação em casos de perfis falsos e utilização não autorizada de informações e imagem.",
+          "Atuação em casos de fraude em pagamento via PIX, links maliciosos e engenharia social aplicada por golpistas.",
       },
       {
         icon: "moeda",
@@ -373,9 +385,15 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
       },
       {
         icon: "digital",
-        title: "Relações Digitais",
+        title: "Assessoria Mensal 360°",
         description:
-          "Orientação sobre relações contratuais e jurídicas construídas no ambiente digital.",
+          "Acompanhamento contínuo com clearance de conteúdo, revisão de contrato e monitoramento, em planos por camada.",
+      },
+      {
+        icon: "alerta",
+        title: "Adequação de Publicidade (CONAR)",
+        description:
+          "Revisão de peças publicitárias, publi e conteúdo patrocinado à luz das regras do Código Brasileiro de Autorregulamentação Publicitária.",
       },
       {
         icon: "estrategia",
@@ -384,10 +402,10 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
           "Apoio jurídico para identificar riscos e oportunidades antes que se tornem conflitos.",
       },
       {
-        icon: "processo",
-        title: "Desafios da Tecnologia",
+        icon: "moeda",
+        title: "Estruturação Tributária",
         description:
-          "Acompanhamento jurídico contínuo diante das constantes transformações tecnológicas.",
+          "Diagnóstico de formalização, análise de repasses de agenciamento e estruturação fiscal para quem vive do digital.",
       },
     ],
     steps: [
@@ -415,13 +433,35 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
       introDescription:
         "O crescimento de um negócio costuma trazer novas responsabilidades jurídicas. Antecipar essas questões permite que decisões importantes sejam tomadas com maior clareza.",
       points: [
-        { number: "01", title: "O negócio cresceu sem estrutura jurídica" },
-        { number: "02", title: "Novos projetos começaram sem análise preventiva" },
-        { number: "03", title: "O tratamento de dados evoluiu sem adequação" },
-        { number: "04", title: "A tecnologia mudou mais rápido que os processos" },
+        {
+          number: "01",
+          title: "O negócio cresceu sem estrutura jurídica",
+          description:
+            "Faturamento, equipe e volume de contratos aumentam mais rápido do que a formalização jurídica e tributária que os acompanha.",
+        },
+        {
+          number: "02",
+          title: "Novos projetos começaram sem análise preventiva",
+          description:
+            "Uma campanha, parceria ou linha de produto nova entra no ar sem checar direitos autorais, de imagem ou de marca envolvidos.",
+        },
+        {
+          number: "03",
+          title: "O tratamento de dados evoluiu sem adequação",
+          description:
+            "Coleta e uso de dados de clientes crescem junto com o negócio, mas a adequação à LGPD costuma ficar pra depois.",
+        },
+        {
+          number: "04",
+          title: "A tecnologia mudou mais rápido que os processos",
+          description:
+            "Novas ferramentas e formas de vender surgem antes de qualquer revisão sobre os riscos jurídicos que elas trazem.",
+        },
         {
           number: "05",
           title: "As decisões passaram a exigir suporte jurídico contínuo",
+          description:
+            "Quando o negócio já não cabe mais em decisões pontuais, acompanhamento mensal substitui apagar incêndio um por um.",
         },
       ],
     },

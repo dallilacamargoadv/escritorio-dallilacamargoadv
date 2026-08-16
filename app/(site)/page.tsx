@@ -62,6 +62,9 @@ export default async function HomePage() {
               <em className="italic text-gold">Direito Digital</em> para quem
               constrói no ambiente digital.
             </h1>
+            <p className="mt-4 font-eyebrow text-xs text-gold sm:text-sm">
+              Registro de Marcas · Influenciadores · Recuperação de Contas
+            </p>
             <p className="mt-4 max-w-xl text-base text-ink-dim sm:text-lg">
               Uma advocacia voltada à prevenção, à proteção de ativos e à
               construção de relações jurídicas seguras no ambiente digital.
@@ -156,15 +159,19 @@ export default async function HomePage() {
                 {SITE.oab}
               </p>
               <p className="mt-6 text-sm leading-relaxed text-ink-dim">
-                Oi, prazer! Sou Dallila Camargo, advogo há três anos e me
-                encontrei profissionalmente no Direito Digital. Atuo de
-                forma especializada em Direito Digital, Contratos e
-                Propriedade Intelectual, assessorando criadores de
-                conteúdo, influenciadores, prestadores de serviços e
-                negócios que encontram na internet um espaço para
-                construir, inovar e crescer. Acredito que, em um ambiente
-                em constante transformação, decisões conscientes começam
-                com informação, estratégia e segurança jurídica.
+                Oi, prazer! Sou Dallila Camargo. Vivo o mercado digital —
+                acompanho de perto, crio conteúdo, entendo o dia a dia de
+                quem constrói ali dentro — e é isso que me trouxe pro
+                Direito Digital, não o contrário. Atuo de forma
+                especializada em Direito Digital, Contratos e Propriedade
+                Intelectual, com formação complementar em Direito do
+                Mercado de Influência (Fasipa), Direito Tributário (i9
+                Educação) e Legal Design/Visual Law (Gabriella Ibrahim).
+                Assessoro criadores de conteúdo, influenciadores,
+                prestadores de serviços e negócios que encontram na
+                internet um espaço para construir, inovar e crescer —
+                porque entendo os riscos de quem constrói ali de dentro,
+                não de fora.
               </p>
               <div className="mt-8">
                 <Button href="/contato" variant="secondary">

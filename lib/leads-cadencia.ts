@@ -27,7 +27,11 @@ export const STATUS_CONGELADOS: LeadStatus[] = [
 ];
 
 // Do degrau mais alto pro mais baixo — o primeiro que bater o mínimo de dias vence.
+// 30 dias = fim da cadência ativa: sem resposta até aqui, sai do follow-up de pressão e
+// vira relacionamento de longo prazo sem prazo de cobrança (salesfarming é status congelado
+// — depois dessa transição o cron nunca mais mexe nesse lead, ver isElegivelParaCadencia).
 const DEGRAUS: [dias: number, status: LeadStatus][] = [
+  [30, "salesfarming"],
   [15, "f8_15_dias"],
   [12, "f7_12_dias"],
   [10, "f6_10_dias"],
