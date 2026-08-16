@@ -27,12 +27,16 @@
     "reading-time": "^1.5.0",
     "recharts": "^3.9.2",
     "tiptap-markdown": "^0.9.0",
-    "xlsx": "^0.18.5",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-latest/xlsx-latest.tgz",
     "zod": "^4.4.3"
   },
   "overrides": {
     "sharp": "^0.35.0",
-    "postcss": "^8.5.10"
+    "postcss": "^8.5.23",
+    "js-yaml": "^4.3.1",
+    "gray-matter": {
+      "js-yaml": "^3.15.1"
+    }
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
