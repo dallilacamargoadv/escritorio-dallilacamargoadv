@@ -57,10 +57,8 @@ export default function AssessoriaEstrategicaPage() {
             decisões jurídicas claras no ambiente digital.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Orientação jurídica preventiva para influenciadores, criadores
-            de conteúdo, prestadores de serviços e negócios digitais em
-            temas relacionados à proteção de dados, LGPD, relações digitais
-            e desafios jurídicos decorrentes da tecnologia.
+            Acompanhamento jurídico contínuo para o seu negócio digital — de
+            contrato e LGPD a estruturação tributária, em um só lugar.
           </p>
           <div className="mt-8">
             <Button href="#formulario">Iniciar atendimento</Button>

@@ -57,9 +57,9 @@ export default function ContratosPage() {
             revisados para dar segurança às relações digitais.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Elaboração, revisão e negociação de contratos para prestadores de
-            serviços, criadores de conteúdo e negócios digitais, com atenção
-            a cláusulas, riscos e conformidade regulatória.
+            Contrato de parceria, publi ou prestação de serviço — elaborado
+            ou revisado para você assinar sabendo exatamente no que está
+            entrando.
           </p>
           <div className="mt-8">
             <Button href="#formulario">Iniciar atendimento</Button>

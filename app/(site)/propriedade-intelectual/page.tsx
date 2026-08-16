@@ -57,9 +57,8 @@ export default function PropriedadeIntelectualPage() {
             protegida com técnica e acompanhamento contínuo.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Atuação em registro de marcas, direitos autorais e licenciamento
-            para criadores de conteúdo, empresas e profissionais que
-            constroem ativos intelectuais no ambiente digital.
+            Registro de marca, proteção de conteúdo e direitos autorais —
+            para proteger o que você levou tempo para construir.
           </p>
           <div className="mt-8">
             <Button href="#formulario">Iniciar atendimento</Button>

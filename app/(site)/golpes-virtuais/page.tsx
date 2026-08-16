@@ -57,9 +57,8 @@ export default function GolpesVirtuaisPage() {
             com atuação jurídica clara e estratégica.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Atuação em situações envolvendo fraudes eletrônicas, utilização
-            indevida de contas, engenharia social, transações fraudulentas e
-            demais incidentes praticados no ambiente digital.
+            Atuação em casos de fraude eletrônica, golpe do PIX e phishing,
+            com foco em preservação de prova e busca da reparação cabível.
           </p>
           <div className="mt-8">
             <Button href="#formulario">Iniciar atendimento</Button>

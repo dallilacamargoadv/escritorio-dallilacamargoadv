@@ -19,7 +19,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     shortLabel: "Contratos Digitais",
     icon: "contrato",
     description:
-      "Elaboração, revisão e negociação de contratos adaptados às relações comerciais no ambiente digital.",
+      "Contratos de patrocínio, parceria, publi e prestação de serviço — feitos ou revisados para você não assinar no escuro.",
   },
   {
     slug: "propriedade-intelectual",
@@ -28,7 +28,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     shortLabel: "Propriedade Intelectual",
     icon: "marca",
     description:
-      "Proteção jurídica de marcas, direitos autorais e demais ativos intelectuais para profissionais e negócios que atuam no ambiente digital.",
+      "Registro de marca no INPI, direitos autorais e proteção do que você cria — do nome ao conteúdo.",
   },
   {
     slug: "contas-e-plataformas",
@@ -37,7 +37,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     shortLabel: "Contas e Plataformas",
     icon: "plataforma",
     description:
-      "Atuação jurídica em casos de contas comprometidas, bloqueios, suspensões, strikes, conflitos com plataformas digitais e medidas decorrentes de incidentes virtuais.",
+      "Atuação em casos de conta comprometida, bloqueada ou com restrição, do pedido administrativo à medida judicial cabível.",
   },
   {
     slug: "golpes-virtuais",
@@ -46,7 +46,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     shortLabel: "Golpes Virtuais",
     icon: "alerta",
     description:
-      "Atuação em situações envolvendo fraudes eletrônicas, utilização indevida de contas, engenharia social, transações fraudulentas e demais incidentes praticados no ambiente digital.",
+      "Atuação em casos de fraude eletrônica, golpe do PIX e phishing, com foco em preservação de prova e reparação cabível.",
   },
   {
     slug: "assessoria-estrategica",
@@ -55,7 +55,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     shortLabel: "Assessoria Estratégica",
     icon: "estrategia",
     description:
-      "Orientação jurídica preventiva para influenciadores, criadores de conteúdo, prestadores de serviços e negócios digitais em temas relacionados à proteção de dados, LGPD, relações digitais e desafios jurídicos decorrentes da tecnologia.",
+      "Acompanhamento jurídico contínuo para o seu negócio digital — de LGPD a estruturação tributária.",
   },
 ];
 

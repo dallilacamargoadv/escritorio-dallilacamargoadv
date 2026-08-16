@@ -56,13 +56,13 @@ export default function SobrePage() {
                 ambiente.
               </p>
               <p className="mt-6 text-sm leading-relaxed text-ink-dim">
-                Com três anos de atuação jurídica, formação especializada em
-                Direito Digital e experiência como ex-membra da Comissão da
-                Jovem Advocacia (COJAD) da Subseção de Redenção/PA, o
-                escritório desenvolve uma advocacia preventiva, estratégica e
-                personalizada, acompanhando as constantes transformações da
-                tecnologia para oferecer orientações jurídicas compatíveis
-                com a realidade de cada cliente.
+                Três anos de atuação jurídica, pós-graduação em Direito
+                Digital, Direito do Mercado de Influência e Direito
+                Tributário, formação em Legal Design e experiência como
+                ex-membra da Comissão da Jovem Advocacia (COJAD) da Subseção
+                de Redenção/PA — tudo isso a serviço de uma advocacia
+                preventiva e personalizada, que acompanha de perto as
+                mudanças do ambiente digital.
               </p>
               <p className="mt-6 text-sm leading-relaxed text-ink-dim">
                 Sediado em <strong className="text-ink">Redenção, Pará</strong>,

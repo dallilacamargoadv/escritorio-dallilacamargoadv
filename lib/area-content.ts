@@ -43,27 +43,27 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
         icon: "protecao",
         title: "Revisão Contratual",
         description:
-          "Análise técnica de contrato existente, incluindo a cláusula que mais falta: o que acontece se a marca — ou você — entrar em crise.",
+          "Análise técnica de contrato existente, incluindo as cláusulas que mais faltam: o que fazer em caso de inadimplência ou quando a marca — ou você — entra em crise.",
       },
     ],
     steps: [
       {
         number: "01",
-        title: "Compreender",
+        title: "Conversar",
         description:
-          "Conhecemos seu negócio, sua forma de atuação e os objetivos da contratação para identificar riscos, responsabilidades e as necessidades jurídicas da relação.",
+          "Você me conta como fecha parceria, o que já foi combinado e o que te preocupa — é daí que sai o contrato certo, nunca um modelo pronto.",
       },
       {
         number: "02",
-        title: "Estruturar",
+        title: "Redigir ou revisar",
         description:
-          "Elaboramos ou revisamos os instrumentos contratuais de forma personalizada, alinhando cláusulas, direitos, deveres e mecanismos de proteção à realidade do seu negócio.",
+          "Elaboro ou reviso o contrato cláusula por cláusula, incluindo o que quase sempre falta: o que fazer se a relação der errado.",
       },
       {
         number: "03",
-        title: "Orientação e acompanhamento",
+        title: "Traduzir",
         description:
-          "Apresentamos o contrato, esclarecemos eventuais dúvidas e fornecemos as orientações necessárias para uma utilização segura do instrumento jurídico.",
+          "Devolvo o contrato explicado, não só assinado — você entende cada cláusula antes de fechar.",
       },
     ],
     attention: {
@@ -141,21 +141,21 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
     steps: [
       {
         number: "01",
-        title: "Compreender",
+        title: "Entender seu caso",
         description:
-          "Compreendemos o ativo intelectual a ser protegido, avaliando sua finalidade, utilização e os aspectos jurídicos envolvidos.",
+          "Você me conta o que precisa proteger — marca, conteúdo ou outra criação — e eu identifico o melhor caminho jurídico.",
       },
       {
         number: "02",
-        title: "Estruturar",
+        title: "Agir",
         description:
-          "Definimos a estratégia adequada para o caso, realizando os procedimentos necessários à proteção da marca, dos direitos autorais ou de outros ativos intelectuais.",
+          "Faço o que for necessário: registro no INPI, contrato de licenciamento, ou a medida certa para a sua situação.",
       },
       {
         number: "03",
-        title: "Orientação e acompanhamento",
+        title: "Acompanhar",
         description:
-          "Acompanhamos as etapas do procedimento e prestamos orientações para a gestão e utilização adequada dos direitos protegidos.",
+          "Sigo com você até o fim, explicando cada etapa no caminho.",
       },
     ],
     attention: {
@@ -233,21 +233,21 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
     steps: [
       {
         number: "01",
-        title: "Compreender",
+        title: "Diagnosticar",
         description:
-          "Analisamos o ocorrido, reunimos as informações essenciais e identificamos as medidas jurídicas compatíveis com a situação apresentada.",
+          "Análise da situação — conta hackeada, bloqueada ou com strike — para identificar o caminho jurídico adequado.",
       },
       {
         number: "02",
-        title: "Estruturar",
+        title: "Agir junto à plataforma e, se necessário, na Justiça",
         description:
-          "Avaliamos as providências cabíveis perante a plataforma e, quando necessário, as medidas extrajudiciais ou judiciais aplicáveis ao caso.",
+          "Encaminhamento do pedido administrativo e, quando cabível, da medida judicial correspondente.",
       },
       {
         number: "03",
-        title: "Orientação e acompanhamento",
+        title: "Acompanhar até a resolução",
         description:
-          "Conduzimos a atuação jurídica mantendo o cliente informado sobre as etapas do procedimento e os próximos desdobramentos.",
+          "Acompanhamento do caso até sua resolução, com atualização periódica ao cliente.",
       },
     ],
     attention: {
@@ -319,21 +319,21 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
     steps: [
       {
         number: "01",
-        title: "Compreender",
+        title: "Levantar os fatos",
         description:
-          "Analisamos os fatos, identificamos a dinâmica da fraude e orientamos sobre a preservação das informações relevantes.",
+          "Reconstrução dos fatos e orientação sobre preservação de prova desde o primeiro contato.",
       },
       {
         number: "02",
-        title: "Estruturar",
+        title: "Reunir as provas",
         description:
-          "Reunimos e analisamos os elementos necessários para fundamentar as medidas jurídicas cabíveis.",
+          "Organização de prints, comprovantes e registros de forma a sustentar a medida cabível.",
       },
       {
         number: "03",
-        title: "Orientação e acompanhamento",
+        title: "Buscar reparação",
         description:
-          "Adotamos as providências adequadas ao caso, sempre observando as circunstâncias concretas e a estratégia definida.",
+          "Adoção da medida cabível — notificação, ação judicial ou outra via — buscando a reparação do prejuízo.",
       },
     ],
     attention: {
@@ -411,21 +411,21 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
     steps: [
       {
         number: "01",
-        title: "Compreender",
+        title: "Entender seu negócio",
         description:
-          "Compreendemos sua atividade, seus objetivos e os desafios jurídicos relacionados ao ambiente digital.",
+          "Conheço sua rotina, seu faturamento e onde a estrutura jurídica ainda não acompanhou o crescimento.",
       },
       {
         number: "02",
-        title: "Estruturar",
+        title: "Montar o plano certo",
         description:
-          "Identificamos riscos, oportunidades e definimos as orientações jurídicas mais adequadas às necessidades do seu negócio.",
+          "Defino com você o que precisa de atenção primeiro — clearance de conteúdo, LGPD, tributário — sem empurrar tudo de uma vez.",
       },
       {
         number: "03",
-        title: "Orientação e acompanhamento contínuo",
+        title: "Acompanhar de perto",
         description:
-          "Prestamos suporte jurídico para que decisões importantes sejam tomadas com clareza, responsabilidade e alinhamento às constantes transformações do ambiente digital.",
+          "Fico disponível para revisar contrato, resolver dúvida e checar campanha antes de ir ao ar, todo mês.",
       },
     ],
     attention: {

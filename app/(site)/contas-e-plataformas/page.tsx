@@ -57,9 +57,9 @@ export default function ContasEPlataformasPage() {
             recuperação de acesso e resposta jurídica estruturada.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Atuação jurídica em casos de contas comprometidas, bloqueios,
-            suspensões, strikes, conflitos com plataformas digitais e
-            medidas decorrentes de incidentes virtuais.
+            Atuação em casos de conta comprometida, bloqueada ou com
+            restrição — do pedido administrativo à medida judicial cabível,
+            incluindo tutela de urgência quando necessário.
           </p>
           <div className="mt-8">
             <Button href="#formulario">Iniciar atendimento</Button>

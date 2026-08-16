@@ -66,8 +66,8 @@ export default async function HomePage() {
               Registro de Marcas · Influenciadores · Recuperação de Contas
             </p>
             <p className="mt-4 max-w-xl text-base text-ink-dim sm:text-lg">
-              Uma advocacia voltada à prevenção, à proteção de ativos e à
-              construção de relações jurídicas seguras no ambiente digital.
+              Prevenção de verdade: contratos, marca e presença digital
+              protegidos antes de virar problema.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href="/contato">Iniciar atendimento</Button>
