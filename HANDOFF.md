@@ -211,6 +211,10 @@ Ver `app/globals.css` para os tokens completos.
 - **Blindagem de segurança: Next.js/sharp/postcss atualizados + sanitização de nome de arquivo** (`9091c46`) — ver seção 8.10 pra auditoria completa e todas as correções (código + Supabase + Vercel + GitHub).
 - **Log de erro real em 61 rotas de API + função movida pra São Paulo (`gru1`)** (`58fdf1b`) — ver seção 8.11. Corrige a lentidão real que a cliente sentia (função rodava na Virgínia, banco em São Paulo).
 - **Calculadora de data fatal na tela de Atividades** (`c2e1f03`, 12/08/2026) — `lib/prazo-calculo.ts` (novo) + painel no `AtividadeForm.tsx`. Ver seção 8.12.
+- **Correção de vulnerabilidades de dependência (Dependabot)** (`9d4e4c4`, 16/08/2026) — 5 vulnerabilidades corrigidas, `xlsx` trocado pela distribuição oficial do CDN SheetJS. Feito na sessão de Estratégia Comercial (`Estrategia Comercial/HANDOFF-ESTRATEGIA-COMERCIAL.md`), não neste handoff — registrado aqui só pra a cronologia do repo não ficar com buraco.
+- **Alinha site ao posicionamento consolidado e corrige buraco no funil de leads** (`a984936`, 16/08/2026) — bio/hero da Home e /sobre, 5 áreas de atuação reformuladas, `lib/leads-cadencia.ts` ganhou degrau de 30 dias sem resposta → `salesfarming`. Detalhe completo no handoff de Estratégia Comercial.
+- **Simplifica linguagem do site e reforça posicionamento** (`77a4bf7`, 16/08/2026) — idem, ver handoff de Estratégia Comercial.
+- **Adiciona Planejamento, Esteira de Serviços e Procuração ao painel admin** (`b4d2993`, 18–19/08/2026) — ver seção 8.13.
 
 **Arquivo estranho, sem decisão**: `components/admin/AdminSidebar 2.tsx` (untracked, provável duplicata de conflito do iCloud Drive) — ainda sem decisão da cliente. Não mexer sem perguntar de novo.
 
@@ -531,6 +535,80 @@ Mais um pedido extra que veio **depois** desses 7, inicialmente adiado por ela m
 - Cliente está na metade de uma pós-graduação com material sobre análise de processo/estruturação da advocacia. Quer, eventualmente: (a) um manual/método cumulativo seu (vai mandando PDFs aos poucos, conforme avança na pós — mesmo padrão do projeto separado "Manual de Contratos Digitais"), (b) possivelmente um agente novo do Claude Code ou refinamento de um existente, (c) possivelmente uma tela/relatório novo **neste CRM**, (d) uma apresentação de honorários/método pra reunião com cliente (deck simples, não é a mesma coisa que o material acadêmico da pós).
 - **Combinado**: fundação primeiro (manual, fora deste repo, é conversa separada), aplicações depois — **não é trabalho deste projeto ainda**, só registrado aqui porque (c) e possivelmente (d) podem eventualmente virar pedido de tela/funcionalidade neste CRM. Ver memória própria da Dallila (`project_metodo_analise_processos_pos`) se for uma sessão nova do Claude Code fora deste repo; se ela trouxer isso pra cá, é pedido novo, tratar como tal (perguntar escopo, mockup antes de codar).
 
+### 8.13 Sessão de 18–19/08/2026 — Planejamento, Esteira de Serviços e Procuração — CONCLUÍDO (`b4d2993`)
+
+**Contexto**: sessão longa que começou na Estratégia Comercial (auditoria das 43 frentes do
+escritório, prompt-mestre salvo, Brandbook, agente de Propriedade Intelectual) e desembocou
+aqui em três pedidos concretos de tela nova, um depois do outro, todos aprovados com mockup/
+teste visual antes de cada commit (regra de sempre, seção 10).
+
+**1. Procuração ad judicia et extra gerada por cliente** (`/admin/clientes/[id]/procuracao`):
+- Mesmo padrão do recibo (`window.print()`, sem lib nova) — mas a **primeira versão foi
+  rejeitada pela cliente** ("estou achando isso horrível"): parágrafo corrido, sem estrutura
+  visual, só copiando o layout simples do recibo. Comparei com o modelo real do curso de Legal
+  Design dela (`LEGAL DESIGNER LDF/PROCURAÇÃO — PALETA P_B.pptx`, convertido pra imagem via
+  LibreOffice pra conferir) e refiz: cartões com borda arredondada, rótulo flutuando sobre a
+  borda (`CardBadge`/`Card` — componentes novos no próprio arquivo da página), título em
+  Fraunces itálico com filete dos dois lados, cláusulas numeradas (i)–(ix) cada uma na própria
+  linha em vez de parágrafo corrido. **Aprender daqui pra frente**: peça jurídica formatada
+  neste projeto não é só "cor mínima" (regra da skill `legal-design-documentos`) — a
+  *estrutura* em cartões/proximidade dos modelos reais dela importa tanto quanto a cor, não
+  reduzir Legal Design a só "não usar cor".
+- Puxa nome/CPF-CNPJ/endereço de `clientes`, detecta PF×PJ sozinho (qualificação diferente pra
+  cada um). Poderes: ad judicia et extra + art. 105 CPC completo + **poderes específicos**
+  (pedido explícito da cliente, "conforme modelo que criamos") pra INPI (art. 158/159/212 da
+  Lei 9.279/96), plataformas digitais (reativação de conta, remoção de conteúdo,
+  contranotificação) e ANPD (Lei 13.709/2018).
+- **Lacuna assumida, não escondida**: `clientes` não tem campo de RG/nacionalidade/estado
+  civil/profissão (PF) nem qualificação de representante (PJ) — ficam com traço
+  (`___________`) pra preencher à mão, texto avisa isso na tela. Se um dia a cliente quiser
+  isso 100% automático, precisa desses campos no formulário de cadastro (mudança de schema
+  futura, não feita agora).
+- **Bug real achado e corrigido**: cliente de teste tinha `email = "não tem"` literal no banco
+  (não `null`) — o texto original interpolava isso na frase e saía "...Redenção/PA;, e-mail
+  não tem." Corrigido condicionando a exibição (`cliente.email && cliente.email !== "não tem"`)
+  — vale lembrar que o dado do CRM às vezes tem esse tipo de valor "textual" no lugar de vazio,
+  não assumir que campo preenchido = dado usável direto.
+
+**2. Painel de Planejamento** (`/admin/planejamento`, novo grupo "Planejamento" na sidebar):
+- Tabelas novas `metas_trimestre` (id, periodo, objetivo) + `metas_trimestre_krs` (id,
+  meta_trimestre_id, ordem, titulo, descricao, concluido, concluido_em) — RLS
+  `authenticated`-only, mesmo padrão de sempre. Semeadas com o Objetivo e os 3 KRs reais de
+  `Estrategia Comercial/planejamento-estrategico-okrs-kpis.md` (não inventados).
+- Checkbox real por KR (`PlanejamentoClient.tsx`, client component, mesmo padrão otimista de
+  `AtividadesAdminList.tsx::handleToggleConcluido`) + barra de progresso. `PATCH
+  /api/admin/planejamento/krs/[id]`.
+- **Escopo fechado com a cliente antes de codar** (via `AskUserQuestion`): só Objetivo+KRs por
+  agora, não as 4 Fases nem os 43 itens do Raio-X (esses continuam só no Artifact/markdown) —
+  ela pode pedir mais depois.
+
+**3. Esteira de Serviços** (`/admin/esteira-servicos`, pedido no meio do mesmo fôlego):
+- Tabela nova `esteira_servicos` (id, ordem, nome, descricao, valores jsonb, observacao,
+  ativo) — schema flexível de propósito porque cada serviço do catálogo tem estrutura de
+  preço diferente (fixo, fixo+êxito, diagnóstico isolado etc.), não dava pra travar em colunas
+  fixas. Semeada com os 7 serviços reais e valores conferidos em
+  `Estrategia Comercial/HANDOFF-ESTRATEGIA-COMERCIAL.md` (não inventados — Registro de Marca
+  R$1.700/3.200, Recuperação de Conta R$4.500 ou R$2.500+30%, Direitos Autorais/Imagem
+  R$2.000+R$4.500, Contencioso de Marca R$4.500, Estruturação de Negócio R$5.550 ou R$3.000
+  diagnóstico isolado, Defesa Tributária/Trabalhista R$5.000 cada).
+
+**4. Rename de token de design**: `--brand-dourado-latao` → `--brand-champagne` em
+`app/globals.css` (pedido da cliente depois de rever a paleta secundária do Brandbook — ver
+handoff de Estratégia Comercial). Token nunca era consumido em nenhum componente
+(`--color-brand-gold` definido mas sem uso), rename sem risco pro que já estava em produção.
+
+**Testes desta sessão**: build+eslint limpos a cada mudança. Verificação visual em duas
+etapas — (a) sem sessão de login, via rotas temporárias fora de `/admin` com dado
+fictício/mockado (sempre apagadas depois, RLS bloqueia `anon` como esperado, confirmado na
+prática quando tentei ler direto sem sessão); (b) **cliente logou de verdade no painel** (ela
+mesma, nunca entrei com credencial) e testamos as 3 telas juntos, inclusive ela clicando no
+checkbox do KR1 direto na sessão compartilhada — confirmei a persistência via SQL depois.
+Achado de ferramenta: `computer` (screenshot) apresentou instabilidade pontual (tela preta
+sem motivo) em alguns momentos desta sessão — confirmado que era só falha de captura, não bug
+real, inspecionando `document.body.innerText`/`scrollHeight` via `javascript_tool` sempre que
+o screenshot parecia suspeito. Se acontecer de novo, essa é a forma de diferenciar "realmente
+quebrado" de "ferramenta falhou de capturar".
+
 ## 9. Cronologia resumida (mais recente por último) — visão de alto nível
 
 1. Site institucional completo + CRM básico de leads (sessões anteriores).
@@ -568,6 +646,8 @@ Mais um pedido extra que veio **depois** desses 7, inicialmente adiado por ela m
 40. **Calculadora de data fatal na tela de Atividades** (12/08/2026, `c2e1f03`) — **concluída e em produção**, testada pela cliente na tela real. Ver seção 8.12.
 41. **Bot de WhatsApp pra atualização de caso** — escopo decidido (número dedicado, nunca gera conteúdo novo, só entrega relatório já existente), provedor trocado de Meta Cloud API pra Twilio por fricção de navegação — **pausado** na verificação de telefone da Twilio, nada codado ainda. Ver seção 8.12.
 42. **Material da pós-graduação da cliente** — combinado virar manual cumulativo + possíveis aplicações (agente/CRM/apresentação de honorários), **não iniciado**, pode ou não virar pedido neste projeto. Ver seção 8.12.
+43. **3 commits da sessão de Estratégia Comercial (15-16/08/2026)** — correção de dependências, alinhamento do site ao posicionamento consolidado, simplificação de linguagem — feitos fora deste handoff, ver `Estrategia Comercial/HANDOFF-ESTRATEGIA-COMERCIAL.md` pro detalhe completo.
+44. **Planejamento + Esteira de Serviços + Procuração no painel admin** (18-19/08/2026, `b4d2993`) — 3 telas novas, todas testadas com a cliente logada de verdade. Procuração passou por 1 rodada de correção visual depois da cliente rejeitar a primeira versão ("horrível") — refeita seguindo o modelo real de Legal Design do curso dela. **Concluído**, ver seção 8.13.
 
 ## 10. Preferências e padrões de trabalho da cliente
 
@@ -584,10 +664,11 @@ Mais um pedido extra que veio **depois** desses 7, inicialmente adiado por ela m
 - **"Posso ver?"** costuma significar que ela foi olhar em produção e não achou a mudança — quase sempre porque ainda não foi commitado/pushado (ela não distingue "codado" de "no ar"), não um bug. Confirmado várias vezes nesta sessão. Primeira reação: checar se já tem commit pendente de push, não sair debugando.
 - **Aprovações vagas** ("pode seguir", "continuar") depois de eu oferecer várias opções nem sempre significam "escolha por conta própria" — às vezes ela só não percebeu que era uma pergunta de múltipla escolha. Confirmado nesta sessão (perguntei qual onda entre 4 opções, ela respondeu "pose seguir", precisei perguntar de novo qual especificamente). Vale re-perguntar de forma fechada em vez de presumir qual opção ela quis dizer.
 - **Ela aceita bem quando eu levo a fundo um pedido vago dela**: no pedido da "reorganização adiantada" (linha do tempo, Motor de Fluxo, Agenda), a mensagem original dela misturava termos genéricos de SaaS com o vocabulário real do projeto — precisei fazer perguntas estruturadas (`AskUserQuestion`) pra fechar cada decisão de schema/UX antes de codar, e ela respondeu bem a isso, inclusive corrigindo minha recomendação quando não batia exatamente com o que queria (ex.: cronômetro "não é pra cobrar a mais", edição de etapas "pode ser misto").
+- **Documento jurídico formatado não pode ser só "cor mínima e texto corrido"** (achado real na seção 8.13, ela rejeitou com "estou achando isso horrível"): ela é formada no curso de Legal Design da Gabriella Ibrahim e tem modelos reais (`LEGAL DESIGNER LDF/*.pptx`) com estrutura em cartões/blocos, rótulo sobre a borda, respiro generoso — isso importa tanto quanto a régua de "cor mínima em peça formal" da skill `legal-design-documentos`. Qualquer peça jurídica nova (procuração, mais documentos que vierem): **comparar contra o pptx real dela antes de considerar pronto**, não assumir que "sóbrio" e "bem formatado" são a mesma coisa.
 
 ## 11. Como retomar
 
-1. Ler este arquivo primeiro (auto-suficiente) — a seção 7 confirma que está tudo commitado/pushado/em produção até `c2e1f03`. Rodar `git status` mesmo assim antes de mexer em qualquer coisa, por segurança.
+1. Ler este arquivo primeiro (auto-suficiente) — a seção 7 confirma que está tudo commitado/pushado até `b4d2993` (18-19/08/2026). Rodar `git status` mesmo assim antes de mexer em qualquer coisa, por segurança — **confirmar o deploy na Vercel de verdade** antes de assumir que já está em produção: na sessão que gerou `b4d2993`, a ferramenta de integração com a Vercel parou de enxergar o projeto (erro de escopo/conexão, não do código) — o push aconteceu certo, mas o status do deploy em si não foi confirmado por essa ferramenta, só pelo padrão de sempre (push → GitHub → Vercel dispara sozinho).
 2. **Fila de trabalho**: dois itens em aberto, nenhum com código pendente de commit. (a) **Bot de WhatsApp** pra entrega automática de relatório do cliente — escopo já fechado (seção 8.12), pausado esperando a cliente resolver verificação de telefone na Twilio; se ela disser que resolveu, retomar direto na parte de código (webhook + busca do relatório), não reabrir as decisões de escopo sem motivo novo. (b) **Material da pós-graduação** — ainda não iniciado, pode nunca virar pedido deste projeto; se ela trouxer PDF/pedido de tela aqui, tratar como pedido novo normal (perguntar escopo, mockup antes de codar). Fora esses dois, **perguntar prioridade do zero** se ela trouxer outra coisa, sem presumir.
 3. Se ela trouxer algo relacionado ao que já foi construído (roadmap de 8 ondas, itens 1–5 do pedido pós-roadmap, pedido extra/correções da seção 8.9, algo de segurança, ou performance): reler a seção 8.5/8.8/8.9/8.10/8.11 inteira antes de começar — a maioria das decisões de escopo já foi confirmada com a cliente e não deveria ser reaberta sem motivo novo.
 4. Não tocar em `components/admin/AdminSidebar 2.tsx` (arquivo estranho, sem decisão) nem em `HANDOFF.md`-adjacent sem perguntar. (`.git/refs/heads/main 2` já foi removido, seção 8.10 — não é mais uma preocupação.)
