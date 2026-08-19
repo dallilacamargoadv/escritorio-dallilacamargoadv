@@ -24,6 +24,8 @@ import {
   Settings,
   PiggyBank,
   Handshake,
+  Compass,
+  Layers,
 } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { createClient } from "@/lib/supabase/client";
@@ -54,6 +56,25 @@ export function AdminSidebar({
           href: "/admin/analise-aprofundada",
           label: "Análise Aprofundada",
           icon: TrendingUp,
+          exact: false,
+          badge: 0,
+        },
+      ],
+    },
+    {
+      label: "Planejamento",
+      items: [
+        {
+          href: "/admin/planejamento",
+          label: "Objetivo do trimestre",
+          icon: Compass,
+          exact: false,
+          badge: 0,
+        },
+        {
+          href: "/admin/esteira-servicos",
+          label: "Esteira de Serviços",
+          icon: Layers,
           exact: false,
           badge: 0,
         },

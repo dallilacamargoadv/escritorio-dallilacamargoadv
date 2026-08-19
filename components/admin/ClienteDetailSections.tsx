@@ -36,12 +36,20 @@ export function ClienteDetailSections({
             {formatDate(cliente.created_at)}
           </p>
         </div>
-        <Link
-          href={`/admin/clientes/${cliente.id}/editar`}
-          className="border border-hairline-strong px-4 py-2 text-sm text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold"
-        >
-          Editar dados
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link
+            href={`/admin/clientes/${cliente.id}/procuracao`}
+            className="border border-hairline-strong px-4 py-2 text-sm text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold"
+          >
+            Gerar procuração
+          </Link>
+          <Link
+            href={`/admin/clientes/${cliente.id}/editar`}
+            className="border border-hairline-strong px-4 py-2 text-sm text-ink-dim transition-colors duration-150 hover:border-gold hover:text-gold"
+          >
+            Editar dados
+          </Link>
+        </div>
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-4 border border-hairline p-5 text-sm sm:grid-cols-2">

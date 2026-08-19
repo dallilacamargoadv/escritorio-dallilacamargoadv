@@ -24,7 +24,7 @@
   /* tokens fixos da marca (independem de tema) */
   --brand-vinho-porto: #2a070c;
   --brand-marfim-rosado: #ddc8b3;
-  --brand-dourado-latao: #c9a227;
+  --brand-champagne: #c9bba8;
   --brand-bordo-assinatura: #7a2430;
   --brand-pergaminho-neutro: #9f8e87;
 
@@ -137,7 +137,7 @@
   --color-error: var(--error);
   --color-warning: var(--warning);
   --color-audiencia: var(--audiencia);
-  --color-brand-gold: var(--brand-dourado-latao);
+  --color-brand-gold: var(--brand-champagne);
   --color-brand-wine: var(--brand-bordo-assinatura);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
