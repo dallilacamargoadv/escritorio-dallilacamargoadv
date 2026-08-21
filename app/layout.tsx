@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { fraunces, inter, jetbrainsMono } from "./fonts";
 import "./globals.css";
+
+const GOOGLE_ADS_ID = "AW-18395655980";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dallilacamargoadv.com.br"),
@@ -45,6 +48,18 @@ export default function RootLayout({
       <body className="min-h-screen-safe flex flex-col bg-bg text-ink">
         {children}
       </body>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-tag" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GOOGLE_ADS_ID}');
+        `}
+      </Script>
     </html>
   );
 }
