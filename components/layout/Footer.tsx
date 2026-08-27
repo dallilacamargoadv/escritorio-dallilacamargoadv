@@ -12,12 +12,13 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/logo-abelha.png"
+                src="/logo-d-marfim.png"
                 alt=""
                 width={24}
                 height={24}
+                unoptimized
                 aria-hidden="true"
-                className="h-6 w-6"
+                className="h-6 w-6 object-contain"
               />
               <span className="font-display text-base italic text-ink">
                 Dallila Camargo

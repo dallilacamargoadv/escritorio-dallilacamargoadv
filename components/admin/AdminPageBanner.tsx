@@ -38,12 +38,14 @@ export function AdminPageBanner({
   return (
     <div className="flex items-center gap-5 bg-bg-alt px-6 py-6 sm:px-8">
       <Image
-        src="/logo-abelha.png"
+        src="/logo-d-bordo.png"
         alt=""
         width={48}
         height={48}
+        priority
+        unoptimized
         aria-hidden="true"
-        className="h-12 w-12 shrink-0"
+        className="h-12 w-12 shrink-0 object-contain"
       />
       <div className="h-11 w-px shrink-0 bg-hairline-strong" />
       <div>

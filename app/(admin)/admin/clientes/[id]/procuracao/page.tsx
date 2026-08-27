@@ -150,12 +150,13 @@ export default async function ProcuracaoPage(
       <div className="hidden bg-white p-10 text-[#1a1a1a] print:block">
         <div className="flex items-center gap-3">
           <Image
-            src="/logo-abelha.png"
+            src="/logo-d-bordo.png"
             alt=""
             width={32}
             height={32}
+            unoptimized
             aria-hidden="true"
-            className="h-8 w-8 shrink-0"
+            className="h-8 w-8 shrink-0 object-contain"
           />
           <div>
             <p className="font-serif text-base italic leading-tight">

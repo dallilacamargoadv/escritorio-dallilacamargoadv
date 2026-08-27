@@ -17,8 +17,8 @@ export function getLegalServiceSchema() {
     description:
       "Assessoria jurídica em Direito Digital para criadores de conteúdo, profissionais liberais e negócios digitais: contratos, marcas e proteção de dados.",
     url: BASE_URL,
-    logo: `${BASE_URL}/logo-abelha.png`,
-    image: `${BASE_URL}/logo-abelha.png`,
+    logo: `${BASE_URL}/logo-d-bordo.png`,
+    image: `${BASE_URL}/logo-d-bordo.png`,
     email: SITE.email,
     address: {
       "@type": "PostalAddress",

@@ -73,12 +73,13 @@ export default async function ReciboPage(
       {/* Versão impressa/PDF — formato formal de recibo, fundo branco */}
       <div className="hidden border border-[#d8d0c4] bg-white p-10 text-[#1a1a1a] print:block">
         <Image
-          src="/logo-abelha.png"
+          src="/logo-d-bordo.png"
           alt=""
           width={36}
           height={36}
+          unoptimized
           aria-hidden="true"
-          className="h-9 w-9 shrink-0"
+          className="h-9 w-9 shrink-0 object-contain"
         />
         <p className="mt-4 font-serif text-lg italic">Dallila Camargo Advocacia</p>
         <p className="mt-1 font-mono text-[10px] tracking-wide text-[#6b6b6b]">

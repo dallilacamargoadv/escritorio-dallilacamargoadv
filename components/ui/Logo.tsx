@@ -5,12 +5,14 @@ export function Logo() {
   return (
     <div className="flex items-center gap-3">
       <Image
-        src="/logo-abelha.png"
+        src="/logo-d-marfim.png"
         alt=""
         width={36}
         height={36}
+        priority
+        unoptimized
         aria-hidden="true"
-        className="h-9 w-9 shrink-0"
+        className="h-9 w-9 shrink-0 object-contain"
       />
       <div className="hidden leading-tight sm:block">
         <div className="font-display text-base italic text-ink">
