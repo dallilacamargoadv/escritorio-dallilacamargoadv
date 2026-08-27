@@ -121,6 +121,37 @@
   --audiencia: #ff4d4d;
 }
 
+/* Monograma D: sobre --bg/--bg-alt/--surface, que trocam de escuro pra claro
+   com o tema. Um PNG de cor fixa só tem contraste num dos dois lados, então
+   o par marca-fundo-escuro (marfim) / marca-fundo-claro (bordô) troca junto
+   com o tema, espelhando exatamente os três estados dos tokens acima. */
+.brand-mark-on-dark {
+  display: block;
+}
+.brand-mark-on-light {
+  display: none;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) .brand-mark-on-dark {
+    display: none;
+  }
+  :root:not([data-theme]) .brand-mark-on-light {
+    display: block;
+  }
+}
+:root[data-theme="light"] .brand-mark-on-dark {
+  display: none;
+}
+:root[data-theme="light"] .brand-mark-on-light {
+  display: block;
+}
+:root[data-theme="dark"] .brand-mark-on-dark {
+  display: block;
+}
+:root[data-theme="dark"] .brand-mark-on-light {
+  display: none;
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-bg-alt: var(--bg-alt);

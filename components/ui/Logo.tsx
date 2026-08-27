@@ -12,7 +12,17 @@ export function Logo() {
         priority
         unoptimized
         aria-hidden="true"
-        className="h-9 w-9 shrink-0 object-contain"
+        className="brand-mark-on-dark h-9 w-9 shrink-0 object-contain"
+      />
+      <Image
+        src="/logo-d-bordo.png"
+        alt=""
+        width={36}
+        height={36}
+        priority
+        unoptimized
+        aria-hidden="true"
+        className="brand-mark-on-light h-9 w-9 shrink-0 object-contain"
       />
       <div className="hidden leading-tight sm:block">
         <div className="font-display text-base italic text-ink">

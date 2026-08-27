@@ -18,7 +18,16 @@ export function Footer() {
                 height={24}
                 unoptimized
                 aria-hidden="true"
-                className="h-6 w-6 object-contain"
+                className="brand-mark-on-dark h-6 w-6 object-contain"
+              />
+              <Image
+                src="/logo-d-bordo.png"
+                alt=""
+                width={24}
+                height={24}
+                unoptimized
+                aria-hidden="true"
+                className="brand-mark-on-light h-6 w-6 object-contain"
               />
               <span className="font-display text-base italic text-ink">
                 Dallila Camargo
