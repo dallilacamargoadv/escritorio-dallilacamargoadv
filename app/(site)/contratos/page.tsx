@@ -4,15 +4,18 @@ import { FeatureCard } from "@/components/ui/FeatureCard";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { EnclosureNested } from "@/components/ui/EnclosureNested";
+import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { ThreeStepsScroll } from "@/components/ThreeStepsScroll";
 import { PointsOfAttention } from "@/components/PointsOfAttention";
 import { JsonLd } from "@/components/JsonLd";
 import { ContratosForm } from "@/components/forms/ContratosForm";
 import { AREA_CONTENT } from "@/lib/area-content";
+import { FAQ_CONTENT } from "@/lib/faq-content";
 import { getPageMetadata } from "@/lib/page-metadata";
 import {
   BASE_URL,
   getBreadcrumbSchema,
+  getFaqSchema,
   getServiceSchema,
   jsonLdGraph,
 } from "@/lib/schema";
@@ -20,12 +23,13 @@ import {
 const SLUG = "contratos";
 const PAGE_URL = `${BASE_URL}/${SLUG}`;
 const CONTENT = AREA_CONTENT[SLUG];
+const FAQ = FAQ_CONTENT[SLUG];
 
 export async function generateMetadata(): Promise<Metadata> {
   return getPageMetadata({
     slug: SLUG,
     path: `/${SLUG}`,
-    fallbackTitle: "Contratos Digitais",
+    fallbackTitle: "Contratos",
     fallbackDescription:
       "Elaboração, revisão e negociação de contratos para criadores de conteúdo, influenciadores e negócios digitais, com atenção a cláusulas, riscos e conformidade.",
   });
@@ -46,6 +50,7 @@ export default function ContratosPage() {
             { name: "Home", url: BASE_URL },
             { name: "Contratos", url: PAGE_URL },
           ]),
+          getFaqSchema(FAQ),
         ])}
       />
 
@@ -113,6 +118,16 @@ export default function ContratosPage() {
               Fonte: Código Civil, Lei nº 10.406/2002
             </a>
           </EnclosureNested>
+        </Reveal>
+      </section>
+
+      {/* FAQ */}
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <Reveal>
+          <SectionEyebrow>Perguntas frequentes</SectionEyebrow>
+          <div className="mt-6">
+            <FaqAccordion items={FAQ} />
+          </div>
         </Reveal>
       </section>
 

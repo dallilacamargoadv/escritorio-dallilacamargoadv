@@ -10,26 +10,8 @@ export interface ServiceArea {
   description: string;
 }
 
-// Ordem oficial das 5 áreas de atuação
+// Ordem oficial das 4 frentes de atuação
 export const SERVICE_AREAS: ServiceArea[] = [
-  {
-    slug: "contratos",
-    formType: "contratos",
-    menuLabel: "Contratos Digitais",
-    shortLabel: "Contratos Digitais",
-    icon: "contrato",
-    description:
-      "Contratos de patrocínio, parceria, publi e prestação de serviço — feitos ou revisados para você não assinar no escuro.",
-  },
-  {
-    slug: "propriedade-intelectual",
-    formType: "propriedade_intelectual",
-    menuLabel: "Propriedade Intelectual",
-    shortLabel: "Propriedade Intelectual",
-    icon: "marca",
-    description:
-      "Registro de marca no INPI, direitos autorais e proteção do que você cria — do nome ao conteúdo.",
-  },
   {
     slug: "contas-e-plataformas",
     formType: "contas_e_plataformas",
@@ -37,22 +19,31 @@ export const SERVICE_AREAS: ServiceArea[] = [
     shortLabel: "Contas e Plataformas",
     icon: "plataforma",
     description:
-      "Atuação em casos de conta comprometida, bloqueada ou com restrição, do pedido administrativo à medida judicial cabível.",
+      "Recuperação e reativação de conta hackeada, suspensa ou banida — e remoção de conteúdo publicado sem autorização.",
   },
   {
-    slug: "golpes-virtuais",
-    formType: "golpes_virtuais",
-    menuLabel: "Golpes Virtuais",
-    shortLabel: "Golpes Virtuais",
-    icon: "alerta",
+    slug: "contratos",
+    formType: "contratos",
+    menuLabel: "Contratos",
+    shortLabel: "Contratos",
+    icon: "contrato",
     description:
-      "Atuação em casos de fraude eletrônica, golpe do PIX e phishing, com foco em preservação de prova e reparação cabível.",
+      "Contratos de publicidade, patrocínio, parceria e prestação de serviço — feitos ou revisados para você não assinar no escuro.",
   },
   {
-    slug: "assessoria-estrategica",
+    slug: "registro-de-marca",
+    formType: "propriedade_intelectual",
+    menuLabel: "Registro de Marca",
+    shortLabel: "Registro de Marca",
+    icon: "marca",
+    description:
+      "Registro da sua marca no INPI, do zero ao deferimento — proteção do nome, da logo e da identidade do seu negócio.",
+  },
+  {
+    slug: "assessoria",
     formType: "assessoria_estrategica",
-    menuLabel: "Assessoria Estratégica",
-    shortLabel: "Assessoria Estratégica",
+    menuLabel: "Assessoria",
+    shortLabel: "Assessoria",
     icon: "estrategia",
     description:
       "Acompanhamento jurídico contínuo para o seu negócio digital — de LGPD a estruturação tributária.",
@@ -84,5 +75,8 @@ export const SITE = {
   email: "dallilacamargoadv@gmail.com",
   instagram: "@dallilacamargoadv",
   instagramUrl: "https://instagram.com/dallilacamargoadv",
+  // Sem símbolos, com DDI 55 — formato exigido pelo link wa.me (ver lib/whatsapp.ts).
+  whatsapp: "5594991400801",
+  whatsappDisplay: "(94) 99140-0801",
   domain: "dallilacamargoadv.com.br",
 };

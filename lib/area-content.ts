@@ -67,131 +67,125 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
       },
     ],
     attention: {
-      introTitle: "Quando os problemas costumam começar",
+      introTitle: "Quando o problema costuma aparecer",
       introDescription:
-        "O contrato raramente é lembrado quando tudo está funcionando. Na maioria das vezes, ele só ganha atenção quando surge um impasse. É nesse momento que cláusulas ausentes, documentos genéricos ou acordos informais passam a impactar diretamente a relação entre as partes.",
+        "Ninguém pensa no contrato enquanto tudo está bem. O problema é que, quando surge uma briga ou um desentendimento, é aí que você sente falta de uma cláusula clara, de um documento feito sob medida — ou de contrato nenhum.",
       points: [
         {
           number: "01",
-          title: "A parceria começou sem um contrato adequado",
+          title: "Você fechou parceria só no combinado",
           description:
-            "Muitas relações comerciais começam apenas com conversas por WhatsApp, e-mails ou mensagens diretas. Enquanto existe confiança, isso costuma parecer suficiente. Quando surgem divergências, porém, a ausência de regras claras dificulta a definição dos direitos e deveres de cada parte.",
+            "Muita parceria começa só no WhatsApp, e-mail ou mensagem direta. Enquanto dá tudo certo, parece suficiente. Na hora de um desentendimento, sem regra clara escrita, fica difícil dizer quem tinha razão.",
         },
         {
           number: "02",
-          title: "O contrato não acompanhava a realidade do negócio",
+          title: "O contrato não bate com o que você realmente faz",
           description:
-            "Modelos prontos nem sempre refletem a forma como cada profissional trabalha. Questões como entregas, propriedade intelectual, confidencialidade, pagamentos ou encerramento da relação podem ficar sem previsão adequada.",
+            "Modelo pronto da internet raramente encaixa no seu jeito de trabalhar. Prazo de entrega, quem é dono do conteúdo, sigilo, forma de pagamento, como encerrar — tudo isso pode ficar de fora.",
         },
         {
           number: "03",
-          title: "Não existia saída se a marca — ou você — entrasse em crise",
+          title: "Não tinha combinado o que fazer se desse errado",
           description:
-            "Contrato de parceria sem cláusula de segurança prende as duas partes uma à outra mesmo quando continuar junto vira risco de reputação. Prever a saída antes que ela seja necessária é parte da proteção, não desconfiança.",
+            "Sem uma cláusula de saída, você fica preso à parceria mesmo quando ela virou risco pra sua reputação. Combinar o \"e se der errado\" antes não é desconfiança — é proteção.",
         },
         {
           number: "04",
-          title: "O conflito começou e ninguém sabia como proceder",
+          title: "O conflito chegou e ninguém sabia o que fazer",
           description:
-            "Sem regras previamente definidas, situações comuns — como atrasos, cancelamentos, alterações de escopo ou descumprimento de obrigações — passam a depender exclusivamente de negociação entre as partes.",
+            "Sem regra combinada antes, coisa comum — atraso, cancelamento, mudança no que foi combinado — vira negociação do zero, toda vez que acontece.",
         },
         {
           number: "05",
-          title: "O contrato foi produzido sem revisão jurídica",
+          title: "O contrato foi feito sem um advogado olhar",
           description:
-            "Ferramentas tecnológicas podem auxiliar na elaboração de documentos, mas não substituem a análise jurídica individualizada. Cada relação possui características próprias, que exigem adequação técnica ao caso concreto.",
+            "Ferramenta de IA ou modelo da internet ajuda a montar um rascunho, mas não substitui alguém olhando pro seu caso específico. Cada parceria tem seus detalhes — e eles importam.",
         },
       ],
     },
   },
 
-  "propriedade-intelectual": {
+  "registro-de-marca": {
     cards: [
       {
+        icon: "protecao",
+        title: "Busca de Anterioridade",
+        description:
+          "Pesquisa prévia no INPI pra saber se o nome ou a logo que você quer registrar já está sendo usado por outra pessoa ou empresa.",
+      },
+      {
         icon: "marca",
-        title: "Registro de Marca",
+        title: "Depósito e Acompanhamento",
         description:
-          "Assessoria em todas as etapas do registro de marca perante o INPI, desde a análise inicial até o acompanhamento do processo.",
-      },
-      {
-        icon: "autoral",
-        title: "Direitos Autorais",
-        description:
-          "Orientação sobre proteção de obras intelectuais, conteúdos digitais, materiais criativos e demais criações protegidas por lei.",
-      },
-      {
-        icon: "licenciamento",
-        title: "Licenciamento de Marca",
-        description:
-          "Elaboração e revisão de contratos para licenciamento, cessão e autorização de uso de marcas e outros ativos intelectuais.",
+          "Pedido de registro no INPI na classe certa pro seu negócio, com acompanhamento de cada etapa até o deferimento.",
       },
       {
         icon: "defesa",
-        title: "Defesa de Ativos",
+        title: "Oposição e Recursos",
         description:
-          "Atuação em conflitos envolvendo uso indevido de marcas, conteúdos e outros direitos de propriedade intelectual, nas esferas cabíveis.",
+          "Resposta a quem contesta o seu pedido de registro, ou recurso contra indeferimento do INPI.",
       },
       {
-        icon: "protecao",
-        title: "Clearance de Conteúdo",
+        icon: "licenciamento",
+        title: "Licenciamento e Cessão",
         description:
-          "Análise preventiva de campanhas e conteúdo antes de ir ao ar, verificando direitos autorais, de imagem e de marca envolvidos.",
+          "Contrato pra autorizar terceiro a usar sua marca já registrada, ou pra transferir a titularidade dela.",
       },
     ],
     steps: [
       {
         number: "01",
-        title: "Entender seu caso",
+        title: "Buscar",
         description:
-          "Você me conta o que precisa proteger — marca, conteúdo ou outra criação — e eu identifico o melhor caminho jurídico.",
+          "Faço a busca de anterioridade pra confirmar se sua marca está livre antes de você investir em identidade visual e divulgação.",
       },
       {
         number: "02",
-        title: "Agir",
+        title: "Depositar",
         description:
-          "Faço o que for necessário: registro no INPI, contrato de licenciamento, ou a medida certa para a sua situação.",
+          "Formalizo o pedido de registro no INPI, na classe certa pro seu tipo de negócio.",
       },
       {
         number: "03",
         title: "Acompanhar",
         description:
-          "Sigo com você até o fim, explicando cada etapa no caminho.",
+          "Sigo o processo até o deferimento, incluindo eventual oposição de terceiro ou recurso, se precisar.",
       },
     ],
     attention: {
-      introTitle: "Quando os problemas costumam começar",
+      introTitle: "Quando o problema costuma aparecer",
       introDescription:
-        "Marcas, conteúdos e ativos intelectuais costumam ganhar valor antes mesmo de receber proteção jurídica. Muitas vezes, o problema só aparece quando outra pessoa utiliza aquilo que levou tempo e investimento para ser construído.",
+        "No Brasil, a marca é de quem registra primeiro — não de quem usa primeiro. Por isso o problema quase sempre aparece depois que a marca já vale alguma coisa. E aí proteger fica mais caro e mais demorado do que seria lá no começo.",
       points: [
         {
           number: "01",
-          title: "A marca começou a ser utilizada antes da proteção",
+          title: "Você já está usando a marca, mas ainda não registrou",
           description:
-            "Investimentos em identidade visual, redes sociais e divulgação são realizados antes mesmo da verificação sobre a disponibilidade da marca.",
+            "Você investiu em logo, rede social e divulgação antes de checar se o nome estava livre pra registrar. Acontece o tempo todo.",
         },
         {
           number: "02",
-          title: "O conteúdo foi utilizado por terceiros",
+          title: "Outra pessoa já registrou uma marca parecida",
           description:
-            "Fotos, vídeos, textos e materiais criativos podem circular rapidamente no ambiente digital, tornando importante compreender os direitos envolvidos em cada situação.",
+            "Sem pesquisar antes, você só descobre tarde demais que o nome já é de outra empresa — e que ela pode te obrigar a parar de usar.",
         },
         {
           number: "03",
-          title: "A autoria nunca foi definida",
+          title: "O registro foi deixado para depois",
           description:
-            "Parcerias e produções em conjunto nem sempre deixam claro quem é titular dos direitos sobre a criação.",
+            "Na maioria das vezes, a preocupação com o registro só chega quando já apareceu alguém brigando pela marca.",
         },
         {
           number: "04",
-          title: "O registro foi deixado para depois",
+          title: "A marca ficou parada tempo demais",
           description:
-            "Em alguns casos, a preocupação com a proteção jurídica surge somente quando já existe conflito envolvendo a marca.",
+            "Marca registrada que fica 5 anos sem uso pode perder a proteção. Não basta registrar uma vez e esquecer — vale acompanhar.",
         },
         {
           number: "05",
-          title: "O ativo intelectual passou a ter valor sem estratégia de proteção",
+          title: "Alguém usa sua marca sem contrato assinado",
           description:
-            "À medida que o negócio cresce, seus ativos também ganham relevância econômica e merecem acompanhamento jurídico compatível.",
+            "Deixar alguém usar sua marca só no combinado, sem contrato, dificulta cobrar, fiscalizar o uso — ou voltar atrás depois.",
         },
       ],
     },
@@ -204,6 +198,12 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
         title: "Meta (Instagram, Facebook, WhatsApp)",
         description:
           "Atuação em conta hackeada, desativada ou com restrição/shadowban — do pedido administrativo à ação judicial com tutela de urgência.",
+      },
+      {
+        icon: "defesa",
+        title: "Remoção de Conteúdo",
+        description:
+          "Vídeo, foto ou publicação usando sua imagem, seu nome ou sua marca sem autorização — notificação extrajudicial e pedido de remoção direto à plataforma (notice and takedown).",
       },
       {
         icon: "bloqueio",
@@ -251,131 +251,45 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
       },
     ],
     attention: {
-      introTitle: "Quando os problemas costumam começar",
+      introTitle: "Quando o problema costuma aparecer",
       introDescription:
-        "A presença digital tornou-se parte da atividade profissional de muitas pessoas. Quando uma conta é comprometida ou sofre restrições, as consequências podem ultrapassar o ambiente virtual.",
+        "Pra muita gente, a conta nas redes é parte do trabalho, não só um perfil pessoal. Quando ela é hackeada, bloqueada ou banida, o prejuízo passa longe da tela — vai direto pro seu bolso e pra sua rotina.",
       points: [
         {
           number: "01",
-          title: "A conta foi comprometida",
+          title: "A conta foi hackeada",
           description:
-            "A perda de acesso pode interromper atividades profissionais e dificultar a comunicação com clientes.",
+            "Perder o acesso pode parar o seu trabalho de vez e cortar o contato com quem já é seu cliente.",
         },
         {
           number: "02",
           title: "O perfil foi bloqueado",
           description:
-            "Suspensões e restrições podem ocorrer por diferentes motivos, exigindo análise individual de cada situação.",
+            "Bloqueio e suspensão acontecem por motivos bem diferentes — cada caso precisa ser olhado com calma pra saber o que fazer.",
         },
         {
           number: "03",
-          title: "O conteúdo recebeu restrições",
+          title: "O conteúdo recebeu restrição",
           description:
-            "Strikes, remoções e limitações de alcance podem gerar dúvidas sobre as medidas disponíveis em cada caso.",
+            "Strike, post removido ou alcance travado deixam a dúvida: dá pra reverter isso, ou é melhor deixar pra lá?",
         },
         {
           number: "04",
-          title: "As provas não foram preservadas",
+          title: "Você não guardou as provas",
           description:
-            "Registros e evidências costumam ser importantes para compreender o ocorrido e avaliar as providências cabíveis.",
+            "Print, e-mail e histórico de conversa contam a história do que aconteceu — sem eles, fica mais difícil provar e agir.",
         },
         {
           number: "05",
-          title: "O problema afetou o negócio",
+          title: "O problema passou pro seu negócio",
           description:
-            "Quando a atividade profissional depende da plataforma, qualquer interrupção pode repercutir em contratos, clientes e operações.",
+            "Quando o seu trabalho depende daquela conta, qualquer trava nela também trava contrato, cliente e faturamento.",
         },
       ],
     },
   },
 
-  "golpes-virtuais": {
-    cards: [
-      {
-        icon: "alerta",
-        title: "Golpe do PIX / Phishing",
-        description:
-          "Atuação em casos de fraude em pagamento via PIX, links maliciosos e engenharia social aplicada por golpistas.",
-      },
-      {
-        icon: "moeda",
-        title: "Fraude em Negociações",
-        description:
-          "Orientação jurídica em golpes envolvendo pagamentos, vendas ou prestação de serviços.",
-      },
-      {
-        icon: "acesso",
-        title: "Conta Utilizada por Terceiros",
-        description:
-          "Medidas jurídicas para contas utilizadas indevidamente na aplicação de golpes.",
-      },
-      {
-        icon: "defesa",
-        title: "Preservação de Provas",
-        description:
-          "Organização e análise de evidências digitais para subsidiar medidas extrajudiciais ou judiciais.",
-      },
-    ],
-    steps: [
-      {
-        number: "01",
-        title: "Levantar os fatos",
-        description:
-          "Reconstrução dos fatos e orientação sobre preservação de prova desde o primeiro contato.",
-      },
-      {
-        number: "02",
-        title: "Reunir as provas",
-        description:
-          "Organização de prints, comprovantes e registros de forma a sustentar a medida cabível.",
-      },
-      {
-        number: "03",
-        title: "Buscar reparação",
-        description:
-          "Adoção da medida cabível — notificação, ação judicial ou outra via — buscando a reparação do prejuízo.",
-      },
-    ],
-    attention: {
-      introTitle: "Quando os problemas costumam começar",
-      introDescription:
-        "A evolução da tecnologia também trouxe novas formas de fraude. Muitas delas exploram a confiança, a rapidez das comunicações e o uso cotidiano das plataformas digitais.",
-      points: [
-        {
-          number: "01",
-          title: "A identidade foi utilizada indevidamente",
-          description:
-            "Perfis falsos e utilização não autorizada de informações podem gerar impactos para pessoas e negócios.",
-        },
-        {
-          number: "02",
-          title: "Houve fraude em negociações",
-          description:
-            "Golpes envolvendo pagamentos, vendas ou prestação de serviços exigem análise cuidadosa das circunstâncias.",
-        },
-        {
-          number: "03",
-          title: "A conta foi utilizada por terceiros",
-          description:
-            "Após um acesso indevido, contas podem ser utilizadas para aplicação de golpes ou outras condutas ilícitas.",
-        },
-        {
-          number: "04",
-          title: "As evidências se perderam",
-          description:
-            "A ausência de registros pode dificultar a compreensão dos fatos e das medidas disponíveis.",
-        },
-        {
-          number: "05",
-          title: "O incidente gerou outros impactos",
-          description:
-            "Além do prejuízo imediato, fraudes digitais podem afetar reputação, relações comerciais e confiança dos clientes.",
-        },
-      ],
-    },
-  },
-
-  "assessoria-estrategica": {
+  assessoria: {
     cards: [
       {
         icon: "dados",
@@ -429,39 +343,39 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
       },
     ],
     attention: {
-      introTitle: "Quando os problemas costumam começar",
+      introTitle: "Quando o problema costuma aparecer",
       introDescription:
-        "O crescimento de um negócio costuma trazer novas responsabilidades jurídicas. Antecipar essas questões permite que decisões importantes sejam tomadas com maior clareza.",
+        "Negócio que cresce também cresce em responsabilidade jurídica. Antecipar isso é o que te deixa decidir as coisas importantes com a cabeça no lugar, em vez de correr atrás do prejuízo.",
       points: [
         {
           number: "01",
           title: "O negócio cresceu sem estrutura jurídica",
           description:
-            "Faturamento, equipe e volume de contratos aumentam mais rápido do que a formalização jurídica e tributária que os acompanha.",
+            "Faturamento, equipe e contrato aumentam mais rápido do que a parte jurídica e fiscal consegue acompanhar.",
         },
         {
           number: "02",
-          title: "Novos projetos começaram sem análise preventiva",
+          title: "Projeto novo entrou no ar sem checar antes",
           description:
-            "Uma campanha, parceria ou linha de produto nova entra no ar sem checar direitos autorais, de imagem ou de marca envolvidos.",
+            "Campanha, parceria ou produto novo vai ao ar sem checar direito autoral, direito de imagem ou marca envolvidos — e o risco só aparece depois.",
         },
         {
           number: "03",
-          title: "O tratamento de dados evoluiu sem adequação",
+          title: "Os dados dos seus clientes cresceram sem adequação",
           description:
-            "Coleta e uso de dados de clientes crescem junto com o negócio, mas a adequação à LGPD costuma ficar pra depois.",
+            "Você coleta e usa mais dado de cliente à medida que o negócio cresce, mas a adequação à LGPD sempre fica pra depois.",
         },
         {
           number: "04",
           title: "A tecnologia mudou mais rápido que os processos",
           description:
-            "Novas ferramentas e formas de vender surgem antes de qualquer revisão sobre os riscos jurídicos que elas trazem.",
+            "Ferramenta nova e forma nova de vender chegam antes de você parar pra pensar no risco jurídico que elas trazem.",
         },
         {
           number: "05",
-          title: "As decisões passaram a exigir suporte jurídico contínuo",
+          title: "As decisões ficaram grandes demais pra resolver sozinho",
           description:
-            "Quando o negócio já não cabe mais em decisões pontuais, acompanhamento mensal substitui apagar incêndio um por um.",
+            "Quando o negócio cresce, resolver cada problema isolado não é mais suficiente — ter alguém acompanhando todo mês evita que você viva apagando incêndio.",
         },
       ],
     },

@@ -5,7 +5,6 @@ export type LeadFormType =
   | "contratos"
   | "propriedade_intelectual"
   | "contas_e_plataformas"
-  | "golpes_virtuais"
   | "assessoria_estrategica"
   | "outros";
 

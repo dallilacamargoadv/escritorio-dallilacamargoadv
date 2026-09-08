@@ -4,48 +4,53 @@ import { FeatureCard } from "@/components/ui/FeatureCard";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { EnclosureNested } from "@/components/ui/EnclosureNested";
+import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { ThreeStepsScroll } from "@/components/ThreeStepsScroll";
 import { PointsOfAttention } from "@/components/PointsOfAttention";
 import { JsonLd } from "@/components/JsonLd";
-import { AssessoriaEstrategicaForm } from "@/components/forms/AssessoriaEstrategicaForm";
+import { PropriedadeIntelectualForm } from "@/components/forms/PropriedadeIntelectualForm";
 import { AREA_CONTENT } from "@/lib/area-content";
+import { FAQ_CONTENT } from "@/lib/faq-content";
 import { getPageMetadata } from "@/lib/page-metadata";
 import {
   BASE_URL,
   getBreadcrumbSchema,
+  getFaqSchema,
   getServiceSchema,
   jsonLdGraph,
 } from "@/lib/schema";
 
-const SLUG = "assessoria-estrategica";
+const SLUG = "registro-de-marca";
 const PAGE_URL = `${BASE_URL}/${SLUG}`;
 const CONTENT = AREA_CONTENT[SLUG];
+const FAQ = FAQ_CONTENT[SLUG];
 
 export async function generateMetadata(): Promise<Metadata> {
   return getPageMetadata({
     slug: SLUG,
     path: `/${SLUG}`,
-    fallbackTitle: "Assessoria Estratégica",
+    fallbackTitle: "Registro de Marca",
     fallbackDescription:
-      "Orientação jurídica preventiva para influenciadores, criadores de conteúdo e negócios digitais em temas de proteção de dados, LGPD e relações digitais.",
+      "Registro de marca no INPI, do zero ao deferimento — proteção do nome, da logo e da identidade do seu negócio.",
   });
 }
 
-export default function AssessoriaEstrategicaPage() {
+export default function RegistroDeMarcaPage() {
   return (
     <>
       <JsonLd
         data={jsonLdGraph([
           getServiceSchema({
-            name: "Assessoria Estratégica",
+            name: "Registro de Marca",
             description:
-              "Orientação jurídica preventiva para influenciadores, criadores de conteúdo, prestadores de serviços e negócios digitais em temas relacionados à proteção de dados, LGPD, relações digitais e desafios jurídicos decorrentes da tecnologia.",
+              "Registro de marca no INPI para criadores de conteúdo, infoprodutores e negócios digitais — busca de anterioridade, depósito, acompanhamento e defesa.",
             url: PAGE_URL,
           }),
           getBreadcrumbSchema([
             { name: "Home", url: BASE_URL },
-            { name: "Assessoria Estratégica", url: PAGE_URL },
+            { name: "Registro de Marca", url: PAGE_URL },
           ]),
+          getFaqSchema(FAQ),
         ])}
       />
 
@@ -53,12 +58,13 @@ export default function AssessoriaEstrategicaPage() {
       <section className="mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
         <Reveal>
           <h1 className="max-w-3xl text-4xl sm:text-6xl">
-            <em className="italic text-gold">Assessoria Estratégica</em> para
-            decisões jurídicas claras no ambiente digital.
+            Seu nome e sua logo,{" "}
+            <em className="italic text-gold">protegidos</em> desde o começo.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Acompanhamento jurídico contínuo para o seu negócio digital — de
-            contrato e LGPD a estruturação tributária, em um só lugar.
+            Registro de marca no INPI pra proteger o nome do seu negócio,
+            produto ou perfil contra cópia e uso indevido — do zero ao
+            deferimento.
           </p>
           <div className="mt-8">
             <Button href="#formulario">Iniciar atendimento</Button>
@@ -98,20 +104,29 @@ export default function AssessoriaEstrategicaPage() {
           <EnclosureNested className="max-w-3xl">
             <p className="font-eyebrow text-[10px] text-gold">Nota técnica</p>
             <p className="mt-4 text-sm leading-relaxed text-ink-dim">
-              Questões relacionadas à proteção de dados pessoais são
-              disciplinadas pela Lei Geral de Proteção de Dados, que
-              estabelece princípios e regras para o tratamento de dados no
-              Brasil.
+              O registro de marcas no Brasil segue os procedimentos definidos
+              pela Lei da Propriedade Industrial, com análise conduzida pelo
+              Instituto Nacional da Propriedade Industrial (INPI).
             </p>
             <a
-              href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+              href="https://www.planalto.gov.br/ccivil_03/leis/l9279.htm"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-block text-sm text-gold underline"
             >
-              Fonte: Lei Geral de Proteção de Dados, Lei nº 13.709/2018
+              Fonte: Lei da Propriedade Industrial, Lei nº 9.279/1996
             </a>
           </EnclosureNested>
+        </Reveal>
+      </section>
+
+      {/* FAQ */}
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <Reveal>
+          <SectionEyebrow>Perguntas frequentes</SectionEyebrow>
+          <div className="mt-6">
+            <FaqAccordion items={FAQ} />
+          </div>
         </Reveal>
       </section>
 
@@ -130,7 +145,7 @@ export default function AssessoriaEstrategicaPage() {
               dois dias úteis.
             </p>
             <div className="mt-10">
-              <AssessoriaEstrategicaForm />
+              <PropriedadeIntelectualForm />
             </div>
           </Reveal>
         </div>

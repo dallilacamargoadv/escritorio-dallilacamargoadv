@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SERVICE_AREAS, SITE } from "@/lib/site-data";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -102,6 +103,18 @@ export function Footer() {
           <div>
             <h3 className="font-eyebrow text-[10px] text-gold">Contato</h3>
             <ul className="mt-4 space-y-3 text-sm text-ink-dim">
+              <li>
+                <a
+                  href={getWhatsAppUrl(
+                    "Olá! Vim pelo site e gostaria de conversar.",
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gold transition-colors duration-150"
+                >
+                  WhatsApp {SITE.whatsappDisplay}
+                </a>
+              </li>
               <li>
                 <a
                   href={`mailto:${SITE.email}`}

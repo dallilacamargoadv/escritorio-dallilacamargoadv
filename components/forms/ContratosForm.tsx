@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2 } from "lucide-react";
 import { getUtms } from "@/lib/utms";
 import { getClientMetadata, type ClientMetadata } from "@/lib/metadata";
 import { isValidEmail, isValidName, isValidWhatsapp } from "@/lib/validation";
@@ -9,6 +8,7 @@ import { trackLead } from "@/lib/tracking";
 import {
   AdvanceButton,
   FormProgress,
+  FormSuccess,
   OptionButton,
   StepFrame,
   TextQuestion,
@@ -154,17 +154,7 @@ export function ContratosForm() {
   };
 
   if (step === TOTAL_STEPS) {
-    return (
-      <div className="flex flex-col items-center py-12 text-center">
-        <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full border border-hairline-strong">
-          <CheckCircle2 className="h-9 w-9 text-gold" />
-        </div>
-        <p className="max-w-md text-xl text-ink">
-          Obrigado pelas informações. Em breve alguém do nosso time entrará
-          em contato com você. Até logo.
-        </p>
-      </div>
-    );
+    return <FormSuccess areaLabel="Contratos" />;
   }
 
   return (

@@ -48,9 +48,22 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Reorganização das áreas em 08/09/2026: de 5 para 4 frentes, com nomes
+      // diretos. Redirects 301 preservam o link/indexação que as URLs antigas
+      // já tinham no Google.
       {
-        source: "/recuperacao-e-reativacao-de-conta-hackeada",
-        destination: "/contas-e-plataformas",
+        source: "/propriedade-intelectual",
+        destination: "/registro-de-marca",
+        permanent: true,
+      },
+      {
+        source: "/assessoria-estrategica",
+        destination: "/assessoria",
+        permanent: true,
+      },
+      {
+        source: "/golpes-virtuais",
+        destination: "/",
         permanent: true,
       },
     ];

@@ -4,15 +4,18 @@ import { FeatureCard } from "@/components/ui/FeatureCard";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { EnclosureNested } from "@/components/ui/EnclosureNested";
+import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { ThreeStepsScroll } from "@/components/ThreeStepsScroll";
 import { PointsOfAttention } from "@/components/PointsOfAttention";
 import { JsonLd } from "@/components/JsonLd";
 import { ContasEPlataformasForm } from "@/components/forms/ContasEPlataformasForm";
 import { AREA_CONTENT } from "@/lib/area-content";
+import { FAQ_CONTENT } from "@/lib/faq-content";
 import { getPageMetadata } from "@/lib/page-metadata";
 import {
   BASE_URL,
   getBreadcrumbSchema,
+  getFaqSchema,
   getServiceSchema,
   jsonLdGraph,
 } from "@/lib/schema";
@@ -20,6 +23,7 @@ import {
 const SLUG = "contas-e-plataformas";
 const PAGE_URL = `${BASE_URL}/${SLUG}`;
 const CONTENT = AREA_CONTENT[SLUG];
+const FAQ = FAQ_CONTENT[SLUG];
 
 export async function generateMetadata(): Promise<Metadata> {
   return getPageMetadata({
@@ -27,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
     path: `/${SLUG}`,
     fallbackTitle: "Contas e Plataformas",
     fallbackDescription:
-      "Atuação jurídica em casos de contas comprometidas, bloqueios, suspensões, strikes e conflitos com plataformas digitais.",
+      "Recuperação e reativação de conta hackeada, suspensa ou banida, e remoção de conteúdo publicado sem autorização — em qualquer rede social ou plataforma digital.",
   });
 }
 
@@ -39,13 +43,14 @@ export default function ContasEPlataformasPage() {
           getServiceSchema({
             name: "Contas e Plataformas",
             description:
-              "Atuação jurídica em casos de contas comprometidas, bloqueios, suspensões, strikes, conflitos com plataformas digitais e medidas decorrentes de incidentes virtuais.",
+              "Atuação jurídica em casos de contas comprometidas, bloqueios, suspensões, strikes, remoção de conteúdo indevido e conflitos com plataformas digitais.",
             url: PAGE_URL,
           }),
           getBreadcrumbSchema([
             { name: "Home", url: BASE_URL },
             { name: "Contas e Plataformas", url: PAGE_URL },
           ]),
+          getFaqSchema(FAQ),
         ])}
       />
 
@@ -53,13 +58,13 @@ export default function ContasEPlataformasPage() {
       <section className="mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
         <Reveal>
           <h1 className="max-w-3xl text-4xl sm:text-6xl">
-            <em className="italic text-gold">Contas e Plataformas</em> com
-            recuperação de acesso e resposta jurídica estruturada.
+            Perdeu o acesso à sua{" "}
+            <em className="italic text-gold">conta</em>?
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Atuação em casos de conta comprometida, bloqueada ou com
-            restrição — do pedido administrativo à medida judicial cabível,
-            incluindo tutela de urgência quando necessário.
+            Recuperação e reativação de conta hackeada, suspensa ou banida —
+            e remoção de conteúdo publicado sem autorização, do pedido
+            administrativo à medida judicial cabível.
           </p>
           <div className="mt-8">
             <Button href="#formulario">Iniciar atendimento</Button>
@@ -113,6 +118,16 @@ export default function ContasEPlataformasPage() {
               Fonte: Marco Civil da Internet, Lei nº 12.965/2014
             </a>
           </EnclosureNested>
+        </Reveal>
+      </section>
+
+      {/* FAQ */}
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <Reveal>
+          <SectionEyebrow>Perguntas frequentes</SectionEyebrow>
+          <div className="mt-6">
+            <FaqAccordion items={FAQ} />
+          </div>
         </Reveal>
       </section>
 

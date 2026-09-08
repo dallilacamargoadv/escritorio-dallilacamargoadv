@@ -1,8 +1,49 @@
 "use client";
 
 import type { InputHTMLAttributes } from "react";
-import { ChevronLeft } from "lucide-react";
+import { useEffect } from "react";
+import { ChevronLeft, CheckCircle2 } from "lucide-react";
 import { scrollInputIntoView } from "@/lib/mobile-utils";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
+
+const REDIRECT_DELAY_MS = 1800;
+
+/**
+ * Tela final de todos os formulários de área — depois de enviado, o lead
+ * segue direto pro WhatsApp com uma mensagem já preenchida, em vez de ficar
+ * parado numa tela de "obrigado". O link manual cobre quem tem bloqueador de
+ * pop-up ou fecha a aba antes do redirecionamento automático.
+ */
+export function FormSuccess({ areaLabel }: { areaLabel: string }) {
+  const whatsappUrl = getWhatsAppUrl(
+    `Olá! Preenchi o formulário sobre ${areaLabel} no site e gostaria de conversar.`,
+  );
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      window.location.href = whatsappUrl;
+    }, REDIRECT_DELAY_MS);
+    return () => window.clearTimeout(timer);
+  }, [whatsappUrl]);
+
+  return (
+    <div className="flex flex-col items-center py-12 text-center">
+      <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full border border-hairline-strong">
+        <CheckCircle2 className="h-9 w-9 text-gold" />
+      </div>
+      <p className="max-w-md text-xl text-ink">
+        Obrigado pelas informações. Você já está sendo direcionado para o
+        WhatsApp pra gente continuar a conversa por lá.
+      </p>
+      <a
+        href={whatsappUrl}
+        className="mt-6 inline-flex items-center justify-center gap-2 bg-gold px-6 py-3 text-sm font-medium text-bg transition-all duration-150 ease-out active:scale-[0.97]"
+      >
+        Continuar no WhatsApp agora
+      </a>
+    </div>
+  );
+}
 
 export function FormProgress({
   step,

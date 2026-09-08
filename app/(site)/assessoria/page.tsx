@@ -4,48 +4,53 @@ import { FeatureCard } from "@/components/ui/FeatureCard";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { EnclosureNested } from "@/components/ui/EnclosureNested";
+import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { ThreeStepsScroll } from "@/components/ThreeStepsScroll";
 import { PointsOfAttention } from "@/components/PointsOfAttention";
 import { JsonLd } from "@/components/JsonLd";
-import { GolpesVirtuaisForm } from "@/components/forms/GolpesVirtuaisForm";
+import { AssessoriaEstrategicaForm } from "@/components/forms/AssessoriaEstrategicaForm";
 import { AREA_CONTENT } from "@/lib/area-content";
+import { FAQ_CONTENT } from "@/lib/faq-content";
 import { getPageMetadata } from "@/lib/page-metadata";
 import {
   BASE_URL,
   getBreadcrumbSchema,
+  getFaqSchema,
   getServiceSchema,
   jsonLdGraph,
 } from "@/lib/schema";
 
-const SLUG = "golpes-virtuais";
+const SLUG = "assessoria";
 const PAGE_URL = `${BASE_URL}/${SLUG}`;
 const CONTENT = AREA_CONTENT[SLUG];
+const FAQ = FAQ_CONTENT[SLUG];
 
 export async function generateMetadata(): Promise<Metadata> {
   return getPageMetadata({
     slug: SLUG,
     path: `/${SLUG}`,
-    fallbackTitle: "Golpes Virtuais",
+    fallbackTitle: "Assessoria",
     fallbackDescription:
-      "Atuação em situações envolvendo fraudes eletrônicas, utilização indevida de contas, engenharia social e transações fraudulentas.",
+      "Acompanhamento jurídico contínuo para influenciadores, criadores de conteúdo e negócios digitais — contrato, LGPD e estruturação tributária, em um só lugar.",
   });
 }
 
-export default function GolpesVirtuaisPage() {
+export default function AssessoriaPage() {
   return (
     <>
       <JsonLd
         data={jsonLdGraph([
           getServiceSchema({
-            name: "Golpes Virtuais",
+            name: "Assessoria",
             description:
-              "Atuação em situações envolvendo fraudes eletrônicas, utilização indevida de contas, engenharia social, transações fraudulentas e demais incidentes praticados no ambiente digital.",
+              "Acompanhamento jurídico contínuo para influenciadores, criadores de conteúdo, prestadores de serviços e negócios digitais — contrato, proteção de dados, LGPD e estruturação tributária.",
             url: PAGE_URL,
           }),
           getBreadcrumbSchema([
             { name: "Home", url: BASE_URL },
-            { name: "Golpes Virtuais", url: PAGE_URL },
+            { name: "Assessoria", url: PAGE_URL },
           ]),
+          getFaqSchema(FAQ),
         ])}
       />
 
@@ -53,12 +58,12 @@ export default function GolpesVirtuaisPage() {
       <section className="mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
         <Reveal>
           <h1 className="max-w-3xl text-4xl sm:text-6xl">
-            <em className="italic text-gold">Golpes Virtuais</em> enfrentados
-            com atuação jurídica clara e estratégica.
+            Um <em className="italic text-gold">departamento jurídico</em> sob
+            medida, sem contratar um.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Atuação em casos de fraude eletrônica, golpe do PIX e phishing,
-            com foco em preservação de prova e busca da reparação cabível.
+            Acompanhamento jurídico contínuo para o seu negócio digital — de
+            contrato e LGPD a estruturação tributária, em um só lugar.
           </p>
           <div className="mt-8">
             <Button href="#formulario">Iniciar atendimento</Button>
@@ -98,20 +103,30 @@ export default function GolpesVirtuaisPage() {
           <EnclosureNested className="max-w-3xl">
             <p className="font-eyebrow text-[10px] text-gold">Nota técnica</p>
             <p className="mt-4 text-sm leading-relaxed text-ink-dim">
-              Situações envolvendo fraudes e uso indevido de contas digitais
-              também podem envolver aspectos disciplinados pelo Marco Civil
-              da Internet, que estabelece direitos e deveres para o uso da
-              internet no Brasil.
+              Questões relacionadas à proteção de dados pessoais são
+              disciplinadas pela Lei Geral de Proteção de Dados, que
+              estabelece princípios e regras para o tratamento de dados no
+              Brasil.
             </p>
             <a
-              href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm"
+              href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-block text-sm text-gold underline"
             >
-              Fonte: Marco Civil da Internet, Lei nº 12.965/2014
+              Fonte: Lei Geral de Proteção de Dados, Lei nº 13.709/2018
             </a>
           </EnclosureNested>
+        </Reveal>
+      </section>
+
+      {/* FAQ */}
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <Reveal>
+          <SectionEyebrow>Perguntas frequentes</SectionEyebrow>
+          <div className="mt-6">
+            <FaqAccordion items={FAQ} />
+          </div>
         </Reveal>
       </section>
 
@@ -130,7 +145,7 @@ export default function GolpesVirtuaisPage() {
               dois dias úteis.
             </p>
             <div className="mt-10">
-              <GolpesVirtuaisForm />
+              <AssessoriaEstrategicaForm />
             </div>
           </Reveal>
         </div>

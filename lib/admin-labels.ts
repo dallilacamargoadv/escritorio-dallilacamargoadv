@@ -10,20 +10,21 @@ import type { DespesaStatus, DespesaRecorrencia } from "@/lib/db-despesas";
 import type { IndicacaoDirecao } from "@/lib/db-indicacoes";
 
 export const FORM_TYPE_LABELS: Record<string, string> = {
-  contratos: "Contratos Digitais",
-  propriedade_intelectual: "Propriedade Intelectual",
+  contratos: "Contratos",
+  propriedade_intelectual: "Registro de Marca",
   contas_e_plataformas: "Contas e Plataformas",
-  golpes_virtuais: "Golpes Virtuais",
-  assessoria_estrategica: "Assessoria Estratégica",
+  assessoria_estrategica: "Assessoria",
   outros: "Outros",
 };
 
-/** Paleta categórica fixa das 5 áreas — ver nota de validação em app/globals.css. */
+/** Paleta categórica fixa das 4 frentes — ver nota de validação em app/globals.css.
+ * "golpes_virtuais" foi removida do site em 08/09/2026 (sem leads/casos com esse
+ * valor no banco na época) — chart-4 fica sem dono de propósito, mesmo padrão já
+ * usado para o enum órfão `assessoria_recorrente` (ver HANDOFF.md). */
 export const FORM_TYPE_CHART_COLORS: Record<string, string> = {
   contratos: "var(--chart-1)",
   propriedade_intelectual: "var(--chart-2)",
   contas_e_plataformas: "var(--chart-3)",
-  golpes_virtuais: "var(--chart-4)",
   assessoria_estrategica: "var(--chart-5)",
 };
 export const CHART_COLOR_OUTROS = "var(--chart-6)";
