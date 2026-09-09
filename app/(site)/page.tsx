@@ -63,7 +63,7 @@ export default async function HomePage() {
               constrói no ambiente digital.
             </h1>
             <p className="mt-4 font-eyebrow text-xs text-gold sm:text-sm">
-              Registro de Marcas · Influenciadores · Recuperação de Contas
+              Registro de Marcas · Influenciadores · Reativação de Contas
             </p>
             <p className="mt-4 max-w-xl text-base text-ink-dim sm:text-lg">
               Prevenção de verdade: contratos, marca e presença digital
@@ -118,7 +118,7 @@ export default async function HomePage() {
               </CollapsibleText>
               <CollapsibleText title="Visão">
                 Ser reconhecida como referência em Direito Digital,
-                Contratos e Propriedade Intelectual pela capacidade de unir
+                Contratos e Registro de Marca pela capacidade de unir
                 excelência técnica, atualização constante e uma advocacia
                 que acompanha a evolução da tecnologia sem perder de vista
                 as pessoas e as relações que ela transforma.

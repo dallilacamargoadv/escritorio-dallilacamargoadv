@@ -18,15 +18,15 @@ import {
   jsonLdGraph,
 } from "@/lib/schema";
 
-const SLUG = "recuperacao-e-reativacao-de-conta-hackeada";
+const SLUG = "reativacao-e-recuperacao-de-conta-hackeada";
 const PAGE_URL = `${BASE_URL}/${SLUG}`;
 const CONTENT = AREA_CONTENT["contas-e-plataformas"];
 const ALL_FAQ = FAQ_CONTENT["contas-e-plataformas"];
-// Só as perguntas sobre recuperar/reativar conta — a de remoção de conteúdo
+// Só as perguntas sobre reativar/recuperar conta — a de remoção de conteúdo
 // fica de fora aqui de propósito, pra manter a landing no assunto do anúncio.
 const FAQ = ALL_FAQ.filter((item) => !item.question.includes("remover"));
 // As duas primeiras cards (Meta e Perfil Falso/Fake) são as que falam
-// diretamente de recuperação/reativação de conta.
+// diretamente de reativação/recuperação de conta.
 const RECOVERY_CARDS = CONTENT.cards.filter((card) =>
   ["Meta (Instagram, Facebook, WhatsApp)", "Perfil Falso / Fake", "Strikes e Restrições (YouTube, Instagram, TikTok)"].includes(
     card.title,
@@ -37,26 +37,26 @@ export async function generateMetadata(): Promise<Metadata> {
   return getPageMetadata({
     slug: SLUG,
     path: `/${SLUG}`,
-    fallbackTitle: "Recuperação e Reativação de Conta Hackeada",
+    fallbackTitle: "Reativação e Recuperação de Conta Hackeada",
     fallbackDescription:
-      "Sua conta do Instagram, Facebook, WhatsApp ou TikTok foi hackeada, suspensa ou banida? Atuação jurídica pra recuperar o acesso. Fale com uma advogada especialista.",
+      "Sua conta do Instagram, Facebook, WhatsApp ou TikTok foi hackeada, suspensa ou banida? Atuação jurídica pra reativar o acesso. Fale com uma advogada especialista.",
   });
 }
 
-export default function RecuperacaoDeContaLandingPage() {
+export default function ReativacaoDeContaLandingPage() {
   return (
     <>
       <JsonLd
         data={jsonLdGraph([
           getServiceSchema({
-            name: "Recuperação e Reativação de Conta Hackeada",
+            name: "Reativação e Recuperação de Conta Hackeada",
             description:
               "Atuação jurídica em casos de conta hackeada, desativada, suspensa ou banida em redes sociais e plataformas digitais.",
             url: PAGE_URL,
           }),
           getBreadcrumbSchema([
             { name: "Home", url: BASE_URL },
-            { name: "Recuperação de Conta", url: PAGE_URL },
+            { name: "Reativação de Conta", url: PAGE_URL },
           ]),
           getFaqSchema(FAQ),
         ])}
@@ -66,11 +66,11 @@ export default function RecuperacaoDeContaLandingPage() {
       <section className="mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 sm:pt-24">
         <Reveal>
           <p className="font-eyebrow text-[10px] text-gold">
-            Contas e Plataformas · Recuperação de Conta
+            Contas e Plataformas · Reativação de Conta
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl sm:text-6xl">
             Perdeu o acesso à sua conta?{" "}
-            <em className="italic text-gold">A gente recupera.</em>
+            <em className="italic text-gold">A gente reativa.</em>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
             Conta hackeada, suspensa ou banida no Instagram, Facebook,
@@ -78,7 +78,7 @@ export default function RecuperacaoDeContaLandingPage() {
             judicial com tutela de urgência, quando necessário.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="#formulario">Quero recuperar minha conta</Button>
+            <Button href="#formulario">Quero reativar minha conta</Button>
           </div>
           <p className="mt-4 font-mono text-[11px] uppercase tracking-wide text-ink-dim">
             OAB/PA nº 36.762 · Atendimento 100% remoto, Brasil todo
@@ -124,7 +124,7 @@ export default function RecuperacaoDeContaLandingPage() {
         <div className="mx-auto max-w-2xl px-4 py-20 sm:px-6">
           <Reveal>
             <h2 className="text-3xl sm:text-4xl">
-              Vamos recuperar sua conta.
+              Vamos reativar sua conta.
             </h2>
             <p className="mt-4 text-sm text-ink-dim">
               Preencha as perguntas abaixo. A equipe entra em contato em até

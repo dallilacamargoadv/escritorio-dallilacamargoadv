@@ -66,6 +66,14 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      // A landing foi ao ar como "recuperação e reativação" e virou
+      // "reativação e recuperação" minutos depois, no mesmo dia — redirect
+      // evita link quebrado pra quem já recebeu a URL antiga.
+      {
+        source: "/recuperacao-e-reativacao-de-conta-hackeada",
+        destination: "/reativacao-e-recuperacao-de-conta-hackeada",
+        permanent: true,
+      },
     ];
   },
 };
