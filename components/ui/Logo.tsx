@@ -5,7 +5,7 @@ export function Logo() {
   return (
     <div className="flex items-center gap-3">
       <Image
-        src="/logo-d-marfim.png"
+        src="/logo-d-malva.png"
         alt=""
         width={36}
         height={36}
@@ -25,7 +25,7 @@ export function Logo() {
         className="brand-mark-on-light h-9 w-9 shrink-0 object-contain"
       />
       <div className="hidden leading-tight sm:block">
-        <div className="font-display text-base italic text-ink">
+        <div className="font-display text-base italic text-gold">
           Dallila Camargo
         </div>
         <div className="font-mono text-[10px] uppercase tracking-wide text-ink-dim">

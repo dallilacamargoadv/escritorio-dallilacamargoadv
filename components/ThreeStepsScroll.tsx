@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
-import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -103,14 +102,9 @@ export function ThreeStepsScroll({
       <div className="min-h-screen-safe sticky top-0 flex flex-col items-center justify-center overflow-hidden bg-bg-alt px-4 py-16">
         <div className="mb-10 flex items-center gap-4 md:mb-14">
           <span className="h-px w-10 bg-hairline" />
-          <Image
-            src="/logo-abelha.png"
-            width={32}
-            height={32}
-            alt=""
-            aria-hidden="true"
-            className="h-8 w-8 opacity-80"
-          />
+          <span aria-hidden="true" className="text-2xl leading-none text-gold">
+            ✦
+          </span>
           <span className="font-eyebrow text-base text-gold">{title}</span>
           <span className="h-px w-10 bg-hairline" />
         </div>

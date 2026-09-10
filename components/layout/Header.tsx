@@ -60,12 +60,12 @@ export function Header() {
         <nav className="hidden items-center gap-8 md:flex" aria-label="Principal">
           <Link
             href="/"
-            className="text-sm text-ink hover:text-gold transition-colors duration-150"
+            className="text-sm text-gold-bright/60 hover:text-gold transition-colors duration-150"
           >
             Início
           </Link>
           <div className="group relative">
-            <button className="text-sm text-ink hover:text-gold transition-colors duration-150">
+            <button className="text-sm text-gold-bright/60 hover:text-gold transition-colors duration-150">
               Áreas de Atuação
             </button>
             <div className="invisible absolute left-1/2 top-full w-72 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 ease-out group-hover:visible group-hover:opacity-100">
@@ -74,7 +74,7 @@ export function Header() {
                   <li key={area.slug}>
                     <Link
                       href={`/${area.slug}`}
-                      className="block px-4 py-3 text-sm text-ink hover:text-gold hover:bg-bg-alt transition-colors duration-150"
+                      className="block px-4 py-3 text-sm text-gold-bright/60 hover:text-gold hover:bg-bg-alt transition-colors duration-150"
                     >
                       {area.menuLabel}
                     </Link>
@@ -85,13 +85,13 @@ export function Header() {
           </div>
           <Link
             href="/sobre"
-            className="text-sm text-ink hover:text-gold transition-colors duration-150"
+            className="text-sm text-gold-bright/60 hover:text-gold transition-colors duration-150"
           >
             Sobre
           </Link>
           <Link
             href="/blog"
-            className="text-sm text-ink hover:text-gold transition-colors duration-150"
+            className="text-sm text-gold-bright/60 hover:text-gold transition-colors duration-150"
           >
             Blog
           </Link>
@@ -134,7 +134,7 @@ export function Header() {
             <Link
               href="/"
               onClick={() => setMobileOpen(false)}
-              className="border-b border-hairline px-2 py-4 text-base text-ink"
+              className="border-b border-hairline px-2 py-4 text-base text-gold-bright/70"
             >
               Início
             </Link>
@@ -146,7 +146,7 @@ export function Header() {
                 key={area.slug}
                 href={`/${area.slug}`}
                 onClick={() => setMobileOpen(false)}
-                className="border-b border-hairline px-2 py-4 text-base text-ink"
+                className="border-b border-hairline px-2 py-4 text-base text-gold-bright/70"
               >
                 {area.menuLabel}
               </Link>
@@ -154,14 +154,14 @@ export function Header() {
             <Link
               href="/sobre"
               onClick={() => setMobileOpen(false)}
-              className="border-b border-hairline px-2 py-4 text-base text-ink"
+              className="border-b border-hairline px-2 py-4 text-base text-gold-bright/70"
             >
               Sobre
             </Link>
             <Link
               href="/blog"
               onClick={() => setMobileOpen(false)}
-              className="border-b border-hairline px-2 py-4 text-base text-ink"
+              className="border-b border-hairline px-2 py-4 text-base text-gold-bright/70"
             >
               Blog
             </Link>
