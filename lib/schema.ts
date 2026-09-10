@@ -29,9 +29,9 @@ export function getLegalServiceSchema() {
     areaServed: "BR",
     knowsAbout: [
       "Direito Digital",
-      "Contratos Digitais",
-      "Propriedade Intelectual",
-      "Recuperação de Conta Hackeada",
+      "Contratos",
+      "Registro de Marca",
+      "Reativação e Recuperação de Conta Hackeada",
       "Proteção de Dados",
       "LGPD",
     ],
@@ -47,16 +47,18 @@ export function getPersonSchema() {
     name: "Dallila Camargo",
     jobTitle: "Advogada",
     description:
-      "Advogada especializada em Direito Digital (OAB/PA nº 36.762), atuando em contratos digitais, propriedade intelectual e recuperação de contas comprometidas.",
+      "Advogada especializada em Direito Digital (OAB/PA nº 36.762), atuando em contratos, registro de marca e reativação de contas comprometidas.",
     url: `${BASE_URL}/sobre`,
     worksFor: { "@id": SCHEMA_IDS.legalService },
     identifier: SITE.oab,
     sameAs: [SITE.instagramUrl],
     knowsAbout: [
       "Direito Digital",
+      "Contratos",
+      "Registro de Marca",
+      "Reativação e Recuperação de Conta",
       "Direito Tributário",
       "Direito Constitucional",
-      "Propriedade Intelectual",
     ],
   };
 }

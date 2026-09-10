@@ -19,7 +19,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     shortLabel: "Contas e Plataformas",
     icon: "plataforma",
     description:
-      "Recuperação e reativação de conta hackeada, suspensa ou banida — e remoção de conteúdo publicado sem autorização.",
+      "Reativação e recuperação de conta hackeada, suspensa ou banida — e remoção de conteúdo publicado sem autorização.",
   },
   {
     slug: "contratos",

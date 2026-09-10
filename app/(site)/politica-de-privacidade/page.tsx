@@ -87,7 +87,7 @@ export default function PoliticaDePrivacidadePage() {
             ativo em nosso portal:
           </p>
 
-          <h3>3.1. Formulário de Especialidade: Propriedade Intelectual</h3>
+          <h3>3.1. Formulário de Especialidade: Registro de Marca</h3>
           <p>
             Coleta dados para análise de viabilidade de registro e proteção
             de ativos intangíveis.
@@ -108,7 +108,7 @@ export default function PoliticaDePrivacidadePage() {
           </ul>
 
           <h3>
-            3.2. Formulário de Especialidade: Recuperação e Reativação de
+            3.2. Formulário de Especialidade: Reativação e Recuperação de
             Conta Hackeada
           </h3>
           <p>Destinado a demandas urgentes de restauração de ativos digitais.</p>

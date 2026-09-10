@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
     path: "/sobre",
     fallbackTitle: "Sobre",
     fallbackDescription:
-      "Conheça a Dallila Camargo I Advocacia: escritório especializado em Direito Digital, Contratos e Propriedade Intelectual, sediado em Redenção, Pará, com atendimento em todo o Brasil.",
+      "Conheça a Dallila Camargo I Advocacia: escritório especializado em Direito Digital, Contratos e Registro de Marca, sediado em Redenção, Pará, com atendimento em todo o Brasil.",
   });
 }
 
@@ -47,7 +47,7 @@ export default function SobrePage() {
                 A <strong className="text-ink">Dallila Camargo | Advocacia</strong> é
                 um escritório especializado em{" "}
                 <strong className="text-ink">
-                  Direito Digital, Contratos e Propriedade Intelectual
+                  Direito Digital, Contratos e Registro de Marca
                 </strong>
                 , com atuação voltada à assessoria jurídica de criadores de
                 conteúdo, influenciadores digitais, prestadores de serviços e
@@ -116,8 +116,8 @@ export default function SobrePage() {
                 acompanho de perto, crio conteúdo, entendo o dia a dia de
                 quem constrói ali dentro — e é isso que me trouxe pro
                 Direito Digital, não o contrário. Atuo de forma
-                especializada em Direito Digital, Contratos e Propriedade
-                Intelectual, com formação complementar em Direito do
+                especializada em Direito Digital, Contratos e Registro de
+                Marca, com formação complementar em Direito do
                 Mercado de Influência (Fasipa), Direito Tributário (i9
                 Educação) e Legal Design/Visual Law (Gabriella Ibrahim).
                 Assessoro criadores de conteúdo, influenciadores,
