@@ -5,18 +5,18 @@
 /* ---------------------------------------------------------------------- */
 
 :root {
-  /* tema escuro (default) */
+  /* tema escuro (default) — vinho bordô / preto / malva / rosa claro */
   --bg: #2a070c;
-  --bg-alt: #380b12;
+  --bg-alt: #1b1512;
   --surface: #3f0e17;
-  --hairline: rgba(159, 142, 135, 0.3);
-  --hairline-strong: rgba(159, 142, 135, 0.5);
-  --gold: #9f8e87;
-  --gold-bright: #c9bba8;
+  --hairline: rgba(201, 167, 157, 0.22);
+  --hairline-strong: rgba(201, 167, 157, 0.4);
+  --gold: #c9a79d;
+  --gold-bright: #f6e6e0;
   --wine: #b5495a;
   --wine-deep: #7a2430;
-  --ink: #ddc8b3;
-  --ink-dim: #9f8e87;
+  --ink: #f6e6e0;
+  --ink-dim: #c9a79d;
   --success: #8fa37a;
   --error: #c2665f;
   --warning: #d3a054;
@@ -65,17 +65,17 @@
    visitante escolher um tema explicitamente pelo botão de troca */
 @media (prefers-color-scheme: light) {
   :root:not([data-theme]) {
-    --bg: #ddc8b3;
-    --bg-alt: #d3bb9e;
+    --bg: #f6e6e0;
+    --bg-alt: #efd7ce;
     --surface: #f2e7d8;
-    --hairline: rgba(42, 7, 12, 0.2);
-    --hairline-strong: rgba(42, 7, 12, 0.4);
-    --gold: #6e5c53;
-    --gold-bright: #4a3b34;
+    --hairline: rgba(27, 21, 18, 0.16);
+    --hairline-strong: rgba(27, 21, 18, 0.32);
+    --gold: #2a070c;
+    --gold-bright: #1b1512;
     --wine: #7a2430;
     --wine-deep: #5c1b22;
     --ink: #2a070c;
-    --ink-dim: #6e5c53;
+    --ink-dim: #2a070c;
     --success: #4f6b3c;
     --error: #9c2e28;
     --warning: #8a5a1e;
@@ -86,17 +86,17 @@
 /* escolha explícita do visitante, via botão de troca de tema (sobrepõe o
    fallback de sistema acima, em qualquer direção) */
 :root[data-theme="light"] {
-  --bg: #ddc8b3;
-  --bg-alt: #d3bb9e;
+  --bg: #f6e6e0;
+  --bg-alt: #efd7ce;
   --surface: #f2e7d8;
-  --hairline: rgba(42, 7, 12, 0.2);
-  --hairline-strong: rgba(42, 7, 12, 0.4);
-  --gold: #6e5c53;
-  --gold-bright: #4a3b34;
+  --hairline: rgba(27, 21, 18, 0.16);
+  --hairline-strong: rgba(27, 21, 18, 0.32);
+  --gold: #2a070c;
+  --gold-bright: #1b1512;
   --wine: #7a2430;
   --wine-deep: #5c1b22;
   --ink: #2a070c;
-  --ink-dim: #6e5c53;
+  --ink-dim: #2a070c;
   --success: #4f6b3c;
   --error: #9c2e28;
   --warning: #8a5a1e;
@@ -105,16 +105,16 @@
 
 :root[data-theme="dark"] {
   --bg: #2a070c;
-  --bg-alt: #380b12;
+  --bg-alt: #1b1512;
   --surface: #3f0e17;
-  --hairline: rgba(159, 142, 135, 0.3);
-  --hairline-strong: rgba(159, 142, 135, 0.5);
-  --gold: #9f8e87;
-  --gold-bright: #c9bba8;
+  --hairline: rgba(201, 167, 157, 0.22);
+  --hairline-strong: rgba(201, 167, 157, 0.4);
+  --gold: #c9a79d;
+  --gold-bright: #f6e6e0;
   --wine: #b5495a;
   --wine-deep: #7a2430;
-  --ink: #ddc8b3;
-  --ink-dim: #9f8e87;
+  --ink: #f6e6e0;
+  --ink-dim: #c9a79d;
   --success: #8fa37a;
   --error: #c2665f;
   --warning: #d3a054;
@@ -123,7 +123,7 @@
 
 /* Monograma D: sobre --bg/--bg-alt/--surface, que trocam de escuro pra claro
    com o tema. Um PNG de cor fixa só tem contraste num dos dois lados, então
-   o par marca-fundo-escuro (marfim) / marca-fundo-claro (bordô) troca junto
+   o par marca-fundo-escuro (malva) / marca-fundo-claro (bordô) troca junto
    com o tema, espelhando exatamente os três estados dos tokens acima. */
 .brand-mark-on-dark {
   display: block;

@@ -13,7 +13,7 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/logo-d-marfim.png"
+                src="/logo-d-malva.png"
                 alt=""
                 width={24}
                 height={24}
@@ -30,7 +30,7 @@ export function Footer() {
                 aria-hidden="true"
                 className="brand-mark-on-light h-6 w-6 object-contain"
               />
-              <span className="font-display text-base italic text-ink">
+              <span className="font-display text-base italic text-gold">
                 Dallila Camargo
               </span>
             </Link>
