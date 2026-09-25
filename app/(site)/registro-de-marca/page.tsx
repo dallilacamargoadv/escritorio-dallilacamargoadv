@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { FeatureCard } from "@/components/ui/FeatureCard";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { Reveal } from "@/components/ui/Reveal";
+import { AtendimentoHero } from "@/components/ui/AtendimentoHero";
 import { EnclosureNested } from "@/components/ui/EnclosureNested";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { ThreeStepsScroll } from "@/components/ThreeStepsScroll";
@@ -54,23 +55,23 @@ export default function RegistroDeMarcaPage() {
         ])}
       />
 
-      {/* Hero */}
-      <section className="mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
-        <Reveal>
-          <h1 className="max-w-3xl text-4xl sm:text-6xl">
+      <AtendimentoHero
+        eyebrow="registro de marca"
+        title={
+          <>
             Seu nome e sua logo,{" "}
-            <em className="italic text-wine">protegidos</em> desde o começo.
-          </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Registro de marca no INPI pra proteger o nome do seu negócio,
-            produto ou perfil contra cópia e uso indevido, do zero ao
-            deferimento.
-          </p>
-          <div className="mt-8">
-            <Button href="#formulario">Iniciar atendimento</Button>
-          </div>
-        </Reveal>
-      </section>
+            <em className="italic text-atendimento-accent">protegidos</em>{" "}
+            desde o começo.
+          </>
+        }
+        description="Registro de marca no INPI pra proteger o nome do seu negócio, produto ou perfil contra cópia e uso indevido, do zero ao deferimento."
+      >
+        <div className="mt-8">
+          <Button href="#formulario" variant="invert">
+            Iniciar atendimento
+          </Button>
+        </div>
+      </AtendimentoHero>
 
       {/* Nossa Atuação */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">

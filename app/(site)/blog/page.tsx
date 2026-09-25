@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
+import { AtendimentoHero } from "@/components/ui/AtendimentoHero";
 import { BlogPostCard, categoryHref } from "@/components/blog/BlogPostCard";
 import { BLOG_CATEGORIES, BLOG_PAGE_SIZE, getAllPosts } from "@/lib/blog";
 
@@ -27,19 +28,23 @@ export default async function BlogIndexPage({
   );
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
-      <Reveal>
-        <h1 className="max-w-2xl text-4xl sm:text-5xl">
-          <em className="italic text-wine">Conteúdo técnico</em> sobre
-          Direito Digital, contratos e propriedade intelectual.
-        </h1>
-        <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-          Conteúdo técnico sobre Direito Digital, contratos, propriedade
-          intelectual e proteção de contas, produzido para orientar
-          criadores de conteúdo, profissionais e negócios digitais.
-        </p>
+    <>
+      <AtendimentoHero
+        eyebrow="blog"
+        title={
+          <>
+            <em className="italic text-atendimento-accent">
+              Conteúdo técnico
+            </em>{" "}
+            sobre Direito Digital, contratos e propriedade intelectual.
+          </>
+        }
+        description="Conteúdo técnico sobre Direito Digital, contratos, propriedade intelectual e proteção de contas, produzido para orientar criadores de conteúdo, profissionais e negócios digitais."
+      />
 
-        <nav aria-label="Categorias" className="mt-10 flex flex-wrap gap-3">
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <Reveal>
+        <nav aria-label="Categorias" className="flex flex-wrap gap-3">
           {BLOG_CATEGORIES.map((category) => (
             <Link
               key={category}
@@ -91,6 +96,7 @@ export default async function BlogIndexPage({
           </>
         )}
       </Reveal>
-    </section>
+      </section>
+    </>
   );
 }

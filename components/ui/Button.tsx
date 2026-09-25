@@ -11,11 +11,11 @@ const variants: Record<Variant, string> = {
     "bg-wine-deep text-[#F2EFEA] border border-wine-deep hover:bg-transparent hover:text-wine-deep",
   secondary:
     "bg-transparent text-ink border border-hairline-strong hover:border-gold hover:text-gold",
-  /* pra usar sobre um bloco de cor dominante (fundo vermelho ou azul) — claro
-     sempre, nunca some no fundo; texto em wine-deep funciona em cima de
-     qualquer bloco da paleta */
+  /* pra usar sobre um bloco de cor dominante (fundo vermelho ou azul) — usa
+     o off-white FIXO da marca (não o --gold-bright, que troca de Acolhimento
+     pra Presença no tema claro e traria marrom escondido pro botão) */
   invert:
-    "bg-gold-bright text-wine-deep border border-gold-bright hover:bg-transparent hover:text-gold-bright",
+    "bg-[var(--brand-marfim-rosado)] text-wine-deep border border-[var(--brand-marfim-rosado)] hover:bg-transparent hover:text-[var(--brand-marfim-rosado)]",
 };
 
 interface CommonProps {

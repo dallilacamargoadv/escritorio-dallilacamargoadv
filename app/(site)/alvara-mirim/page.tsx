@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { FeatureCard } from "@/components/ui/FeatureCard";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { Reveal } from "@/components/ui/Reveal";
+import { AtendimentoHero } from "@/components/ui/AtendimentoHero";
 import { EnclosureNested } from "@/components/ui/EnclosureNested";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { ThreeStepsScroll } from "@/components/ThreeStepsScroll";
@@ -54,24 +55,25 @@ export default function AlvaraMirimPage() {
         ])}
       />
 
-      {/* Hero */}
-      <section className="mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
-        <Reveal>
-          <h1 className="max-w-3xl text-4xl sm:text-6xl">
+      <AtendimentoHero
+        eyebrow="alvará mirim"
+        title={
+          <>
             Seu filho cria conteúdo.{" "}
-            <em className="italic text-wine">A lei já exige autorização</em>{" "}
+            <em className="italic text-atendimento-accent">
+              A lei já exige autorização
+            </em>{" "}
             pra isso continuar.
-          </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Desde 2026 a lei já deixa a plataforma exigir alvará judicial
-            pra manter a monetização do seu filho ativa. Cuido de tudo,
-            do pedido até a decisão, com a criança sempre protegida.
-          </p>
-          <div className="mt-8">
-            <Button href="#formulario">Iniciar atendimento</Button>
-          </div>
-        </Reveal>
-      </section>
+          </>
+        }
+        description="Desde 2026 a lei já deixa a plataforma exigir alvará judicial pra manter a monetização do seu filho ativa. Cuido de tudo, do pedido até a decisão, com a criança sempre protegida."
+      >
+        <div className="mt-8">
+          <Button href="#formulario" variant="invert">
+            Iniciar atendimento
+          </Button>
+        </div>
+      </AtendimentoHero>
 
       {/* Nossa Atuação */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
