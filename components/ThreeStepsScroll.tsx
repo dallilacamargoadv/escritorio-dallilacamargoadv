@@ -102,10 +102,10 @@ export function ThreeStepsScroll({
       <div className="min-h-screen-safe sticky top-0 flex flex-col items-center justify-center overflow-hidden bg-bg-alt px-4 py-16">
         <div className="mb-10 flex items-center gap-4 md:mb-14">
           <span className="h-px w-10 bg-hairline" />
-          <span aria-hidden="true" className="text-2xl leading-none text-gold">
+          <span aria-hidden="true" className="text-2xl leading-none text-wine">
             ✦
           </span>
-          <span className="font-eyebrow text-base text-gold">{title}</span>
+          <span className="font-eyebrow text-base text-wine">{title}</span>
           <span className="h-px w-10 bg-hairline" />
         </div>
 
@@ -141,7 +141,7 @@ export function ThreeStepsScroll({
                     cy="110"
                     r={RADIUS}
                     fill="none"
-                    stroke="var(--gold)"
+                    stroke="var(--wine)"
                     strokeWidth={2}
                     strokeLinecap="round"
                     strokeDasharray={`${ARC_LEN} ${CIRCUMFERENCE}`}
@@ -173,7 +173,7 @@ export function ThreeStepsScroll({
                       : "translate-y-3 opacity-0"
                   }`}
                 >
-                  <span className="font-mono text-xs text-gold">
+                  <span className="font-mono text-xs text-wine">
                     Passo {step.number}
                   </span>
                   <h3 className="mt-1 text-xl">{step.title}</h3>
@@ -187,7 +187,7 @@ export function ThreeStepsScroll({
 
           <div className="max-w-xs text-center md:hidden">
             <span key={activeIndex} className="animate-fade-in block">
-              <span className="font-mono text-xs text-gold">
+              <span className="font-mono text-xs text-wine">
                 Passo {steps[activeIndex].number}
               </span>
               <h3 className="mt-1 text-xl">{steps[activeIndex].title}</h3>

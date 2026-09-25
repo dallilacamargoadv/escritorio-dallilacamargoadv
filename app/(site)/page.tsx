@@ -55,23 +55,27 @@ export default async function HomePage() {
         >
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-bg/70" />
+        <div className="absolute inset-0 bg-hero-bg/80" />
         <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
           <Reveal>
-            <h1 className="max-w-xl text-4xl sm:text-6xl">
-              <em className="italic text-wine">Direito Digital</em> para quem
-              vive da internet.
+            <h1 className="max-w-xl text-4xl text-[var(--brand-marfim-rosado)] sm:text-6xl">
+              <em className="italic text-hero-accent">Direito Digital</em>{" "}
+              para quem vive da internet.
             </h1>
-            <p className="mt-4 font-eyebrow text-xs text-gold sm:text-sm">
+            <p className="mt-4 font-eyebrow text-xs text-[var(--brand-champagne)] sm:text-sm">
               Registro de Marcas · Influenciadores · Reativação de Contas
             </p>
-            <p className="mt-4 max-w-xl text-base text-ink-dim sm:text-lg">
+            <p className="mt-4 max-w-xl text-base text-[var(--brand-champagne)] sm:text-lg">
               Prevenção de verdade: contratos, marca e presença digital
               protegidos antes de virar problema.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href="/contato">Iniciar atendimento</Button>
-              <Button href="#areas-de-atuacao" variant="secondary">
+              <Button
+                href="#areas-de-atuacao"
+                variant="secondary"
+                className="!text-[var(--brand-marfim-rosado)] !border-white/30 hover:!text-hero-accent hover:!border-hero-accent"
+              >
                 Áreas de Atuação
               </Button>
             </div>
@@ -212,14 +216,16 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* Fechamento */}
-      <section className="border-t border-hairline bg-bg-alt">
+      {/* Fechamento — bloco azul (Equilíbrio), segundo dominante, fazendo par
+          com o vermelho do Hero; destaque em vermelho por cima, cor virando
+          contra o fundo */}
+      <section className="border-t border-hairline bg-gold">
         <div className="mx-auto max-w-6xl px-4 py-20 text-center sm:px-6">
           <Reveal className="flex flex-col items-center">
-            <h2 className="text-3xl sm:text-4xl">
+            <h2 className="text-3xl text-bg sm:text-4xl">
               Quer conversar sobre o seu caso?
             </h2>
-            <p className="mt-4 max-w-md text-sm text-ink-dim">
+            <p className="mt-4 max-w-md text-sm text-bg/80">
               Atendimento personalizado em Redenção e em todo o Brasil de
               forma remota. Resposta inicial em até dois dias úteis.
             </p>
