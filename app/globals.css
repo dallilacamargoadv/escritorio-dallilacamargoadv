@@ -14,7 +14,7 @@
   --hairline-strong: rgba(242, 239, 234, 0.28);
   --gold: #a3b8c4; /* Equilíbrio — acento secundário/borda/foco */
   --gold-bright: #f2efea; /* Acolhimento */
-  --wine: #c9666a; /* Confiança clareado p/ legibilidade em texto/link sobre fundo escuro */
+  --wine: #a8383b; /* Confiança clareado só o necessário p/ legibilidade em texto/link sobre fundo escuro — vermelho-vinho fechado, não rosa */
   --wine-deep: #760e10; /* Confiança, literal — blocos/superfícies grandes */
   --ink: #f2efea; /* Acolhimento */
   --ink-dim: #dfd6bc; /* Conforto */
@@ -124,7 +124,7 @@
   --hairline-strong: rgba(242, 239, 234, 0.28);
   --gold: #a3b8c4; /* Equilíbrio */
   --gold-bright: #f2efea; /* Acolhimento */
-  --wine: #c9666a;
+  --wine: #a8383b;
   --wine-deep: #760e10; /* Confiança */
   --ink: #f2efea;
   --ink-dim: #dfd6bc; /* Conforto */
