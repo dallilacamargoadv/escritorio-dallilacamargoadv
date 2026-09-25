@@ -14,8 +14,13 @@
   --hairline-strong: rgba(242, 239, 234, 0.28);
   --gold: #a3b8c4; /* Equilíbrio — acento secundário/borda/foco */
   --gold-bright: #f2efea; /* Acolhimento */
-  --wine: #c9666a; /* Confiança clareado p/ legibilidade em texto/link sobre fundo escuro */
-  --wine-deep: #760e10; /* Confiança, literal — blocos/superfícies grandes */
+  --wine: #a8383b; /* Confiança clareado só o necessário p/ legibilidade em texto/link sobre fundo escuro — vermelho-vinho fechado, não rosa */
+  --wine-deep: #6b0c0f; /* Confiança, literal — blocos/superfícies grandes (25/09/2026: um fechadinho a mais que o #760e10, aprovado pela Dallila) */
+  /* hero — cor principal do bloco troca por tema (25/09/2026): tema escuro
+     usa Presença (marrom), tema claro usa Equilíbrio (azul) como principal;
+     --hero-accent é o destaque em cima do bloco, sempre a outra cor forte */
+  --hero-bg: var(--bg);
+  --hero-accent: var(--gold);
   --ink: #f2efea; /* Acolhimento */
   --ink-dim: #dfd6bc; /* Conforto */
   --success: #8fa37a;
@@ -29,7 +34,7 @@
   --brand-vinho-porto: #32191e; /* Presença */
   --brand-marfim-rosado: #f2efea; /* Acolhimento */
   --brand-champagne: #dfd6bc; /* Conforto */
-  --brand-bordo-assinatura: #760e10; /* Confiança */
+  --brand-bordo-assinatura: #6b0c0f; /* Confiança */
   --brand-pergaminho-neutro: #a3b8c4; /* Equilíbrio */
 
   /* tipografia nova (mentoria Bêcreative): Helvetica Now Display e Times New
@@ -93,6 +98,8 @@
     --error: #9c2e28;
     --warning: #8a5a1e;
     --audiencia: #d1272a;
+    --hero-bg: var(--gold);
+    --hero-accent: var(--wine-deep);
   }
 }
 
@@ -114,6 +121,8 @@
   --error: #9c2e28;
   --warning: #8a5a1e;
   --audiencia: #d1272a;
+  --hero-bg: var(--gold);
+  --hero-accent: var(--wine-deep);
 }
 
 :root[data-theme="dark"] {
@@ -124,14 +133,16 @@
   --hairline-strong: rgba(242, 239, 234, 0.28);
   --gold: #a3b8c4; /* Equilíbrio */
   --gold-bright: #f2efea; /* Acolhimento */
-  --wine: #c9666a;
-  --wine-deep: #760e10; /* Confiança */
+  --wine: #a8383b;
+  --wine-deep: #6b0c0f; /* Confiança */
   --ink: #f2efea;
   --ink-dim: #dfd6bc; /* Conforto */
   --success: #8fa37a;
   --error: #c2665f;
   --warning: #d3a054;
   --audiencia: #ff4d4d;
+  --hero-bg: var(--bg);
+  --hero-accent: var(--gold);
 }
 
 /* Monograma D: sobre --bg/--bg-alt/--surface, que trocam de escuro pra claro
@@ -175,6 +186,8 @@
   --color-gold-bright: var(--gold-bright);
   --color-wine: var(--wine);
   --color-wine-deep: var(--wine-deep);
+  --color-hero-bg: var(--hero-bg);
+  --color-hero-accent: var(--hero-accent);
   --color-ink: var(--ink);
   --color-ink-dim: var(--ink-dim);
   --color-success: var(--success);
