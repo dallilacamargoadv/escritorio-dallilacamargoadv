@@ -21,6 +21,12 @@
      --hero-accent é o destaque em cima do bloco, sempre a outra cor forte */
   --hero-bg: var(--bg);
   --hero-accent: var(--gold);
+  /* atendimento — regra própria (25/09/2026, aprovada por ela): escuro puxa
+     vermelho borgonha dominante, claro puxa azul-bebê dominante; marrom
+     nunca é fundo aqui, só detalhe pontual (ícone/rodapé) */
+  --atendimento-bg: #5c0f13;
+  --atendimento-accent: var(--gold);
+  --atendimento-body: var(--brand-champagne);
   --ink: #f2efea; /* Acolhimento */
   --ink-dim: #dfd6bc; /* Conforto */
   --success: #8fa37a;
@@ -36,6 +42,7 @@
   --brand-champagne: #dfd6bc; /* Conforto */
   --brand-bordo-assinatura: #6b0c0f; /* Confiança */
   --brand-pergaminho-neutro: #a3b8c4; /* Equilíbrio */
+  --brand-azul-bebe: #b4c7d6; /* azul-bebê — só pra bloco "atendimento" no tema claro */
 
   /* tipografia nova (mentoria Bêcreative): Helvetica Now Display e Times New
      Roman MT Condensed são fontes de sistema/licenciadas, não existem no
@@ -100,6 +107,9 @@
     --audiencia: #d1272a;
     --hero-bg: var(--gold);
     --hero-accent: var(--wine-deep);
+    --atendimento-bg: var(--brand-azul-bebe);
+    --atendimento-accent: #5c0f13;
+    --atendimento-body: #24333b;
   }
 }
 
@@ -123,6 +133,9 @@
   --audiencia: #d1272a;
   --hero-bg: var(--gold);
   --hero-accent: var(--wine-deep);
+  --atendimento-bg: var(--brand-azul-bebe);
+  --atendimento-accent: #5c0f13;
+  --atendimento-body: #24333b;
 }
 
 :root[data-theme="dark"] {
@@ -143,6 +156,9 @@
   --audiencia: #ff4d4d;
   --hero-bg: var(--bg);
   --hero-accent: var(--gold);
+  --atendimento-bg: #5c0f13;
+  --atendimento-accent: var(--gold);
+  --atendimento-body: var(--brand-champagne);
 }
 
 /* Monograma D: sobre --bg/--bg-alt/--surface, que trocam de escuro pra claro
@@ -188,6 +204,10 @@
   --color-wine-deep: var(--wine-deep);
   --color-hero-bg: var(--hero-bg);
   --color-hero-accent: var(--hero-accent);
+  --color-atendimento-bg: var(--atendimento-bg);
+  --color-atendimento-accent: var(--atendimento-accent);
+  --color-atendimento-body: var(--atendimento-body);
+  --color-brand-azul-bebe: var(--brand-azul-bebe);
   --color-ink: var(--ink);
   --color-ink-dim: var(--ink-dim);
   --color-success: var(--success);
