@@ -30,7 +30,7 @@ export default async function BlogIndexPage({
     <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
       <Reveal>
         <h1 className="max-w-2xl text-4xl sm:text-5xl">
-          <em className="italic text-gold">Conteúdo técnico</em> sobre
+          <em className="italic text-wine">Conteúdo técnico</em> sobre
           Direito Digital, contratos e propriedade intelectual.
         </h1>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">

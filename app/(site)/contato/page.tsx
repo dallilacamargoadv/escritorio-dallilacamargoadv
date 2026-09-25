@@ -21,7 +21,7 @@ export default function ContatoPage() {
     <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
       <Reveal>
         <h1 className="max-w-2xl text-4xl sm:text-5xl">
-          Qual área você <em className="italic text-gold">precisa</em>?
+          Qual área você <em className="italic text-wine">precisa</em>?
         </h1>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
           Escolha a opção que melhor descreve a sua situação. Você será

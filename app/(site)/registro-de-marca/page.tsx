@@ -59,7 +59,7 @@ export default function RegistroDeMarcaPage() {
         <Reveal>
           <h1 className="max-w-3xl text-4xl sm:text-6xl">
             Seu nome e sua logo,{" "}
-            <em className="italic text-gold">protegidos</em> desde o começo.
+            <em className="italic text-wine">protegidos</em> desde o começo.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
             Registro de marca no INPI pra proteger o nome do seu negócio,

@@ -59,7 +59,7 @@ export default function AlvaraMirimPage() {
         <Reveal>
           <h1 className="max-w-3xl text-4xl sm:text-6xl">
             Seu filho cria conteúdo.{" "}
-            <em className="italic text-gold">A lei já exige autorização</em>{" "}
+            <em className="italic text-wine">A lei já exige autorização</em>{" "}
             pra isso continuar.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">

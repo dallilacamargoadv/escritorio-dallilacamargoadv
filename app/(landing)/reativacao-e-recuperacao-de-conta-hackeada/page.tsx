@@ -70,7 +70,7 @@ export default function ReativacaoDeContaLandingPage() {
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl sm:text-6xl">
             Perdeu o acesso à sua conta?{" "}
-            <em className="italic text-gold">A gente reativa.</em>
+            <em className="italic text-wine">A gente reativa.</em>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
             Conta hackeada, suspensa ou banida no Instagram, Facebook,

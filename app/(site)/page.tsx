@@ -59,7 +59,7 @@ export default async function HomePage() {
         <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
           <Reveal>
             <h1 className="max-w-xl text-4xl sm:text-6xl">
-              <em className="italic text-gold">Direito Digital</em> para quem
+              <em className="italic text-wine">Direito Digital</em> para quem
               vive da internet.
             </h1>
             <p className="mt-4 font-eyebrow text-xs text-gold sm:text-sm">

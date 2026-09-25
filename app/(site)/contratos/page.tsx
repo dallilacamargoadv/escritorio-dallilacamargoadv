@@ -58,7 +58,7 @@ export default function ContratosPage() {
       <section className="mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
         <Reveal>
           <h1 className="max-w-3xl text-4xl sm:text-6xl">
-            <em className="italic text-gold">Contratos</em> elaborados e
+            <em className="italic text-wine">Contratos</em> elaborados e
             revisados para dar segurança às relações digitais.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
