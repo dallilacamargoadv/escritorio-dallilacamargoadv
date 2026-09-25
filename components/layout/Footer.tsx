@@ -145,7 +145,7 @@ export function Footer() {
             profissional habilitado. Em conformidade com o Provimento
             205/2021 da OAB.
           </p>
-          <p>Dallila Camargo — {SITE.oab}</p>
+          <p>Dallila Camargo · {SITE.oab}</p>
           <p>© {year} Dallila Camargo I Advocacia. Todos os direitos reservados.</p>
         </div>
       </div>

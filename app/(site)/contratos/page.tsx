@@ -62,7 +62,7 @@ export default function ContratosPage() {
             revisados para dar segurança às relações digitais.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Contrato de parceria, publi ou prestação de serviço — elaborado
+            Contrato de parceria, publi ou prestação de serviço, elaborado
             ou revisado para você assinar sabendo exatamente no que está
             entrando.
           </p>

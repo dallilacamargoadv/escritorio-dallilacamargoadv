@@ -60,7 +60,7 @@ export default function SobrePage() {
                 Digital, Direito do Mercado de Influência e Direito
                 Tributário, formação em Legal Design e experiência como
                 ex-membra da Comissão da Jovem Advocacia (COJAD) da Subseção
-                de Redenção/PA — tudo isso a serviço de uma advocacia
+                de Redenção/PA. Tudo isso a serviço de uma advocacia
                 preventiva e personalizada, que acompanha de perto as
                 mudanças do ambiente digital.
               </p>
@@ -112,19 +112,22 @@ export default function SobrePage() {
                 {SITE.oab}
               </p>
               <p className="mt-6 text-sm leading-relaxed text-ink-dim">
-                Oi, prazer! Sou Dallila Camargo. Vivo o mercado digital —
-                acompanho de perto, crio conteúdo, entendo o dia a dia de
-                quem constrói ali dentro — e é isso que me trouxe pro
-                Direito Digital, não o contrário. Atuo de forma
-                especializada em Direito Digital, Contratos e Registro de
-                Marca, com formação complementar em Direito do
-                Mercado de Influência (Fasipa), Direito Tributário (i9
-                Educação) e Legal Design/Visual Law (Gabriella Ibrahim).
-                Assessoro criadores de conteúdo, influenciadores,
-                prestadores de serviços e negócios que encontram na
-                internet um espaço para construir, inovar e crescer —
-                porque entendo os riscos de quem constrói ali de dentro,
-                não de fora.
+                Oi, prazer! Sou Dallila Camargo. Vivo o mercado digital de
+                verdade: crio conteúdo, acompanho de perto o dia a dia de
+                quem constrói ali dentro. Foi isso que me trouxe pro
+                Direito Digital, não o contrário.
+                <br />
+                <br />
+                Atuo com Direito Digital, Contratos e Registro de Marca.
+                Tenho formação complementar em Direito do Mercado de
+                Influência (Fasipa), Direito Tributário (i9 Educação) e
+                Legal Design (Gabriella Ibrahim).
+                <br />
+                <br />
+                Assessoro criadores de conteúdo, influenciadores e
+                negócios que crescem na internet. Entendo os riscos de
+                quem constrói ali de dentro, não de fora. Você constrói.
+                Eu protejo.
               </p>
               <div className="mt-8">
                 <Button href="/contato" variant="secondary">

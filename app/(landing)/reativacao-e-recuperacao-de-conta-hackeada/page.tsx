@@ -74,7 +74,7 @@ export default function ReativacaoDeContaLandingPage() {
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
             Conta hackeada, suspensa ou banida no Instagram, Facebook,
-            WhatsApp, TikTok ou YouTube — do pedido administrativo à ação
+            WhatsApp, TikTok ou YouTube: do pedido administrativo à ação
             judicial com tutela de urgência, quando necessário.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">

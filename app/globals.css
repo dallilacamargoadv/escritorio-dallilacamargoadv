@@ -5,28 +5,41 @@
 /* ---------------------------------------------------------------------- */
 
 :root {
-  /* tema escuro (default) — vinho bordô / preto / malva / rosa claro */
-  --bg: #2a070c;
-  --bg-alt: #1b1512;
-  --surface: #3f0e17;
-  --hairline: rgba(201, 167, 157, 0.22);
-  --hairline-strong: rgba(201, 167, 157, 0.4);
-  --gold: #c9a79d;
-  --gold-bright: #f6e6e0;
-  --wine: #b5495a;
-  --wine-deep: #7a2430;
-  --ink: #f6e6e0;
-  --ink-dim: #c9a79d;
+  /* tema escuro (default) — Presença domina, Confiança e Equilíbrio como
+     blocos/acentos dominantes junto dela (mentoria Bêcreative, 24/09/2026) */
+  --bg: #32191e;
+  --bg-alt: #26141a;
+  --surface: #3c1e24;
+  --hairline: rgba(242, 239, 234, 0.14);
+  --hairline-strong: rgba(242, 239, 234, 0.28);
+  --gold: #a3b8c4; /* Equilíbrio — acento secundário/borda/foco */
+  --gold-bright: #f2efea; /* Acolhimento */
+  --wine: #c9666a; /* Confiança clareado p/ legibilidade em texto/link sobre fundo escuro */
+  --wine-deep: #760e10; /* Confiança, literal — blocos/superfícies grandes */
+  --ink: #f2efea; /* Acolhimento */
+  --ink-dim: #dfd6bc; /* Conforto */
   --success: #8fa37a;
   --error: #c2665f;
   --warning: #d3a054;
 
-  /* tokens fixos da marca (independem de tema) */
-  --brand-vinho-porto: #2a070c;
-  --brand-marfim-rosado: #ddc8b3;
-  --brand-champagne: #c9bba8;
-  --brand-bordo-assinatura: #7a2430;
-  --brand-pergaminho-neutro: #9f8e87;
+  /* tokens fixos da marca (independem de tema) — paleta nova, mentoria
+     Bêcreative: Presença/Confiança/Equilíbrio dominantes, Acolhimento/
+     Conforto como apoio/texto. Nomes das variáveis mantidos (não renomear
+     sem auditar todo uso de brand-gold/brand-wine no resto do site). */
+  --brand-vinho-porto: #32191e; /* Presença */
+  --brand-marfim-rosado: #f2efea; /* Acolhimento */
+  --brand-champagne: #dfd6bc; /* Conforto */
+  --brand-bordo-assinatura: #760e10; /* Confiança */
+  --brand-pergaminho-neutro: #a3b8c4; /* Equilíbrio */
+
+  /* tipografia nova (mentoria Bêcreative): Helvetica Now Display e Times New
+     Roman MT Condensed são fontes de sistema/licenciadas, não existem no
+     Google Fonts — usa a fonte real do sistema operacional do visitante
+     (Helvetica Neue/Times New Roman em Mac e Windows; Arial/serif padrão
+     nos demais). --font-mono continua vindo do next/font (agora Quicksand,
+     aproximação de Garet — ver app/fonts.ts). */
+  --font-display: "Times New Roman", Times, Georgia, serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   /* cor de alerta pra Audiência (Agenda) — fixa entre temas de propósito,
      precisa continuar chamativa e nunca se confundir com --error/--warning
@@ -65,17 +78,17 @@
    visitante escolher um tema explicitamente pelo botão de troca */
 @media (prefers-color-scheme: light) {
   :root:not([data-theme]) {
-    --bg: #f6e6e0;
-    --bg-alt: #efd7ce;
-    --surface: #f2e7d8;
-    --hairline: rgba(27, 21, 18, 0.16);
-    --hairline-strong: rgba(27, 21, 18, 0.32);
-    --gold: #2a070c;
-    --gold-bright: #1b1512;
-    --wine: #7a2430;
-    --wine-deep: #5c1b22;
-    --ink: #2a070c;
-    --ink-dim: #2a070c;
+    --bg: #f2efea; /* Acolhimento */
+    --bg-alt: #dfd6bc; /* Conforto */
+    --surface: #ffffff;
+    --hairline: rgba(50, 25, 30, 0.14);
+    --hairline-strong: rgba(50, 25, 30, 0.28);
+    --gold: #5c7481; /* Equilíbrio escurecido p/ contraste em fundo claro */
+    --gold-bright: #32191e; /* Presença */
+    --wine: #760e10; /* Confiança */
+    --wine-deep: #5c0b0d;
+    --ink: #32191e; /* Presença */
+    --ink-dim: #5c4148;
     --success: #4f6b3c;
     --error: #9c2e28;
     --warning: #8a5a1e;
@@ -86,17 +99,17 @@
 /* escolha explícita do visitante, via botão de troca de tema (sobrepõe o
    fallback de sistema acima, em qualquer direção) */
 :root[data-theme="light"] {
-  --bg: #f6e6e0;
-  --bg-alt: #efd7ce;
-  --surface: #f2e7d8;
-  --hairline: rgba(27, 21, 18, 0.16);
-  --hairline-strong: rgba(27, 21, 18, 0.32);
-  --gold: #2a070c;
-  --gold-bright: #1b1512;
-  --wine: #7a2430;
-  --wine-deep: #5c1b22;
-  --ink: #2a070c;
-  --ink-dim: #2a070c;
+  --bg: #f2efea; /* Acolhimento */
+  --bg-alt: #dfd6bc; /* Conforto */
+  --surface: #ffffff;
+  --hairline: rgba(50, 25, 30, 0.14);
+  --hairline-strong: rgba(50, 25, 30, 0.28);
+  --gold: #5c7481;
+  --gold-bright: #32191e;
+  --wine: #760e10;
+  --wine-deep: #5c0b0d;
+  --ink: #32191e;
+  --ink-dim: #5c4148;
   --success: #4f6b3c;
   --error: #9c2e28;
   --warning: #8a5a1e;
@@ -104,17 +117,17 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #2a070c;
-  --bg-alt: #1b1512;
-  --surface: #3f0e17;
-  --hairline: rgba(201, 167, 157, 0.22);
-  --hairline-strong: rgba(201, 167, 157, 0.4);
-  --gold: #c9a79d;
-  --gold-bright: #f6e6e0;
-  --wine: #b5495a;
-  --wine-deep: #7a2430;
-  --ink: #f6e6e0;
-  --ink-dim: #c9a79d;
+  --bg: #32191e; /* Presença */
+  --bg-alt: #26141a;
+  --surface: #3c1e24;
+  --hairline: rgba(242, 239, 234, 0.14);
+  --hairline-strong: rgba(242, 239, 234, 0.28);
+  --gold: #a3b8c4; /* Equilíbrio */
+  --gold-bright: #f2efea; /* Acolhimento */
+  --wine: #c9666a;
+  --wine-deep: #760e10; /* Confiança */
+  --ink: #f2efea;
+  --ink-dim: #dfd6bc; /* Conforto */
   --success: #8fa37a;
   --error: #c2665f;
   --warning: #d3a054;

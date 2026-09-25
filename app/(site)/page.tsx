@@ -60,7 +60,7 @@ export default async function HomePage() {
           <Reveal>
             <h1 className="max-w-xl text-4xl sm:text-6xl">
               <em className="italic text-gold">Direito Digital</em> para quem
-              constrói no ambiente digital.
+              vive da internet.
             </h1>
             <p className="mt-4 font-eyebrow text-xs text-gold sm:text-sm">
               Registro de Marcas · Influenciadores · Reativação de Contas
@@ -159,19 +159,22 @@ export default async function HomePage() {
                 {SITE.oab}
               </p>
               <p className="mt-6 text-sm leading-relaxed text-ink-dim">
-                Oi, prazer! Sou Dallila Camargo. Vivo o mercado digital —
-                acompanho de perto, crio conteúdo, entendo o dia a dia de
-                quem constrói ali dentro — e é isso que me trouxe pro
-                Direito Digital, não o contrário. Atuo de forma
-                especializada em Direito Digital, Contratos e Propriedade
-                Intelectual, com formação complementar em Direito do
+                Oi, prazer! Sou Dallila Camargo. Vivo o mercado digital de
+                verdade: crio conteúdo, acompanho de perto o dia a dia de
+                quem constrói ali dentro. Foi isso que me trouxe pro
+                Direito Digital, não o contrário.
+                <br />
+                <br />
+                Atuo com Direito Digital, Contratos e Propriedade
+                Intelectual. Tenho formação complementar em Direito do
                 Mercado de Influência (Fasipa), Direito Tributário (i9
-                Educação) e Legal Design/Visual Law (Gabriella Ibrahim).
-                Assessoro criadores de conteúdo, influenciadores,
-                prestadores de serviços e negócios que encontram na
-                internet um espaço para construir, inovar e crescer —
-                porque entendo os riscos de quem constrói ali de dentro,
-                não de fora.
+                Educação) e Legal Design (Gabriella Ibrahim).
+                <br />
+                <br />
+                Assessoro criadores de conteúdo, influenciadores e
+                negócios que crescem na internet. Entendo os riscos de
+                quem constrói ali de dentro, não de fora. Você constrói.
+                Eu protejo.
               </p>
               <div className="mt-8">
                 <Button href="/contato" variant="secondary">
