@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import { fraunces, inter, jetbrainsMono } from "./fonts";
+import { quicksand } from "./fonts";
 import "./globals.css";
 
 const GOOGLE_ADS_ID = "AW-18395655980";
@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${fraunces.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${quicksand.variable} h-full antialiased`}
     >
       <body className="min-h-screen-safe flex flex-col bg-bg text-ink">
         {children}

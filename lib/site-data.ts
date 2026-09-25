@@ -10,7 +10,7 @@ export interface ServiceArea {
   description: string;
 }
 
-// Ordem oficial das 4 frentes de atuação
+// Ordem oficial das 5 frentes de atuação
 export const SERVICE_AREAS: ServiceArea[] = [
   {
     slug: "contas-e-plataformas",
@@ -19,7 +19,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     shortLabel: "Contas e Plataformas",
     icon: "plataforma",
     description:
-      "Reativação e recuperação de conta hackeada, suspensa ou banida — e remoção de conteúdo publicado sem autorização.",
+      "Reativação e recuperação de conta hackeada, suspensa ou banida, e remoção de conteúdo publicado sem autorização.",
   },
   {
     slug: "contratos",
@@ -28,7 +28,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     shortLabel: "Contratos",
     icon: "contrato",
     description:
-      "Contratos de publicidade, patrocínio, parceria e prestação de serviço — feitos ou revisados para você não assinar no escuro.",
+      "Contratos de publicidade, patrocínio, parceria e prestação de serviço, feitos ou revisados para você não assinar no escuro.",
   },
   {
     slug: "registro-de-marca",
@@ -37,7 +37,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     shortLabel: "Registro de Marca",
     icon: "marca",
     description:
-      "Registro da sua marca no INPI, do zero ao deferimento — proteção do nome, da logo e da identidade do seu negócio.",
+      "Registro da sua marca no INPI, do zero ao deferimento: proteção do nome, da logo e da identidade do seu negócio.",
   },
   {
     slug: "assessoria",
@@ -46,7 +46,16 @@ export const SERVICE_AREAS: ServiceArea[] = [
     shortLabel: "Assessoria",
     icon: "estrategia",
     description:
-      "Acompanhamento jurídico contínuo para o seu negócio digital — de LGPD a estruturação tributária.",
+      "Acompanhamento jurídico contínuo para o seu negócio digital, de LGPD a estruturação tributária.",
+  },
+  {
+    slug: "alvara-mirim",
+    formType: "outros",
+    menuLabel: "Alvará Mirim",
+    shortLabel: "Alvará Mirim",
+    icon: "protecao",
+    description:
+      "Autorização judicial para criança ou adolescente atuar como influenciador digital, exigida pelas plataformas desde a Lei nº 15.211/2025 (ECA Digital).",
   },
 ];
 

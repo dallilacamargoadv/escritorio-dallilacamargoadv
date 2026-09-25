@@ -43,7 +43,13 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
         icon: "protecao",
         title: "Revisão Contratual",
         description:
-          "Análise técnica de contrato existente, incluindo as cláusulas que mais faltam: o que fazer em caso de inadimplência ou quando a marca — ou você — entra em crise.",
+          "Análise técnica de contrato existente, incluindo as cláusulas que mais faltam: o que fazer em caso de inadimplência ou quando a relação com a marca entra em crise.",
+      },
+      {
+        icon: "marca",
+        title: "Contrato com a Cara da Sua Marca",
+        description:
+          "Contrato, proposta e termo formatados com a metodologia de Legal Design, nas cores e na identidade visual do seu negócio. Mais fácil de ler, mais fácil de assinar.",
       },
     ],
     steps: [
@@ -51,7 +57,7 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
         number: "01",
         title: "Conversar",
         description:
-          "Você me conta como fecha parceria, o que já foi combinado e o que te preocupa — é daí que sai o contrato certo, nunca um modelo pronto.",
+          "Você me conta como fecha parceria, o que já foi combinado e o que te preocupa. É daí que sai o contrato certo, nunca um modelo pronto.",
       },
       {
         number: "02",
@@ -63,13 +69,13 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
         number: "03",
         title: "Traduzir",
         description:
-          "Devolvo o contrato explicado, não só assinado — você entende cada cláusula antes de fechar.",
+          "Devolvo o contrato explicado, não só assinado: você entende cada cláusula antes de fechar.",
       },
     ],
     attention: {
       introTitle: "Quando o problema costuma aparecer",
       introDescription:
-        "Ninguém pensa no contrato enquanto tudo está bem. O problema é que, quando surge uma briga ou um desentendimento, é aí que você sente falta de uma cláusula clara, de um documento feito sob medida — ou de contrato nenhum.",
+        "Ninguém pensa no contrato enquanto tudo está bem. O problema é que, quando surge uma briga ou um desentendimento, é aí que você sente falta de uma cláusula clara, de um documento feito sob medida, ou de contrato nenhum.",
       points: [
         {
           number: "01",
@@ -81,25 +87,25 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
           number: "02",
           title: "O contrato não bate com o que você realmente faz",
           description:
-            "Modelo pronto da internet raramente encaixa no seu jeito de trabalhar. Prazo de entrega, quem é dono do conteúdo, sigilo, forma de pagamento, como encerrar — tudo isso pode ficar de fora.",
+            "Modelo pronto da internet raramente encaixa no seu jeito de trabalhar. Prazo de entrega, quem é dono do conteúdo, sigilo, forma de pagamento, como encerrar: tudo isso pode ficar de fora.",
         },
         {
           number: "03",
           title: "Não tinha combinado o que fazer se desse errado",
           description:
-            "Sem uma cláusula de saída, você fica preso à parceria mesmo quando ela virou risco pra sua reputação. Combinar o \"e se der errado\" antes não é desconfiança — é proteção.",
+            "Sem uma cláusula de saída, você fica preso à parceria mesmo quando ela virou risco pra sua reputação. Combinar o \"e se der errado\" antes não é desconfiança, é proteção.",
         },
         {
           number: "04",
           title: "O conflito chegou e ninguém sabia o que fazer",
           description:
-            "Sem regra combinada antes, coisa comum — atraso, cancelamento, mudança no que foi combinado — vira negociação do zero, toda vez que acontece.",
+            "Sem regra combinada antes, coisa comum (atraso, cancelamento, mudança no que foi combinado) vira negociação do zero, toda vez que acontece.",
         },
         {
           number: "05",
           title: "O contrato foi feito sem um advogado olhar",
           description:
-            "Ferramenta de IA ou modelo da internet ajuda a montar um rascunho, mas não substitui alguém olhando pro seu caso específico. Cada parceria tem seus detalhes — e eles importam.",
+            "Ferramenta de IA ou modelo da internet ajuda a montar um rascunho, mas não substitui alguém olhando pro seu caso específico. Cada parceria tem seus detalhes, e eles importam.",
         },
       ],
     },
@@ -155,7 +161,7 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
     attention: {
       introTitle: "Quando o problema costuma aparecer",
       introDescription:
-        "No Brasil, a marca é de quem registra primeiro — não de quem usa primeiro. Por isso o problema quase sempre aparece depois que a marca já vale alguma coisa. E aí proteger fica mais caro e mais demorado do que seria lá no começo.",
+        "No Brasil, a marca é de quem registra primeiro, não de quem usa primeiro. Por isso o problema quase sempre aparece depois que a marca já vale alguma coisa. E aí proteger fica mais caro e mais demorado do que seria lá no começo.",
       points: [
         {
           number: "01",
@@ -167,7 +173,7 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
           number: "02",
           title: "Outra pessoa já registrou uma marca parecida",
           description:
-            "Sem pesquisar antes, você só descobre tarde demais que o nome já é de outra empresa — e que ela pode te obrigar a parar de usar.",
+            "Sem pesquisar antes, você só descobre tarde demais que o nome já é de outra empresa, e que ela pode te obrigar a parar de usar.",
         },
         {
           number: "03",
@@ -179,13 +185,13 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
           number: "04",
           title: "A marca ficou parada tempo demais",
           description:
-            "Marca registrada que fica 5 anos sem uso pode perder a proteção. Não basta registrar uma vez e esquecer — vale acompanhar.",
+            "Marca registrada que fica 5 anos sem uso pode perder a proteção. Não basta registrar uma vez e esquecer: vale acompanhar.",
         },
         {
           number: "05",
           title: "Alguém usa sua marca sem contrato assinado",
           description:
-            "Deixar alguém usar sua marca só no combinado, sem contrato, dificulta cobrar, fiscalizar o uso — ou voltar atrás depois.",
+            "Deixar alguém usar sua marca só no combinado, sem contrato, dificulta cobrar, fiscalizar o uso ou voltar atrás depois.",
         },
       ],
     },
@@ -197,13 +203,13 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
         icon: "acesso",
         title: "Meta (Instagram, Facebook, WhatsApp)",
         description:
-          "Atuação em conta hackeada, desativada ou com restrição/shadowban — do pedido administrativo à ação judicial com tutela de urgência.",
+          "Atuação em conta hackeada, desativada ou com restrição/shadowban: do pedido administrativo à ação judicial com tutela de urgência.",
       },
       {
         icon: "defesa",
         title: "Remoção de Conteúdo",
         description:
-          "Vídeo, foto ou publicação usando sua imagem, seu nome ou sua marca sem autorização — notificação extrajudicial e pedido de remoção direto à plataforma (notice and takedown).",
+          "Vídeo, foto ou publicação usando sua imagem, seu nome ou sua marca sem autorização: notificação extrajudicial e pedido de remoção direto à plataforma (notice and takedown).",
       },
       {
         icon: "bloqueio",
@@ -235,7 +241,7 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
         number: "01",
         title: "Diagnosticar",
         description:
-          "Análise da situação — conta hackeada, bloqueada ou com strike — para identificar o caminho jurídico adequado.",
+          "Análise da situação (conta hackeada, bloqueada ou com strike) para identificar o caminho jurídico adequado.",
       },
       {
         number: "02",
@@ -253,7 +259,7 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
     attention: {
       introTitle: "Quando o problema costuma aparecer",
       introDescription:
-        "Pra muita gente, a conta nas redes é parte do trabalho, não só um perfil pessoal. Quando ela é hackeada, bloqueada ou banida, o prejuízo passa longe da tela — vai direto pro seu bolso e pra sua rotina.",
+        "Pra muita gente, a conta nas redes é parte do trabalho, não só um perfil pessoal. Quando ela é hackeada, bloqueada ou banida, o prejuízo passa longe da tela: vai direto pro seu bolso e pra sua rotina.",
       points: [
         {
           number: "01",
@@ -265,7 +271,7 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
           number: "02",
           title: "O perfil foi bloqueado",
           description:
-            "Bloqueio e suspensão acontecem por motivos bem diferentes — cada caso precisa ser olhado com calma pra saber o que fazer.",
+            "Bloqueio e suspensão acontecem por motivos bem diferentes. Cada caso precisa ser olhado com calma pra saber o que fazer.",
         },
         {
           number: "03",
@@ -277,7 +283,7 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
           number: "04",
           title: "Você não guardou as provas",
           description:
-            "Print, e-mail e histórico de conversa contam a história do que aconteceu — sem eles, fica mais difícil provar e agir.",
+            "Print, e-mail e histórico de conversa contam a história do que aconteceu. Sem eles, fica mais difícil provar e agir.",
         },
         {
           number: "05",
@@ -333,7 +339,7 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
         number: "02",
         title: "Montar o plano certo",
         description:
-          "Defino com você o que precisa de atenção primeiro — clearance de conteúdo, LGPD, tributário — sem empurrar tudo de uma vez.",
+          "Defino com você o que precisa de atenção primeiro (clearance de conteúdo, LGPD, tributário) sem empurrar tudo de uma vez.",
       },
       {
         number: "03",
@@ -357,7 +363,7 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
           number: "02",
           title: "Projeto novo entrou no ar sem checar antes",
           description:
-            "Campanha, parceria ou produto novo vai ao ar sem checar direito autoral, direito de imagem ou marca envolvidos — e o risco só aparece depois.",
+            "Campanha, parceria ou produto novo vai ao ar sem checar direito autoral, direito de imagem ou marca envolvidos, e o risco só aparece depois.",
         },
         {
           number: "03",
@@ -375,7 +381,93 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
           number: "05",
           title: "As decisões ficaram grandes demais pra resolver sozinho",
           description:
-            "Quando o negócio cresce, resolver cada problema isolado não é mais suficiente — ter alguém acompanhando todo mês evita que você viva apagando incêndio.",
+            "Quando o negócio cresce, resolver cada problema isolado não é mais suficiente. Ter alguém acompanhando todo mês evita que você viva apagando incêndio.",
+        },
+      ],
+    },
+  },
+
+  "alvara-mirim": {
+    cards: [
+      {
+        icon: "protecao",
+        title: "Alvará para Atividade Contínua",
+        description:
+          "Autorização judicial para canal ou perfil infantil já em funcionamento, com monetização e parcerias recorrentes.",
+      },
+      {
+        icon: "defesa",
+        title: "Alvará para Campanha Específica",
+        description:
+          "Autorização pontual para uma ação isolada, como lançamento de produto ou uma publicidade única.",
+      },
+      {
+        icon: "moeda",
+        title: "Conta Vinculada e Prestação de Contas",
+        description:
+          "Estruturação da conta em nome da criança sob custódia judicial, com repasse de valores conforme determinado pelo juízo.",
+      },
+      {
+        icon: "prazo",
+        title: "Renovação e Acompanhamento",
+        description:
+          "Acompanhamento da validade do alvará (normalmente 12 meses) e pedido de renovação enquanto os requisitos continuarem preenchidos.",
+      },
+    ],
+    steps: [
+      {
+        number: "01",
+        title: "Conversar",
+        description:
+          "Você me conta como funciona a atividade da criança: plataformas, frequência, se já monetiza e se algum documento já está pronto.",
+      },
+      {
+        number: "02",
+        title: "Reunir e peticionar",
+        description:
+          "Organizo a documentação (matrícula escolar, laudo psicológico, anuência dos responsáveis) e protocolo o pedido na Vara da Infância e Juventude.",
+      },
+      {
+        number: "03",
+        title: "Acompanhar",
+        description:
+          "Sigo o processo até a concessão do alvará, incluindo pedido de tutela de urgência quando a monetização já estiver em risco.",
+      },
+    ],
+    attention: {
+      introTitle: "Quando o problema costuma aparecer",
+      introDescription:
+        "Desde 16 de junho de 2026, as plataformas já podem exigir o alvará judicial para manter a monetização ativa de conta de influenciador mirim. Sem ele, o risco deixou de ser teórico.",
+      points: [
+        {
+          number: "01",
+          title: "A conta já monetiza, mas ninguém formalizou o alvará",
+          description:
+            "É o cenário mais comum: o canal já fatura ou já fecha publicidade, mas a autorização judicial que a lei passou a exigir ainda não existe.",
+        },
+        {
+          number: "02",
+          title: "A plataforma já notificou pedindo o documento",
+          description:
+            "Depois da notificação, o prazo pra apresentar o alvará corre rápido. Regularizar antes da notificação chegar evita correr contra o relógio.",
+        },
+        {
+          number: "03",
+          title: "Não existe conta bancária vinculada em nome da criança",
+          description:
+            "O juízo costuma exigir que os valores da monetização fiquem centralizados numa conta sob custódia judicial, não na conta dos pais.",
+        },
+        {
+          number: "04",
+          title: "Falta documentação escolar e psicológica atualizada",
+          description:
+            "Declaração de frequência escolar e laudo psicológico recente fazem parte do pedido. Sem eles, o processo demora mais ou pode ser indeferido.",
+        },
+        {
+          number: "05",
+          title: "A atividade cresceu e ninguém pediu autorização a tempo",
+          description:
+            "Quando o canal começa pequeno, o alvará fica esquecido. O problema aparece quando a audiência e a monetização já são relevantes.",
         },
       ],
     },

@@ -8,7 +8,7 @@ import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { ThreeStepsScroll } from "@/components/ThreeStepsScroll";
 import { PointsOfAttention } from "@/components/PointsOfAttention";
 import { JsonLd } from "@/components/JsonLd";
-import { ContratosForm } from "@/components/forms/ContratosForm";
+import { AlvaraMirimForm } from "@/components/forms/AlvaraMirimForm";
 import { AREA_CONTENT } from "@/lib/area-content";
 import { FAQ_CONTENT } from "@/lib/faq-content";
 import { getPageMetadata } from "@/lib/page-metadata";
@@ -20,7 +20,7 @@ import {
   jsonLdGraph,
 } from "@/lib/schema";
 
-const SLUG = "contratos";
+const SLUG = "alvara-mirim";
 const PAGE_URL = `${BASE_URL}/${SLUG}`;
 const CONTENT = AREA_CONTENT[SLUG];
 const FAQ = FAQ_CONTENT[SLUG];
@@ -29,26 +29,26 @@ export async function generateMetadata(): Promise<Metadata> {
   return getPageMetadata({
     slug: SLUG,
     path: `/${SLUG}`,
-    fallbackTitle: "Contratos",
+    fallbackTitle: "Alvará Mirim",
     fallbackDescription:
-      "Elaboração, revisão e negociação de contratos para criadores de conteúdo, influenciadores e negócios digitais, com atenção a cláusulas, riscos e conformidade.",
+      "Autorização judicial para criança ou adolescente atuar como influenciador digital, exigida pelas plataformas desde a Lei nº 15.211/2025 (ECA Digital).",
   });
 }
 
-export default function ContratosPage() {
+export default function AlvaraMirimPage() {
   return (
     <>
       <JsonLd
         data={jsonLdGraph([
           getServiceSchema({
-            name: "Contratos",
+            name: "Alvará Mirim",
             description:
-              "Elaboração, revisão e negociação de contratos para prestadores de serviços, criadores de conteúdo e negócios digitais.",
+              "Pedido de alvará judicial para atividade artística e de influenciador digital de criança e adolescente, com base no ECA e na Lei nº 15.211/2025.",
             url: PAGE_URL,
           }),
           getBreadcrumbSchema([
             { name: "Home", url: BASE_URL },
-            { name: "Contratos", url: PAGE_URL },
+            { name: "Alvará Mirim", url: PAGE_URL },
           ]),
           getFaqSchema(FAQ),
         ])}
@@ -58,13 +58,14 @@ export default function ContratosPage() {
       <section className="mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
         <Reveal>
           <h1 className="max-w-3xl text-4xl sm:text-6xl">
-            <em className="italic text-wine">Contratos</em> elaborados e
-            revisados para dar segurança às relações digitais.
+            Seu filho cria conteúdo.{" "}
+            <em className="italic text-wine">A lei já exige autorização</em>{" "}
+            pra isso continuar.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Contrato de parceria, publi ou prestação de serviço, elaborado
-            ou revisado para você assinar sabendo exatamente no que está
-            entrando.
+            Desde 2026 a lei já deixa a plataforma exigir alvará judicial
+            pra manter a monetização do seu filho ativa. Cuido de tudo,
+            do pedido até a decisão, com a criança sempre protegida.
           </p>
           <div className="mt-8">
             <Button href="#formulario">Iniciar atendimento</Button>
@@ -104,18 +105,24 @@ export default function ContratosPage() {
           <EnclosureNested className="max-w-3xl">
             <p className="font-eyebrow text-[10px] text-gold">Nota técnica</p>
             <p className="mt-4 text-sm leading-relaxed text-ink-dim">
-              A validade e a interpretação dos contratos seguem as regras
-              gerais estabelecidas pelo Código Civil, com atenção adicional
-              às particularidades das relações formadas e executadas em
-              ambiente digital.
+              O alvará judicial para atividade artística infantil segue os
+              artigos 147, inciso I, e 149, inciso II e §1º, do Estatuto da
+              Criança e do Adolescente (Lei nº 8.069/1990), com fundamento no
+              artigo 227 da Constituição Federal. É pedido de jurisdição
+              voluntária na Vara da Infância e da Juventude, não trabalhista,
+              conforme fixado pelo STF na ADI 5326/DF. Desde a Lei nº
+              15.211/2025 (ECA Digital), em vigor desde 17 de março de 2026,
+              as plataformas digitais também podem exigir a comprovação do
+              alvará pra manter a monetização e o impulsionamento de contas
+              de influenciadores mirins.
             </p>
             <a
-              href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+              href="https://www.planalto.gov.br/ccivil_03/leis/l8069.htm"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-block text-sm text-gold underline"
             >
-              Fonte: Código Civil, Lei nº 10.406/2002
+              Fonte: Estatuto da Criança e do Adolescente, Lei nº 8.069/1990
             </a>
           </EnclosureNested>
         </Reveal>
@@ -139,14 +146,14 @@ export default function ContratosPage() {
         <div className="mx-auto max-w-2xl px-4 py-20 sm:px-6">
           <Reveal>
             <h2 className="text-3xl sm:text-4xl">
-              Vamos conversar sobre o seu caso.
+              Vamos conversar sobre o caso.
             </h2>
             <p className="mt-4 text-sm text-ink-dim">
               Preencha as perguntas abaixo. A equipe entra em contato em até
               dois dias úteis.
             </p>
             <div className="mt-10">
-              <ContratosForm />
+              <AlvaraMirimForm />
             </div>
           </Reveal>
         </div>

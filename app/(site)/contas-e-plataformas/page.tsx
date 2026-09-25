@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
     path: `/${SLUG}`,
     fallbackTitle: "Contas e Plataformas",
     fallbackDescription:
-      "Reativação e recuperação de conta hackeada, suspensa ou banida, e remoção de conteúdo publicado sem autorização — em qualquer rede social ou plataforma digital.",
+      "Reativação e recuperação de conta hackeada, suspensa ou banida, e remoção de conteúdo publicado sem autorização, em qualquer rede social ou plataforma digital.",
   });
 }
 
@@ -59,10 +59,10 @@ export default function ContasEPlataformasPage() {
         <Reveal>
           <h1 className="max-w-3xl text-4xl sm:text-6xl">
             Perdeu o acesso à sua{" "}
-            <em className="italic text-gold">conta</em>?
+            <em className="italic text-wine">conta</em>?
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Reativação e recuperação de conta hackeada, suspensa ou banida —
+            Reativação e recuperação de conta hackeada, suspensa ou banida,
             e remoção de conteúdo publicado sem autorização, do pedido
             administrativo à medida judicial cabível.
           </p>

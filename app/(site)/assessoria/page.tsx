@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
     path: `/${SLUG}`,
     fallbackTitle: "Assessoria",
     fallbackDescription:
-      "Acompanhamento jurídico contínuo para influenciadores, criadores de conteúdo e negócios digitais — contrato, LGPD e estruturação tributária, em um só lugar.",
+      "Acompanhamento jurídico contínuo para influenciadores, criadores de conteúdo e negócios digitais: contrato, LGPD e estruturação tributária, em um só lugar.",
   });
 }
 
@@ -43,7 +43,7 @@ export default function AssessoriaPage() {
           getServiceSchema({
             name: "Assessoria",
             description:
-              "Acompanhamento jurídico contínuo para influenciadores, criadores de conteúdo, prestadores de serviços e negócios digitais — contrato, proteção de dados, LGPD e estruturação tributária.",
+              "Acompanhamento jurídico contínuo para influenciadores, criadores de conteúdo, prestadores de serviços e negócios digitais: contrato, proteção de dados, LGPD e estruturação tributária.",
             url: PAGE_URL,
           }),
           getBreadcrumbSchema([
@@ -58,11 +58,11 @@ export default function AssessoriaPage() {
       <section className="mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
         <Reveal>
           <h1 className="max-w-3xl text-4xl sm:text-6xl">
-            Um <em className="italic text-gold">departamento jurídico</em> sob
+            Um <em className="italic text-wine">departamento jurídico</em> sob
             medida, sem contratar um.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Acompanhamento jurídico contínuo para o seu negócio digital — de
+            Acompanhamento jurídico contínuo para o seu negócio digital, de
             contrato e LGPD a estruturação tributária, em um só lugar.
           </p>
           <div className="mt-8">

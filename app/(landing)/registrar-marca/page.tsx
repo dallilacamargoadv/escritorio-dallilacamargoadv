@@ -60,10 +60,10 @@ export default function RegistrarMarcaLandingPage() {
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl sm:text-6xl">
             Registre sua marca antes que{" "}
-            <em className="italic text-gold">outra pessoa registre</em>.
+            <em className="italic text-wine">outra pessoa registre</em>.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            No Brasil, a marca é de quem deposita primeiro no INPI — não de
+            No Brasil, a marca é de quem deposita primeiro no INPI, não de
             quem usa primeiro. Faço a busca de anterioridade, o pedido de
             registro e acompanho até o deferimento.
           </p>

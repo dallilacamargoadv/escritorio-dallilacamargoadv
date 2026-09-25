@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
     path: `/${SLUG}`,
     fallbackTitle: "Registro de Marca",
     fallbackDescription:
-      "Registro de marca no INPI, do zero ao deferimento — proteção do nome, da logo e da identidade do seu negócio.",
+      "Registro de marca no INPI, do zero ao deferimento: proteção do nome, da logo e da identidade do seu negócio.",
   });
 }
 
@@ -43,7 +43,7 @@ export default function RegistroDeMarcaPage() {
           getServiceSchema({
             name: "Registro de Marca",
             description:
-              "Registro de marca no INPI para criadores de conteúdo, infoprodutores e negócios digitais — busca de anterioridade, depósito, acompanhamento e defesa.",
+              "Registro de marca no INPI para criadores de conteúdo, infoprodutores e negócios digitais: busca de anterioridade, depósito, acompanhamento e defesa.",
             url: PAGE_URL,
           }),
           getBreadcrumbSchema([
@@ -59,11 +59,11 @@ export default function RegistroDeMarcaPage() {
         <Reveal>
           <h1 className="max-w-3xl text-4xl sm:text-6xl">
             Seu nome e sua logo,{" "}
-            <em className="italic text-gold">protegidos</em> desde o começo.
+            <em className="italic text-wine">protegidos</em> desde o começo.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
             Registro de marca no INPI pra proteger o nome do seu negócio,
-            produto ou perfil contra cópia e uso indevido — do zero ao
+            produto ou perfil contra cópia e uso indevido, do zero ao
             deferimento.
           </p>
           <div className="mt-8">
