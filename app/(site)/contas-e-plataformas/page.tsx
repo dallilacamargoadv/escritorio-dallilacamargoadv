@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { FeatureCard } from "@/components/ui/FeatureCard";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { Reveal } from "@/components/ui/Reveal";
+import { AtendimentoHero } from "@/components/ui/AtendimentoHero";
 import { EnclosureNested } from "@/components/ui/EnclosureNested";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { ThreeStepsScroll } from "@/components/ThreeStepsScroll";
@@ -54,23 +55,22 @@ export default function ContasEPlataformasPage() {
         ])}
       />
 
-      {/* Hero */}
-      <section className="mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28">
-        <Reveal>
-          <h1 className="max-w-3xl text-4xl sm:text-6xl">
+      <AtendimentoHero
+        eyebrow="contas e plataformas"
+        title={
+          <>
             Perdeu o acesso à sua{" "}
-            <em className="italic text-wine">conta</em>?
-          </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Reativação e recuperação de conta hackeada, suspensa ou banida,
-            e remoção de conteúdo publicado sem autorização, do pedido
-            administrativo à medida judicial cabível.
-          </p>
-          <div className="mt-8">
-            <Button href="#formulario">Iniciar atendimento</Button>
-          </div>
-        </Reveal>
-      </section>
+            <em className="italic text-atendimento-accent">conta</em>?
+          </>
+        }
+        description="Reativação e recuperação de conta hackeada, suspensa ou banida, e remoção de conteúdo publicado sem autorização, do pedido administrativo à medida judicial cabível."
+      >
+        <div className="mt-8">
+          <Button href="#formulario" variant="invert">
+            Iniciar atendimento
+          </Button>
+        </div>
+      </AtendimentoHero>
 
       {/* Nossa Atuação */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">

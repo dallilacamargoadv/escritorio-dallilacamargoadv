@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { FeatureCard } from "@/components/ui/FeatureCard";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { Reveal } from "@/components/ui/Reveal";
+import { AtendimentoHero } from "@/components/ui/AtendimentoHero";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { ThreeStepsScroll } from "@/components/ThreeStepsScroll";
 import { JsonLd } from "@/components/JsonLd";
@@ -62,29 +63,27 @@ export default function ReativacaoDeContaLandingPage() {
         ])}
       />
 
-      {/* Hero */}
-      <section className="mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 sm:pt-24">
-        <Reveal>
-          <p className="font-eyebrow text-[10px] text-gold">
-            Contas e Plataformas · Reativação de Conta
-          </p>
-          <h1 className="mt-4 max-w-3xl text-4xl sm:text-6xl">
+      <AtendimentoHero
+        eyebrow="contas e plataformas · reativação de conta"
+        title={
+          <>
             Perdeu o acesso à sua conta?{" "}
-            <em className="italic text-wine">A gente reativa.</em>
-          </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-dim">
-            Conta hackeada, suspensa ou banida no Instagram, Facebook,
-            WhatsApp, TikTok ou YouTube: do pedido administrativo à ação
-            judicial com tutela de urgência, quando necessário.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="#formulario">Quero reativar minha conta</Button>
-          </div>
-          <p className="mt-4 font-mono text-[11px] uppercase tracking-wide text-ink-dim">
-            OAB/PA nº 36.762 · Atendimento 100% remoto, Brasil todo
-          </p>
-        </Reveal>
-      </section>
+            <em className="italic text-atendimento-accent">
+              A gente reativa.
+            </em>
+          </>
+        }
+        description="Conta hackeada, suspensa ou banida no Instagram, Facebook, WhatsApp, TikTok ou YouTube: do pedido administrativo à ação judicial com tutela de urgência, quando necessário."
+      >
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Button href="#formulario" variant="invert">
+            Quero reativar minha conta
+          </Button>
+        </div>
+        <p className="mt-4 font-mono text-[11px] uppercase tracking-wide text-atendimento-body">
+          OAB/PA nº 36.762 · Atendimento 100% remoto, Brasil todo
+        </p>
+      </AtendimentoHero>
 
       {/* O que fazemos */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">

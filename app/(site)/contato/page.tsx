@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Icon } from "@/components/ui/Icon";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { Reveal } from "@/components/ui/Reveal";
+import { AtendimentoHero } from "@/components/ui/AtendimentoHero";
 import { getPageMetadata } from "@/lib/page-metadata";
 import { SERVICE_AREAS, SITE } from "@/lib/site-data";
 
@@ -19,24 +20,16 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function ContatoPage() {
   return (
     <>
-      <section className="bg-atendimento-bg">
-        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
-          <Reveal>
-            <p className="font-eyebrow text-xs italic text-atendimento-accent sm:text-sm">
-              [ atendimento ]
-            </p>
-            <h1 className="mt-3 max-w-2xl text-4xl text-[var(--brand-marfim-rosado)] sm:text-5xl">
-              Qual área você{" "}
-              <em className="italic text-atendimento-accent">precisa</em>?
-            </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-atendimento-body">
-              Escolha a opção que melhor descreve a sua situação. Você será
-              direcionado ao formulário específico daquela área para iniciar o
-              atendimento.
-            </p>
-          </Reveal>
-        </div>
-      </section>
+      <AtendimentoHero
+        eyebrow="atendimento"
+        title={
+          <>
+            Qual área você{" "}
+            <em className="italic text-atendimento-accent">precisa</em>?
+          </>
+        }
+        description="Escolha a opção que melhor descreve a sua situação. Você será direcionado ao formulário específico daquela área para iniciar o atendimento."
+      />
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <Reveal>
