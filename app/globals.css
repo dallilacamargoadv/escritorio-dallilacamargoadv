@@ -27,6 +27,13 @@
   --atendimento-bg: #5c0f13;
   --atendimento-accent: var(--gold);
   --atendimento-body: var(--brand-champagne);
+  /* etapas (ThreeStepsScroll) — segundo bloco de cor da página, sempre a
+     cor OPOSTA do atendimento no mesmo tema, pra vermelho e azul se
+     alternarem descendo a página em vez de repetir (25/09/2026) */
+  --steps-bg: var(--gold);
+  --steps-accent: #5c0f13;
+  --steps-body: #7a2b30;
+  --steps-track: rgba(58, 10, 13, 0.22);
   --ink: #f2efea; /* Acolhimento */
   --ink-dim: #dfd6bc; /* Conforto */
   --success: #8fa37a;
@@ -110,6 +117,10 @@
     --atendimento-bg: var(--brand-azul-bebe);
     --atendimento-accent: #5c0f13;
     --atendimento-body: #24333b;
+    --steps-bg: #5c0f13;
+    --steps-accent: var(--brand-azul-bebe);
+    --steps-body: var(--brand-champagne);
+    --steps-track: rgba(255, 255, 255, 0.28);
   }
 }
 
@@ -136,6 +147,10 @@
   --atendimento-bg: var(--brand-azul-bebe);
   --atendimento-accent: #5c0f13;
   --atendimento-body: #24333b;
+  --steps-bg: #5c0f13;
+  --steps-accent: var(--brand-azul-bebe);
+  --steps-body: var(--brand-champagne);
+  --steps-track: rgba(255, 255, 255, 0.28);
 }
 
 :root[data-theme="dark"] {
@@ -159,6 +174,10 @@
   --atendimento-bg: #5c0f13;
   --atendimento-accent: var(--gold);
   --atendimento-body: var(--brand-champagne);
+  --steps-bg: var(--gold);
+  --steps-accent: #5c0f13;
+  --steps-body: #7a2b30;
+  --steps-track: rgba(58, 10, 13, 0.22);
 }
 
 /* Monograma D: sobre --bg/--bg-alt/--surface, que trocam de escuro pra claro
@@ -207,6 +226,9 @@
   --color-atendimento-bg: var(--atendimento-bg);
   --color-atendimento-accent: var(--atendimento-accent);
   --color-atendimento-body: var(--atendimento-body);
+  --color-steps-bg: var(--steps-bg);
+  --color-steps-accent: var(--steps-accent);
+  --color-steps-body: var(--steps-body);
   --color-brand-azul-bebe: var(--brand-azul-bebe);
   --color-ink: var(--ink);
   --color-ink-dim: var(--ink-dim);

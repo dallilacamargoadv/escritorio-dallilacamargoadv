@@ -99,14 +99,19 @@ export function ThreeStepsScroll({
       className="relative"
       style={{ height: "360vh" }}
     >
-      <div className="min-h-screen-safe sticky top-0 flex flex-col items-center justify-center overflow-hidden bg-bg-alt px-4 py-16">
+      <div className="min-h-screen-safe sticky top-0 flex flex-col items-center justify-center overflow-hidden bg-steps-bg px-4 py-16">
         <div className="mb-10 flex items-center gap-4 md:mb-14">
-          <span className="h-px w-10 bg-hairline" />
-          <span aria-hidden="true" className="text-2xl leading-none text-wine">
+          <span className="h-px w-10 bg-steps-accent/30" />
+          <span
+            aria-hidden="true"
+            className="text-2xl leading-none text-steps-accent"
+          >
             ✦
           </span>
-          <span className="font-eyebrow text-base text-wine">{title}</span>
-          <span className="h-px w-10 bg-hairline" />
+          <span className="font-eyebrow text-base text-steps-accent">
+            {title}
+          </span>
+          <span className="h-px w-10 bg-steps-accent/30" />
         </div>
 
         <div className="flex flex-col items-center gap-10 md:flex-row md:gap-20">
@@ -126,7 +131,7 @@ export function ThreeStepsScroll({
                   cy="110"
                   r={RADIUS}
                   fill="none"
-                  stroke="var(--hairline)"
+                  stroke="var(--steps-track)"
                   strokeWidth={2}
                   strokeDasharray={`${ARC_LEN} ${CIRCUMFERENCE}`}
                   transform={`rotate(${i * 120} 110 110)`}
@@ -141,7 +146,7 @@ export function ThreeStepsScroll({
                     cy="110"
                     r={RADIUS}
                     fill="none"
-                    stroke="var(--wine)"
+                    stroke="var(--steps-accent)"
                     strokeWidth={2}
                     strokeLinecap="round"
                     strokeDasharray={`${ARC_LEN} ${CIRCUMFERENCE}`}
@@ -154,7 +159,7 @@ export function ThreeStepsScroll({
             <div className="absolute inset-0 flex items-center justify-center">
               <span
                 key={activeIndex}
-                className="animate-fade-in font-mono text-4xl tabular-nums text-ink"
+                className="animate-fade-in font-mono text-4xl tabular-nums text-steps-accent"
               >
                 {steps[activeIndex].number}
               </span>
@@ -173,11 +178,13 @@ export function ThreeStepsScroll({
                       : "translate-y-3 opacity-0"
                   }`}
                 >
-                  <span className="font-mono text-xs text-wine">
+                  <span className="font-mono text-xs text-steps-accent">
                     Passo {step.number}
                   </span>
-                  <h3 className="mt-1 text-xl">{step.title}</h3>
-                  <p className="mt-1 max-w-sm text-sm leading-relaxed text-ink-dim">
+                  <h3 className="mt-1 text-xl text-steps-accent">
+                    {step.title}
+                  </h3>
+                  <p className="mt-1 max-w-sm text-sm leading-relaxed text-steps-body">
                     {step.description}
                   </p>
                 </div>
@@ -187,11 +194,13 @@ export function ThreeStepsScroll({
 
           <div className="max-w-xs text-center md:hidden">
             <span key={activeIndex} className="animate-fade-in block">
-              <span className="font-mono text-xs text-wine">
+              <span className="font-mono text-xs text-steps-accent">
                 Passo {steps[activeIndex].number}
               </span>
-              <h3 className="mt-1 text-xl">{steps[activeIndex].title}</h3>
-              <p className="mt-1 text-sm leading-relaxed text-ink-dim">
+              <h3 className="mt-1 text-xl text-steps-accent">
+                {steps[activeIndex].title}
+              </h3>
+              <p className="mt-1 text-sm leading-relaxed text-steps-body">
                 {steps[activeIndex].description}
               </p>
             </span>
@@ -200,7 +209,7 @@ export function ThreeStepsScroll({
 
         {closingText && (
           <p
-            className={`mt-12 max-w-md text-center text-sm text-ink-dim transition-opacity duration-500 ${
+            className={`mt-12 max-w-md text-center text-sm text-steps-body transition-opacity duration-500 ${
               progress > 0.92 ? "opacity-100" : "opacity-0"
             }`}
           >
