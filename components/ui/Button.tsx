@@ -3,10 +3,8 @@ import type { ButtonHTMLAttributes } from "react";
 
 type Variant = "primary" | "secondary" | "invert";
 
-/* font-sans (Helvetica Now Display) aqui de propósito — o Guia de
-   Aplicação reserva essa fonte pra ganchos/chamadas, e botão é CTA */
 const base =
-  "inline-flex items-center justify-center gap-2 px-6 py-3 font-sans text-sm font-medium tracking-wide transition-all duration-150 ease-out active:scale-[0.97] disabled:opacity-50 disabled:pointer-events-none";
+  "inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium tracking-wide transition-all duration-150 ease-out active:scale-[0.97] disabled:opacity-50 disabled:pointer-events-none";
 
 const variants: Record<Variant, string> = {
   primary:
