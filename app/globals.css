@@ -273,7 +273,10 @@ html {
 body {
   background: var(--bg);
   color: var(--ink);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  /* 26/09/2026, Guia de Aplicação: Garet (--font-mono) é a fonte do corpo
+     de texto e legendas; Helvetica Now Display (--font-sans) fica
+     reservada a ganchos/chamadas (ver Button.tsx) */
+  font-family: var(--font-mono), system-ui, sans-serif;
   line-height: 1.6;
 }
 
