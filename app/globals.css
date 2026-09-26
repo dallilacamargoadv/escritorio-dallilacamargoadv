@@ -12,26 +12,28 @@
   --surface: #3c1e24;
   --hairline: rgba(242, 239, 234, 0.14);
   --hairline-strong: rgba(242, 239, 234, 0.28);
-  --gold: #a3b8c4; /* Equilíbrio — acento secundário/borda/foco */
+  --gold: #b5c1d2; /* Equilíbrio — acento secundário/borda/foco (26/09/2026: hex oficial do brandbook novo, Guia de Aplicação) */
   --gold-bright: #f2efea; /* Acolhimento */
   --wine: #a8383b; /* Confiança clareado só o necessário p/ legibilidade em texto/link sobre fundo escuro — vermelho-vinho fechado, não rosa */
-  --wine-deep: #6b0c0f; /* Confiança, literal — blocos/superfícies grandes (25/09/2026: um fechadinho a mais que o #760e10, aprovado pela Dallila) */
+  --wine-deep: #760e10; /* Confiança, literal — blocos/superfícies grandes (26/09/2026: valor oficial do brandbook novo, volta do #6b0c0f de ontem) */
   /* hero — cor principal do bloco troca por tema (25/09/2026): tema escuro
      usa Presença (marrom), tema claro usa Equilíbrio (azul) como principal;
      --hero-accent é o destaque em cima do bloco, sempre a outra cor forte */
   --hero-bg: var(--bg);
   --hero-accent: var(--gold);
   /* atendimento — regra própria (25/09/2026, aprovada por ela): escuro puxa
-     vermelho borgonha dominante, claro puxa azul-bebê dominante; marrom
-     nunca é fundo aqui, só detalhe pontual (ícone/rodapé) */
-  --atendimento-bg: #5c0f13;
+     vermelho dominante, claro puxa azul dominante; marrom nunca é fundo
+     aqui, só detalhe pontual (ícone/rodapé). 26/09/2026: usa direto os hex
+     oficiais do brandbook (Confiança/Equilíbrio), não mais um borgonha à
+     parte */
+  --atendimento-bg: var(--wine-deep);
   --atendimento-accent: var(--gold);
   --atendimento-body: var(--brand-champagne);
   /* etapas (ThreeStepsScroll) — segundo bloco de cor da página, sempre a
      cor OPOSTA do atendimento no mesmo tema, pra vermelho e azul se
      alternarem descendo a página em vez de repetir (25/09/2026) */
   --steps-bg: var(--gold);
-  --steps-accent: #5c0f13;
+  --steps-accent: var(--wine-deep);
   --steps-body: #7a2b30;
   --steps-track: rgba(58, 10, 13, 0.22);
   --ink: #f2efea; /* Acolhimento */
@@ -47,9 +49,8 @@
   --brand-vinho-porto: #32191e; /* Presença */
   --brand-marfim-rosado: #f2efea; /* Acolhimento */
   --brand-champagne: #dfd6bc; /* Conforto */
-  --brand-bordo-assinatura: #6b0c0f; /* Confiança */
-  --brand-pergaminho-neutro: #a3b8c4; /* Equilíbrio */
-  --brand-azul-bebe: #b4c7d6; /* azul-bebê — só pra bloco "atendimento" no tema claro */
+  --brand-bordo-assinatura: #760e10; /* Confiança (26/09/2026: hex oficial do Guia de Aplicação) */
+  --brand-pergaminho-neutro: #b5c1d2; /* Equilíbrio (26/09/2026: hex oficial do Guia de Aplicação, substitui o --brand-azul-bebe aproximado de ontem) */
 
   /* tipografia nova (mentoria Bêcreative): Helvetica Now Display e Times New
      Roman MT Condensed são fontes de sistema/licenciadas, não existem no
@@ -102,10 +103,10 @@
     --surface: #ffffff;
     --hairline: rgba(50, 25, 30, 0.14);
     --hairline-strong: rgba(50, 25, 30, 0.28);
-    --gold: #5c7481; /* Equilíbrio escurecido p/ contraste em fundo claro */
+    --gold: #667a8a; /* Equilíbrio escurecido p/ contraste em fundo claro (26/09/2026: derivado do novo #b5c1d2 oficial, mesma proporção de escurecimento de antes) */
     --gold-bright: #32191e; /* Presença */
     --wine: #760e10; /* Confiança */
-    --wine-deep: #5c0b0d;
+    --wine-deep: #760e10; /* 26/09/2026: unificado com o valor oficial, sem variante escurecida própria */
     --ink: #32191e; /* Presença */
     --ink-dim: #5c4148;
     --success: #4f6b3c;
@@ -114,11 +115,11 @@
     --audiencia: #d1272a;
     --hero-bg: var(--gold);
     --hero-accent: var(--wine-deep);
-    --atendimento-bg: var(--brand-azul-bebe);
-    --atendimento-accent: #5c0f13;
+    --atendimento-bg: var(--brand-pergaminho-neutro);
+    --atendimento-accent: var(--wine-deep);
     --atendimento-body: #24333b;
-    --steps-bg: #5c0f13;
-    --steps-accent: var(--brand-azul-bebe);
+    --steps-bg: var(--wine-deep);
+    --steps-accent: var(--brand-pergaminho-neutro);
     --steps-body: var(--brand-champagne);
     --steps-track: rgba(255, 255, 255, 0.28);
   }
@@ -132,10 +133,10 @@
   --surface: #ffffff;
   --hairline: rgba(50, 25, 30, 0.14);
   --hairline-strong: rgba(50, 25, 30, 0.28);
-  --gold: #5c7481;
+  --gold: #667a8a;
   --gold-bright: #32191e;
   --wine: #760e10;
-  --wine-deep: #5c0b0d;
+  --wine-deep: #760e10;
   --ink: #32191e;
   --ink-dim: #5c4148;
   --success: #4f6b3c;
@@ -144,11 +145,11 @@
   --audiencia: #d1272a;
   --hero-bg: var(--gold);
   --hero-accent: var(--wine-deep);
-  --atendimento-bg: var(--brand-azul-bebe);
-  --atendimento-accent: #5c0f13;
+  --atendimento-bg: var(--brand-pergaminho-neutro);
+  --atendimento-accent: var(--wine-deep);
   --atendimento-body: #24333b;
-  --steps-bg: #5c0f13;
-  --steps-accent: var(--brand-azul-bebe);
+  --steps-bg: var(--wine-deep);
+  --steps-accent: var(--brand-pergaminho-neutro);
   --steps-body: var(--brand-champagne);
   --steps-track: rgba(255, 255, 255, 0.28);
 }
@@ -159,10 +160,10 @@
   --surface: #3c1e24;
   --hairline: rgba(242, 239, 234, 0.14);
   --hairline-strong: rgba(242, 239, 234, 0.28);
-  --gold: #a3b8c4; /* Equilíbrio */
+  --gold: #b5c1d2; /* Equilíbrio */
   --gold-bright: #f2efea; /* Acolhimento */
   --wine: #a8383b;
-  --wine-deep: #6b0c0f; /* Confiança */
+  --wine-deep: #760e10; /* Confiança */
   --ink: #f2efea;
   --ink-dim: #dfd6bc; /* Conforto */
   --success: #8fa37a;
@@ -171,11 +172,11 @@
   --audiencia: #ff4d4d;
   --hero-bg: var(--bg);
   --hero-accent: var(--gold);
-  --atendimento-bg: #5c0f13;
+  --atendimento-bg: var(--wine-deep);
   --atendimento-accent: var(--gold);
   --atendimento-body: var(--brand-champagne);
   --steps-bg: var(--gold);
-  --steps-accent: #5c0f13;
+  --steps-accent: var(--wine-deep);
   --steps-body: #7a2b30;
   --steps-track: rgba(58, 10, 13, 0.22);
 }
@@ -229,7 +230,6 @@
   --color-steps-bg: var(--steps-bg);
   --color-steps-accent: var(--steps-accent);
   --color-steps-body: var(--steps-body);
-  --color-brand-azul-bebe: var(--brand-azul-bebe);
   --color-ink: var(--ink);
   --color-ink-dim: var(--ink-dim);
   --color-success: var(--success);
