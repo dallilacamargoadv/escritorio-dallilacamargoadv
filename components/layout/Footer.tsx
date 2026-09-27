@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { SERVICE_AREAS, SITE } from "@/lib/site-data";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
@@ -12,24 +11,12 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div>
             <Link href="/" className="flex items-center gap-2">
-              <Image
-                src="/logo-d-malva.png"
-                alt=""
-                width={24}
-                height={24}
-                unoptimized
+              <span
                 aria-hidden="true"
-                className="brand-mark-on-dark h-6 w-6 object-contain"
-              />
-              <Image
-                src="/logo-d-bordo.png"
-                alt=""
-                width={24}
-                height={24}
-                unoptimized
-                aria-hidden="true"
-                className="brand-mark-on-light h-6 w-6 object-contain"
-              />
+                className="text-xl leading-none text-wine"
+              >
+                ✶
+              </span>
               <span className="font-display text-base italic text-gold">
                 Dallila Camargo
               </span>
