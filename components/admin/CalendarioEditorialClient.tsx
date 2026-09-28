@@ -2,6 +2,17 @@
 
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
+import {
+  DndContext,
+  DragOverlay,
+  PointerSensor,
+  useDraggable,
+  useDroppable,
+  useSensor,
+  useSensors,
+  type DragEndEvent,
+} from "@dnd-kit/core";
+import { CSS } from "@dnd-kit/utilities";
 import type {
   ConteudoEditorial,
   ContentCanal,
@@ -57,6 +68,10 @@ export function CalendarioEditorialClient({
   const [novoDia, setNovoDia] = useState<number | null>(null);
   const [novoForm, setNovoForm] = useState<NovoForm | null>(null);
   const [salvando, setSalvando] = useState(false);
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const sensors = useSensors(
+    useSensor(PointerSensor, { activationConstraint: { distance: 6 } }),
+  );
 
   const porDia = useMemo(() => {
     const mapa = new Map<number, ConteudoEditorial[]>();
@@ -144,6 +159,19 @@ export function CalendarioEditorialClient({
     });
   }
 
+  function handleDragEnd(event: DragEndEvent) {
+    setActiveId(null);
+    const { active, over } = event;
+    if (!over) return;
+    const c = conteudos.find((x) => x.id === active.id);
+    if (!c) return;
+    const novaData = dataStr(ano, mes, Number(over.id));
+    if (novaData === c.data) return;
+    moverConteudo(c, novaData);
+  }
+
+  const activeConteudo = conteudos.find((c) => c.id === activeId) ?? null;
+
   async function salvarNovo() {
     if (!novoForm || !novoForm.tema.trim()) return;
     setSalvando(true);
@@ -199,7 +227,17 @@ export function CalendarioEditorialClient({
         </button>
       </div>
 
-      <div className="mt-6 grid grid-cols-7 gap-px border border-hairline bg-hairline">
+      <p className="mt-6 text-xs text-ink-dim">
+        Arraste um card (ainda não publicado) pra outro dia pra reagendar.
+      </p>
+
+      <DndContext
+        sensors={sensors}
+        onDragStart={(e) => setActiveId(e.active.id as string)}
+        onDragEnd={handleDragEnd}
+        onDragCancel={() => setActiveId(null)}
+      >
+      <div className="mt-2 grid grid-cols-7 gap-px border border-hairline bg-hairline">
         {DIAS_SEMANA.map((d, i) => (
           <div key={d} className="bg-bg-alt px-2 py-1.5 font-mono text-[9.5px] uppercase tracking-wide text-ink-dim">
             {d}
@@ -213,7 +251,7 @@ export function CalendarioEditorialClient({
           if (dia === null) return <div key={`empty-${i}`} className="min-h-[120px] bg-bg-alt" />;
           const itens = porDia.get(dia) ?? [];
           return (
-            <div key={dia} className="flex min-h-[120px] flex-col gap-1.5 bg-surface p-1.5">
+            <DiaCelula key={dia} dia={dia}>
               <div className="flex items-center justify-between">
                 <span className="font-mono text-[11px] text-ink-dim">{dia}</span>
                 <button
@@ -226,7 +264,7 @@ export function CalendarioEditorialClient({
               </div>
 
               {itens.map((c) => (
-                <ConteudoCard key={c.id} c={c} onToggle={togglePublicado} onSalvarMetricas={salvarMetricas} onMover={moverConteudo} />
+                <DraggableConteudoCard key={c.id} c={c} onToggle={togglePublicado} onSalvarMetricas={salvarMetricas} />
               ))}
 
               {novoDia === dia && novoForm && (
@@ -288,10 +326,17 @@ export function CalendarioEditorialClient({
                   </div>
                 </div>
               )}
-            </div>
+            </DiaCelula>
           );
         })}
       </div>
+
+      <DragOverlay>
+        {activeConteudo ? (
+          <ConteudoCard c={activeConteudo} onToggle={togglePublicado} onSalvarMetricas={salvarMetricas} dragging />
+        ) : null}
+      </DragOverlay>
+      </DndContext>
 
       <div className="mt-6 flex flex-wrap gap-5 text-xs text-ink-dim">
         <span className="flex items-center gap-1.5"><i className="inline-block h-2.5 w-2.5 bg-chart-6" /> Topo de funil</span>
@@ -319,21 +364,61 @@ function montarLinkComUtm(baseUrl: string, utmContent: string | null): string {
   return url.toString();
 }
 
-function ConteudoCard({
+/** Célula de dia — área onde um card arrastado pode ser solto. */
+function DiaCelula({ dia, children }: { dia: number; children: React.ReactNode }) {
+  const { setNodeRef, isOver } = useDroppable({ id: String(dia) });
+  return (
+    <div
+      ref={setNodeRef}
+      className={`flex min-h-[120px] flex-col gap-1.5 bg-surface p-1.5 transition-colors duration-150 ${
+        isOver ? "bg-bg-alt ring-1 ring-inset ring-gold" : ""
+      }`}
+    >
+      {children}
+    </div>
+  );
+}
+
+/** Card arrastável — só conteúdo ainda não publicado pode ser movido de dia. */
+function DraggableConteudoCard({
   c,
   onToggle,
   onSalvarMetricas,
-  onMover,
 }: {
   c: ConteudoEditorial;
   onToggle: (c: ConteudoEditorial) => void;
   onSalvarMetricas: (c: ConteudoEditorial, alcance: string, interacoes: string) => void;
-  onMover: (c: ConteudoEditorial, novaData: string) => void;
+}) {
+  const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
+    id: c.id,
+    disabled: c.publicado,
+  });
+  const style = {
+    transform: CSS.Translate.toString(transform),
+    opacity: isDragging ? 0.4 : 1,
+  };
+
+  return (
+    <div ref={setNodeRef} style={style} {...(c.publicado ? {} : { ...listeners, ...attributes })}>
+      <ConteudoCard c={c} onToggle={onToggle} onSalvarMetricas={onSalvarMetricas} />
+    </div>
+  );
+}
+
+function ConteudoCard({
+  c,
+  onToggle,
+  onSalvarMetricas,
+  dragging,
+}: {
+  c: ConteudoEditorial;
+  onToggle: (c: ConteudoEditorial) => void;
+  onSalvarMetricas: (c: ConteudoEditorial, alcance: string, interacoes: string) => void;
+  dragging?: boolean;
 }) {
   const [alcance, setAlcance] = useState(c.alcance?.toString() ?? "");
   const [interacoes, setInteracoes] = useState(c.interacoes?.toString() ?? "");
   const [editandoMetricas, setEditandoMetricas] = useState(false);
-  const [movendo, setMovendo] = useState(false);
   const [copiado, setCopiado] = useState(false);
   const linkBase = extrairLinkSugerido(c.observacoes);
   const link = linkBase ? montarLinkComUtm(linkBase, c.utm_content) : null;
@@ -350,7 +435,7 @@ function ConteudoCard({
   }
 
   return (
-    <div className={`border-l-2 bg-bg-alt p-1.5 ${PILAR_BORDER[c.pilar]}`}>
+    <div className={`border-l-2 bg-bg-alt p-1.5 ${PILAR_BORDER[c.pilar]} ${dragging ? "shadow-lg" : ""} ${!c.publicado ? "cursor-grab active:cursor-grabbing" : ""}`}>
       <p className="font-mono text-[9px] uppercase tracking-wide text-ink-dim">
         {FORMATO_LABELS[c.formato]}
       </p>
@@ -375,25 +460,7 @@ function ConteudoCard({
       </label>
 
       {!c.publicado && (
-        <button
-          onClick={() => setMovendo((v) => !v)}
-          className="mt-1 font-mono text-[9px] text-ink-dim underline underline-offset-2"
-        >
-          {movendo ? "cancelar" : "mover pra outro dia"}
-        </button>
-      )}
-      {movendo && (
-        <input
-          type="date"
-          defaultValue={c.data}
-          onChange={(e) => {
-            if (e.target.value) {
-              onMover(c, e.target.value);
-              setMovendo(false);
-            }
-          }}
-          className="mt-1 w-full border border-hairline-strong bg-surface px-1 py-0.5 text-[10px] text-ink"
-        />
+        <p className="mt-1 font-mono text-[9px] text-ink-dim">↕ arraste pra outro dia</p>
       )}
 
       {c.publicado && (
