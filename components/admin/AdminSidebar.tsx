@@ -26,6 +26,10 @@ import {
   Handshake,
   Compass,
   Layers,
+  Megaphone,
+  CalendarRange,
+  Rocket,
+  Rss,
 } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { createClient } from "@/lib/supabase/client";
@@ -56,6 +60,39 @@ export function AdminSidebar({
           href: "/admin/analise-aprofundada",
           label: "Análise Aprofundada",
           icon: TrendingUp,
+          exact: false,
+          badge: 0,
+        },
+      ],
+    },
+    {
+      label: "Marketing",
+      items: [
+        {
+          href: "/admin/marketing",
+          label: "Painel de Marketing",
+          icon: Megaphone,
+          exact: true,
+          badge: 0,
+        },
+        {
+          href: "/admin/marketing/calendario",
+          label: "Calendário Editorial",
+          icon: CalendarRange,
+          exact: false,
+          badge: 0,
+        },
+        {
+          href: "/admin/marketing/estrategia",
+          label: "Estratégia 90 dias",
+          icon: Rocket,
+          exact: false,
+          badge: 0,
+        },
+        {
+          href: "/admin/marketing/instagram",
+          label: "Feed do Instagram",
+          icon: Rss,
           exact: false,
           badge: 0,
         },

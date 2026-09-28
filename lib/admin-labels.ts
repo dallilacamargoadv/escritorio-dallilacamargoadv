@@ -8,6 +8,8 @@ import type { NotificacaoTipo } from "@/lib/db-notificacoes";
 import type { AtividadeTipo, AtividadeStatus } from "@/lib/db-atividades";
 import type { DespesaStatus, DespesaRecorrencia } from "@/lib/db-despesas";
 import type { IndicacaoDirecao } from "@/lib/db-indicacoes";
+import type { ContentCanal, ContentFormato, ContentPilar } from "@/lib/db-conteudo-editorial";
+import type { EstrategiaCadencia } from "@/lib/db-estrategia";
 
 export const FORM_TYPE_LABELS: Record<string, string> = {
   contratos: "Contratos",
@@ -240,4 +242,47 @@ export const ATIVIDADE_STATUS_COLORS: Record<AtividadeStatus, string> = {
   pendente: "text-gold border-gold",
   concluido: "text-success border-success",
   cancelado: "text-ink-dim border-hairline-strong",
+};
+
+export const CANAL_LABELS: Record<ContentCanal, string> = {
+  instagram: "Instagram",
+  tiktok: "TikTok",
+  linkedin: "LinkedIn",
+  blog: "Blog",
+  whatsapp: "WhatsApp",
+  outro: "Outro",
+};
+
+export const FORMATO_LABELS: Record<ContentFormato, string> = {
+  stories: "Stories",
+  post: "Post",
+  carrossel: "Carrossel",
+  reels: "Reels",
+  artigo: "Artigo",
+};
+
+/** Cores por etapa do funil — mesmo padrão de cores da planilha da mentora
+ * (azul=topo, amarelo=meio, roxo=fundo), remapeadas pros tokens da marca. */
+export const PILAR_LABELS: Record<ContentPilar, string> = {
+  topo: "Topo de funil",
+  meio: "Meio de funil",
+  fundo: "Fundo de funil",
+};
+
+export const PILAR_COLORS: Record<ContentPilar, string> = {
+  topo: "text-chart-6 border-chart-6",
+  meio: "text-chart-1 border-chart-1",
+  fundo: "text-chart-5 border-chart-5",
+};
+
+export const CADENCIA_LABELS: Record<EstrategiaCadencia, string> = {
+  diaria: "Diária",
+  semanal: "Semanal",
+  quinzenal: "Quinzenal",
+  mensal: "Mensal",
+  trimestral: "Trimestral",
+  semestral: "Semestral",
+  anual: "Anual",
+  ao_final_do_caso: "Ao final de cada caso",
+  segundo_semestre: "2º semestre",
 };
