@@ -19,5 +19,12 @@ export default async function CalendarioEditorialPage({
     redirect("/login");
   }
 
-  return <CalendarioEditorialClient ano={ano} mes={mes} conteudosIniciais={conteudos} />;
+  return (
+    <CalendarioEditorialClient
+      key={`${ano}-${mes}`}
+      ano={ano}
+      mes={mes}
+      conteudosIniciais={conteudos}
+    />
+  );
 }
