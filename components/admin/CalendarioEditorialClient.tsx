@@ -103,6 +103,19 @@ export function CalendarioEditorialClient({
     }
   }
 
+  async function moverConteudo(c: ConteudoEditorial, novaData: string) {
+    setConteudos((prev) => prev.map((x) => (x.id === c.id ? { ...x, data: novaData } : x)));
+    const res = await fetch(`/api/admin/conteudo-editorial/${c.id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ data: novaData }),
+    });
+    if (res.ok) {
+      const { conteudo } = await res.json();
+      setConteudos((prev) => prev.map((x) => (x.id === c.id ? conteudo : x)));
+    }
+  }
+
   async function salvarMetricas(c: ConteudoEditorial, alcance: string, interacoes: string) {
     const body = {
       alcance: alcance === "" ? null : Number(alcance),
@@ -213,7 +226,7 @@ export function CalendarioEditorialClient({
               </div>
 
               {itens.map((c) => (
-                <ConteudoCard key={c.id} c={c} onToggle={togglePublicado} onSalvarMetricas={salvarMetricas} />
+                <ConteudoCard key={c.id} c={c} onToggle={togglePublicado} onSalvarMetricas={salvarMetricas} onMover={moverConteudo} />
               ))}
 
               {novoDia === dia && novoForm && (
@@ -310,14 +323,17 @@ function ConteudoCard({
   c,
   onToggle,
   onSalvarMetricas,
+  onMover,
 }: {
   c: ConteudoEditorial;
   onToggle: (c: ConteudoEditorial) => void;
   onSalvarMetricas: (c: ConteudoEditorial, alcance: string, interacoes: string) => void;
+  onMover: (c: ConteudoEditorial, novaData: string) => void;
 }) {
   const [alcance, setAlcance] = useState(c.alcance?.toString() ?? "");
   const [interacoes, setInteracoes] = useState(c.interacoes?.toString() ?? "");
   const [editandoMetricas, setEditandoMetricas] = useState(false);
+  const [movendo, setMovendo] = useState(false);
   const [copiado, setCopiado] = useState(false);
   const linkBase = extrairLinkSugerido(c.observacoes);
   const link = linkBase ? montarLinkComUtm(linkBase, c.utm_content) : null;
@@ -357,6 +373,28 @@ function ConteudoCard({
         />
         publicado
       </label>
+
+      {!c.publicado && (
+        <button
+          onClick={() => setMovendo((v) => !v)}
+          className="mt-1 font-mono text-[9px] text-ink-dim underline underline-offset-2"
+        >
+          {movendo ? "cancelar" : "mover pra outro dia"}
+        </button>
+      )}
+      {movendo && (
+        <input
+          type="date"
+          defaultValue={c.data}
+          onChange={(e) => {
+            if (e.target.value) {
+              onMover(c, e.target.value);
+              setMovendo(false);
+            }
+          }}
+          className="mt-1 w-full border border-hairline-strong bg-surface px-1 py-0.5 text-[10px] text-ink"
+        />
+      )}
 
       {c.publicado && (
         <button
