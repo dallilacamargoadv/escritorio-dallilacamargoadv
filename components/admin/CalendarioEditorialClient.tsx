@@ -9,12 +9,16 @@ import type {
   ContentPilar,
 } from "@/lib/db-conteudo-editorial";
 import { CANAL_LABELS, FORMATO_LABELS, PILAR_LABELS } from "@/lib/admin-labels";
+import { GuiaPilaresPanel } from "@/components/admin/GuiaPilaresPanel";
 
 const MESES = [
   "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
   "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro",
 ];
 const DIAS_SEMANA = ["dom", "seg", "ter", "qua", "qui", "sex", "sáb"];
+/** Ritmo semanal sugerido (ver Guia de Pilares): seg-qui = conteúdo principal,
+ * sex-dom = só stories leves (+ 1 trend/pessoal em algum dia do fim de semana). */
+const RITMO_DIA_SEMANA = ["stories", "principal", "principal", "principal", "principal", "stories", "stories"] as const;
 
 const PILAR_BORDER: Record<ContentPilar, string> = {
   topo: "border-l-chart-6",
@@ -162,6 +166,8 @@ export function CalendarioEditorialClient({
         </p>
       </div>
 
+      <GuiaPilaresPanel />
+
       <div className="mt-6 flex items-center justify-between">
         <button
           onClick={mesAnterior}
@@ -181,9 +187,12 @@ export function CalendarioEditorialClient({
       </div>
 
       <div className="mt-6 grid grid-cols-7 gap-px border border-hairline bg-hairline">
-        {DIAS_SEMANA.map((d) => (
+        {DIAS_SEMANA.map((d, i) => (
           <div key={d} className="bg-bg-alt px-2 py-1.5 font-mono text-[9.5px] uppercase tracking-wide text-ink-dim">
             {d}
+            <span className={`ml-1.5 normal-case ${RITMO_DIA_SEMANA[i] === "stories" ? "text-ink-dim" : "text-gold"}`}>
+              · {RITMO_DIA_SEMANA[i]}
+            </span>
           </div>
         ))}
 
