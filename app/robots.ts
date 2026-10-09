@@ -10,10 +10,10 @@ const ALLOWED_BOTS = [
   "Claude-User",
   "PerplexityBot",
   "Applebot-Extended",
+  "Google-Extended",
 ];
 
 const BLOCKED_BOTS = [
-  "Google-Extended",
   "CCBot",
   "Meta-ExternalAgent",
   "FacebookBot",
