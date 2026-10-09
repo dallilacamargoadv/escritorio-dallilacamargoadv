@@ -1,7 +1,7 @@
 import { SITE } from "./site-data";
 
 export const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://dallilacamargoadv.com.br";
+  "https://www.dallilacamargoadv.com.br";
 
 export const SCHEMA_IDS = {
   legalService: `${BASE_URL}/#legalservice`,

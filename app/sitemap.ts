@@ -21,6 +21,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
+  const landingRoutes: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/reativacao-e-recuperacao-de-conta-hackeada`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+  ];
+
   const serviceRoutes: MetadataRoute.Sitemap = SERVICE_AREAS.map((area) => ({
     url: `${BASE_URL}/${area.slug}`,
     changeFrequency: "monthly",
@@ -42,5 +50,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...categoryRoutes, ...postRoutes];
+  return [...staticRoutes, ...landingRoutes, ...serviceRoutes, ...categoryRoutes, ...postRoutes];
 }

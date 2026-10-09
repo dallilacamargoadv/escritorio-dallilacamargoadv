@@ -6,7 +6,7 @@ import "./globals.css";
 const GOOGLE_ADS_ID = "AW-18395655980";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dallilacamargoadv.com.br"),
+  metadataBase: new URL("https://www.dallilacamargoadv.com.br"),
   title: {
     default: "Dallila Camargo I Advogada",
     template: "%s, Dallila Camargo I Advogada",
