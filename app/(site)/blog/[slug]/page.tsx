@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import { postMdxComponents } from "@/components/blog/PostComponents";
 import { Reveal } from "@/components/ui/Reveal";
 import { EnclosureNested } from "@/components/ui/EnclosureNested";
 import { BlogPostCard, categoryHref } from "@/components/blog/BlogPostCard";
@@ -96,7 +97,7 @@ export default async function BlogPostPage({
         </div>
 
         <div className="prose-article mt-12">
-          <MDXRemote source={post.content} />
+          <MDXRemote source={post.content} components={postMdxComponents} />
         </div>
 
         <EnclosureNested className="mt-16">

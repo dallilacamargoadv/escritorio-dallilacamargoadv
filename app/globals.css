@@ -429,6 +429,167 @@ h4 {
   border-radius: 4px;
 }
 
+/* Componentes de artigo (components/blog/PostComponents.tsx) */
+
+.prose-article .post-clausulas > * + * {
+  margin-top: 0.75rem;
+}
+
+.prose-article .post-clausula {
+  padding: 1rem 1.125rem;
+  background: var(--surface);
+  border-left: 3px solid var(--wine);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.97rem;
+  line-height: 1.6;
+  color: var(--ink-dim);
+}
+
+.prose-article .post-clausula strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.prose-article .post-nota {
+  padding: 1.125rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  font-size: 0.97rem;
+}
+
+.prose-article .post-nota__titulo {
+  display: block;
+  margin-bottom: 0.375rem;
+  font-size: 0.625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.prose-article .post-fluxo {
+  padding: 1.75rem 1.25rem;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.prose-article .post-fluxo__titulo {
+  margin: 0 0 1.25rem;
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.prose-article .post-fluxo__passo {
+  max-width: 22.5rem;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.prose-article .post-fluxo__passo p,
+.prose-article .post-ramo p {
+  margin: 0;
+  color: inherit;
+}
+
+.prose-article .post-fluxo__passo small {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  color: var(--ink-dim);
+}
+
+.prose-article .post-fluxo__passo--pergunta {
+  max-width: 18.75rem;
+  border-color: var(--gold);
+  border-radius: 999px;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.prose-article .post-fluxo__passo--final {
+  background: var(--wine-deep);
+  border-color: var(--wine-deep);
+  color: var(--brand-marfim-rosado);
+}
+
+.prose-article .post-fluxo__passo--final small {
+  color: var(--brand-champagne);
+}
+
+.prose-article .post-fluxo__item + .post-fluxo__item,
+.prose-article .post-fluxo__chip + .post-fluxo__passo {
+  position: relative;
+  margin-top: 1.75rem;
+}
+
+.prose-article .post-fluxo__item + .post-fluxo__item::before,
+.prose-article .post-fluxo__chip + .post-fluxo__passo::before {
+  content: "↓" / "";
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+  left: 0;
+  line-height: 1.5rem;
+  text-align: center;
+  color: var(--gold);
+}
+
+.prose-article .post-fluxo__ramos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  max-width: 37.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.prose-article .post-fluxo__ramo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prose-article .post-fluxo__ramo .post-fluxo__passo {
+  display: flex;
+  flex: 1;
+  margin-top: 1.75rem;
+  width: 100%;
+  max-width: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.prose-article .post-fluxo__chip {
+  padding: 0.125rem 0.75rem;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--brand-vinho-porto);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.prose-article .post-fluxo figcaption {
+  margin-top: 1.25rem;
+  font-size: 0.8125rem;
+  color: var(--ink-dim);
+}
+
+@media (max-width: 560px) {
+  .prose-article .post-fluxo__ramos {
+    grid-template-columns: 1fr;
+  }
+}
+
 .prose-article-editor {
   cursor: text;
 }
