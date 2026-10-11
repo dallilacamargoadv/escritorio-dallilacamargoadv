@@ -3,7 +3,9 @@ import Script from "next/script";
 import { quicksand } from "./fonts";
 import "./globals.css";
 
+// ID antigo mantido; o novo é o da conta de anúncios ativa (142-679-3913).
 const GOOGLE_ADS_ID = "AW-18395655980";
+const GOOGLE_ADS_ID_ATUAL = "AW-18395785348";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dallilacamargoadv.com.br"),
@@ -58,6 +60,7 @@ export default function RootLayout({
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', '${GOOGLE_ADS_ID}');
+          gtag('config', '${GOOGLE_ADS_ID_ATUAL}');
         `}
       </Script>
     </html>
