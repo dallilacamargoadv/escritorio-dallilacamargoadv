@@ -75,7 +75,7 @@ export default async function BlogPostPage({
         ])}
       />
 
-      <Reveal>
+      <Reveal threshold={0}>
         <Link
           href={categoryHref(post.category)}
           className="font-eyebrow text-[10px] text-gold"
