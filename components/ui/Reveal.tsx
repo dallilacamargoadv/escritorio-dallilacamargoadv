@@ -5,9 +5,12 @@ import { useEffect, useRef, useState } from "react";
 export function Reveal({
   children,
   className = "",
+  threshold = 0.15,
 }: {
   children: React.ReactNode;
   className?: string;
+  // Elementos mais altos que a tela nunca chegam a 15% visíveis: passar 0.
+  threshold?: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -23,12 +26,12 @@ export function Reveal({
           observer.disconnect();
         }
       },
-      { threshold: 0.15 },
+      { threshold },
     );
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [threshold]);
 
   return (
     <div
