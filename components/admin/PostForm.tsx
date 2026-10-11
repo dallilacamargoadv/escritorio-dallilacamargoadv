@@ -6,6 +6,12 @@ import { BLOG_CATEGORIES, type BlogCategory } from "@/lib/blog";
 import type { AdminPost } from "@/lib/db-blog-admin";
 import { RichTextEditor } from "@/components/admin/RichTextEditor";
 
+// Posts que usam os componentes de components/blog/PostComponents.tsx não
+// sobrevivem ao editor rich-text (html: false escapa as tags): ficam num
+// campo de texto cru, que grava o conteúdo exatamente como está.
+const MDX_COMPONENT_TAG =
+  /<(Clausulas|Clausula|Nota|Fluxograma|Passo|Ramos|Ramo)[\s>]/;
+
 export function PostForm({ post }: { post?: AdminPost }) {
   const router = useRouter();
   const [title, setTitle] = useState(post?.title ?? "");
@@ -14,6 +20,7 @@ export function PostForm({ post }: { post?: AdminPost }) {
     post?.category ?? BLOG_CATEGORIES[0],
   );
   const [content, setContent] = useState(post?.content ?? "");
+  const [rawMode] = useState(() => MDX_COMPONENT_TAG.test(post?.content ?? ""));
   const [published, setPublished] = useState(post?.published ?? false);
   const [metaTitle, setMetaTitle] = useState(post?.meta_title ?? "");
   const [metaDescription, setMetaDescription] = useState(post?.meta_description ?? "");
@@ -113,7 +120,24 @@ export function PostForm({ post }: { post?: AdminPost }) {
             Conteúdo
           </label>
           <div className="mt-2">
-            <RichTextEditor value={content} onChange={setContent} />
+            {rawMode ? (
+              <>
+                <p className="mb-2 text-xs text-ink-dim">
+                  Este post usa cards, notas ou fluxograma. O editor visual
+                  não preserva esses blocos, então o texto aparece cru (MDX).
+                  Edite sem apagar as tags entre &lt; &gt;.
+                </p>
+                <textarea
+                  value={content}
+                  onChange={(e) => setContent(e.target.value)}
+                  rows={28}
+                  spellCheck={false}
+                  className="w-full border border-hairline-strong bg-surface px-3 py-2 font-mono text-xs leading-relaxed text-ink outline-none transition-colors duration-150 focus:border-gold"
+                />
+              </>
+            ) : (
+              <RichTextEditor value={content} onChange={setContent} />
+            )}
           </div>
         </div>
 
