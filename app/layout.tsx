@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { quicksand } from "./fonts";
 import "./globals.css";
+import { WhatsAppConversionTracker } from "@/components/WhatsAppConversionTracker";
 
 // ID antigo mantido; o novo é o da conta de anúncios ativa (142-679-3913).
 const GOOGLE_ADS_ID = "AW-18395655980";
@@ -49,6 +50,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen-safe flex flex-col bg-bg text-ink">
         {children}
+        <WhatsAppConversionTracker />
       </body>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
