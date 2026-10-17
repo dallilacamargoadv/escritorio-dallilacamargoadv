@@ -9,6 +9,7 @@ export type LeadOrigem =
   | "whatsapp"
   | "indicacao"
   | "organico"
+  | "google_ads"
   | "outro";
 
 export type LeadStatus =
@@ -37,7 +38,7 @@ export interface Lead {
   form_type: LeadFormType;
   scope_key: string;
   name: string;
-  email: string;
+  email: string | null;
   whatsapp: string;
   answers: Record<string, unknown>;
   utms: Record<string, string>;
@@ -48,6 +49,7 @@ export interface Lead {
   sla_due_at: string | null;
   first_contacted_at: string | null;
   arquivado: boolean;
+  motivo_perda: string | null;
 }
 
 export interface LeadNote {
@@ -73,9 +75,14 @@ export async function getAllLeads(): Promise<Lead[]> {
 export async function updateLeadStatus(
   leadId: string,
   status: LeadStatus,
+  motivoPerda?: string | null,
 ): Promise<void> {
   const supabase = await createClient();
-  const updates: Record<string, unknown> = { status };
+  // O motivo só vale enquanto o lead está "perdido"; ao sair desse status, limpa.
+  const updates: Record<string, unknown> = {
+    status,
+    motivo_perda: status === "perdido" ? (motivoPerda ?? null) : null,
+  };
   if (status !== "leads") {
     const { data: current } = await supabase
       .from("leads")
@@ -111,7 +118,7 @@ export async function setLeadArquivado(
 export interface CreateLeadManualInput {
   formType: LeadFormType;
   name: string;
-  email: string;
+  email?: string;
   whatsapp: string;
   origem: LeadOrigem;
 }
@@ -126,7 +133,7 @@ export async function createLeadManual(
       form_type: input.formType,
       scope_key: "manual",
       name: input.name.trim(),
-      email: input.email.trim().toLowerCase(),
+      email: input.email?.trim() ? input.email.trim().toLowerCase() : null,
       whatsapp: input.whatsapp.replace(/\D/g, ""),
       answers: {},
       utms: {},

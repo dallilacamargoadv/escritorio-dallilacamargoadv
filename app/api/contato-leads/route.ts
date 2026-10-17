@@ -19,10 +19,11 @@ export async function POST(request: NextRequest) {
     metadata: clientMeta,
   } = body;
 
+  const emailLimpo = typeof email === "string" ? email.trim() : "";
   if (
     !isValidName(name ?? "") ||
-    !isValidEmail(email ?? "") ||
-    !isValidWhatsapp(whatsapp ?? "")
+    !isValidWhatsapp(whatsapp ?? "") ||
+    (emailLimpo !== "" && !isValidEmail(emailLimpo))
   ) {
     return NextResponse.json({ error: "Dados inválidos." }, { status: 400 });
   }
@@ -43,7 +44,7 @@ export async function POST(request: NextRequest) {
     formType: "outros",
     scopeKey: "contato_geral",
     name,
-    email,
+    email: emailLimpo || undefined,
     whatsapp,
     answers: { relato: relatoLimpo },
     utms,
@@ -52,7 +53,7 @@ export async function POST(request: NextRequest) {
 
   sendMetaLeadEvent({
     eventId,
-    email,
+    email: emailLimpo || undefined,
     phone: whatsapp,
     name,
     contentName: "Contato geral",

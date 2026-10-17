@@ -12,7 +12,7 @@ export interface InsertLeadInput {
   formType: LeadFormType;
   scopeKey?: string;
   name: string;
-  email: string;
+  email?: string;
   whatsapp: string;
   answers: Record<string, unknown>;
   utms: Record<string, string>;
@@ -34,7 +34,7 @@ export async function insertLead(
     form_type: input.formType,
     scope_key: input.scopeKey ?? "global",
     name: input.name.trim(),
-    email: input.email.trim().toLowerCase(),
+    email: input.email?.trim() ? input.email.trim().toLowerCase() : null,
     whatsapp: input.whatsapp.replace(/\D/g, ""),
     answers: input.answers,
     utms: input.utms,

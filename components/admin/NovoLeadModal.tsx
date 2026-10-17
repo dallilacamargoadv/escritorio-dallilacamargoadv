@@ -24,8 +24,8 @@ export function NovoLeadModal({
   const [error, setError] = useState("");
 
   async function handleSave() {
-    if (!name.trim() || !email.trim() || !whatsapp.trim() || !formType || !origem) {
-      setError("Nome, e-mail, WhatsApp, área e origem são obrigatórios.");
+    if (!name.trim() || !whatsapp.trim() || !formType || !origem) {
+      setError("Nome, WhatsApp, área e origem são obrigatórios.");
       return;
     }
 
@@ -85,7 +85,7 @@ export function NovoLeadModal({
             />
           </div>
           <div>
-            <label className="font-eyebrow text-[10px] text-ink-dim">E-mail</label>
+            <label className="font-eyebrow text-[10px] text-ink-dim">E-mail (opcional)</label>
             <input
               type="email"
               value={email}

@@ -4,7 +4,12 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { MapPin, Cpu, Globe, X } from "lucide-react";
 import type { Lead, LeadNote, LeadStatus } from "@/lib/db-admin";
-import { FORM_TYPE_LABELS, STATUS_LABELS } from "@/lib/admin-labels";
+import {
+  FORM_TYPE_LABELS,
+  MOTIVO_PERDA_LABELS,
+  SCOPE_LABELS,
+  STATUS_LABELS,
+} from "@/lib/admin-labels";
 
 export function LeadDetailModal({
   lead,
@@ -42,18 +47,19 @@ export function LeadDetailModal({
     };
   }, [lead.id]);
 
-  async function handleStatusChange(status: LeadStatus) {
+  async function handleStatusChange(status: LeadStatus, motivoPerda?: string) {
     setStatusSaving(true);
     try {
       const res = await fetch(`/api/admin/leads/${lead.id}/status`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ status }),
+        body: JSON.stringify({ status, motivo_perda: motivoPerda ?? null }),
       });
       if (res.ok) {
         onUpdate({
           ...lead,
           status,
+          motivo_perda: status === "perdido" ? (motivoPerda ?? null) : null,
           first_contacted_at:
             status !== "leads" && !lead.first_contacted_at
               ? new Date().toISOString()
@@ -118,6 +124,7 @@ export function LeadDetailModal({
           <div>
             <p className="font-eyebrow text-[10px] text-gold">
               {FORM_TYPE_LABELS[lead.form_type] ?? lead.form_type}
+              {SCOPE_LABELS[lead.scope_key] ? ` · ${SCOPE_LABELS[lead.scope_key]}` : ""}
             </p>
             <h2 className="mt-1 text-lg italic text-ink">{lead.name}</h2>
           </div>
@@ -153,6 +160,30 @@ export function LeadDetailModal({
               </option>
             ))}
           </select>
+          {lead.status === "perdido" && (
+            <div className="mt-3">
+              <label
+                htmlFor="lead-motivo-perda"
+                className="font-eyebrow text-[10px] text-ink-dim"
+              >
+                Motivo da perda
+              </label>
+              <select
+                id="lead-motivo-perda"
+                value={lead.motivo_perda ?? ""}
+                disabled={statusSaving}
+                onChange={(e) => handleStatusChange("perdido", e.target.value)}
+                className="mt-2 w-full border border-hairline-strong bg-bg px-3 py-2 text-sm text-ink disabled:opacity-50"
+              >
+                <option value="">Escolha o motivo</option>
+                {Object.entries(MOTIVO_PERDA_LABELS).map(([valor, rotulo]) => (
+                  <option key={valor} value={valor}>
+                    {rotulo}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
           <button
             type="button"
             onClick={handleToggleArquivado}
@@ -175,7 +206,7 @@ export function LeadDetailModal({
             <h3 className="flex items-center gap-2 font-eyebrow text-[10px] text-ink-dim">
               Contato
             </h3>
-            <p className="mt-1 text-ink">{lead.email}</p>
+            <p className="mt-1 text-ink">{lead.email ?? "Sem e-mail"}</p>
             <p className="text-ink">{lead.whatsapp}</p>
           </section>
 

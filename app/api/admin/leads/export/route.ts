@@ -26,7 +26,7 @@ function escapeCsv(value: string): string {
 function toRows(leads: Awaited<ReturnType<typeof getAllLeads>>) {
   return leads.map((lead) => [
     lead.name,
-    lead.email,
+    lead.email ?? "",
     lead.whatsapp,
     lead.form_type,
     lead.utms?.utm_source ?? "",
