@@ -267,7 +267,7 @@ export function AdminDashboard({ initialLeads }: { initialLeads: Lead[] }) {
               return (
                 <tr key={lead.id} className="border-b border-hairline">
                   <td className="px-4 py-3 text-ink">{lead.name}</td>
-                  <td className="px-4 py-3 text-ink-dim">{lead.email}</td>
+                  <td className="px-4 py-3 text-ink-dim">{lead.email ?? "—"}</td>
                   <td className="px-4 py-3 text-ink-dim">{lead.whatsapp}</td>
                   <td className="px-4 py-3 text-ink-dim">
                     {FORM_TYPE_LABELS[lead.form_type] ?? lead.form_type}

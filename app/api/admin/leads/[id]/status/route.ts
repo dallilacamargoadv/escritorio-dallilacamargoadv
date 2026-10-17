@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { updateLeadStatus, type LeadStatus } from "@/lib/db-admin";
-import { STATUS_LABELS } from "@/lib/admin-labels";
+import { MOTIVO_PERDA_LABELS, STATUS_LABELS } from "@/lib/admin-labels";
 
 const VALID_STATUSES = Object.keys(STATUS_LABELS) as LeadStatus[];
 
@@ -11,13 +11,17 @@ export async function PATCH(
   const { id } = await ctx.params;
   const body = await request.json();
   const status = body?.status as LeadStatus;
+  const motivoPerda =
+    typeof body?.motivo_perda === "string" && body.motivo_perda in MOTIVO_PERDA_LABELS
+      ? (body.motivo_perda as string)
+      : null;
 
   if (!VALID_STATUSES.includes(status)) {
     return NextResponse.json({ error: "Status inválido" }, { status: 400 });
   }
 
   try {
-    await updateLeadStatus(id, status);
+    await updateLeadStatus(id, status, motivoPerda);
     return NextResponse.json({ ok: true });
   } catch (error) {
     console.error(error);

@@ -39,8 +39,8 @@ export function ContatoGeralForm() {
       setError("Digite um WhatsApp válido, com DDD.");
       return;
     }
-    if (!isValidEmail(email)) {
-      setError("Digite um e-mail válido.");
+    if (email.trim() !== "" && !isValidEmail(email)) {
+      setError("Esse e-mail parece estar incorreto. Corrija ou deixe em branco.");
       return;
     }
     if (relato.trim().length < MIN_RELATO) {
@@ -130,7 +130,7 @@ export function ContatoGeralForm() {
       </div>
 
       <label className="mt-5 block text-sm text-ink-dim">
-        Seu melhor e-mail
+        Seu e-mail (opcional)
         <input
           type="email"
           inputMode="email"

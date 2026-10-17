@@ -36,7 +36,7 @@ export function trackLead({ eventId, contentName, value = 0 }: TrackLeadParams) 
 
 interface SendMetaLeadEventParams {
   eventId: string;
-  email: string;
+  email?: string;
   phone: string;
   name: string;
   contentName: string;
@@ -70,7 +70,7 @@ export async function sendMetaLeadEvent(params: SendMetaLeadEventParams) {
             action_source: "website",
             event_source_url: params.sourceUrl,
             user_data: {
-              em: [hash(params.email)],
+              em: params.email ? [hash(params.email)] : undefined,
               ph: [hash(params.phone.replace(/\D/g, ""))],
               client_ip_address: params.ip,
               client_user_agent: params.userAgent,

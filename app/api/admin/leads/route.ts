@@ -22,14 +22,20 @@ export async function POST(request: NextRequest) {
     ? body.origem
     : undefined;
 
-  if (!name || !email || !whatsapp || !formType || !origem) {
+  if (!name || !whatsapp || !formType || !origem) {
     return NextResponse.json(
-      { error: "Nome, e-mail, WhatsApp, área e origem são obrigatórios" },
+      { error: "Nome, WhatsApp, área e origem são obrigatórios" },
       { status: 400 },
     );
   }
 
-  const input: CreateLeadManualInput = { formType, name, email, whatsapp, origem };
+  const input: CreateLeadManualInput = {
+    formType,
+    name,
+    email: email || undefined,
+    whatsapp,
+    origem,
+  };
 
   try {
     const lead = await createLeadManual(input);

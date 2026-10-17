@@ -38,7 +38,26 @@ export const ORIGEM_LABELS: Record<LeadOrigem, string> = {
   whatsapp: "WhatsApp",
   indicacao: "Indicação",
   organico: "Orgânico",
+  google_ads: "Google Ads",
   outro: "Outro",
+};
+
+/** Motivos de perda de lead — escolha rápida no painel para aprender com o funil. */
+export const MOTIVO_PERDA_LABELS: Record<string, string> = {
+  nao_quis_pagar: "Não quis pagar",
+  conta_pessoal_sem_renda: "Conta pessoal, sem renda envolvida",
+  foi_para_outro: "Foi para outro escritório",
+  resolveu_sozinho: "Resolveu sozinho",
+  sem_resposta: "Parou de responder",
+  fora_da_area: "Fora da minha área",
+  outro: "Outro motivo",
+};
+
+/** Nome amigável do "scope_key" dos leads que não têm enum próprio (áreas novas). */
+export const SCOPE_LABELS: Record<string, string> = {
+  alvara_mirim: "Alvará mirim",
+  contato_geral: "Contato geral (site)",
+  manual: "Cadastro manual",
 };
 
 /** Reaproveita a mesma paleta categórica já validada das 5 áreas (seção 3 do
@@ -51,6 +70,7 @@ export const ORIGEM_CHART_COLORS: Record<LeadOrigem, string> = {
   whatsapp: "var(--chart-4)",
   indicacao: "var(--chart-5)",
   organico: "var(--chart-6)",
+  google_ads: "var(--gold)",
   outro: "var(--ink-dim)",
 };
 
