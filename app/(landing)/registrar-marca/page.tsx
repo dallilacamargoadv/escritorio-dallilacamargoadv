@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
     path: `/${SLUG}`,
     fallbackTitle: "Registrar Marca no INPI",
     fallbackDescription:
-      "Busca de anterioridade e registro de marca no INPI, do início ao deferimento. Fale com uma advogada especialista em Direito Digital.",
+      "Busca de anterioridade e pedido de registro de marca no INPI, com acompanhamento até a decisão. Atuação em Direito Digital.",
   });
 }
 
@@ -64,7 +64,7 @@ export default function RegistrarMarcaLandingPage() {
             .
           </>
         }
-        description="No Brasil, a marca é de quem deposita primeiro no INPI, não de quem usa primeiro. Faço a busca de anterioridade, o pedido de registro e acompanho até o deferimento."
+        description="No Brasil, a marca é de quem deposita primeiro no INPI, não de quem usa primeiro. Faço a busca de anterioridade, o pedido de registro e acompanho até a decisão do INPI."
       >
         <div className="mt-8 flex flex-wrap gap-3">
           <Button href="#formulario" variant="invert">

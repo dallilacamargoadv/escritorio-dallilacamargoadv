@@ -32,7 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
     path: `/${SLUG}`,
     fallbackTitle: "Registro de Marca",
     fallbackDescription:
-      "Registro de marca no INPI, do zero ao deferimento: proteção do nome, da logo e da identidade do seu negócio.",
+      "Pedido de registro de marca no INPI, com acompanhamento até a decisão, para o nome, a logo e a identidade do seu negócio.",
   });
 }
 
@@ -64,7 +64,7 @@ export default function RegistroDeMarcaPage() {
             desde o começo.
           </>
         }
-        description="Registro de marca no INPI pra proteger o nome do seu negócio, produto ou perfil contra cópia e uso indevido, do zero ao deferimento."
+        description="Pedido de registro de marca no INPI para o nome do seu negócio, produto ou perfil, com acompanhamento até a decisão do INPI."
       >
         <div className="mt-8">
           <Button href="#formulario" variant="invert">

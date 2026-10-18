@@ -66,7 +66,7 @@ export default function AlvaraMirimPage() {
             pra isso continuar.
           </>
         }
-        description="Desde 2026 a lei já deixa a plataforma exigir alvará judicial pra manter a monetização do seu filho ativa. Cuido de tudo, do pedido até a decisão, com a criança sempre protegida."
+        description="Desde 2026 a lei já deixa a plataforma exigir alvará judicial pra manter a monetização do seu filho ativa. Cuido do pedido até a decisão, com atenção ao interesse da criança."
       >
         <div className="mt-8">
           <Button href="#formulario" variant="invert">
