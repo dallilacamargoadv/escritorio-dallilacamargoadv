@@ -1,9 +1,10 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, after } from "next/server";
 import { randomUUID } from "node:crypto";
 import { buildLeadMetadata } from "@/lib/metadata";
 import { insertLead } from "@/lib/db-leads";
 import { isValidEmail, isValidName, isValidWhatsapp } from "@/lib/validation";
 import { sendMetaLeadEvent } from "@/lib/tracking";
+import { notifyNewLead } from "@/lib/notify-lead";
 
 const INCIDENT_VALUES = ["conta_comprometida", "bloqueio", "strike", "outra"];
 const PLATFORM_VALUES = ["instagram", "facebook", "whatsapp", "email", "outra"];
@@ -43,6 +44,10 @@ export async function POST(request: NextRequest) {
     utms,
     metadata,
   });
+
+  if (!result.duplicate) {
+    after(() => notifyNewLead({ name, area: "Contas e Plataformas" }));
+  }
 
   sendMetaLeadEvent({
     eventId,
