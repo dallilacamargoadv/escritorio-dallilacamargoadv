@@ -1,9 +1,10 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, after } from "next/server";
 import { randomUUID } from "node:crypto";
 import { buildLeadMetadata } from "@/lib/metadata";
 import { insertLead } from "@/lib/db-leads";
 import { isValidEmail, isValidName, isValidWhatsapp } from "@/lib/validation";
 import { sendMetaLeadEvent } from "@/lib/tracking";
+import { notifyNewLead } from "@/lib/notify-lead";
 
 const PROFILE_VALUES = ["criador", "infoprodutor", "empresa", "autonomo", "outro"];
 const INTEREST_VALUES = ["protecao_dados", "relacoes_digitais", "outro"];
@@ -39,6 +40,10 @@ export async function POST(request: NextRequest) {
     utms,
     metadata,
   });
+
+  if (!result.duplicate) {
+    after(() => notifyNewLead({ name, area: "Assessoria" }));
+  }
 
   sendMetaLeadEvent({
     eventId,
