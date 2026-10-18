@@ -44,7 +44,7 @@ export default function ContasEPlataformasPage() {
           getServiceSchema({
             name: "Contas e Plataformas",
             description:
-              "Atuação jurídica em casos de contas comprometidas, bloqueios, suspensões, strikes, remoção de conteúdo indevido e conflitos com plataformas digitais.",
+              "Atuação jurídica em loja suspensa em marketplace, saldo retido, desmonetização, contas comprometidas, bloqueios, strikes, remoção de conteúdo indevido e conflitos com plataformas digitais.",
             url: PAGE_URL,
           }),
           getBreadcrumbSchema([
@@ -59,11 +59,11 @@ export default function ContasEPlataformasPage() {
         eyebrow="contas e plataformas"
         title={
           <>
-            Perdeu o acesso à sua{" "}
-            <em className="italic text-atendimento-accent">conta</em>?
+            Sua conta no TikTok, no Instagram, no WhatsApp ou no marketplace foi{" "}
+            <em className="italic text-atendimento-accent">bloqueada</em>?
           </>
         }
-        description="Reativação e recuperação de conta hackeada, suspensa ou banida, e remoção de conteúdo publicado sem autorização, do pedido administrativo à medida judicial cabível."
+        description="Conta hackeada, desativada ou suspensa, loja com saldo retido, canal desmonetizado: entenda o que aconteceu e quais caminhos existem, do pedido à plataforma à medida judicial, quando cabível."
       >
         <div className="mt-8">
           <Button href="#formulario" variant="invert">
@@ -91,6 +91,10 @@ export default function ContasEPlataformasPage() {
       </section>
 
       <ThreeStepsScroll title="Etapas" steps={CONTENT.steps} />
+
+      <p className="mx-auto max-w-6xl px-4 pb-10 text-xs text-ink-dim sm:px-6">
+        Cada caso é diferente: o passo a passo acima é ilustrativo.
+      </p>
 
       <PointsOfAttention
         introTitle={CONTENT.attention.introTitle}
