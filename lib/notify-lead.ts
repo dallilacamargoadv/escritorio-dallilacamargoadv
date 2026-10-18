@@ -1,9 +1,8 @@
 // Aviso no Telegram quando entra um lead novo. Sem TELEGRAM_BOT_TOKEN e
 // TELEGRAM_CHAT_ID, não faz nada (nunca quebra o envio do formulário). A
-// mensagem é mínima de propósito: só nome, área e link do painel. Telefone e
+// mensagem é mínima de propósito: só nome e área, sem link (se alguém ler a
+// mensagem, não ganha caminho para o painel). Telefone e
 // relato ficam apenas no painel (LGPD).
-
-const PAINEL_URL = "https://www.dallilacamargoadv.com.br/admin/leads";
 
 function tirarAspasEEspacos(valor: string): string {
   return valor.replace(/^["'\s]+|["'\s]+$/g, "");
@@ -71,7 +70,7 @@ export async function notifyNewLead({
   area: string;
 }): Promise<void> {
   const resultado = await enviarTelegram(
-    `Novo contato no site\nÁrea: ${area}\nNome: ${name}\n\nAbrir no painel: ${PAINEL_URL}`,
+    `Novo contato no site\nÁrea: ${area}\nNome: ${name}\n\nAbra o painel para ver os detalhes.`,
   );
   if (!resultado.ok && resultado.descricao !== "variáveis não configuradas") {
     console.error(
