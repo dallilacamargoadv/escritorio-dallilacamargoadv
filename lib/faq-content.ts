@@ -7,6 +7,48 @@ import type { FaqItem } from "@/components/ui/FaqAccordion";
  * Chave = slug da área em SERVICE_AREAS (lib/site-data.ts).
  */
 export const FAQ_CONTENT: Record<string, FaqItem[]> = {
+  "conta-hackeada": [
+    {
+      question: "Um advogado consegue recuperar a conta do Instagram?",
+      answer:
+        "Podemos atuar na recuperação: pedido formal à plataforma e, quando ele não é suficiente, medida judicial, inclusive com pedido de urgência. Quanto antes você agir, melhor, mas o resultado depende do caso e não existe garantia.",
+    },
+    {
+      question: "Como é recuperar a conta com um advogado, passo a passo?",
+      answer:
+        "Primeiro reunimos as provas (prints, e-mails, avisos da plataforma) e analisamos o que você tem. Depois fazemos o pedido formal de revisão pelo canal oficial. Se não resolver, avaliamos a ação judicial. Cada caso é diferente.",
+    },
+    {
+      question: "Fui hackeado e perdi o acesso ao WhatsApp Business. O que eu faço primeiro?",
+      answer:
+        "Não espere: quanto antes agir, maior a chance de reverter antes que o invasor use a conta para aplicar golpe nos seus contatos. Avise seus contatos por outro canal, guarde prints e mensagens e fale com a gente assim que puder.",
+    },
+    {
+      question: "Perdi o acesso ao e-mail e ao telefone cadastrados. Ainda dá para recuperar?",
+      answer:
+        "Pode ser mais difícil, mas existem caminhos. Reúna tudo que mostre que a conta é sua (documentos, histórico, aparelhos que você usava, notas se a conta é do negócio). Com isso avaliamos a melhor forma de pedir a recuperação.",
+    },
+    {
+      question: "Minha conta do Instagram foi banida. Ainda dá para recuperar?",
+      answer:
+        "Em muitos casos há caminhos, mas o prazo de resposta conta muito. Analisamos o motivo do banimento e conduzimos o pedido de reativação formalmente; quando o pedido administrativo não é suficiente, avaliamos a medida judicial cabível.",
+    },
+    {
+      question: "Como recuperar a conta empresarial do Instagram ou do WhatsApp Business?",
+      answer:
+        "Comece reunindo provas de que a conta é sua e de que ela é usada no negócio (CNPJ, notas, anúncios, histórico). Conduzimos o pedido formal à plataforma e, quando ele não resolve, avaliamos a medida judicial cabível.",
+    },
+    {
+      question: "Tenho direito a indenização por ter sido hackeado?",
+      answer:
+        "Depende do caso. Quando há prejuízo comprovado, como renda que deixou de entrar com a conta parada, é possível avaliar um pedido de reparação. Não dá para prometer valor: tudo depende das provas.",
+    },
+    {
+      question: "Quanto um advogado cobra para recuperar uma conta?",
+      answer:
+        "Os honorários dependem da complexidade do caso e são combinados por escrito, depois de analisarmos a sua situação. Por isso a conversa começa pelo relato do que aconteceu.",
+    },
+  ],
   "contas-e-plataformas": [
     {
       question:
@@ -148,9 +190,24 @@ export const FAQ_CONTENT: Record<string, FaqItem[]> = {
         "Não. O alvará de canal autoriza o perfil funcionando sempre. O de campanha autoriza só uma ação pontual, tipo uma publi isolada ou o lançamento de um produto.",
     },
     {
-      question: "Quanto tempo vale o alvará?",
+      question: "Qual é a validade do alvará?",
       answer:
-        "Normalmente é concedido pelo prazo de 12 meses, com possibilidade de pedido de renovação enquanto os requisitos continuarem preenchidos.",
+        "Depende do tipo de alvará. Para a atividade contínua (o canal ou perfil), a Resolução CNJ nº 687/2026 fixa a validade máxima de 12 meses para crianças e de 18 meses para adolescentes, com possibilidade de renovação. O alvará pontual vale para a ação específica autorizada. O prazo final é definido pelo juiz em cada caso.",
+    },
+    {
+      question: "Tem que ter alvará para postar criança?",
+      answer:
+        "Nem toda publicação com criança exige alvará. Ele é exigido quando a participação da criança ou do adolescente é atividade artística digital com exploração econômica, como conteúdo monetizado, patrocinado ou impulsionado. Cada caso precisa ser analisado.",
+    },
+    {
+      question: "Existe um modelo de alvará judicial para influenciador mirim?",
+      answer:
+        "Não existe um modelo pronto para baixar. O alvará é um pedido feito ao juiz da Vara da Infância e da Juventude, com documentos do caso, como matrícula escolar, laudo psicológico, anuência dos responsáveis e a descrição das atividades e das plataformas. Preparamos o pedido de acordo com a sua situação.",
+    },
+    {
+      question: "Qual é o valor de um alvará judicial?",
+      answer:
+        "Os honorários dependem da complexidade do caso e são combinados por escrito, depois da análise. Também explicamos antes de começar quais despesas do processo podem existir, para você decidir com clareza.",
     },
     {
       question: "O dinheiro da monetização fica em nome de quem?",

@@ -123,7 +123,7 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
         icon: "marca",
         title: "Depósito e Acompanhamento",
         description:
-          "Pedido de registro no INPI na classe certa pro seu negócio, com acompanhamento de cada etapa até o deferimento.",
+          "Pedido de registro no INPI na classe certa pro seu negócio, com acompanhamento de cada etapa até a decisão do INPI.",
       },
       {
         icon: "defesa",
@@ -155,7 +155,7 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
         number: "03",
         title: "Acompanhar",
         description:
-          "Sigo o processo até o deferimento, incluindo eventual oposição de terceiro ou recurso, se precisar.",
+          "Sigo o processo até a decisão do INPI, incluindo eventual oposição de terceiro ou recurso, se precisar.",
       },
     ],
     attention: {

@@ -22,16 +22,17 @@ import {
 const SLUG = "reativacao-e-recuperacao-de-conta-hackeada";
 const PAGE_URL = `${BASE_URL}/${SLUG}`;
 const CONTENT = AREA_CONTENT["contas-e-plataformas"];
-const ALL_FAQ = FAQ_CONTENT["contas-e-plataformas"];
-// Só as perguntas sobre reativar/recuperar conta — a de remoção de conteúdo
-// fica de fora aqui de propósito, pra manter a landing no assunto do anúncio.
-const FAQ = ALL_FAQ.filter((item) => !item.question.includes("remover"));
-// As duas primeiras cards (Meta e Perfil Falso/Fake) são as que falam
-// diretamente de reativação/recuperação de conta.
+// FAQ próprio desta landing (perguntas de conta hackeada/banida), separado do
+// FAQ da página de área, que agora também cobre marketplaces.
+const FAQ = FAQ_CONTENT["conta-hackeada"];
+// Cartões da página de área que falam de recuperar/reativar conta. Atenção: o
+// filtro é por título exato, então mude aqui se mudar os títulos em area-content.
 const RECOVERY_CARDS = CONTENT.cards.filter((card) =>
-  ["Meta (Instagram, Facebook, WhatsApp)", "Perfil Falso / Fake", "Strikes e Restrições (YouTube, Instagram, TikTok)"].includes(
-    card.title,
-  ),
+  [
+    "Contas profissionais e Meta (Instagram, Facebook, WhatsApp)",
+    "Remoção de Conteúdo e Perfil Falso",
+    "Desmonetização e Strikes (YouTube, TikTok, Instagram)",
+  ].includes(card.title),
 );
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -40,7 +41,7 @@ export async function generateMetadata(): Promise<Metadata> {
     path: `/${SLUG}`,
     fallbackTitle: "Reativação e Recuperação de Conta Hackeada",
     fallbackDescription:
-      "Sua conta do Instagram, Facebook, WhatsApp ou TikTok foi hackeada, suspensa ou banida? Atuação jurídica pra reativar o acesso. Fale com uma advogada especialista.",
+      "Sua conta do Instagram, Facebook, WhatsApp ou TikTok foi hackeada, suspensa ou banida? Atuação jurídica na reativação do acesso, do pedido à plataforma à medida judicial, quando cabível.",
   });
 }
 
@@ -69,7 +70,7 @@ export default function ReativacaoDeContaLandingPage() {
           <>
             Perdeu o acesso à sua conta?{" "}
             <em className="italic text-atendimento-accent">
-              A gente reativa.
+              Entenda os caminhos possíveis.
             </em>
           </>
         }

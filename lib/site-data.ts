@@ -37,7 +37,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     shortLabel: "Registro de Marca",
     icon: "marca",
     description:
-      "Registro da sua marca no INPI, do zero ao deferimento: proteção do nome, da logo e da identidade do seu negócio.",
+      "Pedido de registro da sua marca no INPI, com acompanhamento até a decisão, para o nome, a logo e a identidade do seu negócio.",
   },
   {
     slug: "assessoria",
