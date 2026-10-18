@@ -200,96 +200,102 @@ export const AREA_CONTENT: Record<string, AreaContent> = {
   "contas-e-plataformas": {
     cards: [
       {
-        icon: "acesso",
-        title: "Meta (Instagram, Facebook, WhatsApp)",
-        description:
-          "Atuação em conta hackeada, desativada ou com restrição/shadowban: do pedido administrativo à ação judicial com tutela de urgência.",
-      },
-      {
-        icon: "defesa",
-        title: "Remoção de Conteúdo",
-        description:
-          "Vídeo, foto ou publicação usando sua imagem, seu nome ou sua marca sem autorização: notificação extrajudicial e pedido de remoção direto à plataforma (notice and takedown).",
-      },
-      {
         icon: "bloqueio",
-        title: "Marketplaces (Mercado Livre, Shopee e outros)",
+        title: "Marketplaces (Mercado Livre, Shopee, Amazon)",
         description:
-          "Bloqueio ou suspensão de conta vendedora, retenção de valores e desbloqueio de operação em plataformas de venda.",
+          "Loja suspensa, saldo retido, estoque parado e conta de vendedor bloqueada: análise do caso, pedido de revisão à plataforma e, se preciso, medida judicial.",
+      },
+      {
+        icon: "plataforma",
+        title: "TikTok Shop e vendas em rede social",
+        description:
+          "Suspensão de loja, valores retidos e anúncios bloqueados em plataformas de venda ligadas a redes sociais.",
       },
       {
         icon: "alerta",
-        title: "Perfil Falso / Fake",
+        title: "Desmonetização e Strikes (YouTube, TikTok, Instagram)",
         description:
-          "Identificação e remoção de perfil falso, clonagem de identidade ou uso indevido de nome e imagem em conta de terceiro.",
+          "Canal desmonetizado, strike por direito autoral, publicação removida ou alcance travado: análise do aviso e contestação junto à plataforma.",
       },
       {
-        icon: "bloqueio",
-        title: "Strikes e Restrições (YouTube, Instagram, TikTok)",
+        icon: "acesso",
+        title: "Contas profissionais e Meta (Instagram, Facebook, WhatsApp)",
         description:
-          "Orientação e defesa em casos de strike por direito autoral, remoção de publicação, limitação de alcance ou aviso de violação de diretrizes.",
+          "Conta empresarial hackeada, desativada ou restrita: do pedido administrativo à ação judicial com pedido de urgência.",
+      },
+      {
+        icon: "defesa",
+        title: "Remoção de Conteúdo e Perfil Falso",
+        description:
+          "Vídeo, foto ou perfil usando sua imagem, nome ou marca sem autorização: notificação à plataforma e pedido de remoção.",
       },
       {
         icon: "defesa",
         title: "Preservação de Provas",
         description:
-          "Organização e análise de evidências digitais para subsidiar medidas extrajudiciais ou judiciais, quando cabíveis.",
+          "Organização de prints, e-mails, notas de venda e avisos da plataforma para sustentar o pedido de revisão ou a ação.",
       },
     ],
     steps: [
       {
         number: "01",
-        title: "Diagnosticar",
+        title: "Reunir as provas e analisar",
         description:
-          "Análise da situação (conta hackeada, bloqueada ou com strike) para identificar o caminho jurídico adequado.",
+          "Prints, e-mails, notas de venda, avisos, reclamações, notificações e a nota de suspensão. Com isso em mãos, analisamos juntos o que você tem.",
       },
       {
         number: "02",
-        title: "Agir junto à plataforma e, se necessário, na Justiça",
+        title: "Pedir revisão à plataforma",
         description:
-          "Encaminhamento do pedido administrativo e, quando cabível, da medida judicial correspondente.",
+          "Pedido formal de revisão pelo canal oficial, com a sua versão dos fatos e os documentos que sustentam o caso.",
       },
       {
         number: "03",
-        title: "Acompanhar até a resolução",
+        title: "Ir à Justiça, se for preciso",
         description:
-          "Acompanhamento do caso até sua resolução, com atualização periódica ao cliente.",
+          "Se o pedido à plataforma não resolver, avaliamos a ação, inclusive com pedido de urgência para liberar a conta ou os valores retidos.",
       },
     ],
     attention: {
       introTitle: "Quando o problema costuma aparecer",
       introDescription:
-        "Pra muita gente, a conta nas redes é parte do trabalho, não só um perfil pessoal. Quando ela é hackeada, bloqueada ou banida, o prejuízo passa longe da tela: vai direto pro seu bolso e pra sua rotina.",
+        "Pra muita gente, a conta é o negócio: a loja no marketplace, o canal que paga as contas, o perfil que traz o cliente. Quando ela trava, o prejuízo passa longe da tela: vai direto pro caixa e pra rotina.",
       points: [
         {
           number: "01",
-          title: "A conta foi hackeada",
+          title: "A loja foi suspensa",
           description:
-            "Perder o acesso pode parar o seu trabalho de vez e cortar o contato com quem já é seu cliente.",
+            "Cada dia sem vender é faturamento que não volta, e os recursos das plataformas têm prazos próprios.",
         },
         {
           number: "02",
-          title: "O perfil foi bloqueado",
+          title: "O dinheiro das vendas ficou retido",
           description:
-            "Bloqueio e suspensão acontecem por motivos bem diferentes. Cada caso precisa ser olhado com calma pra saber o que fazer.",
+            "Valor retido atrasa fornecedor, frete e conta a pagar. O primeiro passo é entender o que a plataforma alegou.",
         },
         {
           number: "03",
-          title: "O conteúdo recebeu restrição",
+          title: "O estoque ficou parado",
           description:
-            "Strike, post removido ou alcance travado deixam a dúvida: dá pra reverter isso, ou é melhor deixar pra lá?",
+            "Produto preso no centro de distribuição da plataforma é dinheiro parado, e cada caso pede uma estratégia.",
         },
         {
           number: "04",
-          title: "Você não guardou as provas",
+          title: "O canal perdeu a monetização",
           description:
-            "Print, e-mail e histórico de conversa contam a história do que aconteceu. Sem eles, fica mais difícil provar e agir.",
+            "A renda do criador some de uma hora pra outra, e o aviso quase nunca explica bem o motivo.",
         },
         {
           number: "05",
-          title: "O problema passou pro seu negócio",
+          title: "Você não guardou as provas",
           description:
-            "Quando o seu trabalho depende daquela conta, qualquer trava nela também trava contrato, cliente e faturamento.",
+            "Print, e-mail, nota de venda, aviso e nota de suspensão contam a história. Sem eles, fica mais difícil provar e agir.",
+        },
+        {
+          number: "06",
+          title: "A conta foi hackeada",
+          description:
+            "Perder o acesso pode parar o trabalho de vez e cortar o contato com quem já é seu cliente.",
         },
       ],
     },

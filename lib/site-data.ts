@@ -19,7 +19,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     shortLabel: "Contas e Plataformas",
     icon: "plataforma",
     description:
-      "Reativação e recuperação de conta hackeada, suspensa ou banida, e remoção de conteúdo publicado sem autorização.",
+      "Loja suspensa em marketplace, saldo retido, canal desmonetizado ou conta hackeada, suspensa ou banida: do pedido à plataforma à medida judicial.",
   },
   {
     slug: "contratos",

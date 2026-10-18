@@ -9,31 +9,55 @@ import type { FaqItem } from "@/components/ui/FaqAccordion";
 export const FAQ_CONTENT: Record<string, FaqItem[]> = {
   "contas-e-plataformas": [
     {
-      question: "Minha conta do Instagram foi banida. Ainda dá pra recuperar?",
-      answer:
-        "Na maioria dos casos, sim, mas o prazo de resposta conta muito. Analisamos o motivo do banimento e conduzimos o pedido de reativação formalmente junto à plataforma; quando o pedido administrativo não é suficiente, avaliamos a medida judicial cabível.",
-    },
-    {
       question:
-        "Fui hackeado e perdi o acesso ao WhatsApp Business. O que eu faço primeiro?",
+        "Minha conta de vendedor no Mercado Livre ou na Shopee foi suspensa. É possível reverter?",
       answer:
-        "Não espere: quanto antes agir, maior a chance de reverter antes que o invasor use a conta pra aplicar golpe nos seus próprios contatos. Fale com a gente assim que perceber o acesso perdido, mesmo antes de reunir toda a documentação.",
+        "Depende do motivo alegado e das provas que você tem. O primeiro passo é entender o que a plataforma disse e reunir o que mostra o seu histórico de vendas. Com isso, avaliamos o pedido de revisão e, se não resolver, se cabe medida judicial. Não dá para prometer resultado: cada caso é analisado individualmente.",
     },
     {
-      question: "Quanto tempo demora pra reativar uma conta suspensa?",
+      question: "Como um advogado pode ajudar a recuperar uma conta suspensa em marketplace?",
       answer:
-        "Varia por plataforma e pelo motivo da suspensão: pode ir de poucos dias a algumas semanas. Depois da análise inicial do seu caso, você recebe um prazo estimado realista, não uma promessa genérica.",
+        "Organizando as provas, analisando o motivo alegado, conduzindo o pedido de revisão de forma formal e, quando necessário, ingressando com ação, inclusive com pedido de urgência para liberar a conta ou valores retidos.",
     },
     {
-      question: "Dá pra remover um vídeo ou foto publicado sem minha autorização?",
+      question: "O dinheiro das minhas vendas ficou retido. O que eu faço?",
       answer:
-        "Sim. Cuidamos da remoção de conteúdo indevido (vídeo, foto ou publicação usando sua imagem, seu nome ou sua marca sem autorização), com notificação formal à plataforma e, quando necessário, à pessoa que publicou.",
+        "Guarde extratos, notas de venda, mensagens e avisos da plataforma: eles mostram quanto foi retido e por quê. Com esses documentos é possível avaliar o pedido administrativo e, se for o caso, a via judicial.",
     },
     {
-      question:
-        "Recebi um strike no YouTube ou Instagram. Isso pode tirar minha conta do ar?",
+      question: "A conta da minha loja no TikTok Shop foi suspensa. O caminho é o mesmo?",
       answer:
-        "Pode, dependendo do histórico e da gravidade. Analisamos se o strike é procedente e, quando não é, conduzimos a contestação junto à plataforma antes que ele vire uma restrição maior ou o banimento da conta.",
+        "O caminho é parecido (provas, revisão à plataforma e, se preciso, Justiça), mas cada plataforma tem regras e prazos próprios de recurso. Por isso o primeiro passo é ler o aviso que você recebeu e anotar as datas.",
+    },
+    {
+      question: "Meu canal foi desmonetizado no YouTube. Posso contestar?",
+      answer:
+        "Em geral a plataforma oferece um pedido de revisão. Guarde o aviso, as datas e os vídeos citados, porque isso sustenta a contestação. Analisamos se o motivo alegado procede e se cabe alguma medida além do recurso interno.",
+    },
+    {
+      question: "Como recuperar a conta empresarial do Instagram ou do WhatsApp Business?",
+      answer:
+        "Comece reunindo provas de que a conta é sua e de que ela é usada no negócio (CNPJ, notas, anúncios, histórico). Conduzimos o pedido formal à plataforma e, quando ele não resolve, avaliamos a medida judicial cabível.",
+    },
+    {
+      question: "Minha conta do Instagram foi hackeada ou banida. Um advogado consegue recuperar?",
+      answer:
+        "Podemos atuar na recuperação: pedido formal à plataforma e, quando ele não é suficiente, medida judicial. Quanto antes você agir, melhor, mas o resultado depende do caso e não existe garantia.",
+    },
+    {
+      question: "Quanto um advogado cobra para esse tipo de caso?",
+      answer:
+        "Os honorários dependem da complexidade do caso e são combinados por escrito, depois de analisarmos a sua situação. Por isso a conversa começa pelo relato do que aconteceu.",
+    },
+    {
+      question: "Que provas eu devo guardar antes de falar com um advogado?",
+      answer:
+        "Prints da conta e das mensagens da plataforma, e-mails, notas de venda, avisos, reclamações que você fez, notificações recebidas e a nota de suspensão. Não apague nada, mesmo que pareça sem importância.",
+    },
+    {
+      question: "Recebi um strike no YouTube ou Instagram. Isso pode tirar minha conta do ar?",
+      answer:
+        "Pode, dependendo do histórico e da gravidade. Analisamos se o strike é procedente e, quando não é, conduzimos a contestação junto à plataforma antes que ele vire uma restrição maior.",
     },
   ],
 
