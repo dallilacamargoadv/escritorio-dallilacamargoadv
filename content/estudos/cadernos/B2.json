@@ -14,7 +14,8 @@
   "Lei 14.133/2021, texto vigente",
   "Material EBEJI: Contratos Administrativos (2026)",
   "Material EBEJI: Serviços Públicos (2026)",
-  "Lei 8.987/1995, trechos vigentes no Planalto"
+  "Lei 8.987/1995, trechos vigentes no Planalto",
+  "Leis 8.987/1995 e 11.079/2004, trechos vigentes no Planalto"
  ],
  "banca": {
   "titulo": "O que a FCC cobra em Administrativo",
@@ -5262,51 +5263,399 @@
    "numero": 16
   },
   {
+   "id": "B2-a15b",
+   "topico_id": "B2-07",
+   "titulo": "Concessões, permissões e PPPs",
+   "status": "pronta",
+   "fonte": "Material EBEJI: Serviços Públicos, concessão e permissão, PPPs e autorização (2026); Leis 8.987/1995 e 11.079/2004 (Planalto, conferidas em 15/11/2026)",
+   "resumo": [
+    "Concessão: delegação a pessoa jurídica ou consórcio, por concorrência ou diálogo competitivo, por conta e risco e prazo determinado. Permissão: a pessoa física ou jurídica, a título precário, por licitação sem modalidade fixa, formalizada em contrato de adesão (Lei 8.987, art. 2º).",
+    "Subconcessão: prevista no contrato, autorizada pelo poder concedente e sempre precedida de concorrência. Transferir a concessão ou o controle sem anuência gera caducidade (art. 27), mas com anuência não exige licitação (STF, ADI 2.946).",
+    "Intervenção: por decreto, sem defesa prévia; processo em 30 dias, concluído em até 180, sob pena de invalidade. Não é sanção nem extingue a concessão.",
+    "Extinção: termo, encampação (interesse público + lei específica + indenização prévia), caducidade (inexecução, decreto, indenização não prévia), rescisão (pela concessionária, só judicial e sem parar o serviço), anulação e falência. Bens reversíveis voltam ao poder concedente.",
+    "PPP (Lei 11.079): concessão patrocinada (tarifa + contraprestação) ou administrativa (a Administração é usuária). Vedada abaixo de R$ 10 milhões, com prazo inferior a 5 anos ou só para mão de obra, equipamentos ou obra. Exige SPE, sem maioria votante do Poder Público."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: delegar a execução, nunca a titularidade",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Na aula 16 vimos que o Estado é titular do serviço e pode delegá-lo. A delegação é feita por <b>contrato</b> (concessão ou permissão) e sempre com licitação (CF, art. 175). O particular executa <b>por sua conta e risco</b>, remunerado em regra pela tarifa; o Estado continua titular, regula e fiscaliza.<br><br>A lei geral é a <b>Lei 8.987/1995</b>, nacional. Para obras e serviços de grande vulto que o usuário sozinho não paga, a <b>Lei 11.079/2004</b> criou as PPPs, uma espécie de concessão com dinheiro público no meio."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 8.987/1995, art. 2º, II e IV",
+       "texto": "II - concessão de serviço público: a delegação de sua prestação, feita pelo poder concedente, mediante licitação, na modalidade ==concorrência ou diálogo competitivo==, a ==pessoa jurídica ou consórcio de empresas== que demonstre capacidade para seu desempenho, ==por sua conta e risco e por prazo determinado==;\nIV - permissão de serviço público: a delegação, ==a título precário==, mediante licitação, da prestação de serviços públicos, feita pelo poder concedente à ==pessoa física ou jurídica== que demonstre capacidade para seu desempenho, por sua conta e risco."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Concessão",
+        "Permissão"
+       ],
+       "linhas": [
+        [
+         "Com quem",
+         "Pessoa jurídica ou consórcio de empresas",
+         "Pessoa física ou jurídica (sem previsão de consórcio)"
+        ],
+        [
+         "Licitação",
+         "Concorrência ou diálogo competitivo",
+         "Licitação, sem modalidade fixada em lei"
+        ],
+        [
+         "Natureza",
+         "Contrato",
+         "Contrato de adesão (art. 40)"
+        ],
+        [
+         "Precariedade",
+         "Não há",
+         "\"A título precário\", com revogabilidade unilateral"
+        ],
+        [
+         "Prazo",
+         "Determinado (a lei não fixa máximo)",
+         "A definição legal não fala em prazo, mas o contrato deve tê-lo"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Diferença mais de rótulo",
+       "html": "O STF já disse que a CF, ao dar caráter contratual à permissão, afastou a distinção conceitual entre as duas (ADI 1.491 MC, Info 117, citada no material EBEJI). Para a doutrina, a \"precariedade\" de um contrato precedido de licitação não autoriza extinguir a qualquer tempo sem indenização."
+      },
+      {
+       "t": "texto",
+       "html": "A Lei 9.074/1995 (art. 2º) exige <b>lei autorizativa</b> para delegar serviço por concessão ou permissão, salvo saneamento básico, limpeza urbana e os serviços que a própria CF, Constituição estadual ou Lei Orgânica já indiquem como delegáveis (segundo o material EBEJI)."
+      }
+     ]
+    },
+    {
+     "titulo": "Execução: terceiros, subconcessão, transferência e intervenção",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Art. 25, § 1º",
+         "titulo": "Contratar terceiros",
+         "texto": "A concessionária pode contratar atividades inerentes, acessórias ou complementares, por contrato <b>privado</b>, sem anuência e sem vínculo com o poder concedente, e continua responsável. O STF declarou constitucional essa terceirização (ADC 57, 3/10/2019)."
+        },
+        {
+         "tag": "Art. 26",
+         "titulo": "Subconcessão",
+         "texto": "Transfere <b>parte do próprio serviço</b>. Precisa estar prevista no contrato, ser expressamente autorizada e ser <b>sempre precedida de concorrência</b>. Quem outorga é o poder concedente; o subconcessionário se sub-roga nos direitos e obrigações."
+        },
+        {
+         "tag": "Art. 27",
+         "titulo": "Transferir a concessão ou o controle",
+         "texto": "Exige <b>prévia anuência</b> do poder concedente; sem ela, <b>caducidade</b>. O pretendente comprova capacidade técnica, idoneidade financeira e regularidade jurídica e fiscal e se compromete a cumprir o contrato. Não exige licitação."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 8.987/1995, arts. 26 e 27",
+       "texto": "Art. 26. É admitida a subconcessão, nos termos ==previstos no contrato de concessão==, desde que ==expressamente autorizada== pelo poder concedente.\n§ 1o A outorga de subconcessão será ==sempre precedida de concorrência==.\nArt. 27. A transferência de concessão ou do controle societário da concessionária ==sem prévia anuência do poder concedente== implicará a ==caducidade== da concessão."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 2.946/DF, Rel. Min. Dias Toffoli, 8/3/2022 (Info 1046)",
+       "tese": "É constitucional o art. 27 da Lei 8.987/1995, que permite transferir a concessão ou o controle societário da concessionária, com anuência do poder concedente e respeitados os requisitos legais, sem nova licitação: a base objetiva do contrato (objeto, obrigações e equação econômico-financeira) continua intacta; muda só o sujeito."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Prerrogativas do poder concedente.</b> A Lei 8.987 não tem um rol de cláusulas exorbitantes como o art. 104 da Lei 14.133, mas o art. 29 traz poderes equivalentes: regulamentar e fiscalizar, aplicar penalidades, <b>intervir</b>, extinguir, homologar reajustes e revisar tarifas, declarar utilidade pública para desapropriar ou instituir servidão."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 8.987/1995, arts. 32 e 33",
+       "texto": "Art. 32. O poder concedente poderá ==intervir na concessão==, com o fim de assegurar a adequação na prestação do serviço, bem como o fiel cumprimento das normas contratuais, regulamentares e legais pertinentes.\nParágrafo único. A intervenção far-se-á ==por decreto== do poder concedente, que conterá a ==designação do interventor, o prazo da intervenção e os objetivos e limites== da medida.\nArt. 33. Declarada a intervenção, o poder concedente deverá, no prazo de ==trinta dias==, instaurar procedimento administrativo para comprovar as causas determinantes da medida e apurar responsabilidades, ==assegurado o direito de ampla defesa==.\n§ 2o O procedimento administrativo a que se refere o caput deste artigo deverá ser concluído no prazo de até ==cento e oitenta dias==, sob pena de considerar-se ==inválida a intervenção==."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Decreto",
+         "sub": "sem defesa prévia"
+        },
+        {
+         "titulo": "30 dias",
+         "sub": "abrir processo"
+        },
+        {
+         "titulo": "180 dias",
+         "sub": "concluir"
+        },
+        {
+         "titulo": "Desfecho",
+         "sub": "devolve ou extingue"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "O poder concedente intervém <b>por decreto</b>, com interventor, prazo, objetivos e limites. É medida <b>acautelatória</b>, não sanção: por isso não há contraditório antes."
+        },
+        {
+         "no": 1,
+         "texto": "Em até <b>30 dias</b>, instaura processo administrativo para comprovar as causas e apurar responsabilidades, com ampla defesa."
+        },
+        {
+         "no": 2,
+         "texto": "O processo deve terminar em até <b>180 dias</b>, sob pena de a intervenção ser considerada inválida. Se a intervenção não respeitou a lei, é nula e o serviço volta à concessionária, com direito a indenização."
+        },
+        {
+         "no": 3,
+         "texto": "Cessada a intervenção, se a concessão não for extinta, o serviço volta à concessionária, com prestação de contas do interventor (art. 34)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Extinção da concessão e PPPs",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "Lei 8.987/1995, art. 35, caput e § 1º",
+       "texto": "Art. 35. Extingue-se a concessão por:\nI - advento do termo contratual;\nII - encampação;\nIII - caducidade;\nIV - rescisão;\nV - anulação; e\nVI - falência ou extinção da empresa concessionária e falecimento ou incapacidade do titular, no caso de empresa individual.\n§ 1o Extinta a concessão, retornam ao poder concedente todos os ==bens reversíveis==, direitos e privilégios transferidos ao concessionário conforme previsto no edital e estabelecido no contrato."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Forma",
+        "Por quê",
+        "Como",
+        "Indenização"
+       ],
+       "linhas": [
+        [
+         "Advento do termo",
+         "Fim do prazo",
+         "Automática",
+         "Investimentos em bens reversíveis ainda não amortizados"
+        ],
+        [
+         "<b>Encampação</b>",
+         "Interesse público, sem culpa da concessionária",
+         "Lei autorizativa específica",
+         "<b>Prévia</b> (sem lucros cessantes, segundo o EBEJI)"
+        ],
+        [
+         "<b>Caducidade</b>",
+         "Inexecução total ou parcial pela concessionária",
+         "Aviso para corrigir, processo com defesa e <b>decreto</b>",
+         "<b>Não prévia</b>, descontadas multas e danos"
+        ],
+        [
+         "<b>Rescisão</b>",
+         "Descumprimento pelo poder concedente",
+         "Só por <b>ação judicial</b> da concessionária",
+         "Conforme a decisão"
+        ],
+        [
+         "Anulação",
+         "Ilegalidade",
+         "Administração ou Judiciário",
+         "Responsabiliza quem deu causa"
+        ],
+        [
+         "Falência ou extinção",
+         "Natureza pessoal do contrato",
+         "Fato",
+         "Segundo o contrato"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 8.987/1995, arts. 37, 38, caput e §§ 3º, 4º e 6º, e 39",
+       "texto": "Art. 37. Considera-se encampação a retomada do serviço pelo poder concedente durante o prazo da concessão, por motivo de ==interesse público==, mediante ==lei autorizativa específica== e após ==prévio pagamento da indenização==, na forma do artigo anterior.\nArt. 38. A inexecução total ou parcial do contrato acarretará, ==a critério do poder concedente==, a declaração de caducidade da concessão ou a aplicação das sanções contratuais, respeitadas as disposições deste artigo, do art. 27, e as normas convencionadas entre as partes.\n§ 3o Não será instaurado processo administrativo de inadimplência antes de comunicados à concessionária, detalhadamente, os descumprimentos contratuais referidos no § 1º deste artigo, dando-lhe um ==prazo para corrigir as falhas== e transgressões apontadas e para o enquadramento, nos termos contratuais.\n§ 4o Instaurado o processo administrativo e comprovada a inadimplência, a caducidade será declarada ==por decreto== do poder concedente, ==independentemente de indenização prévia==, calculada no decurso do processo.\n§ 6o Declarada a caducidade, ==não resultará para o poder concedente qualquer espécie de responsabilidade== em relação aos encargos, ônus, obrigações ou compromissos com terceiros ou com empregados da concessionária.\nArt. 39. O contrato de concessão poderá ser rescindido ==por iniciativa da concessionária==, no caso de descumprimento das normas contratuais pelo poder concedente, mediante ==ação judicial== especialmente intentada para esse fim.\nParágrafo único. Na hipótese prevista no caput deste artigo, os serviços prestados pela concessionária ==não poderão ser interrompidos ou paralisados==, até a decisão judicial ==transitada em julgado==."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Encampação × caducidade",
+       "html": "<b>Encampação</b>: o Estado retoma porque <b>quer</b> (interesse público), com <b>lei</b> e indenização <b>antes</b>. <b>Caducidade</b>: retoma porque a concessionária <b>falhou</b>, por <b>decreto</b>, e a indenização vem <b>depois</b>, com descontos. E não confunda com a caducidade do ato administrativo (aula 11), que é extinção por lei nova."
+      },
+      {
+       "t": "texto",
+       "html": "<b>PPP.</b> São concessões em que o parceiro público paga uma <b>contraprestação</b> ao parceiro privado. A Lei 11.079 é nacional e as PPPs têm prazo de 5 a 35 anos, incluída a prorrogação (art. 5º, I, segundo o material EBEJI)."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 11.079/2004, art. 2º",
+       "texto": "Art. 2º Parceria público-privada é o contrato administrativo de concessão, na modalidade ==patrocinada ou administrativa==.\n§ 1º Concessão patrocinada é a concessão de serviços públicos ou de obras públicas de que trata a Lei nº 8.987, de 13 de fevereiro de 1995, quando envolver, ==adicionalmente à tarifa cobrada dos usuários contraprestação pecuniária== do parceiro público ao parceiro privado.\n§ 2º Concessão administrativa é o contrato de prestação de serviços de que a Administração Pública seja a ==usuária direta ou indireta==, ainda que envolva execução de obra ou fornecimento e instalação de bens.\n§ 3º Não constitui parceria público-privada a ==concessão comum==, assim entendida a concessão de serviços públicos ou de obras públicas de que trata a Lei nº 8.987, de 13 de fevereiro de 1995, quando não envolver contraprestação pecuniária do parceiro público ao parceiro privado.\n§ 4º É vedada a celebração de contrato de parceria público-privada:\nI - cujo valor do contrato seja inferior a ==R$ 10.000.000,00== (dez milhões de reais);\nII - cujo período de prestação do serviço seja inferior a ==5 (cinco) anos==; ou\nIII - que tenha como ==objeto único== o fornecimento de mão-de-obra, o fornecimento e instalação de equipamentos ou a execução de obra pública."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Patrocinada",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Usuário paga tarifa",
+           "sub": "parte"
+          },
+          {
+           "titulo": "Estado paga contraprestação",
+           "sub": "parte"
+          }
+         ],
+         "texto": "Serviço ou obra pública da Lei 8.987 em que a tarifa <b>não basta</b>: o parceiro público completa. Se mais de <b>70%</b> da remuneração vier da Administração, precisa de <b>autorização legislativa específica</b> (art. 10, § 3º)."
+        },
+        {
+         "rotulo": "Administrativa",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Administração é usuária",
+           "sub": "direta ou indireta"
+          },
+          {
+           "titulo": "Estado paga tudo",
+           "sub": "contraprestação"
+          }
+         ],
+         "texto": "Prestação de serviços de que a <b>Administração é usuária</b> direta ou indireta, ainda que envolva obra ou instalação de bens. Ex.: hospital ou presídio operado pelo parceiro privado e pago pelo Estado."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 11.079/2004, arts. 9º, 10 e 10, § 3º",
+       "texto": "Art. 9º Antes da celebração do contrato, deverá ser constituída ==sociedade de propósito específico==, incumbida de implantar e gerir o objeto da parceria.\n§ 4º Fica vedado à Administração Pública ser titular da ==maioria do capital votante== das sociedades de que trata este Capítulo.\nArt. 10. A contratação de parceria público-privada será precedida de licitação na modalidade ==concorrência ou diálogo competitivo==, estando a abertura do processo licitatório condicionada a:\n§ 3º As concessões patrocinadas em que ==mais de 70% (setenta por cento)== da remuneração do parceiro privado for paga pela Administração Pública dependerão de ==autorização legislativa específica==."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Os números da PPP",
+       "html": "<b>10</b> milhões no mínimo; <b>5</b> a <b>35</b> anos; <b>70%</b> pago pelo Estado na patrocinada exige lei; garantia do parceiro privado até <b>10%</b> do contrato; e a contraprestação só vem depois de o serviço estar disponível, admitido o pagamento parcial (art. 7º). A Lei 11.079 também veda delegar regulação, jurisdição e poder de polícia (art. 4º, III)."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Autorização de serviço público e PPI",
+       "html": "A autorização de serviço público (ato unilateral e precário, para situações restritas) e o Programa de Parcerias de Investimentos (Lei 13.334/2016) estão no fim do mesmo PDF e não entraram aqui; costumam cair pouco."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "Concessão: <b>PJ ou consórcio</b>; permissão: <b>PF ou PJ</b>.<br>Subconcessão: <b>sempre concorrência</b>; transferência da concessão: <b>anuência</b>, sem licitação.<br>Intervenção: <b>decreto</b>, processo em <b>30</b> dias, conclusão em <b>180</b>.<br>Encampação: <b>lei</b> + indenização <b>prévia</b>. Caducidade: <b>decreto</b>, indenização <b>não prévia</b>.<br>Rescisão pela concessionária: <b>só judicial</b>, e o serviço não para até o trânsito em julgado.<br>PPP: <b>10 milhões</b>, <b>5 a 35 anos</b>, SPE sem maioria votante do Estado."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A concessão de serviço público pode ser feita a pessoa física que demonstre capacidade.",
+         "v": false,
+         "porque": "Só a pessoa jurídica ou consórcio; pessoa física só na permissão."
+        },
+        {
+         "texto": "A encampação depende de lei autorizativa específica e de prévio pagamento da indenização.",
+         "v": true,
+         "porque": "Art. 37."
+        },
+        {
+         "texto": "A caducidade é declarada por decreto, independentemente de indenização prévia.",
+         "v": true,
+         "porque": "Art. 38, § 4º."
+        },
+        {
+         "texto": "A concessionária pode suspender o serviço se o poder concedente atrasar pagamentos por mais de 90 dias.",
+         "v": false,
+         "porque": "Art. 39, parágrafo único: só após decisão judicial transitada em julgado. A regra dos 2 meses é da Lei 14.133, não das concessões."
+        },
+        {
+         "texto": "A transferência do controle societário da concessionária exige nova licitação.",
+         "v": false,
+         "porque": "Exige anuência do poder concedente (art. 27); o STF validou (ADI 2.946)."
+        },
+        {
+         "texto": "A concessão comum, sem contraprestação do parceiro público, é PPP na modalidade patrocinada.",
+         "v": false,
+         "porque": "Lei 11.079, art. 2º, § 3º: não constitui PPP."
+        },
+        {
+         "texto": "É vedada PPP que tenha como objeto único a execução de obra pública.",
+         "v": true,
+         "porque": "Art. 2º, § 4º, III."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-31",
+    "adm-cad-32"
+   ],
+   "numero": 17
+  },
+  {
    "id": "B2-a16",
    "topico_id": "B2-08",
-   "numero": 17,
+   "numero": 18,
    "titulo": "Agentes públicos",
    "status": "a_montar"
   },
   {
    "id": "B2-a17",
    "topico_id": "B2-09",
-   "numero": 18,
+   "numero": 19,
    "titulo": "Responsabilidade civil do Estado",
    "status": "a_montar"
   },
   {
    "id": "B2-a18",
    "topico_id": "B2-10",
-   "numero": 19,
+   "numero": 20,
    "titulo": "Improbidade administrativa",
    "status": "a_montar"
   },
   {
    "id": "B2-a19",
    "topico_id": "B2-12",
-   "numero": 20,
+   "numero": 21,
    "titulo": "Bens públicos",
    "status": "a_montar"
   },
   {
    "id": "B2-a20",
    "topico_id": "B2-13",
-   "numero": 21,
+   "numero": 22,
    "titulo": "Intervenção na propriedade",
    "status": "a_montar"
   },
   {
    "id": "B2-a21",
    "topico_id": "B2-14",
-   "numero": 22,
+   "numero": 23,
    "titulo": "Controle da Administração",
    "status": "a_montar"
   },
   {
    "id": "B2-a22",
    "topico_id": "B2-15",
-   "numero": 23,
+   "numero": 24,
    "titulo": "Anticorrupção e transparência",
    "status": "a_montar"
   }
@@ -5531,6 +5880,30 @@
   [
    "Serviço impróprio",
    "Atividade social prestada por particular sem delegação, como serviço privado sujeito ao poder de polícia."
+  ],
+  [
+   "Encampação",
+   "Retomada do serviço concedido por interesse público, com lei autorizativa específica e indenização prévia (Lei 8.987, art. 37)."
+  ],
+  [
+   "Caducidade da concessão",
+   "Extinção da concessão por inexecução da concessionária, declarada por decreto, com indenização posterior (Lei 8.987, art. 38)."
+  ],
+  [
+   "Bens reversíveis",
+   "Bens que voltam ao poder concedente com a extinção da concessão, qualquer que seja a causa (Lei 8.987, art. 35, § 1º)."
+  ],
+  [
+   "Concessão patrocinada",
+   "PPP em que a tarifa dos usuários é complementada por contraprestação do parceiro público."
+  ],
+  [
+   "Concessão administrativa",
+   "PPP de prestação de serviços em que a Administração é usuária direta ou indireta."
+  ],
+  [
+   "Sociedade de propósito específico",
+   "Empresa constituída para implantar e gerir a PPP; a Administração não pode ter a maioria do capital votante."
   ]
  ]
 }
