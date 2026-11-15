@@ -50,7 +50,7 @@ export default async function AdminAreaLayout({
           urgentAtividadesCount={urgentAtividadesCount}
           urgentAudienciasCount={urgentAudienciasCount}
         />
-        <div className="min-w-0 flex-1">{children}</div>
+        <div className="min-w-0 flex-1 pt-[calc(env(safe-area-inset-top)+3.25rem)] md:pt-0">{children}</div>
       </div>
     </>
   );
