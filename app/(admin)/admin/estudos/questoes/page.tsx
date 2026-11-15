@@ -55,6 +55,7 @@ export default async function QuestoesPage(props: PageProps<"/admin/estudos/ques
         materias={materias}
         temas={temas}
         historico={historico}
+        revisao={s("revisao") === "1"}
       />
     </>
   );

@@ -40,6 +40,7 @@ export function QuestaoClient({
   materias,
   temas,
   historico,
+  revisao = false,
 }: {
   questao: Questao | null;
   ids: string[];
@@ -47,6 +48,8 @@ export function QuestaoClient({
   materias: { id: string; nome: string; total: number }[];
   temas: string[];
   historico: Resposta[];
+  /** Veio da aba Revisão: grava como "revisao" e volta para a fila ao salvar. */
+  revisao?: boolean;
 }) {
   const router = useRouter();
   const inicio = useRef(0);
@@ -95,7 +98,7 @@ export function QuestaoClient({
     const res = await fetch("/api/admin/estudos/respostas", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ questao_id: questao.id, alternativa: marcada, classificacao: classe, tempo_seg: tempoFinal, nota }),
+      body: JSON.stringify({ questao_id: questao.id, alternativa: marcada, classificacao: classe, tempo_seg: tempoFinal, nota, contexto: revisao ? "revisao" : "treino" }),
     });
     setSalvando(false);
     if (!res.ok) {
@@ -103,7 +106,7 @@ export function QuestaoClient({
       setErro(j.error ?? "Não consegui salvar agora. Confira a conexão e tente de novo.");
       return;
     }
-    router.push(urlDe(filtros, irPara));
+    router.push(revisao ? "/admin/estudos/revisao" : urlDe(filtros, irPara));
     router.refresh();
   }
 
@@ -259,11 +262,13 @@ export function QuestaoClient({
               <div className="flex flex-wrap items-center gap-2">
                 <button type="button" onClick={() => salvar(proximo)} disabled={salvando} className={BOTAO_PRIMARIO}>
                   {salvando && <Sparkle size={14} variante="carregando" cor="var(--e-bg)" />}
-                  {salvando ? "Salvando" : "Salvar e próxima"}
+                  {salvando ? "Salvando" : revisao ? "Salvar e voltar à fila" : "Salvar e próxima"}
                 </button>
-                <button type="button" onClick={() => salvar(questao.id)} disabled={salvando} className={BOTAO_SECUNDARIO}>
-                  Salvar e refazer depois
-                </button>
+                {!revisao && (
+                  <button type="button" onClick={() => salvar(questao.id)} disabled={salvando} className={BOTAO_SECUNDARIO}>
+                    Salvar e refazer depois
+                  </button>
+                )}
               </div>
             </div>
           )}
