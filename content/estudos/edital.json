@@ -1,0 +1,2343 @@
+{
+ "fonte": "Edital verticalizado previsto (13/11/2026), montado antes do edital oficial. Conferir quando o edital sair.",
+ "prova": {
+  "objetiva": "50 questões (20 de Conhecimentos Gerais e 30 de Conhecimentos Específicos)",
+  "discursiva": "Estudo de caso ou redação",
+  "remuneracao": "R$ 4.787,58",
+  "vagas": "8 imediatas e 32 de cadastro de reserva",
+  "banca": "FCC"
+ },
+ "materias": [
+  {
+   "id": "A1",
+   "nome": "Língua Portuguesa",
+   "fase": 0,
+   "condicional": false,
+   "topicos": [
+    {
+     "id": "A1-01",
+     "n": 1,
+     "titulo": "Interpretação e compreensão de textos",
+     "sub": [
+      "ideia central e tese",
+      "informações explícitas e implícitas (pressupostos e subentendidos)",
+      "inferência",
+      "ponto de vista e intenção do autor",
+      "argumentos e contra-argumentos",
+      "texto verbal e não verbal (charges, tirinhas, gráficos)",
+      "ironia e humor",
+      "função do título",
+      "paráfrase e resumo"
+     ]
+    },
+    {
+     "id": "A1-02",
+     "n": 2,
+     "titulo": "Tipologia e gêneros textuais",
+     "sub": [
+      "narração, descrição, dissertação, exposição, injunção",
+      "gêneros jornalísticos e oficiais",
+      "funções da linguagem",
+      "variação linguística e níveis de formalidade",
+      "intertextualidade",
+      "discurso direto, indireto e indireto livre"
+     ]
+    },
+    {
+     "id": "A1-03",
+     "n": 3,
+     "titulo": "Coesão e coerência",
+     "sub": [
+      "referenciação (anáfora, catáfora, elipse)",
+      "conectivos e relações de sentido (causa, concessão, condição, finalidade, conclusão)",
+      "substituição lexical",
+      "paralelismo sintático e semântico",
+      "progressão temática",
+      "operadores argumentativos"
+     ]
+    },
+    {
+     "id": "A1-04",
+     "n": 4,
+     "titulo": "Reescrita de frases e trechos",
+     "sub": [
+      "equivalência de sentido",
+      "transposição de voz ativa e passiva",
+      "deslocamento de termos",
+      "substituição de conectivos",
+      "nominalização",
+      "transformação de oração em termo e o inverso",
+      "reescrita com correção gramatical",
+      "alteração de sentido por pontuação"
+     ]
+    },
+    {
+     "id": "A1-05",
+     "n": 5,
+     "titulo": "Ortografia, acentuação e fonologia",
+     "sub": [
+      "encontros vocálicos e consonantais, dígrafos",
+      "sílaba tônica e regras de acentuação",
+      "Acordo Ortográfico e hífen",
+      "uso de s, z, x, ch, g, j",
+      "porque, por que, porquê, por quê",
+      "mas e mais, a e há, onde e aonde",
+      "homônimos e parônimos"
+     ]
+    },
+    {
+     "id": "A1-06",
+     "n": 6,
+     "titulo": "Morfologia e formação de palavras",
+     "sub": [
+      "classes de palavras",
+      "flexão de nomes e verbos",
+      "derivação e composição",
+      "pronomes (pessoais, relativos, demonstrativos, indefinidos, de tratamento)",
+      "valores de que, se e como"
+     ]
+    },
+    {
+     "id": "A1-07",
+     "n": 7,
+     "titulo": "Sintaxe do período simples",
+     "sub": [
+      "sujeito (determinado, indeterminado, inexistente)",
+      "predicados verbal, nominal e verbo-nominal",
+      "objeto direto e indireto, complemento nominal",
+      "adjunto adnominal e adverbial",
+      "agente da passiva",
+      "aposto e vocativo"
+     ]
+    },
+    {
+     "id": "A1-08",
+     "n": 8,
+     "titulo": "Sintaxe do período composto",
+     "sub": [
+      "coordenação (aditivas, adversativas, alternativas, conclusivas, explicativas)",
+      "subordinação substantiva, adjetiva (restritiva e explicativa) e adverbial",
+      "orações reduzidas",
+      "orações sem conectivo"
+     ]
+    },
+    {
+     "id": "A1-09",
+     "n": 9,
+     "titulo": "Concordância verbal e nominal",
+     "sub": [
+      "sujeito simples, composto e posposto",
+      "núcleos ligados por ou e nem",
+      "coletivos e expressões partitivas",
+      "porcentagem",
+      "pronomes relativos que, quem e cujo",
+      "verbo ser",
+      "haver e fazer impessoais",
+      "verbos com se",
+      "anexo, incluso, meio, bastante, obrigado, é proibido",
+      "silepse"
+     ]
+    },
+    {
+     "id": "A1-10",
+     "n": 10,
+     "titulo": "Regência verbal e nominal",
+     "sub": [
+      "assistir, aspirar, visar, preferir, obedecer, esquecer e lembrar, informar, custar, implicar, proceder, namorar",
+      "regência de nomes e preposições exigidas",
+      "pronomes oblíquos com preposição",
+      "relação entre regência e crase"
+     ]
+    },
+    {
+     "id": "A1-11",
+     "n": 11,
+     "titulo": "Crase",
+     "sub": [
+      "fundamentos (a preposição mais a artigo)",
+      "casos proibidos",
+      "casos obrigatórios",
+      "casos facultativos",
+      "locuções adverbiais, prepositivas e conjuntivas",
+      "topônimos",
+      "aquele, aquela, a qual",
+      "horas e expressões de moda"
+     ]
+    },
+    {
+     "id": "A1-12",
+     "n": 12,
+     "titulo": "Pontuação",
+     "sub": [
+      "vírgula (enumeração, aposto, vocativo, adjunto deslocado, conjunções, orações intercaladas)",
+      "ponto e vírgula",
+      "dois-pontos",
+      "travessão, aspas, parênteses e reticências",
+      "vírgula indevida entre sujeito e verbo",
+      "pontuação e mudança de sentido"
+     ]
+    },
+    {
+     "id": "A1-13",
+     "n": 13,
+     "titulo": "Colocação pronominal",
+     "sub": [
+      "ênclise, próclise e mesóclise",
+      "atração por palavras negativas, advérbios, pronomes e conjunções",
+      "locuções verbais",
+      "pronome com formas verbais no futuro"
+     ]
+    },
+    {
+     "id": "A1-14",
+     "n": 14,
+     "titulo": "Verbos",
+     "sub": [
+      "tempos e modos",
+      "correlação de tempos",
+      "formas nominais",
+      "verbos irregulares, defectivos e abundantes",
+      "vozes verbal (ativa, passiva, reflexiva)",
+      "emprego do subjuntivo e do futuro"
+     ]
+    },
+    {
+     "id": "A1-15",
+     "n": 15,
+     "titulo": "Semântica e estilística",
+     "sub": [
+      "sinonímia, antonímia, hiperonímia",
+      "polissemia e ambiguidade",
+      "denotação e conotação",
+      "metáfora, metonímia, comparação, antítese, paradoxo, hipérbole, ironia, eufemismo, prosopopeia",
+      "vícios de linguagem (pleonasmo, cacofonia, ambiguidade)"
+     ]
+    },
+    {
+     "id": "A1-16",
+     "n": 16,
+     "titulo": "Redação oficial",
+     "sub": [
+      "conceito, características e princípios (impessoalidade, formalidade, clareza, concisão, uniformidade)",
+      "ofício, memorando, parecer, despacho, requerimento, exposição de motivos, mensagem, e-mail",
+      "pronomes de tratamento e vocativos",
+      "fechos de comunicação",
+      "estrutura do parecer jurídico"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "A2",
+   "nome": "Raciocínio Lógico e Matemática",
+   "fase": 4,
+   "condicional": true,
+   "topicos": [
+    {
+     "id": "A2-01",
+     "n": 1,
+     "titulo": "Estruturas lógicas",
+     "sub": [
+      "proposições e valores lógicos",
+      "conectivos (e, ou, ou exclusivo, se então, se e somente se)",
+      "tabela-verdade",
+      "tautologia, contradição, contingência",
+      "equivalências (contrapositiva, condicional, De Morgan)",
+      "negação de proposições compostas",
+      "negação de quantificadores (todo, algum, nenhum)"
+     ]
+    },
+    {
+     "id": "A2-02",
+     "n": 2,
+     "titulo": "Argumentação lógica",
+     "sub": [
+      "argumentos dedutivos",
+      "premissas e conclusão",
+      "validade e verdade",
+      "silogismos",
+      "diagramas lógicos",
+      "falácias"
+     ]
+    },
+    {
+     "id": "A2-03",
+     "n": 3,
+     "titulo": "Problemas de lógica",
+     "sub": [
+      "verdades e mentiras",
+      "associação lógica em quadros",
+      "sequências numéricas, alfabéticas e de figuras",
+      "calendários e datas",
+      "ordenação e posições"
+     ]
+    },
+    {
+     "id": "A2-04",
+     "n": 4,
+     "titulo": "Teoria dos conjuntos",
+     "sub": [
+      "operações (união, interseção, diferença, complementar)",
+      "diagramas de Venn",
+      "cardinalidade com dois e três conjuntos"
+     ]
+    },
+    {
+     "id": "A2-05",
+     "n": 5,
+     "titulo": "Matemática básica",
+     "sub": [
+      "operações com inteiros, frações e decimais",
+      "MMC e MDC",
+      "potenciação e radiciação",
+      "razão e proporção, grandezas",
+      "regra de três simples e composta",
+      "porcentagem, aumentos e descontos",
+      "juros simples e compostos",
+      "equações de 1º e 2º graus e sistemas",
+      "unidades de medida",
+      "geometria básica (perímetro, área, volume)"
+     ]
+    },
+    {
+     "id": "A2-06",
+     "n": 6,
+     "titulo": "Análise combinatória",
+     "sub": [
+      "princípio fundamental da contagem",
+      "fatorial",
+      "permutações simples e com repetição",
+      "arranjos",
+      "combinações"
+     ]
+    },
+    {
+     "id": "A2-07",
+     "n": 7,
+     "titulo": "Probabilidade",
+     "sub": [
+      "espaço amostral e eventos",
+      "probabilidade da união e do complementar",
+      "probabilidade condicional",
+      "eventos independentes"
+     ]
+    },
+    {
+     "id": "A2-08",
+     "n": 8,
+     "titulo": "Estatística básica",
+     "sub": [
+      "média, mediana e moda",
+      "desvio-padrão",
+      "leitura de tabelas e gráficos"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "A3",
+   "nome": "Informática",
+   "fase": 4,
+   "condicional": true,
+   "topicos": [
+    {
+     "id": "A3-01",
+     "n": 1,
+     "titulo": "Hardware e software",
+     "sub": [
+      "componentes e periféricos",
+      "memórias e armazenamento (HD, SSD, nuvem)",
+      "unidades de medida",
+      "tipos de software e licenças"
+     ]
+    },
+    {
+     "id": "A3-02",
+     "n": 2,
+     "titulo": "Sistema operacional Windows",
+     "sub": [
+      "explorador de arquivos, arquivos e pastas",
+      "atalhos de teclado",
+      "configurações e painel de controle",
+      "gerenciador de tarefas",
+      "extensões e compactação"
+     ]
+    },
+    {
+     "id": "A3-03",
+     "n": 3,
+     "titulo": "Editores de texto (Word e Writer)",
+     "sub": [
+      "formatação e estilos",
+      "índices e sumários",
+      "cabeçalho e rodapé",
+      "mala direta",
+      "revisão e controle de alterações",
+      "atalhos"
+     ]
+    },
+    {
+     "id": "A3-04",
+     "n": 4,
+     "titulo": "Planilhas (Excel e Calc)",
+     "sub": [
+      "fórmulas e referências relativas e absolutas",
+      "funções SOMA, MÉDIA, SE, PROCV, CONT.SE, SOMASE",
+      "gráficos",
+      "tabela dinâmica",
+      "filtros e classificação",
+      "formatação condicional"
+     ]
+    },
+    {
+     "id": "A3-05",
+     "n": 5,
+     "titulo": "Apresentações (PowerPoint e Impress)",
+     "sub": [
+      "slides, layouts, transições",
+      "modos de exibição",
+      "atalhos"
+     ]
+    },
+    {
+     "id": "A3-06",
+     "n": 6,
+     "titulo": "Internet e navegadores",
+     "sub": [
+      "protocolos (HTTP, HTTPS, FTP, DNS, TCP/IP)",
+      "Chrome, Edge e Firefox",
+      "favoritos, histórico, cookies, modo anônimo",
+      "pesquisa avançada",
+      "intranet, extranet e VPN"
+     ]
+    },
+    {
+     "id": "A3-07",
+     "n": 7,
+     "titulo": "Correio eletrônico e colaboração",
+     "sub": [
+      "Outlook e Gmail",
+      "Cc e Cco",
+      "anexos",
+      "protocolos SMTP, IMAP e POP3",
+      "videoconferência e Teams"
+     ]
+    },
+    {
+     "id": "A3-08",
+     "n": 8,
+     "titulo": "Computação em nuvem",
+     "sub": [
+      "IaaS, PaaS e SaaS",
+      "Google Drive e OneDrive",
+      "sincronização e trabalho colaborativo"
+     ]
+    },
+    {
+     "id": "A3-09",
+     "n": 9,
+     "titulo": "Segurança da informação",
+     "sub": [
+      "confidencialidade, integridade, disponibilidade, autenticidade e não repúdio",
+      "vírus, worms, trojans, ransomware, spyware",
+      "phishing e engenharia social",
+      "firewall e antivírus",
+      "backup completo, incremental e diferencial",
+      "criptografia",
+      "certificado e assinatura digital",
+      "autenticação multifator e senhas"
+     ]
+    },
+    {
+     "id": "A3-10",
+     "n": 10,
+     "titulo": "Inteligência artificial e tecnologias emergentes",
+     "sub": [
+      "IA generativa e aprendizado de máquina",
+      "big data",
+      "internet das coisas",
+      "blockchain",
+      "riscos, ética e regulação"
+     ]
+    },
+    {
+     "id": "A3-11",
+     "n": 11,
+     "titulo": "Governo digital e processo eletrônico",
+     "sub": [
+      "serviços públicos digitais",
+      "processo eletrônico (PJe, SEI)",
+      "assinatura eletrônica",
+      "noções de LGPD"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "A4",
+   "nome": "História do Maranhão",
+   "fase": 5,
+   "condicional": true,
+   "topicos": [
+    {
+     "id": "A4-01",
+     "n": 1,
+     "titulo": "Maranhão antes da colonização",
+     "sub": [
+      "povos indígenas (Tupinambá, Gamela, Timbira, Guajajara, Ka’apor, Krikati, Canela, Awá-Guajá)",
+      "sambaquis e ocupação da costa"
+     ]
+    },
+    {
+     "id": "A4-02",
+     "n": 2,
+     "titulo": "França Equinocial e fundação de São Luís (1612)",
+     "sub": [
+      "Daniel de La Touche e a fundação",
+      "Batalha de Guaxenduba (1614)",
+      "Jerônimo de Albuquerque e Alexandre de Moura",
+      "expulsão dos franceses e consolidação portuguesa"
+     ]
+    },
+    {
+     "id": "A4-03",
+     "n": 3,
+     "titulo": "Colonização portuguesa e Estado do Maranhão e Grão-Pará",
+     "sub": [
+      "criação do Estado do Maranhão (1621)",
+      "capitanias hereditárias",
+      "missões jesuíticas e Padre Antônio Vieira",
+      "escravização indígena",
+      "tabaco e açúcar"
+     ]
+    },
+    {
+     "id": "A4-04",
+     "n": 4,
+     "titulo": "Invasão holandesa (1641 a 1644)",
+     "sub": [
+      "Companhia das Índias Ocidentais",
+      "ocupação de São Luís",
+      "resistência luso-maranhense e expulsão"
+     ]
+    },
+    {
+     "id": "A4-05",
+     "n": 5,
+     "titulo": "Revolta de Beckman (1684)",
+     "sub": [
+      "Manuel e Tomás Beckman",
+      "estanco (monopólio) da Companhia de Comércio",
+      "conflito com os jesuítas",
+      "repressão e desfecho"
+     ]
+    },
+    {
+     "id": "A4-06",
+     "n": 6,
+     "titulo": "Período pombalino",
+     "sub": [
+      "Companhia Geral de Comércio do Grão-Pará e Maranhão (1755)",
+      "Diretório dos Índios",
+      "expulsão dos jesuítas (1759)",
+      "algodão e arroz",
+      "escravidão africana"
+     ]
+    },
+    {
+     "id": "A4-07",
+     "n": 7,
+     "titulo": "Prosperidade do algodão",
+     "sub": [
+      "Maranhão como grande exportador",
+      "elite agrária",
+      "crescimento de São Luís e casarões com azulejos"
+     ]
+    },
+    {
+     "id": "A4-08",
+     "n": 8,
+     "titulo": "Independência e adesão do Maranhão (1823)",
+     "sub": [
+      "resistência portuguesa e junta de governo",
+      "Lord Cochrane",
+      "adesão em 28 de julho de 1823",
+      "guerra no interior (Caxias, Itapecuru) e Piauí"
+     ]
+    },
+    {
+     "id": "A4-09",
+     "n": 9,
+     "titulo": "Balaiada (1838 a 1841)",
+     "sub": [
+      "causas sociais e políticas (Bem-te-vis e Cabanos)",
+      "Raimundo Gomes, Manuel Balaio, Cosme Bento das Chagas",
+      "quilombo e escravos rebelados",
+      "repressão de Luís Alves de Lima e Silva (futuro Duque de Caxias)",
+      "Lei dos Prefeitos"
+     ]
+    },
+    {
+     "id": "A4-10",
+     "n": 10,
+     "titulo": "Atenas Brasileira",
+     "sub": [
+      "Gonçalves Dias, Sotero dos Reis, João Francisco Lisboa, Odorico Mendes",
+      "Sousândrade, Aluísio Azevedo, Artur Azevedo",
+      "Maria Firmina dos Reis e o romance Úrsula (1859)",
+      "vida intelectual e imprensa"
+     ]
+    },
+    {
+     "id": "A4-11",
+     "n": 11,
+     "titulo": "Abolição, República e oligarquias",
+     "sub": [
+      "abolição (1888) e crise da economia algodoeira",
+      "indústria têxtil em São Luís",
+      "Primeira República e oligarquias (Benedito Leite, Urbano Santos)"
+     ]
+    },
+    {
+     "id": "A4-12",
+     "n": 12,
+     "titulo": "Século XX",
+     "sub": [
+      "Era Vargas e interventorias",
+      "Vitorinismo e a greve de 1951",
+      "período Sarney e o “Maranhão Novo”",
+      "Projeto Carajás, Alumar, Porto do Itaqui",
+      "Centro de Lançamento de Alcântara",
+      "redemocratização e Constituição estadual de 1989"
+     ]
+    },
+    {
+     "id": "A4-13",
+     "n": 13,
+     "titulo": "Século XXI",
+     "sub": [
+      "alternância de governos (Roseana Sarney, Jackson Lago, Flávio Dino, Carlos Brandão)",
+      "IDH e programas sociais",
+      "conflitos agrários e quilombolas (Alcântara)",
+      "investimentos em logística e energia"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "A5",
+   "nome": "Geografia do Maranhão",
+   "fase": 5,
+   "condicional": true,
+   "topicos": [
+    {
+     "id": "A5-01",
+     "n": 1,
+     "titulo": "Localização e divisão político-administrativa",
+     "sub": [
+      "Região Nordeste e limites (Pará, Tocantins, Piauí, Atlântico)",
+      "217 municípios",
+      "regiões geográficas",
+      "São Luís, Ilha do Maranhão (Upaon-Açu)"
+     ]
+    },
+    {
+     "id": "A5-02",
+     "n": 2,
+     "titulo": "Relevo e geologia",
+     "sub": [
+      "bacia sedimentar do Parnaíba",
+      "planaltos, chapadas e Chapada das Mesas",
+      "Baixada Maranhense e Golfão Maranhense",
+      "Reentrâncias Maranhenses",
+      "Lençóis Maranhenses e dunas"
+     ]
+    },
+    {
+     "id": "A5-03",
+     "n": 3,
+     "titulo": "Clima e vegetação",
+     "sub": [
+      "transição Amazônia, Cerrado e Caatinga",
+      "Mata dos Cocais e babaçu",
+      "manguezais",
+      "campos inundáveis da Baixada",
+      "cerrado do sul"
+     ]
+    },
+    {
+     "id": "A5-04",
+     "n": 4,
+     "titulo": "Hidrografia",
+     "sub": [
+      "bacias do Itapecuru, Mearim, Pindaré, Grajaú, Munim e Parnaíba",
+      "Tocantins e Gurupi nos limites",
+      "baías de São Marcos e São José"
+     ]
+    },
+    {
+     "id": "A5-05",
+     "n": 5,
+     "titulo": "Unidades de conservação e terras indígenas",
+     "sub": [
+      "Parque Nacional dos Lençóis Maranhenses",
+      "APA do Delta do Parnaíba",
+      "Parque Nacional da Chapada das Mesas",
+      "Reserva Biológica do Gurupi",
+      "terras indígenas (Arariboia, Alto Turiaçu)"
+     ]
+    },
+    {
+     "id": "A5-06",
+     "n": 6,
+     "titulo": "População e desenvolvimento humano",
+     "sub": [
+      "distribuição e urbanização",
+      "IDH e desigualdades",
+      "quilombolas e indígenas",
+      "migrações"
+     ]
+    },
+    {
+     "id": "A5-07",
+     "n": 7,
+     "titulo": "Economia",
+     "sub": [
+      "soja, milho, arroz, pecuária e cana",
+      "MATOPIBA",
+      "babaçu e extrativismo",
+      "mineração e metalurgia (Vale, Alumar)",
+      "complexo portuário (Itaqui e Ponta da Madeira)",
+      "Ferrovia Carajás e Transnordestina",
+      "energia e gás natural",
+      "turismo e pesca"
+     ]
+    },
+    {
+     "id": "A5-08",
+     "n": 8,
+     "titulo": "Infraestrutura e meio ambiente",
+     "sub": [
+      "rodovias (BR-135, BR-010, BR-222, BR-316)",
+      "portos e aeroportos",
+      "desmatamento e queimadas",
+      "conflitos pela terra",
+      "mudanças climáticas e Amazônia Legal"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "A6",
+   "nome": "Cultura do Maranhão",
+   "fase": 5,
+   "condicional": true,
+   "topicos": [
+    {
+     "id": "A6-01",
+     "n": 1,
+     "titulo": "Literatura e artes",
+     "sub": [
+      "Gonçalves Dias, Aluísio Azevedo, Graça Aranha",
+      "Maria Firmina dos Reis, Josué Montello, Ferreira Gullar",
+      "azulejaria e arquitetura colonial"
+     ]
+    },
+    {
+     "id": "A6-02",
+     "n": 2,
+     "titulo": "Patrimônio material",
+     "sub": [
+      "Centro Histórico de São Luís (tombamento federal e título da UNESCO em 1997)",
+      "Alcântara",
+      "casarões e fontes coloniais"
+     ]
+    },
+    {
+     "id": "A6-03",
+     "n": 3,
+     "titulo": "Patrimônio imaterial",
+     "sub": [
+      "Tambor de Crioula (IPHAN, 2007)",
+      "Bumba meu boi do Maranhão (IPHAN, 2011, e UNESCO, 2019) e seus sotaques (Matraca, Zabumba, Orquestra, Baixada, Costa de Mão)",
+      "Festa do Divino",
+      "Cacuriá e Lelê"
+     ]
+    },
+    {
+     "id": "A6-04",
+     "n": 4,
+     "titulo": "Religiosidade afro-brasileira",
+     "sub": [
+      "Tambor de Mina",
+      "Casa das Minas e Casa de Nagô",
+      "sincretismo"
+     ]
+    },
+    {
+     "id": "A6-05",
+     "n": 5,
+     "titulo": "Música e festas",
+     "sub": [
+      "reggae maranhense e “Jamaica brasileira”",
+      "Carnaval e blocos tradicionais",
+      "São João e festas juninas",
+      "Lençóis e Alcântara nas festas"
+     ]
+    },
+    {
+     "id": "A6-06",
+     "n": 6,
+     "titulo": "Culinária e artesanato",
+     "sub": [
+      "arroz de cuxá, torta de camarão, peixe frito, juçara",
+      "tiquira, guaraná Jesus",
+      "artesanato de buriti e cestaria"
+     ]
+    },
+    {
+     "id": "A6-07",
+     "n": 7,
+     "titulo": "Povos e comunidades tradicionais",
+     "sub": [
+      "quilombolas",
+      "indígenas",
+      "quebradeiras de coco babaçu",
+      "ribeirinhos e pescadores"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "A7",
+   "nome": "Atualidades",
+   "fase": 5,
+   "condicional": true,
+   "topicos": [
+    {
+     "id": "A7-01",
+     "n": 1,
+     "titulo": "Política e Estado",
+     "sub": [
+      "eleições gerais de 2026 e composição dos Poderes",
+      "decisões recentes do STF e do CNJ",
+      "reforma administrativa e carreiras públicas",
+      "orçamento e emendas parlamentares",
+      "relações entre os Poderes"
+     ]
+    },
+    {
+     "id": "A7-02",
+     "n": 2,
+     "titulo": "Economia",
+     "sub": [
+      "inflação, juros e política monetária",
+      "arcabouço fiscal e dívida pública",
+      "implementação da reforma tributária",
+      "PIB, emprego e renda",
+      "comércio exterior e tarifas"
+     ]
+    },
+    {
+     "id": "A7-03",
+     "n": 3,
+     "titulo": "Meio ambiente e clima",
+     "sub": [
+      "COP30 em Belém (2025) e seus resultados",
+      "transição energética",
+      "desmatamento e queimadas na Amazônia",
+      "Acordo de Paris e metas climáticas",
+      "licenciamento ambiental"
+     ]
+    },
+    {
+     "id": "A7-04",
+     "n": 4,
+     "titulo": "Tecnologia e direito digital",
+     "sub": [
+      "inteligência artificial e seu projeto de regulação",
+      "ECA Digital",
+      "responsabilidade das plataformas",
+      "proteção de dados e LGPD",
+      "golpes digitais e segurança"
+     ]
+    },
+    {
+     "id": "A7-05",
+     "n": 5,
+     "titulo": "Direitos humanos e sociedade",
+     "sub": [
+      "violência de gênero e política de proteção",
+      "igualdade racial e ações afirmativas",
+      "povos indígenas e demarcações",
+      "saúde, educação e assistência social",
+      "acesso à justiça"
+     ]
+    },
+    {
+     "id": "A7-06",
+     "n": 6,
+     "titulo": "Cenário internacional",
+     "sub": [
+      "conflitos armados em curso (Ucrânia, Oriente Médio)",
+      "BRICS e G20",
+      "relações do Brasil com EUA, China e União Europeia",
+      "migração e refugiados"
+     ]
+    },
+    {
+     "id": "A7-07",
+     "n": 7,
+     "titulo": "Maranhão atual",
+     "sub": [
+      "concurso unificado e gestão pública estadual",
+      "programas sociais e de desenvolvimento humano",
+      "investimentos em portos, energia e agronegócio",
+      "Alcântara e questões quilombolas",
+      "turismo e eventos culturais"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B1",
+   "nome": "Legislação da PGE-MA e do servidor estadual",
+   "fase": 1,
+   "condicional": false,
+   "topicos": [
+    {
+     "id": "B1-01",
+     "n": 1,
+     "titulo": "Advocacia Pública estadual",
+     "sub": [
+      "missão constitucional (CF art. 132 e Constituição estadual)",
+      "representação judicial e consultoria jurídica do Estado",
+      "unidade, indivisibilidade e independência funcional",
+      "princípios institucionais"
+     ]
+    },
+    {
+     "id": "B1-02",
+     "n": 2,
+     "titulo": "Estrutura da PGE",
+     "sub": [
+      "Procurador-Geral do Estado",
+      "Conselho Superior",
+      "Corregedoria",
+      "órgãos de execução, de apoio e administrativos",
+      "Procuradorias especializadas e regionais"
+     ]
+    },
+    {
+     "id": "B1-03",
+     "n": 3,
+     "titulo": "Carreira e regime dos integrantes",
+     "sub": [
+      "ingresso, estágio probatório, promoção e remoção",
+      "garantias, prerrogativas, direitos e deveres",
+      "vedações e impedimentos",
+      "regime disciplinar",
+      "gratificação científica (LC 291/2025)"
+     ]
+    },
+    {
+     "id": "B1-04",
+     "n": 4,
+     "titulo": "Estatuto dos Servidores (Lei 6.107/1994)",
+     "sub": [
+      "cargo público e provimento",
+      "posse, exercício e estágio probatório",
+      "estabilidade, readaptação, reintegração, disponibilidade",
+      "vacância e acumulação",
+      "vencimentos, vantagens, licenças, afastamentos, férias",
+      "direitos e deveres",
+      "responsabilidade civil, penal e administrativa",
+      "processo administrativo disciplinar e penalidades"
+     ]
+    },
+    {
+     "id": "B1-05",
+     "n": 5,
+     "titulo": "Processo administrativo estadual (Lei 8.959/2009)",
+     "sub": [
+      "princípios",
+      "elaboração e tramitação dos atos",
+      "prazos, instrução e decisão",
+      "recursos"
+     ]
+    },
+    {
+     "id": "B1-06",
+     "n": 6,
+     "titulo": "Constituição do Estado: administração e servidores",
+     "sub": [
+      "princípios da Administração",
+      "servidores públicos estaduais",
+      "controle externo e Tribunal de Contas do Estado",
+      "finanças públicas"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B2",
+   "nome": "Direito Administrativo",
+   "fase": 1,
+   "condicional": false,
+   "topicos": [
+    {
+     "id": "B2-01",
+     "n": 1,
+     "titulo": "Fundamentos e regime jurídico-administrativo",
+     "sub": [
+      "conceito de Direito Administrativo e fontes",
+      "supremacia e indisponibilidade do interesse público",
+      "princípios expressos e implícitos",
+      "razoabilidade, proporcionalidade, segurança jurídica, confiança legítima",
+      "LINDB (arts. 20 a 30)"
+     ]
+    },
+    {
+     "id": "B2-02",
+     "n": 2,
+     "titulo": "Organização administrativa",
+     "sub": [
+      "centralização, descentralização e desconcentração",
+      "Administração direta e indireta",
+      "autarquias, fundações públicas, empresas públicas, sociedades de economia mista",
+      "consórcios públicos",
+      "terceiro setor (OS, OSCIP, parcerias)"
+     ]
+    },
+    {
+     "id": "B2-03",
+     "n": 3,
+     "titulo": "Poderes administrativos",
+     "sub": [
+      "vinculado e discricionário",
+      "hierárquico e disciplinar",
+      "regulamentar",
+      "polícia administrativa",
+      "uso e abuso do poder"
+     ]
+    },
+    {
+     "id": "B2-04",
+     "n": 4,
+     "titulo": "Atos administrativos",
+     "sub": [
+      "conceito, requisitos e atributos",
+      "classificação e espécies",
+      "motivação e teoria dos motivos determinantes",
+      "extinção (anulação, revogação, cassação, caducidade, contraposição)",
+      "convalidação",
+      "prescrição e decadência administrativa"
+     ]
+    },
+    {
+     "id": "B2-05",
+     "n": 5,
+     "titulo": "Licitações (Lei 14.133/2021)",
+     "sub": [
+      "princípios e objetivos",
+      "fases da licitação",
+      "modalidades (pregão, concorrência, concurso, leilão, diálogo competitivo)",
+      "critérios de julgamento",
+      "contratação direta (dispensa e inexigibilidade)",
+      "habilitação, recursos e homologação",
+      "agentes e comissão de contratação",
+      "nulidades e controle",
+      "registro de preços"
+     ]
+    },
+    {
+     "id": "B2-06",
+     "n": 6,
+     "titulo": "Contratos administrativos",
+     "sub": [
+      "características e cláusulas exorbitantes",
+      "formalização e garantias",
+      "duração e prorrogação",
+      "alteração e equilíbrio econômico-financeiro",
+      "execução, fiscalização, recebimento",
+      "inexecução e extinção",
+      "infrações e sanções administrativas"
+     ]
+    },
+    {
+     "id": "B2-07",
+     "n": 7,
+     "titulo": "Serviços públicos",
+     "sub": [
+      "conceito, princípios e classificação",
+      "concessão, permissão e autorização",
+      "reajuste e reequilíbrio",
+      "intervenção, encampação, caducidade, reversão",
+      "parcerias público-privadas"
+     ]
+    },
+    {
+     "id": "B2-08",
+     "n": 8,
+     "titulo": "Agentes públicos",
+     "sub": [
+      "classificação, cargo, emprego e função",
+      "concurso público e nomeação",
+      "estabilidade e estágio probatório",
+      "acumulação e teto remuneratório",
+      "regime próprio de previdência",
+      "direito de greve e sindicalização",
+      "responsabilização disciplinar"
+     ]
+    },
+    {
+     "id": "B2-09",
+     "n": 9,
+     "titulo": "Responsabilidade civil do Estado",
+     "sub": [
+      "evolução e teorias",
+      "risco administrativo (CF art. 37, § 6º)",
+      "ação e omissão estatal",
+      "excludentes",
+      "ação regressiva",
+      "jurisprudência do STF sobre responsabilidade de concessionárias e de terceirizadas"
+     ]
+    },
+    {
+     "id": "B2-10",
+     "n": 10,
+     "titulo": "Improbidade administrativa",
+     "sub": [
+      "sujeitos ativo e passivo",
+      "atos de improbidade (enriquecimento ilícito, dano ao erário, princípios)",
+      "dolo específico",
+      "sanções",
+      "prescrição",
+      "ação de improbidade e acordo de não persecução cível",
+      "aplicação da Lei 14.230/2021 no tempo"
+     ]
+    },
+    {
+     "id": "B2-11",
+     "n": 11,
+     "titulo": "Processo administrativo",
+     "sub": [
+      "princípios",
+      "direitos e deveres do administrado",
+      "competência",
+      "instrução e decisão",
+      "recursos e revisão",
+      "prazos",
+      "processo administrativo disciplinar"
+     ]
+    },
+    {
+     "id": "B2-12",
+     "n": 12,
+     "titulo": "Bens públicos",
+     "sub": [
+      "conceito e classificação",
+      "regime jurídico",
+      "afetação e desafetação",
+      "utilização por particulares",
+      "terras devolutas"
+     ]
+    },
+    {
+     "id": "B2-13",
+     "n": 13,
+     "titulo": "Intervenção do Estado na propriedade",
+     "sub": [
+      "função social",
+      "desapropriação",
+      "servidão administrativa",
+      "requisição",
+      "tombamento",
+      "limitações administrativas",
+      "ocupação temporária"
+     ]
+    },
+    {
+     "id": "B2-14",
+     "n": 14,
+     "titulo": "Controle da Administração",
+     "sub": [
+      "controle interno e externo",
+      "Tribunal de Contas",
+      "controle judicial e ações cabíveis",
+      "controle legislativo",
+      "prescrição"
+     ]
+    },
+    {
+     "id": "B2-15",
+     "n": 15,
+     "titulo": "Combate à corrupção e transparência",
+     "sub": [
+      "Lei Anticorrupção e acordo de leniência",
+      "compliance e programa de integridade",
+      "Lei de Acesso à Informação",
+      "ouvidorias e controle social"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B3",
+   "nome": "Direito Constitucional",
+   "fase": 1,
+   "condicional": false,
+   "topicos": [
+    {
+     "id": "B3-01",
+     "n": 1,
+     "titulo": "Teoria da Constituição",
+     "sub": [
+      "conceito, classificação e elementos",
+      "poder constituinte originário, derivado e decorrente",
+      "reforma constitucional e cláusulas pétreas",
+      "supremacia constitucional e bloco de constitucionalidade",
+      "aplicabilidade e eficácia das normas",
+      "hermenêutica e neoconstitucionalismo"
+     ]
+    },
+    {
+     "id": "B3-02",
+     "n": 2,
+     "titulo": "Princípios fundamentais",
+     "sub": [
+      "fundamentos e objetivos da República",
+      "princípios das relações internacionais",
+      "separação dos Poderes"
+     ]
+    },
+    {
+     "id": "B3-03",
+     "n": 3,
+     "titulo": "Direitos e garantias fundamentais",
+     "sub": [
+      "direitos individuais (art. 5º)",
+      "direitos coletivos",
+      "remédios constitucionais (habeas corpus, habeas data, mandado de segurança, mandado de injunção, ação popular)",
+      "direitos sociais",
+      "nacionalidade",
+      "direitos políticos e partidos"
+     ]
+    },
+    {
+     "id": "B3-04",
+     "n": 4,
+     "titulo": "Organização do Estado",
+     "sub": [
+      "Federação e repartição de competências",
+      "União, Estados, DF e Municípios",
+      "autonomia e poder constituinte estadual",
+      "intervenção federal e estadual",
+      "bens e competências legislativas"
+     ]
+    },
+    {
+     "id": "B3-05",
+     "n": 5,
+     "titulo": "Administração Pública na Constituição",
+     "sub": [
+      "princípios (art. 37)",
+      "concursos e acessibilidade",
+      "estabilidade",
+      "teto e acumulação",
+      "regime próprio",
+      "servidores e greve"
+     ]
+    },
+    {
+     "id": "B3-06",
+     "n": 6,
+     "titulo": "Poder Legislativo",
+     "sub": [
+      "estrutura e funcionamento",
+      "processo legislativo e medidas provisórias",
+      "imunidades e prerrogativas parlamentares",
+      "CPI",
+      "fiscalização e Tribunais de Contas"
+     ]
+    },
+    {
+     "id": "B3-07",
+     "n": 7,
+     "titulo": "Poder Executivo",
+     "sub": [
+      "Presidente e Vice",
+      "atribuições",
+      "responsabilidade e impeachment",
+      "Governadores e Prefeitos"
+     ]
+    },
+    {
+     "id": "B3-08",
+     "n": 8,
+     "titulo": "Poder Judiciário",
+     "sub": [
+      "órgãos e garantias da magistratura",
+      "STF e STJ, competências",
+      "CNJ",
+      "justiças especializadas",
+      "súmula vinculante e repercussão geral"
+     ]
+    },
+    {
+     "id": "B3-09",
+     "n": 9,
+     "titulo": "Funções essenciais à Justiça",
+     "sub": [
+      "Ministério Público",
+      "Advocacia Pública (arts. 131 e 132)",
+      "Advocacia",
+      "Defensoria Pública"
+     ]
+    },
+    {
+     "id": "B3-10",
+     "n": 10,
+     "titulo": "Controle de constitucionalidade",
+     "sub": [
+      "conceito e modalidades",
+      "controle difuso e cláusula de reserva de plenário",
+      "controle concentrado (ADI, ADC, ADO, ADPF)",
+      "legitimados e efeitos das decisões",
+      "modulação temporal",
+      "reclamação constitucional",
+      "controle estadual"
+     ]
+    },
+    {
+     "id": "B3-11",
+     "n": 11,
+     "titulo": "Defesa do Estado e segurança pública",
+     "sub": [
+      "estado de defesa e de sítio",
+      "Forças Armadas",
+      "segurança pública"
+     ]
+    },
+    {
+     "id": "B3-12",
+     "n": 12,
+     "titulo": "Tributação, orçamento e ordem econômica",
+     "sub": [
+      "limitações constitucionais ao poder de tributar",
+      "finanças públicas e precatórios",
+      "ordem econômica e financeira",
+      "ordem social"
+     ]
+    },
+    {
+     "id": "B3-13",
+     "n": 13,
+     "titulo": "Constituição do Estado do Maranhão",
+     "sub": [
+      "organização e competências",
+      "Assembleia Legislativa e Governador",
+      "Judiciário e Ministério Público estaduais",
+      "Procuradoria e Defensoria",
+      "Municípios"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B4",
+   "nome": "Direitos Humanos",
+   "fase": 3,
+   "condicional": false,
+   "topicos": [
+    {
+     "id": "B4-01",
+     "n": 1,
+     "titulo": "Teoria geral dos direitos humanos",
+     "sub": [
+      "conceito e terminologia (direitos humanos, fundamentais, do homem)",
+      "fundamentos filosóficos",
+      "dimensões ou gerações",
+      "características (universalidade, indivisibilidade, interdependência, historicidade)",
+      "eficácia horizontal"
+     ]
+    },
+    {
+     "id": "B4-02",
+     "n": 2,
+     "titulo": "História e evolução",
+     "sub": [
+      "antecedentes (Magna Carta, Revoluções Francesa e Americana)",
+      "pós-Segunda Guerra e Carta da ONU",
+      "Declaração de 1948"
+     ]
+    },
+    {
+     "id": "B4-03",
+     "n": 3,
+     "titulo": "Sistema global (ONU)",
+     "sub": [
+      "Carta da ONU e órgãos",
+      "Conselho de Direitos Humanos e Alto Comissariado",
+      "tratados e comitês de monitoramento",
+      "Tribunal Penal Internacional",
+      "Direito Internacional Humanitário"
+     ]
+    },
+    {
+     "id": "B4-04",
+     "n": 4,
+     "titulo": "Sistema interamericano",
+     "sub": [
+      "OEA",
+      "Comissão e Corte IDH, competência e procedimento",
+      "casos contra o Brasil (Damião Ximenes Lopes, Gomes Lund, Favela Nova Brasília, Maria da Penha)",
+      "controle de convencionalidade",
+      "opiniões consultivas"
+     ]
+    },
+    {
+     "id": "B4-05",
+     "n": 5,
+     "titulo": "Incorporação dos tratados no ordenamento brasileiro",
+     "sub": [
+      "art. 5º, §§ 2º e 3º",
+      "status supralegal e de emenda constitucional",
+      "jurisprudência do STF",
+      "incidente de deslocamento de competência (art. 109, V-A)",
+      "monismo e dualismo"
+     ]
+    },
+    {
+     "id": "B4-06",
+     "n": 6,
+     "titulo": "Grupos vulneráveis",
+     "sub": [
+      "mulheres",
+      "crianças e adolescentes",
+      "pessoas idosas",
+      "pessoas com deficiência",
+      "população negra",
+      "povos indígenas e quilombolas",
+      "população LGBTQIA+",
+      "migrantes e refugiados",
+      "pessoas privadas de liberdade"
+     ]
+    },
+    {
+     "id": "B4-07",
+     "n": 7,
+     "titulo": "Temas específicos",
+     "sub": [
+      "tortura e tratamento cruel",
+      "direito à moradia, saúde, educação e trabalho",
+      "liberdade de expressão e proteção de dados",
+      "justiça de transição e Comissão da Verdade",
+      "empresas e direitos humanos",
+      "meio ambiente e direitos humanos"
+     ]
+    },
+    {
+     "id": "B4-08",
+     "n": 8,
+     "titulo": "Políticas públicas e instituições nacionais",
+     "sub": [
+      "PNDH-3",
+      "Conselho Nacional dos Direitos Humanos",
+      "Defensoria Pública e acesso à justiça",
+      "Ouvidorias e órgãos de promoção"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B5",
+   "nome": "Direito Processual Civil",
+   "fase": 2,
+   "condicional": false,
+   "topicos": [
+    {
+     "id": "B5-01",
+     "n": 1,
+     "titulo": "Normas fundamentais",
+     "sub": [
+      "princípios e garantias (contraditório, cooperação, boa-fé, vedação a decisões-surpresa)",
+      "aplicação das normas processuais no tempo e no espaço",
+      "aplicação supletiva e subsidiária"
+     ]
+    },
+    {
+     "id": "B5-02",
+     "n": 2,
+     "titulo": "Jurisdição, ação e competência",
+     "sub": [
+      "condições da ação e pressupostos processuais",
+      "competência absoluta e relativa",
+      "conexão e continência",
+      "cooperação nacional",
+      "foro da Fazenda Pública"
+     ]
+    },
+    {
+     "id": "B5-03",
+     "n": 3,
+     "titulo": "Sujeitos do processo",
+     "sub": [
+      "partes, capacidade e legitimidade",
+      "litisconsórcio",
+      "intervenção de terceiros (assistência, denunciação da lide, chamamento, IDPJ, amicus curiae)",
+      "juiz, MP, advocacia pública e privada",
+      "gratuidade da justiça",
+      "despesas e honorários"
+     ]
+    },
+    {
+     "id": "B5-04",
+     "n": 4,
+     "titulo": "Fazenda Pública em juízo",
+     "sub": [
+      "prerrogativas processuais (prazos em dobro, intimação pessoal, dispensa de preparo)",
+      "remessa necessária",
+      "tutela provisória contra a Fazenda",
+      "honorários contra a Fazenda",
+      "cumprimento de sentença e precatórios",
+      "acordos e autocomposição"
+     ]
+    },
+    {
+     "id": "B5-05",
+     "n": 5,
+     "titulo": "Atos processuais",
+     "sub": [
+      "forma, tempo e lugar",
+      "prazos e preclusão",
+      "comunicação (citação, intimação, cartas)",
+      "nulidades",
+      "tutela provisória de urgência e de evidência"
+     ]
+    },
+    {
+     "id": "B5-06",
+     "n": 6,
+     "titulo": "Procedimento comum",
+     "sub": [
+      "petição inicial e pedido",
+      "audiência de conciliação e mediação",
+      "contestação, reconvenção e revelia",
+      "providências preliminares e julgamento conforme o estado",
+      "saneamento"
+     ]
+    },
+    {
+     "id": "B5-07",
+     "n": 7,
+     "titulo": "Provas",
+     "sub": [
+      "ônus da prova e distribuição dinâmica",
+      "provas em espécie (documental, testemunhal, pericial, depoimento pessoal, inspeção)",
+      "produção antecipada",
+      "audiência de instrução"
+     ]
+    },
+    {
+     "id": "B5-08",
+     "n": 8,
+     "titulo": "Sentença, coisa julgada e liquidação",
+     "sub": [
+      "elementos e efeitos",
+      "coisa julgada formal e material",
+      "relativização",
+      "liquidação de sentença",
+      "cumprimento provisório e definitivo"
+     ]
+    },
+    {
+     "id": "B5-09",
+     "n": 9,
+     "titulo": "Recursos",
+     "sub": [
+      "teoria geral e juízo de admissibilidade",
+      "apelação, agravo de instrumento e interno",
+      "embargos de declaração e de divergência",
+      "recursos extraordinário e especial",
+      "repercussão geral e recursos repetitivos",
+      "ação rescisória"
+     ]
+    },
+    {
+     "id": "B5-10",
+     "n": 10,
+     "titulo": "Precedentes e incidentes",
+     "sub": [
+      "precedentes obrigatórios (art. 927)",
+      "IRDR e IAC",
+      "reclamação",
+      "súmulas e teses"
+     ]
+    },
+    {
+     "id": "B5-11",
+     "n": 11,
+     "titulo": "Execução",
+     "sub": [
+      "execução por quantia, fazer, não fazer e entregar",
+      "execução fiscal",
+      "embargos e impugnação",
+      "penhora e expropriação",
+      "execução contra a Fazenda Pública"
+     ]
+    },
+    {
+     "id": "B5-12",
+     "n": 12,
+     "titulo": "Procedimentos especiais e ações constitucionais",
+     "sub": [
+      "ações possessórias",
+      "ação de usucapião",
+      "ação monitória",
+      "ações de família e inventário",
+      "mandado de segurança",
+      "ação civil pública e ação popular",
+      "ação de improbidade"
+     ]
+    },
+    {
+     "id": "B5-13",
+     "n": 13,
+     "titulo": "Juizados e processo coletivo",
+     "sub": [
+      "Juizados Especiais da Fazenda Pública",
+      "competência e procedimento",
+      "tutela coletiva"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B6",
+   "nome": "Direito Civil",
+   "fase": 3,
+   "condicional": false,
+   "topicos": [
+    {
+     "id": "B6-01",
+     "n": 1,
+     "titulo": "LINDB e introdução ao Direito Civil",
+     "sub": [
+      "fontes e hermenêutica",
+      "vigência e revogação",
+      "aplicação no tempo e no espaço",
+      "direito adquirido, ato jurídico perfeito e coisa julgada"
+     ]
+    },
+    {
+     "id": "B6-02",
+     "n": 2,
+     "titulo": "Parte geral: pessoas",
+     "sub": [
+      "personalidade e capacidade",
+      "incapacidade e curatela (Estatuto da Pessoa com Deficiência)",
+      "direitos da personalidade",
+      "domicílio",
+      "pessoas jurídicas, desconsideração e associações e fundações"
+     ]
+    },
+    {
+     "id": "B6-03",
+     "n": 3,
+     "titulo": "Parte geral: bens e fatos jurídicos",
+     "sub": [
+      "classificação dos bens",
+      "bens públicos",
+      "negócio jurídico (planos de existência, validade e eficácia)",
+      "defeitos do negócio jurídico",
+      "invalidade",
+      "atos ilícitos e abuso de direito"
+     ]
+    },
+    {
+     "id": "B6-04",
+     "n": 4,
+     "titulo": "Prescrição e decadência",
+     "sub": [
+      "conceito e diferenças",
+      "causas impeditivas, suspensivas e interruptivas",
+      "prazos do Código Civil"
+     ]
+    },
+    {
+     "id": "B6-05",
+     "n": 5,
+     "titulo": "Obrigações",
+     "sub": [
+      "modalidades (dar, fazer, não fazer, alternativas, solidárias, divisíveis)",
+      "transmissão (cessão de crédito e assunção de dívida)",
+      "adimplemento e extinção (pagamento, novação, compensação, confusão, remissão)",
+      "inadimplemento, mora e perdas e danos",
+      "cláusula penal"
+     ]
+    },
+    {
+     "id": "B6-06",
+     "n": 6,
+     "titulo": "Contratos em geral",
+     "sub": [
+      "princípios (autonomia, função social, boa-fé)",
+      "formação e interpretação",
+      "vícios redibitórios e evicção",
+      "extinção (resolução, resilição, revisão)",
+      "contratos atípicos e coligados"
+     ]
+    },
+    {
+     "id": "B6-07",
+     "n": 7,
+     "titulo": "Contratos em espécie",
+     "sub": [
+      "compra e venda",
+      "doação",
+      "locação",
+      "empréstimo (comodato e mútuo)",
+      "prestação de serviços e empreitada",
+      "mandato e agência",
+      "fiança e seguro",
+      "transação e arbitragem"
+     ]
+    },
+    {
+     "id": "B6-08",
+     "n": 8,
+     "titulo": "Responsabilidade civil",
+     "sub": [
+      "pressupostos",
+      "responsabilidade subjetiva e objetiva",
+      "responsabilidade por fato de terceiro e do produto",
+      "dano material, moral, estético e social",
+      "responsabilidade do Estado e dever de indenizar",
+      "liquidação e prescrição"
+     ]
+    },
+    {
+     "id": "B6-09",
+     "n": 9,
+     "titulo": "Direito de empresa",
+     "sub": [
+      "empresário e sociedades",
+      "estabelecimento",
+      "sociedades simples, limitadas e anônimas",
+      "desconsideração da personalidade jurídica"
+     ]
+    },
+    {
+     "id": "B6-10",
+     "n": 10,
+     "titulo": "Direito das coisas",
+     "sub": [
+      "posse (classificação, efeitos, proteção)",
+      "propriedade e aquisição (usucapião, registro, acessão)",
+      "propriedade imóvel, condomínio e laje",
+      "direitos reais sobre coisa alheia (servidão, usufruto, uso, habitação, hipoteca, penhor, superfície)",
+      "regularização fundiária"
+     ]
+    },
+    {
+     "id": "B6-11",
+     "n": 11,
+     "titulo": "Direito de família",
+     "sub": [
+      "casamento e união estável",
+      "regime de bens",
+      "parentesco e filiação",
+      "alimentos",
+      "tutela e curatela",
+      "poder familiar"
+     ]
+    },
+    {
+     "id": "B6-12",
+     "n": 12,
+     "titulo": "Direito das sucessões",
+     "sub": [
+      "sucessão legítima e testamentária",
+      "herdeiros necessários e legítima",
+      "inventário e partilha",
+      "indignidade e deserdação"
+     ]
+    },
+    {
+     "id": "B6-13",
+     "n": 13,
+     "titulo": "Direito do consumidor",
+     "sub": [
+      "relação de consumo e conceitos",
+      "responsabilidade pelo fato e pelo vício",
+      "práticas abusivas e cláusulas abusivas",
+      "proteção contratual"
+     ]
+    },
+    {
+     "id": "B6-14",
+     "n": 14,
+     "titulo": "Direito digital aplicado",
+     "sub": [
+      "Marco Civil da Internet e provedores",
+      "LGPD e agentes de tratamento",
+      "direitos autorais e propriedade industrial"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B7",
+   "nome": "Direito Tributário",
+   "fase": 2,
+   "condicional": false,
+   "topicos": [
+    {
+     "id": "B7-01",
+     "n": 1,
+     "titulo": "Sistema Tributário Nacional",
+     "sub": [
+      "princípios (legalidade, anterioridade, irretroatividade, isonomia, capacidade contributiva, vedação do confisco)",
+      "competência tributária",
+      "imunidades",
+      "espécies tributárias (impostos, taxas, contribuições de melhoria, empréstimos compulsórios, contribuições especiais)",
+      "repartição de receitas"
+     ]
+    },
+    {
+     "id": "B7-02",
+     "n": 2,
+     "titulo": "Legislação tributária",
+     "sub": [
+      "fontes",
+      "vigência e aplicação",
+      "interpretação e integração"
+     ]
+    },
+    {
+     "id": "B7-03",
+     "n": 3,
+     "titulo": "Obrigação tributária",
+     "sub": [
+      "fato gerador",
+      "sujeitos ativo e passivo",
+      "solidariedade e responsabilidade (sucessores, terceiros, infrações)",
+      "domicílio e capacidade tributária"
+     ]
+    },
+    {
+     "id": "B7-04",
+     "n": 4,
+     "titulo": "Crédito tributário",
+     "sub": [
+      "constituição e lançamento (modalidades)",
+      "suspensão (moratória, depósito, reclamações, liminares, parcelamento)",
+      "extinção (pagamento, compensação, transação, remissão, prescrição, decadência, conversão em renda)",
+      "exclusão (isenção e anistia)",
+      "garantias e privilégios"
+     ]
+    },
+    {
+     "id": "B7-05",
+     "n": 5,
+     "titulo": "Administração tributária",
+     "sub": [
+      "fiscalização",
+      "dívida ativa e certidões",
+      "processo administrativo fiscal",
+      "consulta"
+     ]
+    },
+    {
+     "id": "B7-06",
+     "n": 6,
+     "titulo": "Tributos estaduais",
+     "sub": [
+      "ICMS (princípios, incidência, não cumulatividade, substituição tributária, guerra fiscal, convênios, LC 87/96)",
+      "IPVA",
+      "ITCMD",
+      "competência e Maranhão"
+     ]
+    },
+    {
+     "id": "B7-07",
+     "n": 7,
+     "titulo": "Tributos municipais e federais",
+     "sub": [
+      "ISS",
+      "IPTU e ITBI",
+      "IR, IPI, IOF (visão geral)",
+      "contribuições sociais"
+     ]
+    },
+    {
+     "id": "B7-08",
+     "n": 8,
+     "titulo": "Reforma tributária: fundamentos (EC 132/2023)",
+     "sub": [
+      "objetivos e novos princípios do sistema tributário (simplicidade, transparência, justiça tributária, cooperação, defesa do meio ambiente)",
+      "IVA dual: CBS (federal) e IBS (estados e municípios)",
+      "princípio do destino",
+      "competência compartilhada entre Estados, DF e Municípios",
+      "extinção de ICMS, ISS, PIS, Cofins e redução do IPI",
+      "novos arts. 156-A (IBS), 195, V (CBS) e 153, VIII (Imposto Seletivo)",
+      "imunidades e vedações ao IBS e à CBS"
+     ]
+    },
+    {
+     "id": "B7-09",
+     "n": 9,
+     "titulo": "IBS e CBS: estrutura (LC 214/2025)",
+     "sub": [
+      "fato gerador, contribuintes e responsáveis",
+      "base de cálculo e alíquota de referência (federal, estadual e municipal)",
+      "não cumulatividade ampla e direito a crédito",
+      "operações com bens, serviços, direitos e intangíveis",
+      "local da operação e destino",
+      "importação e exportação (imunidade nas saídas)",
+      "split payment e pagamento na fonte",
+      "responsabilidade solidária do adquirente e da plataforma"
+     ]
+    },
+    {
+     "id": "B7-10",
+     "n": 10,
+     "titulo": "IBS e CBS: regimes diferenciados e favorecidos",
+     "sub": [
+      "redução de 60% e de 30% (saúde, educação, transporte, produtos agropecuários, profissionais liberais)",
+      "alíquota zero (cesta básica nacional, medicamentos, pessoas com deficiência)",
+      "regimes específicos (combustíveis, serviços financeiros, planos de saúde, bens imóveis, bares e restaurantes, agências de viagem)",
+      "cashback para pessoas de baixa renda",
+      "Simples Nacional e a escolha pelo regime regular",
+      "Zona Franca de Manaus e áreas de livre comércio"
+     ]
+    },
+    {
+     "id": "B7-11",
+     "n": 11,
+     "titulo": "Imposto Seletivo",
+     "sub": [
+      "incidência sobre bens e serviços prejudiciais à saúde e ao meio ambiente",
+      "extrafiscalidade",
+      "uma só incidência e alíquotas máximas",
+      "extração mineral e exceções"
+     ]
+    },
+    {
+     "id": "B7-12",
+     "n": 12,
+     "titulo": "Comitê Gestor do IBS e contencioso (LC 227/2026)",
+     "sub": [
+      "natureza jurídica e independência técnica do CGIBS",
+      "regulamento único e uniformização de interpretação",
+      "arrecadação, compensação e distribuição da receita",
+      "processo administrativo tributário do IBS (impugnação em 20 dias, recurso voluntário, Câmara Superior)",
+      "prazos em dias úteis",
+      "relação com a CBS e a Receita Federal"
+     ]
+    },
+    {
+     "id": "B7-13",
+     "n": 13,
+     "titulo": "Transição e fundos",
+     "sub": [
+      "2026: ano de teste (CBS 0,9% e IBS 0,1%, com compensação)",
+      "2027: CBS plena, extinção de PIS e Cofins e início do Imposto Seletivo",
+      "2029 a 2032: redução gradual de ICMS e ISS e aumento do IBS",
+      "2033: extinção de ICMS e ISS e vigência plena do novo sistema",
+      "Fundo de Compensação de Benefícios Fiscais e Fundo de Desenvolvimento Regional",
+      "efeitos sobre os incentivos fiscais e o ICMS do Maranhão"
+     ]
+    },
+    {
+     "id": "B7-14",
+     "n": 14,
+     "titulo": "Reforma tributária e outros tributos",
+     "sub": [
+      "ITCMD: progressividade obrigatória, alíquota máxima de 8%, doações sucessivas, trusts e bens no exterior (LC 227/2026)",
+      "ITBI: transmissões onerosas e valor venal",
+      "IPVA e a incidência sobre embarcações e aeronaves",
+      "IPTU e ITBI com a EC 132/2023",
+      "Reforma da renda e tributação de dividendos (noções)"
+     ]
+    },
+    {
+     "id": "B7-15",
+     "n": 15,
+     "titulo": "Dívida ativa e execução fiscal",
+     "sub": [
+      "inscrição e CDA",
+      "execução fiscal, defesas e prescrição intercorrente",
+      "redirecionamento a sócios",
+      "protesto da CDA",
+      "penhora e indisponibilidade",
+      "cautelar fiscal"
+     ]
+    },
+    {
+     "id": "B7-16",
+     "n": 16,
+     "titulo": "Ações tributárias",
+     "sub": [
+      "mandado de segurança",
+      "ação de repetição de indébito",
+      "ação anulatória e declaratória",
+      "consignação em pagamento",
+      "embargos à execução fiscal"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B8",
+   "nome": "Direito Financeiro e Orçamentário",
+   "fase": 2,
+   "condicional": false,
+   "topicos": [
+    {
+     "id": "B8-01",
+     "n": 1,
+     "titulo": "Atividade financeira do Estado",
+     "sub": [
+      "conceito e funções",
+      "autonomia do direito financeiro",
+      "receitas e despesas públicas"
+     ]
+    },
+    {
+     "id": "B8-02",
+     "n": 2,
+     "titulo": "Orçamento público",
+     "sub": [
+      "princípios orçamentários",
+      "PPA, LDO e LOA",
+      "ciclo orçamentário",
+      "créditos adicionais",
+      "vedações",
+      "emendas e execução"
+     ]
+    },
+    {
+     "id": "B8-03",
+     "n": 3,
+     "titulo": "Receita pública",
+     "sub": [
+      "classificação (originária, derivada, transferências)",
+      "estágios da receita",
+      "dívida ativa",
+      "renúncia de receita"
+     ]
+    },
+    {
+     "id": "B8-04",
+     "n": 4,
+     "titulo": "Despesa pública",
+     "sub": [
+      "classificação",
+      "estágios (empenho, liquidação, pagamento)",
+      "restos a pagar",
+      "despesas de exercícios anteriores",
+      "limites com pessoal"
+     ]
+    },
+    {
+     "id": "B8-05",
+     "n": 5,
+     "titulo": "Responsabilidade fiscal (LRF)",
+     "sub": [
+      "planejamento e metas fiscais",
+      "limites de despesa com pessoal",
+      "dívida e endividamento",
+      "operações de crédito",
+      "transparência e prestação de contas",
+      "sanções"
+     ]
+    },
+    {
+     "id": "B8-06",
+     "n": 6,
+     "titulo": "Controle e fiscalização",
+     "sub": [
+      "controle interno e externo",
+      "Tribunal de Contas",
+      "prestação e julgamento de contas"
+     ]
+    },
+    {
+     "id": "B8-07",
+     "n": 7,
+     "titulo": "Precatórios e dívida pública",
+     "sub": [
+      "regime constitucional",
+      "ordem cronológica",
+      "RPV",
+      "regime especial",
+      "EC 113 e EC 114"
+     ]
+    },
+    {
+     "id": "B8-08",
+     "n": 8,
+     "titulo": "Federalismo fiscal",
+     "sub": [
+      "repartição de receitas",
+      "fundos de participação",
+      "transferências voluntárias",
+      "dívida dos Estados"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B9",
+   "nome": "Direito Ambiental",
+   "fase": 3,
+   "condicional": false,
+   "topicos": [
+    {
+     "id": "B9-01",
+     "n": 1,
+     "titulo": "Fundamentos e princípios",
+     "sub": [
+      "conceito de meio ambiente",
+      "princípios (prevenção, precaução, poluidor-pagador, desenvolvimento sustentável, participação)",
+      "dano ambiental"
+     ]
+    },
+    {
+     "id": "B9-02",
+     "n": 2,
+     "titulo": "Competências",
+     "sub": [
+      "legislativa e administrativa",
+      "LC 140/2011",
+      "papel do Estado e dos Municípios"
+     ]
+    },
+    {
+     "id": "B9-03",
+     "n": 3,
+     "titulo": "Política e sistema nacional",
+     "sub": [
+      "PNMA, SISNAMA, CONAMA",
+      "instrumentos (licenciamento, zoneamento, EIA/RIMA, avaliação de impacto)",
+      "licenciamento ambiental e a Lei 15.190/2025"
+     ]
+    },
+    {
+     "id": "B9-04",
+     "n": 4,
+     "titulo": "Responsabilidade ambiental",
+     "sub": [
+      "civil (objetiva, teoria do risco integral, solidariedade)",
+      "administrativa e infrações",
+      "penal e pessoa jurídica",
+      "reparação do dano e TAC"
+     ]
+    },
+    {
+     "id": "B9-05",
+     "n": 5,
+     "titulo": "Proteção de espaços e recursos",
+     "sub": [
+      "Código Florestal (APP, reserva legal, CAR, PRA)",
+      "unidades de conservação",
+      "recursos hídricos",
+      "fauna e flora",
+      "mineração e petróleo (noções)"
+     ]
+    },
+    {
+     "id": "B9-06",
+     "n": 6,
+     "titulo": "Tutela processual",
+     "sub": [
+      "ação civil pública",
+      "ação popular ambiental",
+      "inquérito civil e TAC",
+      "ônus da prova e inversão"
+     ]
+    },
+    {
+     "id": "B9-07",
+     "n": 7,
+     "titulo": "Clima e temas atuais",
+     "sub": [
+      "mudanças climáticas",
+      "pagamento por serviços ambientais",
+      "resíduos sólidos",
+      "Amazônia e Cerrado",
+      "legislação ambiental do Maranhão (Lei 5.405/1992)"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B10",
+   "nome": "Direito do Trabalho e Processual do Trabalho",
+   "fase": 3,
+   "condicional": false,
+   "topicos": [
+    {
+     "id": "B10-01",
+     "n": 1,
+     "titulo": "Princípios e fontes",
+     "sub": [
+      "princípios do Direito do Trabalho",
+      "fontes e hierarquia",
+      "aplicação e interpretação"
+     ]
+    },
+    {
+     "id": "B10-02",
+     "n": 2,
+     "titulo": "Relação de trabalho e emprego",
+     "sub": [
+      "sujeitos (empregado, empregador, grupo econômico, sucessão)",
+      "requisitos da relação de emprego",
+      "trabalhadores especiais (doméstico, rural, temporário, estagiário, autônomo)"
+     ]
+    },
+    {
+     "id": "B10-03",
+     "n": 3,
+     "titulo": "Contrato de trabalho",
+     "sub": [
+      "formas e espécies",
+      "alteração, suspensão e interrupção",
+      "rescisão e modalidades de extinção",
+      "estabilidades"
+     ]
+    },
+    {
+     "id": "B10-04",
+     "n": 4,
+     "titulo": "Remuneração e jornada",
+     "sub": [
+      "salário e remuneração",
+      "equiparação",
+      "jornada, horas extras, banco de horas, intervalos",
+      "férias e 13º",
+      "adicionais (insalubridade, periculosidade, noturno)"
+     ]
+    },
+    {
+     "id": "B10-05",
+     "n": 5,
+     "titulo": "Terceirização e Administração Pública",
+     "sub": [
+      "terceirização lícita",
+      "responsabilidade subsidiária da Administração (Súmula 331 e Tema 246)",
+      "concurso e emprego público"
+     ]
+    },
+    {
+     "id": "B10-06",
+     "n": 6,
+     "titulo": "Direito coletivo",
+     "sub": [
+      "sindicatos e negociação coletiva",
+      "convenção e acordo coletivo",
+      "greve"
+     ]
+    },
+    {
+     "id": "B10-07",
+     "n": 7,
+     "titulo": "Processo do Trabalho",
+     "sub": [
+      "competência da Justiça do Trabalho",
+      "partes, procuradores e honorários",
+      "petição inicial e procedimento",
+      "prova",
+      "recursos (ordinário, de revista, agravo)",
+      "execução trabalhista e Fazenda Pública"
+     ]
+    },
+    {
+     "id": "B10-08",
+     "n": 8,
+     "titulo": "Fazenda Pública na Justiça do Trabalho",
+     "sub": [
+      "prerrogativas processuais",
+      "precatórios trabalhistas",
+      "pagamentos e RPV"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B11",
+   "nome": "Direito Previdenciário",
+   "fase": 3,
+   "condicional": false,
+   "topicos": [
+    {
+     "id": "B11-01",
+     "n": 1,
+     "titulo": "Seguridade social",
+     "sub": [
+      "conceito e princípios",
+      "saúde, previdência e assistência social",
+      "custeio e financiamento"
+     ]
+    },
+    {
+     "id": "B11-02",
+     "n": 2,
+     "titulo": "Regime Geral (RGPS)",
+     "sub": [
+      "segurados e dependentes",
+      "filiação e inscrição",
+      "carência",
+      "benefícios (aposentadorias, auxílios, pensão por morte, salário-maternidade)"
+     ]
+    },
+    {
+     "id": "B11-03",
+     "n": 3,
+     "titulo": "Regime Próprio (RPPS)",
+     "sub": [
+      "art. 40 da CF e a EC 103/2019",
+      "regras de transição",
+      "aposentadoria voluntária, compulsória e por incapacidade",
+      "pensão por morte",
+      "contribuições e gestão",
+      "Previdência dos servidores do Estado"
+     ]
+    },
+    {
+     "id": "B11-04",
+     "n": 4,
+     "titulo": "Compensação e financeiro",
+     "sub": [
+      "compensação previdenciária (Lei 9.796/1999)",
+      "equilíbrio atuarial",
+      "contribuição de aposentados e pensionistas"
+     ]
+    },
+    {
+     "id": "B11-05",
+     "n": 5,
+     "titulo": "Assistência social",
+     "sub": [
+      "BPC",
+      "LOAS",
+      "Sistema Único de Assistência Social"
+     ]
+    },
+    {
+     "id": "B11-06",
+     "n": 6,
+     "titulo": "Prescrição e decadência previdenciária",
+     "sub": [
+      "decadência do direito de revisão",
+      "prescrição de parcelas",
+      "prova do tempo de contribuição"
+     ]
+    }
+   ]
+  }
+ ]
+}
