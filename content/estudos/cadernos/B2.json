@@ -9,7 +9,9 @@
   "Material EBEJI: Princípios Fundamentais da Administração Pública (2026)",
   "Material EBEJI: Deveres e Poderes Administrativos (2026)",
   "Material EBEJI: Atos Administrativos (2026)",
-  "Material EBEJI: O Processo Administrativo Federal (2026)"
+  "Material EBEJI: O Processo Administrativo Federal (2026)",
+  "Material EBEJI: Licitações Públicas, partes 1 e 2 (2026)",
+  "Lei 14.133/2021, texto vigente"
  ],
  "banca": {
   "titulo": "O que a FCC cobra em Administrativo",
@@ -3878,68 +3880,763 @@
    "topico_id": "B2-05",
    "numero": 13,
    "titulo": "Licitações (Lei 14.133)",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Licitações Públicas, parte 1 (2026); CF, arts. 22, XXVII, 37, XXI, e 175; Lei 14.133/2021 (texto vigente, conferido em 15/11/2026)",
+   "resumo": [
+    "Licitar é a regra (CF, art. 37, XXI): só a lei pode criar hipóteses de contratação direta. Normas gerais são competência privativa da União (art. 22, XXVII); a Lei 14.133/2021 é nacional e não alcança as estatais (Lei 13.303).",
+    "Objetivos (art. 11): proposta mais vantajosa, inclusive pelo ciclo de vida, isonomia, evitar sobrepreço e inexequibilidade, e incentivar inovação e desenvolvimento sustentável. Princípio novo: segregação de funções.",
+    "Fases em sequência (art. 17): preparatória, divulgação, propostas e lances, julgamento, habilitação, recursal e homologação. Julgar antes de habilitar é a regra; a inversão exige ato motivado e previsão no edital. Forma eletrônica é preferencial.",
+    "Cinco modalidades (art. 28): pregão, concorrência, concurso, leilão e diálogo competitivo. Convite e tomada de preços acabaram, e a modalidade não depende mais do valor. É vedado criar ou combinar modalidades.",
+    "Seis critérios de julgamento (art. 33). Pregão: bens e serviços comuns, menor preço ou maior desconto. Obras e serviços de engenharia: inexequível abaixo de 75% do orçado (art. 59, § 4º)."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: licitar é a regra",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O dinheiro é público e o mercado é de todos. Se a Administração escolhesse o fornecedor livremente, abriria espaço para favoritismo e preço ruim. Por isso a Constituição faz da <b>licitação a regra</b>: um procedimento em que, com igualdade entre os participantes, se escolhe a proposta mais vantajosa."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, arts. 37, XXI, e 22, XXVII",
+       "texto": "XXI - ressalvados os casos especificados na legislação, as obras, serviços, compras e alienações serão contratados ==mediante processo de licitação pública== que assegure ==igualdade de condições a todos os concorrentes==, com cláusulas que estabeleçam obrigações de pagamento, mantidas as condições efetivas da proposta, nos termos da lei, o qual somente permitirá as exigências de qualificação técnica e econômica ==indispensáveis à garantia do cumprimento das obrigações==. XXII - as administrações tributárias da União, dos Estados, do Distrito Federal e dos Municípios, atividades essenciais ao funcionamento do Estado, exercidas por servidores de carreiras específicas, terão recursos prioritários para a realização de suas atividades e atuarão de forma integrada, inclusive com o compartilhamento de cadastros e de informações fiscais, na forma da lei ou convênio.\nArt. 22. Compete privativamente à União legislar sobre: (...) XXVII - normas gerais de licitação e contratação, em todas as modalidades, para as administrações públicas diretas, autárquicas e fundacionais da União, Estados, Distrito Federal e Municípios, obedecido o disposto no art. 37, XXI, e para as empresas públicas e sociedades de economia mista, nos termos do art. 173, § 1°, III;"
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Quem ressalva é a lei",
+       "html": "\"Ressalvados os casos especificados na <b>legislação</b>\": só a lei cria contratação direta (dispensa e inexigibilidade). Na concessão e permissão de serviço público, o art. 175 diz \"<b>sempre</b> através de licitação\"."
+      },
+      {
+       "t": "texto",
+       "html": "A União edita as <b>normas gerais</b>, de caráter nacional. Estados, DF e municípios podem legislar sobre questões específicas, desde que não contrariem as gerais."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 3.735/MS, Rel. Min. Teori Zavascki, 8/9/2016 (Info 838)",
+       "tese": "É inconstitucional lei estadual que exige Certidão Negativa de Violação aos Direitos do Consumidor de quem quer contratar com o Estado: invade a competência da União para normas gerais. A lei local só é válida se passar pelo teste de identificar as normas gerais e verificar a compatibilidade com elas."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 1º, caput e § 1º",
+       "texto": "Art. 1º Esta Lei estabelece ==normas gerais== de licitação e contratação para as Administrações Públicas ==diretas, autárquicas e fundacionais== da União, dos Estados, do Distrito Federal e dos Municípios, e abrange:\n§ 1º Não são abrangidas por esta Lei as empresas públicas, as sociedades de economia mista e as suas subsidiárias, regidas pela ==Lei nº 13.303==, de 30 de junho de 2016, ==ressalvado o disposto no art. 178== desta Lei."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 11",
+       "texto": "Art. 11. O processo licitatório tem por objetivos:\nI - assegurar a seleção da proposta apta a gerar o resultado de contratação mais vantajoso para a Administração Pública, inclusive no que se refere ao ==ciclo de vida do objeto==;\nII - assegurar tratamento isonômico entre os licitantes, bem como a justa competição;\nIII - evitar contratações com ==sobrepreço== ou com preços manifestamente ==inexequíveis== e ==superfaturamento== na execução dos contratos;\nIV - incentivar a inovação e o desenvolvimento nacional sustentável."
+      },
+      {
+       "t": "leia",
+       "ref": "Lei 14.133/2021, art. 5º",
+       "motivo": "São 22 princípios, mais a LINDB. A novidade que a banca adora é a <b>segregação de funções</b>: o mesmo agente não pode acumular funções sujeitas a risco na mesma contratação (art. 7º, § 1º)."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: quem conduz, fases e modalidades",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 8º, caput e §§ 1º, 2º e 5º",
+       "texto": "Art. 8º A licitação será conduzida por ==agente de contratação==, pessoa designada pela autoridade competente, entre ==servidores efetivos ou empregados públicos dos quadros permanentes== da Administração Pública, para tomar decisões, acompanhar o trâmite da licitação, dar impulso ao procedimento licitatório e executar quaisquer outras atividades necessárias ao bom andamento do certame até a homologação.\n§ 1º O agente de contratação será auxiliado por equipe de apoio e ==responderá individualmente== pelos atos que praticar, salvo quando induzido a erro pela atuação da equipe.\n§ 2º Em licitação que envolva bens ou serviços especiais, desde que observados os requisitos estabelecidos no art. 7º desta Lei, o agente de contratação poderá ser substituído por ==comissão de contratação== formada por, ==no mínimo, 3 (três) membros==, que responderão ==solidariamente== por todos os atos praticados pela comissão, ressalvado o membro que expressar posição individual divergente fundamentada e registrada em ata lavrada na reunião em que houver sido tomada a decisão.\n§ 5º Em licitação na modalidade pregão, o agente responsável pela condução do certame será designado ==pregoeiro==."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Preparatória",
+         "sub": "planejar"
+        },
+        {
+         "titulo": "Edital",
+         "sub": "divulgar"
+        },
+        {
+         "titulo": "Propostas",
+         "sub": "e lances"
+        },
+        {
+         "titulo": "Julgamento",
+         "sub": "classificar"
+        },
+        {
+         "titulo": "Habilitação",
+         "sub": "só do vencedor"
+        },
+        {
+         "titulo": "Recursal",
+         "sub": "fase única"
+        },
+        {
+         "titulo": "Homologação",
+         "sub": "fechar"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Preparatória:</b> estudo técnico preliminar, termo de referência ou projeto, orçamento, matriz de riscos. Depois, o <b>controle prévio de legalidade</b> pela assessoria jurídica."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Divulgação:</b> o edital vai na íntegra ao <b>PNCP</b>, com extrato no diário oficial e em jornal de grande circulação. Qualquer pessoa pode impugná-lo ou pedir esclarecimento até <b>3 dias úteis</b> antes da abertura (art. 164)."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Propostas e lances:</b> modo aberto (lances sucessivos) ou fechado (sigilo até a abertura). Menor preço e maior desconto não admitem o fechado isolado; técnica e preço não admite o aberto (art. 56)."
+        },
+        {
+         "no": 3,
+         "texto": "<b>Julgamento:</b> classifica pelas propostas. A conformidade pode ser verificada só na mais bem classificada (art. 59, § 1º)."
+        },
+        {
+         "no": 4,
+         "texto": "<b>Habilitação:</b> vem <b>depois</b> do julgamento, como no antigo pregão. Pode vir antes, se o edital prever e houver ato motivado com os benefícios (art. 17, § 1º)."
+        },
+        {
+         "no": 5,
+         "texto": "<b>Recursal:</b> em regra, uma fase única ao final, depois do julgamento e da habilitação."
+        },
+        {
+         "no": 6,
+         "texto": "<b>Homologação:</b> a autoridade confirma o procedimento e adjudica o objeto ao vencedor."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 17, §§ 1º e 2º",
+       "texto": "§ 1º A fase referida no inciso V do caput deste artigo poderá, mediante ==ato motivado== com explicitação dos benefícios decorrentes, ==anteceder== as fases referidas nos incisos III e IV do caput deste artigo, desde que ==expressamente previsto no edital== de licitação.\n§ 2º As licitações serão realizadas ==preferencialmente sob a forma eletrônica==, admitida a utilização da forma presencial, ==desde que motivada==, devendo a sessão pública ser registrada em ata e ==gravada em áudio e vídeo==."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 28",
+       "texto": "Art. 28. São modalidades de licitação:\nI - pregão;\nII - concorrência;\nIII - concurso;\nIV - leilão;\nV - diálogo competitivo.\n§ 2º É vedada a ==criação de outras modalidades== de licitação ou, ainda, a ==combinação== daquelas referidas no caput deste artigo."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Bens e serviços comuns",
+         "titulo": "Pregão",
+         "texto": "<b>Obrigatório</b> para bens e serviços comuns, sem limite de valor. Critério: menor preço ou maior desconto. Não serve para serviços técnicos especializados intelectuais nem para obras e serviços de engenharia, salvo serviço comum de engenharia (art. 29, parágrafo único). Conduzido por pregoeiro."
+        },
+        {
+         "tag": "Especiais e engenharia",
+         "titulo": "Concorrência",
+         "texto": "Bens e serviços <b>especiais</b> e obras e serviços <b>comuns e especiais de engenharia</b>. Admite menor preço, melhor técnica ou conteúdo artístico, técnica e preço, maior retorno econômico e maior desconto. Pregão e concorrência seguem o mesmo rito comum (art. 29)."
+        },
+        {
+         "tag": "Trabalho intelectual",
+         "titulo": "Concurso",
+         "texto": "Escolha de trabalho técnico, científico ou artístico, com prêmio ou remuneração. Critério: melhor técnica ou conteúdo artístico. Em projeto, o vencedor cede os direitos patrimoniais à Administração (art. 30, parágrafo único)."
+        },
+        {
+         "tag": "Alienação",
+         "titulo": "Leilão",
+         "texto": "Alienar imóveis ou móveis inservíveis ou legalmente apreendidos a quem der o <b>maior lance</b>, nunca abaixo da avaliação. Não exige registro cadastral prévio nem tem fase de habilitação (art. 31, § 4º). Pode ser feito por leiloeiro oficial ou servidor."
+        },
+        {
+         "tag": "Novidade da lei",
+         "titulo": "Diálogo competitivo",
+         "texto": "Para inovação tecnológica ou técnica, quando a Administração não consegue definir sozinha a solução. Ela dialoga com licitantes pré-selecionados por critérios objetivos (prazo mínimo de 25 dias úteis para manifestar interesse) e, encerrado o diálogo, todos apresentam proposta final (art. 32)."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, arts. 6º, XIII e XLI, e 29",
+       "texto": "XIII - bens e serviços comuns: aqueles cujos padrões de desempenho e qualidade podem ser ==objetivamente definidos pelo edital, por meio de especificações usuais de mercado==;\nXLI - pregão: modalidade de licitação ==obrigatória== para aquisição de bens e serviços comuns, cujo critério de julgamento poderá ser o de ==menor preço ou o de maior desconto==;\nArt. 29. A concorrência e o pregão seguem o ==rito procedimental comum== a que se refere o art. 17 desta Lei, adotando-se o pregão sempre que o objeto possuir padrões de desempenho e qualidade que possam ser objetivamente definidos pelo edital, por meio de especificações usuais de mercado."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "O que acabou",
+       "html": "<b>Convite</b> e <b>tomada de preços</b> deixaram de existir, e o <b>valor</b> não define mais a modalidade. O RDC (Lei 12.462/2011) também acabou com a vigência plena da Lei 14.133. Concessões comuns e PPPs exigem concorrência ou diálogo competitivo."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Procedimentos auxiliares</b> não são modalidades (art. 78): credenciamento, pré-qualificação, procedimento de manifestação de interesse, sistema de registro de preços e registro cadastral."
+      }
+     ]
+    },
+    {
+     "titulo": "Julgamento: critérios, desclassificação e desempate",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 33",
+       "texto": "Art. 33. O julgamento das propostas será realizado de acordo com os seguintes critérios:\nI - menor preço;\nII - maior desconto;\nIII - melhor técnica ou conteúdo artístico;\nIV - técnica e preço;\nV - maior lance, no caso de leilão;\nVI - maior retorno econômico."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Critério",
+        "Como funciona",
+        "Detalhe que cai"
+       ],
+       "linhas": [
+        [
+         "Menor preço / maior desconto",
+         "Menor dispêndio, respeitada a qualidade mínima",
+         "Pode considerar custos do ciclo de vida (art. 34, § 1º); o desconto se estende aos aditivos"
+        ],
+        [
+         "Melhor técnica ou conteúdo artístico",
+         "Só a proposta técnica ou artística",
+         "Edital define o prêmio ou a remuneração"
+        ],
+        [
+         "Técnica e preço",
+         "Ponderação de notas técnicas e de preço",
+         "Técnica pesa no máximo 70%; preferencial para serviços intelectuais"
+        ],
+        [
+         "Maior lance",
+         "Só no leilão",
+         "Lance nunca abaixo da avaliação"
+        ],
+        [
+         "Maior retorno econômico",
+         "Só no contrato de eficiência",
+         "Remuneração em percentual da economia efetivamente gerada"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 59, §§ 4º e 5º",
+       "texto": "§ 4º No caso de obras e serviços de engenharia, serão consideradas ==inexequíveis== as propostas cujos valores forem inferiores a ==75% (setenta e cinco por cento)== do valor orçado pela Administração.\n§ 5º Nas contratações de obras e serviços de engenharia, será exigida ==garantia adicional== do licitante vencedor cuja proposta for inferior a ==85% (oitenta e cinco por cento)== do valor orçado pela Administração, equivalente à diferença entre este último e o valor da proposta, sem prejuízo das demais garantias exigíveis de acordo com esta Lei."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "1. Disputa final",
+         "sub": "art. 60, I",
+         "texto": "Os empatados apresentam nova proposta em ato contínuo."
+        },
+        {
+         "titulo": "2. Desempenho anterior",
+         "sub": "art. 60, II",
+         "texto": "Avaliação do desempenho contratual prévio, de preferência pelos registros cadastrais."
+        },
+        {
+         "titulo": "3. Equidade de gênero",
+         "sub": "art. 60, III",
+         "texto": "Ações de equidade entre homens e mulheres no ambiente de trabalho."
+        },
+        {
+         "titulo": "4. Integridade",
+         "sub": "art. 60, IV",
+         "texto": "Programa de integridade (compliance)."
+        },
+        {
+         "titulo": "Persistindo o empate",
+         "sub": "art. 60, § 1º",
+         "texto": "Preferência, nesta ordem: empresas do Estado (ou do Estado onde fica o Município licitante), brasileiras, que investem em pesquisa no País e que praticam mitigação climática. Sem prejuízo do empate ficto de ME e EPP (LC 123, art. 44)."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Definido o resultado, a Administração <b>pode negociar</b> condições melhores com o primeiro colocado (art. 61). Se ele continuar acima do preço máximo e for desclassificado, a negociação segue com os demais, pela ordem."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Sigilo do orçamento",
+       "html": "O orçamento estimado pode ser <b>sigiloso</b>, se justificado, mas nunca para os órgãos de controle (art. 24). Exceção: no critério <b>maior desconto</b>, o preço estimado consta do edital, porque o desconto é calculado sobre ele."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "O que fica para a próxima aula",
+       "html": "Contratação direta (dispensa e inexigibilidade), alienação de bens, anulação e revogação da licitação e recursos estão na parte 2 do material EBEJI e entram numa aula própria."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "São <b>cinco</b> modalidades: pregão, concorrência, concurso, leilão e diálogo competitivo. Convite e tomada de preços <b>não</b> existem mais.<br>Na regra, <b>julga-se antes e habilita-se depois</b>.<br>Pregão é para <b>bens e serviços comuns</b>, sem limite de valor.<br>Leilão <b>não</b> tem habilitação.<br>Forma <b>eletrônica</b> é preferencial; a presencial exige motivação e gravação.<br>Estatais seguem a <b>Lei 13.303</b>, não a 14.133."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A Lei 14.133/2021 manteve a tomada de preços para contratações de valor médio.",
+         "v": false,
+         "porque": "Acabou; o valor não define mais a modalidade."
+        },
+        {
+         "texto": "A fase de habilitação pode anteceder a de julgamento, mediante ato motivado e previsão no edital.",
+         "v": true,
+         "porque": "Art. 17, § 1º."
+        },
+        {
+         "texto": "O pregão pode ser usado para obras de engenharia, desde que o valor seja baixo.",
+         "v": false,
+         "porque": "Não se aplica a obras; só a serviço comum de engenharia (art. 29, parágrafo único)."
+        },
+        {
+         "texto": "É possível combinar pregão e concorrência para criar procedimento híbrido.",
+         "v": false,
+         "porque": "Art. 28, § 2º veda criar ou combinar modalidades."
+        },
+        {
+         "texto": "No leilão não há fase de habilitação.",
+         "v": true,
+         "porque": "Art. 31, § 4º."
+        },
+        {
+         "texto": "Em obras e serviços de engenharia, é inexequível a proposta inferior a 75% do valor orçado pela Administração.",
+         "v": true,
+         "porque": "Art. 59, § 4º."
+        },
+        {
+         "texto": "O critério técnica e preço admite o modo de disputa aberto.",
+         "v": false,
+         "porque": "Art. 56, § 2º: vedado."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-23",
+    "adm-cad-24"
+   ]
+  },
+  {
+   "id": "B2-a13b",
+   "topico_id": "B2-05",
+   "numero": 14,
+   "titulo": "Licitações II: habilitação, contratação direta e recursos",
+   "status": "pronta",
+   "fonte": "Material EBEJI: Licitações Públicas, parte 2 (2026); Lei 14.133/2021, arts. 62, 71 a 75 e 165 a 168 (texto vigente, conferido em 15/11/2026)",
+   "resumo": [
+    "Habilitação tem quatro blocos (art. 62): jurídica, técnica, fiscal-social-trabalhista e econômico-financeira. A regularidade fiscal é exigida só do mais bem classificado, depois do julgamento; ME e EPP só a comprovam para assinar o contrato (LC 123, art. 42).",
+    "Encerrada a licitação, a autoridade pode sanear, revogar (fato superveniente comprovado), anular (ilegalidade insanável) ou adjudicar e homologar, sempre ouvindo antes os interessados se for anular ou revogar (art. 71).",
+    "Inexigibilidade (art. 74) é competição inviável, rol exemplificativo; dispensa (art. 75) é competição possível que a lei autoriza afastar, rol taxativo. A contratação direta exige processo instruído (art. 72).",
+    "Notória especialização exige serviço técnico intelectual, singular, e profissional de notória especialização; é vedada para publicidade. Emergência: só o necessário, prazo máximo de 1 ano, sem prorrogação nem recontratação pelo mesmo fundamento.",
+    "Recursos na licitação: 3 dias úteis, intenção manifestada imediatamente, fase única e efeito suspensivo (arts. 165 e 168), diferente da Lei 9.784."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: provar que pode cumprir e fechar o certame",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Vencer com o melhor preço não basta: a Administração precisa saber se o vencedor <b>existe juridicamente</b>, <b>sabe fazer</b>, está <b>em dia</b> com o Fisco e com os trabalhadores e tem <b>fôlego financeiro</b>. Essa checagem é a habilitação. Na Lei 14.133 ela vem, em regra, <b>depois</b> do julgamento, e só para quem ganhou."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 62",
+       "texto": "Art. 62. A habilitação é a fase da licitação em que se verifica o conjunto de informações e documentos necessários e suficientes para demonstrar a ==capacidade do licitante de realizar o objeto da licitação==, dividindo-se em:\nI - jurídica;\nII - técnica;\nIII - fiscal, social e trabalhista;\nIV - econômico-financeira."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Jurídica",
+         "sub": "existir",
+         "verso": "Capacidade de exercer direitos e assumir obrigações: atos constitutivos e, se for o caso, autorização para a atividade.",
+         "detalhe": "Limita-se a isso."
+        },
+        {
+         "frente": "Técnica",
+         "sub": "saber fazer",
+         "verso": "Profissional com atestado de responsabilidade técnica, certidões de capacidade operacional, equipe e aparelhamento (art. 67).",
+         "detalhe": "Em serviços contínuos, o atestado pode exigir prazo mínimo de execução, de até 3 anos."
+        },
+        {
+         "frente": "Fiscal, social e trabalhista",
+         "sub": "estar em dia",
+         "verso": "CPF ou CNPJ, Fazendas, Seguridade, FGTS, Justiça do Trabalho e respeito à proibição de trabalho infantil (art. 68).",
+         "detalhe": "Exigida só do mais bem classificado, depois do julgamento, mesmo com inversão de fases."
+        },
+        {
+         "frente": "Econômico-financeira",
+         "sub": "ter fôlego",
+         "verso": "Balanço dos 2 últimos exercícios e certidão negativa de falência, com índices objetivos justificados.",
+         "detalhe": "Pode-se exigir capital ou patrimônio líquido mínimo de até 10% do valor estimado."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "ME e EPP",
+       "html": "Pela LC 123/2006, a regularidade fiscal e trabalhista da microempresa e da EPP só é exigida <b>para assinar o contrato</b> (art. 42). Ela apresenta os documentos mesmo com restrição e, se vencer, tem <b>5 dias úteis</b>, prorrogáveis, para regularizar (art. 43)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 4.716/DF e ADI 4.742/DF, Rel. Min. Dias Toffoli, 30/9/2024 (Info 1152)",
+       "tese": "É constitucional a Lei nº 12.440/2011, que instituiu a Certidão Negativa de Débitos Trabalhistas (CNDT) e tornou obrigatória a sua apresentação para a habilitação dos interessados nas licitações públicas."
+      },
+      {
+       "t": "texto",
+       "html": "Depois de entregues os documentos, não se admite substituí-los nem juntar novos, salvo em <b>diligência</b> para complementar informação sobre fato que já existia na abertura ou atualizar documento que venceu depois do recebimento das propostas."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 71",
+       "texto": "Art. 71. Encerradas as fases de julgamento e habilitação, e exauridos os recursos administrativos, o processo licitatório será ==encaminhado à autoridade superior==, que poderá:\nI - determinar o retorno dos autos para saneamento de irregularidades;\nII - revogar a licitação por motivo de ==conveniência e oportunidade==;\nIII - proceder à anulação da licitação, ==de ofício ou mediante provocação de terceiros==, sempre que presente ==ilegalidade insanável==;\nIV - adjudicar o objeto e homologar a licitação.\n§ 2º O motivo determinante para a revogação do processo licitatório deverá ser resultante de ==fato superveniente devidamente comprovado==.\n§ 3º Nos casos de anulação e revogação, deverá ser assegurada a ==prévia manifestação dos interessados==."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Liga com a aula 11",
+       "html": "Mesma lógica dos atos: <b>anula</b> por ilegalidade (insanável), <b>revoga</b> por conveniência. Aqui a lei exige que a revogação venha de <b>fato superveniente comprovado</b> e que os interessados se manifestem <b>antes</b>."
+      }
+     ]
+    },
+    {
+     "titulo": "Contratação direta: inexigibilidade e dispensa",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A CF ressalva \"os casos especificados na legislação\". A Lei 14.133 organiza essas exceções em dois grupos, com lógicas opostas:"
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Inexigibilidade (art. 74)",
+        "Dispensa (art. 75)"
+       ],
+       "linhas": [
+        [
+         "Competição",
+         "<b>Inviável</b>: não há como licitar",
+         "<b>Possível</b>, mas a lei autoriza não licitar"
+        ],
+        [
+         "Rol",
+         "Exemplificativo (\"em especial\")",
+         "Taxativo"
+        ],
+        [
+         "Exemplos",
+         "Fornecedor exclusivo, artista consagrado, notória especialização, credenciamento, imóvel singular",
+         "Baixo valor, licitação deserta ou fracassada, emergência, guerra, órgão criado para esse fim"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 74, caput",
+       "texto": "Art. 74. É inexigível a licitação quando ==inviável a competição==, ==em especial== nos casos de:"
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Inciso I",
+         "titulo": "Fornecedor exclusivo",
+         "texto": "Materiais, equipamentos, gêneros ou <b>serviços</b> que só um produtor, empresa ou representante pode fornecer. Prova por atestado, contrato de exclusividade ou declaração do fabricante, <b>vedada a preferência por marca</b> (§ 1º)."
+        },
+        {
+         "tag": "Inciso II",
+         "titulo": "Artista consagrado",
+         "texto": "Profissional do setor artístico, direto ou por empresário exclusivo, consagrado pela crítica ou pela opinião pública. Não há critério objetivo para escolher \"o melhor artista\"."
+        },
+        {
+         "tag": "Inciso III",
+         "titulo": "Notória especialização",
+         "texto": "Três requisitos cumulativos: serviço <b>técnico</b> intelectual do rol, <b>singular</b> (sem critério objetivo de julgamento) e profissional de <b>notória especialização</b>. É vedado subcontratar ou trocar os profissionais que justificaram a escolha (§ 4º)."
+        },
+        {
+         "tag": "Inciso IV",
+         "titulo": "Credenciamento",
+         "texto": "Todos que preenchem os requisitos são credenciados e prestam o serviço. Não há disputa por um único vencedor, então não há o que licitar."
+        },
+        {
+         "tag": "Inciso V",
+         "titulo": "Imóvel singular",
+         "texto": "Compra ou locação de imóvel cuja instalação e localização tornem necessária a escolha. Exige avaliação prévia, certificar que não há imóvel público vago adequado e justificar a singularidade. Na Lei 8.666 era dispensa; agora é inexigibilidade."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 74, III",
+       "texto": "III - contratação dos seguintes serviços técnicos especializados de ==natureza predominantemente intelectual== com profissionais ou empresas de ==notória especialização==, ==vedada a inexigibilidade para serviços de publicidade e divulgação==: (...)"
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Singular não é exclusivo",
+       "html": "Singularidade (inciso III) é não haver critério objetivo para comparar trabalhos. Exclusividade (inciso I) é só um fornecedor existir. E publicidade e divulgação <b>nunca</b> admitem inexigibilidade por notória especialização."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 75, I, II e § 2º",
+       "texto": "Art. 75. É dispensável a licitação:\nI - para contratação que envolva valores inferiores a ==R$ 100.000,00== (cem mil reais), no caso de ==obras e serviços de engenharia ou de serviços de manutenção de veículos automotores==;\nII - para contratação que envolva valores inferiores a ==R$ 50.000,00== (cinquenta mil reais), no caso de ==outros serviços e compras==;\n§ 2º Os valores referidos nos incisos I e II do caput deste artigo serão ==duplicados== para compras, obras e serviços contratados por ==consórcio público== ou por autarquia ou fundação qualificadas como ==agências executivas== na forma da lei."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Valores atualizados todo ano",
+       "html": "Os R$ 100 mil e R$ 50 mil são o texto original. Todos os valores da lei são atualizados todo 1º de janeiro pelo IPCA-E, por decreto federal, e divulgados no PNCP. Para a prova, confira o valor do decreto vigente no ano. A banca costuma cobrar o texto da lei. Para aferir o limite, soma-se o gasto do exercício na mesma unidade gestora com objetos da mesma natureza (§ 1º)."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 75, VIII",
+       "texto": "VIII - nos casos de emergência ou de calamidade pública, quando caracterizada urgência de atendimento de situação que possa ocasionar prejuízo ou comprometer a continuidade dos serviços públicos ou a segurança de pessoas, obras, serviços, equipamentos e outros bens, públicos ou particulares, e ==somente para aquisição dos bens necessários== ao atendimento da situação emergencial ou calamitosa e para as parcelas de obras e serviços que possam ser concluídas no ==prazo máximo de 1 (um) ano==, contado da data de ocorrência da emergência ou da calamidade, ==vedadas a prorrogação dos respectivos contratos e a recontratação de empresa já contratada== com base no disposto neste inciso;"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 6.890/DF, Rel. Min. Cristiano Zanin, 9/9/2024 (Info 1149)",
+       "tese": "É constitucional a vedação à recontratação de empresa contratada diretamente por dispensa de licitação nos casos de emergência ou calamidade pública. A vedação incide na recontratação fundada na mesma situação emergencial ou calamitosa que extrapole o prazo máximo legal de 1 ano, e não impede que a empresa participe de eventual licitação substitutiva nem seja contratada diretamente por outro fundamento, inclusive nova emergência."
+      },
+      {
+       "t": "leia",
+       "ref": "Lei 14.133/2021, art. 75, III a XVIII",
+       "motivo": "Destaques: licitação deserta ou fracassada há menos de 1 ano (III); gêneros perecíveis pelo preço do dia (IV, e); guerra, estado de defesa ou sítio (VII); órgão ou entidade criado para esse fim, com preço de mercado (IX); contrato de programa em consórcio ou convênio (XI); associação de pessoas com deficiência (XIV)."
+      }
+     ]
+    },
+    {
+     "titulo": "Processo da contratação direta e recursos",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Contratar sem licitar <b>não</b> é contratar sem processo. O art. 72 exige: documento de formalização da demanda (e, se for o caso, estudo técnico, análise de riscos, termo de referência ou projeto), estimativa de despesa, parecer jurídico, compatibilidade orçamentária, habilitação mínima do contratado, razão da escolha, justificativa de preço e autorização da autoridade."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, arts. 72, parágrafo único, e 73",
+       "texto": "Parágrafo único. O ato que autoriza a contratação direta ou o extrato decorrente do contrato deverá ser divulgado e mantido à disposição do público em ==sítio eletrônico oficial==.\nArt. 73. Na hipótese de contratação direta indevida ocorrida com ==dolo, fraude ou erro grosseiro==, o contratado e o agente público responsável responderão ==solidariamente== pelo dano causado ao erário, sem prejuízo de outras sanções legais cabíveis."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, arts. 165 e 168",
+       "texto": "Art. 165. Dos atos da Administração decorrentes da aplicação desta Lei cabem:\nI - recurso, no prazo de ==3 (três) dias úteis==, contado da data de intimação ou de lavratura da ata, em face de: (...)\nII - pedido de reconsideração, no prazo de ==3 (três) dias úteis==, contado da data de intimação, relativamente a ato do qual ==não caiba recurso hierárquico==.\nII - a apreciação dar-se-á em ==fase única==.\n§ 3º O acolhimento do recurso implicará invalidação apenas de ==ato insuscetível de aproveitamento==.\nArt. 168. O recurso e o pedido de reconsideração ==terão efeito suspensivo== do ato ou da decisão recorrida até que sobrevenha decisão final da autoridade competente."
+      },
+      {
+       "t": "texto",
+       "html": "Cabe recurso, em 3 dias úteis, contra: pré-qualificação ou registro cadastral, <b>julgamento</b> das propostas, <b>habilitação ou inabilitação</b>, <b>anulação ou revogação</b> da licitação e extinção unilateral do contrato. Contra julgamento e habilitação, a <b>intenção de recorrer</b> deve ser manifestada <b>imediatamente</b>, sob pena de preclusão."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Intenção",
+         "sub": "na hora"
+        },
+        {
+         "titulo": "Razões",
+         "sub": "3 dias úteis"
+        },
+        {
+         "titulo": "Reconsidera?",
+         "sub": "3 dias úteis"
+        },
+        {
+         "titulo": "Superior",
+         "sub": "10 dias úteis"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Na sessão, o licitante manifesta logo a intenção de recorrer do julgamento ou da habilitação. Se não manifestar, preclui."
+        },
+        {
+         "no": 1,
+         "texto": "As razões vêm em <b>3 dias úteis</b>, contados da intimação ou da ata. As contrarrazões têm o mesmo prazo. Garante-se vista dos elementos indispensáveis à defesa."
+        },
+        {
+         "no": 2,
+         "texto": "O recurso vai à autoridade que decidiu, que tem <b>3 dias úteis</b> para reconsiderar."
+        },
+        {
+         "no": 3,
+         "texto": "Sem reconsideração, sobe à autoridade superior, que decide em até <b>10 dias úteis</b>. Enquanto isso, há <b>efeito suspensivo</b> (art. 168)."
+        }
+       ]
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Situação",
+        "Instrumento",
+        "Prazo"
+       ],
+       "linhas": [
+        [
+         "Atos da licitação (julgamento, habilitação, anulação, revogação etc.)",
+         "Recurso",
+         "3 dias úteis; reconsideração em 3; decisão em 10 dias úteis"
+        ],
+        [
+         "Ato sem recurso hierárquico",
+         "Pedido de reconsideração",
+         "3 dias úteis"
+        ],
+        [
+         "Sanções de advertência, multa e impedimento (art. 156, I a III)",
+         "Recurso",
+         "15 dias úteis; reconsideração em 5; decisão em 20 dias úteis (art. 166)"
+        ],
+        [
+         "Declaração de inidoneidade (art. 156, IV)",
+         "Só pedido de reconsideração",
+         "15 dias úteis; decisão em 20 dias úteis (art. 167)"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Não misture com a Lei 9.784",
+       "html": "Na Lei 9.784 o recurso é de <b>10 dias corridos</b> e, em regra, <b>sem</b> efeito suspensivo. Na Lei 14.133 é de <b>3 dias úteis</b> e <b>com</b> efeito suspensivo. Impugnação ao edital: qualquer pessoa, até 3 dias úteis antes da abertura (art. 164)."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Alienação de bens",
+       "html": "As regras de alienação de bens (art. 76: interesse público, avaliação, autorização legislativa para imóveis e leilão) ficam para a aula de Bens públicos, junto com afetação e desafetação."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "Inexigibilidade: competição <b>inviável</b>, rol <b>exemplificativo</b>. Dispensa: competição <b>possível</b>, rol <b>taxativo</b>.<br>Imóvel singular agora é <b>inexigibilidade</b>.<br>Publicidade <b>não</b> admite notória especialização.<br>Emergência: até <b>1 ano</b>, sem prorrogação e sem recontratar pelo mesmo fundamento.<br>Revogação exige <b>fato superveniente</b> comprovado.<br>Recurso na licitação: <b>3 dias úteis</b>, <b>com</b> efeito suspensivo."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "O rol de hipóteses de inexigibilidade do art. 74 é exemplificativo.",
+         "v": true,
+         "porque": "\"Em especial\"; o critério é a inviabilidade de competição."
+        },
+        {
+         "texto": "É inexigível a licitação para contratar serviço de publicidade com empresa de notória especialização.",
+         "v": false,
+         "porque": "Art. 74, III, veda expressamente."
+        },
+        {
+         "texto": "A locação de imóvel cujas características tornem necessária sua escolha é hipótese de dispensa.",
+         "v": false,
+         "porque": "Na Lei 14.133 é inexigibilidade (art. 74, V)."
+        },
+        {
+         "texto": "Na contratação emergencial, o contrato pode ser prorrogado se a emergência persistir.",
+         "v": false,
+         "porque": "Art. 75, VIII: prazo máximo de 1 ano, vedada a prorrogação."
+        },
+        {
+         "texto": "A revogação da licitação depende de fato superveniente devidamente comprovado.",
+         "v": true,
+         "porque": "Art. 71, § 2º."
+        },
+        {
+         "texto": "A regularidade fiscal é exigida de todos os licitantes antes do julgamento.",
+         "v": false,
+         "porque": "Só do mais bem classificado, depois do julgamento."
+        },
+        {
+         "texto": "Na contratação direta indevida com dolo, fraude ou erro grosseiro, contratado e agente público respondem solidariamente pelo dano.",
+         "v": true,
+         "porque": "Art. 73."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-25",
+    "adm-cad-26"
+   ]
   },
   {
    "id": "B2-a14",
    "topico_id": "B2-06",
-   "numero": 14,
+   "numero": 15,
    "titulo": "Contratos administrativos",
    "status": "a_montar"
   },
   {
    "id": "B2-a15",
    "topico_id": "B2-07",
-   "numero": 15,
+   "numero": 16,
    "titulo": "Serviços públicos",
    "status": "a_montar"
   },
   {
    "id": "B2-a16",
    "topico_id": "B2-08",
-   "numero": 16,
+   "numero": 17,
    "titulo": "Agentes públicos",
    "status": "a_montar"
   },
   {
    "id": "B2-a17",
    "topico_id": "B2-09",
-   "numero": 17,
+   "numero": 18,
    "titulo": "Responsabilidade civil do Estado",
    "status": "a_montar"
   },
   {
    "id": "B2-a18",
    "topico_id": "B2-10",
-   "numero": 18,
+   "numero": 19,
    "titulo": "Improbidade administrativa",
    "status": "a_montar"
   },
   {
    "id": "B2-a19",
    "topico_id": "B2-12",
-   "numero": 19,
+   "numero": 20,
    "titulo": "Bens públicos",
    "status": "a_montar"
   },
   {
    "id": "B2-a20",
    "topico_id": "B2-13",
-   "numero": 20,
+   "numero": 21,
    "titulo": "Intervenção na propriedade",
    "status": "a_montar"
   },
   {
    "id": "B2-a21",
    "topico_id": "B2-14",
-   "numero": 21,
+   "numero": 22,
    "titulo": "Controle da Administração",
    "status": "a_montar"
   },
   {
    "id": "B2-a22",
    "topico_id": "B2-15",
-   "numero": 22,
+   "numero": 23,
    "titulo": "Anticorrupção e transparência",
    "status": "a_montar"
   }
@@ -4084,6 +4781,46 @@
   [
    "Decisão coordenada",
    "Decisão federal tomada em conjunto por 3 ou mais órgãos ou entidades (Lei 9.784, art. 49-A)."
+  ],
+  [
+   "Agente de contratação",
+   "Servidor efetivo ou empregado público permanente que conduz a licitação até a homologação (Lei 14.133, art. 8º)."
+  ],
+  [
+   "Bens e serviços comuns",
+   "Aqueles cujos padrões de desempenho e qualidade podem ser definidos objetivamente no edital, por especificações usuais de mercado."
+  ],
+  [
+   "Diálogo competitivo",
+   "Modalidade criada pela Lei 14.133 para inovação: a Administração dialoga com licitantes pré-selecionados antes da proposta final."
+  ],
+  [
+   "PNCP",
+   "Portal Nacional de Contratações Públicas, onde se divulgam editais, contratos e atas."
+  ],
+  [
+   "Segregação de funções",
+   "Princípio que veda ao mesmo agente acumular funções sujeitas a risco na mesma contratação."
+  ],
+  [
+   "Inexigibilidade",
+   "Contratação direta porque a competição é inviável (Lei 14.133, art. 74); rol exemplificativo."
+  ],
+  [
+   "Dispensa de licitação",
+   "Contratação direta em que a competição seria possível, mas a lei autoriza não licitar (Lei 14.133, art. 75); rol taxativo."
+  ],
+  [
+   "Notória especialização",
+   "Conceito do profissional ou empresa que permite inferir que seu trabalho é o mais adequado ao objeto (Lei 14.133, art. 74, § 3º)."
+  ],
+  [
+   "Credenciamento",
+   "Chamamento público em que todos os que cumprem os requisitos são credenciados para executar o objeto quando convocados."
+  ],
+  [
+   "Habilitação",
+   "Fase em que se verifica se o licitante tem capacidade jurídica, técnica, fiscal-social-trabalhista e econômico-financeira."
   ]
  ]
 }
