@@ -166,15 +166,22 @@ export function progressoGeral(lista: ProgressoMateria[]) {
 }
 
 /* ===================== GERADOR DO CRONOGRAMA ===================== */
-const MIN_TEORIA = 50;
-const MIN_QUESTOES = 25;
 const LIMITE_DIAS = 200;
+/** peso no rodízio: matérias do núcleo da prova aparecem mais vezes */
+const PESO_FASE: Record<number, number> = { 1: 3, 2: 2, 3: 1 };
+const arred5 = (n: number) => Math.max(5, Math.round(n / 5) * 5);
 
 /**
  * Monta o cronograma de hoje até a véspera da prova (ou 200 dias, se não houver data).
- * Regras do edital verticalizado: fases 1, 2 e 3 em ordem; Português todo dia;
- * Raciocínio Lógico e Informática em dias alternados; cultura do Estado em bloco no sábado;
- * revisão espaçada todo dia; discursiva aos domingos; quando a teoria acaba, o resto vira questões e revisão.
+ * Método aprovado em 15/11/2026:
+ * - Segunda a sexta: 2 matérias por dia em rodízio (núcleo da prova pesa mais). Cada matéria segue
+ *   aquecimento (questões antes de estudar) → lei seca → teoria só no que errou → bateria de questões.
+ *   Português fica fora das 2 matérias: 20 a 25 minutos todo dia, teoria curta e muitas questões.
+ *   Revisão espaçada curta todo dia (a fila da aba Revisão vence diariamente).
+ * - Quarta: uma matéria + simulado de lei seca de uma matéria já estudada.
+ * - Sábado: revisão (fila, laboratório de erros, lei seca grifada), discursiva e cultura do Estado.
+ * - Domingo: simuladão cronometrado + correção classificando cada erro.
+ * Quando a teoria acaba, as matérias do dia viram lei seca + questões.
  */
 export function gerarCronograma(
   hoje: string,
@@ -186,25 +193,34 @@ export function gerarCronograma(
     const e = estados.get(t.id);
     return !e?.fora_do_edital && e?.status !== "dominado";
   };
-  const fila = ativas
-    .filter((m) => m.fase >= 1 && m.fase <= 3)
-    .sort((a, b) => a.fase - b.fase)
-    .flatMap((m) => m.topicos.filter(pendente).map((t) => ({ m, t })));
+  const principais = ativas.filter((m) => m.fase >= 1 && m.fase <= 3).sort((a, b) => a.fase - b.fase);
+  const filaTopicos = new Map(principais.map((m) => [m.id, m.topicos.filter(pendente)]));
+  const vistos = new Map(principais.map((m) => [m.id, 0]));
+  const credito = new Map(principais.map((m) => [m.id, 0]));
   const portugues = ativas.find((m) => m.id === "A1");
   const filaPt = portugues ? portugues.topicos.filter(pendente) : [];
   const alternadas = ativas.filter((m) => m.fase === 4);
   const cultura = ativas.filter((m) => m.fase === 5).flatMap((m) => m.topicos.filter(pendente).map((t) => ({ m, t })));
-  const cicloQuestoes = ativas.filter((m) => m.fase >= 1 && m.fase <= 3);
 
   const fim = config.dataProva ? addDaysToDateString(config.dataProva, -1) : addDaysToDateString(hoje, LIMITE_DIAS);
   const total = Math.min(LIMITE_DIAS, diasEntre(hoje, fim));
   const itens: NovoItem[] = [];
-  let iFila = 0;
   let iPt = 0;
   let iCult = 0;
   let iAlt = 0;
-  let iCiclo = 0;
-  let questoesPendentes: { m: Materia; t: Topico } | null = null;
+  let iSimLei = 0;
+
+  /** rodízio ponderado: escolhe a matéria com mais crédito acumulado, sem repetir no dia */
+  function escolher(excluir: Set<string>): Materia | null {
+    const comTeoria = principais.filter((m) => (filaTopicos.get(m.id)?.length ?? 0) > 0);
+    const candidatas = (comTeoria.length ? comTeoria : principais).filter((m) => !excluir.has(m.id));
+    if (!candidatas.length) return null;
+    for (const m of candidatas) credito.set(m.id, (credito.get(m.id) ?? 0) + (PESO_FASE[m.fase] ?? 1));
+    const soma = candidatas.reduce((s, m) => s + (PESO_FASE[m.fase] ?? 1), 0);
+    const melhor = candidatas.reduce((a, b) => ((credito.get(b.id) ?? 0) > (credito.get(a.id) ?? 0) ? b : a));
+    credito.set(melhor.id, (credito.get(melhor.id) ?? 0) - soma);
+    return melhor;
+  }
 
   for (let d = 0; d <= total; d++) {
     const data = addDaysToDateString(hoje, d);
@@ -213,75 +229,95 @@ export function gerarCronograma(
     if (resta < 15) continue;
     let ordem = 0;
     const add = (it: Omit<NovoItem, "data" | "ordem">) => {
-      itens.push({ ...it, data, ordem: ordem++ });
-      resta -= it.minutos;
+      if (it.minutos < 5 || resta < 5) return;
+      const minutos = Math.min(it.minutos, resta);
+      itens.push({ ...it, minutos, data, ordem: ordem++ });
+      resta -= minutos;
     };
 
-    // 1. revisão espaçada (cerca de 15% do dia)
-    add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Revisão espaçada: cartões e questões que venceram hoje", minutos: Math.max(15, Math.round((resta * 0.15) / 5) * 5) });
-
-    // 2. domingo: discursiva
-    if (dow === 0 && resta >= 60) {
-      add({ materia_id: "DISC", topico_id: null, tipo: "discursiva", titulo: "Discursiva cronometrada: estudo de caso (problema, base legal, jurisprudência, solução)", minutos: 60 });
+    /* ---------- DOMINGO: simuladão ---------- */
+    if (dow === 0) {
+      const correcao = resta >= 120 ? 40 : 20;
+      const prova = resta - correcao;
+      add({
+        materia_id: "SIM",
+        topico_id: null,
+        tipo: "simulado",
+        titulo: prova >= 180 ? "Simuladão FCC: prova completa, cronometrada, sem consulta" : "Simuladão FCC (versão curta): misto de todas as matérias, cronometrado",
+        minutos: prova,
+      });
+      add({ materia_id: "SIM", topico_id: null, tipo: "questoes", titulo: "Correção do simuladão: classifique cada erro (eles vão para a Revisão)", minutos: correcao });
+      continue;
     }
 
-    // 3. Português todo dia
-    if (portugues && resta >= 25) {
-      const t = d % 2 === 0 ? filaPt[iPt] : undefined;
-      if (t) {
-        iPt++;
-        add({ materia_id: "A1", topico_id: t.id, tipo: "teoria", titulo: `Português: ${t.titulo}`, minutos: Math.min(40, resta) });
-      } else {
-        add({ materia_id: "A1", topico_id: null, tipo: "questoes", titulo: "Português: questões FCC (interpretação e gramática)", minutos: 25 });
+    /* ---------- SÁBADO: revisão ---------- */
+    if (dow === 6) {
+      const disc = resta >= 120 ? 60 : 0;
+      const cult = cultura.length && resta >= 200 ? 40 : 0;
+      add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Revisão: a fila inteira da aba Revisão (questões, cartões e artigos)", minutos: Math.max(30, resta - 50 - disc - cult) });
+      add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Laboratório de erros: refaça as erradas da semana e releia o seu caderno de erros", minutos: 25 });
+      add({ materia_id: "REV", topico_id: null, tipo: "lei_seca", titulo: "Lei seca grifada da semana: releia só os trechos marcados", minutos: 25 });
+      if (disc) {
+        add({ materia_id: "DISC", topico_id: null, tipo: "discursiva", titulo: "Discursiva cronometrada: estudo de caso (problema, base legal, jurisprudência, solução)", minutos: disc });
       }
+      if (cult) {
+        const c = cultura[iCult++ % cultura.length];
+        add({ materia_id: c.m.id, topico_id: c.t.id, tipo: "teoria", titulo: `${c.m.nome}: ${c.t.titulo}`, minutos: cult });
+      }
+      continue;
     }
 
-    // 4. Raciocínio Lógico / Informática em dias alternados
-    if (alternadas.length && d % 2 === 1 && resta >= 25 && dow !== 0) {
+    /* ---------- SEGUNDA A SEXTA ---------- */
+    add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Revisão espaçada: a fila de hoje na aba Revisão", minutos: 15 });
+
+    if (portugues) {
+      const t = (dow === 1 || dow === 4) && filaPt[iPt] ? filaPt[iPt++] : undefined;
+      add(
+        t
+          ? { materia_id: "A1", topico_id: t.id, tipo: "teoria", titulo: `Português: ${t.titulo} (teoria curta + questões na hora)`, minutos: 25 }
+          : { materia_id: "A1", topico_id: null, tipo: "questoes", titulo: "Português: questões FCC (interpretação e gramática)", minutos: 20 },
+      );
+    }
+
+    if (alternadas.length && (dow === 2 || dow === 5) && resta >= 80) {
       const m = alternadas[iAlt++ % alternadas.length];
-      add({ materia_id: m.id, topico_id: null, tipo: "questoes", titulo: `${m.nome}: questões`, minutos: 25 });
+      add({ materia_id: m.id, topico_id: null, tipo: "questoes", titulo: `${m.nome}: questões`, minutos: 20 });
     }
 
-    // 5. sábado: cultura geral do Estado
-    if (dow === 6 && cultura.length && resta >= 40) {
-      const c = cultura[iCult % cultura.length];
-      iCult++;
-      add({ materia_id: c.m.id, topico_id: c.t.id, tipo: "teoria", titulo: `${c.m.nome}: ${c.t.titulo}`, minutos: 40 });
-    }
+    // quarta: simulado de lei seca de uma matéria já estudada
+    const jaVistas = principais.filter((m) => (vistos.get(m.id) ?? 0) > 0);
+    const simLei = dow === 3 && jaVistas.length ? jaVistas[iSimLei++ % jaVistas.length] : null;
+    const reservaSim = simLei ? Math.min(40, Math.max(20, arred5(resta * 0.3))) : 0;
 
-    // 6. questões que ficaram do dia anterior
-    if (questoesPendentes && resta >= MIN_QUESTOES) {
-      const { m, t } = questoesPendentes;
-      add({ materia_id: m.id, topico_id: t.id, tipo: "questoes", titulo: `${m.nome}: questões de ${t.titulo}`, minutos: MIN_QUESTOES });
-      questoesPendentes = null;
-    }
-
-    // 7. bloco principal: teoria + questões dos tópicos na ordem das fases
-    let leiSecaFeita = false;
-    while (resta >= MIN_TEORIA && iFila < fila.length) {
-      const { m, t } = fila[iFila++];
-      add({ materia_id: m.id, topico_id: t.id, tipo: "teoria", titulo: `${m.nome}: ${t.titulo}`, minutos: MIN_TEORIA });
-      if (resta >= MIN_QUESTOES) {
-        add({ materia_id: m.id, topico_id: t.id, tipo: "questoes", titulo: `${m.nome}: questões de ${t.titulo}`, minutos: MIN_QUESTOES });
+    const usadas = new Set<string>();
+    const nMaterias = simLei ? 1 : 2;
+    for (let k = 0; k < nMaterias; k++) {
+      const m = escolher(usadas);
+      if (!m) break;
+      usadas.add(m.id);
+      const bloco = Math.floor((resta - reservaSim) / (nMaterias - k));
+      if (bloco < 25) break;
+      const fila = filaTopicos.get(m.id) ?? [];
+      const t = fila.shift();
+      if (t) {
+        vistos.set(m.id, (vistos.get(m.id) ?? 0) + 1);
+        const aquece = 10;
+        const lei = arred5((bloco - aquece) * 0.35);
+        const teoria = arred5((bloco - aquece) * 0.25);
+        const questoes = Math.floor((bloco - aquece - lei - teoria) / 5) * 5;
+        add({ materia_id: m.id, topico_id: t.id, tipo: "questoes", titulo: `${m.nome}: aquecimento, 5 questões de ${t.titulo} antes de estudar`, minutos: aquece });
+        add({ materia_id: m.id, topico_id: t.id, tipo: "lei_seca", titulo: `${m.nome}: lei seca de ${t.titulo} (grife o que a FCC troca: pode/deve, prazos, competência)`, minutos: lei });
+        add({ materia_id: m.id, topico_id: t.id, tipo: "teoria", titulo: `${m.nome}: ${t.titulo} (teoria só no que você errou ou não entendeu)`, minutos: teoria });
+        add({ materia_id: m.id, topico_id: t.id, tipo: "questoes", titulo: `${m.nome}: bateria de questões de ${t.titulo}`, minutos: questoes });
       } else {
-        questoesPendentes = { m, t };
-      }
-      if (!leiSecaFeita && d % 3 === 0 && resta >= 20 && m.fase <= 2) {
-        leiSecaFeita = true;
-        add({ materia_id: m.id, topico_id: t.id, tipo: "lei_seca", titulo: `${m.nome}: lei seca do tópico (artigos e palavras que a FCC troca)`, minutos: 20 });
+        const lei = arred5(bloco * 0.3);
+        add({ materia_id: m.id, topico_id: null, tipo: "lei_seca", titulo: `${m.nome}: lei seca dos pontos que mais caem`, minutos: lei });
+        add({ materia_id: m.id, topico_id: null, tipo: "questoes", titulo: `${m.nome}: questões FCC e refazer os erros`, minutos: Math.floor((bloco - lei) / 5) * 5 });
       }
     }
 
-    // 7b. sobrou pouco tempo no dia: questões mistas do que já foi visto
-    if (iFila < fila.length && iFila > 0 && resta >= MIN_QUESTOES) {
-      add({ materia_id: "MIX", topico_id: null, tipo: "questoes", titulo: "Questões mistas das matérias já vistas (intercalar fixa mais)", minutos: Math.min(45, Math.floor(resta / 5) * 5) });
-    }
-
-    // 8. teoria acabou: o resto do dia vira questões, em rodízio pelas matérias
-    while (iFila >= fila.length && resta >= MIN_QUESTOES && cicloQuestoes.length) {
-      const m = cicloQuestoes[iCiclo++ % cicloQuestoes.length];
-      const min = resta >= 50 ? 50 : MIN_QUESTOES;
-      add({ materia_id: m.id, topico_id: null, tipo: dow === 6 && min === 50 ? "simulado" : "questoes", titulo: dow === 6 && min === 50 ? `Simulado curto: ${m.nome}` : `${m.nome}: questões FCC e revisão de erros`, minutos: min });
+    if (simLei) {
+      add({ materia_id: simLei.id, topico_id: null, tipo: "simulado", titulo: `Simulado de lei seca: ${simLei.nome} (20 questões, cronometrado)`, minutos: resta });
     }
   }
   return itens;

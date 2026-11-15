@@ -31,6 +31,30 @@ export default async function CronogramaPage(props: PageProps<"/admin/estudos/cr
       <Cabecalho titulo="Cronograma" sub="Seus horários viram um plano diário. Marque o que fez e replaneje quando atrasar." />
       <CronogramaConfig config={config} temPlano={futuros.length > 0} />
 
+      <details className="rounded-2xl border border-e-line bg-e-card p-4 text-sm text-e-dim">
+        <summary className="cursor-pointer text-e-ink">Como o plano funciona</summary>
+        <ul className="mt-3 list-disc space-y-1.5 pl-5">
+          <li>
+            <span className="text-e-ink">Segunda a sexta:</span> 2 matérias por dia, em rodízio (as do núcleo da prova aparecem mais).
+            Em cada uma: aquecimento com 5 questões antes de estudar, lei seca, teoria só no que você errou e bateria de questões.
+          </li>
+          <li>
+            <span className="text-e-ink">Português todo dia</span>, fora das 2 matérias: teoria curta e muitas questões. E 15 minutos da
+            fila da aba Revisão.
+          </li>
+          <li>
+            <span className="text-e-ink">Quarta:</span> uma matéria e um simulado de lei seca de uma matéria que você já estudou.
+          </li>
+          <li>
+            <span className="text-e-ink">Sábado:</span> revisão (fila, laboratório de erros e lei seca grifada) e discursiva.
+          </li>
+          <li>
+            <span className="text-e-ink">Domingo:</span> simuladão cronometrado e correção, classificando cada erro. Para uma prova completa,
+            reserve pelo menos 4 horas no domingo.
+          </li>
+        </ul>
+      </details>
+
       {atrasados.length > 0 && (
         <section className="rounded-2xl border border-e-bad bg-e-card p-4">
           <h2 className="text-[11px] uppercase tracking-[0.14em] text-e-bad">{atrasados.length} blocos ficaram para trás</h2>
