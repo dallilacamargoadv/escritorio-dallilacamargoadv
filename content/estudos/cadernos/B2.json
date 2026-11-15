@@ -863,7 +863,317 @@
    "topico_id": "B2-02",
    "numero": 5,
    "titulo": "Autarquias e agências reguladoras",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Administração Pública (2026)",
+   "resumo": [
+    "Autarquia é pessoa jurídica de direito público, criada por lei específica, para atividade típica de Estado; nasce com a vigência da lei.",
+    "Por ser de direito público, carrega o regime da Fazenda: bens públicos, atos e contratos administrativos, prazo em dobro, remessa necessária, precatório, imunidade de impostos e responsabilidade objetiva.",
+    "Relação com o ente: vinculação e controle finalístico, nunca hierarquia.",
+    "Regime especial é qualquer particularidade fora do DL 200/1967. Agência reguladora é autarquia especial com mandato fixo dos dirigentes; agência executiva é só uma qualificação para quem firma contrato de desempenho.",
+    "Conselhos profissionais são autarquias; a OAB não é: é entidade ímpar, fora da Administração."
+   ],
+   "secoes": [
+    {
+     "titulo": "Por que existe a autarquia",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Quando o Estado quer descentralizar uma atividade <b>típica</b> dele (polícia administrativa, serviço público, atividade de interesse social), precisa de uma pessoa que leve junto as prerrogativas e as restrições do poder público. Uma empresa privada não serve: atividade típica de Estado exige regime de direito público. A resposta é a <b>autarquia</b>, uma espécie de \"pedaço do Estado com CNPJ próprio\"."
+      },
+      {
+       "t": "texto",
+       "html": "Conceito do material: entidade da administração indireta, com <b>personalidade jurídica de direito público</b>, <b>patrimônio próprio</b> e <b>autonomia administrativa</b>, criada por <b>lei específica</b> para exercer competências estatais determinadas."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, XIX",
+       "texto": "XIX - somente por lei específica ==poderá ser criada autarquia== e autorizada a instituição de empresa pública, de sociedade de economia mista e de fundação, cabendo à lei complementar, neste último caso, definir as áreas de sua atuação;"
+      },
+      {
+       "t": "texto",
+       "html": "A personalidade nasce com a <b>vigência da lei</b>. Decretos que depois organizam a estrutura interna não criam nada: a entidade já existia. A lei é de iniciativa do Chefe do Executivo, ou do Poder ao qual a autarquia ficar vinculada (Legislativo ou Judiciário)."
+      }
+     ]
+    },
+    {
+     "titulo": "O regime: tudo o que vem com o direito público",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Daqui sai a lógica do resto da aula: <b>se é pessoa de direito público, recebe o pacote da Fazenda Pública</b>, com privilégios e restrições. Abra cada carta."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Patrimônio",
+         "titulo": "Bens públicos",
+         "texto": "Formado pela transferência de bens do ente criador e reincorporado a ele se a autarquia for extinta. Os bens são públicos (CC, art. 98): impenhoráveis, imprescritíveis e com alienação condicionada."
+        },
+        {
+         "tag": "Atos e contratos",
+         "titulo": "Atos administrativos e licitação",
+         "texto": "Pratica atos administrativos, com os mesmos requisitos e atributos da direta, e contrata por contrato administrativo, com licitação prévia, salvo exceção legal."
+        },
+        {
+         "tag": "Orçamento",
+         "titulo": "Lei orçamentária anual",
+         "texto": "O orçamento fiscal das entidades da administração indireta está na LOA (CF, art. 165, § 5º, I)."
+        },
+        {
+         "tag": "Pessoal",
+         "titulo": "Concurso sempre",
+         "texto": "Desde a EC 19/1998 não há mais regime jurídico único obrigatório (STF, ADI 2.135, 2024), mas o concurso continua exigido em qualquer regime."
+        },
+        {
+         "tag": "Em juízo",
+         "titulo": "Prazo em dobro, remessa e precatório",
+         "texto": "Prazo em dobro com intimação pessoal (CPC, art. 183), remessa necessária (CPC, art. 496) e pagamento por precatório (CF, art. 100). Procurador do quadro não precisa juntar procuração."
+        },
+        {
+         "tag": "Tributos",
+         "titulo": "Imunidade recíproca",
+         "texto": "Imunidade de impostos sobre patrimônio, renda e serviços ligados às finalidades essenciais (CF, art. 150, § 2º). Não alcança obrigações acessórias (STF, ACO 1.098)."
+        },
+        {
+         "tag": "Responsabilidade",
+         "titulo": "Objetiva",
+         "texto": "Responde objetivamente pelos danos de seus agentes (CF, art. 37, § 6º). O ente criador responde só de forma subsidiária."
+        },
+        {
+         "tag": "Prescrição",
+         "titulo": "Cinco anos",
+         "texto": "Dívidas passivas prescrevem em 5 anos (Decreto 20.910/1932, estendido às autarquias). Interrompida uma única vez, recomeça pela metade, sem que o total fique abaixo de 5 anos (Súmula 383 do STF)."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 183",
+       "texto": "Art. 183. A União, os Estados, o Distrito Federal, os Municípios e suas respectivas ==autarquias e fundações de direito público== gozarão de ==prazo em dobro== para todas as suas manifestações processuais, cuja contagem terá início a partir da ==intimação pessoal==."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 150, § 2º",
+       "texto": "§ 2º A vedação do inciso VI, \"a\", é extensiva às ==autarquias== e às fundações instituídas e mantidas pelo poder público e à empresa pública prestadora de serviço postal, no que se refere ao patrimônio, à renda e aos serviços ==vinculados a suas finalidades essenciais== ou às delas decorrentes."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 109, I",
+       "texto": "I - as causas em que a União, ==entidade autárquica== ou empresa pública federal forem interessadas na condição de autoras, rés, assistentes ou oponentes, exceto as de falência, as de acidentes de trabalho e as sujeitas à Justiça Eleitoral e à Justiça do Trabalho;"
+      },
+      {
+       "t": "texto",
+       "html": "Repare no art. 109, I: autarquia <b>federal</b> litiga na Justiça Federal. Autarquia estadual, como as do Maranhão, litiga na Justiça Estadual."
+      },
+      {
+       "t": "leia",
+       "ref": "CPC, art. 496, §§ 3º e 4º",
+       "motivo": "São os valores e as hipóteses em que a remessa necessária é dispensada. A FCC cobra os números (mil, quinhentos e cem salários mínimos) trocados entre União, Estados e Municípios."
+      }
+     ]
+    },
+    {
+     "titulo": "Vínculo com o ente: tutela, não hierarquia",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Secretaria (órgão)",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Estado do Maranhão",
+           "sub": ""
+          },
+          {
+           "titulo": "Secretaria",
+           "sub": "hierarquia"
+          },
+          {
+           "titulo": "Departamento",
+           "sub": "hierarquia"
+          },
+          {
+           "titulo": "Seção",
+           "sub": "hierarquia"
+          }
+         ],
+         "texto": "Órgão está <b>dentro</b> do Estado: obedece por hierarquia, sem personalidade própria."
+        },
+        {
+         "rotulo": "Autarquia (entidade)",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Estado do Maranhão",
+           "sub": "cria por lei"
+          },
+          {
+           "titulo": "Autarquia",
+           "sub": "vinculada"
+          }
+         ],
+         "texto": "Autarquia está <b>fora</b>: é outra pessoa, só <b>vinculada</b>. O ente exerce controle finalístico (tutela ou supervisão), nos limites da lei, para conferir se ela cumpre o objetivo para o qual foi criada."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "A autarquia tem só <b>capacidade de autoadministração</b>: administra a si mesma segundo a lei instituidora. Não legisla e não tem autonomia política."
+      }
+     ]
+    },
+    {
+     "titulo": "Regime especial, agência reguladora e agência executiva",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Regime especial</b> não é um regime pronto: é qualquer particularidade, prerrogativa ou restrição, que a lei instituidora dá à autarquia além do regime geral do Decreto-Lei 200/1967. Por isso nem toda autarquia especial é agência reguladora."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Agência reguladora",
+        "Agência executiva"
+       ],
+       "linhas": [
+        [
+         "O que é",
+         "Autarquia sob regime especial que regula um setor",
+         "Qualificação dada a autarquia ou fundação"
+        ],
+        [
+         "Como surge",
+         "Lei instituidora",
+         "Contrato de desempenho (CF, art. 37, § 8º) e requisitos legais"
+        ],
+        [
+         "Contrato de gestão",
+         "Só se a lei exigir",
+         "Obrigatório"
+        ],
+        [
+         "Pode ser a outra?",
+         "Pode também ser qualificada como executiva",
+         "Não precisa ser reguladora"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "A Lei 13.848/2019 (Lei Geral das Agências Reguladoras federais) define a natureza especial: <b>ausência de tutela ou de subordinação hierárquica</b>, <b>autonomia funcional, decisória, administrativa e financeira</b> e <b>investidura a termo e estabilidade dos dirigentes</b> durante os mandatos. Seu art. 4º positiva a proporcionalidade: é vedado impor obrigações e sanções acima do necessário ao interesse público."
+      },
+      {
+       "t": "leia",
+       "ref": "Lei 13.848/2019, arts. 2º a 6º",
+       "motivo": "O art. 2º lista as 11 agências federais (Aneel, ANP, Anatel, Anvisa, ANS, ANA, Antaq, ANTT, Ancine, Anac e ANM). Os arts. 3º a 6º trazem a autonomia, o poder normativo e a motivação."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Dirigentes: o STF mudou de posição",
+       "html": "Até 2014 o STF aceitava que lei estadual exigisse aprovação prévia da Assembleia para o Governador nomear dirigentes de autarquias (ADI 2.225). Em 2020, na ADI 2.167, passou a considerar <b>inconstitucional</b> norma estadual que exija arguição e aprovação prévia da Assembleia para nomear dirigentes de autarquias e fundações, presidentes de sociedades de economia mista, interventores, o Defensor-Geral e o <b>Procurador-Geral do Estado</b>. Ressalva: membros de agências reguladoras, que no modelo federal passam pelo Legislativo. E lei também não pode exigir aprovação legislativa prévia para <b>exonerar</b> dirigente (ADI 1.949)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 2.167/RR, red. p/ o acórdão Min. Alexandre de Moraes, 3/6/2020 (Info 980)",
+       "tese": "É inconstitucional norma de Constituição Estadual que exija prévia arguição e aprovação da Assembleia Legislativa para que o Governador nomeie dirigentes de autarquias e fundações públicas, presidentes de empresas de economia mista, interventores de Municípios e os titulares da Defensoria Pública e da Procuradoria-Geral do Estado."
+      }
+     ]
+    },
+    {
+     "titulo": "Conselhos profissionais e a OAB",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Os conselhos de fiscalização de profissões (CREA, CRM, COREN e outros) têm <b>natureza autárquica</b>, mas com peculiaridades: não entram no orçamento da União, então seus pagamentos judiciais <b>não seguem precatório</b> (STF, RE 938.837), e <b>não são isentos de custas</b> (Lei 9.289/1996, art. 4º, parágrafo único)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 647.885, Tema 732 da repercussão geral (Info 978)",
+       "tese": "É inconstitucional a suspensão do exercício profissional pelo conselho por inadimplência de anuidades, porque é sanção política em matéria tributária."
+      },
+      {
+       "t": "texto",
+       "html": "A <b>OAB</b> é diferente: para o STF, é serviço público independente, categoria ímpar, que <b>não integra a administração indireta</b> e não se sujeita ao controle da Administração."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 1.182.189/BA, repercussão geral, 25/4/2023 (Info 1.091)",
+       "tese": "O Conselho Federal e os Conselhos Seccionais da OAB não estão obrigados a prestar contas ao Tribunal de Contas da União nem a qualquer outra entidade externa."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 595.332/PR (Info 837)",
+       "tese": "Compete à Justiça Federal julgar as ações em que a OAB, pelo Conselho Federal ou seccional, figure na relação processual."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"A autarquia adquire personalidade jurídica com o registro de seus atos constitutivos.\"",
+       "html": "Errado. Nasce com a vigência da lei. Registro é para as entidades de direito privado."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Toda autarquia sob regime especial é agência reguladora.\"",
+       "html": "Errado. Regime especial é qualquer particularidade legal; agência reguladora é só uma das espécies."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A agência executiva é uma nova espécie de entidade da administração indireta.",
+         "v": false,
+         "porque": "É só uma qualificação dada a autarquia ou fundação que firma contrato de desempenho."
+        },
+        {
+         "texto": "Autarquias estaduais gozam de prazo em dobro e de intimação pessoal.",
+         "v": true,
+         "porque": "CPC, art. 183: União, Estados, DF, Municípios e suas autarquias e fundações de direito público."
+        },
+        {
+         "texto": "A imunidade recíproca das autarquias dispensa também o cumprimento de obrigações acessórias.",
+         "v": false,
+         "porque": "Alcança impostos, não obrigações acessórias (STF, ACO 1.098)."
+        },
+        {
+         "texto": "Os conselhos de fiscalização profissional pagam seus débitos judiciais por precatório.",
+         "v": false,
+         "porque": "Não se submetem ao regime de precatórios (STF, RE 938.837)."
+        },
+        {
+         "texto": "Lei estadual pode exigir aprovação da Assembleia para a nomeação do Procurador-Geral do Estado.",
+         "v": false,
+         "porque": "Inconstitucional desde a ADI 2.167 (2020)."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-07",
+    "adm-cad-08"
+   ]
   },
   {
    "id": "B2-a06",
