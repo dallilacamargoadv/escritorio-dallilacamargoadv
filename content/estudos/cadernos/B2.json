@@ -1180,7 +1180,200 @@
    "topico_id": "B2-02",
    "numero": 6,
    "titulo": "Fundações públicas",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Administração Pública (2026)",
+   "resumo": [
+    "Fundação pública é patrimônio público personalizado, destinado a uma finalidade de interesse social.",
+    "Pode ter personalidade de direito público (criada por lei, é espécie de autarquia: a fundação autárquica) ou de direito privado (lei autoriza, nasce com o registro).",
+    "Quem decide é o estatuto e a atividade (STF, Tema 545): atividade econômica ou delegável admite regime privado.",
+    "A de direito privado tem regime híbrido: sem poder normativo, sem privilégios processuais da Fazenda, sem execução fiscal e, em regra, sem bens públicos. Pode ser celetista.",
+    "O MP não \"vela\" por fundação pública (CC, art. 66 é para fundação privada). A estabilidade do art. 19 do ADCT só alcança fundação de direito público."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem a fundação pública",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "No direito civil, fundação é um <b>patrimônio personalizado</b>: alguém separa bens e dá a eles uma finalidade, e a lei transforma esse conjunto em pessoa. A fundação <b>pública</b> é a mesma ideia com patrimônio do Estado (total ou parcial), voltada a <b>atividades de interesse social</b>. Exemplos do material: FUNAI, IBGE, FUNASA, CNPq e ENAP."
+      },
+      {
+       "t": "texto",
+       "html": "O conflito começa aqui: a Constituição dá às fundações públicas vários privilégios típicos de pessoa de direito público, o que levou a doutrina a vê-las como públicas. Mas, desde a EC 19/1998, o art. 37, XIX, manda que a fundação seja <b>autorizada</b> por lei, que é o mecanismo de criação de pessoa <b>privada</b>."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, XIX",
+       "texto": "XIX - somente por lei específica poderá ser criada autarquia e ==autorizada a instituição== de empresa pública, de sociedade de economia mista e ==de fundação==, ==cabendo à lei complementar, neste último caso, definir as áreas de sua atuação==;"
+      }
+     ]
+    },
+    {
+     "titulo": "As duas fundações possíveis",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A orientação predominante resolve o conflito assim: o ente instituidor <b>escolhe</b>. Se a lei <b>cria</b> a fundação com personalidade de direito público, ela é uma <b>espécie de autarquia</b>, a fundação autárquica ou autarquia fundacional, com regime idêntico ao da autarquia. Se a lei <b>autoriza</b>, nasce uma fundação de direito privado com o registro dos atos constitutivos."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Autarquia",
+         "sub": "serviço público personificado",
+         "verso": "Em regra, atividade típica de Estado.",
+         "detalhe": "Regime de direito público."
+        },
+        {
+         "frente": "Fundação autárquica",
+         "sub": "patrimônio personificado",
+         "verso": "Patrimônio destinado a uma finalidade de interesse social.",
+         "detalhe": "Mesmo regime da autarquia: a diferença é só conceitual."
+        }
+       ]
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 716.378/SP, Tema 545 da repercussão geral (Info 946)",
+       "tese": "A qualificação de uma fundação instituída pelo Estado como sujeita ao regime público ou privado depende do estatuto de sua criação ou autorização e das atividades por ela prestadas. As atividades de conteúdo econômico e as passíveis de delegação, quando definidas como objetos de dada fundação, ainda que instituída ou mantida pelo poder público, podem se submeter ao regime jurídico de direito privado."
+      },
+      {
+       "t": "texto",
+       "html": "A lei complementar do inciso XIX, que definiria as áreas de atuação, <b>nunca foi editada</b>. Enquanto isso, o DL 200/1967, art. 5º, IV, diz que as fundações públicas servem a atividades que não exijam execução por órgãos ou entidades de direito público."
+      }
+     ]
+    },
+    {
+     "titulo": "O regime da fundação de direito privado",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A fundação pública de direito privado tem regime <b>híbrido</b>: em parte privado, em parte público. Muitas regras constitucionais falam em \"autarquias e fundações\" juntas, e por isso a FCC gosta de testar o que <b>não</b> se estende a ela. Abra cada carta."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Nascimento",
+         "titulo": "Registro",
+         "texto": "Só adquire personalidade com a inscrição dos atos constitutivos no registro competente."
+        },
+        {
+         "tag": "Poder normativo",
+         "titulo": "Não tem",
+         "texto": "Não edita atos gerais e abstratos que obriguem particulares."
+        },
+        {
+         "tag": "Bens",
+         "titulo": "Em regra, privados",
+         "texto": "Em regra, seus bens não são classificados como bens públicos."
+        },
+        {
+         "tag": "Em juízo",
+         "titulo": "Sem os privilégios da Fazenda",
+         "texto": "Não tem prazo em dobro nem os demais privilégios processuais da Fazenda, nem execução fiscal da Lei 6.830/1980, e não pode ser sujeito ativo tributário."
+        },
+        {
+         "tag": "Precatório",
+         "titulo": "Exceção",
+         "texto": "Se presta serviço público essencial, em regime não concorrencial e sem intuito lucrativo primário, paga por precatório (STF, ADPF 547/PA, 2021)."
+        },
+        {
+         "tag": "Pessoal",
+         "titulo": "Pode ser celetista",
+         "texto": "É constitucional lei estadual que adota o regime da CLT nas fundações públicas de direito privado de saúde (STF, ADI 4.247/RJ, Info 997)."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Foro:</b> fundação de direito público federal litiga na Justiça Federal; estadual ou municipal, na Estadual. A de direito privado, na Justiça Estadual comum."
+      }
+     ]
+    },
+    {
+     "titulo": "Duas exceções que caem muito",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "Código Civil, art. 66",
+       "texto": "Art. 66. ==Velará pelas fundações o Ministério Público== do Estado onde situadas."
+      },
+      {
+       "t": "texto",
+       "html": "Para a doutrina majoritária, essa curadoria do MP vale só para fundações <b>instituídas por particulares</b>. Sobre as fundações públicas, de qualquer espécie, o MP exerce apenas o controle comum, quando houver indícios de irregularidade."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 716.378/SP, Tema 545 (Info 946)",
+       "tese": "A expressão \"fundações públicas\" do art. 19 do ADCT (estabilidade excepcional) abrange só as fundações autárquicas, de direito público. Não alcança os empregados celetistas das fundações públicas de direito privado."
+      },
+      {
+       "t": "leia",
+       "ref": "ADCT, art. 19",
+       "motivo": "É a estabilidade dos servidores com 5 anos de serviço contínuo na promulgação da Constituição. A FCC pergunta a quem ela se aplica."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Fundação pública de direito privado goza de prazo em dobro, como as autarquias.\"",
+       "html": "Errado. O art. 183 do CPC fala em autarquias e fundações <b>de direito público</b>."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Cabe ao Ministério Público velar pelas fundações públicas.\"",
+       "html": "Errado. O art. 66 do CC alcança as fundações privadas, instituídas por particulares."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A fundação pública de direito público é espécie do gênero autarquia.",
+         "v": true,
+         "porque": "É a fundação autárquica, com regime idêntico ao da autarquia."
+        },
+        {
+         "texto": "A fundação pública de direito privado adquire personalidade com a vigência da lei autorizadora.",
+         "v": false,
+         "porque": "Só com o registro dos atos constitutivos."
+        },
+        {
+         "texto": "A lei complementar que define as áreas de atuação das fundações já foi editada.",
+         "v": false,
+         "porque": "Ainda não foi editada."
+        },
+        {
+         "texto": "Fundação pública de direito privado que presta serviço público essencial, sem concorrência e sem fim lucrativo primário, paga por precatório.",
+         "v": true,
+         "porque": "STF, ADPF 547/PA (2021)."
+        },
+        {
+         "texto": "Empregado celetista de fundação pública de direito privado tem a estabilidade do art. 19 do ADCT.",
+         "v": false,
+         "porque": "A estabilidade alcança só as fundações autárquicas (Tema 545)."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-09",
+    "adm-cad-10"
+   ]
   },
   {
    "id": "B2-a07",
