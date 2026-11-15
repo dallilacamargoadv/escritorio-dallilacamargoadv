@@ -7,7 +7,9 @@
   "CF, texto vigente no Planalto",
   "Leis 11.107/2005, 9.637/1998, 9.790/1999 e 13.019/2014, texto vigente no Planalto",
   "Material EBEJI: Princípios Fundamentais da Administração Pública (2026)",
-  "Material EBEJI: Deveres e Poderes Administrativos (2026)"
+  "Material EBEJI: Deveres e Poderes Administrativos (2026)",
+  "Material EBEJI: Atos Administrativos (2026)",
+  "Material EBEJI: O Processo Administrativo Federal (2026)"
  ],
  "banca": {
   "titulo": "O que a FCC cobra em Administrativo",
@@ -3048,14 +3050,828 @@
    "topico_id": "B2-04",
    "numero": 11,
    "titulo": "Atos administrativos",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Atos Administrativos (2026); Lei 9.784/1999, arts. 22, 50, 55, 61 e 64, e LINDB, art. 28 (textos vigentes, conferidos em 15/11/2026)",
+   "resumo": [
+    "Ato administrativo é a manifestação unilateral de vontade da Administração, sob regime de direito público, que produz efeitos jurídicos. Tem cinco elementos: competência, finalidade, forma, motivo e objeto.",
+    "Competência, finalidade e forma são sempre vinculadas. No ato discricionário, motivo e objeto formam o mérito, que o Judiciário não revê (só anula por ilegalidade).",
+    "Atributos: presunção de legitimidade (em todos), imperatividade e autoexecutoriedade (só em alguns) e tipicidade. Motivação é parte da forma; pela teoria dos motivos determinantes, o motivo declarado vincula.",
+    "Extinção: anulação (vício, efeito ex tunc, Administração ou Judiciário), revogação (ato válido inconveniente, ex nunc, só a Administração), cassação, caducidade e contraposição.",
+    "Convalidação (Lei 9.784, art. 55): só vícios sanáveis de competência quanto à pessoa (não exclusiva) e de forma (não essencial), sem lesão ao interesse público nem prejuízo a terceiros."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: a vontade da Administração com regime próprio",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Nem tudo o que a Administração faz é ato administrativo. Quando ela aluga um imóvel como qualquer locatário, pratica <b>ato privado</b>. Quando um servidor dirige um carro oficial ou uma ponte desaba, há <b>fato administrativo</b>: um acontecimento material, sem manifestação de vontade.<br><br>O <b>ato administrativo</b> é a manifestação de vontade da Administração, ou de quem lhe faça as vezes, sob <b>regime de direito público</b>, que cria, modifica, extingue ou declara situações jurídicas. É por estar sob esse regime que ele ganha atributos que o ato privado não tem."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Classificação",
+        "O que é",
+        "Exemplo"
+       ],
+       "linhas": [
+        [
+         "Simples",
+         "Uma só manifestação de um órgão (singular ou colegiado)",
+         "Exoneração de comissionado; acórdão do CARF"
+        ],
+        [
+         "Complexo",
+         "Vontades de dois ou mais órgãos se fundem num único ato",
+         "Portaria conjunta de ministérios; concessão de aposentadoria (para o STF)"
+        ],
+        [
+         "Composto",
+         "Um ato principal e outro acessório que o aprova ou dá eficácia",
+         "Nomeação do PGR, que depende de aprovação do Senado"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Complexo não é procedimento",
+       "html": "No <b>procedimento</b>, cada ato da série está pronto e pode ser impugnado sozinho. No ato <b>complexo</b>, há um só ato, que só fica perfeito quando todas as vontades se somam; antes disso, nem pode ser atacado."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Perfeito",
+         "sub": "existência",
+         "texto": "Concluiu todas as etapas de formação. Ato imperfeito ainda não existe, então não é válido nem inválido."
+        },
+        {
+         "titulo": "Válido",
+         "sub": "validade",
+         "texto": "Conforme a lei e os princípios em todos os elementos. Um ato pode ser perfeito e inválido."
+        },
+        {
+         "titulo": "Eficaz",
+         "sub": "eficácia",
+         "texto": "Disponível para produzir efeitos. O pendente é perfeito, mas aguarda termo ou condição."
+        },
+        {
+         "titulo": "Consumado",
+         "sub": "exaurido",
+         "texto": "Já produziu todos os efeitos que podia. Ex.: autorização para uma passeata já realizada."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Quanto aos vícios: o ato <b>nulo</b> tem vício insanável; o <b>anulável</b>, vício sanável, que admite convalidação; o <b>inexistente</b> só aparenta ser ato da Administração, porque foi praticado por usurpador de função. No ato inexistente nenhum efeito se mantém, nem para terceiros de boa-fé, e não há prazo para declará-lo."
+      }
+     ]
+    },
+    {
+     "titulo": "Os elementos e os atributos",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A doutrina extrai os cinco elementos do art. 2º da Lei da Ação Popular (Lei 4.717/1965). Macete: <b>COFIFOMOB</b>, de COmpetência, FInalidade, FOrma, MOtivo e OBjeto. Abra cada carta para ver o elemento e o vício correspondente."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Sempre vinculado",
+         "titulo": "Competência",
+         "texto": "Poder legal para praticar o ato. É obrigatória, irrenunciável, intransferível (a delegação passa só o exercício), imodificável pela vontade do agente e imprescritível. <b>Vício:</b> excesso de poder. Se a competência não for exclusiva, o vício quanto à <b>pessoa</b> é sanável; quanto à <b>matéria</b>, não."
+        },
+        {
+         "tag": "Sempre vinculado",
+         "titulo": "Finalidade",
+         "texto": "Geral (o interesse público) e específica (o resultado que a lei fixou para aquele ato). <b>Vício:</b> desvio de finalidade, sempre insanável. Ex.: remover servidor de ofício para puni-lo, mesmo que ele mereça punição."
+        },
+        {
+         "tag": "Vinculado, em regra",
+         "titulo": "Forma",
+         "texto": "Modo de exteriorizar o ato: em regra escrito, mas há gestos, apitos e placas. A <b>motivação</b> integra a forma. <b>Vício:</b> sanável, salvo se a lei exigir a forma como essencial."
+        },
+        {
+         "tag": "Mérito no discricionário",
+         "titulo": "Motivo",
+         "texto": "Pressuposto de fato e de direito que leva ao ato. <b>Vício:</b> motivo inexistente (o fato não aconteceu) ou ilegítimo (o fato existe, mas foi mal enquadrado na lei). Havendo dois motivos e só um falso, o ato se mantém pelo outro."
+        },
+        {
+         "tag": "Mérito no discricionário",
+         "titulo": "Objeto",
+         "texto": "O efeito jurídico imediato: o próprio conteúdo do ato (a licença, a demissão). <b>Vício:</b> objeto impossível, proibido, sem previsão legal (suspensão de 120 dias onde a lei limita a 90) ou diferente do previsto (permissão em vez de autorização)."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Mérito = motivo + objeto",
+       "html": "Ato vinculado: os cinco elementos vêm prontos na lei. Ato discricionário: <b>motivo e objeto</b> formam o <b>mérito</b>. O Judiciário pode <b>anular</b> por ilegalidade, inclusive por falta de razoabilidade e proporcionalidade nesses elementos, mas <b>nunca revoga</b> ato de outro Poder."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 22, caput e § 1º",
+       "texto": "Art. 22. Os atos do processo administrativo ==não dependem de forma determinada senão quando a lei expressamente a exigir==.\n§ 1o Os atos do processo devem ser produzidos ==por escrito==, em vernáculo, com a data e o local de sua realização e a assinatura da autoridade responsável."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Motivo × motivação.</b> Motivo é o fato que leva ao ato (elemento próprio). Motivação é a <b>declaração escrita</b> desse motivo (parte da forma). Todo ato tem motivo; nem todo ato precisa de motivação: a nomeação e a exoneração de cargo em comissão dispensam. Quando a motivação é obrigatória, faltar é vício de forma e o ato é nulo."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 50",
+       "texto": "Art. 50. Os atos administrativos deverão ser motivados, ==com indicação dos fatos e dos fundamentos jurídicos==, quando:\nI - neguem, limitem ou afetem direitos ou interesses;\nII - imponham ou agravem deveres, encargos ou sanções;\nIII - decidam processos administrativos de concurso ou seleção pública;\nIV - dispensem ou declarem a inexigibilidade de processo licitatório;\nV - decidam recursos administrativos;\nVI - decorram de reexame de ofício;\nVII - deixem de aplicar jurisprudência firmada sobre a questão ou discrepem de pareceres, laudos, propostas e relatórios oficiais;\nVIII - importem anulação, revogação, suspensão ou convalidação de ato administrativo.\n§ 1o A motivação deve ser ==explícita, clara e congruente==, podendo consistir em ==declaração de concordância com fundamentos de anteriores pareceres==, informações, decisões ou propostas, que, neste caso, serão parte integrante do ato."
+      },
+      {
+       "t": "texto",
+       "html": "O § 1º consagra a <b>motivação aliunde</b> (ou <i>per relationem</i>): o ato adota como fundamento um parecer ou uma informação anterior, que passa a integrá-lo."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Teoria dos motivos determinantes",
+       "html": "Se o agente declarou um motivo, fica preso a ele, mesmo num ato que dispensava motivação. Ex.: exoneração de comissionado com a justificativa de \"inassiduidade\". Se o servidor provar que era assíduo, o ato é anulado, porque o motivo declarado é falso."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Presunção de legitimidade",
+         "sub": "em todos os atos",
+         "verso": "O ato se presume legal e verdadeiro até prova em contrário. A presunção é relativa e o ônus é de quem alega o vício.",
+         "detalhe": "Por isso, salvo disposição legal, o recurso administrativo não tem efeito suspensivo (Lei 9.784, art. 61)."
+        },
+        {
+         "frente": "Imperatividade",
+         "sub": "só em alguns",
+         "verso": "Impõe obrigações ao particular sem o consentimento dele (poder extroverso).",
+         "detalhe": "Não existe em certidão pedida pelo interessado nem em atos negociais."
+        },
+        {
+         "frente": "Autoexecutoriedade",
+         "sub": "só em alguns",
+         "verso": "Execução material imediata, sem ordem judicial prévia. Existe quando a lei prevê ou em urgência.",
+         "detalhe": "A cobrança forçada da multa não é autoexecutória (exige execução fiscal); desconto da multa contratual na garantia é exceção."
+        },
+        {
+         "frente": "Tipicidade",
+         "sub": "Di Pietro",
+         "verso": "Para cada finalidade há um ato típico definido em lei.",
+         "detalhe": "Vale para atos unilaterais; contratos admitem figuras inominadas."
+        }
+       ]
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Espécie",
+        "Para que serve",
+        "Exemplos"
+       ],
+       "linhas": [
+        [
+         "Normativos",
+         "Comandos gerais e abstratos",
+         "Decretos, regulamentos, resoluções, instruções normativas"
+        ],
+        [
+         "Ordinatórios",
+         "Organizar o funcionamento interno",
+         "Portarias, ordens de serviço, circulares"
+        ],
+        [
+         "Negociais",
+         "Atender a interesse do particular, com anuência da Administração",
+         "Licença (vinculada, definitiva), autorização e permissão (discricionárias, precárias)"
+        ],
+        [
+         "Enunciativos",
+         "Atestar ou opinar, sem efeito decisório próprio",
+         "Certidão, atestado, parecer, apostila"
+        ],
+        [
+         "Punitivos",
+         "Sancionar",
+         "Multa, interdição, demissão"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 28",
+       "texto": "Art. 28. O agente público ==responderá pessoalmente== por suas decisões ou opiniões técnicas em caso de ==dolo ou erro grosseiro==."
+      },
+      {
+       "t": "texto",
+       "html": "O parecer, por si só, não produz efeitos: depende de um ato decisório que o adote. Mas quem o assina responde pessoalmente se agir com dolo ou erro grosseiro (art. 28 da LINDB)."
+      }
+     ]
+    },
+    {
+     "titulo": "Extinção, convalidação e conversão",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Anulação",
+        "Revogação",
+        "Convalidação"
+       ],
+       "linhas": [
+        [
+         "Recai sobre",
+         "Ato ilegal",
+         "Ato válido que ficou inconveniente",
+         "Ato com vício sanável"
+        ],
+        [
+         "Efeitos",
+         "Ex tunc (retroage), preservados os terceiros de boa-fé",
+         "Ex nunc (para frente), respeitados os direitos adquiridos",
+         "Ex tunc (corrige o passado)"
+        ],
+        [
+         "Quem faz",
+         "Administração (de ofício ou provocada) e Judiciário (provocado)",
+         "Só a Administração que praticou o ato",
+         "Só a Administração"
+        ],
+        [
+         "Atos alcançados",
+         "Vinculados e discricionários",
+         "Só discricionários",
+         "Vinculados e discricionários"
+        ],
+        [
+         "Natureza",
+         "Vinculada, se o vício é insanável",
+         "Discricionária",
+         "Discricionária (art. 55: \"poderão\")"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Defesa antes de anular",
+       "html": "Se a anulação afeta interesses do administrado, o contraditório deve vir <b>antes</b> da decisão, não só no recurso (STF, RE 594.296, Pleno, repercussão geral, 21/9/2011, Info 641). A Lei 9.784 segue a mesma linha no recurso:"
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 64",
+       "texto": "Art. 64. O órgão competente para decidir o recurso poderá ==confirmar, modificar, anular ou revogar==, total ou parcialmente, a decisão recorrida, se a matéria for de sua competência.\nParágrafo único. Se da aplicação do disposto neste artigo puder decorrer ==gravame== à situação do recorrente, este deverá ser cientificado para que formule suas alegações ==antes da decisão==."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 633",
+       "tese": "A Lei nº 9.784/99, especialmente no que diz respeito ao prazo decadencial para a revisão de atos administrativos no âmbito da Administração Pública federal, pode ser aplicada, de forma subsidiária, aos estados e municípios, se inexistente norma local e específica que regule a matéria."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "1ª Turma, AgInt no AREsp 1.761.417/RS, 20/6/2022 (Info 750)",
+       "tese": "Nas hipóteses em que não haja exercício do controle de legalidade por Tribunal de Contas, o prazo decadencial quinquenal previsto no art. 54 da Lei nº 9.784/99 transcorre a partir da edição do ato pela Administração."
+      },
+      {
+       "t": "texto",
+       "html": "<b>O que não se revoga.</b> Revogar é julgar conveniência, e algumas situações não admitem esse juízo:"
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "Ato consumado pode ser revogado.",
+         "v": false,
+         "porque": "Já exauriu os efeitos, e a revogação só opera para frente."
+        },
+        {
+         "texto": "Ato vinculado pode ser revogado.",
+         "v": false,
+         "porque": "Não há juízo de conveniência. Se o beneficiário descumpre requisitos, o caso é de cassação."
+        },
+        {
+         "texto": "Ato que gerou direito adquirido pode ser revogado.",
+         "v": false,
+         "porque": "CF, art. 5º, XXXVI."
+        },
+        {
+         "texto": "A autoridade pode revogar o próprio ato depois que o recurso subiu à autoridade superior.",
+         "v": false,
+         "porque": "Já não é mais da sua competência."
+        },
+        {
+         "texto": "Certidões, atestados e pareceres não são revogáveis.",
+         "v": true,
+         "porque": "Declaratórios não mudam a realidade; opinativos não produzem efeitos sozinhos."
+        },
+        {
+         "texto": "Ato complexo pode ser revogado por um só dos órgãos que o editaram.",
+         "v": false,
+         "porque": "Por simetria, exige ato conjunto dos mesmos órgãos (STJ, 1ª Seção, MS 14.731/DF, 14/12/2016, Info 597)."
+        }
+       ]
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Culpa do beneficiário",
+         "titulo": "Cassação",
+         "texto": "O beneficiário deixa de cumprir os requisitos para manter o ato. Ex.: cassação da licença para construir."
+        },
+        {
+         "tag": "Lei nova",
+         "titulo": "Caducidade",
+         "texto": "Norma posterior impede a situação antes consentida. Ex.: lei proíbe o uso do bem objeto de permissão."
+        },
+        {
+         "tag": "Ato oposto",
+         "titulo": "Contraposição",
+         "texto": "Ato com base em outra competência, de efeitos opostos, extingue o primeiro. Ex.: a exoneração extingue a nomeação."
+        },
+        {
+         "tag": "Sem vontade",
+         "titulo": "Extinção natural, subjetiva e objetiva",
+         "texto": "Fim do prazo; morte do beneficiário (porte de arma); desaparecimento do objeto (imóvel interditado que se desfaz)."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 55",
+       "texto": "Art. 55. Em decisão na qual se evidencie ==não acarretarem lesão ao interesse público nem prejuízo a terceiros==, os atos que apresentarem ==defeitos sanáveis== ==poderão ser convalidados== pela própria Administração."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "FOCO no que se convalida",
+       "html": "Só se convalidam vícios de <b>FO</b>rma (se a lei não a exigir como essencial) e de <b>CO</b>mpetência quanto à pessoa (se não for exclusiva). Finalidade, motivo e objeto viciados não se convalidam. O art. 55 adotou a teoria <b>dualista</b> (atos nulos e anuláveis). Di Pietro e Celso Antônio veem a convalidação como vinculada; a letra da lei diz \"poderão\"."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Conversão.</b> Aproveita um ato nulo transformando-o, com efeito retroativo, em ato válido de <b>outra espécie</b>, cujos requisitos estavam presentes. Ex.: a permissão de uso viciada vira autorização de uso. É rara na prática e aparece sobretudo em vício de objeto."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "1ª Turma, MS 29.323/DF e outros, red. p/ acórdão Min. Alexandre de Moraes, 12/2/2019 (Info 930)",
+       "tese": "É inconstitucional o provimento de pessoas para exercerem a função de titular de serventias judiciais, com caráter privado, após a CF/88. O prazo do art. 54 não protege ato que afronta diretamente a Constituição."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "<b>Motivo</b> é o fato; <b>motivação</b> é a declaração (forma).<br><b>Imperatividade</b> e <b>autoexecutoriedade</b> não estão em todos os atos; a <b>presunção de legitimidade</b> está.<br>Anulação <b>ex tunc</b>; revogação <b>ex nunc</b>; convalidação <b>ex tunc</b>.<br>O Judiciário <b>anula</b>, nunca <b>revoga</b> ato de outro Poder.<br>Convalida-se competência quanto à <b>pessoa</b>, nunca quanto à <b>matéria</b> ou exclusiva.<br>Desvio de finalidade é sempre <b>insanável</b>."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A exoneração de servidor ocupante de cargo em comissão, quando motivada, fica vinculada aos motivos declarados.",
+         "v": true,
+         "porque": "Teoria dos motivos determinantes."
+        },
+        {
+         "texto": "A imperatividade é atributo presente em todos os atos administrativos.",
+         "v": false,
+         "porque": "Só nos que impõem obrigações; não há em certidão a pedido."
+        },
+        {
+         "texto": "O ato com vício de finalidade pode ser convalidado, se não houver prejuízo a terceiros.",
+         "v": false,
+         "porque": "Desvio de finalidade é vício insanável."
+        },
+        {
+         "texto": "A revogação produz efeitos retroativos e pode ser feita pelo Judiciário no controle de legalidade.",
+         "v": false,
+         "porque": "Efeitos ex nunc e privativa da Administração que editou o ato."
+        },
+        {
+         "texto": "No ato composto, há um ato principal e outro acessório que o aprova ou lhe dá eficácia.",
+         "v": true,
+         "porque": "Ex.: nomeação que depende de aprovação do Senado."
+        },
+        {
+         "texto": "Salvo disposição legal em contrário, o recurso administrativo não tem efeito suspensivo.",
+         "v": true,
+         "porque": "Lei 9.784, art. 61, reflexo da presunção de legitimidade."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-19",
+    "adm-cad-20"
+   ]
   },
   {
    "id": "B2-a12",
    "topico_id": "B2-11",
    "numero": 12,
    "titulo": "Processo administrativo (Lei 9.784)",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: O Processo Administrativo Federal, Lei 9.784/1999 (2026); Lei 9.784/1999 (texto vigente, conferido em 15/11/2026)",
+   "resumo": [
+    "A Lei 9.784/1999 rege o processo administrativo federal, inclusive no Legislativo e no Judiciário da União em função administrativa. Não é lei nacional, e é subsidiária a leis de processos específicos (art. 69). Pela Súmula 633 do STJ, estados e municípios sem lei própria podem usá-la.",
+    "Princípios próprios: oficialidade (impulso de ofício), informalismo a favor do administrado, gratuidade e verdade material. Advogado é facultativo (SV 5).",
+    "Impedimento (art. 18) obriga o servidor a se afastar e comunicar; suspeição (art. 20) é amizade íntima ou inimizade notória e depende de arguição do interessado.",
+    "Prazos-chave: 5 dias para atos sem prazo; intimação com 3 dias úteis; 10 dias para alegações finais; 15 dias para parecer; 30 dias para decidir; 10 dias para recorrer; 30 dias para julgar o recurso.",
+    "Recurso: legalidade e mérito, até 3 instâncias, sem caução (SV 21), em regra sem efeito suspensivo. No recurso pode haver agravamento, com aviso prévio; na revisão (art. 65), nunca."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: processualizar a Administração",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Antes de decidir algo que atinge alguém, a Administração percorre um caminho com regras: ouve o interessado, colhe provas, motiva. Esse caminho é o <b>processo administrativo</b>, e ele serve a dois senhores ao mesmo tempo: protege o administrado e melhora a decisão do Estado."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, arts. 1º, caput e § 1º, e 69",
+       "texto": "Art. 1o Esta Lei estabelece normas básicas sobre o processo administrativo no âmbito da Administração Federal direta e indireta, visando, em especial, à ==proteção dos direitos dos administrados== e ao ==melhor cumprimento dos fins da Administração==.\n§ 1o Os preceitos desta Lei também se aplicam aos órgãos dos ==Poderes Legislativo e Judiciário da União==, quando no desempenho de função administrativa.\nArt. 69. Os processos administrativos específicos continuarão a reger-se por lei própria, aplicando-se-lhes apenas ==subsidiariamente== os preceitos desta Lei."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Federal, não nacional",
+       "html": "A Lei 9.784 <b>não obriga</b> estados, DF e municípios. Mas, se o ente não tiver norma própria, a jurisprudência admite aplicá-la subsidiariamente (Súmula 633 do STJ, sobretudo para o prazo decadencial do art. 54). E nos processos com lei específica, como o PAD da Lei 8.112, ela só entra para cobrir lacunas."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Oficialidade",
+         "sub": "impulso oficial",
+         "verso": "A Administração toca o processo de ofício e produz provas, sem depender do interessado.",
+         "detalhe": "Art. 2º, parágrafo único, XII, e art. 29."
+        },
+        {
+         "frente": "Informalismo",
+         "sub": "a favor do administrado",
+         "verso": "Formas simples, sem exigência de forma determinada salvo previsão legal.",
+         "detalhe": "Firma reconhecida só se houver dúvida de autenticidade (art. 22, § 2º)."
+        },
+        {
+         "frente": "Gratuidade",
+         "sub": "sem custas",
+         "verso": "Proibida a cobrança de despesas processuais, salvo as previstas em lei.",
+         "detalhe": "Art. 2º, parágrafo único, XI."
+        },
+        {
+         "frente": "Verdade material",
+         "sub": "o que de fato ocorreu",
+         "verso": "A Administração busca a realidade, aceita provas até a decisão e pode rever de ofício o ato ilegal.",
+         "detalhe": "Arts. 3º, III, e 63, § 2º."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 2º, parágrafo único, IX a XII",
+       "texto": "IX - adoção de formas simples, suficientes para propiciar adequado grau de certeza, segurança e respeito aos direitos dos administrados;\nX - garantia dos direitos à comunicação, à apresentação de alegações finais, à produção de provas e à interposição de recursos, ==nos processos de que possam resultar sanções e nas situações de litígio==;\nXI - proibição de cobrança de despesas processuais, ressalvadas as previstas em lei;\nXII - impulsão, de ofício, do processo administrativo, sem prejuízo da atuação dos interessados;"
+      },
+      {
+       "t": "leia",
+       "ref": "Lei 9.784/1999, arts. 3º e 4º",
+       "motivo": "Direitos (ciência e vista, alegações antes da decisão, advogado facultativo) e deveres do administrado (verdade, lealdade, não agir de modo temerário, colaborar). São listas exemplificativas."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula Vinculante 5",
+       "tese": "A falta de defesa técnica por advogado no processo administrativo disciplinar não ofende a Constituição."
+      }
+     ]
+    },
+    {
+     "titulo": "Como o processo anda: do início à decisão",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Início",
+         "sub": "ofício ou pedido"
+        },
+        {
+         "titulo": "Instrução",
+         "sub": "provas"
+        },
+        {
+         "titulo": "Alegações",
+         "sub": "10 dias"
+        },
+        {
+         "titulo": "Decisão",
+         "sub": "30 dias"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Começa <b>de ofício ou a pedido</b> (art. 5º). O requerimento é escrito, salvo se admitida a forma oral, e a Administração <b>não pode recusar documentos sem motivo</b>: deve orientar o interessado a corrigir falhas (art. 6º, parágrafo único). Pedidos idênticos de vários interessados podem vir num só requerimento (art. 8º)."
+        },
+        {
+         "no": 1,
+         "texto": "A instrução corre <b>de ofício</b>, mas cabe ao interessado provar o que alegou (art. 36). Provas só podem ser recusadas, com fundamentação, se <b>ilícitas, impertinentes, desnecessárias ou protelatórias</b> (art. 38, § 2º). Se o documento estiver em órgão público, a própria Administração o obtém (art. 37)."
+        },
+        {
+         "no": 2,
+         "texto": "Encerrada a instrução, o interessado tem <b>até 10 dias</b> para se manifestar (art. 44). Se o órgão de instrução não for o que decide, faz relatório com proposta de decisão (art. 47)."
+        },
+        {
+         "no": 3,
+         "texto": "A Administração tem o <b>dever de decidir</b> (art. 48), em <b>até 30 dias</b>, prorrogáveis por igual período com motivação expressa (art. 49)."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, arts. 38, § 2º, 48 e 49",
+       "texto": "§ 2o Somente poderão ser recusadas, mediante decisão fundamentada, as provas propostas pelos interessados quando sejam ==ilícitas, impertinentes, desnecessárias ou protelatórias==.\nArt. 48. A Administração tem o ==dever de explicitamente emitir decisão== nos processos administrativos e sobre solicitações ou reclamações, em matéria de sua competência.\nArt. 49. Concluída a instrução de processo administrativo, a Administração tem o prazo de ==até trinta dias== para decidir, salvo ==prorrogação por igual período expressamente motivada==."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Impedimento (arts. 18 e 19)",
+        "Suspeição (arts. 20 e 21)"
+       ],
+       "linhas": [
+        [
+         "Hipóteses",
+         "Interesse direto ou indireto; atuação como perito, testemunha ou representante (dele ou de cônjuge, companheiro, parente até 3º grau); litígio com o interessado ou seu cônjuge",
+         "Amizade íntima ou inimizade notória com interessado, cônjuge, companheiro, parentes e afins até o 3º grau"
+        ],
+        [
+         "Quem age",
+         "O próprio servidor deve comunicar e se abster",
+         "O interessado pode arguir"
+        ],
+        [
+         "Se omitir",
+         "Falta grave, para efeitos disciplinares",
+         "Não arguida a tempo, preclui"
+        ],
+        [
+         "Recurso",
+         "Não há regra própria",
+         "Do indeferimento cabe recurso sem efeito suspensivo"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, arts. 18 a 21",
+       "texto": "Art. 18. ==É impedido== de atuar em processo administrativo o servidor ou autoridade que:\nI - tenha interesse direto ou indireto na matéria;\nII - tenha participado ou venha a participar como perito, testemunha ou representante, ou se tais situações ocorrem quanto ao cônjuge, companheiro ou parente e afins até o terceiro grau;\nIII - esteja litigando judicial ou administrativamente com o interessado ou respectivo cônjuge ou companheiro.\nArt. 19. A autoridade ou servidor que incorrer em impedimento ==deve comunicar== o fato à autoridade competente, ==abstendo-se de atuar==.\nParágrafo único. A omissão do dever de comunicar o impedimento constitui ==falta grave==, para efeitos disciplinares.\nArt. 20. ==Pode ser argüida== a suspeição de autoridade ou servidor que tenha ==amizade íntima ou inimizade notória== com algum dos interessados ou com os respectivos cônjuges, companheiros, parentes e afins até o terceiro grau.\nArt. 21. O indeferimento de alegação de suspeição poderá ser objeto de recurso, ==sem efeito suspensivo==."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Intimação.</b> Comunica decisões e diligências, com antecedência mínima de <b>3 dias úteis</b> para comparecimento. Se o interessado não atende, isso <b>não</b> equivale a confissão nem a renúncia."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, arts. 26, §§ 2º a 5º, e 27",
+       "texto": "§ 2o A intimação observará a antecedência mínima de ==três dias úteis== quanto à data de comparecimento.\n§ 3o A intimação pode ser efetuada por ciência no processo, por via postal com aviso de recebimento, por telegrama ou outro meio que assegure a certeza da ciência do interessado.\n§ 4o No caso de interessados ==indeterminados, desconhecidos ou com domicílio indefinido==, a intimação deve ser efetuada por meio de ==publicação oficial==.\n§ 5o As intimações serão nulas quando feitas sem observância das prescrições legais, mas ==o comparecimento do administrado supre sua falta ou irregularidade==.\nArt. 27. O desatendimento da intimação ==não importa o reconhecimento da verdade dos fatos==, ==nem a renúncia a direito== pelo administrado."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "1ª Seção, MS 27.227/DF, Rel. Min. Sérgio Kukina, 27/1/2021 (Info 716)",
+       "tese": "Em processo administrativo, a notificação por edital reserva-se exclusivamente para as hipóteses de interessado indeterminado, desconhecido ou com domicílio indefinido."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 42, §§ 1º e 2º",
+       "texto": "Art. 42. Quando deva ser obrigatoriamente ouvido um órgão consultivo, o parecer deverá ser emitido no prazo máximo de ==quinze dias==, salvo norma especial ou comprovada necessidade de maior prazo.\n§ 1o Se um parecer obrigatório e vinculante deixar de ser emitido no prazo fixado, ==o processo não terá seguimento== até a respectiva apresentação, responsabilizando-se quem der causa ao atraso.\n§ 2o Se um parecer obrigatório e não vinculante deixar de ser emitido no prazo fixado, o processo ==poderá ter prosseguimento== e ser decidido com sua dispensa, sem prejuízo da responsabilidade de quem se omitiu no atendimento."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Prazo",
+        "Para quê",
+        "Artigo"
+       ],
+       "linhas": [
+        [
+         "5 dias",
+         "Atos sem prazo específico (dilatável até o dobro)",
+         "24"
+        ],
+        [
+         "3 dias úteis",
+         "Antecedência da intimação para comparecer ou para prova",
+         "26, § 2º, e 41"
+        ],
+        [
+         "15 dias",
+         "Parecer de órgão consultivo obrigatório",
+         "42"
+        ],
+        [
+         "10 dias",
+         "Manifestação após a instrução",
+         "44"
+        ],
+        [
+         "30 dias (+30)",
+         "Decidir após a instrução",
+         "49"
+        ],
+        [
+         "10 dias",
+         "Interpor recurso",
+         "59"
+        ],
+        [
+         "5 dias",
+         "Autoridade reconsiderar antes de encaminhar o recurso",
+         "56, § 1º"
+        ],
+        [
+         "5 dias úteis",
+         "Demais interessados apresentarem alegações no recurso",
+         "62"
+        ],
+        [
+         "30 dias (+30)",
+         "Julgar o recurso",
+         "59, §§ 1º e 2º"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Recursos, revisão e o fim do processo",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, arts. 56, 57 e 59",
+       "texto": "Art. 56. Das decisões administrativas cabe recurso, em face de ==razões de legalidade e de mérito==.\n§ 1o O recurso será dirigido à ==autoridade que proferiu a decisão==, a qual, se não a reconsiderar no prazo de ==cinco dias==, o encaminhará à autoridade superior.\n§ 2o Salvo exigência legal, a interposição de recurso administrativo ==independe de caução==.\nArt. 57. O recurso administrativo tramitará no máximo por ==três instâncias== administrativas, salvo disposição legal diversa.\nArt. 59. Salvo disposição legal específica, é de ==dez dias== o prazo para interposição de recurso administrativo, contado a partir da ciência ou divulgação oficial da decisão recorrida.\n§ 1o Quando a lei não fixar prazo diferente, o recurso administrativo deverá ser decidido no prazo máximo de ==trinta dias==, a partir do recebimento dos autos pelo órgão competente."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula Vinculante 21",
+       "tese": "É inconstitucional a exigência de depósito ou arrolamento prévios de dinheiro ou bens para admissibilidade de recurso administrativo."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Prazo impróprio",
+       "html": "O prazo de 30 dias para julgar o recurso é <b>impróprio</b>: descumpri-lo não anula a decisão, só gera responsabilidade de quem atrasou. Já o prazo de 10 dias para <b>recorrer</b> é preclusivo: recurso fora do prazo não é conhecido."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, arts. 61 e 63",
+       "texto": "Art. 61. Salvo disposição legal em contrário, o recurso ==não tem efeito suspensivo==.\nParágrafo único. Havendo justo receio de prejuízo de difícil ou incerta reparação decorrente da execução, a autoridade recorrida ou a imediatamente superior poderá, ==de ofício ou a pedido==, ==dar efeito suspensivo== ao recurso.\nArt. 63. O recurso ==não será conhecido== quando interposto:\nI - fora do prazo;\nII - perante órgão incompetente;\nIII - por quem não seja legitimado;\nIV - após exaurida a esfera administrativa.\n§ 1o Na hipótese do inciso II, será indicada ao recorrente a autoridade competente, sendo-lhe ==devolvido o prazo para recurso==.\n§ 2o O não conhecimento do recurso não impede a Administração de ==rever de ofício o ato ilegal==, desde que não ocorrida ==preclusão administrativa==."
+      },
+      {
+       "t": "leia",
+       "ref": "Lei 9.784/1999, art. 58",
+       "motivo": "Quem pode recorrer: partes, terceiros indiretamente afetados, associações (coletivos) e cidadãos ou associações (difusos)."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Art. 56, § 1º",
+         "titulo": "Reconsideração",
+         "texto": "O recurso entra pela autoridade que decidiu. Ela tem <b>5 dias</b> para reconsiderar; se não reconsiderar, encaminha ao superior. Se o recorrente alegar violação de súmula vinculante, ela precisa explicar por que a súmula se aplica ou não (art. 56, § 3º)."
+        },
+        {
+         "tag": "Art. 64",
+         "titulo": "Recurso: pode piorar",
+         "texto": "O órgão pode confirmar, modificar, anular ou revogar a decisão. Pode haver <b>reformatio in pejus</b>, desde que o recorrente seja cientificado <b>antes</b> para se manifestar (art. 64, parágrafo único)."
+        },
+        {
+         "tag": "Art. 65",
+         "titulo": "Revisão: nunca piora",
+         "texto": "Processo que resultou em <b>sanção</b> pode ser revisto <b>a qualquer tempo</b>, de ofício ou a pedido, diante de fatos novos ou circunstâncias relevantes. Da revisão <b>não pode</b> resultar agravamento."
+        },
+        {
+         "tag": "Art. 64-B",
+         "titulo": "Reclamação ao STF",
+         "texto": "Esgotada a via administrativa, cabe reclamação ao STF por violação de súmula vinculante. Acolhida, as autoridades devem ajustar decisões futuras, sob pena de responsabilização pessoal."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, arts. 64, parágrafo único, e 65",
+       "texto": "Parágrafo único. Se da aplicação do disposto neste artigo puder decorrer ==gravame== à situação do recorrente, este deverá ser cientificado para que formule suas alegações ==antes da decisão==.\nArt. 65. Os processos administrativos de que resultem sanções poderão ser revistos, ==a qualquer tempo==, a pedido ou de ofício, quando surgirem ==fatos novos ou circunstâncias relevantes== suscetíveis de justificar a inadequação da sanção aplicada.\nParágrafo único. Da revisão do processo ==não poderá resultar agravamento da sanção==."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, arts. 51, § 2º, e 52",
+       "texto": "§ 2o A desistência ou renúncia do interessado, conforme o caso, ==não prejudica o prosseguimento do processo==, se a Administração considerar que o interesse público assim o exige.\nArt. 52. O órgão competente poderá declarar extinto o processo quando exaurida sua finalidade ou o objeto da decisão se tornar ==impossível, inútil ou prejudicado por fato superveniente==."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Decisão coordenada</b> (arts. 49-A a 49-G, Lei 14.210/2021). Quando uma decisão federal exige <b>3 ou mais</b> setores, órgãos ou entidades, ela pode ser tomada em conjunto, se a matéria for relevante e houver discordância que atrase o processo. Não exclui a responsabilidade de cada órgão."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 49-A, § 6º",
+       "texto": "§ 6º Não se aplica a decisão coordenada aos processos administrativos:\nI - de licitação;\nII - relacionados ao poder sancionador; ou.\nIII - em que estejam envolvidas autoridades de Poderes distintos."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, arts. 66 e 67",
+       "texto": "Art. 66. Os prazos começam a correr a partir da data da cientificação oficial, ==excluindo-se da contagem o dia do começo== e ==incluindo-se o do vencimento==.\n§ 2o Os prazos expressos em dias ==contam-se de modo contínuo==.\nArt. 67. Salvo motivo de força maior devidamente comprovado, os prazos processuais ==não se suspendem==."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Dias corridos",
+       "html": "Na Lei 9.784, os prazos em dias são <b>contínuos</b> (corridos), diferente do CPC. Só alguns falam em <b>dias úteis</b>: a antecedência da intimação (3 dias úteis) e as alegações dos demais interessados no recurso (5 dias úteis)."
+      },
+      {
+       "t": "leia",
+       "ref": "Lei 9.784/1999, art. 69-A",
+       "motivo": "Prioridade de tramitação: pessoa com 60 anos ou mais, pessoa com deficiência e portadores das doenças graves listadas. O interessado requer e prova a condição; os autos ganham identificação própria."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "Impedimento: o servidor <b>deve</b> comunicar. Suspeição: o interessado <b>pode</b> arguir.<br>Recurso: até <b>três instâncias</b>, prazo de <b>10 dias</b>, <b>sem caução</b>, em regra <b>sem efeito suspensivo</b>.<br>Recurso pode agravar (com ciência prévia); revisão <b>nunca</b> agrava.<br>Recurso a órgão incompetente: não é conhecido, mas o prazo é <b>devolvido</b>.<br>A desistência do interessado não impede a Administração de prosseguir.<br>Prazos em dias são <b>contínuos</b>."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A Lei 9.784/1999 é de observância obrigatória por estados e municípios.",
+         "v": false,
+         "porque": "É lei federal; aplica-se a outros entes só subsidiariamente, sem lei local (Súmula 633 do STJ)."
+        },
+        {
+         "texto": "Pode ser arguida a suspeição de servidor que tenha amizade íntima com o interessado.",
+         "v": true,
+         "porque": "Art. 20."
+        },
+        {
+         "texto": "O recurso interposto perante órgão incompetente será conhecido e encaminhado ao órgão competente.",
+         "v": false,
+         "porque": "Não é conhecido; indica-se a autoridade competente e devolve-se o prazo (art. 63, § 1º)."
+        },
+        {
+         "texto": "Da revisão de processo de que resultou sanção pode resultar agravamento, desde que assegurado o contraditório.",
+         "v": false,
+         "porque": "Art. 65, parágrafo único: nunca agrava."
+        },
+        {
+         "texto": "O não atendimento da intimação importa reconhecimento da verdade dos fatos.",
+         "v": false,
+         "porque": "Art. 27."
+        },
+        {
+         "texto": "Concluída a instrução, a Administração tem até 30 dias para decidir, prorrogáveis por igual período com motivação expressa.",
+         "v": true,
+         "porque": "Art. 49."
+        },
+        {
+         "texto": "A decisão coordenada pode ser usada em processos de licitação.",
+         "v": false,
+         "porque": "Art. 49-A, § 6º, I."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-21",
+    "adm-cad-22"
+   ]
   },
   {
    "id": "B2-a13",
@@ -3228,6 +4044,46 @@
   [
    "Excesso de poder",
    "Abuso de poder em que o agente atua além dos limites da sua competência."
+  ],
+  [
+   "Ato complexo",
+   "Ato único formado pela fusão de vontades de dois ou mais órgãos."
+  ],
+  [
+   "Ato composto",
+   "Ato principal cuja edição ou eficácia depende de outro ato, acessório, que o aprova."
+  ],
+  [
+   "Teoria dos motivos determinantes",
+   "O motivo declarado vincula a validade do ato, mesmo quando a motivação era dispensável."
+  ],
+  [
+   "Motivação aliunde",
+   "Motivação que adota fundamentos de parecer ou decisão anterior, que passam a integrar o ato (Lei 9.784, art. 50, § 1º)."
+  ],
+  [
+   "Convalidação",
+   "Correção, com efeito retroativo, de ato com vício sanável (Lei 9.784, art. 55)."
+  ],
+  [
+   "Cassação",
+   "Extinção do ato porque o beneficiário deixou de cumprir os requisitos para mantê-lo."
+  ],
+  [
+   "Oficialidade",
+   "Princípio pelo qual a Administração impulsiona o processo e produz provas de ofício."
+  ],
+  [
+   "Verdade material",
+   "Princípio pelo qual o processo administrativo busca a realidade dos fatos, não só o que as partes provaram."
+  ],
+  [
+   "Reformatio in pejus",
+   "Agravamento da situação do recorrente; admitido no recurso administrativo com ciência prévia, vedado na revisão."
+  ],
+  [
+   "Decisão coordenada",
+   "Decisão federal tomada em conjunto por 3 ou mais órgãos ou entidades (Lei 9.784, art. 49-A)."
   ]
  ]
 }
