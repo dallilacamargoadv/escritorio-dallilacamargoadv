@@ -16,7 +16,8 @@
   "Material EBEJI: Serviços Públicos (2026)",
   "Lei 8.987/1995, trechos vigentes no Planalto",
   "Leis 8.987/1995 e 11.079/2004, trechos vigentes no Planalto",
-  "Material EBEJI: Servidores Públicos, disposições constitucionais (2026)"
+  "Material EBEJI: Servidores Públicos, disposições constitucionais (2026)",
+  "Material EBEJI: Responsabilidade Civil Extracontratual do Estado (2026)"
  ],
  "banca": {
   "titulo": "O que a FCC cobra em Administrativo",
@@ -5958,9 +5959,364 @@
   {
    "id": "B2-a17",
    "topico_id": "B2-09",
-   "numero": 19,
    "titulo": "Responsabilidade civil do Estado",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Responsabilidade Civil Extracontratual do Estado (2026); CF, arts. 5º, XLIX e LXXV, e 37, §§ 5º e 6º; Decreto 20.910/1932, art. 1º (textos vigentes, conferidos em 15/11/2026)",
+   "resumo": [
+    "O Brasil adota a teoria do risco administrativo (CF, art. 37, § 6º): pessoas de direito público e privadas prestadoras de serviço público respondem objetivamente pelos danos que seus agentes, nessa qualidade, causarem a terceiros, usuários ou não.",
+    "Basta conduta, dano e nexo causal (teoria da causalidade direta e imediata). O Estado se exime provando culpa exclusiva da vítima, fato exclusivo de terceiro ou caso fortuito e força maior; culpa concorrente só reduz. No risco integral (dano nuclear, dano ambiental) não há excludentes.",
+    "Ato lícito também gera indenização se o dano for anormal e específico. Omissão: subjetiva (culpa do serviço) na omissão genérica; objetiva na omissão específica, quando havia dever legal de agir (preso sob custódia, Tema 592).",
+    "Dupla garantia (Tema 940): a vítima processa a pessoa jurídica, nunca o agente diretamente; o Estado cobra do agente em regresso, se houver dolo ou culpa.",
+    "Prescrição contra a Fazenda: 5 anos. Ressarcimento ao erário: prescreve no ilícito civil (Tema 666) e não prescreve só no ato doloso de improbidade (Tema 897)."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: da irresponsabilidade ao risco administrativo",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O Estado age para todos, mas às vezes o dano cai sobre um só. Se uma obra pública, uma viatura ou um plano econômico prejudica alguém de forma especial, não é justo que essa pessoa pague sozinha pelo que beneficia a coletividade. A <b>repartição igualitária dos ônus</b> (isonomia) faz o erário, que é de todos, indenizar."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Irresponsabilidade",
+         "sub": "absolutismo",
+         "texto": "\"O rei não erra\" (the king can do no wrong). O Brasil <b>nunca</b> adotou essa fase."
+        },
+        {
+         "titulo": "Teorias civilistas",
+         "sub": "subjetiva",
+         "texto": "Primeiro, distinção entre atos de império (sem responsabilidade) e de gestão; depois, culpa civil: a vítima prova dolo ou culpa do agente (base no CC de 1916)."
+        },
+        {
+         "titulo": "Culpa do serviço",
+         "sub": "faute du service",
+         "texto": "Transição: a vítima prova que o serviço não funcionou, funcionou mal ou tarde (culpa anônima), sem precisar individualizar o agente."
+        },
+        {
+         "titulo": "Risco administrativo",
+         "sub": "objetiva, adotada",
+         "texto": "Basta conduta, dano e nexo; o Estado pode provar excludentes. Prevista no Brasil desde a Constituição de 1946; hoje no art. 37, § 6º."
+        },
+        {
+         "titulo": "Risco integral",
+         "sub": "exceção",
+         "texto": "Sem excludentes. Danos nucleares (art. 21, XXIII, d), danos ambientais e atentados terroristas contra aeronaves brasileiras."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, § 6º",
+       "texto": "§ 6º As pessoas jurídicas de direito público e as de ==direito privado prestadoras de serviços públicos== responderão pelos danos que seus agentes, ==nessa qualidade==, causarem a ==terceiros==, assegurado o ==direito de regresso contra o responsável nos casos de dolo ou culpa==."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Quem responde objetivamente.</b> A direta, autarquias e fundações; empresas estatais e fundações privadas que <b>prestem serviço público</b>; concessionárias, permissionárias e autorizatárias. Estatais que exploram <b>atividade econômica</b> ficam fora: seguem o regime privado."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 591.874, Rel. Min. Ricardo Lewandowski, 26/8/2009, repercussão geral",
+       "tese": "A responsabilidade civil das pessoas jurídicas de direito privado prestadoras de serviço público é objetiva relativamente a terceiros usuários e não-usuários do serviço, segundo decorre do art. 37, § 6º, da Constituição Federal."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Terceiro\" é qualquer um",
+       "html": "O STF não distingue: o Estado responde mesmo quando a vítima é um servidor público (AI 473.381 AgR). E responde pelo funcionário <b>de fato</b> ou pelo agente que se aproveita da qualidade de agente para causar o dano."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 842.846/RJ, Rel. Min. Luiz Fux, 27/2/2019, repercussão geral (Info 932)",
+       "tese": "O Estado responde, objetivamente, pelos atos dos tabeliães e registradores oficiais que, no exercício de suas funções, causem dano a terceiros, assentado o dever de regresso contra o responsável, nos casos de dolo ou culpa, sob pena de improbidade administrativa."
+      }
+     ]
+    },
+    {
+     "titulo": "Os elementos, as excludentes e a ação",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Conduta",
+         "sub": "do agente, nessa qualidade",
+         "verso": "Ação de agente público ou de delegatário no exercício da função, ou aproveitando-se dela.",
+         "detalhe": "Vale até para o funcionário de fato."
+        },
+        {
+         "frente": "Dano",
+         "sub": "jurídico",
+         "verso": "Lesão a bem protegido pelo direito: material, moral ou estético.",
+         "detalhe": "Se vem de ato <b>lícito</b>, só é indenizável se for <b>anormal e específico</b>; o dano genérico é risco social, que todos suportam."
+        },
+        {
+         "frente": "Nexo causal",
+         "sub": "causalidade direta",
+         "verso": "Causa é o fato ligado direta e imediatamente ao dano (teoria adotada pelo STF).",
+         "detalhe": "Ex.: latrocínio cometido por fugitivo meses depois da fuga não gera responsabilidade (RE 369.820)."
+        }
+       ]
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 571.969/DF, Rel. Min. Cármen Lúcia, 12/3/2014 (Info 738)",
+       "tese": "A União deve indenizar companhia aérea concessionária pelos prejuízos causados por plano econômico que congelou as tarifas de aviação: responsabilidade por ato lícito, com dano anormal e específico."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Excludente",
+        "Efeito",
+        "Observação"
+       ],
+       "linhas": [
+        [
+         "Culpa exclusiva da vítima",
+         "Exclui",
+         "Se a culpa for <b>concorrente</b>, a indenização só é reduzida"
+        ],
+        [
+         "Fato exclusivo de terceiro",
+         "Exclui",
+         "Súmula 187 do STF: no transporte de passageiros, culpa de terceiro não exclui"
+        ],
+        [
+         "Caso fortuito e força maior",
+         "Exclui",
+         "Se o evento, sozinho, causou o dano"
+        ],
+        [
+         "Ônus da prova",
+         "Do Estado",
+         "Ex.: vítima de bala em operação policial; cabe ao Estado provar que rompeu o nexo (ARE 1.382.159 AgR, Info 1089)"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Dupla garantia.</b> A vítima tem a garantia de cobrar da pessoa jurídica, sem provar culpa; o agente tem a garantia de só responder perante a pessoa jurídica a que serve, e só se tiver agido com dolo ou culpa."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 1.027.633/SP, Rel. Min. Marco Aurélio, 14/8/2019, repercussão geral, Tema 940 (Info 947)",
+       "tese": "A teor do disposto no art. 37, § 6º, da Constituição Federal, a ação por danos causados por agente público deve ser ajuizada contra o Estado ou a pessoa jurídica de direito privado prestadora de serviço público, sendo parte ilegítima para a ação o autor do ato, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "O STJ pensava diferente",
+       "html": "O STJ chegou a admitir ação direta contra o agente, contra o Estado ou contra ambos (REsp 1.325.862). Prevalece o Tema 940 do STF. Também <b>não</b> é obrigatória a denunciação da lide ao agente (STJ, AgInt no AREsp 1.150.351)."
+      },
+      {
+       "t": "lei",
+       "ref": "Decreto 20.910/1932, art. 1º",
+       "texto": "Art. 1º As dívidas passivas da União, dos Estados e dos Municípios, bem assim todo e qualquer direito ou ação contra a Fazenda federal, estadual ou municipal, seja qual for a sua natureza, ==prescrevem em cinco anos== contados da ==data do ato ou fato do qual se originarem==."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 2.418/DF, Rel. Min. Teori Zavascki, 4/5/2016 (Info 824)",
+       "tese": "A fixação do prazo prescricional de 5 anos para os pedidos de indenização por danos causados por agentes de pessoas jurídicas de direito público e de pessoas jurídicas de direito privado prestadoras de serviços públicos, constante do art. 1º-C da Lei 9.494/97, é constitucional."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Quando começa a contar",
+       "html": "Em regra, do ato ou fato (actio nata: quando constatada a lesão e seus efeitos). Se o dano decorre de crime de agente estatal, conta do trânsito em julgado da ação penal; arquivado o inquérito, da data do arquivamento (STJ, REsp 1.443.038, Info 556). Tortura no regime militar: imprescritível (STJ, REsp 1.374.376)."
+      }
+     ]
+    },
+    {
+     "titulo": "Omissão, atos legislativos e judiciais, regresso",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Omissão específica",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Dever legal de agir",
+           "sub": "Estado garante"
+          },
+          {
+           "titulo": "Responsabilidade objetiva",
+           "sub": "art. 37, § 6º"
+          }
+         ],
+         "texto": "O Estado estava na posição de <b>garante</b> e tinha o dever específico de impedir o dano. Ex.: morte de preso, aluno acidentado na escola, paciente internado sem os exames prescritos. Posição atual do STF (RE 841.526)."
+        },
+        {
+         "rotulo": "Omissão genérica",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Dever geral",
+           "sub": "falta do serviço"
+          },
+          {
+           "titulo": "Responsabilidade subjetiva",
+           "sub": "culpa anônima"
+          }
+         ],
+         "texto": "Não havia dever individualizado; a vítima prova que o serviço não funcionou, funcionou mal ou tarde. Ex.: enchente por falta de manutenção das galerias, bueiro aberto há muito tempo. Celso Antônio defende que toda omissão é subjetiva."
+        }
+       ]
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 841.526/RS, Rel. Min. Luiz Fux, 30/3/2016, repercussão geral (Info 819)",
+       "tese": "Em caso de inobservância do seu dever específico de proteção previsto no art. 5º, XLIX, da Constituição Federal, o Estado é responsável pela morte de detento. Se o Estado provar causa impeditiva da sua atuação protetiva (morte que ocorreria mesmo em liberdade), rompe-se o nexo causal."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, XLIX e LXXV",
+       "texto": "XLIX - é assegurado aos presos o respeito à integridade física e moral;\nLXXV - o Estado indenizará o condenado por ==erro judiciário==, assim como o que ficar preso ==além do tempo fixado na sentença==;"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 580.252/MS, red. p/ acórdão Min. Gilmar Mendes, 16/2/2017, repercussão geral (Info 854)",
+       "tese": "Considerando que é dever do Estado, imposto pelo sistema normativo, manter em seus presídios os padrões mínimos de humanidade previstos no ordenamento jurídico, é de sua responsabilidade, nos termos do art. 37, § 6º, da Constituição, a obrigação de ressarcir os danos, inclusive morais, comprovadamente causados aos detentos em decorrência da falta ou insuficiência das condições legais de encarceramento."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Tema 366",
+         "titulo": "Fogos de artifício",
+         "texto": "Para responsabilizar o Estado por explosão em comércio de fogos, é preciso violação de dever específico: licença concedida sem as cautelas legais ou irregularidade conhecida pelo Poder Público. Mero pedido de licença não basta (RE 136.861, Info 969)."
+        },
+        {
+         "tag": "Tema 1055",
+         "titulo": "Jornalista ferido",
+         "texto": "É objetiva a responsabilidade do Estado por jornalista ferido por policiais em manifestação; exclui-se por culpa exclusiva se ele descumpriu advertência clara sobre área de risco (RE 1.209.429, Info 1021)."
+        },
+        {
+         "tag": "Obra pública",
+         "titulo": "Só fato da obra × má execução",
+         "texto": "Dano pelo simples fato da obra (localização, duração): responsabilidade objetiva do Estado, quem quer que execute. Dano por má execução de empreiteira contratada: o contratado responde (Lei 14.133, art. 120), e o Estado, subsidiariamente."
+        },
+        {
+         "tag": "Atos legislativos",
+         "titulo": "Lei gera indenização?",
+         "texto": "Lei geral e constitucional não gera indenização. Exceções: lei declarada inconstitucional em controle concentrado que cause dano específico, lei de efeitos concretos e omissão legislativa após constituída a mora."
+        },
+        {
+         "tag": "Atos judiciais",
+         "titulo": "Sentença gera indenização?",
+         "texto": "Salvo erro judiciário e prisão além do tempo (art. 5º, LXXV). Prisão preventiva seguida de absolvição não é erro judiciário (RE 429.518 AgR). Atos administrativos do Judiciário seguem o § 6º normalmente."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, § 5º",
+       "texto": "§ 5º A lei estabelecerá os prazos de prescrição para ilícitos praticados por qualquer agente, servidor ou não, que causem prejuízos ao erário, ==ressalvadas as respectivas ações de ressarcimento==."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Ressarcimento ao erário",
+        "Prescreve?",
+        "Fonte"
+       ],
+       "linhas": [
+        [
+         "Ilícito civil comum",
+         "Sim",
+         "STF, RE 669.069, Tema 666 (Info 813)"
+        ],
+        [
+         "Ato <b>doloso</b> de improbidade",
+         "Não (imprescritível)",
+         "STF, RE 852.475, Tema 897 (Info 910)"
+        ],
+        [
+         "Fundado em decisão de Tribunal de Contas",
+         "Sim",
+         "STF, RE 636.886, Tema 899"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Ação regressiva",
+       "html": "Só depois do trânsito em julgado da condenação do Estado; exige dolo ou culpa do agente (responsabilidade subjetiva) e passa aos sucessores até o limite da herança. O prazo da regressiva por ilícito civil é discutido: o material EBEJI aponta 3 anos (CC, art. 206, § 3º, V) em precedente do STF e 5 anos (Decreto 20.910) no STJ."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "Risco <b>administrativo</b> admite excludentes; risco <b>integral</b> não.<br>Concessionária responde objetivamente perante <b>usuário e não usuário</b>.<br>Ato <b>lícito</b> indeniza se o dano for anormal e específico.<br>Culpa <b>concorrente</b> reduz, não exclui.<br>A vítima <b>não</b> processa o agente diretamente (Tema 940).<br>Estatal que explora <b>atividade econômica</b> não está no § 6º."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A responsabilidade objetiva da concessionária de transporte coletivo alcança o pedestre atropelado, ainda que não seja usuário do serviço.",
+         "v": true,
+         "porque": "RE 591.874."
+        },
+        {
+         "texto": "A vítima pode escolher processar diretamente o servidor que lhe causou dano no exercício da função.",
+         "v": false,
+         "porque": "Tema 940: o agente é parte ilegítima."
+        },
+        {
+         "texto": "Na teoria do risco administrativo, a culpa exclusiva da vítima afasta a responsabilidade do Estado.",
+         "v": true,
+         "porque": "É excludente do nexo causal."
+        },
+        {
+         "texto": "Danos causados por atos lícitos do Estado nunca geram dever de indenizar.",
+         "v": false,
+         "porque": "Geram, se o dano for anormal e específico (RE 571.969)."
+        },
+        {
+         "texto": "O Estado responde objetivamente pela morte de detento quando descumpre seu dever específico de proteção.",
+         "v": true,
+         "porque": "RE 841.526."
+        },
+        {
+         "texto": "A sociedade de economia mista que explora atividade econômica responde com base no art. 37, § 6º.",
+         "v": false,
+         "porque": "Só as prestadoras de serviço público."
+        },
+        {
+         "texto": "A pretensão de ressarcimento ao erário por ilícito civil comum é imprescritível.",
+         "v": false,
+         "porque": "Tema 666: prescreve. Imprescritível só o ato doloso de improbidade (Tema 897)."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-35",
+    "adm-cad-36"
+   ],
+   "numero": 19
   },
   {
    "id": "B2-a18",
@@ -6262,6 +6618,26 @@
   [
    "Estabilidade",
    "Garantia do servidor de cargo efetivo, após 3 anos e avaliação especial, de só perder o cargo nas hipóteses do art. 41, § 1º."
+  ],
+  [
+   "Risco administrativo",
+   "Teoria adotada pelo art. 37, § 6º: responsabilidade objetiva do Estado, com excludentes (culpa exclusiva da vítima, fato de terceiro, caso fortuito e força maior)."
+  ],
+  [
+   "Risco integral",
+   "Responsabilidade objetiva sem excludentes; no Brasil, para danos nucleares e ambientais, entre outros."
+  ],
+  [
+   "Culpa do serviço",
+   "Falta do serviço (faute du service): o serviço não funcionou, funcionou mal ou tarde; base da responsabilidade subjetiva por omissão genérica."
+  ],
+  [
+   "Dupla garantia",
+   "A vítima cobra da pessoa jurídica, sem provar culpa; o agente só responde à pessoa jurídica, em regresso, por dolo ou culpa (Tema 940)."
+  ],
+  [
+   "Omissão específica",
+   "Omissão do Estado que tinha dever legal de agir como garante; gera responsabilidade objetiva."
   ]
  ]
 }
