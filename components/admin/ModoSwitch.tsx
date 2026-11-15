@@ -6,6 +6,17 @@ import Link from "next/link";
 export function ModoSwitch({ modo }: { modo: "escritorio" | "estudos" }) {
   const base = "flex-1 py-1.5 text-center text-[11px] transition-colors duration-150";
   const estudos = modo === "estudos";
+  // Nos estudos, o escritório fica escondido atrás de um link discreto.
+  if (estudos) {
+    return (
+      <Link
+        href="/admin"
+        className="block px-1 text-[11px] text-e-dim transition-colors duration-150 hover:text-e-ink"
+      >
+        Ir para o escritório →
+      </Link>
+    );
+  }
   return (
     <nav
       aria-label="Área do painel"

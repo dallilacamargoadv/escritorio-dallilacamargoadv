@@ -2,7 +2,7 @@
   "name": "Painel — Dallila Camargo Advocacia",
   "short_name": "Painel DC",
   "description": "Sistema operacional do escritório Dallila Camargo Advocacia: CRM, casos, contratos, financeiro e notificações.",
-  "start_url": "/admin",
+  "start_url": "/admin/estudos",
   "scope": "/admin",
   "display": "standalone",
   "orientation": "any",

@@ -44,7 +44,7 @@ export async function proxy(request: NextRequest) {
 
   if (user && request.nextUrl.pathname === "/login") {
     const adminUrl = request.nextUrl.clone();
-    adminUrl.pathname = "/admin";
+    adminUrl.pathname = "/admin/estudos";
     return NextResponse.redirect(adminUrl);
   }
 
