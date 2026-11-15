@@ -717,3 +717,5 @@ h4 {
   .sparkle-brilhante path, .sparkle-carregando, .sparkle-flutuante { animation: none; }
 }
 .fonte-lei mark { background: var(--e-accent-soft); color: var(--e-ink); border-bottom: 1px solid var(--e-accent); padding: 0 2px; border-radius: 2px; }
+@keyframes e-surge { from { opacity: 0; transform: translateY(6px) scale(.98); } to { opacity: 1; transform: none; } }
+@keyframes e-cresce { from { transform: scaleX(0); } to { transform: scaleX(1); } }

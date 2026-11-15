@@ -201,3 +201,44 @@ export function proximaMelhorAcao(c: {
     rotulo: "Fazer questões",
   };
 }
+
+export interface ErroCaderno {
+  questao_id: string;
+  tema: string;
+  ref: string;
+  vezes: number;
+  ultimoTipo: Classificacao;
+  ultimaData: string;
+  superado: boolean;
+  notas: string[];
+}
+/**
+ * Caderno de erros de uma matéria: uma linha por questão errada (ou acertada sem firmeza).
+ * "Superado" = a tentativa mais recente foi acerto firme depois de um erro.
+ */
+export function cadernoDeErros(respostas: Resposta[], materiaId: string, questoes: Map<string, Questao>): ErroCaderno[] {
+  const porQ = new Map<string, Resposta[]>();
+  for (const r of respostas) {
+    if (r.materia_id !== materiaId) continue;
+    porQ.set(r.questao_id, [...(porQ.get(r.questao_id) ?? []), r]);
+  }
+  const out: ErroCaderno[] = [];
+  for (const [qid, rs] of porQ) {
+    const falhas = rs.filter((r) => !acertoFirme(r));
+    if (!falhas.length) continue;
+    const ultima = rs[rs.length - 1];
+    const ultimaFalha = falhas[falhas.length - 1];
+    const q = questoes.get(qid);
+    out.push({
+      questao_id: qid,
+      tema: q?.tema ?? ultima.tema ?? "",
+      ref: q?.ref ?? "",
+      vezes: falhas.length,
+      ultimoTipo: ultimaFalha.classificacao,
+      ultimaData: ultima.respondida_em,
+      superado: acertoFirme(ultima),
+      notas: rs.map((r) => r.nota).filter((n): n is string => !!n),
+    });
+  }
+  return out.sort((a, b) => Number(a.superado) - Number(b.superado) || b.vezes - a.vezes);
+}

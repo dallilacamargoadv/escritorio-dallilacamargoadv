@@ -66,6 +66,17 @@ Migrations: `estudos_onda1_edital_cronograma` e `estudos_onda2_respostas_eventos
 - **Progresso do edital**: estudando 35%, precisa revisar 70%, dominado 100%.
 - **Cronograma**: revisão diária (~15% do dia), Português todo dia, Raciocínio Lógico e Informática em dias alternados, cultura do MA no sábado, discursiva no domingo, teoria de 50 min com questões de 25 min na ordem das fases, lei seca a cada 3 dias, sobra vira questões mistas, depois da teoria tudo vira questões e simulados.
 
+## 7b. Cadernos e Banca FCC (etapa 3a, branch `feat/estudos-cadernos`)
+
+- **Cadernos** (`/admin/estudos/cadernos` e `/cadernos/[materia]`): um JSON por matéria em `content/estudos/cadernos/<id>.json`, registrado em `lib/db-estudos-cadernos.ts` (`CADERNOS`). Tipos em `lib/estudos-cadernos.ts`.
+- **Como escrever aula (pedido dela)**: cadeia lógica com início, meio e fim. Cada seção tem `etapa`: `origem` (de onde vem), `regra` (como funciona), `excecao` (exceções e divergências), `banca` (como a FCC cobra). Lei seca literal em bloco `lei` (conferida com o texto vigente por script) ou, se pesado, bloco `leia` ("Leia agora: arts. X a Y"). Material raso ela chama de "fraco".
+- **Blocos** (`components/estudos/CadernoBlocos.tsx`): texto, lei, leia, nota (pegadinha, atenção, macete, hipótese), juris, tabela, matriz, virar (cartas), passos (animação com o sparkle como token), alternar, vf, escada, abrir. Todos respeitam movimento reduzido.
+- **Progresso**: `estudo_aulas`. Marcar aula como estudada leva o tópico do edital ligado a pelo menos "estudando".
+- **Caderno de erros por matéria**: `cadernoDeErros()` em `lib/estudos-desempenho.ts` (uma linha por questão com erro ou acerto sem firmeza; "superado" se a última tentativa foi acerto firme).
+- **Banca FCC** (`/admin/estudos/banca`, tabela `estudo_tec`): dois tipos sempre separados. `incidencia` = quantas questões FCC existem por assunto no filtro do TEC (o que cai mais e menos). `resolucao` = os resultados dela. Colagem aceita "assunto ; questões ; acertos", "x de y" e "%".
+- Gerador do caderno de Administrativo: scratchpad `cad_b2.py` (refazer ali e regravar o JSON). Aulas prontas: B2-a01 a B2-a04 (organização administrativa, base EBEJI "Administração Pública"). 18 aulas marcadas "a montar", uma por tópico do edital. Questões do caderno: `adm-cad-01` a `06` no banco.
+- Migration: `estudos_onda3_cadernos_tec`.
+
 ## 8. Roteiro
 
 1. Etapa 1 (feita): Início, Edital, Cronograma.

@@ -1,0 +1,1022 @@
+{
+ "materia_id": "B2",
+ "titulo": "Administrativo",
+ "subtitulo": "Do Estado à organização da Administração, em cadeia.",
+ "fontes": [
+  "Material EBEJI: Administração Pública (2026)",
+  "CF, texto vigente no Planalto"
+ ],
+ "banca": {
+  "titulo": "O que a FCC cobra em Administrativo",
+  "fonte": "Gran Cursos, \"Quebrando a banca: FCC Direito Administrativo\" (14 provas de TRT, TRE e TJ, 2012 a 2015; 109 questões, 545 assertivas). Dado antigo: use como pista, não como regra.",
+  "stats": [
+   {
+    "valor": "51%",
+    "rotulo": "das assertivas saíram direto da lei ou da Constituição"
+   },
+   {
+    "valor": "49%",
+    "rotulo": "trataram de doutrina (Di Pietro, Carvalho Filho, Moreira Neto)"
+   },
+   {
+    "valor": "0",
+    "rotulo": "questões de jurisprudência recente nesse conjunto antigo"
+   }
+  ],
+  "ranking": [
+   [
+    "Licitações e contratos",
+    24
+   ],
+   [
+    "Atos administrativos",
+    14
+   ],
+   [
+    "Poderes administrativos",
+    12
+   ],
+   [
+    "Servidores (CF, arts. 37 a 41)",
+    11
+   ],
+   [
+    "Organização administrativa",
+    10
+   ],
+   [
+    "Princípios",
+    9
+   ],
+   [
+    "Serviços públicos (Lei 8.987)",
+    6
+   ],
+   [
+    "Improbidade (Lei 8.429)",
+    5
+   ],
+   [
+    "Processo administrativo (Lei 9.784)",
+    4
+   ],
+   [
+    "Responsabilidade civil do Estado",
+    2
+   ]
+  ],
+  "notas": [
+   {
+    "titulo": "Leia com cuidado",
+    "html": "O levantamento é anterior à Lei 14.133/2021 (licitações) e à Lei 14.230/2021 (improbidade). E \"zero jurisprudência\" vale só para aquele conjunto de provas: não dá para concluir que a FCC não cobra jurisprudência hoje. Quando o edital sair, vale o programa dele. Seus próprios dados de incidência, coletados no TEC, ficam na aba Banca FCC."
+   }
+  ]
+ },
+ "aulas": [
+  {
+   "id": "B2-a01",
+   "topico_id": "B2-02",
+   "numero": 1,
+   "titulo": "Estado, função administrativa e Administração Pública",
+   "status": "pronta",
+   "fonte": "Material EBEJI: Administração Pública (2026)",
+   "resumo": [
+    "O Estado tem três Poderes, e cada um exerce uma função típica e as outras duas de forma atípica.",
+    "Administrar é função, não é Poder: os três Poderes administram.",
+    "Administração Pública tem sentido subjetivo (quem administra) e objetivo (a atividade). O Brasil adota o subjetivo, também chamado formal ou orgânico.",
+    "Por isso uma estatal que explora atividade econômica integra a Administração formalmente, mesmo sem exercer função administrativa.",
+    "Entidades políticas (União, Estados, DF e Municípios) legislam; entidades administrativas (indireta) só executam a lei e são vinculadas, não subordinadas."
+   ],
+   "secoes": [
+    {
+     "titulo": "Tudo começa na separação de Poderes",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CF, art. 2º",
+       "texto": "Art. 2º São Poderes da União, ==independentes e harmônicos== entre si, o Legislativo, o Executivo e o Judiciário."
+      },
+      {
+       "t": "texto",
+       "html": "A Constituição divide o poder do Estado em três, mas a divisão não é estanque. Cada Poder tem uma <b>função típica</b>, aquela para a qual existe, e exerce as outras duas de forma <b>atípica</b>, para conseguir funcionar sozinho. É por isso que o Direito Administrativo acompanha a <b>função</b> de administrar, onde quer que ela apareça, e não um Poder específico.<br><br>Toque nas células para ver um exemplo de cada combinação."
+      },
+      {
+       "t": "matriz",
+       "linhas": [
+        "Legislativo",
+        "Executivo",
+        "Judiciário"
+       ],
+       "colunas": [
+        "Legislar",
+        "Administrar",
+        "Julgar"
+       ],
+       "celulas": [
+        [
+         [
+          true,
+          "Função típica: criar leis."
+         ],
+         [
+          false,
+          "Administra os próprios serviços: nomeia servidores, faz licitação."
+         ],
+         [
+          false,
+          "O Senado processa e julga o Presidente nos crimes de responsabilidade (CF, art. 52, I)."
+         ]
+        ],
+        [
+         [
+          false,
+          "Medida provisória, com força de lei (CF, art. 62)."
+         ],
+         [
+          true,
+          "Função típica: aplicar a lei no dia a dia, prestando serviço, fiscalizando e contratando."
+         ],
+         [
+          false,
+          "Julga processo administrativo disciplinar. A decisão pode ser revista pelo Judiciário (CF, art. 5º, XXXV)."
+         ]
+        ],
+        [
+         [
+          false,
+          "Os tribunais elaboram o regimento interno (CF, art. 96, I, a)."
+         ],
+         [
+          false,
+          "Concurso e licitação do próprio tribunal."
+         ],
+         [
+          true,
+          "Função típica: resolver conflitos com definitividade."
+         ]
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"A função administrativa é exclusiva do Poder Executivo.\"",
+       "html": "Errado. Os três Poderes administram. Repare no art. 37, caput: a administração pública direta e indireta <b>de qualquer dos Poderes</b>."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, caput",
+       "texto": "Art. 37. A administração pública direta e indireta ==de qualquer dos Poderes== da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência"
+      }
+     ]
+    },
+    {
+     "titulo": "Os dois sentidos de Administração Pública",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A expressão tem dois usos. No sentido <b>subjetivo</b> (também chamado <b>formal</b> ou <b>orgânico</b>), Administração Pública é <b>quem</b> o ordenamento aponta como tal: os órgãos da administração direta e as entidades da indireta, seja qual for a atividade. No sentido <b>objetivo</b> (<b>material</b> ou <b>funcional</b>), é a própria <b>atividade</b> administrativa: serviço público, polícia administrativa, fomento e intervenção.<br><br>Há ainda a distinção entre sentido <b>amplo</b> (inclui os órgãos de governo e a função política) e sentido <b>estrito</b> (só a função meramente administrativa). Daqui em diante, a matéria usa o sentido estrito."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Quem?",
+         "sub": "Sentido subjetivo, formal ou orgânico",
+         "verso": "Órgãos da administração direta e entidades da indireta (autarquias, fundações, empresas públicas e sociedades de economia mista).",
+         "detalhe": "É o critério adotado no Brasil."
+        },
+        {
+         "frente": "O quê?",
+         "sub": "Sentido objetivo, material ou funcional",
+         "verso": "A atividade: serviço público, polícia administrativa, fomento e intervenção.",
+         "detalhe": "Atuação direta como agente econômico não entra aqui."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Subjetivo = sujeito; objetivo = objeto",
+       "html": "Subjetivo pergunta quem faz. Objetivo pergunta o que se faz."
+      }
+     ]
+    },
+    {
+     "titulo": "A consequência que a FCC adora",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Como o Brasil adota o critério <b>formal</b>, uma empresa pública ou sociedade de economia mista que explora atividade econômica (o exemplo clássico do material é o Banco do Brasil) <b>integra a Administração Pública</b>, embora sua atividade não seja função administrativa em sentido material. Para o critério formal importa quem é, não o que faz."
+      },
+      {
+       "t": "texto",
+       "html": "Outra distinção de base: <b>entidades políticas</b> (União, Estados, DF e Municípios) têm autonomia política, legislam e se auto-organizam. <b>Entidades administrativas</b> (a administração indireta) só executam a lei. Elas não são subordinadas ao ente que as criou: são <b>vinculadas</b>, sob controle de <b>tutela</b> ou <b>supervisão</b>, que verifica se cumprem as finalidades para as quais foram criadas."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"As entidades da administração indireta são subordinadas hierarquicamente ao ente que as criou.\"",
+       "html": "Errado. Há vinculação e controle finalístico (tutela ou supervisão ministerial), nunca hierarquia."
+      }
+     ]
+    },
+    {
+     "titulo": "Teste rápido",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "No Brasil, adota-se o critério material para identificar quem integra a Administração Pública.",
+         "v": false,
+         "porque": "Adota-se o critério formal (subjetivo ou orgânico)."
+        },
+        {
+         "texto": "Uma sociedade de economia mista que explora atividade econômica integra a administração indireta.",
+         "v": true,
+         "porque": "Pelo critério formal, sim, mesmo sem exercer função administrativa em sentido material."
+        },
+        {
+         "texto": "O Poder Judiciário exerce função administrativa atípica ao fazer licitação.",
+         "v": true,
+         "porque": "Administrar é função típica do Executivo e atípica dos demais Poderes."
+        },
+        {
+         "texto": "Entidades administrativas podem editar leis sobre a sua área de atuação.",
+         "v": false,
+         "porque": "Só as entidades políticas legislam. As administrativas executam a lei."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B2-a02",
+   "topico_id": "B2-02",
+   "numero": 2,
+   "titulo": "Centralização, descentralização e desconcentração",
+   "status": "pronta",
+   "fonte": "Material EBEJI: Administração Pública (2026)",
+   "resumo": [
+    "Centralizar é o Estado atuar por conta própria, com seus órgãos e agentes (administração direta).",
+    "Descentralizar é passar a atividade para outra pessoa: por lei (outorga, cria entidade) ou por contrato ou ato (delegação a particular).",
+    "Desconcentrar é repartir competências dentro da mesma pessoa jurídica: nascem os órgãos.",
+    "Descentralização não tem hierarquia (só tutela). Desconcentração tem hierarquia.",
+    "Concentração é o caminho inverso: extinguir órgãos e juntar competências."
+   ],
+   "secoes": [
+    {
+     "titulo": "O problema que essas palavras resolvem",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O Estado precisa executar milhares de tarefas. Ele pode fazer isso <b>ele mesmo</b> ou <b>entregar a outra pessoa</b>. E, quando faz ele mesmo, pode dividir o trabalho internamente. Essas três escolhas têm nome: centralização, descentralização e desconcentração. A banca quase sempre testa a troca de uma palavra pela outra."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Estado",
+         "sub": "faz ele mesmo?"
+        },
+        {
+         "titulo": "Outra pessoa",
+         "sub": "descentraliza"
+        },
+        {
+         "titulo": "Dentro de si",
+         "sub": "desconcentra"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Centralização:</b> o Estado executa a atividade diretamente, por seus órgãos e agentes. É a administração direta."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Descentralização:</b> a atividade sai do Estado e vai para outra pessoa, física ou jurídica, pública ou privada."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Desconcentração:</b> a atividade continua na mesma pessoa jurídica, só é repartida entre órgãos. Pode ocorrer tanto na direta quanto dentro de uma entidade da indireta."
+        },
+        {
+         "no": 1,
+         "texto": "Em <b>nenhuma</b> forma de descentralização há hierarquia: o ente só exerce controle finalístico (tutela ou supervisão)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "As formas de descentralização",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "tabela",
+       "cab": [
+        "Forma",
+        "Como nasce",
+        "O que passa",
+        "Exemplo"
+       ],
+       "linhas": [
+        [
+         "Outorga (por serviços)",
+         "Lei",
+         "A titularidade e a execução do serviço",
+         "Lei cria uma autarquia"
+        ],
+        [
+         "Delegação (por colaboração)",
+         "Contrato ou ato unilateral",
+         "Só a execução",
+         "Concessão e permissão de serviço público"
+        ],
+        [
+         "Territorial (geográfica)",
+         "Lei federal",
+         "Competências amplas e genéricas num território",
+         "Territórios Federais"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "A outorga se apoia no <b>princípio da especialidade</b>: cria-se uma pessoa especializada para desempenhar melhor aquela competência. Os <b>Territórios Federais</b> são chamados de autarquias territoriais, mas são a exceção a esse princípio, porque recebem competências amplas e heterogêneas."
+      },
+      {
+       "t": "texto",
+       "html": "Detalhes que caem: na delegação <b>por contrato</b> há prazo determinado; na delegação <b>por ato unilateral</b> não há, porque o ato é precário. A <b>concessão</b> só pode ser feita a pessoa jurídica (ou consórcio de empresas), enquanto permissão e autorização admitem pessoa física."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Desconcentração",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Uma só pessoa jurídica (ex.: o Estado do Maranhão)",
+           "sub": ""
+          },
+          {
+           "titulo": "Secretaria",
+           "sub": "órgão"
+          },
+          {
+           "titulo": "Procuradoria",
+           "sub": "órgão"
+          },
+          {
+           "titulo": "Departamento",
+           "sub": "órgão"
+          }
+         ],
+         "texto": "A mesma pessoa reparte tarefas internamente. Resultado: <b>órgãos</b>, sem personalidade jurídica e com <b>hierarquia</b> (comando, fiscalização, revisão, punição, delegação e avocação)."
+        },
+        {
+         "rotulo": "Descentralização",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Estado",
+           "sub": "pessoa política"
+          },
+          {
+           "titulo": "Autarquia",
+           "sub": "outra pessoa jurídica"
+          }
+         ],
+         "texto": "A tarefa passa para outra pessoa. Resultado: <b>entidade</b> com personalidade própria, <b>sem hierarquia</b>, só com controle finalístico."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e detalhes de doutrina",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Concentração</b>: o inverso da desconcentração. A pessoa jurídica extingue órgãos e reúne as competências em menos unidades.<br><br>Existe desconcentração <b>dentro da indireta</b> também: uma autarquia grande pode ter seus próprios órgãos internos. Por isso a frase \"desconcentração só ocorre na administração direta\" está errada."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Troca de palavras",
+       "html": "\"A criação de uma autarquia é exemplo de desconcentração.\" Errado: é descentralização por outorga, porque nasce outra pessoa jurídica."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Hierarquia no lugar errado",
+       "html": "\"Na descentralização, o ente exerce controle hierárquico sobre a entidade.\" Errado: o controle é finalístico (tutela). Hierarquia é marca da desconcentração."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A desconcentração pode ocorrer no interior de uma autarquia.",
+         "v": true,
+         "porque": "Desconcentração é repartição interna de competências, e isso acontece também na indireta."
+        },
+        {
+         "texto": "A concessão de serviço público pode ser feita a pessoa física.",
+         "v": false,
+         "porque": "Concessão só para pessoa jurídica ou consórcio de empresas. Permissão e autorização admitem pessoa física."
+        },
+        {
+         "texto": "A descentralização por outorga exige lei.",
+         "v": true,
+         "porque": "A outorga transfere a titularidade do serviço e depende de lei."
+        },
+        {
+         "texto": "Concentração é o mesmo que centralização.",
+         "v": false,
+         "porque": "Centralização é o Estado atuar diretamente. Concentração é extinguir órgãos e juntar competências."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-01",
+    "adm-cad-02"
+   ]
+  },
+  {
+   "id": "B2-a03",
+   "topico_id": "B2-02",
+   "numero": 3,
+   "titulo": "Órgãos públicos",
+   "status": "pronta",
+   "fonte": "Material EBEJI: Administração Pública (2026)",
+   "resumo": [
+    "Órgão é um centro de competências, sem personalidade jurídica, fruto da desconcentração.",
+    "Pela teoria do órgão (adotada no Brasil), o ato do agente é imputado diretamente à pessoa jurídica.",
+    "Classificação pela posição: independentes, autônomos, superiores e subalternos.",
+    "Regra: órgão não vai a juízo. Exceção: órgãos de cúpula defendendo as próprias prerrogativas (personalidade judiciária, Súmula 525 do STJ).",
+    "Criar e extinguir órgão exige lei de iniciativa do Chefe do Executivo. Decreto autônomo não cria nem extingue órgão."
+   ],
+   "secoes": [
+    {
+     "titulo": "Como a vontade de uma pessoa vira vontade do Estado",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O Estado é uma pessoa jurídica: não fala nem assina sozinho. Alguém de carne e osso age por ele. Três teorias tentaram explicar essa relação. A do <b>mandato</b> (o agente seria mandatário) e a da <b>representação</b> (o agente seria como um tutor) falharam, porque deixavam o Estado sem responder quando o agente excedia os poderes. Prevaleceu a <b>teoria do órgão</b>, de Otto Gierke: a atuação do agente é <b>imputada</b> diretamente à pessoa jurídica."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Agente",
+         "sub": "pessoa natural"
+        },
+        {
+         "titulo": "Órgão",
+         "sub": "centro de competências"
+        },
+        {
+         "titulo": "Estado",
+         "sub": "pessoa jurídica"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "O agente público pratica o ato."
+        },
+        {
+         "no": 1,
+         "texto": "O ato é praticado dentro das competências de um órgão, que não tem personalidade jurídica."
+        },
+        {
+         "no": 2,
+         "texto": "Por <b>imputação</b>, o ato é atribuído ao Estado, como se ele mesmo o tivesse praticado. Não há mandato nem representação."
+        },
+        {
+         "no": 2,
+         "texto": "Requisitos: <b>aparência de legitimidade</b> de quem normalmente se presume agente público (teoria da aparência) e <b>boa-fé</b> do destinatário."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Características e criação",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "Órgão tem personalidade jurídica.",
+         "v": false,
+         "porque": "Não tem. Quem tem é a pessoa jurídica que ele integra."
+        },
+        {
+         "texto": "Órgão resulta da desconcentração.",
+         "v": true,
+         "porque": "A repartição interna de competências cria órgãos."
+        },
+        {
+         "texto": "Órgão tem patrimônio próprio.",
+         "v": false,
+         "porque": "Sem personalidade, não há patrimônio próprio."
+        },
+        {
+         "texto": "Órgão pode firmar contrato de desempenho para ampliar sua autonomia (CF, art. 37, § 8º).",
+         "v": true,
+         "porque": "A CF prevê o contrato entre administradores e o poder público, com metas de desempenho."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, § 8º",
+       "texto": "§ 8º A autonomia gerencial, orçamentária e financeira dos ==órgãos e entidades== da administração direta e indireta poderá ser ampliada mediante contrato, a ser firmado entre seus administradores e o poder público, que tenha por objeto a fixação de metas de desempenho para o órgão ou entidade, cabendo à lei dispor sobre:"
+      },
+      {
+       "t": "texto",
+       "html": "A criação e a extinção de órgãos seguem o <b>princípio da organização legal</b>: dependem de <b>lei</b>, de iniciativa privativa do Chefe do Executivo, regra que vale para todos os entes por simetria."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 48, XI, e art. 61, § 1º, II, e",
+       "texto": "XI - ==criação e extinção== de Ministérios e órgãos da administração pública;\ne) criação e extinção de Ministérios e órgãos da administração pública, ==observado o disposto no art. 84, VI==;"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 84, VI",
+       "texto": "VI - dispor, mediante decreto, sobre:\na) organização e funcionamento da administração federal, quando não implicar aumento de despesa ==nem criação ou extinção de órgãos públicos==; b) extinção de funções ou cargos públicos, ==quando vagos==;"
+      }
+     ]
+    },
+    {
+     "titulo": "Classificação: a escada da posição estatal",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Quanto mais alto o degrau, mais livre o órgão. Toque em cada um."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Independentes",
+         "sub": "topo",
+         "texto": "Previstos na própria Constituição, sem subordinação: só os controles recíprocos dos freios e contrapesos. Ex.: Casas Legislativas, Presidência, tribunais, MP e tribunais de contas."
+        },
+        {
+         "titulo": "Autônomos",
+         "sub": "um degrau abaixo",
+         "texto": "Logo abaixo dos independentes, com ampla autonomia administrativa, financeira e técnica. Ex.: Ministérios e secretarias."
+        },
+        {
+         "titulo": "Superiores",
+         "sub": "decidem e obedecem",
+         "texto": "Direção, controle e decisão, mas sujeitos à hierarquia, sem autonomia administrativa nem financeira. Ex.: procuradorias, coordenadorias, gabinetes."
+        },
+        {
+         "titulo": "Subalternos",
+         "sub": "executam",
+         "texto": "Mera execução, com pouco poder decisório. Ex.: seções de expediente, pessoal, material e portaria."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Outras classificações: quanto à <b>estrutura</b>, simples (um só centro de competências) e compostos (outros órgãos dentro, como um ministério); quanto à <b>atuação</b>, singulares (decide um agente só, como a Presidência) e colegiados (decisão conjunta, como os tribunais)."
+      }
+     ]
+    },
+    {
+     "titulo": "A exceção: órgão em juízo",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Regra: como não tem personalidade, o órgão não tem capacidade para estar em juízo; quem vai a juízo é a pessoa jurídica. Exceção aceita pela doutrina e pela jurisprudência: <b>órgãos independentes e autônomos</b> podem impetrar mandado de segurança para defender as <b>próprias prerrogativas</b>. É a chamada <b>personalidade judiciária</b>."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 525",
+       "tese": "A Câmara de Vereadores não possui personalidade jurídica, apenas personalidade judiciária, somente podendo demandar em juízo para defender os seus direitos institucionais."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "1ª Turma, MS 34.483-MC/RJ (Info 848)",
+       "tese": "O Tribunal de Justiça tem legitimidade para impetrar mandado de segurança contra ato do Governador que atrasa o repasse dos duodécimos, em defesa da sua autonomia."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Todo órgão pode impetrar mandado de segurança para defender suas competências.\"",
+       "html": "Errado. Só os órgãos de cúpula (independentes e autônomos), e só para defender prerrogativas institucionais."
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-03",
+    "adm-cad-04"
+   ]
+  },
+  {
+   "id": "B2-a04",
+   "topico_id": "B2-02",
+   "numero": 4,
+   "titulo": "Administração indireta: criação, extinção e subsidiárias",
+   "status": "pronta",
+   "fonte": "Material EBEJI: Administração Pública (2026)",
+   "resumo": [
+    "Lei específica CRIA a autarquia e só AUTORIZA a instituição de empresa pública, sociedade de economia mista e fundação.",
+    "Fundação pode ser de direito público (criada por lei, é espécie de autarquia) ou de direito privado (autorizada por lei). Tema 545 do STF: depende do estatuto e das atividades.",
+    "A lei de iniciativa privativa do Chefe do Executivo, por simetria em todos os entes.",
+    "Subsidiária e participação em empresa privada: autorização legislativa, que pode ser genérica na lei da estatal matriz (ADI 1649).",
+    "Vender o controle da estatal-mãe exige lei e licitação; transferir o controle de subsidiária não exige lei nem licitação formal (ADI 5624)."
+   ],
+   "secoes": [
+    {
+     "titulo": "Por que a lei aparece em cada nascimento",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A indireta nasce da descentralização por outorga: o ente tira uma competência de si e entrega a uma pessoa nova, especializada. Como isso mexe na estrutura do Estado, a Constituição exige <b>lei específica</b>. O detalhe está no verbo: para a autarquia, a lei <b>cria</b>; para as demais, a lei <b>autoriza</b>, e a pessoa só nasce com o registro dos atos constitutivos."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, XIX",
+       "texto": "XIX - somente por lei específica ==poderá ser criada autarquia== e ==autorizada a instituição== de empresa pública, de sociedade de economia mista e de fundação, cabendo à lei complementar, neste último caso, definir as áreas de sua atuação;"
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona para cada entidade",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "tabela",
+       "cab": [
+        "Entidade",
+        "Personalidade",
+        "Lei faz o quê?",
+        "Nasce quando?"
+       ],
+       "linhas": [
+        [
+         "Autarquia",
+         "Direito público",
+         "Cria",
+         "Com a vigência da lei"
+        ],
+        [
+         "Fundação pública de direito público",
+         "Direito público (espécie de autarquia)",
+         "Cria",
+         "Com a vigência da lei"
+        ],
+        [
+         "Fundação pública de direito privado",
+         "Direito privado",
+         "Autoriza",
+         "Com o registro dos atos constitutivos"
+        ],
+        [
+         "Empresa pública",
+         "Direito privado",
+         "Autoriza",
+         "Com o registro"
+        ],
+        [
+         "Sociedade de economia mista",
+         "Direito privado",
+         "Autoriza",
+         "Com o registro"
+        ]
+       ]
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 716.378/SP, Tema 545 da repercussão geral (Info 946)",
+       "tese": "A qualificação de uma fundação instituída pelo Estado como sujeita ao regime público ou privado depende do estatuto de sua criação ou autorização e das atividades por ela prestadas. As atividades de conteúdo econômico e as passíveis de delegação podem se submeter ao regime de direito privado."
+      },
+      {
+       "t": "texto",
+       "html": "A <b>extinção</b> segue a simetria: por lei diretamente, se autarquia ou fundação de direito público; por autorização legal, se empresa estatal. Em qualquer caso, a lei é de iniciativa privativa do Chefe do Executivo. A lei complementar que deveria definir as áreas de atuação das fundações (parte final do inciso XIX) ainda não foi editada."
+      }
+     ]
+    },
+    {
+     "titulo": "Subsidiárias: onde moram as exceções",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, XX",
+       "texto": "XX - depende de autorização legislativa, ==em cada caso==, a criação de subsidiárias das entidades mencionadas no inciso anterior, assim como a participação de qualquer delas em empresa privada;"
+      },
+      {
+       "t": "texto",
+       "html": "<b>Subsidiária</b> é a pessoa jurídica controlada por uma entidade da indireta: integral, se a matriz tem todo o capital; controlada, se tem só o controle. Ela tem personalidade própria e é de direito privado. A doutrina diverge sobre se integra a administração indireta; o material prefere dizer que não."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "\"Em cada caso\" não significa uma lei para cada subsidiária",
+       "html": "O STF entende que basta autorização genérica na própria lei que criou a estatal matriz."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 1.649, rel. Min. Maurício Corrêa, 2004",
+       "tese": "É dispensável a autorização legislativa para a criação de empresas subsidiárias, desde que haja previsão para esse fim na própria lei que instituiu a empresa matriz, porque a lei criadora é a própria medida autorizadora."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 5.624 MC-Ref, rel. Min. Ricardo Lewandowski, 2019",
+       "tese": "A alienação do controle acionário de empresas públicas e sociedades de economia mista exige autorização legislativa e licitação. A transferência do controle de subsidiárias e controladas não exige anuência do Legislativo e pode ocorrer sem licitação, desde que garantida a competitividade e observados os princípios do art. 37."
+      },
+      {
+       "t": "texto",
+       "html": "Sobre pessoal, o material registra a posição predominante: os empregados das estatais e das demais entidades controladas também se submetem a concurso público (Súmula 231 do TCU)."
+      }
+     ]
+    },
+    {
+     "titulo": "Organização legal: o que precisa de lei e o que cabe em decreto",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Regra: cargos, empregos, funções, ministérios e órgãos são criados e extintos <b>por lei</b>. As exceções e detalhes que o material destaca:"
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Câmara e Senado",
+         "titulo": "Resolução",
+         "texto": "Cargos, funções e empregos dos serviços da Câmara e do Senado são criados, transformados e extintos por resolução da própria Casa (CF, arts. 51, IV, e 52, XIII)."
+        },
+        {
+         "tag": "Decreto autônomo",
+         "titulo": "Art. 84, VI",
+         "texto": "O Presidente pode, por decreto, organizar a administração federal (sem aumentar despesa nem criar ou extinguir órgão) e extinguir funções ou cargos <b>vagos</b>."
+        },
+        {
+         "tag": "Judiciário",
+         "titulo": "Iniciativa dos tribunais",
+         "texto": "Criar e extinguir cargos do Judiciário exige lei de iniciativa do STF, dos Tribunais Superiores ou dos TJs, conforme o caso (CF, art. 96, II, b)."
+        },
+        {
+         "tag": "Atribuições",
+         "titulo": "Também por lei",
+         "texto": "Definir e alterar as atribuições de cargo exige lei (STF, MS 26.740), e a alteração não pode criar atribuições estranhas ao cargo original (STF, ADI 5.406)."
+        }
+       ]
+      },
+      {
+       "t": "leia",
+       "ref": "CF, arts. 48, X e XI; 51, IV; 52, XIII; 61, § 1º, II, a e e; 84, VI; 96, II, b",
+       "motivo": "É o mapa completo de quem cria e quem extingue cada coisa. A FCC troca lei por decreto e resolução por lei."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Por lei específica é criada a empresa pública.\"",
+       "html": "Errado. A lei específica só autoriza a instituição. Quem é criada por lei é a autarquia."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"O Presidente pode extinguir, por decreto, cargo público ocupado.\"",
+       "html": "Errado. O decreto autônomo só extingue funções ou cargos quando vagos."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A fundação pública de direito público é espécie do gênero autarquia.",
+         "v": true,
+         "porque": "É chamada de fundação autárquica ou autarquia fundacional, criada diretamente por lei."
+        },
+        {
+         "texto": "Cada subsidiária de uma sociedade de economia mista precisa de lei específica própria.",
+         "v": false,
+         "porque": "Basta autorização genérica na lei da matriz (ADI 1.649)."
+        },
+        {
+         "texto": "A venda do controle acionário de uma empresa pública exige autorização legislativa e licitação.",
+         "v": true,
+         "porque": "É o item I da tese da ADI 5.624."
+        },
+        {
+         "texto": "Decreto autônomo pode criar órgão público, desde que não aumente despesa.",
+         "v": false,
+         "porque": "O art. 84, VI, a, veda expressamente a criação ou extinção de órgãos por decreto."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-05",
+    "adm-cad-06"
+   ]
+  },
+  {
+   "id": "B2-a05",
+   "topico_id": "B2-02",
+   "numero": 5,
+   "titulo": "Autarquias e agências reguladoras",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a06",
+   "topico_id": "B2-02",
+   "numero": 6,
+   "titulo": "Fundações públicas",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a07",
+   "topico_id": "B2-02",
+   "numero": 7,
+   "titulo": "Empresas estatais (Lei 13.303/2016)",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a08",
+   "topico_id": "B2-02",
+   "numero": 8,
+   "titulo": "Consórcios públicos e terceiro setor",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a09",
+   "topico_id": "B2-01",
+   "numero": 9,
+   "titulo": "Regime jurídico-administrativo e princípios",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a10",
+   "topico_id": "B2-03",
+   "numero": 10,
+   "titulo": "Poderes administrativos",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a11",
+   "topico_id": "B2-04",
+   "numero": 11,
+   "titulo": "Atos administrativos",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a12",
+   "topico_id": "B2-11",
+   "numero": 12,
+   "titulo": "Processo administrativo (Lei 9.784)",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a13",
+   "topico_id": "B2-05",
+   "numero": 13,
+   "titulo": "Licitações (Lei 14.133)",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a14",
+   "topico_id": "B2-06",
+   "numero": 14,
+   "titulo": "Contratos administrativos",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a15",
+   "topico_id": "B2-07",
+   "numero": 15,
+   "titulo": "Serviços públicos",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a16",
+   "topico_id": "B2-08",
+   "numero": 16,
+   "titulo": "Agentes públicos",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a17",
+   "topico_id": "B2-09",
+   "numero": 17,
+   "titulo": "Responsabilidade civil do Estado",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a18",
+   "topico_id": "B2-10",
+   "numero": 18,
+   "titulo": "Improbidade administrativa",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a19",
+   "topico_id": "B2-12",
+   "numero": 19,
+   "titulo": "Bens públicos",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a20",
+   "topico_id": "B2-13",
+   "numero": 20,
+   "titulo": "Intervenção na propriedade",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a21",
+   "topico_id": "B2-14",
+   "numero": 21,
+   "titulo": "Controle da Administração",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a22",
+   "topico_id": "B2-15",
+   "numero": 22,
+   "titulo": "Anticorrupção e transparência",
+   "status": "a_montar"
+  }
+ ],
+ "glossario": [
+  [
+   "Imputação",
+   "Atribuir: o ato do agente é atribuído diretamente à pessoa jurídica."
+  ],
+  [
+   "Outorga",
+   "Descentralização por lei, que transfere titularidade e execução do serviço a uma entidade."
+  ],
+  [
+   "Delegação",
+   "Descentralização por contrato ou ato, que transfere só a execução, em geral a particular."
+  ],
+  [
+   "Tutela ou supervisão",
+   "Controle finalístico do ente sobre a entidade que criou, sem hierarquia."
+  ],
+  [
+   "Personalidade judiciária",
+   "Permissão limitada de ir a juízo para defender prerrogativas, sem ser pessoa jurídica."
+  ],
+  [
+   "Duodécimos",
+   "Parcelas mensais do orçamento repassadas aos Poderes e órgãos autônomos."
+  ],
+  [
+   "Subsidiária",
+   "Pessoa jurídica controlada por uma entidade da administração indireta."
+  ],
+  [
+   "Decreto autônomo",
+   "Decreto que retira validade direto da Constituição (art. 84, VI), sem lei intermediária."
+  ]
+ ]
+}
