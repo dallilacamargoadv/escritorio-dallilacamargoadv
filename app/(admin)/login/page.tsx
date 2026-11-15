@@ -43,7 +43,7 @@ export default function LoginPage() {
   }, []);
 
   const entrar = () => {
-    router.push("/admin");
+    router.push("/admin/estudos");
     router.refresh();
   };
 
