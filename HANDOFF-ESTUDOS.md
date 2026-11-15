@@ -101,6 +101,14 @@ Migrations: `estudos_onda1_edital_cronograma`, `estudos_onda2_respostas_eventos_
 - Jurisprudência: campo `juris` (`texto`, `fonte`, `data`) vazio por enquanto. Preencher só com fonte conferida.
 - Falta: teste no navegador logado e apagar a chave `desafios` de `estudo_config` depois do teste.
 
+## 7e. Biblioteca (15/11/2026, branch `feat/estudos-biblioteca`, sem commit)
+
+- Rotas `/admin/estudos/biblioteca` (pesquisa global e lista por tipo/etiqueta) e `/admin/estudos/biblioteca/[doc]` (`?q=`, `?ir=`, `?ref=`, `?grifos=1`, `?p=`; 30 trechos por página).
+- Texto em `content/estudos/biblioteca.json` (só servidor), gerado por `CONCURSO PGE-MA/geradores/gerar_biblioteca.py`. Lógica pura `lib/estudos-biblioteca.ts`, servidor `lib/db-estudos-biblioteca.ts`, API `app/api/admin/estudos/biblioteca` (GET link do PDF por 30 min; POST grifo/etiquetas), tela `components/estudos/BibliotecaLeitor.tsx`.
+- Estado em `estudo_config`, chave `biblioteca` (`grifos[doc] = [refs]`, `etiquetas[doc] = []`). Sem tabela nova.
+- Storage: bucket privado `biblioteca` (PDF, até 20 MB), caminho `<doc>.pdf`, upload direto do navegador (evita o limite de 4,5 MB da Vercel). Migration `estudos_onda6_biblioteca_bucket` (já aplicada em produção).
+- Falta: teste logada; depois apagar a chave `biblioteca` de `estudo_config` e os PDFs de teste. Mapas mentais e jurisprudência ficam para quando houver material.
+
 ## 8. Roteiro
 
 1. Etapa 1 (feita): Início, Edital, Cronograma.
@@ -108,7 +116,7 @@ Migrations: `estudos_onda1_edital_cronograma`, `estudos_onda2_respostas_eventos_
 3. Etapa 3 (feita, 3a e 3b): laboratório de erros (reincidência, erros superados, tempo até corrigir, botão "copiar resumo dos meus erros" para o tutor) e índice de domínio configurável com árvore de 7 níveis.
 4. Etapa 4 (feita, 15/11/2026, branch `feat/estudos-revisao`): aba Revisão em `/admin/estudos/revisao`. Lógica em `lib/estudos-revisao.ts`. Questões: agenda calculada das respostas (etapa = acertos firmes depois da última falha; chute e dúvida contam como falha). Artigos: a `fonte` das questões erradas; erro novo zera a etapa. Cartões: vencidos + 10 novos por dia alternando baralhos. Questão aberta com `?revisao=1` grava `contexto = revisao` e volta para a fila. Pomodoro 50/10 grava só o tempo efetivo. Melhoria pendente: os números do topo só atualizam ao recarregar a página.
 4b. Etapa 4b (feita, 15/11/2026, branch `feat/estudos-simulados`): aba Simulados em `/admin/estudos/simulados`. Ao entregar, o servidor corrige e grava uma resposta por questão (`contexto = simulado`; motivo padrão: errada = conteúdo, em branco = estratégia, certa = segurança), editável no relatório. Evolução semanal agrupa por semana de segunda a domingo.
-5. Etapa 5: biblioteca (PDFs no Storage com busca por texto e página, lei grifada, jurisprudência com fonte e data, questões comentadas, mapas, etiquetas, pesquisa global). Antes: conferir o limite de armazenamento do plano Supabase. Marca d'água com dados pessoais das apostilas nunca pode aparecer.
+5. Etapa 5 (feita em 15/11/2026, ver 7e): biblioteca (PDFs no Storage com busca por texto e página, lei grifada, jurisprudência com fonte e data, questões comentadas, mapas, etiquetas, pesquisa global). Antes: conferir o limite de armazenamento do plano Supabase. Marca d'água com dados pessoais das apostilas nunca pode aparecer.
 6. Etapa 6: banca FCC (cadastro de provas reais) e prontidão.
 7. Etapa 7: redação e discursivas.
 8. Etapa 8: RPG (XP, níveis, missões, loja só de itens visuais).
