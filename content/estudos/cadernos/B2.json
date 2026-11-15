@@ -12,7 +12,9 @@
   "Material EBEJI: O Processo Administrativo Federal (2026)",
   "Material EBEJI: Licitações Públicas, partes 1 e 2 (2026)",
   "Lei 14.133/2021, texto vigente",
-  "Material EBEJI: Contratos Administrativos (2026)"
+  "Material EBEJI: Contratos Administrativos (2026)",
+  "Material EBEJI: Serviços Públicos (2026)",
+  "Lei 8.987/1995, trechos vigentes no Planalto"
  ],
  "banca": {
   "titulo": "O que a FCC cobra em Administrativo",
@@ -4926,9 +4928,338 @@
   {
    "id": "B2-a15",
    "topico_id": "B2-07",
-   "numero": 16,
    "titulo": "Serviços públicos",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Serviços Públicos, noções introdutórias a regulamentação e controle (2026); CF, arts. 25, 30, 37, § 3º, 145 e 175; Lei 8.987/1995, arts. 6º, 7º e 30 (Planalto, conferidos em 15/11/2026)",
+   "resumo": [
+    "Serviço público, no Brasil, é o que o ordenamento manda prestar sob regime de direito público (corrente formalista, majoritária), e não o que é \"essencial\". O Estado é o titular e presta direta ou indiretamente, por concessão ou permissão, sempre com licitação (CF, art. 175).",
+    "Saúde e educação são deveres do Estado, mas não são exclusivos dele: o particular as presta por direito próprio, como serviço privado, sob poder de polícia (serviços impróprios).",
+    "Classificações que caem: uti universi (gerais, indivisíveis, sem taxa) × uti singuli (específicos e divisíveis, taxa ou tarifa); delegáveis × indelegáveis; administrativos, sociais e econômicos.",
+    "Competência: União (art. 21), comum (art. 23), Municípios no interesse local (art. 30, V, inclusive transporte coletivo), Estados no residual (art. 25, § 1º); DF soma Estado e Município.",
+    "Serviço adequado (Lei 8.987, art. 6º, § 1º): regularidade, continuidade, eficiência, segurança, atualidade, generalidade, cortesia e modicidade das tarifas. A interrupção por emergência, motivo técnico ou inadimplemento, com aviso, não fere a continuidade."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: o Estado como titular",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Alguns serviços a Constituição entrega ao Estado como <b>titular</b>: energia, transporte coletivo, telecomunicações, saneamento. O particular não pode prestá-los por conta própria; só por <b>delegação</b>. É por isso que a concessionária de energia não é uma empresa qualquer: ela executa algo que pertence ao poder público."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 175",
+       "texto": "Art. 175. Incumbe ao Poder Público, na forma da lei, ==diretamente ou sob regime de concessão ou permissão==, ==sempre através de licitação==, a prestação de serviços públicos.\nParágrafo único. A lei disporá sobre:\nI - o regime das empresas concessionárias e permissionárias de serviços públicos, o caráter especial de seu contrato e de sua prorrogação, bem como as condições de caducidade, fiscalização e rescisão da concessão ou permissão;\nII - os direitos dos usuários;\nIII - política tarifária;\nIV - a obrigação de manter serviço adequado."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Poder Público\" é a Administração inteira",
+       "html": "No art. 175, \"Poder Público\" abrange a direta e a indireta. Por isso, <b>prestação direta</b> é a feita pela própria Administração (órgãos ou entidades da indireta); <b>prestação indireta</b> é só a do particular delegatário (concessão ou permissão)."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Corrente formalista (adotada)",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "A lei decide",
+           "sub": "regime de direito público"
+          },
+          {
+           "titulo": "Prestação material",
+           "sub": "um fazer"
+          }
+         ],
+         "texto": "Majoritária no Brasil. Serviço público é a prestação material (um <b>fazer</b>) que o ordenamento manda executar sob <b>regime de direito público</b>. Ficam de fora a jurisdição, a legislação, o governo, o fomento, a polícia e as obras públicas."
+        },
+        {
+         "rotulo": "Corrente essencialista",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "A importância decide",
+           "sub": "critério material"
+          }
+         ],
+         "texto": "Para ela, toda atividade essencial à sociedade seria serviço público, não importa quem a preste. <b>Não</b> é a adotada: no Brasil, a importância da atividade, sozinha, não define nada. Ex.: loterias não são essenciais, mas o STF as trata como serviço público."
+        }
+       ]
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 5.624 MC-Ref/DF, Rel. Min. Ricardo Lewandowski, 5 e 6/6/2019 (Info 943)",
+       "tese": "A exploração de loterias ostenta natureza jurídica de serviço público."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Sociais não são exclusivos.</b> Saúde, educação e outros direitos sociais o Estado é <b>obrigado</b> a prestar, mas não tem a titularidade exclusiva. O particular os presta por <b>direito próprio</b>, como serviço privado, sujeito só ao poder de polícia. Já os serviços do art. 175 (econômicos) são de titularidade exclusiva do Estado: o particular só entra por delegação."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 4.857/DF, Rel. Min. Cármen Lúcia, 11/3/2022 (Info 1046)",
+       "tese": "São constitucionais o compartilhamento, mediante convênio, com estados, Distrito Federal ou municípios, da execução de atividades e serviços públicos federais essenciais, e a adoção de procedimentos simplificados para a garantia de sua continuidade em situações de greve, paralisação ou operação de retardamento promovidas por servidores públicos federais."
+      }
+     ]
+    },
+    {
+     "titulo": "Classificações, competências e formas de prestação",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "tabela",
+       "cab": [
+        "Classificação",
+        "Um lado",
+        "Outro lado"
+       ],
+       "linhas": [
+        [
+         "Usuário",
+         "<b>Uti universi</b> (gerais, indivisíveis): usuários indeterminados; ex.: iluminação pública. Não cabe taxa.",
+         "<b>Uti singuli</b> (específicos e divisíveis): usuário determinado e uso mensurável; ex.: energia, coleta domiciliar de lixo. Taxa (regime legal) ou tarifa (regime contratual)."
+        ],
+        [
+         "Delegação",
+         "<b>Delegáveis</b>: o Estado presta ou delega por concessão, permissão ou autorização; ex.: telefonia.",
+         "<b>Indelegáveis</b>: exigem poder de império, só o Estado ou PJ de direito público; ex.: defesa nacional, segurança, fiscalização."
+        ],
+        [
+         "Natureza",
+         "<b>Administrativos</b> (atividades-meio) e <b>sociais</b> (art. 6º e Título VIII da CF).",
+         "<b>Econômicos</b> (art. 175): exploráveis com lucro, titularidade exclusiva do Estado. Atividade econômica em sentido estrito (art. 173) não é serviço público."
+        ],
+        [
+         "Quem presta",
+         "<b>Próprios</b>: Estado, direto ou por delegado, sob direito público.",
+         "<b>Impróprios</b>: particulares sem delegação, como serviço privado (para Alexandrino e Paulo, nem são serviço público)."
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 145, II",
+       "texto": "II - taxas, em razão do exercício do poder de polícia ou pela utilização, efetiva ou potencial, de ==serviços públicos específicos e divisíveis==, prestados ao contribuinte ou postos a sua disposição;"
+      },
+      {
+       "t": "texto",
+       "html": "<b>Quem presta o quê.</b> A Constituição reparte os serviços pelo <b>princípio da predominância do interesse</b>: geral para a União, regional para os Estados, local para os Municípios."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Art. 21",
+         "titulo": "União",
+         "texto": "Competência exclusiva e indelegável a outros entes: serviço postal, telecomunicações, radiodifusão, energia elétrica, navegação aérea e infraestrutura aeroportuária, transporte ferroviário e aquaviário interestadual, transporte rodoviário interestadual e internacional de passageiros, portos."
+        },
+        {
+         "tag": "Art. 23",
+         "titulo": "Comum",
+         "texto": "Todos os entes, em pé de igualdade: saúde e assistência, patrimônio histórico, cultura e educação, meio ambiente, moradia e saneamento. Leis complementares fixam a cooperação."
+        },
+        {
+         "tag": "Art. 25, § 1º",
+         "titulo": "Estados",
+         "texto": "Competência residual: o que não for da União nem de interesse local. O STF reconheceu aos Estados o transporte rodoviário <b>intermunicipal</b> de passageiros."
+        },
+        {
+         "tag": "Art. 30, V",
+         "titulo": "Municípios",
+         "texto": "Serviços de interesse local, inclusive o <b>transporte coletivo</b>, que tem caráter essencial. O rol não é taxativo: define-se caso a caso pela predominância do interesse."
+        },
+        {
+         "tag": "Art. 32, § 1º",
+         "titulo": "Distrito Federal",
+         "texto": "Soma as competências de Estado (inclusive a residual) e de Município, além das comuns."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, arts. 25, § 1º, e 30, V",
+       "texto": "§ 1º São reservadas aos Estados as competências que ==não lhes sejam vedadas== por esta Constituição.\nV - organizar e prestar, diretamente ou sob regime de concessão ou permissão, os serviços públicos de ==interesse local==, incluído o de ==transporte coletivo==, que tem caráter essencial;"
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Centralizada",
+         "sub": "administração direta",
+         "texto": "O próprio ente titular presta, por seus órgãos. Se houver órgão específico, é centralizada e desconcentrada."
+        },
+        {
+         "titulo": "Descentralizada por serviços",
+         "sub": "outorga legal",
+         "texto": "A lei cria ou autoriza entidade da indireta e lhe transfere a titularidade. Ainda é prestação <b>direta</b>, porque a indireta é Administração."
+        },
+        {
+         "titulo": "Descentralizada por colaboração",
+         "sub": "delegação",
+         "texto": "Particular recebe só a <b>execução</b>, por concessão, permissão ou, em casos restritos, autorização. É a única prestação <b>indireta</b>."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Liga com a aula 2",
+       "html": "Outorga (por lei) passa titularidade e execução; delegação (por contrato ou ato) passa só a execução. A titularidade do serviço delegado continua sempre com o poder público."
+      }
+     ]
+    },
+    {
+     "titulo": "Serviço adequado, continuidade e controle",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "Lei 8.987/1995, art. 6º, caput e §§ 1º a 4º",
+       "texto": "Art. 6o Toda concessão ou permissão pressupõe a prestação de ==serviço adequado== ao pleno atendimento dos usuários, conforme estabelecido nesta Lei, nas normas pertinentes e no respectivo contrato.\n§ 1o Serviço adequado é o que satisfaz as condições de ==regularidade, continuidade, eficiência, segurança, atualidade, generalidade, cortesia== na sua prestação e ==modicidade das tarifas==.\n§ 2o A atualidade compreende a modernidade das técnicas, do equipamento e das instalações e a sua conservação, bem como a melhoria e expansão do serviço.\n§ 3o Não se caracteriza como descontinuidade do serviço a sua interrupção em ==situação de emergência ou após prévio aviso==, quando:\nI - motivada por razões de ordem técnica ou de segurança das instalações; e,\nII - por inadimplemento do usuário, ==considerado o interesse da coletividade==.\n§ 4º A interrupção do serviço na hipótese prevista no inciso II do § 3º deste artigo não poderá iniciar-se na ==sexta-feira, no sábado ou no domingo==, nem em feriado ou no ==dia anterior a feriado==."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Os 8 requisitos",
+       "html": "Serviço adequado: <b>R</b>egularidade, <b>C</b>ontinuidade, <b>E</b>ficiência, <b>S</b>egurança, <b>A</b>tualidade, <b>G</b>eneralidade, <b>C</b>ortesia e <b>M</b>odicidade das tarifas. Atualidade inclui modernidade das técnicas e expansão do serviço (§ 2º)."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A concessionária pode cortar a energia do usuário inadimplente, desde que avise previamente.",
+         "v": true,
+         "porque": "Art. 6º, § 3º, II. É tese consolidada do STJ."
+        },
+        {
+         "texto": "O corte por inadimplemento pode começar numa sexta-feira, se houve aviso.",
+         "v": false,
+         "porque": "Art. 6º, § 4º: nunca sexta, sábado, domingo, feriado ou véspera de feriado."
+        },
+        {
+         "texto": "Pode-se cortar o serviço por dívida do morador anterior.",
+         "v": false,
+         "porque": "A dívida é pessoal, não propter rem (STJ, tese consolidada)."
+        },
+        {
+         "texto": "Pode-se cortar por débito antigo, consolidado no tempo.",
+         "v": false,
+         "porque": "O corte pressupõe conta regular do mês de consumo; débito pretérito se cobra pelas vias ordinárias."
+        },
+        {
+         "texto": "É legítimo cortar a energia de hospital público inadimplente.",
+         "v": false,
+         "porque": "Não se pode atingir unidades que prestam serviços indispensáveis à população."
+        },
+        {
+         "texto": "O aviso de interrupção técnica pode ser feito por emissoras de rádio dias antes.",
+         "v": true,
+         "porque": "STJ, 1ª Turma, REsp 1.270.339/SC, 15/12/2016 (Info 598)."
+        }
+       ]
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "1ª Seção, REsp 1.412.433/RS, Rel. Min. Herman Benjamin, 25/4/2018, recurso repetitivo (Info 634)",
+       "tese": "Na hipótese de débito estrito de recuperação de consumo efetivo por fraude no aparelho medidor atribuída ao consumidor, desde que apurado em observância aos princípios do contraditório e da ampla defesa, é possível o corte administrativo do fornecimento do serviço de energia elétrica, mediante prévio aviso ao consumidor, pelo inadimplemento do consumo recuperado correspondente ao período de 90 (noventa) dias anterior à constatação da fraude, contanto que executado o corte em até 90 (noventa) dias após o vencimento do débito, sem prejuízo do direito de a concessionária utilizar os meios judiciais ordinários de cobrança da dívida."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Fraude apurada só pela concessionária",
+       "html": "Se a irregularidade no medidor foi apurada <b>unilateralmente</b>, sem contraditório, o corte é ilegítimo: a concessionária cobra pelas vias ordinárias. Só com apuração em contraditório vale a regra dos 90 dias do repetitivo."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "2ª Turma, RMS 34.203/DF e AC 3.980/DF, Rel. Min. Dias Toffoli, 21/11/2017 (Info 885)",
+       "tese": "A concessionária não tem direito adquirido à renovação do contrato de concessão de usina hidrelétrica: a prorrogação insere-se no campo da discricionariedade do poder concedente."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Regulação e controle.</b> Regular o serviço é atribuição do ente titular, <b>indelegável a particulares</b>; por lei, pode ser atribuída a autarquia (as agências reguladoras). No serviço delegado, o poder público continua titular e por isso fiscaliza de forma ainda mais ampla:"
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 8.987/1995, art. 30, parágrafo único",
+       "texto": "Parágrafo único. A fiscalização do serviço será feita por intermédio de ==órgão técnico do poder concedente== ou por entidade com ele conveniada, e, periodicamente, conforme previsto em norma regulamentar, por ==comissão composta de representantes do poder concedente, da concessionária e dos usuários==."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, § 3º, I",
+       "texto": "I - as reclamações relativas à prestação dos serviços públicos em geral, asseguradas a manutenção de serviços de atendimento ao usuário e a ==avaliação periódica, externa e interna==, da qualidade dos serviços;"
+      },
+      {
+       "t": "texto",
+       "html": "Esse dispositivo foi regulamentado pela <b>Lei 13.460/2017</b>, o Código de Defesa do Usuário de serviços públicos, de abrangência nacional e aplicação subsidiária aos delegatários, sem afastar o CDC. Segundo o material EBEJI, ela exige atendimento adequado, com regularidade, continuidade, efetividade, segurança, atualidade, generalidade, transparência e cortesia (art. 4º), e diretrizes como presunção de boa-fé do usuário e dispensa de firma reconhecida, salvo dúvida (art. 5º)."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Concessão, permissão e PPP",
+       "html": "O regime da delegação (concessão, permissão, autorização, encampação, caducidade, reversão e PPPs) está no segundo PDF do EBEJI e fica para uma aula própria, como fizemos com Licitações."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "Prestação <b>indireta</b> é só a do particular delegatário; a indireta da Administração é prestação <b>direta</b> descentralizada.<br>Saúde e educação <b>não</b> são exclusivas do Estado.<br>Serviço <b>uti universi</b> não pode ser remunerado por taxa.<br>Transporte coletivo <b>municipal</b> é do Município (art. 30, V); intermunicipal é do Estado.<br>Corte por inadimplemento: com <b>aviso</b>, nunca de sexta a domingo, feriado ou véspera.<br>Regulação é <b>indelegável</b> a particular."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A prestação de serviço público por empresa pública federal é prestação indireta.",
+         "v": false,
+         "porque": "É prestação direta descentralizada; indireta é só a do particular delegatário."
+        },
+        {
+         "texto": "Particulares podem prestar serviços de educação por direito próprio, sem delegação.",
+         "v": true,
+         "porque": "Serviços sociais não são de titularidade exclusiva do Estado."
+        },
+        {
+         "texto": "A iluminação pública, por ser serviço uti universi, pode ser remunerada por taxa.",
+         "v": false,
+         "porque": "Taxa só para serviço específico e divisível (CF, art. 145, II)."
+        },
+        {
+         "texto": "A modicidade das tarifas é um dos requisitos do serviço adequado.",
+         "v": true,
+         "porque": "Lei 8.987, art. 6º, § 1º."
+        },
+        {
+         "texto": "No Brasil, adota-se a corrente essencialista para definir serviço público.",
+         "v": false,
+         "porque": "Adota-se a formalista: o ordenamento define o regime."
+        },
+        {
+         "texto": "A interrupção do serviço em situação de emergência exige aviso prévio.",
+         "v": false,
+         "porque": "Art. 6º, § 3º: na emergência, não há aviso prévio; o aviso é exigido nas hipóteses técnica e de inadimplemento."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-29",
+    "adm-cad-30"
+   ],
+   "numero": 16
   },
   {
    "id": "B2-a16",
@@ -5180,6 +5511,26 @@
   [
    "Exceção do contrato não cumprido",
    "Direito de não cumprir enquanto a outra parte não cumpre; mitigado nos contratos administrativos (Lei 14.133, art. 137, §§ 2º e 3º)."
+  ],
+  [
+   "Uti universi",
+   "Serviço geral e indivisível, prestado a usuários indeterminados (ex.: iluminação pública); não pode ser remunerado por taxa."
+  ],
+  [
+   "Uti singuli",
+   "Serviço específico e divisível, com usuário determinado e uso mensurável; remunerado por taxa ou tarifa."
+  ],
+  [
+   "Serviço adequado",
+   "O que satisfaz regularidade, continuidade, eficiência, segurança, atualidade, generalidade, cortesia e modicidade das tarifas (Lei 8.987, art. 6º, § 1º)."
+  ],
+  [
+   "Prestação indireta",
+   "Execução do serviço público por particular, mediante delegação (concessão, permissão ou autorização)."
+  ],
+  [
+   "Serviço impróprio",
+   "Atividade social prestada por particular sem delegação, como serviço privado sujeito ao poder de polícia."
   ]
  ]
 }
