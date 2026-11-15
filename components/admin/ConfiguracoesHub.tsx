@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Workflow, Link2 } from "lucide-react";
 import { CategoriasDespesaEditor } from "@/components/admin/CategoriasDespesaModal";
+import { VerificacaoDuasEtapas } from "@/components/admin/VerificacaoDuasEtapas";
 import type { DespesaCategoria } from "@/lib/db-despesa-categorias";
 
 export function ConfiguracoesHub({
@@ -45,6 +46,8 @@ export function ConfiguracoesHub({
           </div>
         </Link>
       </div>
+
+      <VerificacaoDuasEtapas />
 
       <details className="mt-6 border border-hairline-strong bg-surface" open>
         <summary className="cursor-pointer list-none px-4 py-3 text-sm text-ink marker:content-none [&::-webkit-details-marker]:hidden">
