@@ -33,16 +33,26 @@ export async function proxy(request: NextRequest) {
     request.nextUrl.pathname.startsWith("/admin") ||
     request.nextUrl.pathname.startsWith("/api/admin");
 
-  if (!user && isProtected) {
+  // Verificação em duas etapas: se a conta tem um app autenticador cadastrado
+  // e a sessão ainda não passou pelo código (aal1), ela não está liberada.
+  let faltaCodigo = false;
+  if (user) {
+    const { data: aal } =
+      await supabase.auth.mfa.getAuthenticatorAssuranceLevel();
+    faltaCodigo = aal?.nextLevel === "aal2" && aal.currentLevel !== "aal2";
+  }
+
+  if ((!user || faltaCodigo) && isProtected) {
     if (request.nextUrl.pathname.startsWith("/api/admin")) {
       return NextResponse.json({ error: "Não autenticado." }, { status: 401 });
     }
     const loginUrl = request.nextUrl.clone();
     loginUrl.pathname = "/login";
+    loginUrl.search = "";
     return NextResponse.redirect(loginUrl);
   }
 
-  if (user && request.nextUrl.pathname === "/login") {
+  if (user && !faltaCodigo && request.nextUrl.pathname === "/login") {
     const adminUrl = request.nextUrl.clone();
     adminUrl.pathname = "/admin";
     return NextResponse.redirect(adminUrl);
