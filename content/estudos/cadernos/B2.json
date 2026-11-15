@@ -1380,7 +1380,250 @@
    "topico_id": "B2-02",
    "numero": 7,
    "titulo": "Empresas estatais (Lei 13.303/2016)",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Administração Pública (2026)",
+   "resumo": [
+    "Empresa pública e sociedade de economia mista são pessoas de direito privado, autorizadas por lei específica, que nascem com o registro.",
+    "O regime é híbrido e depende do objeto: quem explora atividade econômica se aproxima da empresa privada (CF, art. 173, § 1º, II); quem presta serviço público recebe mais regras de direito público.",
+    "Empresa pública tem capital todo público e qualquer forma societária; sociedade de economia mista é S.A. com a maioria do capital votante pública.",
+    "Não estão sujeitas à falência; o pessoal é celetista, com concurso; o desligamento exige motivação (Tema 1.022, 2024).",
+    "Prestadoras de serviço público obrigatório e exclusivo podem ter imunidade recíproca e pagar por precatório; exploradoras de atividade econômica em concorrência, não."
+   ],
+   "secoes": [
+    {
+     "titulo": "Por que o Estado vira empresário",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Em regra, atividade econômica é da iniciativa privada. O Estado só entra como empresário em situações excepcionais, e para isso usa pessoas de <b>direito privado</b>, que competem no mercado com as mesmas armas dos particulares. Também pode usar essas pessoas para prestar <b>serviço público</b> (CF, art. 175). O objeto da entidade é a chave de todo o regime."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 173, caput",
+       "texto": "Art. 173. Ressalvados os casos previstos nesta Constituição, a exploração direta de atividade econômica pelo Estado só será permitida quando necessária aos imperativos da ==segurança nacional== ou a ==relevante interesse coletivo==, conforme definidos em lei."
+      },
+      {
+       "t": "texto",
+       "html": "Para que o Estado não tenha vantagem indevida no mercado, a Constituição manda que uma lei, o estatuto das estatais, as submeta ao regime das empresas privadas. Esse estatuto é a <b>Lei 13.303/2016</b>."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 173, § 1º, II",
+       "texto": "§ 1º A lei estabelecerá o estatuto jurídico da empresa pública, da sociedade de economia mista e de suas subsidiárias ==que explorem atividade econômica== de produção ou comercialização de bens ou de prestação de serviços, dispondo sobre:\nII - a sujeição ao ==regime jurídico próprio das empresas privadas==, inclusive quanto aos direitos e obrigações civis, comerciais, trabalhistas e tributários;"
+      }
+     ]
+    },
+    {
+     "titulo": "Empresa pública × sociedade de economia mista",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "As duas são autorizadas por lei específica (CF, art. 37, XIX) e só nascem com o <b>registro dos atos constitutivos</b>. A lei autorizadora deve trazer as diretrizes e restrições do estatuto da empresa (Lei 13.303, art. 13). A extinção, por simetria, também depende de autorização legislativa."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Empresa pública",
+        "Sociedade de economia mista"
+       ],
+       "linhas": [
+        [
+         "Capital",
+         "Integralmente público (admite vários entes, desde que a maioria do capital votante fique com o ente instituidor)",
+         "Público e privado, com a maioria das ações com direito a voto pública"
+        ],
+        [
+         "Forma societária",
+         "Qualquer forma admitida em direito",
+         "Sempre sociedade anônima"
+        ],
+        [
+         "Foro, se federal",
+         "Justiça Federal (CF, art. 109, I)",
+         "Justiça Estadual (Súmula 556 do STF)"
+        ],
+        [
+         "Exemplos",
+         "Caixa, Correios",
+         "Banco do Brasil, Petrobras"
+        ]
+       ]
+      },
+      {
+       "t": "leia",
+       "ref": "Lei 13.303/2016, arts. 3º e 4º",
+       "motivo": "São os conceitos legais de empresa pública e de sociedade de economia mista. A FCC troca \"capital integralmente público\" por \"maioria do capital\" entre as duas."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 109, I",
+       "texto": "I - as causas em que a União, entidade autárquica ou ==empresa pública federal== forem interessadas na condição de autoras, rés, assistentes ou oponentes, exceto as de falência, as de acidentes de trabalho e as sujeitas à Justiça Eleitoral e à Justiça do Trabalho;"
+      }
+     ]
+    },
+    {
+     "titulo": "O regime híbrido: o objeto decide",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Explora atividade econômica",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Regime predominantemente privado",
+           "sub": "CF, art. 173, § 1º, II"
+          },
+          {
+           "titulo": "Mercado",
+           "sub": "concorre com particulares"
+          }
+         ],
+         "texto": "Mais perto da empresa privada: responsabilidade civil <b>subjetiva</b> (o art. 37, § 6º, não a alcança), <b>sem</b> imunidade recíproca, <b>sem</b> precatório se atuar em regime concorrencial (STF, Tema 253), e sem licitação para os contratos ligados à atividade-fim."
+        },
+        {
+         "rotulo": "Presta serviço público",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Regime com mais direito público",
+           "sub": "CF, art. 175"
+          },
+          {
+           "titulo": "Usuário",
+           "sub": "serviço público"
+          }
+         ],
+         "texto": "Mais perto do Estado: responsabilidade civil <b>objetiva</b> (CF, art. 37, § 6º); se o serviço é obrigatório, exclusivo e sem fim lucrativo primário, há imunidade recíproca (Correios, Infraero, Casa da Moeda) e pagamento por precatório (STF, ADPF 387)."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Em qualquer caso, como integram a administração indireta, sofrem os controles de direito público: controle finalístico pelo ente (sem hierarquia), controle pelo Tribunal de Contas, concurso público e licitação."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 1º, § 1º",
+       "texto": "§ 1º Não são abrangidas por esta Lei as empresas públicas, as sociedades de economia mista e as suas subsidiárias, ==regidas pela Lei nº 13.303, de 30 de junho de 2016==, ressalvado o disposto no art. 178 desta Lei."
+      },
+      {
+       "t": "texto",
+       "html": "Ou seja: as licitações e os contratos das estatais seguem a <b>Lei 13.303</b>, e não a 14.133, ressalvado o art. 178 da nova lei (crimes em licitações)."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e viradas de jurisprudência",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Falência",
+         "titulo": "Não se aplica",
+         "texto": "A Lei 11.101/2005, art. 2º, I, exclui expressamente a empresa pública e a sociedade de economia mista da recuperação judicial e da falência."
+        },
+        {
+         "tag": "Bens",
+         "titulo": "Privados, com ressalva",
+         "texto": "São bens privados (CC, art. 98). Mas os bens afetados à prestação de serviço público podem receber proteção semelhante à dos bens públicos, em nome da continuidade do serviço."
+        },
+        {
+         "tag": "Pessoal",
+         "titulo": "CLT com concurso",
+         "texto": "Emprego público regido pela CLT, com concurso (CF, art. 37, II). Não há estabilidade do art. 41. Conflitos da relação de trabalho vão para a Justiça do Trabalho; a fase do concurso, para a Justiça comum."
+        },
+        {
+         "tag": "Dispensa",
+         "titulo": "Precisa de motivação",
+         "texto": "Em 2018 o STF limitou aos Correios o dever de motivar a dispensa (RE 589.998 ED). Em 2024, no Tema 1.022, estendeu esse dever às empresas públicas e sociedades de economia mista em geral, inclusive em regime concorrencial."
+        },
+        {
+         "tag": "Dirigentes",
+         "titulo": "Sem aprovação do Legislativo",
+         "texto": "É inconstitucional exigir aprovação legislativa prévia para nomear ou exonerar dirigente de estatal (separação de Poderes). A Lei 13.303, art. 17, impõe requisitos de reputação ilibada, notório conhecimento e experiência."
+        },
+        {
+         "tag": "Venda do controle",
+         "titulo": "Lei e licitação",
+         "texto": "Vender o controle da estatal-mãe exige autorização legislativa e licitação; o controle de subsidiárias pode ser transferido sem lei e sem licitação formal, com competitividade (STF, ADI 5.624)."
+        }
+       ]
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 688.267/CE, Tema 1.022 da repercussão geral, 28/2/2024 (Info 1.126)",
+       "tese": "As empresas públicas e sociedades de economia mista, inclusive as que exploram atividade econômica em regime concorrencial, têm o dever jurídico de motivar, em ato formal, a demissão de seus empregados concursados, não se exigindo processo administrativo."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Imunidade dos Correios agora está no texto",
+       "html": "A EC 132/2023 passou a citar expressamente, no art. 150, § 2º, a empresa pública prestadora de serviço postal. Na prática, só positivou o que o STF já dizia."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"A sociedade de economia mista federal tem foro na Justiça Federal.\"",
+       "html": "Errado. Só a empresa pública federal (CF, art. 109, I). A sociedade de economia mista vai à Justiça Estadual (Súmula 556 do STF)."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"A empresa pública deve adotar a forma de sociedade anônima.\"",
+       "html": "Errado. Quem é sempre S.A. é a sociedade de economia mista."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "As estatais adquirem personalidade jurídica com a vigência da lei autorizadora.",
+         "v": false,
+         "porque": "Com o registro dos atos constitutivos."
+        },
+        {
+         "texto": "Estatal exploradora de atividade econômica responde objetivamente com base no art. 37, § 6º.",
+         "v": false,
+         "porque": "O § 6º alcança as de direito privado prestadoras de serviço público."
+        },
+        {
+         "texto": "As licitações das empresas estatais são regidas pela Lei 13.303/2016.",
+         "v": true,
+         "porque": "A Lei 14.133 as exclui no art. 1º, § 1º (ressalvado o art. 178)."
+        },
+        {
+         "texto": "Sociedade de economia mista pode ter a falência decretada.",
+         "v": false,
+         "porque": "Lei 11.101/2005, art. 2º, I."
+        },
+        {
+         "texto": "Empregado de estatal concursado pode ser dispensado sem qualquer motivação.",
+         "v": false,
+         "porque": "STF, Tema 1.022 (2024): exige motivação formal, sem processo administrativo."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-11",
+    "adm-cad-12"
+   ]
   },
   {
    "id": "B2-a08",
