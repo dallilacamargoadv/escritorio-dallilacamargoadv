@@ -92,6 +92,15 @@ Migrations: `estudos_onda1_edital_cronograma`, `estudos_onda2_respostas_eventos_
 - "Copiar resumo dos meus erros" gera texto para o Projeto do tutor no claude.ai, com enunciado curto, anotação dela e pedido de aula em cadeia.
 - `NIVEL_COR` fica no lib (não no arquivo "use client"), porque a página do servidor também usa.
 
+## 7d. Desafios (15/11/2026, branch `feat/estudos-desafios`, sem commit)
+
+- Rota `/admin/estudos/desafios`. Banco `content/estudos/desafios.json` (629 itens, só no servidor), gerado por `CONCURSO PGE-MA/geradores/gerar_desafios.py` a partir de `03 Leis atualizadas/` (Lei 9.784, 8.429, 14.133, CF, Constituição MA, CPC, CC, LINDB, CTN, 6.830). Lei 6.107 ficou fora (texto só até 2015).
+- Tipos: `lacuna` (4 opções) e `pegadinha` (certo/errado, ~40% literal). Gabarito só no servidor: `POST /api/admin/estudos/desafios` corrige.
+- Estado em `estudo_config`, chave `desafios` (`dias[data] = {acertos,total}`, `vistos[id] = {ult,ok,vezes}`). Sem migration. Sequência = dias seguidos com 10 ou mais respondidos.
+- Rodada: até 3 errados antigos, depois inéditos, depois acertados há mais tempo, misturando matérias. `?r=` dá mais rodadas, `?materia=` filtra.
+- Jurisprudência: campo `juris` (`texto`, `fonte`, `data`) vazio por enquanto. Preencher só com fonte conferida.
+- Falta: teste no navegador logado e apagar a chave `desafios` de `estudo_config` depois do teste.
+
 ## 8. Roteiro
 
 1. Etapa 1 (feita): Início, Edital, Cronograma.
