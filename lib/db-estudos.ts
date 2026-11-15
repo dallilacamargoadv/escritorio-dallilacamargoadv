@@ -1,6 +1,17 @@
 import questoesJson from "@/content/estudos/questoes.json";
+import cartoesJson from "@/content/estudos/cartoes.json";
 import type { Classificacao, Questao, Resposta } from "@/lib/estudos-desempenho";
 import { normalizarLabConfig, type LabConfig } from "@/lib/estudos-laboratorio";
+import {
+  ETAPA_FINAL,
+  etapaDoCartao,
+  INTERVALOS,
+  msDaData,
+  proximaEtapa,
+  type Cartao,
+  type EstadoCartao,
+  type EstadoRevisao,
+} from "@/lib/estudos-revisao";
 import { createClient } from "@/lib/supabase/server";
 import {
   CONFIG_PADRAO,
@@ -209,4 +220,76 @@ export async function saveLabConfig(config: unknown): Promise<LabConfig> {
     .upsert({ chave: "laboratorio", valor, updated_at: new Date().toISOString() });
   if (error) throw error;
   return valor;
+}
+
+/* ===================== REVISÃO ESPAÇADA E POMODORO ===================== */
+
+/** Texto dos cartões (frente e verso) vindo da plataforma antiga. Fica só no servidor. */
+export const CARTOES = cartoesJson as Cartao[];
+export const CARTAO_POR_ID = new Map(CARTOES.map((c) => [c.id, c]));
+
+export async function getEstadosCartoes(): Promise<Map<string, EstadoCartao>> {
+  const supabase = await createClient();
+  const { data, error } = await supabase.from("estudo_cartoes").select("cartao_id,estado");
+  if (error) throw error;
+  return new Map((data ?? []).map((c) => [c.cartao_id as string, (c.estado ?? {}) as EstadoCartao]));
+}
+
+export async function revisarCartao(id: string, ok: boolean, hoje: string): Promise<void> {
+  if (!CARTAO_POR_ID.has(id)) throw new Error("cartão inexistente");
+  const supabase = await createClient();
+  const { data: atual } = await supabase.from("estudo_cartoes").select("estado").eq("cartao_id", id).maybeSingle();
+  const estado = (atual?.estado ?? {}) as EstadoCartao;
+  const agora = Date.now();
+  const prox = proximaEtapa(atual ? etapaDoCartao(estado) : -1, ok, hoje);
+  const hist = [...(estado.hist ?? []), { t: agora, ok }].slice(-50);
+  const novo: EstadoCartao = { ...estado, etapa: prox.etapa, due: msDaData(prox.vence_em), int: INTERVALOS[Math.min(prox.etapa, INTERVALOS.length - 1)], hist, last: agora, first: estado.first ?? agora };
+  const { error } = await supabase.from("estudo_cartoes").upsert({ cartao_id: id, estado: novo, atualizado_em: new Date().toISOString() });
+  if (error) throw error;
+}
+
+export async function getEstadosRevisao(): Promise<Map<string, EstadoRevisao>> {
+  const supabase = await createClient();
+  const { data, error } = await supabase.from("estudo_revisao").select("item_id,etapa,vence_em,atualizado_em");
+  if (error) throw error;
+  return new Map((data ?? []).map((e) => [e.item_id as string, e as EstadoRevisao]));
+}
+
+export async function revisarArtigo(itemId: string, etapaAtual: number, ok: boolean, hoje: string): Promise<void> {
+  const ref = itemId.replace(/^art:/, "");
+  if (!itemId.startsWith("art:") || !QUESTOES.some((q) => q.ref === ref)) throw new Error("artigo inexistente");
+  const supabase = await createClient();
+  const { data: atual } = await supabase.from("estudo_revisao").select("historico").eq("item_id", itemId).maybeSingle();
+  const prox = proximaEtapa(Math.max(0, Math.min(etapaAtual, ETAPA_FINAL)), ok, hoje);
+  const historico = [...((atual?.historico as unknown[]) ?? []), { t: new Date().toISOString(), ok }].slice(-50);
+  const { error } = await supabase
+    .from("estudo_revisao")
+    .upsert({ item_id: itemId, etapa: prox.etapa, vence_em: prox.vence_em, historico, atualizado_em: new Date().toISOString() });
+  if (error) throw error;
+}
+
+export interface Pomodoro {
+  id: string;
+  data: string;
+  minutos_efetivos: number;
+  pausas: number;
+  criado_em: string;
+}
+
+export async function getPomodoros(desde: string): Promise<Pomodoro[]> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("estudo_pomodoros")
+    .select("id,data,minutos_efetivos,pausas,criado_em")
+    .gte("data", desde)
+    .order("criado_em", { ascending: true });
+  if (error) throw error;
+  return (data ?? []) as Pomodoro[];
+}
+
+export async function createPomodoro(p: { data: string; minutos_efetivos: number; pausas: number }): Promise<Pomodoro> {
+  const supabase = await createClient();
+  const { data, error } = await supabase.from("estudo_pomodoros").insert(p).select("id,data,minutos_efetivos,pausas,criado_em").single();
+  if (error) throw error;
+  return data as Pomodoro;
 }

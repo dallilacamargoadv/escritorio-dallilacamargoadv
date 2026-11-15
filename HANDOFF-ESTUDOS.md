@@ -47,9 +47,11 @@ Princípios combinados com ela:
 | `estudo_cronograma` | blocos do plano. Replanejar apaga só os **não feitos** e grava de novo |
 | `estudo_respostas` | uma linha por tentativa (histórico completo para reincidência): `correta` é calculada no servidor, `classificacao`, `tempo_seg`, `contexto` (`treino`, `revisao`, `simulado`, `migrado`) |
 | `estudo_eventos` | fases do concurso. Só a publicação do edital tem data (20/11/2026, "previsto") |
-| `estudo_cartoes` | estado SM-2 dos flashcards migrados do Artifact (a tela de cartões vem na etapa 4) |
+| `estudo_cartoes` | estado dos cartões. Os 25 migrados tinham SM-2; ao revisar, ganham `etapa` (escada 1/3/7/15/30) e `due` em ms. Texto em `content/estudos/cartoes.json` (1.213 cartões dos 7 baralhos antigos, só no servidor) |
+| `estudo_revisao` | agenda dos artigos (`item_id` = `art:<ref da questão>`, `etapa`, `vence_em`, `historico`) |
+| `estudo_pomodoros` | blocos de foco: `data`, `minutos_efetivos`, `pausas` |
 
-Migrations: `estudos_onda1_edital_cronograma` e `estudos_onda2_respostas_eventos_cartoes`.
+Migrations: `estudos_onda1_edital_cronograma`, `estudos_onda2_respostas_eventos_cartoes` e `estudos_onda4_revisao_pomodoro`.
 
 ## 6. Migração da plataforma antiga (14/11/2026)
 
@@ -93,7 +95,7 @@ Migrations: `estudos_onda1_edital_cronograma` e `estudos_onda2_respostas_eventos
 1. Etapa 1 (feita): Início, Edital, Cronograma.
 2. Etapa 2 (feita): barras separadas, visual com sparkle, questões com tempo e classificação, migração, calendário do concurso.
 3. Etapa 3 (feita, 3a e 3b): laboratório de erros (reincidência, erros superados, tempo até corrigir, botão "copiar resumo dos meus erros" para o tutor) e índice de domínio configurável com árvore de 7 níveis.
-4. Etapa 4: revisão inteligente (fila diária de questões, cartões, artigos e erros) e pomodoro com tempo efetivo.
+4. Etapa 4 (feita, 15/11/2026, branch `feat/estudos-revisao`): aba Revisão em `/admin/estudos/revisao`. Lógica em `lib/estudos-revisao.ts`. Questões: agenda calculada das respostas (etapa = acertos firmes depois da última falha; chute e dúvida contam como falha). Artigos: a `fonte` das questões erradas; erro novo zera a etapa. Cartões: vencidos + 10 novos por dia alternando baralhos. Questão aberta com `?revisao=1` grava `contexto = revisao` e volta para a fila. Pomodoro 50/10 grava só o tempo efetivo. Melhoria pendente: os números do topo só atualizam ao recarregar a página.
 5. Etapa 5: biblioteca (PDFs no Storage com busca por texto e página, lei grifada, jurisprudência com fonte e data, questões comentadas, mapas, etiquetas, pesquisa global). Antes: conferir o limite de armazenamento do plano Supabase. Marca d'água com dados pessoais das apostilas nunca pode aparecer.
 6. Etapa 6: banca FCC (cadastro de provas reais) e prontidão.
 7. Etapa 7: redação e discursivas.
