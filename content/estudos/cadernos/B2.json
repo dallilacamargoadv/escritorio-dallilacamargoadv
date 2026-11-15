@@ -15,7 +15,8 @@
   "Material EBEJI: Contratos Administrativos (2026)",
   "Material EBEJI: Serviços Públicos (2026)",
   "Lei 8.987/1995, trechos vigentes no Planalto",
-  "Leis 8.987/1995 e 11.079/2004, trechos vigentes no Planalto"
+  "Leis 8.987/1995 e 11.079/2004, trechos vigentes no Planalto",
+  "Material EBEJI: Servidores Públicos, disposições constitucionais (2026)"
  ],
  "banca": {
   "titulo": "O que a FCC cobra em Administrativo",
@@ -5613,9 +5614,346 @@
   {
    "id": "B2-a16",
    "topico_id": "B2-08",
-   "numero": 18,
    "titulo": "Agentes públicos",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Servidores públicos, disposições constitucionais gerais (2026); CF, arts. 37 e 41 (texto vigente, conferido em 15/11/2026)",
+   "resumo": [
+    "Cargo efetivo ou emprego exige concurso de provas ou provas e títulos (CF, art. 37, II), com validade de até 2 anos, prorrogável uma vez por igual período. Sem concurso, o ato é nulo e não convalida nem pelo tempo.",
+    "Aprovado dentro das vagas tem direito subjetivo à nomeação no prazo de validade (RE 598.099). Fora das vagas, só se houver preterição arbitrária (Tema 784, RE 837.311). Preterição na ordem gera direito (Súmula 15).",
+    "Funções de confiança: só servidores efetivos. Cargos em comissão: direção, chefia e assessoramento. Temporários (art. 37, IX): lei define os casos; contratação irregular só gera salário e FGTS.",
+    "Greve: norma de eficácia limitada; aplica-se a Lei 7.783/1989 por analogia (MI 708). Dias parados podem ser descontados (Tema 531). Policiais e segurança pública não fazem greve (Tema 541).",
+    "Teto: subsídio de Ministro do STF; no Estado, subteto por Poder. Procuradores estaduais e municipais seguem o teto do Judiciário estadual (90,25%). Acumulação só nas exceções do art. 37, XVI, com compatibilidade de horários e respeito ao teto."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: o concurso como porta de entrada",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Agente público é toda pessoa que exerce função pública, com ou sem vínculo permanente e com ou sem remuneração. A Constituição organiza o acesso a essas funções pela <b>impessoalidade</b>: quem ocupa cargo efetivo entra pelo mérito, em disputa aberta a todos, e não pela escolha de quem manda."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, I a IV",
+       "texto": "I - os cargos, empregos e funções públicas são acessíveis aos brasileiros que preencham os requisitos estabelecidos em lei, assim como aos estrangeiros, na forma da lei;\nII - a investidura em cargo ou emprego público depende de ==aprovação prévia em concurso público de provas ou de provas e títulos==, de acordo com a natureza e a complexidade do cargo ou emprego, na forma prevista em lei, ==ressalvadas as nomeações para cargo em comissão== declarado em lei de livre nomeação e exoneração;\nIII - o prazo de validade do concurso público será de ==até dois anos==, ==prorrogável uma vez, por igual período==;\nIV - durante o prazo improrrogável previsto no edital de convocação, aquele aprovado em concurso público de provas ou de provas e títulos será convocado ==com prioridade sobre novos concursados== para assumir cargo ou emprego, na carreira;"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, § 2º",
+       "texto": "§ 2º A não observância do disposto nos incisos II e III implicará a ==nulidade do ato== e a ==punição da autoridade responsável==, nos termos da lei."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Sem concurso não há prazo que salve",
+       "html": "A nomeação sem concurso é nula e <b>não se estabiliza</b> pelo tempo: o prazo do art. 54 da Lei 9.784 não protege ato que afronta diretamente a CF (aula 9). Também não se aplica a <b>teoria do fato consumado</b> a quem tomou posse por decisão judicial precária."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Limite de idade",
+         "sub": "concurso",
+         "verso": "Só é legítimo quando justificado pela natureza das atribuições do cargo e previsto em lei.",
+         "detalhe": "STF, ARE 678.112 (repercussão geral). Súmula 683: a idade se verifica na inscrição."
+        },
+        {
+         "frente": "Exame psicotécnico",
+         "sub": "SV 44",
+         "verso": "Só por lei se pode sujeitar a exame psicotécnico a habilitação de candidato a cargo público.",
+         "detalhe": "E com critérios objetivos e possibilidade de recurso."
+        },
+        {
+         "frente": "Tatuagem",
+         "sub": "RE 898.450",
+         "verso": "O edital não pode restringir candidatos com tatuagem, salvo conteúdo que viole valores constitucionais.",
+         "detalhe": "STF, Plenário (repercussão geral)."
+        },
+        {
+         "frente": "Correção de prova",
+         "sub": "Judiciário",
+         "verso": "O juiz não substitui a banca para avaliar respostas e notas.",
+         "detalhe": "Só controla legalidade, como a cobrança de conteúdo fora do edital."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Direito à nomeação.</b> A aprovação, sozinha, já foi vista como mera expectativa. Hoje o STF reconhece direito subjetivo em três situações:"
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Dentro das vagas",
+         "sub": "RE 598.099",
+         "texto": "Aprovado dentro do número de vagas do edital tem <b>direito subjetivo</b> à nomeação no prazo de validade. A Administração escolhe o momento, e só em situação excepcionalíssima, superveniente e motivada pode deixar de nomear."
+        },
+        {
+         "titulo": "Preterição na ordem",
+         "sub": "Súmula 15 do STF",
+         "texto": "Se alguém pior classificado é nomeado antes, o preterido passa a ter direito à nomeação."
+        },
+        {
+         "titulo": "Fora das vagas",
+         "sub": "Tema 784, RE 837.311",
+         "texto": "Surgir vaga ou abrir novo concurso no prazo de validade <b>não</b> gera direito automático. Só há direito se houver <b>preterição arbitrária e imotivada</b>, provada pelo candidato."
+        }
+       ]
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Tema 784, RE 837.311 (Info 811)",
+       "tese": "O surgimento de novas vagas ou a abertura de novo concurso para o mesmo cargo, durante o prazo de validade do certame anterior, não gera automaticamente o direito à nomeação dos candidatos aprovados fora das vagas previstas no edital, ressalvadas as hipóteses de preterição arbitrária e imotivada por parte da administração, caracterizada por comportamento tácito ou expresso do Poder Público capaz de revelar a inequívoca necessidade de nomeação do aprovado durante o período de validade do certame, a ser demonstrada de forma cabal pelo candidato."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Nomeado por ordem judicial",
+       "html": "Quem toma posse tarde por decisão judicial <b>não</b> tem direito a indenização pelo tempo em que deveria ter sido nomeado, salvo arbitrariedade flagrante (STF, RE 724.347, 26/2/2015, Info 775)."
+      }
+     ]
+    },
+    {
+     "titulo": "Comissionados, temporários, greve e associação",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, V, VIII e IX",
+       "texto": "V - as funções de confiança, exercidas ==exclusivamente por servidores ocupantes de cargo efetivo==, e os cargos em comissão, a serem preenchidos por servidores de carreira nos casos, condições e percentuais mínimos previstos em lei, destinam-se apenas às atribuições de ==direção, chefia e assessoramento==;\nVIII - a lei reservará percentual dos cargos e empregos públicos para as pessoas portadoras de deficiência e definirá os critérios de sua admissão;\nIX - a lei estabelecerá os casos de contratação por tempo determinado para atender a ==necessidade temporária de excepcional interesse público==;"
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Função de confiança",
+        "Cargo em comissão"
+       ],
+       "linhas": [
+        [
+         "Quem ocupa",
+         "Só servidor de cargo efetivo",
+         "Qualquer pessoa, respeitado o percentual mínimo de servidores de carreira fixado em lei"
+        ],
+        [
+         "Para quê",
+         "Direção, chefia e assessoramento",
+         "Direção, chefia e assessoramento"
+        ],
+        [
+         "Vínculo",
+         "Um encargo a mais para quem já é servidor",
+         "Livre nomeação e exoneração (ad nutum)"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Comissão não é para tudo",
+       "html": "Criar cargo em comissão para atividade técnica ou burocrática, que não seja de direção, chefia ou assessoramento, é inconstitucional; o controle disso é de <b>legalidade</b>, não de mérito. E o nepotismo continua vedado pela SV 13 (aula 9)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 765.320/MG, Rel. Min. Teori Zavascki, 15/9/2016, repercussão geral",
+       "tese": "A contratação temporária em desconformidade com o art. 37, IX, da CF não gera efeitos jurídicos válidos, salvo o direito aos salários do período trabalhado e ao levantamento do FGTS (Lei 8.036/1990, art. 19-A)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Tema 551, RE 1.066.677, red. p/ acórdão Min. Alexandre de Moraes, 22/5/2020",
+       "tese": "Servidores temporários não fazem jus a décimo terceiro salário e férias remuneradas acrescidas do terço constitucional, salvo (I) expressa previsão legal e/ou contratual em sentido contrário, ou (II) comprovado desvirtuamento da contratação temporária pela Administração Pública, em razão de sucessivas e reiteradas renovações e/ou prorrogações."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, VI e VII",
+       "texto": "VI - é garantido ao servidor público civil o direito à livre associação sindical;\nVII - o direito de greve será exercido nos termos e nos limites definidos em ==lei específica==;"
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Eficácia limitada",
+         "titulo": "Sem lei, aplica-se a do setor privado",
+         "texto": "O art. 37, VII, depende de lei específica que nunca veio. O STF mandou aplicar, no que couber, a <b>Lei 7.783/1989</b> (greve no setor privado) até o Congresso legislar (MI 708)."
+        },
+        {
+         "tag": "Tema 531",
+         "titulo": "Desconto dos dias parados",
+         "texto": "A Administração <b>deve</b> descontar os dias de paralisação, porque o vínculo fica suspenso; pode haver compensação por acordo. Não cabe desconto se a greve foi provocada por conduta ilícita do Poder Público (RE 693.456, Info 845)."
+        },
+        {
+         "tag": "Tema 541",
+         "titulo": "Segurança pública não faz greve",
+         "texto": "É vedada a greve, sob qualquer forma, a policiais civis e a todos os servidores que atuem diretamente na segurança pública; o Poder Público deve participar de mediação com as categorias (ARE 654.432, Info 860)."
+        },
+        {
+         "tag": "Competência",
+         "titulo": "Quem julga a greve",
+         "texto": "A Justiça comum julga a abusividade de greve de servidores, inclusive celetistas da direta, autarquias e fundações (RE 846.854, Info 871)."
+        },
+        {
+         "tag": "Estágio probatório",
+         "titulo": "Sem punição diferente",
+         "texto": "Norma que pune de forma especial o servidor em estágio probatório por aderir à greve é inconstitucional: fere a isonomia."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Remuneração, teto, acumulação e estabilidade",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, X",
+       "texto": "X - a remuneração dos servidores públicos e o subsídio de que trata o § 4º do art. 39 somente poderão ser fixados ou alterados por ==lei específica==, observada a iniciativa privativa em cada caso, assegurada ==revisão geral anual==, sempre na mesma data e sem distinção de índices;"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 710.293, Rel. Min. Luiz Fux, 16/9/2020, repercussão geral, Tema 600 (Info 998)",
+       "tese": "O não encaminhamento de projeto de lei de revisão anual dos vencimentos dos servidores públicos, previsto no inciso X do art. 37 da CF/1988, não gera direito subjetivo a indenização."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, XI",
+       "texto": "XI - a remuneração e o subsídio dos ocupantes de cargos, funções e empregos públicos da administração direta, autárquica e fundacional, dos membros de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios, dos detentores de mandato eletivo e dos demais agentes políticos e os proventos, pensões ou outra espécie remuneratória, percebidos cumulativamente ou não, incluídas as vantagens pessoais ou de qualquer outra natureza, não poderão exceder o subsídio mensal, em espécie, dos ==Ministros do Supremo Tribunal Federal==, aplicando-se como limite, nos Municípios, o subsídio do Prefeito, e nos Estados e no Distrito Federal, o subsídio mensal do Governador no âmbito do Poder Executivo, o subsídio dos Deputados Estaduais e Distritais no âmbito do Poder Legislativo e o subsidio dos Desembargadores do Tribunal de Justiça, limitado a ==noventa inteiros e vinte e cinco centésimos por cento== do subsídio mensal, em espécie, dos Ministros do Supremo Tribunal Federal, no âmbito do Poder Judiciário, aplicável este limite aos membros do Ministério Público, ==aos Procuradores e aos Defensores Públicos==;"
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Onde",
+        "Teto"
+       ],
+       "linhas": [
+        [
+         "Geral (todos)",
+         "Subsídio de Ministro do STF"
+        ],
+        [
+         "Municípios",
+         "Subsídio do Prefeito"
+        ],
+        [
+         "Estados e DF, Executivo",
+         "Subsídio do Governador"
+        ],
+        [
+         "Estados e DF, Legislativo",
+         "Subsídio dos Deputados Estaduais e Distritais"
+        ],
+        [
+         "Estados e DF, Judiciário",
+         "Subsídio dos Desembargadores, limitado a 90,25% do Ministro do STF; vale também para MP, <b>Procuradores</b> e Defensores"
+        ]
+       ]
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 663.696/MG, Rel. Min. Luiz Fux, 28/2/2019 (Info 932)",
+       "tese": "A expressão \"Procuradores\", contida na parte final do inciso XI do art. 37 da Constituição da República, compreende os procuradores municipais, uma vez que estes se inserem nas funções essenciais à Justiça, estando, portanto, submetidos ao teto de 90,25% do subsídio mensal, em espécie, dos ministros do STF."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 6.135/GO e outras, Rel. Min. Rosa Weber, 19/10/2020 (Info 995)",
+       "tese": "É constitucional a percepção de honorários de sucumbência por procuradores de estados-membros, observado o teto previsto no art. 37, XI, da Constituição Federal no somatório total às demais verbas remuneratórias recebidas mensalmente."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Como o teto é calculado",
+       "html": "O teto incide sobre a remuneração <b>bruta</b>; os tributos incidem depois do abate-teto (RE 675.978, Info 781). Vantagens pessoais entram na conta (Tema 257). Parcelas <b>indenizatórias</b> previstas em lei ficam fora (art. 37, § 11). Magistrados estaduais não se sujeitam ao subteto de 90,25% (ADI 3.854 MC)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, XVI e XVII",
+       "texto": "XVI - é vedada a acumulação remunerada de cargos públicos, exceto, quando houver ==compatibilidade de horários==, observado em qualquer caso o disposto no ==inciso XI==:\na) a de dois cargos de professor;\nb) a de um cargo de professor com outro de qualquer natureza;\nc) a de dois cargos ou empregos privativos de profissionais de saúde, com profissões regulamentadas;\nXVII - a proibição de acumular estende-se a empregos e funções e abrange autarquias, fundações, ==empresas públicas, sociedades de economia mista==, suas subsidiárias, e ==sociedades controladas==, direta ou indiretamente, pelo poder público;"
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Mudou em 2025: professor + qualquer cargo",
+       "html": "A <b>EC 138/2025</b> trocou a alínea b: antes era professor com outro cargo <b>técnico ou científico</b>; hoje é professor com outro <b>de qualquer natureza</b> (texto conferido no Planalto). Questões e materiais antigos ainda trazem a redação anterior. Continua exigida a compatibilidade de horários e o respeito ao teto, e a proibição alcança toda a indireta, inclusive estatais e controladas (XVII)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 41, caput e §§ 1º e 4º",
+       "texto": "Art. 41. São estáveis após ==três anos de efetivo exercício== os servidores nomeados para ==cargo de provimento efetivo== em virtude de ==concurso público==.\n§ 1º O servidor público estável só perderá o cargo:\nI - em virtude de sentença judicial transitada em julgado;\nII - mediante processo administrativo em que lhe seja assegurada ampla defesa;\nIII - mediante procedimento de avaliação periódica de desempenho, na forma de ==lei complementar==, assegurada ampla defesa.\n§ 4º Como condição para a aquisição da estabilidade, é obrigatória a ==avaliação especial de desempenho== por comissão instituída para essa finalidade."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Estabilidade é do cargo efetivo",
+       "html": "Só se estabiliza quem foi nomeado para <b>cargo efetivo</b> por concurso, depois de <b>3 anos</b> de exercício e da <b>avaliação especial de desempenho</b>. Comissionado e empregado público não adquirem a estabilidade do art. 41. Invalidada a demissão, o estável é <b>reintegrado</b>; extinto o cargo, fica em <b>disponibilidade</b> com remuneração proporcional (§§ 2º e 3º)."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "Validade do concurso: <b>até 2 anos</b>, prorrogável <b>uma vez</b>, por <b>igual</b> período.<br>Função de confiança: <b>só efetivo</b>. Cargo em comissão: qualquer pessoa, com percentual mínimo de carreira.<br>Dentro das vagas: <b>direito</b>. Fora: só com <b>preterição arbitrária</b>.<br>Greve: Lei 7.783 por analogia; desconto dos dias parados é a regra.<br>Procurador estadual: teto do <b>Judiciário estadual</b> (90,25%).<br>Estabilidade: <b>3 anos</b> + avaliação especial; perde por sentença transitada, PAD ou avaliação periódica (LC)."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "O prazo de validade do concurso é de até dois anos, prorrogável uma vez por igual período.",
+         "v": true,
+         "porque": "CF, art. 37, III."
+        },
+        {
+         "texto": "Candidato aprovado fora do número de vagas tem direito à nomeação sempre que for aberto novo concurso no prazo de validade.",
+         "v": false,
+         "porque": "Tema 784: só com preterição arbitrária e imotivada."
+        },
+        {
+         "texto": "Funções de confiança podem ser exercidas por pessoas sem vínculo com a Administração.",
+         "v": false,
+         "porque": "Art. 37, V: exclusivamente por servidores de cargo efetivo."
+        },
+        {
+         "texto": "Os dias de greve do servidor devem ser descontados, salvo se a greve decorreu de conduta ilícita do Poder Público.",
+         "v": true,
+         "porque": "Tema 531."
+        },
+        {
+         "texto": "Procuradores do Estado submetem-se ao teto do subsídio do Governador.",
+         "v": false,
+         "porque": "Art. 37, XI, parte final: teto do Judiciário estadual (90,25%)."
+        },
+        {
+         "texto": "O servidor estável pode perder o cargo mediante avaliação periódica de desempenho, na forma de lei complementar.",
+         "v": true,
+         "porque": "Art. 41, § 1º, III."
+        },
+        {
+         "texto": "Nomeação sem concurso para cargo efetivo convalida-se após cinco anos.",
+         "v": false,
+         "porque": "Art. 37, § 2º: nulidade; não há decadência contra afronta direta à CF."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-33",
+    "adm-cad-34"
+   ],
+   "numero": 18
   },
   {
    "id": "B2-a17",
@@ -5904,6 +6242,26 @@
   [
    "Sociedade de propósito específico",
    "Empresa constituída para implantar e gerir a PPP; a Administração não pode ter a maioria do capital votante."
+  ],
+  [
+   "Agente público",
+   "Toda pessoa que exerce função pública, com ou sem vínculo permanente e com ou sem remuneração."
+  ],
+  [
+   "Função de confiança",
+   "Encargo de direção, chefia ou assessoramento exercido só por servidor de cargo efetivo (CF, art. 37, V)."
+  ],
+  [
+   "Preterição",
+   "Nomeação de candidato pior classificado antes de outro, que gera a este o direito à nomeação (Súmula 15 do STF)."
+  ],
+  [
+   "Abate-teto",
+   "Corte da parcela da remuneração bruta que excede o teto constitucional (CF, art. 37, XI)."
+  ],
+  [
+   "Estabilidade",
+   "Garantia do servidor de cargo efetivo, após 3 anos e avaliação especial, de só perder o cargo nas hipóteses do art. 41, § 1º."
   ]
  ]
 }
