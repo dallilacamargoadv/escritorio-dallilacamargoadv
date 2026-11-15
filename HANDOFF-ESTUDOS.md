@@ -78,11 +78,21 @@ Migrations: `estudos_onda1_edital_cronograma` e `estudos_onda2_respostas_eventos
 - Bloco `matriz`: os rótulos "Típica/Atípica" e o botão "Destacar só as típicas" estão fixos no código (foram feitos para a aula de separação de Poderes). Para outra matéria, use `vf` ou torne os rótulos configuráveis antes.
 - Migration: `estudos_onda3_cadernos_tec`.
 
+## 7c. Laboratório de erros (etapa 3b, 15/11/2026)
+
+- Rota `/admin/estudos/laboratorio` (link na barra lateral). Cálculo puro em `lib/estudos-laboratorio.ts`, tela em `app/(admin)/admin/estudos/laboratorio/page.tsx`, partes interativas em `components/estudos/LaboratorioClient.tsx` (árvore, ajuste de níveis, copiar resumo).
+- Filtros por URL: `periodo` (45 padrão, 90, tudo) e `materia`. Entram as questões respondidas no período, mas o nível usa o histórico inteiro da questão.
+- **Erro** = tentativa que não é acerto firme (erro, chute ou dúvida). **Superado** = última tentativa foi acerto firme. **Repetido** = N ou mais falhas na mesma questão (padrão 2). **Tempo até corrigir** = dias do primeiro erro até o acerto firme que encerrou a última falha.
+- **Índice de domínio, 7 níveis (aprovados por ela em 15/11):** 0 Não visto, 1 Contato (aula estudada, sem questão), 2 Errando (última tentativa não firme), 3 Oscilando (firme depois de erro, uma vez), 4 Acerto firme, 5 Consolidado (N acertos firmes seguidos em dias diferentes, padrão 2), 6 Dominado (consolidado e firme D dias depois, padrão 30). Árvore matéria → tema → questão; tema e matéria = média dos níveis das questões respondidas, arredondada para baixo.
+- Configuração em `estudo_config`, chave `laboratorio` (`acertosConsolidar`, `diasDominado`, `vezesReincidencia`), API `PUT /api/admin/estudos/laboratorio`. Sem migration nova.
+- "Copiar resumo dos meus erros" gera texto para o Projeto do tutor no claude.ai, com enunciado curto, anotação dela e pedido de aula em cadeia.
+- `NIVEL_COR` fica no lib (não no arquivo "use client"), porque a página do servidor também usa.
+
 ## 8. Roteiro
 
 1. Etapa 1 (feita): Início, Edital, Cronograma.
 2. Etapa 2 (feita): barras separadas, visual com sparkle, questões com tempo e classificação, migração, calendário do concurso.
-3. Etapa 3: laboratório de erros (reincidência, erros superados, tempo até corrigir, botão "copiar resumo dos meus erros" para o tutor) e índice de domínio configurável com árvore de 7 níveis.
+3. Etapa 3 (feita, 3a e 3b): laboratório de erros (reincidência, erros superados, tempo até corrigir, botão "copiar resumo dos meus erros" para o tutor) e índice de domínio configurável com árvore de 7 níveis.
 4. Etapa 4: revisão inteligente (fila diária de questões, cartões, artigos e erros) e pomodoro com tempo efetivo.
 5. Etapa 5: biblioteca (PDFs no Storage com busca por texto e página, lei grifada, jurisprudência com fonte e data, questões comentadas, mapas, etiquetas, pesquisa global). Antes: conferir o limite de armazenamento do plano Supabase. Marca d'água com dados pessoais das apostilas nunca pode aparecer.
 6. Etapa 6: banca FCC (cadastro de provas reais) e prontidão.

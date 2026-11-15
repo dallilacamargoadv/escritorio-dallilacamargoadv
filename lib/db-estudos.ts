@@ -1,5 +1,6 @@
 import questoesJson from "@/content/estudos/questoes.json";
 import type { Classificacao, Questao, Resposta } from "@/lib/estudos-desempenho";
+import { normalizarLabConfig, type LabConfig } from "@/lib/estudos-laboratorio";
 import { createClient } from "@/lib/supabase/server";
 import {
   CONFIG_PADRAO,
@@ -189,4 +190,23 @@ export async function updateEvento(id: string, patch: Partial<Omit<EventoConcurs
     .single();
   if (error) throw error;
   return data as EventoConcurso;
+}
+
+/* ===================== LABORATÓRIO DE ERROS ===================== */
+
+export async function getLabConfig(): Promise<LabConfig> {
+  const supabase = await createClient();
+  const { data, error } = await supabase.from("estudo_config").select("valor").eq("chave", "laboratorio").maybeSingle();
+  if (error) throw error;
+  return normalizarLabConfig(data?.valor);
+}
+
+export async function saveLabConfig(config: unknown): Promise<LabConfig> {
+  const supabase = await createClient();
+  const valor = normalizarLabConfig(config);
+  const { error } = await supabase
+    .from("estudo_config")
+    .upsert({ chave: "laboratorio", valor, updated_at: new Date().toISOString() });
+  if (error) throw error;
+  return valor;
 }
