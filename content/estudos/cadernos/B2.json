@@ -11,7 +11,8 @@
   "Material EBEJI: Atos Administrativos (2026)",
   "Material EBEJI: O Processo Administrativo Federal (2026)",
   "Material EBEJI: Licitações Públicas, partes 1 e 2 (2026)",
-  "Lei 14.133/2021, texto vigente"
+  "Lei 14.133/2021, texto vigente",
+  "Material EBEJI: Contratos Administrativos (2026)"
  ],
  "banca": {
   "titulo": "O que a FCC cobra em Administrativo",
@@ -4580,9 +4581,347 @@
   {
    "id": "B2-a14",
    "topico_id": "B2-06",
-   "numero": 15,
    "titulo": "Contratos administrativos",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Contratos Administrativos, introdução a prerrogativas (2026); Lei 14.133/2021, arts. 94, 98, 104 a 107, 120, 122, 124 a 126, 130, 137, 138 e 156 (texto vigente, conferido em 15/11/2026)",
+   "resumo": [
+    "Contrato administrativo é o ajuste em que a Administração age como poder público, sob regime de direito público: há verticalidade e cláusulas exorbitantes, mesmo que não escritas no instrumento.",
+    "Características: formal (escrito, salvo pequenas compras de pronto pagamento), de adesão, oneroso, comutativo, intuitu personae (subcontratação só parcial e autorizada) e precedido de licitação, salvo contratação direta. Eficácia depende da divulgação no PNCP (20 dias úteis se licitação, 10 se contratação direta).",
+    "Prerrogativas do art. 104: modificar e extinguir unilateralmente, fiscalizar, sancionar e ocupar provisoriamente. As cláusulas econômico-financeiras nunca mudam sem a concordância do contratado.",
+    "Alteração unilateral: até 25% de acréscimo ou supressão; reforma de edifício ou equipamento, até 50% de acréscimo; nunca transfigurar o objeto; reequilíbrio no mesmo termo aditivo.",
+    "A exceção do contrato não cumprido é mitigada: o contratado pode pedir a extinção ou suspender após atraso de pagamento superior a 2 meses ou suspensão superior a 3 meses, salvo calamidade, guerra ou grave perturbação da ordem."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: o contrato com o Estado de cima",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Ato administrativo é vontade de um lado só; contrato precisa da vontade das duas partes. Mas, quando a Administração contrata <b>como poder público</b>, ela não fica no mesmo plano do particular: a supremacia do interesse público lhe dá poderes que nenhum contratante privado teria. Por isso a relação é <b>vertical</b>, e esses poderes se chamam <b>cláusulas exorbitantes</b> (exorbitam o direito comum)."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Contrato administrativo",
+        "Contrato de direito privado da Administração"
+       ],
+       "linhas": [
+        [
+         "Regime",
+         "Predominantemente público",
+         "Predominantemente privado"
+        ],
+        [
+         "Posição da Administração",
+         "Poder público (verticalidade)",
+         "Em regra, igualdade jurídica"
+        ],
+        [
+         "Cláusulas exorbitantes",
+         "Presentes mesmo que não escritas",
+         "Aplicam-se no que couber, salvo incompatibilidade"
+        ],
+        [
+         "Exemplos",
+         "Obras, serviços, compras, concessões",
+         "Locação em que a Administração é locatária, seguro, financiamento"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Estatais ficam de fora",
+       "html": "Os contratos de empresas públicas e sociedades de economia mista seguem a Lei 13.303/2016, não a 14.133 (art. 1º, § 1º, visto na aula 13)."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Formal",
+         "sub": "escrito",
+         "verso": "Contrato verbal é nulo, salvo pequenas compras ou serviços de pronto pagamento de pequeno valor (o teto é atualizado por decreto).",
+         "detalhe": "O instrumento pode ser substituído por nota de empenho, carta-contrato ou ordem de serviço na dispensa por valor e nas compras de entrega imediata sem obrigações futuras (art. 95)."
+        },
+        {
+         "frente": "De adesão",
+         "sub": "cláusulas prontas",
+         "verso": "A Administração fixa as cláusulas; o particular aceita ou não. A minuta do contrato vem anexada ao edital.",
+         "detalhe": "As cláusulas necessárias estão no art. 92."
+        },
+        {
+         "frente": "Intuitu personae",
+         "sub": "pessoal",
+         "verso": "Executa quem foi escolhido na licitação. Morte, falência ou dissolução extinguem o contrato.",
+         "detalhe": "Subcontratação só parcial e até o limite autorizado pela Administração, sem afastar a responsabilidade do contratado (art. 122)."
+        },
+        {
+         "frente": "Comutativo e oneroso",
+         "sub": "equilíbrio",
+         "verso": "Prestações equivalentes e conhecidas desde o início, com remuneração.",
+         "detalhe": "A equação econômico-financeira inicial é protegida durante toda a execução."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 94, caput e § 1º",
+       "texto": "Art. 94. A divulgação no Portal Nacional de Contratações Públicas (PNCP) é ==condição indispensável para a eficácia do contrato e de seus aditamentos== e deverá ocorrer nos seguintes prazos, contados da data de sua assinatura:\nI - 20 (vinte) dias úteis, no caso de licitação;\nII - 10 (dez) dias úteis, no caso de contratação direta.\n§ 1º Os contratos celebrados em caso de urgência terão ==eficácia a partir de sua assinatura== e deverão ser publicados nos prazos previstos nos incisos I e II do caput deste artigo, ==sob pena de nulidade==."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Duração.</b> A regra é a vigência prevista no edital, com crédito orçamentário e, se passar de um exercício, previsão no plano plurianual (art. 105). Serviços e fornecimentos contínuos podem ter contrato de até 5 anos (art. 106) e prorrogações sucessivas até <b>10 anos</b>, se o edital previr e as condições continuarem vantajosas (art. 107)."
+      }
+     ]
+    },
+    {
+     "titulo": "As prerrogativas e a alteração do contrato",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 104",
+       "texto": "Art. 104. O regime jurídico dos contratos instituído por esta Lei confere à Administração, em relação a eles, as prerrogativas de:\nI - modificá-los, unilateralmente, para melhor adequação às finalidades de interesse público, ==respeitados os direitos do contratado==;\nII - extingui-los, unilateralmente, nos casos especificados nesta Lei;\nIII - fiscalizar sua execução;\nIV - aplicar sanções motivadas pela inexecução total ou parcial do ajuste;\nV - ocupar provisoriamente bens móveis e imóveis e utilizar pessoal e serviços vinculados ao objeto do contrato nas hipóteses de: a) ==risco à prestação de serviços essenciais==; b) necessidade de ==acautelar apuração administrativa de faltas contratuais== pelo contratado, inclusive após extinção do contrato.\n§ 1º As cláusulas econômico-financeiras e monetárias dos contratos não poderão ser alteradas ==sem prévia concordância do contratado==.\n§ 2º Na hipótese prevista no inciso I do caput deste artigo, as cláusulas econômico-financeiras do contrato deverão ser ==revistas para que se mantenha o equilíbrio contratual==."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "MEFiSO",
+       "html": "As 5 prerrogativas: <b>M</b>odificar, <b>E</b>xtinguir, <b>Fi</b>scalizar, <b>S</b>ancionar e <b>O</b>cupar provisoriamente. A Administração mexe no <b>objeto</b>, nunca sozinha no <b>preço</b>: se a mudança unilateral pesa no bolso do contratado, o equilíbrio é recomposto."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 124, I",
+       "texto": "Art. 124. Os contratos regidos por esta Lei poderão ser alterados, com as devidas justificativas, nos seguintes casos:\nI - unilateralmente pela Administração: a) quando houver ==modificação do projeto ou das especificações==, para melhor adequação técnica a seus objetivos; b) quando for necessária a modificação do valor contratual em decorrência de ==acréscimo ou diminuição quantitativa== de seu objeto, nos limites permitidos por esta Lei;"
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Qualitativa (art. 124, I, a)",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Projeto ou especificação",
+           "sub": "muda a técnica"
+          },
+          {
+           "titulo": "Mesmo objeto",
+           "sub": "sem transfigurar"
+          }
+         ],
+         "texto": "A Administração altera o <b>projeto ou as especificações</b> para melhor adequação técnica. O objeto continua o mesmo; muda o como."
+        },
+        {
+         "rotulo": "Quantitativa (art. 124, I, b)",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Até 25%",
+           "sub": "acréscimo ou supressão"
+          },
+          {
+           "titulo": "Até 50%",
+           "sub": "acréscimo em reforma"
+          }
+         ],
+         "texto": "Aumenta ou diminui a <b>quantidade</b> do objeto, dentro dos limites do art. 125. O contratado é obrigado a aceitar nas mesmas condições."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, arts. 125, 126 e 130",
+       "texto": "Art. 125. Nas alterações unilaterais a que se refere o inciso I do caput do art. 124 desta Lei, o contratado será obrigado a aceitar, nas mesmas condições contratuais, acréscimos ou supressões de até ==25% (vinte e cinco por cento)== do valor inicial atualizado do contrato que se fizerem nas obras, nos serviços ou nas compras, e, no caso de reforma de edifício ou de equipamento, o limite para os acréscimos será de ==50% (cinquenta por cento)==.\nArt. 126. As alterações unilaterais a que se refere o inciso I do caput do art. 124 desta Lei ==não poderão transfigurar o objeto da contratação==.\nArt. 130. Caso haja alteração unilateral do contrato que aumente ou diminua os encargos do contratado, a Administração deverá restabelecer, ==no mesmo termo aditivo==, o ==equilíbrio econômico-financeiro inicial==."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O 50% é só para acréscimo",
+       "html": "Na reforma de edifício ou de equipamento, o limite de <b>50%</b> vale só para <b>acréscimos</b>. Supressão unilateral continua limitada a 25%. Se o contratado já comprou o material da parte suprimida, a Administração paga o custo comprovado (art. 129)."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 124, II, d",
+       "texto": "d) para restabelecer o equilíbrio econômico-financeiro inicial do contrato em caso de ==força maior, caso fortuito ou fato do príncipe== ou em decorrência de ==fatos imprevisíveis ou previsíveis de consequências incalculáveis==, que inviabilizem a execução do contrato tal como pactuado, respeitada, em qualquer caso, a repartição objetiva de risco estabelecida no contrato."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Álea administrativa",
+         "titulo": "Fato do príncipe",
+         "texto": "Medida geral do Estado, alheia ao contrato, que o onera indiretamente (ex.: aumento de tributo). O art. 134 manda rever o preço, para mais ou para menos, quando tributo ou encargo legal criado ou alterado depois da proposta repercutir nele."
+        },
+        {
+         "tag": "Álea administrativa",
+         "titulo": "Alteração unilateral",
+         "texto": "A própria Administração, como contratante, muda o objeto. Gera reequilíbrio obrigatório no mesmo aditivo (art. 130)."
+        },
+        {
+         "tag": "Álea extraordinária",
+         "titulo": "Caso fortuito e força maior",
+         "texto": "Evento imprevisível ou inevitável, alheio às partes. Admite reequilíbrio por acordo (art. 124, II, d)."
+        },
+        {
+         "tag": "Teoria da imprevisão",
+         "titulo": "Fato imprevisível",
+         "texto": "Fato imprevisível, ou previsível de consequências incalculáveis, que torna a execução excessivamente onerosa. Também reequilibra por acordo, respeitada a matriz de riscos."
+        },
+        {
+         "tag": "Matriz de riscos",
+         "titulo": "Risco já alocado",
+         "texto": "Se o evento estava na matriz como risco do contratado, considera-se mantido o equilíbrio, salvo alteração unilateral e mudança de tributos (art. 103, § 5º)."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Prazo para pedir o reequilíbrio",
+       "html": "O pedido de reequilíbrio deve ser feito <b>durante a vigência</b> e antes de eventual prorrogação. A extinção do contrato não impede reconhecer o desequilíbrio, pago por termo indenizatório (art. 131). Reajuste e repactuação previstos no contrato se registram por simples <b>apostila</b>, sem aditivo (art. 136)."
+      }
+     ]
+    },
+    {
+     "titulo": "Fiscalização, extinção, garantias e sanções",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 120",
+       "texto": "Art. 120. O contratado será responsável pelos danos causados diretamente à Administração ou a terceiros em razão da execução do contrato, e ==não excluirá nem reduzirá essa responsabilidade a fiscalização== ou o acompanhamento pelo contratante."
+      },
+      {
+       "t": "texto",
+       "html": "A execução é acompanhada por fiscal designado, que pode contar com terceiros contratados para assisti-lo (art. 117). O contratado mantém <b>preposto</b> aceito pela Administração no local (art. 118)."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, arts. 137, caput, e 138, I e II",
+       "texto": "Art. 137. Constituirão motivos para extinção do contrato, a qual deverá ser ==formalmente motivada== nos autos do processo, assegurados o ==contraditório e a ampla defesa==, as seguintes situações:\nArt. 138. ==A extinção do contrato poderá ser==:\nI - determinada por ato unilateral e escrito da Administração, ==exceto no caso de descumprimento decorrente de sua própria conduta==;\nII - consensual, por acordo entre as partes, por ==conciliação==, por ==mediação== ou por ==comitê de resolução de disputas==, desde que haja interesse da Administração;"
+      },
+      {
+       "t": "texto",
+       "html": "<b>Exceção do contrato não cumprido.</b> No direito privado, quem não recebe pode parar de cumprir. Na Lei 14.133, o contratado tem direito à <b>extinção</b> do contrato, entre outras hipóteses, quando:"
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 137, § 2º, II a IV, e § 3º",
+       "texto": "§ 2º O contratado terá direito à extinção do contrato nas seguintes hipóteses:\nII - suspensão de execução do contrato, por ordem escrita da Administração, por ==prazo superior a 3 (três) meses==;\nIII - repetidas suspensões que totalizem ==90 (noventa) dias úteis==, independentemente do pagamento obrigatório de indenização pelas sucessivas e contratualmente imprevistas desmobilizações e mobilizações e outras previstas;\nIV - ==atraso superior a 2 (dois) meses==, contado da emissão da nota fiscal, dos pagamentos ou de parcelas de pagamentos devidos pela Administração por despesas de obras, serviços ou fornecimentos;\n§ 3º As hipóteses de extinção a que se referem os incisos II, III e IV do § 2º deste artigo observarão as seguintes disposições: I - não serão admitidas em caso de ==calamidade pública, de grave perturbação da ordem interna ou de guerra==, bem como quando decorrerem de ato ou fato que o contratado tenha praticado, do qual tenha participado ou para o qual tenha contribuído; II - assegurarão ao contratado o direito de ==optar pela suspensão do cumprimento das obrigações== assumidas até a normalização da situação, admitido o restabelecimento do equilíbrio econômico-financeiro do contrato, na forma da alínea “d” do inciso II do caput do art. 124 desta Lei."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Concessão é diferente",
+       "html": "Na concessão e na permissão de serviço público, a concessionária <b>não pode</b> suspender o serviço por inadimplemento do poder concedente: precisa de ação judicial e só para após o trânsito em julgado (Lei 8.987/1995, art. 39, parágrafo único; continuidade do serviço público)."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 98",
+       "texto": "Art. 98. Nas contratações de obras, serviços e fornecimentos, a garantia poderá ser de ==até 5% (cinco por cento) do valor inicial do contrato==, autorizada a majoração desse percentual para ==até 10% (dez por cento)==, desde que justificada mediante análise da complexidade técnica e dos riscos envolvidos."
+      },
+      {
+       "t": "texto",
+       "html": "O contratado escolhe a modalidade de garantia: caução em dinheiro ou títulos da dívida pública, seguro-garantia, fiança bancária ou título de capitalização (art. 96, § 1º). Em obras e serviços de engenharia de grande vulto, pode-se exigir seguro-garantia com cláusula de retomada (art. 102) de até 30% do valor inicial, segundo o material EBEJI. O pagamento antecipado é, em regra, vedado."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Sanção (art. 156)",
+        "Para quê",
+        "Alcance e prazo"
+       ],
+       "linhas": [
+        [
+         "Advertência",
+         "Só inexecução parcial leve (art. 155, I)",
+         "Sem impedimento"
+        ],
+        [
+         "Multa",
+         "Qualquer infração do art. 155",
+         "De 0,5% a 30% do valor do contrato; cumula com as demais"
+        ],
+        [
+         "Impedimento de licitar e contratar",
+         "Infrações intermediárias (art. 155, II a VII)",
+         "Só no <b>ente</b> que aplicou; até 3 anos"
+        ],
+        [
+         "Declaração de inidoneidade",
+         "Fraude, documento falso, ato lesivo (art. 155, VIII a XII) ou casos graves",
+         "<b>Todos os entes</b>; de 3 a 6 anos; aplicada por ministro ou secretário, após análise jurídica"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 156, §§ 4º e 5º",
+       "texto": "§ 4º A sanção prevista no inciso III do caput deste artigo será aplicada ao responsável pelas infrações administrativas previstas nos incisos II, III, IV, V, VI e VII do caput do art. 155 desta Lei, quando não se justificar a imposição de penalidade mais grave, e impedirá o responsável de licitar ou contratar no âmbito da Administração Pública direta e indireta do ==ente federativo que tiver aplicado a sanção==, pelo ==prazo máximo de 3 (três) anos==.\n§ 5º A sanção prevista no inciso IV do caput deste artigo será aplicada ao responsável pelas infrações administrativas previstas nos incisos VIII, IX, X, XI e XII do caput do art. 155 desta Lei, bem como pelas infrações administrativas previstas nos incisos II, III, IV, V, VI e VII do caput do referido artigo que justifiquem a imposição de penalidade mais grave que a sanção referida no § 4º deste artigo, e impedirá o responsável de licitar ou contratar no âmbito da Administração Pública direta e indireta de ==todos os entes federativos==, pelo prazo ==mínimo de 3 (três) anos e máximo de 6 (seis) anos==."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "Cláusulas exorbitantes valem <b>mesmo sem estar escritas</b>.<br>Acréscimo ou supressão até <b>25%</b>; reforma, acréscimo até <b>50%</b>.<br>Cláusula econômico-financeira <b>não</b> muda sem o contratado.<br>Divulgação no PNCP é condição de <b>eficácia</b>: 20 dias úteis (licitação) e 10 (contratação direta).<br>Atraso de pagamento <b>superior a 2 meses</b> e suspensão <b>superior a 3 meses</b> dão direito à extinção.<br>Impedimento: <b>um ente</b>, até 3 anos. Inidoneidade: <b>todos</b>, de 3 a 6 anos."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A Administração pode alterar unilateralmente as cláusulas econômico-financeiras do contrato, desde que motivadamente.",
+         "v": false,
+         "porque": "Art. 104, § 1º: só com prévia concordância do contratado."
+        },
+        {
+         "texto": "Na reforma de edifício, os acréscimos podem chegar a 50% do valor inicial atualizado do contrato.",
+         "v": true,
+         "porque": "Art. 125."
+        },
+        {
+         "texto": "A alteração unilateral pode transfigurar o objeto, se houver interesse público.",
+         "v": false,
+         "porque": "Art. 126."
+        },
+        {
+         "texto": "A fiscalização pela Administração reduz a responsabilidade do contratado pelos danos causados a terceiros.",
+         "v": false,
+         "porque": "Art. 120: não exclui nem reduz."
+        },
+        {
+         "texto": "O atraso de pagamento superior a 2 meses dá ao contratado direito à extinção, mesmo em caso de guerra.",
+         "v": false,
+         "porque": "Art. 137, § 3º, I: não se admite em calamidade, guerra ou grave perturbação da ordem."
+        },
+        {
+         "texto": "Contratos de serviços contínuos podem ser prorrogados sucessivamente até a vigência máxima de 10 anos.",
+         "v": true,
+         "porque": "Art. 107."
+        },
+        {
+         "texto": "A declaração de inidoneidade impede licitar apenas no ente que a aplicou.",
+         "v": false,
+         "porque": "Alcança todos os entes (art. 156, § 5º); o impedimento é que se restringe ao ente."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-27",
+    "adm-cad-28"
+   ],
+   "numero": 15
   },
   {
    "id": "B2-a15",
@@ -4821,6 +5160,26 @@
   [
    "Habilitação",
    "Fase em que se verifica se o licitante tem capacidade jurídica, técnica, fiscal-social-trabalhista e econômico-financeira."
+  ],
+  [
+   "Cláusulas exorbitantes",
+   "Prerrogativas da Administração no contrato administrativo (Lei 14.133, art. 104), que valem mesmo sem previsão expressa."
+  ],
+  [
+   "Fato do príncipe",
+   "Medida geral do Estado, alheia ao contrato, que o onera indiretamente e autoriza reequilíbrio."
+  ],
+  [
+   "Teoria da imprevisão",
+   "Revisão do contrato por fato imprevisível, ou previsível de consequências incalculáveis, que torna a execução excessivamente onerosa."
+  ],
+  [
+   "Apostila",
+   "Registro que não altera o contrato (reajuste previsto, empenho, mudança de razão social), feito sem termo aditivo (Lei 14.133, art. 136)."
+  ],
+  [
+   "Exceção do contrato não cumprido",
+   "Direito de não cumprir enquanto a outra parte não cumpre; mitigado nos contratos administrativos (Lei 14.133, art. 137, §§ 2º e 3º)."
   ]
  ]
 }
