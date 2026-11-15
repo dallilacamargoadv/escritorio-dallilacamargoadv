@@ -5,7 +5,9 @@
  "fontes": [
   "Material EBEJI: Administração Pública (2026)",
   "CF, texto vigente no Planalto",
-  "Leis 11.107/2005, 9.637/1998, 9.790/1999 e 13.019/2014, texto vigente no Planalto"
+  "Leis 11.107/2005, 9.637/1998, 9.790/1999 e 13.019/2014, texto vigente no Planalto",
+  "Material EBEJI: Princípios Fundamentais da Administração Pública (2026)",
+  "Material EBEJI: Deveres e Poderes Administrativos (2026)"
  ],
  "banca": {
   "titulo": "O que a FCC cobra em Administrativo",
@@ -2189,14 +2191,857 @@
    "topico_id": "B2-01",
    "numero": 9,
    "titulo": "Regime jurídico-administrativo e princípios",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Princípios Fundamentais da Administração Pública (2026); CF, arts. 5º, 37 e 84, e Lei 9.784/1999 (textos vigentes, conferidos em 15/11/2026)",
+   "resumo": [
+    "O regime jurídico-administrativo é o conjunto de princípios que dá ao Estado prerrogativas (supremacia do interesse público) e sujeições (indisponibilidade do interesse público). São as duas pedras de toque.",
+    "Os princípios expressos estão no caput do art. 37 da CF: legalidade, impessoalidade, moralidade, publicidade e eficiência (LIMPE). Valem para todos os Poderes na função administrativa, em todos os entes, na direta e na indireta.",
+    "Legalidade para a Administração é agir só segundo a lei; o particular pode tudo o que a lei não proíbe. Ofensa à moralidade, à razoabilidade ou à proporcionalidade é ilegalidade: o ato é anulado, não revogado.",
+    "Publicidade é requisito de eficácia, não de validade. Impessoalidade proíbe a promoção pessoal na publicidade oficial (art. 37, § 1º).",
+    "Pela autotutela (Súmula 473 do STF; Lei 9.784, art. 53), a Administração anula o ato ilegal e revoga o inconveniente. Para anular ato favorável, o prazo é de cinco anos, salvo má-fé (art. 54)."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: prerrogativas e sujeições",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O Direito Administrativo nasce de uma tensão. De um lado, o Estado precisa de <b>poderes</b> que o particular não tem para cuidar do interesse de todos: desapropriar, fiscalizar, alterar um contrato sozinho. De outro, ele <b>não é dono</b> do que administra: gere coisa alheia, do povo.<br><br>Esse conjunto harmônico de princípios é o <b>regime jurídico-administrativo</b>. Celso Antônio Bandeira de Mello chamou seus dois pilares de <b>pedras de toque</b>: a supremacia e a indisponibilidade do interesse público. Os dois são <b>implícitos</b>: não aparecem com esse nome na Constituição."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Supremacia",
+         "sub": "do interesse público sobre o privado",
+         "verso": "Em conflito, o interesse público prevalece sobre o privado, dentro dos limites da lei. É a fonte das prerrogativas.",
+         "detalhe": "Ex.: intervenção na propriedade, cláusulas exorbitantes, poder de polícia, presunção de legitimidade dos atos."
+        },
+        {
+         "frente": "Indisponibilidade",
+         "sub": "do interesse público",
+         "verso": "O administrador não é dono dos bens e interesses públicos. Não pode renunciar a receitas nem alienar bem afetado. É a fonte das sujeições.",
+         "detalhe": "Ex.: renunciar a tributo ou multa só se a lei prever (anistia, remissão, transação); licitação; concurso."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Atos de gestão",
+       "html": "A supremacia incide <b>diretamente</b> nos atos de império, mas <b>não</b> nos atos de gestão e de mero expediente, em que a Administração age como um particular gerindo bens. Já a <b>indisponibilidade</b> está presente em <b>toda</b> atuação pública, inclusive quando o Estado age sob regime de direito privado (como agente econômico)."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Interesse público primário",
+        "Interesse público secundário"
+       ],
+       "linhas": [
+        [
+         "Titular",
+         "O povo, a coletividade",
+         "O Estado como pessoa jurídica"
+        ],
+        [
+         "Conteúdo",
+         "Interesses gerais imediatos",
+         "Interesses patrimoniais (aumentar a riqueza do Estado)"
+        ],
+        [
+         "Legitimidade",
+         "Sempre o fim da atuação",
+         "Só é legítimo se servir ao primário, nunca contra ele"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Princípio não é regra.</b> A regra resolve uma situação concreta (o modo e o momento de agir). O princípio é norma geral que dá sentido ao sistema e orienta todas as regras. Por isso um ato pode cumprir a letra de uma regra e mesmo assim ser inválido por ferir um princípio."
+      }
+     ]
+    },
+    {
+     "titulo": "Os expressos do art. 37: LIMPE",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, caput",
+       "texto": "Art. 37. A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de ==legalidade, impessoalidade, moralidade, publicidade e eficiência== e, também, ao seguinte:"
+      },
+      {
+       "t": "texto",
+       "html": "Repare no alcance: administração <b>direta e indireta</b>, de <b>qualquer dos Poderes</b> (quando exercem função administrativa), de <b>todos os entes</b>. A eficiência entrou pela <b>EC 19/1998</b>; os outros quatro são originais."
+      },
+      {
+       "t": "texto",
+       "html": "<b>1. Legalidade.</b> O particular pode fazer tudo o que a lei não proíbe. A Administração só pode fazer o que a lei determina ou autoriza: age <i>secundum legem</i>, nunca <i>contra legem</i> nem <i>praeter legem</i>. Mesmo no ato discricionário, ela fica dentro dos limites da lei."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, II, e Lei 9.784/1999, art. 2º, parágrafo único, I",
+       "texto": "II - ninguém será obrigado a fazer ou deixar de fazer alguma coisa ==senão em virtude de lei==;\nI - atuação conforme a lei ==e o Direito==;"
+      },
+      {
+       "t": "texto",
+       "html": "A expressão \"a lei <b>e o Direito</b>\" é o que a doutrina chama de <b>bloco de legalidade</b> ou <b>juridicidade</b>: a Administração obedece a todo o ordenamento, inclusive princípios e seus próprios atos normativos. Por isso, o ato normativo típico da Administração <b>não inova</b> na ordem jurídica: não cria direito nem obrigação nova."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Exceção",
+         "titulo": "Decreto autônomo",
+         "texto": "Introduzido pela EC 32/2001, é ato primário, fundado direto na Constituição, sem lei para regulamentar. Só serve para as duas matérias do art. 84, VI: (a) organização e funcionamento da administração federal, quando não implicar aumento de despesa nem criação ou extinção de órgãos públicos; (b) extinção de funções ou cargos públicos, quando vagos;"
+        },
+        {
+         "tag": "Ponderação",
+         "titulo": "Legalidade × segurança jurídica",
+         "texto": "A legalidade não é absoluta. Em conflito com a segurança jurídica, pondera-se caso a caso. Às vezes a própria lei já fez a ponderação: é o prazo de decadência de cinco anos do art. 54 da Lei 9.784."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>2. Impessoalidade.</b> Tem duas faces. A primeira é a <b>finalidade</b>: todo ato busca o interesse público, e o ato com outro objetivo é <b>nulo por desvio de finalidade</b>. Basta desviar da finalidade específica (a que a lei fixou para aquele ato) para gerar nulidade. A segunda é a <b>vedação à promoção pessoal</b>:"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, § 1º",
+       "texto": "§ 1º A publicidade dos atos, programas, obras, serviços e campanhas dos órgãos públicos deverá ter ==caráter educativo, informativo ou de orientação social==, dela não podendo constar ==nomes, símbolos ou imagens que caracterizem promoção pessoal== de autoridades ou servidores públicos."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 6.522/DF, Rel. Min. Cármen Lúcia, 14/5/2021 (Info 1017)",
+       "tese": "O § 1º do art. 37 não admite flexibilização por norma infraconstitucional ou regulamentar. É inconstitucional a lei orgânica que deixa cada Poder definir, por norma interna, quando a divulgação não será promoção pessoal."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Funcionário de fato",
+       "html": "O agente com investidura viciada pratica atos que, em regra, valem. O fundamento é a impessoalidade (o ato é imputado ao <b>órgão</b>, não à pessoa) somada à boa-fé dos administrados, ligada à moralidade."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 615",
+       "tese": "Não pode ocorrer ou permanecer a inscrição do município em cadastros restritivos fundada em irregularidades na gestão anterior quando, na gestão sucessora, são tomadas as providências cabíveis à reparação dos danos eventualmente cometidos."
+      },
+      {
+       "t": "texto",
+       "html": "Essa súmula aplica a <b>intranscendência subjetiva das sanções</b>: a sanção não passa da pessoa do infrator. O STF usa a mesma ideia para livrar o novo gestor (1ª Turma, AC 2.614/PE, Rel. Min. Luiz Fux, 23/6/2015, Info 791) e para impedir que a inscrição de uma autarquia, ou de pendências do Legislativo e do Judiciário locais, atinja o Executivo do Estado (ACO 1.848 AgR, 2014; ACO 2.995 AgR, 2018)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>3. Moralidade.</b> O agente deve agir com ética, honestidade e boa-fé. A moralidade é <b>objetiva</b>: sai do ordenamento, não da convicção íntima do agente. Como está expressa na CF, é <b>condição de validade</b> do ato: o ato imoral é <b>nulo</b>, deve ser <b>anulado</b> (não revogado) e pode ser controlado pelo Judiciário."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, arts. 37, § 4º, e 5º, LXXIII",
+       "texto": "§ 4º - Os atos de improbidade administrativa importarão a ==suspensão dos direitos políticos==, a ==perda da função pública==, a ==indisponibilidade dos bens== e o ==ressarcimento ao erário==, na forma e gradação previstas em lei, sem prejuízo da ação penal cabível.\nLXXIII - qualquer cidadão é parte legítima para propor ==ação popular== que vise a anular ato lesivo ao patrimônio público ou de entidade de que o Estado participe, à ==moralidade administrativa==, ao meio ambiente e ao patrimônio histórico e cultural, ficando o autor, salvo comprovada má-fé, isento de custas judiciais e do ônus da sucumbência;"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula Vinculante 13",
+       "tese": "A nomeação de cônjuge, companheiro ou parente em linha reta, colateral ou por afinidade, até o terceiro grau, inclusive, da autoridade nomeante ou de servidor da mesma pessoa jurídica investido em cargo de direção, chefia ou assessoramento, para o exercício de cargo em comissão ou de confiança ou, ainda, de função gratificada na Administração Pública direta e indireta em qualquer dos poderes da União, dos Estados, do Distrito Federal e dos municípios, compreendido o ajuste mediante designações recíprocas, viola a Constituição Federal."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "1ª Turma, Rcl 28.024 AgR, Rel. Min. Roberto Barroso, 29/5/2018",
+       "tese": "Em regra, a SV 13 não alcança a nomeação para cargo de natureza política (como secretário), salvo fraude ou falta evidente de qualificação técnica ou de idoneidade moral do nomeado."
+      },
+      {
+       "t": "texto",
+       "html": "<b>4. Publicidade.</b> Tem dois sentidos. Como <b>requisito de eficácia</b>: o ato pode ser perfeito e válido, mas, enquanto não publicado, não produz efeitos. Como <b>transparência</b>: permite o controle pelo povo e pelos órgãos de controle, e por isso se liga ao dever de motivar."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 2º, parágrafo único, V",
+       "texto": "V - divulgação oficial dos atos administrativos, ==ressalvadas as hipóteses de sigilo== previstas na Constituição;"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADPF 872/DF, Rel. Min. Cármen Lúcia, 15/8/2023 (Info 1103)",
+       "tese": "O ato de qualquer dos poderes públicos restritivo de publicidade deve ser motivado objetiva, específica e formalmente, sendo nulos os atos públicos que imponham, genericamente e sem fundamentação válida e específica, impeditivo do direito fundamental à informação."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ARE 652.777/SP, Rel. Min. Teori Zavascki, 23/4/2015, repercussão geral (Info 782)",
+       "tese": "É legítima a publicação, inclusive em sítio eletrônico mantido pela Administração Pública, dos nomes de seus servidores e do valor dos correspondentes vencimentos e vantagens pecuniárias."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Lei de Acesso à Informação",
+       "html": "A LAI (Lei 12.527/2011) com prazos de sigilo, pedidos e recursos fica para a aula 22 (Anticorrupção e transparência). Aqui guarde a regra: <b>publicidade é a regra e o sigilo é exceção</b>, sempre temporário e motivado."
+      },
+      {
+       "t": "texto",
+       "html": "<b>5. Eficiência.</b> Exige serviço de qualidade, adequado e com a melhor relação custo-benefício (liga-se à <b>economicidade</b> do art. 70). Tem duas faces: o modo de atuar do agente (ex.: avaliação especial de desempenho para a estabilidade, art. 41) e o modo de organizar a Administração. A expressão mais nítida é o contrato do § 8º:"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, § 8º",
+       "texto": "§ 8º A autonomia gerencial, orçamentária e financeira dos órgãos e entidades da administração direta e indireta ==poderá ser ampliada mediante contrato==, a ser firmado entre seus administradores e o poder público, que tenha por objeto a ==fixação de metas de desempenho== para o órgão ou entidade, cabendo à lei dispor sobre:\nI - o prazo de duração do contrato;\nII - os controles e critérios de avaliação de desempenho, direitos, obrigações e responsabilidade dos dirigentes;\nIII - a remuneração do pessoal."
+      },
+      {
+       "t": "texto",
+       "html": "No âmbito federal, a Lei 13.934/2019 regulamentou esse ajuste com o nome de <b>contrato de desempenho</b>. Como a eficiência é princípio expresso, também é controle de legalidade: se o Judiciário for provocado, pode anular o ato que a desrespeite."
+      }
+     ]
+    },
+    {
+     "titulo": "Implícitos, ponderação e autotutela",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Além dos cinco do art. 37, a Lei 9.784/1999 lista expressamente outros princípios que, na CF, são implícitos. Para a Administração federal, eles são letra de lei:"
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 2º, caput",
+       "texto": "Art. 2o A Administração Pública obedecerá, dentre outros, aos princípios da legalidade, ==finalidade==, ==motivação==, ==razoabilidade, proporcionalidade==, moralidade, ampla defesa, contraditório, ==segurança jurídica==, ==interesse público== e eficiência."
+      },
+      {
+       "t": "leia",
+       "ref": "Lei 9.784/1999, art. 2º, parágrafo único, I a XIII",
+       "motivo": "Os 13 critérios traduzem cada princípio em conduta (ex.: III é impessoalidade, IV é moralidade, V é publicidade, XIII protege a segurança jurídica). A FCC copia esses incisos nas alternativas."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Razoabilidade e proporcionalidade.</b> Não estão escritas na CF, mas o STF as extrai do <b>devido processo legal substantivo</b> (art. 5º, LIV): além das garantias de processo (sentido formal), protege-se o próprio bem jurídico contra excessos (sentido material). No Direito Administrativo, a razoabilidade costuma ser o <b>gênero</b>, e a proporcionalidade, a parte ligada aos atos sancionatórios."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Adequação",
+         "sub": "o meio serve?"
+        },
+        {
+         "titulo": "Necessidade",
+         "sub": "é o menos gravoso?"
+        },
+        {
+         "titulo": "Estrita",
+         "sub": "vale a pena?"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Adequação:</b> o ato precisa ser apto a atingir o fim pretendido."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Necessidade:</b> entre os meios igualmente eficazes, usa-se o menos restritivo, o mais brando."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Proporcionalidade em sentido estrito</b> (para parte dos autores): as vantagens ao interesse público devem superar as restrições impostas. Senão, o ato é ilegítimo."
+        },
+        {
+         "no": 1,
+         "texto": "Na sanção, mede-se a pena pela gravidade e pela lesividade da conduta. É o que diz o inciso VI do art. 2º, parágrafo único."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 2º, parágrafo único, VI",
+       "texto": "VI - adequação entre meios e fins, ==vedada a imposição de obrigações, restrições e sanções em medida superior== àquelas ==estritamente necessárias== ao atendimento do interesse público;"
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Legalidade, não mérito",
+       "html": "O controle pela razoabilidade e pela proporcionalidade é controle de <b>legalidade</b> (ou legitimidade), não de mérito. Por isso o Judiciário pode fazê-lo, sobretudo em atos discricionários que restringem direitos, e a consequência é a <b>anulação</b>."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Segurança jurídica e proteção da confiança.</b> A segurança jurídica tem uma face subjetiva: a <b>proteção da confiança legítima</b> de quem acreditou, de boa-fé, num ato do Estado. Ela aparece na proibição de aplicar nova interpretação de forma retroativa e no prazo de decadência para anular:"
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, arts. 2º, parágrafo único, XIII, e 54",
+       "texto": "XIII - interpretação da norma administrativa da forma que melhor garanta o atendimento do fim público a que se dirige, ==vedada aplicação retroativa de nova interpretação==.\nArt. 54. O direito da Administração de anular os atos administrativos de que decorram efeitos favoráveis para os destinatários ==decai em cinco anos==, contados da data em que foram praticados, ==salvo comprovada má-fé==.\n§ 1o No caso de efeitos patrimoniais contínuos, o prazo de decadência contar-se-á ==da percepção do primeiro pagamento==.\n§ 2o Considera-se exercício do direito de anular ==qualquer medida de autoridade administrativa== que importe impugnação à validade do ato."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Autotutela.</b> A Administração revê os próprios atos, <b>de ofício</b>, sem precisar ir ao Judiciário: anula os ilegais (controle de legalidade) e revoga os válidos que ficaram inconvenientes (controle de mérito). O Judiciário, provocado, só faz o controle de legalidade."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula 473",
+       "tese": "A Administração pode anular seus próprios atos quando eivados de vícios que os tornem ilegais, porque deles não se originam direitos; ou revogá-los, por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos, e ressalvada, em todos os casos, a apreciação judicial."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 53",
+       "texto": "Art. 53. A Administração ==deve anular== seus próprios atos, quando eivados de vício de legalidade, e ==pode revogá-los== por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Anular",
+        "Revogar"
+       ],
+       "linhas": [
+        [
+         "Motivo",
+         "Vício de legalidade",
+         "Conveniência e oportunidade"
+        ],
+        [
+         "Quem faz",
+         "Administração (de ofício) e Judiciário (provocado)",
+         "Só a Administração que praticou o ato"
+        ],
+        [
+         "Dever ou faculdade",
+         "Dever (\"deve anular\")",
+         "Faculdade (\"pode revogar\")"
+        ],
+        [
+         "Limite",
+         "Decadência de 5 anos para ato favorável, salvo má-fé",
+         "Respeito aos direitos adquiridos"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Contraditório antes de desfazer",
+       "html": "Se o desfazimento atinge a esfera de interesses do administrado, é preciso processo com contraditório e ampla defesa (STF, Info 641; STJ, 6ª Turma, RMS 26.261/AP, 7/2/2012). Durante esse processo, a Administração pode, com base no poder cautelar do art. 45 da Lei 9.784, suspender o pagamento da verba impugnada (STF, 2ª Turma, RMS 31.973/DF, 25/2/2014, Info 737)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, MS 26.860/DF, Rel. Min. Luiz Fux, 2/4/2014 (Info 741)",
+       "tese": "O prazo decadencial do art. 54 da Lei nº 9.784/99 não se aplica quando o ato a ser anulado afronta diretamente a Constituição Federal (caso de efetivação em cartório sem concurso, art. 236, § 3º)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 6.019/SP, red. p/ acórdão Min. Roberto Barroso, 12/4/2021 (Info 1012)",
+       "tese": "É inconstitucional lei estadual que fixa prazo decadencial de 10 anos para a anulação de atos administrativos inválidos pela Administração estadual."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 636.553/RS, Rel. Min. Gilmar Mendes, 19/2/2020, repercussão geral, Tema 445 (Info 967)",
+       "tese": "Em atenção aos princípios da segurança jurídica e da confiança legítima, os Tribunais de Contas estão sujeitos ao prazo de cinco anos para o julgamento da legalidade do ato de concessão inicial de aposentadoria, reforma ou pensão, a contar da chegada do processo à respectiva Corte de Contas."
+      },
+      {
+       "t": "texto",
+       "html": "No Tema 445, esgotados os cinco anos, o ato se considera <b>registrado tacitamente</b>. Dentro do prazo, o Tribunal de Contas aprecia o ato complexo <b>sem</b> contraditório, porque não há litígio. E o STJ fixou que, para atos anteriores à Lei 9.784, os cinco anos contam da vigência da lei, 1º/2/1999 (2ª Turma, REsp 1.270.474/RN, 18/10/2012)."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "E a continuidade?",
+       "html": "O princípio da continuidade dos serviços públicos também é implícito e decorre da indisponibilidade. Ele tem regras próprias (Lei 8.987/1995, art. 6º, § 3º, corte por inadimplemento) e fica para a aula 15 (Serviços públicos)."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "<b>Publicidade</b> é requisito de <b>eficácia</b>, não de validade.<br>Ato <b>imoral</b>, desarrazoado ou desproporcional é <b>anulado</b>, nunca revogado.<br>A <b>supremacia</b> não incide diretamente nos atos de gestão; a <b>indisponibilidade</b> incide sempre.<br>O interesse <b>secundário</b> (patrimonial do Estado) só vale se servir ao <b>primário</b>.<br>A <b>eficiência</b> veio com a EC 19/1998.<br>Na Lei 9.784, a Administração <b>deve</b> anular e <b>pode</b> revogar."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A Administração Pública pode fazer tudo o que a lei não proíbe.",
+         "v": false,
+         "porque": "Isso vale para o particular (CF, art. 5º, II). A Administração só faz o que a lei determina ou autoriza."
+        },
+        {
+         "texto": "O ato administrativo ainda não publicado, quando a publicação é exigida, é inválido.",
+         "v": false,
+         "porque": "É válido, mas ineficaz: publicidade é requisito de eficácia."
+        },
+        {
+         "texto": "O Judiciário pode anular ato discricionário que ofenda a razoabilidade.",
+         "v": true,
+         "porque": "É controle de legalidade (legitimidade), não de mérito."
+        },
+        {
+         "texto": "A publicidade de obra pública pode trazer o nome do prefeito, desde que tenha caráter informativo.",
+         "v": false,
+         "porque": "O art. 37, § 1º, proíbe nomes, símbolos ou imagens que caracterizem promoção pessoal."
+        },
+        {
+         "texto": "No caso de efeitos patrimoniais contínuos, a decadência do art. 54 da Lei 9.784 conta-se da percepção do primeiro pagamento.",
+         "v": true,
+         "porque": "Art. 54, § 1º."
+        },
+        {
+         "texto": "O prazo decadencial de cinco anos impede a anulação de ato que afronta diretamente a Constituição.",
+         "v": false,
+         "porque": "STF, MS 26.860: o art. 54 não se aplica a ato que afronta diretamente a CF."
+        },
+        {
+         "texto": "A Súmula Vinculante 13 alcança, em regra, a nomeação de parente para cargo de secretário municipal.",
+         "v": false,
+         "porque": "Em regra não alcança cargo político, salvo fraude ou falta de qualificação ou idoneidade (Rcl 28.024)."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-15",
+    "adm-cad-16"
+   ]
   },
   {
    "id": "B2-a10",
    "topico_id": "B2-03",
    "numero": 10,
    "titulo": "Poderes administrativos",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Deveres e Poderes Administrativos (2026); CF, art. 84; CTN, art. 78; Lei 9.784/1999, arts. 11 a 15 (textos vigentes, conferidos em 15/11/2026)",
+   "resumo": [
+    "Os poderes vêm da supremacia do interesse público; os deveres, da indisponibilidade. Por isso todo poder administrativo é um poder-dever: a competência é irrenunciável (Lei 9.784, art. 11).",
+    "Vinculado: a lei fixa tudo, sem juízo de conveniência. Discricionário: há escolha de motivo e conteúdo (o mérito), mas competência, finalidade e forma continuam vinculadas.",
+    "Hierárquico: ordenar, fiscalizar, rever, delegar e avocar. Não se delegam atos normativos, decisão de recurso nem competência exclusiva (art. 13). Disciplinar: punir servidor e particular com vínculo específico.",
+    "Regulamentar: decreto para fiel execução da lei (CF, art. 84, IV), indelegável; decreto autônomo só no art. 84, VI. Polícia: limitar direito em favor do interesse público (CTN, art. 78), com ciclo ordem, consentimento, fiscalização e sanção.",
+    "O STF admite delegar a polícia, por lei, a estatal de capital majoritariamente público que preste só serviço público próprio do Estado, sem concorrência (Tema 532). Abuso de poder é gênero: excesso (fora da competência) e desvio (fora da finalidade)."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vêm: o poder-dever",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Na aula 9 vimos os dois pilares do regime administrativo. Eles explicam esta aula inteira: da <b>supremacia</b> do interesse público saem os <b>poderes</b>; da <b>indisponibilidade</b> saem os <b>deveres</b>.<br><br>No direito privado, poder é faculdade: o dono usa se quiser. No Direito Administrativo, o poder é dado para cumprir uma função pública, então o agente <b>não pode dispor dele</b>. É um <b>poder-dever</b>, e a omissão também é ilegal."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 11",
+       "texto": "Art. 11. ==A competência é irrenunciável== e se exerce pelos órgãos administrativos a que foi atribuída como própria, ==salvo os casos de delegação e avocação legalmente admitidos==."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Poder-dever de agir",
+         "sub": "irrenunciável",
+         "verso": "Ter a competência é ser obrigado a exercê-la quando a situação exige.",
+         "detalhe": "A omissão indevida pode configurar abuso de poder."
+        },
+        {
+         "frente": "Eficiência",
+         "sub": "dever",
+         "verso": "Atividade de qualidade: celeridade, perfeição técnica, economicidade, coordenação e controle.",
+         "detalhe": "É também princípio expresso (art. 37, caput)."
+        },
+        {
+         "frente": "Probidade",
+         "sub": "dever",
+         "verso": "Atuar sempre com ética, honestidade e boa-fé.",
+         "detalhe": "A violação qualificada é improbidade (art. 37, § 4º)."
+        },
+        {
+         "frente": "Prestar contas",
+         "sub": "dever",
+         "verso": "Quem gere dinheiro, bens ou interesses públicos deve contas ao órgão de fiscalização.",
+         "detalhe": "Decorre direto da indisponibilidade (Hely Lopes Meirelles: a regra é universal)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Os poderes em espécie",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Vinculado",
+        "Discricionário"
+       ],
+       "linhas": [
+        [
+         "Liberdade",
+         "Mínima ou nenhuma: a lei fixa o conteúdo",
+         "Escolha de oportunidade e conveniência, nos limites da lei"
+        ],
+        [
+         "Onde está a escolha",
+         "Não há",
+         "No motivo e no objeto (o mérito administrativo)"
+        ],
+        [
+         "Sempre vinculados",
+         "Todos os elementos",
+         "Competência, finalidade e forma"
+        ],
+        [
+         "Desfazimento",
+         "Anulação, se ilegal",
+         "Anulação, se ilegal; revogação, se inconveniente"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "O poder vinculado, a rigor, é mais um <b>dever</b> do que um poder. Para a corrente majoritária (Celso Antônio, Di Pietro), também há discricionariedade quando a lei usa <b>conceitos jurídicos indeterminados</b> no motivo do ato (\"boa conduta\", \"interesse público relevante\"), desde que a situação caia na zona de dúvida."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Limite do discricionário",
+       "html": "O Judiciário não aprecia o <b>mérito</b>. Mas pode anular o ato discricionário que ultrapassa a lei ou fere a razoabilidade e a proporcionalidade: isso é <b>arbitrariedade</b>, e o controle é de <b>legalidade</b>."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Poder hierárquico.</b> É o que permite ao superior, sobre o subordinado, <b>dar ordens, fiscalizar, controlar, aplicar sanções, delegar e avocar</b>. Só existe dentro de uma mesma pessoa jurídica (entre órgãos e agentes). Entre a Administração direta e a entidade da indireta não há hierarquia, só vinculação (tutela)."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, arts. 12 a 15",
+       "texto": "Art. 12. Um órgão administrativo e seu titular poderão, se não houver impedimento legal, delegar parte da sua competência a outros órgãos ou titulares, ==ainda que estes não lhe sejam hierarquicamente subordinados==, quando for conveniente, em razão de circunstâncias de índole técnica, social, econômica, jurídica ou territorial.\nArt. 13. Não podem ser objeto de delegação:\nI - a edição de atos de caráter normativo;\nII - a decisão de recursos administrativos;\nIII - as matérias de competência exclusiva do órgão ou autoridade.\nArt. 14. O ato de delegação e sua revogação deverão ser ==publicados no meio oficial==.\n§ 2o O ato de delegação é revogável ==a qualquer tempo== pela autoridade delegante.\n§ 3o As decisões adotadas por delegação devem mencionar explicitamente esta qualidade e considerar-se-ão ==editadas pelo delegado==.\nArt. 15. Será permitida, em ==caráter excepcional== e por motivos relevantes devidamente justificados, a avocação ==temporária== de competência atribuída a órgão ==hierarquicamente inferior==."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Art. 12",
+         "titulo": "Delegar",
+         "texto": "Transfere <b>parte</b> da competência, mesmo a quem <b>não é subordinado</b>, por razões técnicas, sociais, econômicas, jurídicas ou territoriais. É revogável a qualquer tempo, e a decisão é considerada do <b>delegado</b> (responde por ela; contra ele cabe o mandado de segurança)."
+        },
+        {
+         "tag": "Art. 13",
+         "titulo": "O que não se delega",
+         "texto": "Macete <b>NOREX</b>: <b>NO</b>rmativos, <b>R</b>ecursos e <b>EX</b>clusivas. A banca troca \"exclusiva\" por \"privativa\" para confundir; na lei, a palavra é exclusiva."
+        },
+        {
+         "tag": "Art. 15",
+         "titulo": "Avocar",
+         "texto": "O superior chama para si a competência do <b>inferior</b>. Exige hierarquia, é <b>excepcional</b>, <b>temporária</b> e por motivos relevantes justificados."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Poder disciplinar.</b> Permite punir internamente: (a) as infrações funcionais dos <b>servidores</b>, decorrência imediata do disciplinar e mediata do hierárquico; (b) as infrações de <b>particulares com vínculo jurídico específico</b> com a Administração (ex.: contratado), aqui sem hierarquia."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Discricionário só na dose",
+       "html": "Há certa discricionariedade na <b>gradação</b> da pena, mas <b>nenhuma</b> no dever de punir: comprovada a infração, punir é obrigatório. E o ato que aplica a pena é sempre <b>motivado</b>. Não confunda com o poder <b>punitivo</b> penal, que alcança qualquer pessoa."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Poder regulamentar.</b> Na doutrina tradicional, é a competência <b>do Chefe do Executivo</b> para editar decretos e regulamentos. Quando outras autoridades editam atos normativos (portarias, resoluções, instruções), fala-se em <b>poder normativo</b>, que é o gênero."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 84, IV e parágrafo único",
+       "texto": "IV - sancionar, promulgar e fazer publicar as leis, bem como expedir ==decretos e regulamentos para sua fiel execução==;\nParágrafo único. O Presidente da República poderá delegar as atribuições mencionadas nos ==incisos VI, XII e XXV, primeira parte==, aos Ministros de Estado, ao Procurador-Geral da República ou ao Advogado-Geral da União, que observarão os limites traçados nas respectivas delegações."
+      },
+      {
+       "t": "texto",
+       "html": "Repare: o inciso IV <b>não</b> está na lista do parágrafo único, então o decreto de execução é <b>indelegável</b>. Ele é ato <b>secundário</b>: pressupõe a lei e não pode restringir, ampliar nem contrariar o que ela prevê, sob pena de ilegalidade. O decreto autônomo (art. 84, VI, visto na aula 9) é a exceção primária, e só a alínea \"a\" é norma; a alínea \"b\" é ato de efeitos concretos (Di Pietro)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 4.728/DF, Rel. Min. Rosa Weber, 12/11/2021 (Info 1037)",
+       "tese": "Ofende os arts. 2º e 84, II, da Constituição Federal norma de legislação estadual que estabelece prazo para o chefe do Poder Executivo apresentar a regulamentação de disposições legais."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Espécie",
+        "Natureza",
+        "Base"
+       ],
+       "linhas": [
+        [
+         "Decreto de execução",
+         "Secundário: explica a lei",
+         "CF, art. 84, IV (indelegável)"
+        ],
+        [
+         "Decreto autônomo",
+         "Primário: decorre da CF",
+         "CF, art. 84, VI (delegável, art. 84, parágrafo único)"
+        ],
+        [
+         "Regulamento autorizado",
+         "Secundário, mas completa a lei em pontos técnicos",
+         "Sem previsão expressa na CF; aceito para órgãos técnicos (CVM, Contran, agências)"
+        ],
+        [
+         "Lei delegada",
+         "Primária: é lei",
+         "CF, art. 68 (não é poder regulamentar)"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Como se controla",
+       "html": "Regulamento que <b>contraria a lei</b> é ilegal: controle de <b>legalidade</b>, não cabe ADI. Ato normativo que ofende <b>diretamente</b> a CF, com caráter autônomo, generalidade e abstração, desafia <b>ADI</b>."
+      }
+     ]
+    },
+    {
+     "titulo": "Poder de polícia e abuso de poder",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CTN, art. 78",
+       "texto": "Art. 78. Considera-se poder de polícia atividade da administração pública que, ==limitando ou disciplinando direito==, interêsse ou liberdade, ==regula a prática de ato ou abstenção de fato==, em razão de intêresse público concernente à segurança, à higiene, à ordem, aos costumes, à disciplina da produção e do mercado, ao exercício de atividades econômicas dependentes de concessão ou autorização do Poder Público, à tranqüilidade pública ou ao respeito à propriedade e aos direitos individuais ou coletivos.\nParágrafo único. Considera-se regular o exercício do poder de polícia quando desempenhado pelo ==órgão competente nos limites da lei== aplicável, com observância do processo legal e, tratando-se de atividade que a lei tenha como discricionária, ==sem abuso ou desvio de poder==."
+      },
+      {
+       "t": "texto",
+       "html": "A definição está no CTN porque o exercício do poder de polícia é fato gerador de <b>taxa</b>. Em sentido <b>amplo</b> (Di Pietro), abrange até a edição das leis; em sentido <b>restrito</b>, só a regulamentação e a execução pela Administração."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Polícia administrativa",
+        "Polícia judiciária"
+       ],
+       "linhas": [
+        [
+         "Ilícito",
+         "Infração administrativa",
+         "Ilícito penal"
+        ],
+        [
+         "Recai sobre",
+         "Bens, direitos e atividades",
+         "Pessoas"
+        ],
+        [
+         "Quem exerce",
+         "Órgãos fiscalizadores de toda a Administração",
+         "Corporações específicas (Polícia Civil e Federal)"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "E não confunda com <b>serviço público</b>: a polícia <b>restringe</b> a esfera do particular (atividade negativa); o serviço público a <b>amplia</b> (atividade positiva)."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Ordem",
+         "sub": "a lei"
+        },
+        {
+         "titulo": "Consentimento",
+         "sub": "licença ou autorização"
+        },
+        {
+         "titulo": "Fiscalização",
+         "sub": "verificar"
+        },
+        {
+         "titulo": "Sanção",
+         "sub": "punir"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Ordem de polícia:</b> a norma que limita e condiciona. Pela legalidade, a ordem primária está sempre numa <b>lei</b>."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Consentimento:</b> a anuência prévia, quando exigida. <b>Licença</b> é vinculada (quem cumpre os requisitos tem direito). <b>Autorização</b> é discricionária e precária."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Fiscalização:</b> verificar se o particular cumpre as ordens e as condições do consentimento."
+        },
+        {
+         "no": 3,
+         "texto": "<b>Sanção:</b> a medida repressiva contra o infrator (multa, interdição, suspensão). Deve ser proporcional à gravidade da conduta."
+        }
+       ]
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 633.782/MG, Rel. Min. Luiz Fux, 23/10/2020, repercussão geral, Tema 532 (Info 996)",
+       "tese": "É constitucional a delegação do poder de polícia, por meio de lei, a pessoas jurídicas de direito privado integrantes da Administração Pública indireta de capital social majoritariamente público que prestem exclusivamente serviço público de atuação própria do Estado e em regime não concorrencial."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "O que mudou",
+       "html": "O STJ admitia delegar à estatal só o <b>consentimento</b> e a <b>fiscalização</b>, nunca a ordem nem a sanção. No Tema 532 (caso BHTRANS), o STF admitiu delegar <b>consentimento, fiscalização e sanção</b>. A <b>ordem</b> continua indelegável, porque é lei. A <b>particular</b> fora da Administração, a doutrina majoritária segue negando (Lei 11.079/2004, art. 4º, III, veda delegar a polícia em PPP)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 658.570/MG, red. p/ acórdão Min. Roberto Barroso, 6/8/2015 (Info 793)",
+       "tese": "A guarda municipal pode exercer poder de polícia de trânsito, inclusive impor multas, porque o rol do art. 144, § 8º, da CF não é exaustivo."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Discricionariedade",
+         "sub": "atributo",
+         "verso": "Liberdade razoável de atuação, dentro da lei.",
+         "detalhe": "Em regra. A licença, por exemplo, é vinculada."
+        },
+        {
+         "frente": "Autoexecutoriedade",
+         "sub": "atributo",
+         "verso": "A Administração executa sem autorização judicial prévia.",
+         "detalhe": "A multa é imposta pela Administração, mas a cobrança forçada depende de ação judicial."
+        },
+        {
+         "frente": "Coercibilidade",
+         "sub": "atributo",
+         "verso": "Impor a medida coativamente, até com uso da força.",
+         "detalhe": "Atos preventivos, como a licença, não têm coercibilidade."
+        }
+       ]
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmulas Vinculantes 38 e 49",
+       "tese": "SV 38: É competente o Município para fixar o horário de funcionamento de estabelecimento comercial. SV 49: Ofende o princípio da livre concorrência lei municipal que impede a instalação de estabelecimentos comerciais do mesmo ramo em determinada área."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmulas 19, 312 e 467",
+       "tese": "19: A fixação do horário bancário, para atendimento ao público, é da competência da União. 312: No processo administrativo para imposição de multa de trânsito, são necessárias as notificações da autuação e da aplicação da pena decorrente da infração. 467: Prescreve em cinco anos, contados do término do processo administrativo, a pretensão da Administração Pública de promover a execução da multa por infração ambiental."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Prescrição federal (Lei 9.873/1999)",
+       "html": "Segundo o material EBEJI: a ação punitiva federal prescreve em <b>5 anos</b>; se o fato também for crime, valem os prazos penais; o processo parado por mais de <b>3 anos</b> gera prescrição intercorrente. A lei não se aplica a infrações funcionais nem a processos tributários (art. 5º). Lei seca a conferir quando o tema voltar no controle."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Abuso de poder</b> é o exercício ilegítimo das prerrogativas. É o gênero, pode ser <b>comissivo ou omissivo</b>, e toda atuação abusiva é ilegal."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Espécie",
+        "O que acontece",
+        "Vício no elemento"
+       ],
+       "linhas": [
+        [
+         "Excesso de poder",
+         "O agente atua fora dos limites da sua competência",
+         "Competência"
+        ],
+        [
+         "Desvio de poder (de finalidade)",
+         "Dentro da competência, mas contra a finalidade da lei, geral (interesse público) ou específica",
+         "Finalidade"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Crime é outra coisa",
+       "html": "Abuso de poder é vício do ato administrativo. O <b>crime</b> de abuso de autoridade está na Lei 13.869/2019, que revogou a Lei 4.898/1965."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "Delegação <b>dispensa</b> hierarquia; avocação <b>exige</b>.<br>Não se delegam <b>normativos, recursos e exclusivas</b>.<br>Decreto de execução é <b>indelegável</b>; o autônomo pode ser delegado a Ministros, PGR e AGU.<br>Poder disciplinar sobre particular exige <b>vínculo específico</b>; sem vínculo, é polícia.<br>Cobrança de multa <b>não</b> é autoexecutória.<br>Excesso é vício de <b>competência</b>; desvio é vício de <b>finalidade</b>."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A delegação de competência só pode ser feita a órgão hierarquicamente subordinado.",
+         "v": false,
+         "porque": "Art. 12: ainda que não seja subordinado."
+        },
+        {
+         "texto": "A decisão de recurso administrativo pode ser delegada, desde que publicado o ato.",
+         "v": false,
+         "porque": "Art. 13, II: é indelegável."
+        },
+        {
+         "texto": "A avocação é temporária e excepcional, e recai sobre competência de órgão inferior.",
+         "v": true,
+         "porque": "Art. 15."
+        },
+        {
+         "texto": "A multa aplicada no poder de polícia pode ser cobrada coativamente pela própria Administração, sem ação judicial.",
+         "v": false,
+         "porque": "A imposição é da Administração; a cobrança forçada exige ação judicial."
+        },
+        {
+         "texto": "Lei pode delegar a sanção de polícia a sociedade de economia mista que atue em regime concorrencial.",
+         "v": false,
+         "porque": "Tema 532 exige regime não concorrencial e serviço público próprio do Estado."
+        },
+        {
+         "texto": "O agente que pratica ato dentro de sua competência, mas para perseguir desafeto, incorre em desvio de poder.",
+         "v": true,
+         "porque": "Contraria a finalidade da lei."
+        },
+        {
+         "texto": "Lei estadual pode fixar prazo para o Governador regulamentá-la.",
+         "v": false,
+         "porque": "STF, ADI 4.728: ofende os arts. 2º e 84, II, da CF."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-17",
+    "adm-cad-18"
+   ]
   },
   {
    "id": "B2-a11",
@@ -2335,6 +3180,54 @@
   [
    "Chamamento público",
    "Procedimento de seleção de organização da sociedade civil para termo de colaboração ou de fomento (Lei 13.019)."
+  ],
+  [
+   "Supremacia do interesse público",
+   "Pilar do regime administrativo: em conflito, o interesse público prevalece sobre o privado, nos limites da lei. Fonte das prerrogativas."
+  ],
+  [
+   "Indisponibilidade do interesse público",
+   "Pilar do regime administrativo: o administrador não é dono do interesse público e não pode dispor dele. Fonte das sujeições."
+  ],
+  [
+   "Interesse público secundário",
+   "Interesse patrimonial do Estado como pessoa jurídica; só é legítimo se servir ao interesse primário, da coletividade."
+  ],
+  [
+   "Bloco de legalidade",
+   "Todo o ordenamento a que a Administração se submete (lei, princípios e seus próprios atos normativos); também chamado juridicidade."
+  ],
+  [
+   "Funcionário de fato",
+   "Agente com investidura viciada cujos atos, em regra, valem perante terceiros de boa-fé."
+  ],
+  [
+   "Autotutela",
+   "Poder-dever da Administração de rever os próprios atos, de ofício: anula os ilegais e revoga os inconvenientes."
+  ],
+  [
+   "Poder-dever",
+   "Competência administrativa que obriga o agente a agir; não é faculdade e não pode ser renunciada."
+  ],
+  [
+   "Mérito administrativo",
+   "Núcleo do poder discricionário: a escolha de oportunidade e conveniência quanto ao motivo e ao objeto do ato."
+  ],
+  [
+   "Avocação",
+   "O superior chama para si, temporária e excepcionalmente, competência de órgão inferior (Lei 9.784, art. 15)."
+  ],
+  [
+   "Ciclo de polícia",
+   "Fases do poder de polícia: ordem, consentimento, fiscalização e sanção."
+  ],
+  [
+   "Desvio de poder",
+   "Abuso de poder em que o agente, dentro da sua competência, persegue fim diverso do previsto em lei."
+  ],
+  [
+   "Excesso de poder",
+   "Abuso de poder em que o agente atua além dos limites da sua competência."
   ]
  ]
 }
