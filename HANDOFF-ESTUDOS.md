@@ -74,7 +74,8 @@ Migrations: `estudos_onda1_edital_cronograma` e `estudos_onda2_respostas_eventos
 - **Progresso**: `estudo_aulas`. Marcar aula como estudada leva o tópico do edital ligado a pelo menos "estudando".
 - **Caderno de erros por matéria**: `cadernoDeErros()` em `lib/estudos-desempenho.ts` (uma linha por questão com erro ou acerto sem firmeza; "superado" se a última tentativa foi acerto firme).
 - **Banca FCC** (`/admin/estudos/banca`, tabela `estudo_tec`): dois tipos sempre separados. `incidencia` = quantas questões FCC existem por assunto no filtro do TEC (o que cai mais e menos). `resolucao` = os resultados dela. Colagem aceita "assunto ; questões ; acertos", "x de y" e "%".
-- Gerador do caderno de Administrativo: scratchpad `cad_b2.py` (refazer ali e regravar o JSON). Aulas prontas: B2-a01 a B2-a04 (organização administrativa, base EBEJI "Administração Pública"). 18 aulas marcadas "a montar", uma por tópico do edital. Questões do caderno: `adm-cad-01` a `06` no banco.
+- Gerador do caderno de Administrativo: o `cad_b2.py` antigo (aulas 1 a 7) ficou no scratchpad temporário. A aula 8 foi feita com um script que **edita o B2.json existente** (troca só a aula pelo id e acrescenta questões), conferindo cada citação contra o texto vigente. Siga esse modelo nas próximas aulas. Aulas prontas: B2-a01 a B2-a08 (organização administrativa completa, incluindo consórcios e terceiro setor). 14 aulas "a montar". Questões do caderno: `adm-cad-01` a `14` no banco.
+- Bloco `matriz`: os rótulos "Típica/Atípica" e o botão "Destacar só as típicas" estão fixos no código (foram feitos para a aula de separação de Poderes). Para outra matéria, use `vf` ou torne os rótulos configuráveis antes.
 - Migration: `estudos_onda3_cadernos_tec`.
 
 ## 8. Roteiro

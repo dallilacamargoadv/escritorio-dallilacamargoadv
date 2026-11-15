@@ -4,7 +4,8 @@
  "subtitulo": "Do Estado à organização da Administração, em cadeia.",
  "fontes": [
   "Material EBEJI: Administração Pública (2026)",
-  "CF, texto vigente no Planalto"
+  "CF, texto vigente no Planalto",
+  "Leis 11.107/2005, 9.637/1998, 9.790/1999 e 13.019/2014, texto vigente no Planalto"
  ],
  "banca": {
   "titulo": "O que a FCC cobra em Administrativo",
@@ -1630,7 +1631,558 @@
    "topico_id": "B2-02",
    "numero": 8,
    "titulo": "Consórcios públicos e terceiro setor",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Administração Pública (2026), seção 6.3.18; Leis 11.107/2005, 9.637/1998, 9.790/1999 e 13.019/2014 (Planalto, conferidas em 15/11/2026)",
+   "resumo": [
+    "Consórcio público é pessoa jurídica formada só por entes federados (CF, art. 241; Lei 11.107/2005). Pode ser associação pública (direito público) ou pessoa de direito privado.",
+    "Nasce de um caminho fixo: protocolo de intenções, lei de ratificação de cada ente, contrato. O de direito público ganha personalidade com a vigência das leis e integra a indireta de todos os consorciados.",
+    "Nos dois formatos o pessoal é celetista e há licitação, contratos e prestação de contas de direito público. Dinheiro só entra por contrato de rateio, anual.",
+    "Terceiro setor são entidades privadas sem fins lucrativos que colaboram com o Estado sem integrá-lo: OS (contrato de gestão, qualificação discricionária), OSCIP (termo de parceria, qualificação vinculada), OSC do MROSC e Sistema S.",
+    "O STF validou as OS (ADI 1.923) com a exigência de procedimentos públicos, objetivos e impessoais, e livrou o Sistema S do concurso público (Tema 569)."
+   ],
+   "secoes": [
+    {
+     "titulo": "Federalismo cooperativo: por que os entes se juntam",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Muitos problemas não respeitam a fronteira de um município: um aterro sanitário, um hospital regional, o transporte entre cidades vizinhas. Sozinho, o ente pequeno não tem escala. A Constituição responde com a <b>gestão associada</b>: os entes se unem para planejar, regular, fiscalizar ou prestar juntos um serviço público.<br><br>Os dois instrumentos dessa união estão no mesmo artigo: o <b>consórcio público</b>, que cria uma pessoa jurídica nova, e o <b>convênio de cooperação</b>, que é só um pacto, <b>sem</b> personalidade jurídica."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 241",
+       "texto": "Art. 241. A União, os Estados, o Distrito Federal e os Municípios disciplinarão por meio de lei os ==consórcios públicos e os convênios de cooperação== entre os entes federados, autorizando a ==gestão associada de serviços públicos==, bem como a transferência total ou parcial de encargos, serviços, pessoal e bens essenciais à continuidade dos serviços transferidos."
+      },
+      {
+       "t": "texto",
+       "html": "A União editou a <b>Lei 11.107/2005</b> com <b>normas gerais</b>, de caráter nacional, que valem para todos os entes. Ela foi regulamentada pelo Decreto 6.017/2007, que traz as definições usadas pela doutrina e pela banca."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 11.107/2005, art. 1º, caput e § 4º",
+       "texto": "Art. 1º Esta Lei dispõe sobre ==normas gerais== para a União, os Estados, o Distrito Federal e os Municípios contratarem consórcios públicos para a realização de objetivos de interesse comum e dá outras providências.\n§ 4º Aplicam-se aos ==convênios de cooperação==, no que couber, as disposições desta Lei relativas aos consórcios públicos."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Protocolo",
+         "sub": "de intenções"
+        },
+        {
+         "titulo": "Lei",
+         "sub": "de cada ente"
+        },
+        {
+         "titulo": "Consórcio",
+         "sub": "pessoa jurídica"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Os chefes do Executivo assinam o <b>protocolo de intenções</b>, um contrato preliminar com as cláusulas necessárias do art. 4º (nome, finalidade, prazo, sede, área de atuação, natureza jurídica, assembleia geral). Ele é publicado na imprensa oficial."
+        },
+        {
+         "no": 1,
+         "texto": "Cada Legislativo <b>ratifica o protocolo por lei</b> (art. 5º). A ratificação pode vir <b>com reserva</b>, que, aceita pelos demais, gera consorciamento parcial ou condicional. Fica dispensado quem já tinha lei disciplinando sua participação antes de assinar (art. 5º, § 4º)."
+        },
+        {
+         "no": 2,
+         "texto": "Com as leis, celebra-se o <b>contrato de consórcio</b>. Se for associação pública, a personalidade de direito público surge com a <b>vigência das leis de ratificação</b>; se for de direito privado, com o registro na forma da lei civil (art. 6º)."
+        },
+        {
+         "no": 1,
+         "texto": "Moral da história: <b>nenhum</b> consórcio público nasce sem passar pelo Legislativo de cada ente consorciado."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Consórcio público: natureza, membros e regime",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "Lei 11.107/2005, arts. 1º, § 1º, e 6º",
+       "texto": "§ 1º O consórcio público constituirá associação pública ou pessoa jurídica de direito privado.\nArt. 6º O consórcio público adquirirá personalidade jurídica:\nI - de direito público, no caso de constituir associação pública, ==mediante a vigência das leis de ratificação== do protocolo de intenções;\nII - de direito privado, mediante o atendimento dos requisitos da legislação civil.\n§ 1º O consórcio público com personalidade jurídica de direito público ==integra a administração indireta de todos os entes== da Federação consorciados.\n§ 2º O consórcio público, com personalidade jurídica de ==direito público ou privado==, observará as normas de direito público no que concerne à realização de licitação, à celebração de contratos, à prestação de contas e à admissão de pessoal, que será regido pela ==Consolidação das Leis do Trabalho (CLT)==, aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Associação pública",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Consórcio de direito público",
+           "sub": "natureza autárquica"
+          },
+          {
+           "titulo": "Município A",
+           "sub": "indireta"
+          },
+          {
+           "titulo": "Município B",
+           "sub": "indireta"
+          },
+          {
+           "titulo": "Estado",
+           "sub": "indireta"
+          }
+         ],
+         "texto": "É uma autarquia <b>interfederativa</b> (ou multifederativa): integra a administração indireta de <b>todos</b> os consorciados ao mesmo tempo. Nasce com a vigência das leis de ratificação. Só ela pode promover <b>desapropriações e servidões</b> (art. 2º, § 1º, II), com base em declaração do Poder Público."
+        },
+        {
+         "rotulo": "Direito privado",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Consórcio de direito privado",
+           "sub": "associação civil sem fins econômicos"
+          },
+          {
+           "titulo": "Registro civil",
+           "sub": "personalidade"
+          }
+         ],
+         "texto": "Nasce com o atendimento da legislação civil (registro dos atos constitutivos). Mesmo privado, segue o direito público em <b>licitação, contratos, prestação de contas e admissão de pessoal</b> (art. 6º, § 2º). A lei não diz se integra a indireta; o material EBEJI, pelo critério formal, conclui que <b>não</b> integra."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Pessoal: CLT nos dois formatos",
+       "html": "Desde a Lei 13.822/2019, o art. 6º, § 2º, deixa claro que o pessoal é celetista também no consórcio de <b>direito público</b>. A banca antiga cobrava a dúvida; hoje a resposta é a letra da lei."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Quem pode se consorciar.</b> Só entes da Federação, da mesma espécie ou de espécies diferentes. Duas travas caem muito:"
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 11.107/2005, art. 1º, § 2º",
+       "texto": "§ 2º A União somente participará de consórcios públicos em que também façam parte ==todos os Estados== em cujos territórios estejam situados os Municípios consorciados."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "Municípios podem formar consórcio público só entre si.",
+         "v": true,
+         "porque": "É o formato mais comum (art. 4º, § 1º, I)."
+        },
+        {
+         "texto": "Um Estado pode se consorciar com Municípios situados no seu território.",
+         "v": true,
+         "porque": "Art. 4º, § 1º, I."
+        },
+        {
+         "texto": "A União pode se consorciar só com Municípios, sem o Estado onde eles ficam.",
+         "v": false,
+         "porque": "A União só entra se todos os Estados dos Municípios consorciados também entrarem (art. 1º, § 2º)."
+        },
+        {
+         "texto": "Um Estado pode se consorciar com Município de outro Estado.",
+         "v": false,
+         "porque": "Segundo o material EBEJI, não: a área de atuação do art. 4º, § 1º, I, fala em Municípios com território contido no Estado."
+        },
+        {
+         "texto": "O Distrito Federal pode se consorciar com Municípios.",
+         "v": true,
+         "porque": "Previsto expressamente no art. 4º, § 1º, IV."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Como funciona por dentro.</b> A <b>assembleia geral</b> é a instância máxima, com pelo menos 1 voto por ente (art. 4º, § 2º). O representante legal é eleito entre os <b>Chefes do Executivo</b> consorciados (art. 4º, VIII). O controle externo é do Tribunal de Contas que aprecia as contas desse chefe (art. 9º, parágrafo único). E o consórcio pode ser contratado pelos próprios consorciados <b>sem licitação</b> (art. 2º, § 1º, III)."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 11.107/2005, arts. 4º, VIII, e 2º, § 1º, III",
+       "texto": "VIII - a forma de eleição e a duração do mandato do representante legal do consórcio público que, obrigatoriamente, deverá ser ==Chefe do Poder Executivo== de ente da Federação consorciado;\nIII - ser contratado pela administração direta ou indireta dos entes da Federação consorciados, ==dispensada a licitação==."
+      }
+     ]
+    },
+    {
+     "titulo": "Dinheiro, programa, saída e fim do consórcio",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Depois de criado, o consórcio vive de dois contratos que a FCC adora confundir. O <b>contrato de rateio</b> trata de <b>dinheiro</b>: é por ele, e só por ele, que os entes repassam recursos ao consórcio. O <b>contrato de programa</b> trata de <b>obrigações na prestação do serviço</b> entre um ente e outro ente ou o consórcio, na gestão associada."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 11.107/2005, art. 8º, caput e §§ 1º e 5º",
+       "texto": "Art. 8º Os entes consorciados ==somente entregarão recursos== ao consórcio público mediante contrato de rateio.\n§ 1º O contrato de rateio será formalizado ==em cada exercício financeiro==, e seu prazo de vigência não será superior ao das dotações que o suportam, com exceção dos contratos que tenham por objeto exclusivamente projetos consistentes em programas e ações contemplados em ==plano plurianual==.\n§ 5º Poderá ser excluído do consórcio público, ==após prévia suspensão==, o ente consorciado que não consignar, em sua lei orçamentária ou em créditos adicionais, as dotações suficientes para suportar as despesas assumidas por meio de contrato de rateio."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 8.429/1992, art. 10, XV (improbidade que causa lesão ao erário)",
+       "texto": "XV - celebrar contrato de rateio de consórcio público ==sem suficiente e prévia dotação orçamentária==, ou sem observar as formalidades previstas na lei."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Contrato de programa",
+         "titulo": "Quem presta não se regula",
+         "texto": "É nula a cláusula que dá ao contratado os poderes de planejar, regular e fiscalizar o serviço que ele mesmo presta (art. 13, § 3º). E o contrato de programa sobrevive à extinção do consórcio (art. 13, § 4º)."
+        },
+        {
+         "tag": "Saneamento",
+         "titulo": "Sem novos contratos de programa",
+         "texto": "Desde a Lei 14.026/2020 (marco do saneamento), os contratos de saneamento básico seguem o art. 175 da CF (concessão com licitação), vedados novos contratos de programa (art. 13, § 8º)."
+        },
+        {
+         "tag": "Retirada",
+         "titulo": "Ato formal na assembleia",
+         "texto": "O ente sai por ato formal de seu representante na assembleia geral, na forma disciplinada por lei (art. 11). A saída não prejudica obrigações já constituídas."
+        },
+        {
+         "tag": "Extinção",
+         "titulo": "Lei de todos",
+         "texto": "Instrumento aprovado pela assembleia e ratificado por lei de <b>todos</b> os consorciados (art. 12, redação da Lei 14.662/2023)."
+        },
+        {
+         "tag": "Alteração",
+         "titulo": "Lei da maioria",
+         "texto": "Instrumento aprovado pela assembleia e ratificado por lei da <b>maioria</b> dos consorciados (art. 12-A, incluído pela Lei 14.662/2023)."
+        },
+        {
+         "tag": "Prazo",
+         "titulo": "Lei × decreto",
+         "texto": "A lei pede prazo de duração no protocolo (art. 4º, I). O Decreto 6.017/2007 admitiu prazo indeterminado; para a doutrina citada no EBEJI, o decreto extrapolou a lei."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 11.107/2005, arts. 12 e 12-A",
+       "texto": "Art. 12. A extinção de contrato de consórcio público dependerá de instrumento aprovado pela assembleia geral, ratificado mediante lei ==por todos os entes consorciados==.\nArt. 12-A. A alteração de contrato de consórcio público dependerá de instrumento aprovado pela assembleia geral, ratificado mediante lei ==pela maioria dos entes consorciados==."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Rateio = rateia dinheiro; programa = programa o serviço",
+       "html": "Recurso financeiro entrando no consórcio? Rateio, todo exercício. Obrigação de prestar serviço entre entes? Programa."
+      }
+     ]
+    },
+    {
+     "titulo": "Terceiro setor: de onde vem",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A doutrina divide a sociedade em setores. O <b>primeiro setor</b> é o Estado. O <b>segundo</b>, o mercado, que busca lucro. O <b>terceiro setor</b> reúne pessoas jurídicas <b>privadas</b> e <b>sem fins lucrativos</b> que desempenham atividades de interesse público, ao lado do Estado. Por isso também são chamadas de <b>entidades paraestatais</b>: ficam ao lado do Estado, mas <b>não</b> integram a Administração, nem direta nem indireta.<br><br>O Estado não cria essas entidades. Ele as <b>fomenta</b>: concede um título jurídico (qualificação) e, com ele, a possibilidade de receber recursos, bens e servidores, em troca de metas e controle. Esse modelo ganhou força com a Reforma do Aparelho do Estado dos anos 1990 e com as Leis 9.637/1998 (OS) e 9.790/1999 (OSCIP). Em 2014 veio o marco geral das parcerias com organizações da sociedade civil, a Lei 13.019 (MROSC)."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"As organizações sociais integram a administração indireta.\"",
+       "html": "Errado. OS, OSCIP, OSC e Sistema S são pessoas privadas fora da Administração. Recebem um <b>título</b> (qualificação), não viram entidade estatal."
+      },
+      {
+       "t": "texto",
+       "html": "Como lidam com dinheiro público, prestam contas e respondem por improbidade:"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 70, parágrafo único",
+       "texto": "Parágrafo único. Prestará contas qualquer pessoa física ou jurídica, ==pública ou privada==, que utilize, arrecade, guarde, gerencie ou administre dinheiros, bens e valores públicos ou pelos quais a União responda, ou que, em nome desta, assuma obrigações de natureza pecuniária."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 8.429/1992, art. 1º, parágrafo único",
+       "texto": "Parágrafo único. No que se refere a recursos de origem pública, sujeita-se às sanções previstas nesta Lei o particular, pessoa física ou jurídica, que celebra com a administração pública convênio, contrato de repasse, ==contrato de gestão, termo de parceria==, termo de cooperação ou ajuste administrativo equivalente."
+      }
+     ]
+    },
+    {
+     "titulo": "OS, OSCIP, OSC e Sistema S",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "OS",
+         "sub": "Organização social, Lei 9.637/1998",
+         "verso": "Entidade privada sem fins lucrativos de ensino, pesquisa, desenvolvimento tecnológico, meio ambiente, cultura ou saúde. Vínculo: contrato de gestão.",
+         "detalhe": "Qualificação discricionária: conveniência e oportunidade."
+        },
+        {
+         "frente": "OSCIP",
+         "sub": "Lei 9.790/1999",
+         "verso": "Entidade privada sem fins lucrativos, com no mínimo 3 anos de funcionamento regular, numa das finalidades do art. 3º. Vínculo: termo de parceria.",
+         "detalhe": "Qualificação vinculada, pelo Ministério da Justiça, em 30 dias."
+        },
+        {
+         "frente": "OSC",
+         "sub": "Lei 13.019/2014 (MROSC)",
+         "verso": "Organização da sociedade civil em geral. Vínculos: termo de colaboração, termo de fomento ou acordo de cooperação, em regra após chamamento público.",
+         "detalhe": "Não depende de título prévio."
+        },
+        {
+         "frente": "Sistema S",
+         "sub": "Serviços sociais autônomos",
+         "verso": "SESI, SENAI, SESC, SENAC e similares, criados por autorização legal e mantidos por contribuições parafiscais, para assistência ou formação de categorias profissionais.",
+         "detalhe": "Fora do MROSC (art. 3º, X)."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.637/1998, arts. 1º, 2º, II, e 5º",
+       "texto": "Art. 1º O Poder Executivo poderá qualificar como organizações sociais pessoas jurídicas de direito privado, sem fins lucrativos, cujas atividades sejam dirigidas ao ==ensino==, à pesquisa científica, ao desenvolvimento tecnológico, à proteção e preservação do meio ambiente, à ==cultura e à saúde==, atendidos aos requisitos previstos nesta Lei.\nII - haver aprovação, quanto à ==conveniência e oportunidade== de sua qualificação como organização social, do Ministro ou titular de órgão supervisor ou regulador da área de atividade correspondente ao seu objeto social e do Ministro de Estado da Administração Federal e Reforma do Estado.\nArt. 5º Para os efeitos desta Lei, entende-se por ==contrato de gestão== o instrumento firmado entre o Poder Público e a entidade qualificada como organização social, com vistas à formação de parceria entre as partes para fomento e execução de atividades relativas às áreas relacionadas no art. 1º."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.790/1999, arts. 1º e 9º",
+       "texto": "Art. 1º Podem qualificar-se como Organizações da Sociedade Civil de Interesse Público as pessoas jurídicas de direito privado sem fins lucrativos que tenham sido constituídas e se encontrem em funcionamento regular há, ==no mínimo, 3 (três) anos==, desde que os respectivos objetivos sociais e normas estatutárias atendam aos requisitos instituídos por esta Lei.\n§ 2º A outorga da qualificação prevista neste artigo é ==ato vinculado== ao cumprimento dos requisitos instituídos por esta Lei.\nArt. 9º Fica instituído o ==Termo de Parceria==, assim considerado o instrumento passível de ser firmado entre o Poder Público e as entidades qualificadas como Organizações da Sociedade Civil de Interesse Público destinado à formação de vínculo de cooperação entre as partes, para o fomento e a execução das atividades de interesse público previstas no art. 3º desta Lei."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "OS (Lei 9.637)",
+        "OSCIP (Lei 9.790)"
+       ],
+       "linhas": [
+        [
+         "Qualificação",
+         "Discricionária (art. 2º, II)",
+         "Vinculada (art. 1º, § 2º)"
+        ],
+        [
+         "Tempo mínimo de existência",
+         "Não exige",
+         "3 anos de funcionamento regular (art. 1º)"
+        ],
+        [
+         "Instrumento",
+         "Contrato de gestão (art. 5º)",
+         "Termo de parceria (art. 9º)"
+        ],
+        [
+         "Poder Público no conselho",
+         "Obrigatório: representantes do Poder Público no conselho de administração (art. 2º, I, d)",
+         "Permitido: servidores podem compor conselho ou diretoria (art. 4º, parágrafo único)"
+        ],
+        [
+         "Bens e servidores",
+         "Permissão de uso de bens sem licitação (art. 12, § 3º) e cessão de servidor com ônus para a origem (art. 14)",
+         "Recursos pelo termo de parceria"
+        ],
+        [
+         "Perda do título",
+         "Desqualificação pelo Executivo, com processo administrativo e ampla defesa (art. 16)",
+         "A pedido, ou por processo administrativo ou judicial, de iniciativa popular ou do MP (art. 7º)"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.790/1999, art. 2º, IX a XI",
+       "texto": "Art. 2º Não são passíveis de qualificação como Organizações da Sociedade Civil de Interesse Público, ainda que se dediquem de qualquer forma às atividades descritas no art. 3º desta Lei:\nIX - as organizações sociais;\nX - as cooperativas;\nXI - as fundações públicas;"
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Uma OS pode ser também OSCIP?",
+       "html": "Não. O art. 2º, IX, da Lei 9.790 proíbe que organizações sociais se qualifiquem como OSCIP. Cooperativas e fundações públicas também ficam de fora."
+      },
+      {
+       "t": "texto",
+       "html": "<b>O MROSC (Lei 13.019/2014).</b> É a lei geral das parcerias com organizações da sociedade civil. A pergunta que decide o instrumento é dupla: <b>quem propôs</b> e <b>se há dinheiro</b>."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Proposta da Administração",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Termo de colaboração",
+           "sub": "art. 2º, VII"
+          },
+          {
+           "titulo": "com recursos",
+           "sub": "transferência financeira"
+          }
+         ],
+         "texto": "A Administração tem o plano de trabalho e chama as OSCs para executá-lo, com repasse de recursos."
+        },
+        {
+         "rotulo": "Proposta da OSC",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Termo de fomento",
+           "sub": "art. 2º, VIII"
+          },
+          {
+           "titulo": "com recursos",
+           "sub": "transferência financeira"
+          }
+         ],
+         "texto": "A ideia vem da organização, e o Estado fomenta com recursos. Fomento = a OSC propõe."
+        },
+        {
+         "rotulo": "Sem dinheiro",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Acordo de cooperação",
+           "sub": "art. 2º, VIII-A"
+          },
+          {
+           "titulo": "sem recursos",
+           "sub": "sem transferência financeira"
+          }
+         ],
+         "texto": "Parceria sem transferência de recursos financeiros. Em regra, sem chamamento público (art. 29), salvo se envolver comodato, doação de bens ou outro compartilhamento patrimonial."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 13.019/2014, art. 2º, VII, VIII e VIII-A",
+       "texto": "VII - termo de colaboração: instrumento por meio do qual são formalizadas as parcerias estabelecidas pela administração pública com organizações da sociedade civil para a consecução de finalidades de interesse público e recíproco ==propostas pela administração pública== que envolvam a transferência de recursos financeiros;\nVIII - termo de fomento: instrumento por meio do qual são formalizadas as parcerias estabelecidas pela administração pública com organizações da sociedade civil para a consecução de finalidades de interesse público e recíproco ==propostas pelas organizações da sociedade civil==, que envolvam a transferência de recursos financeiros;\nVIII-A - acordo de cooperação: instrumento por meio do qual são formalizadas as parcerias estabelecidas pela administração pública com organizações da sociedade civil para a consecução de finalidades de interesse público e recíproco ==que não envolvam a transferência de recursos financeiros==;"
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 13.019/2014, art. 24, caput",
+       "texto": "Art. 24. Exceto nas hipóteses previstas nesta Lei, a celebração de termo de colaboração ou de fomento será precedida de ==chamamento público== voltado a selecionar organizações da sociedade civil que tornem mais eficaz a execução do objeto."
+      },
+      {
+       "t": "leia",
+       "ref": "Lei 13.019/2014, arts. 29 a 32",
+       "motivo": "Exceções ao chamamento: o art. 29 (emendas parlamentares e acordos de cooperação), o art. 30 (dispensa: urgência por até 180 dias, guerra ou calamidade, proteção a pessoas ameaçadas, credenciamento em educação, saúde e assistência social) e o art. 31 (inexigibilidade por inviabilidade de competição). O art. 32 exige justificativa publicada, sob pena de nulidade."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 13.019/2014, art. 3º, III, VI e X (onde o MROSC não se aplica)",
+       "texto": "III - aos contratos de gestão celebrados com organizações sociais, ==desde que cumpridos os requisitos== previstos na Lei nº 9.637, de 15 de maio de 1998;\nVI - aos termos de parceria celebrados com organizações da sociedade civil de interesse público, ==desde que cumpridos os requisitos== previstos na Lei nº 9.790, de 23 de março de 1999;\nX - às parcerias entre a administração pública e os ==serviços sociais autônomos==."
+      }
+     ]
+    },
+    {
+     "titulo": "O STF e as zonas cinzentas",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 1.923/DF, red. p/ acórdão Min. Luiz Fux, 16/4/2015 (Info 781)",
+       "tese": "A Lei 9.637/1998 é constitucional, mas deve ser interpretada conforme a Constituição para que a qualificação, a celebração do contrato de gestão, a dispensa de licitação e a permissão de uso de bens, os contratos da OS com terceiros e a seleção de seu pessoal sejam conduzidos de forma pública, objetiva e impessoal, com observância dos princípios do art. 37, caput; e para afastar qualquer interpretação que restrinja o controle do Ministério Público e do Tribunal de Contas sobre a aplicação das verbas públicas."
+      },
+      {
+       "t": "texto",
+       "html": "Em outras palavras: a OS <b>não</b> precisa fazer concurso público nem licitar nos moldes da lei geral, mas precisa de <b>regulamento próprio</b> com procedimento impessoal para contratar e selecionar pessoal. A própria Lei 9.637 manda o conselho de administração aprovar esse regulamento (art. 4º, VIII)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 789.874/DF, Tema 569 da repercussão geral, rel. Min. Teori Zavascki, 17/9/2014",
+       "tese": "Os serviços sociais autônomos integrantes do denominado Sistema S não estão submetidos à exigência de concurso público para a contratação de pessoal, nos moldes do art. 37, II, da Constituição Federal."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula 516",
+       "tese": "O Serviço Social da Indústria (SESI) está sujeito à jurisdição da Justiça estadual."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Sistema S presta contas ao TCU",
+       "html": "Não faz concurso, mas administra contribuições parafiscais, que são dinheiro público. Por isso presta contas ao Tribunal de Contas (CF, art. 70, parágrafo único)."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Dispensa de licitação para contratar OS na Lei 14.133",
+       "html": "A Lei 8.666 tinha dispensa expressa para contratar OS em atividades do contrato de gestão (art. 24, XXIV), e a ADI 1.923 tratou dela. A Lei 14.133 não menciona organização social nem contrato de gestão em nenhum artigo (conferido no texto vigente). Como isso fica na lei nova é tema de doutrina: se a FCC perguntar, o enunciado deve indicar a base. A permissão de uso de bens sem licitação continua na própria Lei 9.637 (art. 12, § 3º)."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"O consórcio público adquire personalidade jurídica de direito público com o registro de seus atos constitutivos.\"",
+       "html": "Errado. Direito público: com a <b>vigência das leis de ratificação</b>. O registro é do consórcio de direito privado."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"A qualificação como OSCIP é ato discricionário.\"",
+       "html": "Errado. É ato <b>vinculado</b> (Lei 9.790, art. 1º, § 2º). Discricionária é a qualificação da OS."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Termo de colaboração × termo de fomento",
+       "html": "Colaboração: a <b>Administração</b> propõe. Fomento: a <b>OSC</b> propõe. Os dois envolvem dinheiro. Sem dinheiro: acordo de cooperação."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A União pode formar consórcio público apenas com Municípios, sem a participação do Estado onde eles se situam.",
+         "v": false,
+         "porque": "Lei 11.107, art. 1º, § 2º."
+        },
+        {
+         "texto": "O consórcio público de direito privado deve observar normas de direito público sobre licitação e admissão de pessoal.",
+         "v": true,
+         "porque": "Lei 11.107, art. 6º, § 2º."
+        },
+        {
+         "texto": "O pessoal do consórcio público de direito público é estatutário.",
+         "v": false,
+         "porque": "É regido pela CLT nos dois formatos (art. 6º, § 2º, redação da Lei 13.822/2019)."
+        },
+        {
+         "texto": "Os entes consorciados repassam recursos ao consórcio por meio de contrato de programa.",
+         "v": false,
+         "porque": "Por contrato de rateio (art. 8º)."
+        },
+        {
+         "texto": "A extinção do consórcio público depende de lei de todos os consorciados; a alteração, de lei da maioria.",
+         "v": true,
+         "porque": "Arts. 12 e 12-A (Lei 14.662/2023)."
+        },
+        {
+         "texto": "As organizações sociais integram a administração indireta do ente que as qualificou.",
+         "v": false,
+         "porque": "São privadas, do terceiro setor, fora da Administração."
+        },
+        {
+         "texto": "Os serviços sociais autônomos devem contratar pessoal mediante concurso público.",
+         "v": false,
+         "porque": "STF, Tema 569."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-13",
+    "adm-cad-14"
+   ]
   },
   {
    "id": "B2-a09",
@@ -1763,6 +2315,26 @@
   [
    "Decreto autônomo",
    "Decreto que retira validade direto da Constituição (art. 84, VI), sem lei intermediária."
+  ],
+  [
+   "Protocolo de intenções",
+   "Contrato preliminar entre os entes que, ratificado por lei, vira o contrato de consórcio público."
+  ],
+  [
+   "Contrato de rateio",
+   "Contrato anual pelo qual os entes consorciados entregam recursos ao consórcio."
+  ],
+  [
+   "Contrato de programa",
+   "Contrato que regula as obrigações de um ente com outro ente ou com o consórcio na prestação de serviço em gestão associada."
+  ],
+  [
+   "Paraestatal",
+   "Entidade privada sem fins lucrativos que atua ao lado do Estado, sem integrar a Administração (terceiro setor)."
+  ],
+  [
+   "Chamamento público",
+   "Procedimento de seleção de organização da sociedade civil para termo de colaboração ou de fomento (Lei 13.019)."
   ]
  ]
 }
