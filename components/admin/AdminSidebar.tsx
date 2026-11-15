@@ -37,6 +37,8 @@ import { Logo } from "@/components/ui/Logo";
 import { createClient } from "@/lib/supabase/client";
 import { JuridicoAreaSubnav } from "@/components/admin/JuridicoAreaSubnav";
 import { InstallAppButton } from "@/components/admin/InstallAppButton";
+import { ModoSwitch } from "@/components/admin/ModoSwitch";
+import { EstudosSidebar } from "@/components/estudos/EstudosSidebar";
 
 export function AdminSidebar({
   newLeadsCount,
@@ -215,11 +217,18 @@ export function AdminSidebar({
     router.refresh();
   }
 
+  if (pathname.startsWith("/admin/estudos")) {
+    return <EstudosSidebar onLogout={handleLogout} />;
+  }
+
   return (
     <aside className="flex w-56 shrink-0 flex-col border-r border-hairline px-4 py-6 print:hidden">
       <Link href="/admin" className="px-2">
         <Logo />
       </Link>
+      <div className="mt-6">
+        <ModoSwitch modo="escritorio" />
+      </div>
 
       <nav className="mt-10 flex flex-1 flex-col gap-4">
         {NAV_GROUPS.map((group) => (

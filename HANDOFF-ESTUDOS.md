@@ -1,0 +1,83 @@
+# Handoff: Central de estudos "Operação Aprovação" (PGE-MA, FCC)
+
+Documento único da área de estudos do painel: arquitetura, modelo de dados, regras e roteiro. O `HANDOFF.md` continua valendo para o resto do site. Leia os dois antes de mexer.
+
+## 1. O que é
+
+Área privada em `/admin/estudos` (mesmo login, mesmo PWA do painel) para a preparação da Dallila para Analista Jurídico da PGE-MA (Concurso Unificado do Maranhão, banca FCC, fase pré-edital). Ela substitui aos poucos a plataforma antiga, que é um Artifact (`CONCURSO PGE-MA/plataforma/rumo-pge-ma.html`). A plataforma antiga **não foi alterada** e continua funcionando.
+
+Princípios combinados com ela:
+- Nada inventado: lei, jurisprudência, estatística de banca e datas do concurso só com fonte. Hipótese aparece como hipótese.
+- Estatística da banca só a partir de provas reais da FCC. As 486 questões do banco são autorais "no estilo FCC" e servem para treino, não para estatística de banca.
+- Prontidão, nunca "chance de aprovação".
+- Correção automática de redação é sempre estimativa.
+- Gamificação premia constância e qualidade. Descanso não quebra a sequência nem é punido.
+- Escrita sem travessão.
+
+## 2. Navegação e visual
+
+- `components/admin/AdminSidebar.tsx`: em qualquer rota `/admin/estudos*` renderiza `EstudosSidebar` no lugar da barra do escritório. As duas barras têm a chave `ModoSwitch` (Escritório / Estudos) no topo.
+- Visual próprio, moderno e escuro, com tokens `--e-*` no fim de `app/globals.css`, registrados no `@theme inline` como `bg-e-card`, `text-e-dim` etc. Tem variante clara (`data-theme="light"` ou preferência do sistema).
+- Sparkle da marca: `components/estudos/Sparkle.tsx` reproduz os paths e as animações (brilhante, carregando, flutuante) do componente Sparkle do Design System dela (artifact XpbUQBSRZcds53PLMn6f5w, `project/components/Sparkle/preview.html`). Respeita `prefers-reduced-motion`. Não aproximar com caractere solto.
+- Peças visuais: `components/estudos/ui.tsx` (Card, Kpi, Barra, Cabecalho, botões, campo).
+
+## 3. Telas (etapa 2)
+
+| Rota | O que faz |
+|---|---|
+| `/admin/estudos` | Saudação, "Sua próxima melhor ação" (sempre com o porquê), KPIs, mapa de fraquezas, blocos de hoje, erros que se repetem, progresso do edital, dados da prova |
+| `/admin/estudos/cronograma` | Horários por dia, data da prova, matérias condicionais, gerar/replanejar, atrasados, semana |
+| `/admin/estudos/questoes` | Filtros (matéria, tema, status), cronômetro, correção com o porquê de cada alternativa, fonte com destaque, classificação obrigatória do erro (10 tipos) ou do acerto (5 tipos), anotação, histórico |
+| `/admin/estudos/edital` | 184 tópicos do edital verticalizado por fase, andamento por tópico, "fora do edital" |
+| `/admin/estudos/concurso` | Linha do tempo das 11 fases com data, situação e link de fonte oficial |
+
+## 4. Arquivos
+
+- Conteúdo estático: `content/estudos/edital.json` (18 matérias, 184 tópicos, ids `B3-01`) e `content/estudos/questoes.json` (486 questões, ~670 KB, **só importado no servidor**, via `lib/db-estudos.ts`).
+- Lógica pura (cliente e servidor): `lib/estudos-utils.ts` (edital, progresso, gerador de cronograma, mensagens) e `lib/estudos-desempenho.ts` (tipos de erro e acerto, estatísticas, temas críticos, próxima melhor ação).
+- Servidor: `lib/db-estudos.ts`. HTML seguro das questões: `lib/estudos-html.ts` (só libera b, i, u, sup, sub, mark e br).
+- APIs: `app/api/admin/estudos/{config,cronograma,cronograma/[id],topicos/[id],respostas,eventos/[id]}`.
+
+## 5. Banco (Supabase `zojcjeinftoscpmkwtdi`), RLS `authenticated` em tudo
+
+| Tabela | Uso |
+|---|---|
+| `estudo_config` | chave `geral`: `{dataProva, minutosPorDia[7], incluirCondicionais[]}` |
+| `estudo_topicos` | andamento por tópico do edital (`nao_iniciado`, `estudando`, `revisar`, `dominado`) e `fora_do_edital` |
+| `estudo_cronograma` | blocos do plano. Replanejar apaga só os **não feitos** e grava de novo |
+| `estudo_respostas` | uma linha por tentativa (histórico completo para reincidência): `correta` é calculada no servidor, `classificacao`, `tempo_seg`, `contexto` (`treino`, `revisao`, `simulado`, `migrado`) |
+| `estudo_eventos` | fases do concurso. Só a publicação do edital tem data (20/11/2026, "previsto") |
+| `estudo_cartoes` | estado SM-2 dos flashcards migrados do Artifact (a tela de cartões vem na etapa 4) |
+
+Migrations: `estudos_onda1_edital_cronograma` e `estudos_onda2_respostas_eventos_cartoes`.
+
+## 6. Migração da plataforma antiga (14/11/2026)
+
+- Backup completo do banco do Artifact em `CONCURSO PGE-MA/backup-plataforma-2026-11-14/` (34 documentos).
+- 8 questões viraram 12 tentativas em `estudo_respostas` (`contexto = 'migrado'`). Tipos antigos convertidos: nao_sei → conteudo, nao_lembro → esquecimento, confundi → confusao, li_errado → atencao, pegadinha → pegadinha, seguro → seguro, chute → chute. "O que eu entendi" e "por quê" foram para `nota`.
+- 25 flashcards foram para `estudo_cartoes` com o estado original.
+- Se ela continuar respondendo no Artifact antes de trocar de vez, refazer a migração só das tentativas novas (comparar pelo horário).
+
+## 7. Regras de cálculo
+
+- **Acerto firme**: acerto que não foi chute nem dúvida. O mapa de fraquezas usa só esse.
+- **Tema crítico**: 2 ou mais tentativas sem acerto firme no mesmo tema nos últimos 45 dias.
+- **Próxima melhor ação**: tema crítico > 6 ou mais blocos atrasados > próximo bloco de hoje > montar plano > questões mistas.
+- **Progresso do edital**: estudando 35%, precisa revisar 70%, dominado 100%.
+- **Cronograma**: revisão diária (~15% do dia), Português todo dia, Raciocínio Lógico e Informática em dias alternados, cultura do MA no sábado, discursiva no domingo, teoria de 50 min com questões de 25 min na ordem das fases, lei seca a cada 3 dias, sobra vira questões mistas, depois da teoria tudo vira questões e simulados.
+
+## 8. Roteiro
+
+1. Etapa 1 (feita): Início, Edital, Cronograma.
+2. Etapa 2 (feita): barras separadas, visual com sparkle, questões com tempo e classificação, migração, calendário do concurso.
+3. Etapa 3: laboratório de erros (reincidência, erros superados, tempo até corrigir, botão "copiar resumo dos meus erros" para o tutor) e índice de domínio configurável com árvore de 7 níveis.
+4. Etapa 4: revisão inteligente (fila diária de questões, cartões, artigos e erros) e pomodoro com tempo efetivo.
+5. Etapa 5: biblioteca (PDFs no Storage com busca por texto e página, lei grifada, jurisprudência com fonte e data, questões comentadas, mapas, etiquetas, pesquisa global). Antes: conferir o limite de armazenamento do plano Supabase. Marca d'água com dados pessoais das apostilas nunca pode aparecer.
+6. Etapa 6: banca FCC (cadastro de provas reais) e prontidão.
+7. Etapa 7: redação e discursivas.
+8. Etapa 8: RPG (XP, níveis, missões, loja só de itens visuais).
+9. Etapa 9 (opcional e paga): IA dentro do site, com camada que aceita qualquer provedor, chave só no servidor, teto mensal. A assinatura do Claude dela **não** dá acesso à API. O tutor sem custo extra é um Projeto no claude.ai (instruções em `CONCURSO PGE-MA/tutor/INSTRUCOES-PROJETO-OPERACAO-APROVACAO.md`).
+
+## 9. Como testar
+
+`npx eslint .` e `npm run build` limpos, depois o fluxo no navegador local logada. Qualquer resposta, bloco ou evento de teste gravado no Supabase de produção deve ser apagado depois (ela não usa banco separado de teste).

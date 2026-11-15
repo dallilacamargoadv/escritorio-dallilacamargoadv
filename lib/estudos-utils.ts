@@ -1,0 +1,351 @@
+// Central de estudos (PGE-MA). Arquivo puro: pode ser importado por Server e Client Components.
+import editalJson from "@/content/estudos/edital.json";
+import { addDaysToDateString } from "@/lib/atividades-utils";
+
+export type TopicoStatus = "nao_iniciado" | "estudando" | "revisar" | "dominado";
+export type ItemTipo = "teoria" | "questoes" | "revisao" | "lei_seca" | "discursiva" | "simulado";
+
+export interface Topico {
+  id: string;
+  n: number;
+  titulo: string;
+  sub: string[];
+}
+export interface Materia {
+  id: string;
+  nome: string;
+  fase: number;
+  condicional: boolean;
+  topicos: Topico[];
+}
+export interface TopicoEstado {
+  topico_id: string;
+  status: TopicoStatus;
+  fora_do_edital: boolean;
+  nota: string | null;
+}
+export interface CronogramaItem {
+  id: string;
+  data: string;
+  ordem: number;
+  materia_id: string;
+  topico_id: string | null;
+  tipo: ItemTipo;
+  titulo: string;
+  minutos: number;
+  feito: boolean;
+  feito_em: string | null;
+}
+export type NovoItem = Omit<CronogramaItem, "id" | "feito" | "feito_em">;
+
+export interface EstudoConfig {
+  dataProva: string | null;
+  /** minutos disponíveis por dia da semana, de domingo (0) a sábado (6) */
+  minutosPorDia: number[];
+  /** matérias de Conhecimentos Gerais que só entram se o edital trouxer */
+  incluirCondicionais: string[];
+}
+
+export const EDITAL = editalJson as {
+  fonte: string;
+  prova: Record<string, string>;
+  materias: Materia[];
+};
+export const MATERIAS: Materia[] = EDITAL.materias;
+export const MATERIA_POR_ID = new Map(MATERIAS.map((m) => [m.id, m]));
+export const TOPICO_POR_ID = new Map(
+  MATERIAS.flatMap((m) => m.topicos.map((t) => [t.id, { ...t, materia: m }] as const)),
+);
+
+export const STATUS_LABELS: Record<TopicoStatus, string> = {
+  nao_iniciado: "Não iniciado",
+  estudando: "Estudando",
+  revisar: "Precisa revisar",
+  dominado: "Dominado",
+};
+/** peso de cada status no progresso do edital */
+export const STATUS_PESO: Record<TopicoStatus, number> = {
+  nao_iniciado: 0,
+  estudando: 0.35,
+  revisar: 0.7,
+  dominado: 1,
+};
+export const TIPO_LABELS: Record<ItemTipo, string> = {
+  teoria: "Teoria",
+  questoes: "Questões",
+  revisao: "Revisão",
+  lei_seca: "Lei seca",
+  discursiva: "Discursiva",
+  simulado: "Simulado",
+};
+export const FASE_LABELS: Record<number, string> = {
+  0: "Rotina diária",
+  1: "Fase 1 · Núcleo da prova",
+  2: "Fase 2 · Eixo da Procuradoria",
+  3: "Fase 3 · Complementares",
+  4: "Dias alternados",
+  5: "Cultura geral do Estado",
+};
+
+export const CONFIG_PADRAO: EstudoConfig = {
+  dataProva: null,
+  minutosPorDia: [120, 180, 180, 180, 180, 180, 150],
+  incluirCondicionais: [],
+};
+
+export function normalizarConfig(valor: unknown): EstudoConfig {
+  const v = (valor ?? {}) as Partial<EstudoConfig>;
+  const minutos =
+    Array.isArray(v.minutosPorDia) && v.minutosPorDia.length === 7
+      ? v.minutosPorDia.map((m) => Math.max(0, Math.min(600, Math.round(Number(m) || 0))))
+      : CONFIG_PADRAO.minutosPorDia;
+  const data =
+    typeof v.dataProva === "string" && /^\d{4}-\d{2}-\d{2}$/.test(v.dataProva) ? v.dataProva : null;
+  const cond = Array.isArray(v.incluirCondicionais)
+    ? v.incluirCondicionais.filter((id) => MATERIA_POR_ID.get(id)?.condicional)
+    : [];
+  return { dataProva: data, minutosPorDia: minutos, incluirCondicionais: cond };
+}
+
+export function materiaAtiva(m: Materia, config: EstudoConfig): boolean {
+  return !m.condicional || config.incluirCondicionais.includes(m.id);
+}
+
+/** dia da semana (0 = domingo) de uma data YYYY-MM-DD, sem fuso */
+export function diaDaSemana(data: string): number {
+  const [a, m, d] = data.split("-").map(Number);
+  return new Date(Date.UTC(a, m - 1, d)).getUTCDay();
+}
+export function diasEntre(de: string, ate: string): number {
+  const [a1, m1, d1] = de.split("-").map(Number);
+  const [a2, m2, d2] = ate.split("-").map(Number);
+  return Math.round((Date.UTC(a2, m2 - 1, d2) - Date.UTC(a1, m1 - 1, d1)) / 86400000);
+}
+export function formatarData(data: string, opcoes: Intl.DateTimeFormatOptions = { day: "2-digit", month: "2-digit" }) {
+  const [a, m, d] = data.split("-").map(Number);
+  return new Date(Date.UTC(a, m - 1, d, 12)).toLocaleDateString("pt-BR", { timeZone: "UTC", ...opcoes });
+}
+
+export interface ProgressoMateria {
+  materia: Materia;
+  total: number;
+  dominados: number;
+  iniciados: number;
+  percentual: number;
+}
+export function progressoPorMateria(
+  estados: Map<string, TopicoEstado>,
+  config: EstudoConfig,
+): ProgressoMateria[] {
+  return MATERIAS.filter((m) => materiaAtiva(m, config)).map((m) => {
+    const tops = m.topicos.filter((t) => !estados.get(t.id)?.fora_do_edital);
+    let soma = 0;
+    let dominados = 0;
+    let iniciados = 0;
+    for (const t of tops) {
+      const s = estados.get(t.id)?.status ?? "nao_iniciado";
+      soma += STATUS_PESO[s];
+      if (s === "dominado") dominados++;
+      if (s !== "nao_iniciado") iniciados++;
+    }
+    return {
+      materia: m,
+      total: tops.length,
+      dominados,
+      iniciados,
+      percentual: tops.length ? Math.round((soma / tops.length) * 100) : 0,
+    };
+  });
+}
+export function progressoGeral(lista: ProgressoMateria[]) {
+  const total = lista.reduce((s, p) => s + p.total, 0);
+  const pond = lista.reduce((s, p) => s + (p.percentual / 100) * p.total, 0);
+  const dominados = lista.reduce((s, p) => s + p.dominados, 0);
+  const iniciados = lista.reduce((s, p) => s + p.iniciados, 0);
+  return { total, dominados, iniciados, percentual: total ? Math.round((pond / total) * 100) : 0 };
+}
+
+/* ===================== GERADOR DO CRONOGRAMA ===================== */
+const MIN_TEORIA = 50;
+const MIN_QUESTOES = 25;
+const LIMITE_DIAS = 200;
+
+/**
+ * Monta o cronograma de hoje até a véspera da prova (ou 200 dias, se não houver data).
+ * Regras do edital verticalizado: fases 1, 2 e 3 em ordem; Português todo dia;
+ * Raciocínio Lógico e Informática em dias alternados; cultura do Estado em bloco no sábado;
+ * revisão espaçada todo dia; discursiva aos domingos; quando a teoria acaba, o resto vira questões e revisão.
+ */
+export function gerarCronograma(
+  hoje: string,
+  config: EstudoConfig,
+  estados: Map<string, TopicoEstado>,
+): NovoItem[] {
+  const ativas = MATERIAS.filter((m) => materiaAtiva(m, config));
+  const pendente = (t: Topico) => {
+    const e = estados.get(t.id);
+    return !e?.fora_do_edital && e?.status !== "dominado";
+  };
+  const fila = ativas
+    .filter((m) => m.fase >= 1 && m.fase <= 3)
+    .sort((a, b) => a.fase - b.fase)
+    .flatMap((m) => m.topicos.filter(pendente).map((t) => ({ m, t })));
+  const portugues = ativas.find((m) => m.id === "A1");
+  const filaPt = portugues ? portugues.topicos.filter(pendente) : [];
+  const alternadas = ativas.filter((m) => m.fase === 4);
+  const cultura = ativas.filter((m) => m.fase === 5).flatMap((m) => m.topicos.filter(pendente).map((t) => ({ m, t })));
+  const cicloQuestoes = ativas.filter((m) => m.fase >= 1 && m.fase <= 3);
+
+  const fim = config.dataProva ? addDaysToDateString(config.dataProva, -1) : addDaysToDateString(hoje, LIMITE_DIAS);
+  const total = Math.min(LIMITE_DIAS, diasEntre(hoje, fim));
+  const itens: NovoItem[] = [];
+  let iFila = 0;
+  let iPt = 0;
+  let iCult = 0;
+  let iAlt = 0;
+  let iCiclo = 0;
+  let questoesPendentes: { m: Materia; t: Topico } | null = null;
+
+  for (let d = 0; d <= total; d++) {
+    const data = addDaysToDateString(hoje, d);
+    const dow = diaDaSemana(data);
+    let resta = config.minutosPorDia[dow] ?? 0;
+    if (resta < 15) continue;
+    let ordem = 0;
+    const add = (it: Omit<NovoItem, "data" | "ordem">) => {
+      itens.push({ ...it, data, ordem: ordem++ });
+      resta -= it.minutos;
+    };
+
+    // 1. revisão espaçada (cerca de 15% do dia)
+    add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Revisão espaçada: cartões e questões que venceram hoje", minutos: Math.max(15, Math.round((resta * 0.15) / 5) * 5) });
+
+    // 2. domingo: discursiva
+    if (dow === 0 && resta >= 60) {
+      add({ materia_id: "DISC", topico_id: null, tipo: "discursiva", titulo: "Discursiva cronometrada: estudo de caso (problema, base legal, jurisprudência, solução)", minutos: 60 });
+    }
+
+    // 3. Português todo dia
+    if (portugues && resta >= 25) {
+      const t = d % 2 === 0 ? filaPt[iPt] : undefined;
+      if (t) {
+        iPt++;
+        add({ materia_id: "A1", topico_id: t.id, tipo: "teoria", titulo: `Português: ${t.titulo}`, minutos: Math.min(40, resta) });
+      } else {
+        add({ materia_id: "A1", topico_id: null, tipo: "questoes", titulo: "Português: questões FCC (interpretação e gramática)", minutos: 25 });
+      }
+    }
+
+    // 4. Raciocínio Lógico / Informática em dias alternados
+    if (alternadas.length && d % 2 === 1 && resta >= 25 && dow !== 0) {
+      const m = alternadas[iAlt++ % alternadas.length];
+      add({ materia_id: m.id, topico_id: null, tipo: "questoes", titulo: `${m.nome}: questões`, minutos: 25 });
+    }
+
+    // 5. sábado: cultura geral do Estado
+    if (dow === 6 && cultura.length && resta >= 40) {
+      const c = cultura[iCult % cultura.length];
+      iCult++;
+      add({ materia_id: c.m.id, topico_id: c.t.id, tipo: "teoria", titulo: `${c.m.nome}: ${c.t.titulo}`, minutos: 40 });
+    }
+
+    // 6. questões que ficaram do dia anterior
+    if (questoesPendentes && resta >= MIN_QUESTOES) {
+      const { m, t } = questoesPendentes;
+      add({ materia_id: m.id, topico_id: t.id, tipo: "questoes", titulo: `${m.nome}: questões de ${t.titulo}`, minutos: MIN_QUESTOES });
+      questoesPendentes = null;
+    }
+
+    // 7. bloco principal: teoria + questões dos tópicos na ordem das fases
+    let leiSecaFeita = false;
+    while (resta >= MIN_TEORIA && iFila < fila.length) {
+      const { m, t } = fila[iFila++];
+      add({ materia_id: m.id, topico_id: t.id, tipo: "teoria", titulo: `${m.nome}: ${t.titulo}`, minutos: MIN_TEORIA });
+      if (resta >= MIN_QUESTOES) {
+        add({ materia_id: m.id, topico_id: t.id, tipo: "questoes", titulo: `${m.nome}: questões de ${t.titulo}`, minutos: MIN_QUESTOES });
+      } else {
+        questoesPendentes = { m, t };
+      }
+      if (!leiSecaFeita && d % 3 === 0 && resta >= 20 && m.fase <= 2) {
+        leiSecaFeita = true;
+        add({ materia_id: m.id, topico_id: t.id, tipo: "lei_seca", titulo: `${m.nome}: lei seca do tópico (artigos e palavras que a FCC troca)`, minutos: 20 });
+      }
+    }
+
+    // 7b. sobrou pouco tempo no dia: questões mistas do que já foi visto
+    if (iFila < fila.length && iFila > 0 && resta >= MIN_QUESTOES) {
+      add({ materia_id: "MIX", topico_id: null, tipo: "questoes", titulo: "Questões mistas das matérias já vistas (intercalar fixa mais)", minutos: Math.min(45, Math.floor(resta / 5) * 5) });
+    }
+
+    // 8. teoria acabou: o resto do dia vira questões, em rodízio pelas matérias
+    while (iFila >= fila.length && resta >= MIN_QUESTOES && cicloQuestoes.length) {
+      const m = cicloQuestoes[iCiclo++ % cicloQuestoes.length];
+      const min = resta >= 50 ? 50 : MIN_QUESTOES;
+      add({ materia_id: m.id, topico_id: null, tipo: dow === 6 && min === 50 ? "simulado" : "questoes", titulo: dow === 6 && min === 50 ? `Simulado curto: ${m.nome}` : `${m.nome}: questões FCC e revisão de erros`, minutos: min });
+    }
+  }
+  return itens;
+}
+
+/** data do último bloco de teoria: quando o edital termina de ser visto no ritmo atual */
+export function previsaoFimTeoria(itens: { data: string; tipo: ItemTipo; materia_id: string }[]): string | null {
+  const teoria = itens.filter((i) => i.tipo === "teoria" && (MATERIA_POR_ID.get(i.materia_id)?.fase ?? 0) >= 1 && (MATERIA_POR_ID.get(i.materia_id)?.fase ?? 0) <= 3);
+  return teoria.length ? teoria[teoria.length - 1].data : null;
+}
+
+/** dias seguidos (terminando hoje ou ontem) com pelo menos um bloco feito */
+export function diasSeguidos(feitos: string[], hoje: string): number {
+  const dias = new Set(feitos);
+  let seq = 0;
+  let dia = dias.has(hoje) ? hoje : addDaysToDateString(hoje, -1);
+  while (dias.has(dia)) {
+    seq++;
+    dia = addDaysToDateString(dia, -1);
+  }
+  return seq;
+}
+
+/* ===================== MENSAGENS ===================== */
+const INCENTIVOS = [
+  "Constância ganha de intensidade. Um bloco bem feito hoje vale mais que uma maratona no domingo.",
+  "Errar questão agora é barato. Cada erro anotado é um ponto a menos de surpresa na prova.",
+  "Você não precisa estudar tudo hoje. Precisa só fazer o bloco que está na sua frente.",
+  "A FCC cobra a letra da lei. Ler o artigo com calma hoje é ganhar questão depois.",
+  "Revisar é o que transforma estudo em memória. Não pule a revisão de hoje.",
+  "Dia ruim também conta. Se der só a revisão, já é um dia na sequência.",
+  "Quem chega à aprovação raramente é quem mais estudou num dia. É quem não parou.",
+];
+
+export interface ContextoMensagem {
+  hoje: string;
+  atrasados: number;
+  feitosHoje: number;
+  totalHoje: number;
+  seguidos: number;
+  percentualEdital: number;
+  diasAteProva: number | null;
+  materiaMaisAtrasada: string | null;
+}
+export function mensagemDoDia(c: ContextoMensagem): { titulo: string; texto: string } {
+  const indice = diasEntre("2026-01-01", c.hoje);
+  const incentivo = INCENTIVOS[((indice % INCENTIVOS.length) + INCENTIVOS.length) % INCENTIVOS.length];
+  if (c.totalHoje === 0 && c.atrasados === 0) {
+    return { titulo: "Comece pelo cronograma", texto: "Preencha seus horários na aba Cronograma e gere o plano. A partir daí, esta tela mostra o que fazer a cada dia." };
+  }
+  if (c.totalHoje > 0 && c.feitosHoje === c.totalHoje) {
+    return { titulo: "Dia cumprido", texto: `Você fechou todos os blocos de hoje${c.seguidos > 1 ? ` e está há ${c.seguidos} dias seguidos estudando` : ""}. Descanse sem culpa.` };
+  }
+  if (c.atrasados >= 6) {
+    return { titulo: "Hora de replanejar", texto: `Ficaram ${c.atrasados} blocos para trás. Isso acontece. Na aba Cronograma, toque em "Replanejar" e o plano se ajusta a partir de hoje, sem você precisar recuperar tudo de uma vez.` };
+  }
+  if (c.diasAteProva !== null && c.diasAteProva <= 30) {
+    return { titulo: `Faltam ${c.diasAteProva} dias`, texto: "Reta final: priorize questões, revisão dos seus erros e lei seca. Conteúdo novo só se for do núcleo da prova." };
+  }
+  if (c.seguidos >= 3) {
+    return { titulo: `${c.seguidos} dias seguidos`, texto: `${incentivo}` };
+  }
+  if (c.materiaMaisAtrasada) {
+    return { titulo: "Atenção a uma matéria", texto: `${c.materiaMaisAtrasada} é a matéria do núcleo com menos progresso. ${incentivo}` };
+  }
+  return { titulo: "Mensagem de hoje", texto: incentivo };
+}
