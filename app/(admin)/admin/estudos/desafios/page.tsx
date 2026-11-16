@@ -5,6 +5,8 @@ import { abrir, DESAFIOS_POR_DIA, escolherRodada, recorde, sequencia, type Estad
 import { MATERIA_POR_ID } from "@/lib/estudos-utils";
 import { Cabecalho } from "@/components/estudos/ui";
 import { DesafiosClient } from "@/components/estudos/DesafiosClient";
+import { AlertaRevisao } from "@/components/estudos/AlertaRevisao";
+import { HojeDesafios } from "@/components/estudos/HojeDesafios";
 
 export default async function DesafiosPage(props: PageProps<"/admin/estudos/desafios">) {
   const sp = await props.searchParams;
@@ -29,6 +31,9 @@ export default async function DesafiosPage(props: PageProps<"/admin/estudos/desa
         titulo="Desafios"
         sub={`Lei seca do jeito que a FCC cobra: complete a lacuna do artigo literal ou ache a troca de palavra (pode/deve, prazo, competência). ${DESAFIOS_POR_DIA} por dia mantêm a sequência.`}
       />
+      <AlertaRevisao />
+      <HojeDesafios hoje={hoje} />
+      <h2 className="mb-3 text-sm font-medium uppercase tracking-[0.12em] text-e-dim">Rodada rápida: 10 por dia</h2>
       <DesafiosClient
         key={`${rodada}-${materia}`}
         desafios={lista.map(abrir)}

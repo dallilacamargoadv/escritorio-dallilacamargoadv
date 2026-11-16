@@ -5,12 +5,14 @@ import {
   distribuicaoSimuladao,
   evolucaoSemanal,
   poolLeiSeca,
+  poolSemana,
+  temasDaSemana,
   semGabarito,
   TAMANHOS_SIMULADAO,
   TIPO_LABEL,
 } from "@/lib/estudos-simulados";
 import { MATERIA_POR_ID } from "@/lib/estudos-utils";
-import { todayBelemDateString } from "@/lib/atividades-utils";
+import { addDaysToDateString, todayBelemDateString } from "@/lib/atividades-utils";
 import { Cabecalho } from "@/components/estudos/ui";
 import { SimuladosClient } from "@/components/estudos/SimuladosClient";
 import { SimuladoProva } from "@/components/estudos/SimuladoProva";
@@ -78,11 +80,22 @@ export default async function SimuladosPage(props: PageProps<"/admin/estudos/sim
     ]),
   );
 
+  const temas = temasDaSemana(respostas, QUESTAO_POR_ID, addDaysToDateString(todayBelemDateString(), -6));
+  const poolSem = poolSemana(QUESTOES, temas);
+  const semana = {
+    total: poolSem.length,
+    ineditas: poolSem.filter((q) => !vistas.has(q.id)).length,
+    temas: [...temas].map((t) => {
+      const [m, tema] = t.split("|");
+      return `${MATERIA_POR_ID.get(m)?.nome ?? m}: ${tema}`;
+    }).sort((a, b) => a.localeCompare(b, "pt-BR")),
+  };
+
   return (
     <>
       <Cabecalho
         titulo="Simulados"
-        sub="Quarta: lei seca de uma matéria. Domingo: simuladão misto, proporcional ao edital. Cronômetro corre do início ao fim e o gabarito só aparece ao entregar."
+        sub="Quarta: lei seca de uma matéria. Domingo: simulado dos temas da semana (só o que você já estudou). Simuladão misto do edital quando houver mais temas vistos. Cronômetro corre do início ao fim e o gabarito só aparece ao entregar."
       />
       <SimuladosClient
         hoje={todayBelemDateString()}
@@ -90,6 +103,7 @@ export default async function SimuladosPage(props: PageProps<"/admin/estudos/sim
         ineditas={QUESTOES.filter((q) => !vistas.has(q.id)).length}
         materias={materias}
         distribuicoes={distribuicoes}
+        semana={semana}
         simulados={simulados.map((s) => ({ ...s, itens: [], questoes: [] }))}
         evolucao={evolucaoSemanal(simulados)}
         todasMaterias={[...MATERIA_POR_ID.values()].map((m) => ({ id: m.id, nome: m.nome }))}

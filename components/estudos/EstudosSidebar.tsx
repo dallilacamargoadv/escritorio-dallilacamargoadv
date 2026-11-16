@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpen, Library, CalendarDays, CalendarRange, CircleHelp, FlaskConical, Puzzle, LayoutDashboard, ListChecks, LogOut, Repeat, Target, Timer } from "lucide-react";
+import { BookOpen, Library, CalendarDays, CalendarRange, CircleHelp, FlaskConical, Puzzle, LayoutDashboard, ListChecks, LogOut, PenLine, Repeat, Target, Timer } from "lucide-react";
 import { ModoSwitch } from "@/components/admin/ModoSwitch";
 import { InstallAppButton } from "@/components/admin/InstallAppButton";
 import { Sparkle } from "@/components/estudos/Sparkle";
@@ -15,6 +15,7 @@ const ITENS = [
   { href: "/admin/estudos/questoes", label: "Questões", icon: CircleHelp, exact: false },
   { href: "/admin/estudos/simulados", label: "Simulados", icon: Timer, exact: false },
   { href: "/admin/estudos/desafios", label: "Desafios", icon: Puzzle, exact: false },
+  { href: "/admin/estudos/redacao", label: "Redação", icon: PenLine, exact: false },
   { href: "/admin/estudos/biblioteca", label: "Biblioteca", icon: Library, exact: false },
   { href: "/admin/estudos/laboratorio", label: "Laboratório de erros", icon: FlaskConical, exact: false },
   { href: "/admin/estudos/banca", label: "Banca FCC", icon: Target, exact: false },
@@ -52,7 +53,7 @@ export function EstudosSidebar({ onLogout }: { onLogout: () => void }) {
           );
         })}
         <p className="mt-6 px-3 text-[10px] uppercase tracking-[0.14em] text-e-dim">Nas próximas etapas</p>
-        {["Redação", "Jornada"].map((t) => (
+        {["Jornada"].map((t) => (
           <span key={t} className="px-3 py-1.5 text-xs text-e-dim/60">
             {t}
           </span>

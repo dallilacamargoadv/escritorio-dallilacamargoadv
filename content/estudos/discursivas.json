@@ -1,0 +1,363 @@
+[
+  {
+    "id": "pc-decisao-surpresa",
+    "materia_id": "B5",
+    "titulo": "Prescrição reconhecida sem ouvir as partes",
+    "enunciado": "Em ação de cobrança movida pelo Estado do Maranhão, o juiz, sem qualquer manifestação anterior das partes sobre o tema, profere sentença reconhecendo de ofício a prescrição e extingue o processo com resolução de mérito. A Procuradoria entende que a prescrição não ocorreu e que nunca teve chance de demonstrar isso.",
+    "perguntas": [
+      "O juiz pode reconhecer a prescrição de ofício?",
+      "A sentença respeitou as normas fundamentais do processo civil? Fundamente."
+    ],
+    "linhas": 15,
+    "espelho": [
+      {
+        "ponto": "O juiz pode decidir de ofício sobre prescrição e decadência, e isso é resolução de mérito.",
+        "fundamento": "CPC, art. 487, II",
+        "peso": 2
+      },
+      {
+        "ponto": "Mesmo em matéria que pode decidir de ofício, o juiz não pode decidir com base em fundamento sobre o qual as partes não tiveram oportunidade de se manifestar (vedação da decisão surpresa).",
+        "fundamento": "CPC, art. 10",
+        "peso": 3
+      },
+      {
+        "ponto": "Ressalvada a improcedência liminar (art. 332, § 1º), a prescrição e a decadência não serão reconhecidas sem que antes seja dada às partes oportunidade de manifestar-se.",
+        "fundamento": "CPC, art. 487, parágrafo único",
+        "peso": 3
+      },
+      {
+        "ponto": "Não se profere decisão contra uma das partes sem que ela seja previamente ouvida: a sentença é nula por violar o contraditório.",
+        "fundamento": "CPC, art. 9º",
+        "peso": 2
+      }
+    ],
+    "dica": "\"De ofício\" não quer dizer \"sem ouvir\". A FCC adora trocar isso.",
+    "topico_id": "B5-01",
+    "temas": [
+      "B5|Prescrição",
+      "B5|Normas fundamentais"
+    ]
+  },
+  {
+    "id": "adm-publicidade-promocao",
+    "materia_id": "B2",
+    "titulo": "Propaganda oficial com o nome do governador",
+    "enunciado": "Uma secretaria estadual lançou campanha publicitária sobre a nova ponte do Estado. Os cartazes, pagos com dinheiro público, trazem a foto do governador e o slogan pessoal da campanha eleitoral dele. O Secretário diz que a campanha cumpre o princípio da publicidade, porque informa a população.",
+    "perguntas": [
+      "Que princípios da Administração estão em jogo?",
+      "A campanha é regular? Fundamente."
+    ],
+    "linhas": 15,
+    "espelho": [
+      {
+        "ponto": "A administração direta e indireta obedece aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência.",
+        "fundamento": "CF/88, art. 37, caput",
+        "peso": 2
+      },
+      {
+        "ponto": "A publicidade de atos, programas e obras deve ter caráter educativo, informativo ou de orientação social.",
+        "fundamento": "CF/88, art. 37, § 1º",
+        "peso": 2
+      },
+      {
+        "ponto": "Dela não podem constar nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridades ou servidores: foto e slogan pessoal violam a regra.",
+        "fundamento": "CF/88, art. 37, § 1º",
+        "peso": 3
+      },
+      {
+        "ponto": "Impessoalidade: a obra é do Estado, não do governante; usar a publicidade oficial para autopromoção também ofende a moralidade.",
+        "fundamento": "CF/88, art. 37, caput (aula de princípios)",
+        "peso": 3
+      }
+    ],
+    "dica": "Publicidade não autoriza promoção pessoal: o § 1º do art. 37 é o limite do próprio princípio.",
+    "topico_id": "B2-01",
+    "temas": [
+      "B2|Princípios da Administração Pública"
+    ]
+  },
+  {
+    "id": "const-competencia-concorrente",
+    "materia_id": "B3",
+    "titulo": "Lei estadual e lei federal posterior",
+    "enunciado": "Na ausência de lei federal, o Maranhão editou lei estadual completa sobre proteção ao meio ambiente. Anos depois, a União editou lei de normas gerais sobre o tema, que contraria alguns dispositivos da lei maranhense. Um particular afirma que a lei estadual inteira foi revogada.",
+    "perguntas": [
+      "Explique a repartição da competência concorrente.",
+      "O que acontece com a lei estadual? Está revogada?"
+    ],
+    "linhas": 20,
+    "espelho": [
+      {
+        "ponto": "Meio ambiente é matéria de competência legislativa concorrente da União, dos Estados e do DF.",
+        "fundamento": "CF/88, art. 24, VI",
+        "peso": 2
+      },
+      {
+        "ponto": "Na concorrente, a União se limita a normas gerais e isso não exclui a competência suplementar dos Estados.",
+        "fundamento": "CF/88, art. 24, §§ 1º e 2º",
+        "peso": 2
+      },
+      {
+        "ponto": "Inexistindo lei federal de normas gerais, os Estados exercem a competência legislativa plena.",
+        "fundamento": "CF/88, art. 24, § 3º",
+        "peso": 2
+      },
+      {
+        "ponto": "A superveniência de lei federal sobre normas gerais suspende a eficácia da lei estadual no que lhe for contrário: suspensão, não revogação, e só na parte contrária.",
+        "fundamento": "CF/88, art. 24, § 4º",
+        "peso": 4
+      }
+    ],
+    "dica": "Pegadinha clássica da FCC: \"revoga\" no lugar de \"suspende a eficácia\".",
+    "topico_id": "B3-04",
+    "temas": [
+      "B3|Competências",
+      "B3|Organização do Estado"
+    ]
+  },
+  {
+    "id": "const-responsabilidade-estado",
+    "materia_id": "B3",
+    "titulo": "Viatura que atinge pedestre",
+    "enunciado": "Uma viatura da Polícia Militar do Maranhão, em serviço, atropelou um pedestre. A vítima quer saber contra quem deve propor a ação, se precisa provar culpa e se o Estado pode cobrar o policial depois.",
+    "perguntas": [
+      "Qual a natureza da responsabilidade do Estado?",
+      "O Estado pode cobrar do policial? Em que condições?"
+    ],
+    "linhas": 15,
+    "espelho": [
+      {
+        "ponto": "As pessoas jurídicas de direito público respondem pelos danos que seus agentes, nessa qualidade, causarem a terceiros.",
+        "fundamento": "CF/88, art. 37, § 6º",
+        "peso": 3
+      },
+      {
+        "ponto": "Responsabilidade objetiva: basta provar conduta, dano e nexo causal, sem discutir culpa (teoria do risco administrativo).",
+        "fundamento": "CF/88, art. 37, § 6º",
+        "peso": 3
+      },
+      {
+        "ponto": "Excludentes: culpa exclusiva da vítima, caso fortuito ou força maior rompem o nexo.",
+        "fundamento": "Doutrina (risco administrativo)",
+        "peso": 2
+      },
+      {
+        "ponto": "Direito de regresso contra o agente apenas nos casos de dolo ou culpa.",
+        "fundamento": "CF/88, art. 37, § 6º",
+        "peso": 2
+      }
+    ],
+    "dica": "Responsabilidade do Estado é objetiva; a do agente, na regressiva, é subjetiva.",
+    "topico_id": "B2-09",
+    "temas": [
+      "B2|Responsabilidade civil do Estado"
+    ]
+  },
+  {
+    "id": "pc-fazenda-prazos-remessa",
+    "materia_id": "B5",
+    "titulo": "Fazenda em juízo: prazo e remessa necessária",
+    "enunciado": "O Estado do Maranhão foi condenado em primeira instância a pagar a uma empresa valor certo e líquido equivalente a 300 salários-mínimos. A sentença não se funda em súmula nem em precedente vinculante. O Procurador quer saber o prazo para apelar e se a sentença precisa ser confirmada pelo tribunal.",
+    "perguntas": [
+      "Qual o prazo do Estado para apelar e quando começa?",
+      "Há remessa necessária? Fundamente com o valor."
+    ],
+    "linhas": 15,
+    "espelho": [
+      {
+        "ponto": "Os Estados gozam de prazo em dobro para todas as manifestações, contado da intimação pessoal: 30 dias úteis para apelar.",
+        "fundamento": "CPC, art. 183 (e art. 1.003, § 5º)",
+        "peso": 3
+      },
+      {
+        "ponto": "Sentença contra o Estado está, em regra, sujeita ao duplo grau obrigatório.",
+        "fundamento": "CPC, art. 496, I",
+        "peso": 2
+      },
+      {
+        "ponto": "Para os Estados, não há remessa se a condenação for de valor certo e líquido inferior a 500 salários-mínimos.",
+        "fundamento": "CPC, art. 496, § 3º, II",
+        "peso": 3
+      },
+      {
+        "ponto": "Conclusão: 300 salários-mínimos é inferior a 500, logo não há remessa necessária; cabe apelação voluntária se houver interesse.",
+        "fundamento": "Aplicação ao caso",
+        "peso": 2
+      }
+    ],
+    "dica": "Decore a escada: 1.000 (União), 500 (Estados, DF e capitais), 100 (demais Municípios).",
+    "topico_id": "B5-04",
+    "temas": [
+      "B5|Prazos",
+      "B5|Remessa necessária",
+      "B5|Fazenda Pública em juízo"
+    ]
+  },
+  {
+    "id": "adm-anulacao-decadencia",
+    "materia_id": "B2",
+    "titulo": "Anulação de ato depois de anos",
+    "enunciado": "Em 2018, o Estado do Maranhão concedeu a um servidor uma gratificação, paga todo mês desde então. Em 2025, a Procuradoria constata que a concessão foi ilegal, mas não há indício de má-fé do servidor. O Secretário pergunta se pode anular o ato e cortar o pagamento imediatamente.",
+    "perguntas": [
+      "A Administração ainda pode anular o ato? Fundamente.",
+      "Como se conta o prazo quando os efeitos patrimoniais são contínuos?",
+      "Que cuidado procedimental deve ser observado antes do corte?"
+    ],
+    "linhas": 20,
+    "espelho": [
+      {
+        "ponto": "Autotutela: a Administração deve anular os próprios atos ilegais.",
+        "fundamento": "Lei 9.784/1999, art. 53",
+        "peso": 2
+      },
+      {
+        "ponto": "O direito de anular atos com efeitos favoráveis decai em cinco anos, salvo comprovada má-fé.",
+        "fundamento": "Lei 9.784/1999, art. 54, caput",
+        "peso": 3
+      },
+      {
+        "ponto": "Com efeitos patrimoniais contínuos, o prazo conta da percepção do primeiro pagamento: pagamentos desde 2018, sem má-fé, prazo consumado em 2023, logo decaiu.",
+        "fundamento": "Lei 9.784/1999, art. 54, § 1º",
+        "peso": 3
+      },
+      {
+        "ponto": "Qualquer medida que atinja direito do interessado exige contraditório e ampla defesa prévios.",
+        "fundamento": "CF/88, art. 5º, LV",
+        "peso": 2
+      }
+    ],
+    "dica": "Cuidado com a pegadinha: o prazo do art. 54 é de cinco anos e corre do primeiro pagamento, não do último.",
+    "topico_id": "B2-11",
+    "temas": [
+      "B2|Processo administrativo",
+      "B2|Atos administrativos"
+    ]
+  },
+  {
+    "id": "adm-dispensa-emergencial",
+    "materia_id": "B2",
+    "titulo": "Contratação emergencial prorrogada",
+    "enunciado": "Após enchentes, o Estado contratou, por dispensa de licitação, empresa para recuperar uma ponte. Doze meses depois, a obra não terminou e o gestor quer prorrogar o contrato por mais seis meses ou, se não puder, recontratar a mesma empresa por nova dispensa.",
+    "perguntas": [
+      "Quais os requisitos e limites da dispensa emergencial?",
+      "É possível prorrogar ou recontratar a mesma empresa?"
+    ],
+    "linhas": 20,
+    "espelho": [
+      {
+        "ponto": "É dispensável a licitação em emergência ou calamidade pública, quando caracterizada urgência que possa comprometer a segurança de pessoas, obras, serviços ou bens.",
+        "fundamento": "Lei 14.133/2021, art. 75, VIII",
+        "peso": 3
+      },
+      {
+        "ponto": "A contratação se limita aos bens necessários e às parcelas de obras e serviços que possam ser concluídas no prazo máximo de um ano, contado da ocorrência da emergência.",
+        "fundamento": "Lei 14.133/2021, art. 75, VIII",
+        "peso": 3
+      },
+      {
+        "ponto": "São vedadas a prorrogação do contrato e a recontratação de empresa já contratada com base nesse inciso.",
+        "fundamento": "Lei 14.133/2021, art. 75, VIII",
+        "peso": 3
+      },
+      {
+        "ponto": "Conclusão: nem prorrogação nem recontratação; para o restante, o Estado deve licitar.",
+        "fundamento": "Aplicação ao caso",
+        "peso": 1
+      }
+    ],
+    "dica": "O prazo de um ano conta da ocorrência da emergência, não da assinatura do contrato.",
+    "topico_id": "B2-05",
+    "temas": [
+      "B2|Contratação direta",
+      "B2|Licitações"
+    ]
+  },
+  {
+    "id": "trib-prescricao-intercorrente",
+    "materia_id": "B7",
+    "titulo": "Execução fiscal parada",
+    "enunciado": "Em execução fiscal estadual, o devedor foi citado, mas não foram encontrados bens penhoráveis. O juiz suspendeu o processo e, decorrido um ano, ordenou o arquivamento. Passados mais seis anos sem qualquer bem localizado, o juiz intima a Fazenda para se manifestar sobre a prescrição.",
+    "perguntas": [
+      "Explique a dinâmica de suspensão e arquivamento.",
+      "Pode o juiz reconhecer a prescrição de ofício? Em que condições?",
+      "Qual o prazo prescricional aplicável ao crédito tributário?"
+    ],
+    "linhas": 20,
+    "espelho": [
+      {
+        "ponto": "Não localizados bens, o juiz suspende a execução e, durante a suspensão, não corre a prescrição.",
+        "fundamento": "Lei 6.830/1980, art. 40, caput",
+        "peso": 2
+      },
+      {
+        "ponto": "Decorrido o prazo máximo de um ano sem bens, o juiz ordena o arquivamento; encontrados bens, os autos são desarquivados.",
+        "fundamento": "Lei 6.830/1980, art. 40, §§ 2º e 3º",
+        "peso": 2
+      },
+      {
+        "ponto": "Se, da decisão de arquivamento, decorrer o prazo prescricional, o juiz, depois de ouvir a Fazenda, pode reconhecer de ofício a prescrição intercorrente.",
+        "fundamento": "Lei 6.830/1980, art. 40, § 4º",
+        "peso": 3
+      },
+      {
+        "ponto": "A ação de cobrança do crédito tributário prescreve em cinco anos.",
+        "fundamento": "CTN, art. 174",
+        "peso": 2
+      },
+      {
+        "ponto": "Conclusão: seis anos após o arquivamento, sem bens, a prescrição intercorrente se consumou; a oitiva prévia da Fazenda foi respeitada.",
+        "fundamento": "Aplicação ao caso",
+        "peso": 1
+      }
+    ],
+    "dica": "A oitiva da Fazenda é requisito do § 4º, mas o § 5º a dispensa para cobranças abaixo do mínimo fixado por ato do Ministro da Fazenda.",
+    "topico_id": "B7-15",
+    "temas": [
+      "B7|Dívida ativa e CDA",
+      "B7|Decadência e prescrição"
+    ]
+  },
+  {
+    "id": "adm-improbidade-dolo",
+    "materia_id": "B2",
+    "titulo": "Improbidade sem dolo",
+    "enunciado": "Um gestor estadual autorizou pagamento a fornecedor seguindo parecer técnico que, depois, se mostrou equivocado, causando prejuízo ao erário. Não há prova de que ele quisesse o resultado ilícito. O Ministério Público ajuíza ação de improbidade alegando culpa grave. O fato ocorreu há seis anos.",
+    "perguntas": [
+      "É possível a condenação por improbidade com base em culpa?",
+      "A ação está prescrita?"
+    ],
+    "linhas": 20,
+    "espelho": [
+      {
+        "ponto": "Só são atos de improbidade as condutas dolosas tipificadas nos arts. 9º, 10 e 11.",
+        "fundamento": "Lei 8.429/1992, art. 1º, § 1º",
+        "peso": 3
+      },
+      {
+        "ponto": "Dolo é a vontade livre e consciente de alcançar o resultado ilícito, não bastando a voluntariedade do agente.",
+        "fundamento": "Lei 8.429/1992, art. 1º, § 2º",
+        "peso": 2
+      },
+      {
+        "ponto": "O mero exercício da função, sem prova de ato doloso com fim ilícito, afasta a responsabilidade por improbidade.",
+        "fundamento": "Lei 8.429/1992, art. 1º, § 3º",
+        "peso": 2
+      },
+      {
+        "ponto": "A ação prescreve em oito anos a contar do fato: com seis anos, não está prescrita, mas improcede por falta de dolo.",
+        "fundamento": "Lei 8.429/1992, art. 23",
+        "peso": 2
+      },
+      {
+        "ponto": "O ressarcimento pode ser buscado por outras vias, se cabível.",
+        "fundamento": "Aplicação ao caso",
+        "peso": 1
+      }
+    ],
+    "dica": "Depois da Lei 14.230/2021 não existe mais improbidade culposa.",
+    "topico_id": "B2-10",
+    "temas": [
+      "B2|Improbidade administrativa"
+    ]
+  }
+]

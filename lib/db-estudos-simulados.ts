@@ -1,8 +1,10 @@
 // Simulados no Supabase (tabela estudo_simulados). Só servidor.
-import { todayBelemDateString } from "@/lib/atividades-utils";
+import { addDaysToDateString, todayBelemDateString } from "@/lib/atividades-utils";
 import { getRespostas, QUESTAO_POR_ID, QUESTOES } from "@/lib/db-estudos";
 import { EH_ERRO, TIPOS_ACERTO, type Classificacao } from "@/lib/estudos-desempenho";
 import {
+  poolSemana,
+  temasDaSemana,
   classificacaoPadrao,
   distribuicaoSimuladao,
   escolher,
@@ -31,11 +33,16 @@ export async function getSimulado(id: string): Promise<Simulado | null> {
   return (data as Simulado) ?? null;
 }
 
-export async function criarSimulado(tipo: "lei_seca" | "simuladao", total: number, materiaId: string | null): Promise<Simulado> {
+export async function criarSimulado(modo: "lei_seca" | "simuladao" | "semana", total: number, materiaId: string | null): Promise<Simulado> {
   const respostas = await getRespostas();
   const ultima = ultimaVezPorQuestao(respostas);
+  // "semana" fica gravado como simuladão (sem migration): misto, mas só dos temas da semana.
+  const tipo = modo === "lei_seca" ? "lei_seca" : "simuladao";
   let ids: string[];
-  if (tipo === "lei_seca") {
+  if (modo === "semana") {
+    const temas = temasDaSemana(respostas, QUESTAO_POR_ID, addDaysToDateString(todayBelemDateString(), -6));
+    ids = escolher(poolSemana(QUESTOES, temas), total, ultima).map((q) => q.id);
+  } else if (tipo === "lei_seca") {
     if (!materiaId) throw new Error("matéria obrigatória");
     ids = escolher(poolLeiSeca(QUESTOES, materiaId), total, ultima).map((q) => q.id);
   } else {

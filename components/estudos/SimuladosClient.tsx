@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Trash2 } from "lucide-react";
 import { formatarData } from "@/lib/estudos-utils";
-import { TAMANHOS_LEI_SECA, formatarDuracao, TAMANHOS_SIMULADAO, TIPO_LABEL, type SemanaSimulados, type Simulado } from "@/lib/estudos-simulados";
+import { TAMANHOS_LEI_SECA, formatarDuracao, TAMANHOS_SEMANA, TAMANHOS_SIMULADAO, TIPO_LABEL, type SemanaSimulados, type Simulado } from "@/lib/estudos-simulados";
 import { Sparkle } from "@/components/estudos/Sparkle";
 import { Barra, BOTAO_PRIMARIO, BOTAO_SECUNDARIO, CAMPO, Card, CardTitulo, Kpi, tomPorPct } from "@/components/estudos/ui";
 
@@ -42,13 +42,15 @@ export function SimuladosClient(p: {
   ineditas: number;
   materias: MateriaPool[];
   distribuicoes: Record<number, LinhaDistribuicao[]>;
+  semana: { total: number; ineditas: number; temas: string[] };
   simulados: Simulado[];
   evolucao: SemanaSimulados[];
   todasMaterias: { id: string; nome: string }[];
 }) {
   const router = useRouter();
   const diaSemana = new Date(`${p.hoje}T12:00:00Z`).getUTCDay();
-  const [tipo, setTipo] = useState<"lei_seca" | "simuladao">(diaSemana === 0 ? "simuladao" : "lei_seca");
+  const [tipo, setTipo] = useState<"lei_seca" | "simuladao" | "semana">(diaSemana === 0 ? "semana" : "lei_seca");
+  const [nSem, setNSem] = useState(30);
   const [materia, setMateria] = useState(p.materias[0]?.id ?? "");
   const [nLei, setNLei] = useState(20);
   const [nMisto, setNMisto] = useState(50);
@@ -62,11 +64,14 @@ export function SimuladosClient(p: {
 
   const pool = p.materias.find((m) => m.id === materia);
   const dist = p.distribuicoes[nMisto] ?? [];
+  const tamSem = Math.min(nSem, p.semana.total);
   const repetidas =
     tipo === "lei_seca"
       ? Math.max(0, Math.min(nLei, pool?.total ?? 0) - (pool?.ineditas ?? 0))
-      : dist.reduce((s, d) => s + Math.max(0, d.n - d.ineditas), 0);
-  const tamanho = tipo === "lei_seca" ? Math.min(nLei, pool?.total ?? 0) : dist.reduce((s, d) => s + d.n, 0);
+      : tipo === "semana"
+        ? Math.max(0, tamSem - p.semana.ineditas)
+        : dist.reduce((s, d) => s + Math.max(0, d.n - d.ineditas), 0);
+  const tamanho = tipo === "lei_seca" ? Math.min(nLei, pool?.total ?? 0) : tipo === "semana" ? tamSem : dist.reduce((s, d) => s + d.n, 0);
 
   async function iniciar() {
     setCriando(true);
@@ -74,7 +79,7 @@ export function SimuladosClient(p: {
     const res = await fetch("/api/admin/estudos/simulados", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ acao: "criar", tipo, total: tipo === "lei_seca" ? nLei : nMisto, materia_id: tipo === "lei_seca" ? materia : null }),
+      body: JSON.stringify({ acao: "criar", tipo, total: tipo === "lei_seca" ? nLei : tipo === "semana" ? tamSem : nMisto, materia_id: tipo === "lei_seca" ? materia : null }),
     });
     const j = await res.json().catch(() => null);
     if (!res.ok || !j?.id) {
@@ -141,12 +146,43 @@ export function SimuladosClient(p: {
           <Opcao ativo={tipo === "lei_seca"} onClick={() => setTipo("lei_seca")}>
             Lei seca de uma matéria (quarta)
           </Opcao>
+          <Opcao ativo={tipo === "semana"} onClick={() => setTipo("semana")}>
+            Temas da semana (domingo)
+          </Opcao>
           <Opcao ativo={tipo === "simuladao"} onClick={() => setTipo("simuladao")}>
-            Simuladão misto (domingo)
+            Simuladão misto do edital
           </Opcao>
         </div>
 
-        {tipo === "lei_seca" ? (
+        {tipo === "semana" && (
+          <div className="mt-4 space-y-3">
+            <div className="flex gap-2">
+              {TAMANHOS_SEMANA.map((n) => (
+                <Opcao key={n} ativo={nSem === n} onClick={() => setNSem(n)}>
+                  {n} questões
+                </Opcao>
+              ))}
+            </div>
+            {p.semana.temas.length ? (
+              <>
+                <p className="text-xs text-e-dim">
+                  Só questões dos temas que você praticou nos últimos 7 dias ({p.semana.total} no banco). Mistura as matérias de propósito: é para ver o que ficou.
+                </p>
+                <ul className="flex flex-wrap gap-1.5">
+                  {p.semana.temas.map((t) => (
+                    <li key={t} className="rounded-lg border border-e-line px-2 py-0.5 text-[11px] text-e-dim">
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <p className="text-sm text-e-warn">Nenhuma questão respondida nos últimos 7 dias ainda. Faça as questões dos temas durante a semana e o simulado de domingo se monta sozinho.</p>
+            )}
+          </div>
+        )}
+
+        {tipo === "semana" ? null : tipo === "lei_seca" ? (
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             <label className="text-xs text-e-dim">
               Matéria
