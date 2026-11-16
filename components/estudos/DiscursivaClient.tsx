@@ -19,6 +19,10 @@ export function DiscursivaClient({ caso, salvo }: { caso: CasoDiscursiva; salvo:
   const [salvando, setSalvando] = useState(false);
   const linhas = useMemo(() => estimarLinhas(texto), [texto]);
   const { nota, max } = notaDiscursiva(caso, pontos);
+  const min = caso.linhas_min ?? 0;
+  const foraDaFaixa = linhas > caso.linhas || (min > 0 && linhas > 0 && linhas < min);
+  const nota100 = max > 0 ? Math.round((nota / max) * 100) : 0;
+  const marcouTudo = caso.espelho.every((_, i) => pontos[String(i)] !== undefined);
 
   async function salvar() {
     setSalvando(true);
@@ -37,12 +41,15 @@ export function DiscursivaClient({ caso, salvo }: { caso: CasoDiscursiva; salvo:
       <Card destaque>
         <CardTitulo>Caso</CardTitulo>
         <p className="font-serif text-[15px] leading-relaxed text-e-ink">{caso.enunciado}</p>
-        <ol className="mt-3 list-decimal pl-5 text-sm text-e-ink">{caso.perguntas.map((q) => <li key={q}>{q}</li>)}</ol>
-        <p className="mt-3 text-xs text-e-dim">Antes de escrever: liste de cabeça os artigos que resolvem o caso. Depois confira na Biblioteca.</p>
+        <ol className="mt-3 list-[lower-alpha] pl-5 text-sm text-e-ink">{caso.perguntas.map((q) => <li key={q}>{q}</li>)}</ol>
+        <p className="mt-3 text-xs text-e-dim">
+          Padrão FCC: texto corrido, {min > 0 ? `${min} a ${caso.linhas}` : `até ${caso.linhas}`} linhas, nota de 0 a 100 (mínimo 60). Abordagem tangencial ou parcial perde pontos; fugir do tema zera.
+          Antes de escrever: liste de cabeça os artigos que resolvem o caso.
+        </p>
       </Card>
 
       <Card>
-        <CardTitulo acao={<span className={`text-xs ${linhas > caso.linhas ? "text-e-warn" : "text-e-dim"}`}>≈ {linhas} de {caso.linhas} linhas</span>}>Resposta</CardTitulo>
+        <CardTitulo acao={<span className={`text-xs ${foraDaFaixa ? "text-e-warn" : "text-e-dim"}`}>≈ {linhas} linhas {min > 0 ? `(${min} a ${caso.linhas})` : `de ${caso.linhas}`}</span>}>Resposta</CardTitulo>
         <textarea
           value={texto}
           onChange={(e) => setTexto(e.target.value)}
@@ -63,7 +70,7 @@ export function DiscursivaClient({ caso, salvo }: { caso: CasoDiscursiva; salvo:
 
       {ver && (
         <Card>
-          <CardTitulo acao={<span className="text-sm font-medium text-e-ink">{nota.toLocaleString("pt-BR")}/{max}</span>}>Espelho: marque o que você abordou</CardTitulo>
+          <CardTitulo acao={<span className={`text-sm font-medium ${marcouTudo ? (nota100 >= 60 ? "text-e-ok" : "text-e-bad") : "text-e-ink"}`}>{nota100}/100{marcouTudo ? (nota100 >= 60 ? " · acima do mínimo" : " · abaixo de 60") : ""}</span>}>Espelho: marque o que você abordou</CardTitulo>
           <ul className="flex flex-col gap-3">
             {caso.espelho.map((e, i) => (
               <li key={i} className="rounded-xl border border-e-line bg-e-card-2 p-3">
@@ -89,6 +96,11 @@ export function DiscursivaClient({ caso, salvo }: { caso: CasoDiscursiva; salvo:
           <p className="mt-3 text-sm text-e-ink">
             <span className="text-e-dim">Dica:</span> {caso.dica}
           </p>
+          {caso.tangencia && (
+            <p className="mt-2 text-sm text-e-ink">
+              <span className="text-e-warn">Tangenciar seria:</span> {caso.tangencia}
+            </p>
+          )}
           <p className="mt-2 text-xs text-e-dim">Revisão ativa: reescreva em 3 linhas só o ponto que você não abordou, sem olhar o espelho.</p>
           <button type="button" onClick={salvar} disabled={salvando} className={`mt-3 ${BOTAO_PRIMARIO}`}>
             Salvar autocorreção

@@ -25,9 +25,14 @@ export interface CasoDiscursiva {
   titulo: string;
   enunciado: string;
   perguntas: string[];
+  /** Limite máximo de linhas; `linhas_min` é o mínimo (padrão FCC PGE-AM: 20 a 30). */
   linhas: number;
+  linhas_min?: number;
+  /** Pesos somam 100 no padrão FCC (nota mínima 60). */
   espelho: { ponto: string; fundamento: string; peso: number }[];
   dica: string;
+  /** O que seria abordagem tangencial neste caso (perde pontos; fugir do tema zera). */
+  tangencia?: string;
   /** Tópico do edital e temas das questões ("materia|tema") que o caso cobra. */
   topico_id: string;
   temas: string[];

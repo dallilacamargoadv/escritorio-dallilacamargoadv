@@ -86,7 +86,7 @@ export default async function RedacaoPage() {
                   <span className="text-sm text-e-ink group-hover:underline">{c.titulo}</span>
                   {daSemana && <span className="ml-2 rounded bg-e-ok-soft px-1.5 py-0.5 text-[10px] uppercase text-e-ok">da sua semana</span>}
                   <span className="block text-[11px] text-e-dim">
-                    {MATERIA_POR_ID.get(c.materia_id)?.nome} · até {c.linhas} linhas
+                    {MATERIA_POR_ID.get(c.materia_id)?.nome} · {c.linhas_min ? `${c.linhas_min} a ${c.linhas}` : `até ${c.linhas}`} linhas
                     {n && Object.keys(s!.pontos).length ? ` · ${n.nota.toLocaleString("pt-BR")}/${n.max} no espelho` : s?.texto ? " · rascunho salvo" : ""}
                   </span>
                 </Link>

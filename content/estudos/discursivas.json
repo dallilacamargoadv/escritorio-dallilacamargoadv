@@ -3,151 +3,230 @@
     "id": "pc-decisao-surpresa",
     "materia_id": "B5",
     "titulo": "Prescrição reconhecida sem ouvir as partes",
-    "enunciado": "Em ação de cobrança movida pelo Estado do Maranhão, o juiz, sem qualquer manifestação anterior das partes sobre o tema, profere sentença reconhecendo de ofício a prescrição e extingue o processo com resolução de mérito. A Procuradoria entende que a prescrição não ocorreu e que nunca teve chance de demonstrar isso.",
+    "enunciado": "O Estado do Maranhão ajuizou ação de cobrança contra empresa contratada que não devolveu adiantamento de pagamento. Sem qualquer manifestação anterior das partes sobre o tema, o juiz profere sentença reconhecendo de ofício a prescrição e extingue o processo com resolução de mérito. A Procuradoria entende que a prescrição não ocorreu e que nunca teve chance de demonstrar isso. A intimação pessoal da Procuradoria ocorreu por meio eletrônico. Neste contexto, responda justificadamente ao que se pede:",
     "perguntas": [
-      "O juiz pode reconhecer a prescrição de ofício?",
-      "A sentença respeitou as normas fundamentais do processo civil? Fundamente."
+      "O juiz pode reconhecer a prescrição de ofício? Qual a natureza dessa decisão?",
+      "A sentença respeitou as normas fundamentais do processo civil? Fundamente.",
+      "Há alguma exceção em que a prescrição pode ser reconhecida sem ouvir as partes? Ela se aplica ao caso?",
+      "Qual o recurso cabível, em que prazo e qual deve ser o pedido principal da peça?"
     ],
-    "linhas": 15,
+    "linhas_min": 20,
+    "linhas": 30,
     "espelho": [
       {
-        "ponto": "O juiz pode decidir de ofício sobre prescrição e decadência, e isso é resolução de mérito.",
+        "ponto": "O juiz pode decidir de ofício sobre prescrição e decadência, e essa decisão é de mérito.",
         "fundamento": "CPC, art. 487, II",
-        "peso": 2
+        "peso": 15
       },
       {
         "ponto": "Mesmo em matéria que pode decidir de ofício, o juiz não pode decidir com base em fundamento sobre o qual as partes não tiveram oportunidade de se manifestar (vedação da decisão surpresa).",
         "fundamento": "CPC, art. 10",
-        "peso": 3
+        "peso": 20
       },
       {
-        "ponto": "Ressalvada a improcedência liminar (art. 332, § 1º), a prescrição e a decadência não serão reconhecidas sem que antes seja dada às partes oportunidade de manifestar-se.",
-        "fundamento": "CPC, art. 487, parágrafo único",
-        "peso": 3
-      },
-      {
-        "ponto": "Não se profere decisão contra uma das partes sem que ela seja previamente ouvida: a sentença é nula por violar o contraditório.",
+        "ponto": "Não se profere decisão contra uma das partes sem que ela seja previamente ouvida.",
         "fundamento": "CPC, art. 9º",
-        "peso": 2
+        "peso": 10
+      },
+      {
+        "ponto": "Ressalvada a improcedência liminar (art. 332, § 1º), a prescrição e a decadência não serão reconhecidas sem que antes seja dada às partes oportunidade de manifestar-se. O caso não é de improcedência liminar, pois houve processamento.",
+        "fundamento": "CPC, art. 487, parágrafo único, e art. 332, § 1º",
+        "peso": 15
+      },
+      {
+        "ponto": "Da sentença cabe apelação.",
+        "fundamento": "CPC, art. 1.009",
+        "peso": 10
+      },
+      {
+        "ponto": "Prazo de 15 dias, em dobro para o Estado (30 dias), contados em dias úteis, a partir da intimação pessoal, que se faz por carga, remessa ou meio eletrônico.",
+        "fundamento": "CPC, arts. 1.003, § 5º, 183, caput e § 1º, e 219",
+        "peso": 10
+      },
+      {
+        "ponto": "Pedido: anulação da sentença por violação ao contraditório (arts. 9º e 10) e retorno dos autos para que o Estado se manifeste sobre a prescrição.",
+        "fundamento": "Aplicação ao caso",
+        "peso": 10
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado (sem tópicos soltos), cada item respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
       }
     ],
     "dica": "\"De ofício\" não quer dizer \"sem ouvir\". A FCC adora trocar isso.",
+    "tangencia": "Tangenciar aqui é discorrer sobre prescrição em geral (prazos do Código Civil) sem enfrentar a decisão surpresa e sem indicar o recurso. Fugir seria tratar só do mérito da cobrança.",
     "topico_id": "B5-01",
     "temas": [
       "B5|Prescrição",
-      "B5|Normas fundamentais"
+      "B5|Normas fundamentais",
+      "B5|Recursos"
     ]
   },
   {
     "id": "adm-publicidade-promocao",
     "materia_id": "B2",
     "titulo": "Propaganda oficial com o nome do governador",
-    "enunciado": "Uma secretaria estadual lançou campanha publicitária sobre a nova ponte do Estado. Os cartazes, pagos com dinheiro público, trazem a foto do governador e o slogan pessoal da campanha eleitoral dele. O Secretário diz que a campanha cumpre o princípio da publicidade, porque informa a população.",
+    "enunciado": "Uma secretaria do Estado do Maranhão lançou campanha publicitária sobre a nova ponte estadual. Os cartazes, pagos com recursos do erário, trazem a foto do governador e o slogan pessoal da campanha eleitoral dele. O Secretário afirma que a campanha cumpre o princípio da publicidade, porque informa a população. A Procuradoria é consultada pelo Governador. Neste contexto, responda justificadamente ao que se pede:",
     "perguntas": [
-      "Que princípios da Administração estão em jogo?",
-      "A campanha é regular? Fundamente."
+      "Que princípios da Administração Pública estão em jogo?",
+      "A campanha é regular? Qual o limite constitucional da publicidade oficial?",
+      "A conduta pode configurar ato de improbidade administrativa? Em qual dispositivo?",
+      "Basta a irregularidade da campanha para a condenação por improbidade? O que precisa ser provado?"
     ],
-    "linhas": 15,
+    "linhas_min": 20,
+    "linhas": 30,
     "espelho": [
       {
         "ponto": "A administração direta e indireta obedece aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência.",
         "fundamento": "CF/88, art. 37, caput",
-        "peso": 2
+        "peso": 10
       },
       {
         "ponto": "A publicidade de atos, programas e obras deve ter caráter educativo, informativo ou de orientação social.",
         "fundamento": "CF/88, art. 37, § 1º",
-        "peso": 2
+        "peso": 15
       },
       {
-        "ponto": "Dela não podem constar nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridades ou servidores: foto e slogan pessoal violam a regra.",
-        "fundamento": "CF/88, art. 37, § 1º",
-        "peso": 3
+        "ponto": "Dela não podem constar nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridades ou servidores: foto e slogan pessoal violam a regra; a obra é do Estado, não do governante (impessoalidade e moralidade).",
+        "fundamento": "CF/88, art. 37, caput e § 1º",
+        "peso": 20
       },
       {
-        "ponto": "Impessoalidade: a obra é do Estado, não do governante; usar a publicidade oficial para autopromoção também ofende a moralidade.",
-        "fundamento": "CF/88, art. 37, caput (aula de princípios)",
-        "peso": 3
+        "ponto": "Constitui improbidade que atenta contra os princípios praticar, com recursos do erário, ato de publicidade que contrarie o § 1º do art. 37, de forma a promover inequívoco enaltecimento do agente público e personalização de obras ou campanhas.",
+        "fundamento": "Lei 8.429/1992, art. 11, XII",
+        "peso": 20
+      },
+      {
+        "ponto": "O art. 11 exige ação ou omissão dolosa; só há improbidade nas condutas dolosas tipificadas na lei.",
+        "fundamento": "Lei 8.429/1992, art. 11, caput, e art. 1º, § 1º",
+        "peso": 15
+      },
+      {
+        "ponto": "Dolo é a vontade livre e consciente de alcançar o resultado ilícito, não bastando a voluntariedade do agente.",
+        "fundamento": "Lei 8.429/1992, art. 1º, § 2º",
+        "peso": 10
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado (sem tópicos soltos), cada item respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
       }
     ],
-    "dica": "Publicidade não autoriza promoção pessoal: o § 1º do art. 37 é o limite do próprio princípio.",
+    "dica": "Publicidade não autoriza promoção pessoal: o § 1º do art. 37 é o limite do próprio princípio. E o art. 11, XII, repete o § 1º, mas exige dolo.",
+    "tangencia": "Tangenciar é listar os cinco princípios sem aplicá-los à foto e ao slogan, ou falar de improbidade sem citar o inciso XII e o dolo.",
     "topico_id": "B2-01",
     "temas": [
-      "B2|Princípios da Administração Pública"
+      "B2|Princípios da Administração Pública",
+      "B2|Improbidade administrativa"
     ]
   },
   {
     "id": "const-competencia-concorrente",
     "materia_id": "B3",
     "titulo": "Lei estadual e lei federal posterior",
-    "enunciado": "Na ausência de lei federal, o Maranhão editou lei estadual completa sobre proteção ao meio ambiente. Anos depois, a União editou lei de normas gerais sobre o tema, que contraria alguns dispositivos da lei maranhense. Um particular afirma que a lei estadual inteira foi revogada.",
+    "enunciado": "Na ausência de lei federal, o Estado do Maranhão editou lei estadual completa sobre proteção ao meio ambiente. Anos depois, a União editou lei de normas gerais sobre o tema, que contraria alguns dispositivos da lei maranhense. Uma empresa autuada com base na lei estadual afirma que ela foi inteiramente revogada e pede ao Governador que a questione no Supremo Tribunal Federal. Neste contexto, responda justificadamente ao que se pede:",
     "perguntas": [
-      "Explique a repartição da competência concorrente.",
-      "O que acontece com a lei estadual? Está revogada?"
+      "Explique a repartição da competência legislativa concorrente nessa matéria.",
+      "Que competência o Estado exerceu ao editar a lei antes da lei federal?",
+      "O que acontece com a lei estadual após a lei federal de normas gerais? Ela foi revogada?",
+      "O Governador pode questionar a lei no STF? Por qual ação?"
     ],
-    "linhas": 20,
+    "linhas_min": 20,
+    "linhas": 30,
     "espelho": [
       {
-        "ponto": "Meio ambiente é matéria de competência legislativa concorrente da União, dos Estados e do DF.",
+        "ponto": "Proteção do meio ambiente é matéria de competência legislativa concorrente da União, dos Estados e do DF.",
         "fundamento": "CF/88, art. 24, VI",
-        "peso": 2
+        "peso": 15
       },
       {
-        "ponto": "Na concorrente, a União se limita a normas gerais e isso não exclui a competência suplementar dos Estados.",
+        "ponto": "Na concorrente, a União se limita a estabelecer normas gerais, o que não exclui a competência suplementar dos Estados.",
         "fundamento": "CF/88, art. 24, §§ 1º e 2º",
-        "peso": 2
+        "peso": 15
       },
       {
-        "ponto": "Inexistindo lei federal de normas gerais, os Estados exercem a competência legislativa plena.",
+        "ponto": "Inexistindo lei federal sobre normas gerais, os Estados exercem a competência legislativa plena, para atender a suas peculiaridades.",
         "fundamento": "CF/88, art. 24, § 3º",
-        "peso": 2
+        "peso": 15
       },
       {
-        "ponto": "A superveniência de lei federal sobre normas gerais suspende a eficácia da lei estadual no que lhe for contrário: suspensão, não revogação, e só na parte contrária.",
+        "ponto": "A superveniência de lei federal sobre normas gerais suspende a eficácia da lei estadual no que lhe for contrário: suspensão, não revogação, e só na parte contrária; o restante continua válido e eficaz para a autuação.",
         "fundamento": "CF/88, art. 24, § 4º",
-        "peso": 4
+        "peso": 25
+      },
+      {
+        "ponto": "Compete ao STF processar e julgar originariamente a ação direta de inconstitucionalidade de lei ou ato normativo estadual.",
+        "fundamento": "CF/88, art. 102, I, a",
+        "peso": 10
+      },
+      {
+        "ponto": "O Governador de Estado tem legitimidade para propor a ADI.",
+        "fundamento": "CF/88, art. 103, V",
+        "peso": 10
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado (sem tópicos soltos), cada item respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
       }
     ],
     "dica": "Pegadinha clássica da FCC: \"revoga\" no lugar de \"suspende a eficácia\".",
+    "tangencia": "Tangenciar é explicar competência privativa ou comum (arts. 22 e 23) em vez da concorrente do art. 24, ou parar na teoria sem dizer o que ocorre com a autuação.",
     "topico_id": "B3-04",
     "temas": [
       "B3|Competências",
-      "B3|Organização do Estado"
+      "B3|Organização do Estado",
+      "B3|Controle de constitucionalidade"
     ]
   },
   {
     "id": "const-responsabilidade-estado",
     "materia_id": "B3",
     "titulo": "Viatura que atinge pedestre",
-    "enunciado": "Uma viatura da Polícia Militar do Maranhão, em serviço, atropelou um pedestre. A vítima quer saber contra quem deve propor a ação, se precisa provar culpa e se o Estado pode cobrar o policial depois.",
+    "enunciado": "Uma viatura da Polícia Militar do Maranhão, em serviço, atropelou um pedestre, que sofreu lesões. A vítima procura a Defensoria para saber contra quem propor a ação, se precisa provar culpa do policial e qual o prazo para agir. O Estado, por sua vez, quer saber se poderá cobrar do policial o que pagar. Neste contexto, responda justificadamente ao que se pede:",
     "perguntas": [
-      "Qual a natureza da responsabilidade do Estado?",
+      "Qual a natureza da responsabilidade do Estado e o que a vítima precisa provar?",
+      "A vítima pode processar diretamente o policial? Fundamente com a jurisprudência do STF.",
+      "Qual o prazo para a vítima ajuizar a ação contra o Estado?",
       "O Estado pode cobrar do policial? Em que condições?"
     ],
-    "linhas": 15,
+    "linhas_min": 20,
+    "linhas": 30,
     "espelho": [
       {
         "ponto": "As pessoas jurídicas de direito público respondem pelos danos que seus agentes, nessa qualidade, causarem a terceiros.",
         "fundamento": "CF/88, art. 37, § 6º",
-        "peso": 3
+        "peso": 15
       },
       {
-        "ponto": "Responsabilidade objetiva: basta provar conduta, dano e nexo causal, sem discutir culpa (teoria do risco administrativo).",
+        "ponto": "Responsabilidade objetiva (risco administrativo): basta provar conduta, dano e nexo causal, sem discutir culpa; culpa exclusiva da vítima, caso fortuito ou força maior rompem o nexo.",
         "fundamento": "CF/88, art. 37, § 6º",
-        "peso": 3
+        "peso": 20
       },
       {
-        "ponto": "Excludentes: culpa exclusiva da vítima, caso fortuito ou força maior rompem o nexo.",
-        "fundamento": "Doutrina (risco administrativo)",
-        "peso": 2
+        "ponto": "A ação por danos causados por agente público deve ser ajuizada contra o Estado; o autor do ato é parte ilegítima, assegurado o regresso nos casos de dolo ou culpa (dupla garantia).",
+        "fundamento": "STF, RE 1.027.633, Tema 940",
+        "peso": 20
       },
       {
-        "ponto": "Direito de regresso contra o agente apenas nos casos de dolo ou culpa.",
+        "ponto": "Todo e qualquer direito ou ação contra a Fazenda estadual prescreve em cinco anos contados do ato ou fato.",
+        "fundamento": "Decreto 20.910/1932, art. 1º",
+        "peso": 15
+      },
+      {
+        "ponto": "Direito de regresso contra o agente apenas nos casos de dolo ou culpa: a responsabilidade do agente é subjetiva.",
         "fundamento": "CF/88, art. 37, § 6º",
-        "peso": 2
+        "peso": 20
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado (sem tópicos soltos), cada item respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
       }
     ],
-    "dica": "Responsabilidade do Estado é objetiva; a do agente, na regressiva, é subjetiva.",
+    "dica": "Responsabilidade do Estado é objetiva; a do agente, no regresso, é subjetiva. E a vítima não escolhe processar o agente (Tema 940).",
+    "tangencia": "Tangenciar é narrar a evolução histórica (irresponsabilidade, culpa civil) sem aplicar o art. 37, § 6º, ao atropelamento, ou omitir o prazo do Decreto 20.910.",
     "topico_id": "B2-09",
     "temas": [
       "B2|Responsabilidade civil do Estado"
@@ -156,36 +235,55 @@
   {
     "id": "pc-fazenda-prazos-remessa",
     "materia_id": "B5",
-    "titulo": "Fazenda em juízo: prazo e remessa necessária",
-    "enunciado": "O Estado do Maranhão foi condenado em primeira instância a pagar a uma empresa valor certo e líquido equivalente a 300 salários-mínimos. A sentença não se funda em súmula nem em precedente vinculante. O Procurador quer saber o prazo para apelar e se a sentença precisa ser confirmada pelo tribunal.",
+    "titulo": "Fazenda em juízo: prazo, remessa e pagamento",
+    "enunciado": "O Estado do Maranhão foi condenado em primeira instância a pagar a uma empresa valor certo e líquido equivalente a 300 salários-mínimos. A sentença não se funda em súmula nem em precedente vinculante. A Procuradoria foi intimada por meio eletrônico. O Procurador quer saber o prazo para apelar, se a sentença precisa ser confirmada pelo tribunal e como o pagamento será feito se a condenação transitar em julgado. Neste contexto, responda justificadamente ao que se pede:",
     "perguntas": [
-      "Qual o prazo do Estado para apelar e quando começa?",
-      "Há remessa necessária? Fundamente com o valor."
+      "Qual o prazo do Estado para apelar, como é contado e quando começa?",
+      "Em regra, a sentença contra o Estado está sujeita a remessa necessária?",
+      "No caso concreto, há remessa necessária? Fundamente com o valor.",
+      "Transitada em julgado, como o Estado pagará: precatório ou requisição de pequeno valor? Quem define o limite?"
     ],
-    "linhas": 15,
+    "linhas_min": 20,
+    "linhas": 30,
     "espelho": [
       {
-        "ponto": "Os Estados gozam de prazo em dobro para todas as manifestações, contado da intimação pessoal: 30 dias úteis para apelar.",
-        "fundamento": "CPC, art. 183 (e art. 1.003, § 5º)",
-        "peso": 3
+        "ponto": "Os Estados gozam de prazo em dobro para todas as manifestações processuais, contado da intimação pessoal, feita por carga, remessa ou meio eletrônico: 30 dias para apelar.",
+        "fundamento": "CPC, art. 183, caput e § 1º, e art. 1.003, § 5º",
+        "peso": 15
       },
       {
-        "ponto": "Sentença contra o Estado está, em regra, sujeita ao duplo grau obrigatório.",
+        "ponto": "Na contagem de prazo em dias, computam-se somente os dias úteis.",
+        "fundamento": "CPC, art. 219",
+        "peso": 10
+      },
+      {
+        "ponto": "Está sujeita ao duplo grau obrigatório a sentença proferida contra o Estado.",
         "fundamento": "CPC, art. 496, I",
-        "peso": 2
+        "peso": 15
       },
       {
-        "ponto": "Para os Estados, não há remessa se a condenação for de valor certo e líquido inferior a 500 salários-mínimos.",
+        "ponto": "Não há remessa para os Estados se a condenação for de valor certo e líquido inferior a 500 salários-mínimos: 300 é menos que 500, logo não há remessa; cabe apelação voluntária.",
         "fundamento": "CPC, art. 496, § 3º, II",
-        "peso": 3
+        "peso": 20
       },
       {
-        "ponto": "Conclusão: 300 salários-mínimos é inferior a 500, logo não há remessa necessária; cabe apelação voluntária se houver interesse.",
-        "fundamento": "Aplicação ao caso",
-        "peso": 2
+        "ponto": "Os pagamentos devidos pela Fazenda em virtude de sentença se fazem por precatório, salvo as obrigações definidas em lei como de pequeno valor.",
+        "fundamento": "CF/88, art. 100, caput e § 3º",
+        "peso": 15
+      },
+      {
+        "ponto": "O limite de pequeno valor é fixado por lei própria de cada ente, segundo sua capacidade econômica, com mínimo igual ao maior benefício do regime geral de previdência; o enquadramento depende da lei estadual.",
+        "fundamento": "CF/88, art. 100, § 4º",
+        "peso": 15
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado (sem tópicos soltos), cada item respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
       }
     ],
-    "dica": "Decore a escada: 1.000 (União), 500 (Estados, DF e capitais), 100 (demais Municípios).",
+    "dica": "Decore a escada: 1.000 (União), 500 (Estados, DF e capitais), 100 (demais Municípios). E não confunda o teto da remessa com o teto da RPV.",
+    "tangencia": "Tangenciar é discorrer sobre prerrogativas da Fazenda em geral sem fazer a conta dos 300 salários-mínimos, ou responder sobre execução sem distinguir precatório e RPV.",
     "topico_id": "B5-04",
     "temas": [
       "B5|Prazos",
@@ -197,36 +295,49 @@
     "id": "adm-anulacao-decadencia",
     "materia_id": "B2",
     "titulo": "Anulação de ato depois de anos",
-    "enunciado": "Em 2018, o Estado do Maranhão concedeu a um servidor uma gratificação, paga todo mês desde então. Em 2025, a Procuradoria constata que a concessão foi ilegal, mas não há indício de má-fé do servidor. O Secretário pergunta se pode anular o ato e cortar o pagamento imediatamente.",
+    "enunciado": "Em 2018, o Estado do Maranhão concedeu a um servidor uma gratificação, paga todo mês desde então. Em 2025, a Procuradoria constata que a concessão foi ilegal, mas não há indício de má-fé do servidor. O Secretário pergunta se pode anular o ato e cortar o pagamento imediatamente, ou se haveria outra saída. Considere a aplicação da Lei 9.784/1999 ao caso. Neste contexto, responda justificadamente ao que se pede:",
     "perguntas": [
-      "A Administração ainda pode anular o ato? Fundamente.",
-      "Como se conta o prazo quando os efeitos patrimoniais são contínuos?",
-      "Que cuidado procedimental deve ser observado antes do corte?"
+      "A Administração tem o dever de anular atos ilegais? Fundamente.",
+      "Ainda é possível anular a concessão? Como se conta o prazo quando os efeitos patrimoniais são contínuos?",
+      "Que cuidado procedimental deve ser observado antes de qualquer corte?",
+      "Em que situação a lei permite convalidar um ato com defeito, em vez de anulá-lo?"
     ],
-    "linhas": 20,
+    "linhas_min": 20,
+    "linhas": 30,
     "espelho": [
       {
-        "ponto": "Autotutela: a Administração deve anular os próprios atos ilegais.",
+        "ponto": "Autotutela: a Administração deve anular seus próprios atos quando eivados de vício de legalidade.",
         "fundamento": "Lei 9.784/1999, art. 53",
-        "peso": 2
+        "peso": 15
       },
       {
-        "ponto": "O direito de anular atos com efeitos favoráveis decai em cinco anos, salvo comprovada má-fé.",
+        "ponto": "O direito de anular atos de que decorram efeitos favoráveis aos destinatários decai em cinco anos, salvo comprovada má-fé.",
         "fundamento": "Lei 9.784/1999, art. 54, caput",
-        "peso": 3
+        "peso": 20
       },
       {
-        "ponto": "Com efeitos patrimoniais contínuos, o prazo conta da percepção do primeiro pagamento: pagamentos desde 2018, sem má-fé, prazo consumado em 2023, logo decaiu.",
+        "ponto": "Com efeitos patrimoniais contínuos, o prazo conta da percepção do primeiro pagamento: pagamentos desde 2018, sem má-fé, prazo consumado em 2023, logo o direito de anular decaiu e o pagamento não pode ser cortado por esse fundamento.",
         "fundamento": "Lei 9.784/1999, art. 54, § 1º",
-        "peso": 3
+        "peso": 25
       },
       {
         "ponto": "Qualquer medida que atinja direito do interessado exige contraditório e ampla defesa prévios.",
         "fundamento": "CF/88, art. 5º, LV",
-        "peso": 2
+        "peso": 15
+      },
+      {
+        "ponto": "Atos com defeitos sanáveis podem ser convalidados pela própria Administração quando não acarretarem lesão ao interesse público nem prejuízo a terceiros.",
+        "fundamento": "Lei 9.784/1999, art. 55",
+        "peso": 15
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado (sem tópicos soltos), cada item respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
       }
     ],
-    "dica": "Cuidado com a pegadinha: o prazo do art. 54 é de cinco anos e corre do primeiro pagamento, não do último.",
+    "dica": "O prazo do art. 54 é de cinco anos e corre do primeiro pagamento, não do último. E convalidar é para vício sanável, não para ilegalidade de fundo.",
+    "tangencia": "Tangenciar é falar de revogação (conveniência e oportunidade) em vez de anulação, ou explicar a decadência sem aplicar as datas de 2018 e 2023.",
     "topico_id": "B2-11",
     "temas": [
       "B2|Processo administrativo",
@@ -237,35 +348,49 @@
     "id": "adm-dispensa-emergencial",
     "materia_id": "B2",
     "titulo": "Contratação emergencial prorrogada",
-    "enunciado": "Após enchentes, o Estado contratou, por dispensa de licitação, empresa para recuperar uma ponte. Doze meses depois, a obra não terminou e o gestor quer prorrogar o contrato por mais seis meses ou, se não puder, recontratar a mesma empresa por nova dispensa.",
+    "enunciado": "Após enchentes, o Estado do Maranhão contratou, por dispensa de licitação, empresa para recuperar uma ponte. Doze meses depois da enchente, a obra não terminou. O gestor quer prorrogar o contrato por mais seis meses ou, se não puder, recontratar a mesma empresa por nova dispensa. Apurou-se, ainda, que a ponte já tinha laudo de risco havia dois anos, sem providência. A Procuradoria deve emitir parecer. Neste contexto, responda justificadamente ao que se pede:",
     "perguntas": [
-      "Quais os requisitos e limites da dispensa emergencial?",
-      "É possível prorrogar ou recontratar a mesma empresa?"
+      "Quais os requisitos e os limites da dispensa emergencial?",
+      "É possível prorrogar o contrato ou recontratar a mesma empresa? O que o Estado deve fazer com o restante da obra?",
+      "A emergência causada pela inércia da Administração impede a contratação? Há consequência para os agentes?",
+      "Que documentos devem instruir o processo de contratação direta?"
     ],
-    "linhas": 20,
+    "linhas_min": 20,
+    "linhas": 30,
     "espelho": [
       {
         "ponto": "É dispensável a licitação em emergência ou calamidade pública, quando caracterizada urgência que possa comprometer a segurança de pessoas, obras, serviços ou bens.",
         "fundamento": "Lei 14.133/2021, art. 75, VIII",
-        "peso": 3
+        "peso": 15
       },
       {
-        "ponto": "A contratação se limita aos bens necessários e às parcelas de obras e serviços que possam ser concluídas no prazo máximo de um ano, contado da ocorrência da emergência.",
+        "ponto": "A contratação se limita às parcelas de obras e serviços que possam ser concluídas no prazo máximo de um ano, contado da data de ocorrência da emergência.",
         "fundamento": "Lei 14.133/2021, art. 75, VIII",
-        "peso": 3
+        "peso": 15
       },
       {
-        "ponto": "São vedadas a prorrogação do contrato e a recontratação de empresa já contratada com base nesse inciso.",
+        "ponto": "São vedadas a prorrogação dos contratos e a recontratação de empresa já contratada com base nesse inciso: o restante deve ser licitado.",
         "fundamento": "Lei 14.133/2021, art. 75, VIII",
-        "peso": 3
+        "peso": 20
       },
       {
-        "ponto": "Conclusão: nem prorrogação nem recontratação; para o restante, o Estado deve licitar.",
-        "fundamento": "Aplicação ao caso",
-        "peso": 1
+        "ponto": "Devem ser observados os valores de mercado e adotadas as providências para concluir a licitação, sem prejuízo de apurar a responsabilidade dos agentes que deram causa à situação emergencial: a emergência fabricada não impede a contratação para proteger as pessoas, mas gera responsabilização.",
+        "fundamento": "Lei 14.133/2021, art. 75, § 6º",
+        "peso": 25
+      },
+      {
+        "ponto": "O processo de contratação direta deve ser instruído com os documentos do art. 72 (entre eles, estimativa de despesa, parecer jurídico, comprovação de recursos orçamentários, razão da escolha do contratado e justificativa de preço).",
+        "fundamento": "Lei 14.133/2021, art. 72",
+        "peso": 15
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado (sem tópicos soltos), cada item respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
       }
     ],
-    "dica": "O prazo de um ano conta da ocorrência da emergência, não da assinatura do contrato.",
+    "dica": "O prazo de um ano conta da ocorrência da emergência, não da assinatura do contrato. E emergência por desídia ainda permite contratar, mas manda apurar responsabilidade (§ 6º).",
+    "tangencia": "Tangenciar é explicar todas as hipóteses de dispensa do art. 75 em vez do inciso VIII, ou opinar sobre a obra sem enfrentar a vedação de prorrogação.",
     "topico_id": "B2-05",
     "temas": [
       "B2|Contratação direta",
@@ -276,41 +401,49 @@
     "id": "trib-prescricao-intercorrente",
     "materia_id": "B7",
     "titulo": "Execução fiscal parada",
-    "enunciado": "Em execução fiscal estadual, o devedor foi citado, mas não foram encontrados bens penhoráveis. O juiz suspendeu o processo e, decorrido um ano, ordenou o arquivamento. Passados mais seis anos sem qualquer bem localizado, o juiz intima a Fazenda para se manifestar sobre a prescrição.",
+    "enunciado": "Em execução fiscal ajuizada pelo Estado do Maranhão para cobrar ICMS, o despacho que ordenou a citação foi proferido dentro do prazo e o devedor foi citado, mas não foram encontrados bens penhoráveis. O juiz suspendeu o processo e, decorrido um ano, ordenou o arquivamento. Passados mais seis anos sem qualquer bem localizado, o juiz intima a Fazenda para se manifestar sobre a prescrição. Neste contexto, responda justificadamente ao que se pede:",
     "perguntas": [
-      "Explique a dinâmica de suspensão e arquivamento.",
-      "Pode o juiz reconhecer a prescrição de ofício? Em que condições?",
-      "Qual o prazo prescricional aplicável ao crédito tributário?"
+      "Qual o prazo prescricional da cobrança do crédito tributário e o que o interrompeu neste caso?",
+      "Explique a dinâmica de suspensão e arquivamento da execução fiscal sem bens.",
+      "Pode o juiz reconhecer a prescrição intercorrente de ofício? Em que condições?",
+      "No caso concreto, a prescrição intercorrente se consumou? O que a Procuradoria deve alegar ou verificar?"
     ],
-    "linhas": 20,
+    "linhas_min": 20,
+    "linhas": 30,
     "espelho": [
       {
-        "ponto": "Não localizados bens, o juiz suspende a execução e, durante a suspensão, não corre a prescrição.",
-        "fundamento": "Lei 6.830/1980, art. 40, caput",
-        "peso": 2
+        "ponto": "A ação para cobrança do crédito tributário prescreve em cinco anos, contados da constituição definitiva.",
+        "fundamento": "CTN, art. 174, caput",
+        "peso": 15
       },
       {
-        "ponto": "Decorrido o prazo máximo de um ano sem bens, o juiz ordena o arquivamento; encontrados bens, os autos são desarquivados.",
-        "fundamento": "Lei 6.830/1980, art. 40, §§ 2º e 3º",
-        "peso": 2
+        "ponto": "A prescrição se interrompe pelo despacho do juiz que ordenar a citação em execução fiscal.",
+        "fundamento": "CTN, art. 174, § 1º, I (renumerado pela LC 236/2026)",
+        "peso": 15
       },
       {
-        "ponto": "Se, da decisão de arquivamento, decorrer o prazo prescricional, o juiz, depois de ouvir a Fazenda, pode reconhecer de ofício a prescrição intercorrente.",
+        "ponto": "Não localizados bens, o juiz suspende a execução, e durante a suspensão não corre a prescrição; decorrido o prazo máximo de um ano, ordena o arquivamento; encontrados bens, os autos são desarquivados.",
+        "fundamento": "Lei 6.830/1980, art. 40, caput e §§ 2º e 3º",
+        "peso": 20
+      },
+      {
+        "ponto": "Se, da decisão que ordenar o arquivamento, decorrer o prazo prescricional, o juiz, depois de ouvida a Fazenda, pode reconhecer de ofício a prescrição intercorrente.",
         "fundamento": "Lei 6.830/1980, art. 40, § 4º",
-        "peso": 3
+        "peso": 20
       },
       {
-        "ponto": "A ação de cobrança do crédito tributário prescreve em cinco anos.",
-        "fundamento": "CTN, art. 174",
-        "peso": 2
-      },
-      {
-        "ponto": "Conclusão: seis anos após o arquivamento, sem bens, a prescrição intercorrente se consumou; a oitiva prévia da Fazenda foi respeitada.",
+        "ponto": "Conclusão: mais de cinco anos após o arquivamento, sem bens, a prescrição se consumou; a Procuradoria deve verificar se houve causa interruptiva ou diligência útil no período, e a oitiva prévia foi respeitada.",
         "fundamento": "Aplicação ao caso",
-        "peso": 1
+        "peso": 20
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado (sem tópicos soltos), cada item respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
       }
     ],
-    "dica": "A oitiva da Fazenda é requisito do § 4º, mas o § 5º a dispensa para cobranças abaixo do mínimo fixado por ato do Ministro da Fazenda.",
+    "dica": "A oitiva da Fazenda é requisito do § 4º. E o CTN, art. 174, agora tem § 1º (LC 236/2026): confira o rol de interrupções na lei seca.",
+    "tangencia": "Tangenciar é tratar de decadência (art. 173) em vez de prescrição, ou explicar o art. 40 sem contar o prazo a partir do arquivamento.",
     "topico_id": "B7-15",
     "temas": [
       "B7|Dívida ativa e CDA",
@@ -321,40 +454,49 @@
     "id": "adm-improbidade-dolo",
     "materia_id": "B2",
     "titulo": "Improbidade sem dolo",
-    "enunciado": "Um gestor estadual autorizou pagamento a fornecedor seguindo parecer técnico que, depois, se mostrou equivocado, causando prejuízo ao erário. Não há prova de que ele quisesse o resultado ilícito. O Ministério Público ajuíza ação de improbidade alegando culpa grave. O fato ocorreu há seis anos.",
+    "enunciado": "Um gestor do Estado do Maranhão autorizou pagamento a fornecedor seguindo parecer técnico que, depois, se mostrou equivocado, causando prejuízo ao erário. Não há prova de que ele quisesse o resultado ilícito. O Ministério Público ajuíza ação de improbidade alegando culpa grave e pede o ressarcimento, afirmando que ele é imprescritível. O fato ocorreu há seis anos. Neste contexto, responda justificadamente ao que se pede:",
     "perguntas": [
-      "É possível a condenação por improbidade com base em culpa?",
-      "A ação está prescrita?"
+      "É possível a condenação por improbidade com base em culpa grave?",
+      "Como a lei define o dolo, e o que basta para afastar a responsabilidade do gestor?",
+      "A ação de improbidade está prescrita?",
+      "O ressarcimento ao erário é imprescritível neste caso? Fundamente com a jurisprudência do STF."
     ],
-    "linhas": 20,
+    "linhas_min": 20,
+    "linhas": 30,
     "espelho": [
       {
-        "ponto": "Só são atos de improbidade as condutas dolosas tipificadas nos arts. 9º, 10 e 11.",
+        "ponto": "Só são atos de improbidade as condutas dolosas tipificadas nos arts. 9º, 10 e 11: após a Lei 14.230/2021 não há improbidade culposa.",
         "fundamento": "Lei 8.429/1992, art. 1º, § 1º",
-        "peso": 3
+        "peso": 20
       },
       {
         "ponto": "Dolo é a vontade livre e consciente de alcançar o resultado ilícito, não bastando a voluntariedade do agente.",
         "fundamento": "Lei 8.429/1992, art. 1º, § 2º",
-        "peso": 2
+        "peso": 15
       },
       {
-        "ponto": "O mero exercício da função, sem prova de ato doloso com fim ilícito, afasta a responsabilidade por improbidade.",
+        "ponto": "O mero exercício da função ou desempenho de competências públicas, sem comprovação de ato doloso com fim ilícito, afasta a responsabilidade por improbidade.",
         "fundamento": "Lei 8.429/1992, art. 1º, § 3º",
-        "peso": 2
+        "peso": 15
       },
       {
         "ponto": "A ação prescreve em oito anos a contar do fato: com seis anos, não está prescrita, mas improcede por falta de dolo.",
         "fundamento": "Lei 8.429/1992, art. 23",
-        "peso": 2
+        "peso": 15
       },
       {
-        "ponto": "O ressarcimento pode ser buscado por outras vias, se cabível.",
-        "fundamento": "Aplicação ao caso",
-        "peso": 1
+        "ponto": "São imprescritíveis apenas as ações de ressarcimento fundadas em ato doloso tipificado na Lei de Improbidade; sem dolo, o ressarcimento segue a prescrição do ilícito civil e deve ser buscado pela via própria.",
+        "fundamento": "STF, Temas 897 e 666",
+        "peso": 25
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado (sem tópicos soltos), cada item respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
       }
     ],
-    "dica": "Depois da Lei 14.230/2021 não existe mais improbidade culposa.",
+    "dica": "Depois da Lei 14.230/2021 não existe mais improbidade culposa. E a imprescritibilidade do ressarcimento depende do dolo (Tema 897).",
+    "tangencia": "Tangenciar é listar as sanções do art. 12 ou os tipos dos arts. 9º a 11 sem enfrentar a falta de dolo e a prescrição do caso.",
     "topico_id": "B2-10",
     "temas": [
       "B2|Improbidade administrativa"

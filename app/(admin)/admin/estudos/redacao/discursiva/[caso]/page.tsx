@@ -21,7 +21,7 @@ export default async function DiscursivaPage(props: PageProps<"/admin/estudos/re
       <Link href="/admin/estudos/redacao" className="mb-3 inline-flex items-center gap-1 text-xs text-e-dim hover:text-e-ink">
         <ArrowLeft size={13} aria-hidden="true" /> Redação
       </Link>
-      <Cabecalho titulo={`Discursiva: ${caso.titulo}`} sub={`${MATERIA_POR_ID.get(caso.materia_id)?.nome ?? ""} · até ${caso.linhas} linhas`} />
+      <Cabecalho titulo={`Discursiva: ${caso.titulo}`} sub={`${MATERIA_POR_ID.get(caso.materia_id)?.nome ?? ""} · ${caso.linhas_min ? `${caso.linhas_min} a ${caso.linhas}` : `até ${caso.linhas}`} linhas`} />
       <DiscursivaClient caso={caso} salvo={estado.casos[id] ?? null} />
     </>
   );
