@@ -3,11 +3,13 @@ import { updateTopicoEstado, getTopicoEstados } from "@/lib/db-estudos";
 import type { Caderno } from "@/lib/estudos-cadernos";
 import cadernoA3 from "@/content/estudos/cadernos/A3.json";
 import cadernoB2 from "@/content/estudos/cadernos/B2.json";
+import cadernoB3 from "@/content/estudos/cadernos/B3.json";
 
 /** Cadernos prontos, por matéria. Novo caderno = novo JSON importado aqui. */
 export const CADERNOS: Record<string, Caderno> = {
   A3: cadernoA3 as Caderno,
   B2: cadernoB2 as Caderno,
+  B3: cadernoB3 as Caderno,
 };
 export const AULA_POR_ID = new Map(
   Object.values(CADERNOS).flatMap((c) => c.aulas.map((a) => [a.id, { aula: a, caderno: c }] as const)),
