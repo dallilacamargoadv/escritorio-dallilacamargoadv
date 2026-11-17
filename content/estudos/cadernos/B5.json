@@ -1,0 +1,508 @@
+{
+ "materia_id": "B5",
+ "titulo": "Processo Civil",
+ "subtitulo": "Das normas fundamentais à execução, com o olhar da Fazenda Pública.",
+ "fontes": [
+  "CPC e CF, textos vigentes",
+  "Material EBEJI: Processo (2026)"
+ ],
+ "aulas": [
+  {
+   "id": "B5-a01",
+   "topico_id": "B5-01",
+   "numero": 1,
+   "titulo": "Normas fundamentais e princípios do processo civil",
+   "status": "pronta",
+   "fonte": "Material EBEJI: Processo (2026), item 4; CPC e CF, textos vigentes",
+   "resumo": [
+    "O CPC se interpreta conforme a CF (art. 1º). Devido processo legal: supraprincípio, com face substancial (razoabilidade) e formal.",
+    "Contraditório = informação + reação capaz de influenciar. Prévio (art. 9º), sem surpresa mesmo de ofício (art. 10), dispensável se a decisão favorece, diferido na urgência.",
+    "Exceções do art. 9º: urgência, evidência dos incisos II e III do art. 311 e mandado monitório.",
+    "Sistema misto com preponderância do dispositivo (art. 2º). Duração razoável inclui a satisfação (art. 4º). Ordem cronológica: preferencial (art. 12).",
+    "Art. 489, § 1º: seis vícios de fundamentação. Fundamentação suficiente, per relationem aceita (Tema 1306) e distinção só para precedentes vinculantes."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: o processo lido a partir da Constituição",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O CPC de 2015 começa dizendo de onde tira a sua força: o processo é ordenado e interpretado <b>conforme a Constituição</b>. Os arts. 1º a 12 repetem e detalham garantias que já estavam na CF. Por isso a FCC pergunta, ao mesmo tempo, o artigo do CPC e o inciso do art. 5º."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 1º",
+       "texto": "Art. 1º O processo civil será ordenado, disciplinado e interpretado ==conforme os valores e as normas fundamentais estabelecidos na Constituição== da República Federativa do Brasil , observando-se as disposições deste Código."
+      },
+      {
+       "t": "texto",
+       "html": "O ponto de partida é o <b>devido processo legal</b> (CF, art. 5º, LIV), o supraprincípio: base de todos os demais. Ele limita também o poder de legislar e protege direitos fundamentais nas relações privadas. Tem duas faces:"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, LIV e LV",
+       "texto": "LIV - ninguém será privado da liberdade ou de seus bens sem o ==devido processo legal==;\nLV - aos litigantes, em processo judicial ou administrativo, e aos acusados em geral são assegurados o ==contraditório e ampla defesa==, com os meios e recursos a ela inerentes;"
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Devido processo legal",
+        "Onde atua",
+        "O que exige"
+       ],
+       "linhas": [
+        [
+         "<b>Substancial</b>",
+         "elaboração e interpretação das normas",
+         "lei e interpretação razoáveis: campo da <b>razoabilidade e proporcionalidade</b>"
+        ],
+        [
+         "<b>Formal</b> (processual)",
+         "o processo em si",
+         "que o juiz observe os princípios processuais: processo justo, ampla participação, proteção efetiva"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Liga com outro tema",
+       "html": "O devido processo substancial é a mesma razoabilidade e proporcionalidade que você viu em Administrativo (aula 2, princípios) e no art. 20 da LINDB (necessidade e adequação). A FCC cruza os três."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: o contraditório em quatro tempos",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O contraditório tem dois elementos: <b>informação</b> (citação e intimação; notificação só no mandado de segurança e no habeas data) e <b>possibilidade de reação</b>. Basta a oportunidade de reagir, salvo em direitos indisponíveis, em que o sistema cria a ficção de reação. E a reação precisa poder <b>influenciar</b> o juiz: receber a defesa e sentenciar sem lê-la não atende ao novo contraditório. É isso que o art. 7º exige ao mandar o juiz zelar pelo \"efetivo contraditório\"."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 7º",
+       "texto": "Art. 7º É assegurada às partes ==paridade de tratamento== em relação ao exercício de direitos e faculdades processuais, aos meios de defesa, aos ônus, aos deveres e à aplicação de sanções processuais, competindo ao juiz ==zelar pelo efetivo contraditório==."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 9º",
+       "texto": "Art. 9º Não se proferirá decisão contra uma das partes sem que ela seja ==previamente ouvida==.\nParágrafo único. O disposto no caput não se aplica:\nI - à ==tutela provisória de urgência==;\nII - às hipóteses de tutela da evidência previstas no ==art. 311, incisos II e III==;\nIII - à decisão prevista no ==art. 701==."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 10",
+       "texto": "Art. 10. O juiz não pode decidir, ==em grau algum de jurisdição==, com base em fundamento a respeito do qual não se tenha dado às partes oportunidade de se manifestar, ==ainda que se trate de matéria sobre a qual deva decidir de ofício==."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Prévio",
+         "sub": "regra"
+        },
+        {
+         "titulo": "Vedação da surpresa",
+         "sub": "art. 10"
+        },
+        {
+         "titulo": "Inútil",
+         "sub": "decisão a favor"
+        },
+        {
+         "titulo": "Diferido",
+         "sub": "urgência"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Regra (art. 9º):</b> pedido, informação da parte contrária, reação possível, decisão. Não se decide contra a parte sem ouvi-la antes."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Vedação da decisão-surpresa (art. 10):</b> nem a matéria de ofício (prescrição, por exemplo) dispensa ouvir as partes sobre o fundamento, em qualquer grau de jurisdição."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Contraditório inútil:</b> o art. 9º fala em decisão <b>contra</b> a parte. A contrario sensu, se a decisão a favorece, não precisa ouvi-la antes. E a falha de contraditório é relevável se a parte prejudicada acabou vencendo."
+        },
+        {
+         "no": 3,
+         "texto": "<b>Contraditório diferido (postecipado):</b> pedido, decisão, informação, nova decisão. Excepcional: só quando ouvir antes põe em risco a efetividade (o réu poderia frustrar a medida, ou a demora natural da citação). É o caso das tutelas de urgência <i>inaudita altera parte</i>; a tutela da evidência convive com as duas formas."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As exceções do art. 9º, uma a uma",
+       "html": "Cabem sem ouvir antes: a <b>tutela de urgência</b>; a <b>evidência só dos incisos II e III</b> do art. 311; a decisão do <b>art. 701</b> (mandado na monitória). A FCC troca por \"tutela da evidência fundada no abuso do direito de defesa\" (inciso I): <b>errado</b>, essa exige contraditório prévio, até porque pressupõe que o réu já se defendeu."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Nulidade de algibeira",
+       "html": "Segundo o STJ, citado no material, o contraditório se renova durante o procedimento: a falta de intimação no momento certo pode não gerar nulidade se a parte depois pôde se manifestar sobre a matéria."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: dispositivo, inquisitivo e os demais princípios",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CPC, art. 2º",
+       "texto": "Art. 2º O processo começa por ==iniciativa da parte== e se desenvolve por ==impulso oficial==, salvo as exceções previstas em lei."
+      },
+      {
+       "t": "texto",
+       "html": "O sistema brasileiro é <b>misto, com preponderância do dispositivo</b>: dispositivo temperado com toques de inquisitoriedade. Dispositivo: a parte propõe, define pedido e causa de pedir, e o juiz fica preso aos limites do pedido (congruência, art. 492: nada fora, extra petita, nem além, ultra petita). Inquisitivo: o juiz determina provas de ofício (art. 370) e considera fatos simples não alegados (art. 371). Exceções à congruência: pedidos implícitos e fungibilidade (reintegração pedida, manutenção concedida, art. 554)."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Isonomia",
+         "titulo": "arts. 7º e 139, I",
+         "texto": "Paridade de tratamento, que às vezes exige tratar diferente: gratuidade, hipossuficiência do consumidor (CDC, art. 6º, VIII), <b>Fazenda Pública</b>."
+        },
+        {
+         "tag": "Publicidade",
+         "titulo": "CF, arts. 5º, LX, e 93, IX; CPC, arts. 11 e 189",
+         "texto": "Regra geral e imediata. Restrição só pela intimidade ou pelo interesse social. Segredo de justiça: interesse público, família, intimidade, arbitragem com confidencialidade comprovada."
+        },
+        {
+         "tag": "Economia processual",
+         "titulo": "menos atividade, mais resultado",
+         "texto": "Ações coletivas, litisconsórcio, prova emprestada, repetitivos, IRDR. Em sentido \"microscópico\", processo mais barato (gratuidade, Juizados)."
+        },
+        {
+         "tag": "Instrumentalidade das formas",
+         "titulo": "arts. 188, 277 e 283",
+         "texto": "Ato com vício de forma vale se atingiu a finalidade e não houve prejuízo. Exemplo do material: falta do MP como fiscal da lei sem prejuízo efetivo não gera nulidade (STJ)."
+        },
+        {
+         "tag": "Duração razoável",
+         "titulo": "CF, art. 5º, LXXVIII; CPC, art. 4º",
+         "texto": "Inclui a atividade satisfativa. Institutos: julgamento antecipado (art. 355), Juizados, monitória, improcedência liminar (art. 332), prova emprestada (art. 372)."
+        },
+        {
+         "tag": "Cooperação",
+         "titulo": "art. 6º",
+         "texto": "Partes com o juiz, juiz com as partes (deveres de esclarecimento, consulta e prevenção). Entre as partes, Daniel Assumpção diz que é utopia."
+        },
+        {
+         "tag": "Boa-fé",
+         "titulo": "art. 5º",
+         "texto": "Boa-fé <b>objetiva</b>: modelo de conduta leal, independente da intenção."
+        },
+        {
+         "tag": "Primazia do mérito",
+         "titulo": "art. 282, § 2º",
+         "texto": "Se puder decidir o mérito a favor de quem aproveitaria a nulidade, o juiz não a pronuncia."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 4º",
+       "texto": "Art. 4º As partes têm o direito de obter em prazo razoável a solução integral do mérito, ==incluída a atividade satisfativa==."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 8º",
+       "texto": "Art. 8º Ao aplicar o ordenamento jurídico, o juiz atenderá aos ==fins sociais e às exigências do bem comum==, resguardando e promovendo a ==dignidade da pessoa humana== e observando a proporcionalidade, a razoabilidade, a legalidade, a publicidade e a eficiência."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 12, caput e § 2º",
+       "texto": "Art. 12. Os juízes e os tribunais atenderão, ==preferencialmente==, à ordem cronológica de conclusão para proferir sentença ou acórdão.\n§ 2º Estão excluídos da regra do caput :\nI - as sentenças proferidas em audiência, homologatórias de acordo ou de improcedência liminar do pedido;\nII - o julgamento de processos em bloco para aplicação de tese jurídica firmada em julgamento de casos repetitivos;\nIII - o julgamento de recursos repetitivos ou de incidente de resolução de demandas repetitivas;\nIV - as decisões proferidas com base nos arts. 485 e 932;"
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Os juízes atenderão obrigatoriamente à ordem cronológica.\"",
+       "html": "Errado. O art. 12 diz <b>preferencialmente</b>. E há exclusões no § 2º, como sentenças em audiência, homologatórias, improcedência liminar e repetitivos."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e detalhes: a motivação das decisões (art. 489, § 1º)",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A motivação é exigência constitucional (CF, art. 93, IX) e o CPC diz, em seis incisos, quando a decisão <b>não</b> se considera fundamentada. Vale para interlocutória, sentença e acórdão."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 11",
+       "texto": "Art. 11. Todos os julgamentos dos órgãos do Poder Judiciário serão públicos, e fundamentadas todas as decisões, ==sob pena de nulidade==.\nParágrafo único. Nos casos de segredo de justiça, pode ser autorizada a presença somente das partes, de seus advogados, de defensores públicos ou do Ministério Público."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 489, § 1º",
+       "texto": "§ 1º Não se considera fundamentada qualquer decisão judicial, ==seja ela interlocutória, sentença ou acórdão==, que:\nI - se limitar à indicação, à reprodução ou à paráfrase de ato normativo, sem explicar sua relação com a causa ou a questão decidida;\nII - empregar conceitos jurídicos indeterminados, sem explicar o motivo concreto de sua incidência no caso;\nIII - invocar motivos que se prestariam a justificar qualquer outra decisão;\nIV - não enfrentar todos os argumentos deduzidos no processo ==capazes de, em tese, infirmar a conclusão== adotada pelo julgador;\nV - se limitar a invocar precedente ou enunciado de súmula, sem identificar seus fundamentos determinantes nem demonstrar que o caso sob julgamento se ajusta àqueles fundamentos;\nVI - deixar de seguir enunciado de súmula, jurisprudência ou precedente invocado pela parte, sem demonstrar a existência de distinção no caso em julgamento ou a superação do entendimento."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Inciso",
+        "O que é vedado",
+        "Exemplo do material"
+       ],
+       "linhas": [
+        [
+         "I",
+         "só indicar, reproduzir ou parafrasear a norma",
+         "o juiz tem de ligar a norma aos fatos"
+        ],
+        [
+         "II",
+         "conceito indeterminado sem explicar a incidência",
+         "anular arrematação dizendo só que o preço foi \"vil\""
+        ],
+        [
+         "III",
+         "motivo que serve para qualquer decisão",
+         "decisão-padrão que indefere tutela por \"falta dos requisitos\""
+        ],
+        [
+         "IV",
+         "não enfrentar argumento capaz de infirmar a conclusão",
+         "o Brasil adota a fundamentação <b>suficiente</b>, não a exauriente (STJ)"
+        ],
+        [
+         "V",
+         "invocar precedente sem identificar os fundamentos determinantes e o ajuste ao caso",
+         ""
+        ],
+        [
+         "VI",
+         "deixar de seguir súmula ou precedente invocado sem mostrar distinção ou superação",
+         "só vale para precedentes <b>vinculantes</b> (REsp 1.698.774)"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Mais dois detalhes do art. 489: no § 2º, havendo colisão entre normas, o juiz deve justificar a <b>ponderação</b> (objeto, critérios, razões e premissas fáticas); no § 3º, a decisão se interpreta pelo conjunto dos seus elementos e conforme a boa-fé. E a motivação <b>per relationem</b> (por referência a decisão anterior ou parecer) é aceita, nos limites do Tema 1306 do STJ."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Na PGE",
+       "html": "Embargos de declaração da Fazenda costumam se apoiar no art. 489, § 1º, IV (argumento capaz de infirmar não enfrentado) e no art. 10 (fundamento novo sem oitiva). São as duas teses de nulidade que mais aparecem na rotina de procuradoria."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "As decisões abaixo vêm do material EBEJI \"Processo\", item 4. O material não traz decisão do STF sobre os arts. 1º a 12."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Corte Especial, REsp 2.148.059-MA, REsp 2.148.580-MA e REsp 2.150.218-MA, Rel. Min. Luis Felipe Salomão, j. 20/8/2025, recurso repetitivo, Tema 1306 (Info 859)",
+       "tese": "1) A fundamentação por referência (per relationem) é permitida desde que o julgador, ao reproduzir trechos de decisão anterior, documento ou parecer como razões de decidir, enfrente, ainda que de forma sucinta, as novas questões relevantes, dispensada a análise pormenorizada de cada alegação ou prova. 2) O art. 1.021, § 3º, não impede reproduzir os fundamentos da decisão agravada para negar provimento ao agravo interno quando a parte não traz argumento novo."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "3ª Turma, REsp 1.698.774-RS, Rel. Min. Nancy Andrighi, j. 1º/9/2020 (Info 679)",
+       "tese": "A exigência do art. 489, § 1º, VI (demonstrar distinção ou superação para deixar de aplicar súmula, jurisprudência ou precedente invocado) só se aplica a súmulas e precedentes <b>vinculantes</b>, não aos meramente persuasivos, como acórdãos de outros tribunais de 2º grau."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "2ª Turma, REsp 818.978/ES, Rel. Min. Mauro Campbell Marques, j. 9/8/2011, DJe de 18/8/2011",
+       "tese": "Sem prova de efetivo prejuízo decorrente da ausência do Ministério Público como fiscal da ordem jurídica, não há nulidade a declarar (instrumentalidade das formas)."
+      },
+      {
+       "t": "texto",
+       "html": "O material registra ainda, sem número de julgado, duas posições do STJ: a <b>fundamentação suficiente</b> (o juiz não precisa enfrentar todas as alegações, basta motivo suficiente) e a ideia de que o contraditório se renova no procedimento (nulidade de algibeira)."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "O juiz pode reproduzir o parecer do MP como razão de decidir, desde que enfrente, ainda que sucintamente, as questões novas relevantes.",
+         "v": true,
+         "porque": "Tema 1306 do STJ."
+        },
+        {
+         "texto": "Para deixar de aplicar acórdão de outro TJ invocado pela parte, o juiz precisa demonstrar distinção ou superação.",
+         "v": false,
+         "porque": "REsp 1.698.774: só para precedentes vinculantes."
+        },
+        {
+         "texto": "A ausência do MP como fiscal da lei gera nulidade automática, independentemente de prejuízo.",
+         "v": false,
+         "porque": "REsp 818.978: sem prejuízo, sem nulidade."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Como a FCC troca",
+       "html": "\"Ao reconhecer de ofício a prescrição, o juiz dispensa a oitiva das partes, por se tratar de matéria de ordem pública.\" <b>Errado</b>: art. 10 (o próprio art. 487, parágrafo único, manda ouvir antes, salvo na improcedência liminar). E \"o CPC adota a fundamentação exauriente\": errado, a suficiente."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O que pode cair assim",
+       "html": "Os campeões: art. 10 (sem decisão-surpresa, mesmo de ofício, em qualquer grau); as exceções do art. 9º (urgência; evidência dos incisos II e III; monitória); o \"preferencialmente\" do art. 12; \"incluída a atividade satisfativa\" no art. 4º; o \"efetivo contraditório\" do art. 7º."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "O processo começa por iniciativa da parte e se desenvolve por impulso oficial, salvo as exceções legais.",
+         "v": true,
+         "porque": "Art. 2º: dispositivo e inquisitivo convivem."
+        },
+        {
+         "texto": "O juiz pode conceder, sem ouvir o réu, tutela da evidência fundada em abuso do direito de defesa.",
+         "v": false,
+         "porque": "O art. 9º só ressalva os incisos II e III do art. 311."
+        },
+        {
+         "texto": "A duração razoável do processo abrange a fase de cumprimento da decisão.",
+         "v": true,
+         "porque": "\"Incluída a atividade satisfativa\" (art. 4º)."
+        },
+        {
+         "texto": "Pela cooperação, o juiz tem deveres de esclarecimento, consulta e prevenção.",
+         "v": true,
+         "porque": "Deveres apontados pela doutrina citada no material."
+        },
+        {
+         "texto": "Decisão que se limita a parafrasear a lei, sem ligá-la ao caso, é considerada fundamentada se citar o artigo.",
+         "v": false,
+         "porque": "Art. 489, § 1º, I."
+        },
+        {
+         "texto": "O sistema processual brasileiro é inquisitivo puro.",
+         "v": false,
+         "porque": "É misto, com preponderância do dispositivo."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B5-a02",
+   "topico_id": "B5-02",
+   "numero": 2,
+   "titulo": "Jurisdição, ação e competência",
+   "status": "a_montar"
+  },
+  {
+   "id": "B5-a03",
+   "topico_id": "B5-03",
+   "numero": 3,
+   "titulo": "Sujeitos do processo",
+   "status": "a_montar"
+  },
+  {
+   "id": "B5-a04",
+   "topico_id": "B5-04",
+   "numero": 4,
+   "titulo": "Fazenda Pública em juízo",
+   "status": "a_montar"
+  },
+  {
+   "id": "B5-a05",
+   "topico_id": "B5-05",
+   "numero": 5,
+   "titulo": "Atos processuais",
+   "status": "a_montar"
+  },
+  {
+   "id": "B5-a06",
+   "topico_id": "B5-06",
+   "numero": 6,
+   "titulo": "Procedimento comum",
+   "status": "a_montar"
+  },
+  {
+   "id": "B5-a07",
+   "topico_id": "B5-07",
+   "numero": 7,
+   "titulo": "Provas",
+   "status": "a_montar"
+  },
+  {
+   "id": "B5-a08",
+   "topico_id": "B5-08",
+   "numero": 8,
+   "titulo": "Sentença, coisa julgada e liquidação",
+   "status": "a_montar"
+  },
+  {
+   "id": "B5-a09",
+   "topico_id": "B5-09",
+   "numero": 9,
+   "titulo": "Recursos",
+   "status": "a_montar"
+  },
+  {
+   "id": "B5-a10",
+   "topico_id": "B5-10",
+   "numero": 10,
+   "titulo": "Precedentes e incidentes",
+   "status": "a_montar"
+  },
+  {
+   "id": "B5-a11",
+   "topico_id": "B5-11",
+   "numero": 11,
+   "titulo": "Execução",
+   "status": "a_montar"
+  },
+  {
+   "id": "B5-a12",
+   "topico_id": "B5-12",
+   "numero": 12,
+   "titulo": "Procedimentos especiais e ações constitucionais",
+   "status": "a_montar"
+  },
+  {
+   "id": "B5-a13",
+   "topico_id": "B5-13",
+   "numero": 13,
+   "titulo": "Juizados e processo coletivo",
+   "status": "a_montar"
+  }
+ ],
+ "glossario": [
+  [
+   "Contraditório diferido",
+   "Contraditório depois da decisão, nas urgências: pedido, decisão, informação, nova decisão."
+  ],
+  [
+   "Decisão-surpresa",
+   "Decisão com fundamento sobre o qual as partes não puderam se manifestar (vedada pelo art. 10)."
+  ],
+  [
+   "Per relationem",
+   "Fundamentação por referência a decisão anterior, documento ou parecer."
+  ]
+ ]
+}
