@@ -8,7 +8,8 @@
   "Material EBEJI: Princípios Fundamentais (2026)",
   "Material EBEJI: Separação dos Poderes (2026)",
   "Material EBEJI: Poder Constituinte (2026)",
-  "Material EBEJI: Eficácia e Aplicabilidade das Normas Constitucionais (2026)"
+  "Material EBEJI: Eficácia e Aplicabilidade das Normas Constitucionais (2026)",
+  "Prof. Adriane Fauth: aula e mapa Princípios Fundamentais"
  ],
  "aulas": [
   {
@@ -265,6 +266,65 @@
        "tom": "macete",
        "titulo": "O retrato completo da CF/88",
        "html": "Promulgada, escrita, analítica, formal, dogmática, rígida, reduzida (um só código), eclética, pretende ser normativa, principiológica, definitiva, autônoma, garantia, dirigente, social e expansiva."
+      }
+     ]
+    },
+    {
+     "titulo": "Aprofundamento: as outras ideias de Constituição que o material traz",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Constituição aberta.</b> Para mantê-la viva no seu tempo e não perder a força normativa, Canotilho admite relativizar o sentido material e até desconstitucionalizar elementos substantivos."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Critério extra",
+        "Espécies",
+        "CF/88"
+       ],
+       "linhas": [
+        [
+         "Função",
+         "<b>provisória</b> (define a elaboração da Constituição e o regime até lá) ou <b>definitiva</b> (produto final)",
+         "definitiva"
+        ],
+        [
+         "Origem da decretação",
+         "<b>heterônoma</b> (decretada fora do Estado, por outro Estado) ou <b>autônoma</b> (pelo próprio Estado)",
+         "autônoma"
+        ],
+        [
+         "Conteúdo ideológico (André Ramos Tavares)",
+         "<b>liberal</b> ou negativa (direitos de 1ª geração, não intervenção) ou <b>social</b> ou positiva (direitos de 2ª geração, dirigismo)",
+         "social"
+        ],
+        [
+         "Estrutura (Raul Machado Horta)",
+         "<b>expansiva</b>: amplia o conteúdo anatômico (títulos e capítulos), comparada com as anteriores (interna) e com as de outros países (externa)",
+         "expansiva"
+        ],
+        [
+         "Estabilidade (valor histórico)",
+         "<b>fixa</b> (só o mesmo poder que a criou altera; silenciosa sobre a reforma), <b>transitoriamente flexível</b>, <b>imutável</b> (granítica)",
+         "rígida"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Crowdsourced constitution.</b> A Islândia (2009 a 2011), depois de grave crise financeira, elegeu 25 cidadãos e abriu a redação da nova Constituição às contribuições populares pelas redes sociais. A eleição foi anulada pela Suprema Corte do país, mas o Conselho Constitucional seguiu, o texto foi referendado pelo povo e acabou não aprovado pelo Parlamento. É a \"terceirização para a multidão\" do processo constituinte. No Brasil, o material lembra os portais e-Democracia (Câmara) e e-Cidadania (Senado)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Constitucionalização simbólica (Marcelo Neves).</b> É a distância entre a função simbólica, hipertrofiada, e a concretização jurídica insuficiente da Constituição. A legislação simbólica pode servir para: confirmar valores de grupos dominantes; a <b>legislação-álibi</b> (fingir que o Estado resolve o problema); e adiar conflitos por compromissos dilatórios. Pode ter ainda efeitos latentes positivos. Neves a descreve como <b>alopoiese</b> do sistema jurídico, típica de países periféricos, em oposição a um direito autopoiético. A resposta é o <b>neoconstitucionalismo</b>: concretizar a Constituição, com papel ativo da sociedade e do Judiciário (mandado de injunção, ADI), sobretudo nas normas programáticas."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Legislação-álibi\" não é lei inconstitucional",
+       "html": "É a lei que serve para mostrar ação do Estado diante da insatisfação social, sem resolver o problema. A FCC pode trazer a definição e pedir o nome (Marcelo Neves), ou trocar por \"compromisso dilatório\", que é adiar o conflito."
       }
      ]
     },
@@ -532,7 +592,7 @@
    "numero": 2,
    "titulo": "Princípios fundamentais: arts. 1º a 4º",
    "status": "pronta",
-   "fonte": "Material EBEJI: Princípios Fundamentais (2026); Material EBEJI: Separação dos Poderes (2026); CF, texto vigente",
+   "fonte": "Material EBEJI: Princípios Fundamentais (2026); Material EBEJI: Separação dos Poderes (2026); Prof. Adriane Fauth: aula e mapa Princípios Fundamentais; CF, texto vigente",
    "resumo": [
     "Estado = povo + território + poder político (soberania). A finalidade não é elemento.",
     "República (forma de governo): não é cláusula pétrea, é princípio sensível, confirmada em plebiscito. Federação (forma de Estado): cláusula pétrea.",
@@ -823,6 +883,227 @@
      ]
     },
     {
+     "titulo": "Aprofundamento: os quatro rótulos do Estado brasileiro",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A Prof. Adriane organiza o Título I a partir de uma distinção. <b>Princípios político-constitucionais</b> são as decisões políticas fundamentais que dão forma ao Estado: são os princípios fundamentais dos arts. 1º a 4º (separação de Poderes, indissolubilidade do vínculo federativo, pluralismo político, dignidade). <b>Princípios jurídico-constitucionais</b> são princípios gerais da ordem jurídica, espalhados pelo texto, como legalidade, devido processo legal e juiz natural."
+      },
+      {
+       "t": "texto",
+       "html": "José Afonso da Silva agrupa os princípios fundamentais em sete grupos: (a) existência, forma e estrutura do Estado (federativo e soberania, art. 1º); (b) forma de governo (republicano, art. 1º); (c) organização dos Poderes (art. 2º); (d) organização da sociedade (art. 3º, I); (e) regime político (art. 1º e parágrafo único, cidadania); (f) prestação positiva do Estado (art. 3º, II, III e IV); (g) comunidade internacional (art. 4º)."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Rótulo",
+        "No Brasil",
+        "O contrário",
+        "Como se protege"
+       ],
+       "linhas": [
+        [
+         "<b>Forma de Estado</b>",
+         "Federação: mais de um poder político interno (Brasil, EUA)",
+         "Unitário ou simples: um poder único e centralizado (França, Paraguai, Uruguai)",
+         "cláusula pétrea expressa (art. 60, § 4º, I)"
+        ],
+        [
+         "<b>Forma de governo</b>",
+         "República: eleito, temporário, responsável, igual perante a lei",
+         "Monarquia: vitaliciedade, hereditariedade, irresponsabilidade",
+         "princípio sensível (art. 34, VII, a); para parte da doutrina, cláusula pétrea implícita"
+        ],
+        [
+         "<b>Sistema de governo</b>",
+         "Presidencialismo: chefia única, legitimidade popular direta, independência entre Executivo e Legislativo",
+         "Parlamentarismo: chefias separadas, legitimidade indireta do chefe de governo, interdependência",
+         "não está nos arts. 1º a 4º"
+        ],
+        [
+         "<b>Regime político</b>",
+         "Democracia semidireta ou participativa",
+         "Regimes não democráticos",
+         "o voto direto, secreto, universal e periódico é cláusula pétrea (art. 60, § 4º, II)"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "O poema da professora",
+       "html": "\"O Estado <b>Fede</b>, a República é <b>Fogo</b>, o Presidente é <b>sistemático</b> e o regime é <b>democrático</b>.\" Forma de <b>Estado</b> = Federação; forma de <b>governo</b> = República; <b>sistema</b> de governo = Presidencialismo; <b>regime</b> = Democracia."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Não confunda República Federativa do Brasil com União",
+       "html": "A <b>RFB</b> é o todo, o Estado federal: tem <b>soberania</b> e é pessoa jurídica de direito <b>público internacional</b>. A <b>União</b> é um dos entes: tem <b>autonomia</b> e é pessoa jurídica de direito <b>público interno</b>, como Estados, DF e Municípios. A \"união indissolúvel\" do art. 1º, com minúscula, é a mesma União do art. 18."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Mais três detalhes do federalismo:</b> basta haver União e Estados para existir federação, mas o Brasil tem também DF e Municípios; os Municípios só passaram a ser entes federados autônomos com a CF/88; o federalismo nasceu na Constituição norte-americana de 1787 e, aqui, foi adotado provisoriamente em 1889 e consolidado em 1891. Uma vez formada a federação, não há <b>direito de secessão</b> (princípio da indissolubilidade)."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "República: cláusula pétrea implícita?",
+       "html": "A República não está no art. 60, § 4º. Mas parte da doutrina a vê como cláusula pétrea <b>implícita</b> por dois argumentos: (1) o povo a confirmou no plebiscito de 1993 (ADCT, art. 2º), e emenda que trouxesse a Monarquia violaria a soberania popular sem nova consulta; (2) o <b>voto periódico</b> é cláusula pétrea expressa e é incompatível com a vitaliciedade do monarca."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 60, § 4º, II",
+       "texto": "§ 4º Não será objeto de deliberação a proposta de emenda tendente a abolir:\nII - o voto direto, secreto, universal e ==periódico==;"
+      },
+      {
+       "t": "texto",
+       "html": "<b>Democracia.</b> <b>Direta</b>: o povo decide sem intermediários (plebiscito, referendo, iniciativa popular, art. 14; a professora acrescenta a ação popular). <b>Indireta ou representativa</b>: o povo elege quem decide. Quando a Constituição combina as duas, como a nossa, a democracia é <b>semidireta ou participativa</b>. O <b>Estado de Direito</b> nasceu com o fim das monarquias absolutistas (império da lei, legalidade); torna-se <b>Democrático</b> quando a ordem jurídica é legitimada pelo povo. Elemento do regime democrático é o princípio da maioria, sem excluir os direitos da minoria."
+      }
+     ]
+    },
+    {
+     "titulo": "Aprofundamento: o poder é uno; o que se divide são as funções",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A expressão \"separação dos Poderes\" é um pouco equivocada: o poder soberano do Estado é <b>uno e indivisível</b>. O que se divide são as funções. A professora identifica cinco funções básicas e mostra como o Brasil as agrupa em três Poderes (estrutura tripartida, atribuída a Montesquieu, \"O espírito das leis\", 1748)."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Representativa",
+         "titulo": "Executivo",
+         "texto": "Representar o Estado: função do Chefe de Estado."
+        },
+        {
+         "tag": "Governativa",
+         "titulo": "Executivo",
+         "texto": "Tomar as decisões políticas: chefia de Governo."
+        },
+        {
+         "tag": "Administrativa",
+         "titulo": "Executivo",
+         "texto": "Pôr em prática as decisões do governo, por órgãos e agências."
+        },
+        {
+         "tag": "Legislativa",
+         "titulo": "Legislativo",
+         "texto": "Criar, de forma imperativa, direitos e obrigações."
+        },
+        {
+         "tag": "Jurisdicional",
+         "titulo": "Judiciário",
+         "texto": "Resolver conflitos com definitividade."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "A separação se apoia em dois elementos: <b>especialização funcional</b> (cada estrutura faz melhor a sua parte) e <b>independência orgânica</b> (não há subordinação de um Poder ao outro). O objetivo é preservar a liberdade individual e evitar a concentração e o abuso do poder. Dela decorre a <b>indelegabilidade</b> de atribuições, salvo quando o próprio constituinte prevê (exemplo: lei delegada). E ela não é rígida: o sistema de <b>freios e contrapesos</b> permite que um Poder controle o outro, como o Judiciário ao declarar uma lei inconstitucional."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Pelo princípio da separação, o poder do Estado é dividido em três poderes distintos e soberanos.\"",
+       "html": "Errado. O poder é <b>uno e indivisível</b>; dividem-se as <b>funções</b>. E os Poderes são independentes e harmônicos, não soberanos: soberania é da República."
+      }
+     ]
+    },
+    {
+     "titulo": "Aprofundamento: cada fundamento, objetivo e princípio internacional",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Soberania</b> (art. 1º, I). Poder supremo na ordem interna e independente na ordem externa. Não é absoluta: pela internacionalização dos direitos humanos, pode ser relativizada em caso de grave violação. Características (classificação de Flávio Martins citada pela professora): <b>una</b>, <b>indivisível</b>, <b>inalienável</b>, <b>imprescritível</b>, <b>originária</b>, <b>incondicionada</b> e <b>coativa</b>."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Cidadania</b> (II). Não se resume aos direitos políticos: abrange direitos civis, sociais e deveres fundamentais. A cidadania <b>formal</b> indica pertencimento a um Estado; a <b>substantiva</b> é a posse de direitos civis, políticos e sociais."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Dignidade da pessoa humana</b> (III). Valor constitucional supremo, fonte de todos os direitos fundamentais, de caráter multidimensional. Impõe ao Estado três deveres (classificação de Marcelo Novelino): <b>respeito</b> (abster-se de violar), <b>proteção</b> (defender) e <b>promoção</b> (dar acesso a uma vida digna, ligado à igualdade material). Para a doutrina majoritária, <b>não é absoluta</b>: pode ser relativizada em casos excepcionalíssimos, como o uso de algemas da Súmula Vinculante 11."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Valores sociais do trabalho e da livre iniciativa</b> (IV). Os dois andam juntos: protege-se o <b>valor social</b> de cada um. A livre iniciativa (também no art. 170) mostra a opção pelo capitalismo, mas não impede a intervenção do Estado para regular o mercado e defender o consumidor."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Pluralismo político</b> (V). Diversidade de ideias e respeito às diferenças. Não se confunde com <b>pluripartidarismo</b>, que é só uma das suas formas de expressão. Discurso de ódio e discriminação racial não se defendem como pluralismo."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Objetivos (art. 3º).</b> São normas de <b>eficácia limitada</b>, de conteúdo <b>programático</b>, e formam rol <b>exemplificativo</b>. O inciso I (sociedade livre, justa e solidária) é o princípio da <b>solidariedade</b> e espelha as três gerações de direitos: liberdade (1ª), igualdade ou justiça social (2ª), solidariedade ou fraternidade (3ª). O inciso II pede desenvolvimento também social, cultural, indígena e ambiental. O inciso III tem dois comandos: <b>erradicar</b> pobreza e marginalização (daí o Fundo do art. 79 do ADCT, prorrogado por tempo indeterminado pela EC 67/2010) e <b>reduzir</b> desigualdades sociais (entre ricos e pobres) e regionais (entre regiões). O inciso IV fundamentou decisões sobre união homoafetiva, criminalização da homotransfobia, nome do transgênero e cotas raciais."
+      },
+      {
+       "t": "lei",
+       "ref": "ADCT, art. 79, caput",
+       "texto": "Art. 79. É instituído, para vigorar até o ano de 2010, no âmbito do Poder Executivo Federal, o ==Fundo de Combate e Erradicação da Pobreza==, a ser regulado por lei complementar com o objetivo de viabilizar a todos os brasileiros acesso a níveis dignos de subsistência, cujos recursos serão aplicados em ações suplementares de nutrição, habitação, educação, saúde, reforço de renda familiar e outros programas de relevante interesse social voltados para melhoria da qualidade de vida."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Os mnemônicos da professora",
+       "html": "Fundamentos: <b>SO CI DI VA PLU</b>.<br>Objetivos: <b>CON GA ERRA PRO</b> (construir, garantir, erradicar, promover).<br>Relações internacionais: <b>CONDE PRESO NÃO REINA COOPERA IGUAL</b> (concessão de asilo, defesa da paz, prevalência dos direitos humanos, repúdio ao terrorismo e ao racismo, solução pacífica, não intervenção, independência nacional, autodeterminação, cooperação, igualdade entre os Estados)."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Princípio do art. 4º",
+        "O que a professora destaca"
+       ],
+       "linhas": [
+        [
+         "Concessão de asilo político",
+         "ato de soberania, do Presidente da República, discricionário. Não vale para perseguição por crime comum ou contra os princípios da ONU (DUDH, art. XIV, 2). O asilo anterior não impede a extradição, salvo crime político ou de opinião (Ext 524)"
+        ],
+        [
+         "Defesa da paz",
+         "dever negativo (não provocar conflito) e positivo (manter ou restabelecer a paz)"
+        ],
+        [
+         "Prevalência dos direitos humanos",
+         "plano interno (internalizar tratados) e externo; pode se sobrepor à soberania"
+        ],
+        [
+         "Solução pacífica dos conflitos",
+         "diplomacia antes de medidas extremas (Carta da ONU, art. 33)"
+        ],
+        [
+         "Não intervenção",
+         "não intervir em assuntos internos de outros países, no plano militar, político, econômico e cultural; não é absoluto (intervenção humanitária)"
+        ],
+        [
+         "Repúdio ao terrorismo e ao racismo",
+         "internamente, criminalizar; externamente, não se relacionar com quem estimula. Racismo: inafiançável e imprescritível. Terrorismo: inafiançável e insuscetível de graça ou anistia"
+        ],
+        [
+         "Autodeterminação dos povos",
+         "respeitar o sistema político de cada Estado; direito de 3ª geração"
+        ],
+        [
+         "Igualdade entre os Estados",
+         "igualdade jurídica em três níveis (Novelino): formal, legislativa e política"
+        ],
+        [
+         "Integração latino-americana (parágrafo único)",
+         "integração supranacional econômica, política, social e cultural"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, XLII e XLIII",
+       "texto": "XLII - a prática do racismo constitui crime ==inafiançável e imprescritível==, sujeito à pena de reclusão, nos termos da lei;\nXLIII - a lei considerará crimes ==inafiançáveis e insuscetíveis de graça ou anistia== a prática da tortura , o tráfico ilícito de entorpecentes e drogas afins, o terrorismo e os definidos como crimes hediondos, por eles respondendo os mandantes, os executores e os que, podendo evitá-los, se omitirem;"
+      }
+     ]
+    },
+    {
      "titulo": "Exceções e tensões: Estado de Direito, anistia e separação dos Poderes",
      "etapa": "excecao",
      "blocos": [
@@ -910,6 +1191,124 @@
        ]
       },
       {
+       "t": "texto",
+       "html": "<b>4. Do material da Prof. Adriane Fauth: um precedente para cada princípio.</b> Todas as referências abaixo estão no material dela, com relator e data."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, Rcl 11.243, Rel. Min. Gilmar Mendes, red. do acórdão Min. Luiz Fux, j. 8/6/2011, DJe de 5/10/2011",
+       "tese": "A soberania divide-se em interna e externa: a interna se exterioriza pela vontade popular (art. 14), por meio dos representantes do povo no parlamento e no governo; a externa se expressa no plano internacional pelo Presidente da República."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, Pet 3.388, Rel. Min. Ayres Britto, j. 19/3/2009, DJe de 1º/7/2010",
+       "tese": "As terras indígenas fazem parte do território brasileiro, sobre o qual incide com exclusividade o direito nacional, submetidas à soberania ou independência nacional. E o desenvolvimento feito sem ou contra os índios, onde tradicionalmente instalados em 1988, desrespeita o objetivo do art. 3º, II."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, HC 72.391-QO, Rel. Min. Celso de Mello, j. 8/3/1995",
+       "tese": "O uso obrigatório do idioma nacional nos atos processuais decorre da soberania nacional e concretiza o art. 13, caput (a língua portuguesa é o idioma oficial)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 248.869, voto do Rel. Min. Maurício Corrêa, j. 7/8/2003, DJ de 12/3/2004",
+       "tese": "O direito ao nome insere-se no conceito de dignidade da pessoa humana (art. 1º, III)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula Vinculante 11",
+       "tese": "Só é lícito o uso de algemas em casos de resistência e de fundado receio de fuga ou de perigo à integridade física própria ou alheia, por parte do preso ou de terceiros, justificada a excepcionalidade por escrito, sob pena de responsabilidade disciplinar, civil e penal do agente ou da autoridade e de nulidade da prisão ou do ato processual a que se refere, sem prejuízo da responsabilidade civil do Estado."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "2ª Turma, RE 349.686/PE, Rel. Min. Ellen Gracie, DJ de 5/8/2005",
+       "tese": "O princípio da livre iniciativa não pode ser invocado para afastar regras de regulamentação do mercado e de defesa do consumidor."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "1ª Turma, RE 450.855-AgR, Rel. Min. Eros Grau, j. 23/8/2005, DJ de 9/12/2005",
+       "tese": "O sistema público de previdência social é fundamentado no princípio da solidariedade (art. 3º, I): os ativos contribuem para financiar os benefícios dos inativos."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 1.003, voto da Min. Cármen Lúcia, j. 1º/8/2018, DJe de 18/2/2019",
+       "tese": "O seguro obrigatório de veículos tem nítida conotação de seguro social e concretiza o princípio da solidariedade, objetivo fundamental da República (art. 3º, I)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 3.540-MC, Rel. Min. Celso de Mello, j. 1º/9/2005, DJ de 3/2/2006",
+       "tese": "O desenvolvimento nacional (art. 3º, II) deve ser equilibrado com a preservação do meio ambiente (art. 225), pelo princípio do desenvolvimento sustentável, sem esvaziar o conteúdo essencial do direito ao meio ambiente."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 5.657, Rel. Min. Luiz Fux, j. 16 e 17/11/2022 (Info 1.076)",
+       "tese": "É constitucional lei federal que reserva, por veículo, duas vagas gratuitas e, esgotadas estas, duas com desconto de no mínimo 50%, para jovens de baixa renda no transporte coletivo interestadual. Não ofende a propriedade, a ordem econômica nem o equilíbrio dos contratos (redução da desigualdade social)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 6.287, Rel. Min. Rosa Weber, j. 19/9/2022, DJe de 29/9/2022",
+       "tese": "O Serviço de Retransmissão de Rádio na Amazônia Legal (Lei 13.649/2018), outorga extraordinária, precária e não onerosa, é medida legítima para integrar localidades isoladas e atende ao objetivo de desenvolvimento regional (art. 3º, II e III)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADPF 132/RJ, Rel. Min. Ayres Britto, j. 5/5/2011",
+       "tese": "Reconhecida como família a união estável entre pessoas do mesmo sexo: a proibição de discriminação em razão do sexo alcança também a orientação sexual (art. 3º, IV)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 670.422, Rel. Min. Dias Toffoli, j. 15/8/2018, DJe de 10/3/2020, Tema 761",
+       "tese": "O transgênero tem direito fundamental subjetivo à alteração do prenome e da classificação de gênero no registro civil, só pela manifestação da vontade, pela via judicial ou administrativa, averbada à margem do assento, vedada a menção a \"transexual\" e a certidão de inteiro teor, salvo a pedido do interessado ou por ordem judicial."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, Ext 524, Rel. Min. Celso de Mello, j. 31/10/1989, DJ de 8/3/1991",
+       "tese": "Não há incompatibilidade absoluta entre asilo político e extradição: o STF não se vincula ao juízo do Executivo ao conceder o asilo. O asilado só não será extraditado se o fato for crime político ou de opinião, ou se houver extradição política disfarçada."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A soberania, como fundamento da República, é absoluta e impede qualquer relativização internacional.",
+         "v": false,
+         "porque": "Pela internacionalização dos direitos humanos, pode ser relativizada em grave violação."
+        },
+        {
+         "texto": "A livre iniciativa pode ser invocada para afastar normas de defesa do consumidor.",
+         "v": false,
+         "porque": "RE 349.686."
+        },
+        {
+         "texto": "A concessão de asilo político impede, por si só, a extradição do asilado.",
+         "v": false,
+         "porque": "Ext 524: só impede se o crime for político ou de opinião."
+        },
+        {
+         "texto": "Lei que reserva vagas gratuitas a jovens de baixa renda no transporte interestadual ofende a livre iniciativa.",
+         "v": false,
+         "porque": "ADI 5.657: é constitucional e reduz a desigualdade social."
+        },
+        {
+         "texto": "Os objetivos do art. 3º são normas de eficácia limitada, de conteúdo programático, em rol exemplificativo.",
+         "v": true,
+         "porque": "Posição do material da Prof. Adriane."
+        }
+       ]
+      },
+      {
        "t": "nota",
        "tom": "pegadinha",
        "titulo": "Como a FCC troca",
@@ -920,6 +1319,72 @@
        "tom": "hipotese",
        "titulo": "Na PGE",
        "html": "Nas ADIs estaduais contra leis da Assembleia que amarram o Governador, o argumento central é o art. 2º, com a direção superior da administração (art. 84, II, por simetria). Nas ações por omissão em direitos fundamentais (presídio, saúde), a separação dos Poderes sozinha costuma perder: discuta prazo, alternativa e impacto orçamentário comprovado."
+      }
+     ]
+    },
+    {
+     "titulo": "CF × Maranhão: o que muda no Estado",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A Constituição do Maranhão (promulgada em 5/10/1989 pela Assembleia Constituinte estadual, com o poder constituinte <b>decorrente</b> visto na aula 3) repete a estrutura da CF, com trocas que a banca pode explorar numa prova da PGE-MA."
+      },
+      {
+       "t": "lei",
+       "ref": "CE-MA, art. 1º, caput, § 1º e § 2º",
+       "texto": "Art. 1° O Estado do Maranhão e os Municípios integram, ==com autonomia político-administrativa==, a República Federativa do Brasil.\n§ 1° Todo o poder emana do povo, que o exerce por meio de representantes eleitos ou diretamente, nos termos da Constituição Federal e desta Constituição.\n§ 2° O Estado organiza-se e rege-se por esta Constituição e as leis que adotar, ==observados os princípios constitucionais da República==."
+      },
+      {
+       "t": "lei",
+       "ref": "CE-MA, art. 2º",
+       "texto": "Art. 2° São fundamentos do Estado: ==I - a autonomia;== II - a cidadania; III - a dignidade da pessoa humana; IV - os valores sociais do trabalho e a livre iniciativa; V - o pluralismo político."
+      },
+      {
+       "t": "lei",
+       "ref": "CE-MA, art. 3º",
+       "texto": "Art. 3° O Estado orientará sua atuação no sentido da ==regionalização== de suas ações, visando ao desenvolvimento e à redução das desigualdades sociais."
+      },
+      {
+       "t": "lei",
+       "ref": "CE-MA, art. 6º",
+       "texto": "Art. 6° São Poderes do Estado, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário.\nParágrafo único. Salvo exceções previstas nesta Constituição, ==é vedado a qualquer dos Poderes delegar atribuições==, e quem for investido na função de um deles não poderá exercer a de outro."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Ponto",
+        "CF",
+        "Constituição do Maranhão"
+       ],
+       "linhas": [
+        [
+         "1º fundamento",
+         "<b>soberania</b> (art. 1º, I)",
+         "<b>autonomia</b> (art. 2º, I): o Estado-membro não é soberano"
+        ],
+        [
+         "Trabalho e iniciativa",
+         "valores sociais do trabalho <b>e da</b> livre iniciativa",
+         "valores sociais do trabalho <b>e a</b> livre iniciativa"
+        ],
+        [
+         "Objetivo",
+         "art. 3º (quatro incisos)",
+         "art. 3º: <b>regionalização</b> das ações, desenvolvimento e redução das desigualdades sociais"
+        ],
+        [
+         "Separação dos Poderes",
+         "art. 2º (indelegabilidade implícita)",
+         "art. 6º, parágrafo único: indelegabilidade <b>expressa</b> e vedação de exercer função de outro Poder"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Pode cair assim na PGE-MA",
+       "html": "\"A Constituição do Maranhão, em simetria com a CF, elenca a soberania como fundamento do Estado.\" <b>Errado</b>: o fundamento é a <b>autonomia</b>. Soberania é da República Federativa do Brasil, como você viu nesta aula (RFB × União)."
       }
      ]
     },

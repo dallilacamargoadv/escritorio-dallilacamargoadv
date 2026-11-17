@@ -1,0 +1,688 @@
+{
+ "materia_id": "B6",
+ "titulo": "Civil",
+ "subtitulo": "Da LINDB às sucessões, com o olhar do Estado como parte.",
+ "fontes": [
+  "LINDB, CC, CPC e CF, textos vigentes",
+  "Material EBEJI: Estudo da Lei de Introdução (2026)"
+ ],
+ "aulas": [
+  {
+   "id": "B6-a01",
+   "topico_id": "B6-01",
+   "numero": 1,
+   "titulo": "LINDB: vigência, integração, tempo, espaço e segurança jurídica (arts. 1º a 30)",
+   "status": "pronta",
+   "fonte": "Material EBEJI: Estudo da Lei de Introdução (2026), itens 1 a 8; LINDB, CPC e CF, textos vigentes",
+   "resumo": [
+    "Sobredireito. Vigência: 45 dias no Brasil, 3 meses no exterior; correção antes da vigência reabre o prazo, depois é lei nova.",
+    "Revogação expressa ou tácita, total (ab-rogação) ou parcial (derrogação). Repristinação só expressa; efeito repristinatório na ADI.",
+    "Integração: analogia, costumes (praeter legem), princípios gerais; equidade só quando a lei permite.",
+    "Direito adquirido, ato jurídico perfeito e coisa julgada não são absolutos (RE 363.889; CC, art. 2.035).",
+    "Espaço: domicílio para pessoa e família, situação para bens, último domicílio para sucessão, homologação pelo STJ.",
+    "Arts. 20 a 30: consequências práticas, regime de transição, orientação da época, compromisso com oitiva do órgão jurídico, responsabilidade só por dolo ou erro grosseiro."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: a lei sobre as leis",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A LINDB (Decreto-Lei 4.657/1942, com o nome dado pela Lei 12.376/2010) é norma de <b>sobredireito</b>: lei sobre leis (<i>lex legum</i>). Não é só do Direito Civil: vale para todo o ordenamento. Os 30 artigos se dividem em quatro blocos que a FCC cobra separadamente."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Bloco",
+        "Artigos",
+        "Assunto"
+       ],
+       "linhas": [
+        [
+         "Vigência",
+         "1º e 2º",
+         "quando a lei começa e termina"
+        ],
+        [
+         "Aplicação no tempo e integração",
+         "3º a 6º",
+         "obrigatoriedade, lacunas, interpretação, direito adquirido"
+        ],
+        [
+         "Aplicação no espaço",
+         "7º a 19",
+         "Direito Internacional Privado"
+        ],
+        [
+         "Segurança jurídica no direito público",
+         "20 a 30",
+         "Lei 13.655/2018: o bloco da procuradoria"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "O Brasil é filiado ao <b>Civil Law</b>: a lei é fonte primária. A súmula vinculante (EC 45/2004) e os precedentes do CPC aproximam o sistema do Common Law, mas, por ora, ele continua essencialmente legal. E não há \"Estado legal puro\": a lei é fonte, não a única."
+      }
+     ]
+    },
+    {
+     "titulo": "Vigência: arts. 1º e 2º",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 1º",
+       "texto": "Art. 1o Salvo disposição contrária, a lei começa a vigorar em todo o país ==quarenta e cinco dias== depois de oficialmente publicada.\n§ 1o Nos Estados estrangeiros, a obrigatoriedade da lei brasileira, quando admitida, se inicia ==três meses== depois de oficialmente publicada.\n§ 2o (Revogado pela Lei nº 12.036, de 2009).\n§ 3o Se, antes de entrar a lei em vigor, ocorrer ==nova publicação== de seu texto, destinada a correção, o prazo deste artigo e dos parágrafos anteriores começará a correr da nova publicação.\n§ 4o As correções a texto de lei já em vigor consideram-se lei nova."
+      },
+      {
+       "t": "texto",
+       "html": "A lei passa por elaboração, promulgação e publicação; depois vem a <b>vacatio legis</b>, em geral fixada na própria lei. Na falta, 45 dias no Brasil e 3 meses no exterior. A correção do texto <b>antes</b> da vigência reabre o prazo; a correção de lei <b>já em vigor</b> é lei nova."
+      },
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 2º",
+       "texto": "Art. 2o ==Não se destinando à vigência temporária==, a lei terá vigor até que outra a modifique ou revogue.\n§ 1o A lei posterior revoga a anterior quando ==expressamente o declare==, quando ==seja com ela incompatível== ou quando ==regule inteiramente a matéria== de que tratava a lei anterior.\n§ 2o A lei nova, que estabeleça disposições gerais ou especiais a par das já existentes, ==não revoga nem modifica== a lei anterior.\n§ 3o ==Salvo disposição em contrário==, a lei revogada não se restaura por ter a lei revogadora perdido a vigência."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Revogação",
+        "Espécies"
+       ],
+       "linhas": [
+        [
+         "Quanto à extensão",
+         "<b>ab-rogação</b> (total: CC/1916 pelo art. 2.045 do CC/2002) e <b>derrogação</b> (parcial: a primeira parte do Código Comercial de 1850)"
+        ],
+        [
+         "Quanto ao modo",
+         "<b>expressa</b> (a lei nova declara) e <b>tácita</b> (incompatibilidade ou regulação inteira da matéria)"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Repristinação.</b> Norma A vale; B revoga A; C revoga B. A volta? <b>Não</b>, salvo disposição expressa (§ 3º). Mas há o <b>efeito repristinatório</b> da declaração de inconstitucionalidade: se a lei revogadora é declarada inconstitucional, ou tem a eficácia suspensa em cautelar de ADI, a lei anterior volta a valer (Lei 9.868/1999, art. 11, § 2º)."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Repristinação × efeito repristinatório",
+       "html": "\"A LINDB proíbe a repristinação em qualquer hipótese.\" Errado: admite se a lei disser expressamente. E o efeito repristinatório da ADI é outro instituto, que decorre da nulidade da lei revogadora."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Liga com outro tema",
+       "html": "Repristinação também apareceu na aula 1 de Constitucional (Constituição nova e leis antigas): só com previsão expressa. E o efeito repristinatório volta em controle de constitucionalidade."
+      }
+     ]
+    },
+    {
+     "titulo": "Obrigatoriedade, integração e interpretação: arts. 3º a 5º",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 3º",
+       "texto": "Art. 3o ==Ninguém se escusa de cumprir a lei==, alegando que não a conhece."
+      },
+      {
+       "t": "texto",
+       "html": "Três teorias justificam a regra: <b>ficção legal</b> (instituída por segurança jurídica), <b>presunção absoluta</b> (todos conhecem a lei, <i>iure et de iure</i>) e <b>necessidade social</b> (as normas devem ser conhecidas para serem observadas; para Tartuce, a mais convincente). Não é absoluta: o CC admite o <b>erro de direito</b> como erro substancial (art. 139, III), que torna o negócio anulável no prazo decadencial de 4 anos (art. 178, II)."
+      },
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 4º",
+       "texto": "Art. 4o Quando a lei for omissa, o juiz decidirá o caso de acordo com a ==analogia, os costumes e os princípios gerais de direito==."
+      },
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 5º",
+       "texto": "Art. 5o Na aplicação da lei, o juiz atenderá aos ==fins sociais== a que ela se dirige e às ==exigências do bem comum==."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 140",
+       "texto": "Art. 140. O juiz não se exime de decidir sob a alegação de ==lacuna ou obscuridade== do ordenamento jurídico.\nParágrafo único. O juiz ==só decidirá por equidade nos casos previstos em lei==."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Lacuna (Maria Helena Diniz)",
+        "O que é"
+       ],
+       "linhas": [
+        [
+         "Normativa",
+         "não há norma para o caso"
+        ],
+        [
+         "Ontológica",
+         "há norma, mas sem eficácia social"
+        ],
+        [
+         "Axiológica",
+         "há norma, mas sua aplicação é injusta ou insatisfatória"
+        ],
+        [
+         "De conflito (antinomia)",
+         "duas normas válidas se chocam"
+        ]
+       ]
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Analogia",
+         "titulo": "integração",
+         "texto": "Aplicar norma próxima a caso sem norma. <b>Legal</b> (uma norma: compra e venda entre companheiros, por analogia ao art. 499) ou <b>jurídica</b> (um conjunto de normas). Não se confunde com interpretação extensiva, que é subsunção. Norma de exceção não admite analogia (o art. 496 não se estende à hipoteca), salvo para proteger vulnerável."
+        },
+        {
+         "tag": "Costumes",
+         "titulo": "usos reiterados lícitos",
+         "texto": "<b>Secundum legem</b> (a lei remete; é subsunção), <b>praeter legem</b> (na falta da lei; o único integrativo) e <b>contra legem</b> (em regra inadmitido, pelo abuso de direito do art. 187). A jurisprudência consolidada pode integrar o costume."
+        },
+        {
+         "tag": "Princípios gerais",
+         "titulo": "mais abstratos",
+         "texto": "Não precisam estar expressos. O CC/2002 tem três (Miguel Reale): <b>eticidade</b> (boa-fé objetiva, arts. 113, 187 e 422), <b>socialidade</b> (função social: o \"eu\" vira \"nós\") e <b>operabilidade</b> (simplicidade e efetividade, cláusulas gerais)."
+        },
+        {
+         "tag": "Equidade",
+         "titulo": "justiça do caso",
+         "texto": "<b>Legal</b> (a lei prevê, como a redução da multa do art. 413) ou <b>judicial</b> (a lei manda o juiz decidir por equidade). Julgar <b>por</b> equidade (fora das normas) não é julgar <b>com</b> equidade (com justiça no caso)."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "A ordem do art. 4º é rígida?",
+       "html": "Para Tartuce, citado no material, nem sempre: princípios constitucionais, sobretudo de direitos fundamentais, têm eficácia normativa imediata (CF, art. 5º, § 1º) e não são \"último recurso\". A dignidade não espera a analogia e os costumes."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 8º",
+       "texto": "Art. 8º Ao aplicar o ordenamento jurídico, o juiz atenderá aos fins sociais e às exigências do bem comum, resguardando e promovendo a ==dignidade da pessoa humana== e observando a proporcionalidade, a razoabilidade, a legalidade, a publicidade e a eficiência."
+      }
+     ]
+    },
+    {
+     "titulo": "Aplicação no tempo: art. 6º",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 6º",
+       "texto": "Art. 6º A Lei em vigor terá ==efeito imediato e geral==, respeitados o ==ato jurídico perfeito==, o ==direito adquirido== e a ==coisa julgada==.\n§ 1º Reputa-se ato jurídico perfeito o já consumado segundo a lei vigente ao tempo em que se efetuou.\n§ 2º Consideram-se adquiridos assim os direitos que o seu titular, ou alguém por êle, possa exercer, como aquêles cujo comêço do exercício tenha têrmo pré-fixo, ou condição pré-estabelecida inalterável, a arbítrio de outrem.\n§ 3º Chama-se coisa julgada ou caso julgado a decisão judicial de que já não caiba recurso."
+      },
+      {
+       "t": "texto",
+       "html": "A irretroatividade é a regra; a retroatividade, a exceção, e precisa estar na lei. O <b>direito adquirido</b> é o mais amplo (engloba os outros); a <b>coisa julgada</b> é o mais restrito (também é ato jurídico perfeito). Nenhum é absoluto: o STF relativizou a coisa julgada em investigação de paternidade sem DNA (RE 363.889, abaixo) e o CC aplica a função social a contratos anteriores (art. 2.035, parágrafo único: retroatividade motivada)."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Liga com outro tema",
+       "html": "A retroatividade mínima da Constituição originária (aula 1 de Constitucional, RE 140.499) é a outra face deste artigo: a lei comum respeita o direito adquirido; a Constituição originária pode ir além se disser."
+      }
+     ]
+    },
+    {
+     "titulo": "Aplicação no espaço: arts. 7º a 19",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "tabela",
+       "cab": [
+        "Matéria",
+        "Lei aplicável",
+        "Artigo"
+       ],
+       "linhas": [
+        [
+         "Começo e fim da personalidade, nome, capacidade, família",
+         "<b>domicílio</b> da pessoa (lex domicilii)",
+         "7º"
+        ],
+        [
+         "Casamento celebrado no Brasil: impedimentos",
+         "lei brasileira",
+         "7º, § 1º"
+        ],
+        [
+         "Invalidade do casamento com domicílios diversos; regime de bens",
+         "<b>primeiro domicílio conjugal</b>",
+         "7º, §§ 3º e 4º"
+        ],
+        [
+         "Bens",
+         "<b>situação</b> (lex rei sitae); móveis em trânsito: domicílio do proprietário; penhor: domicílio de quem tem a posse",
+         "8º"
+        ],
+        [
+         "Obrigações",
+         "lugar da constituição (locus regit actum); contrato: reputa-se constituído onde reside o <b>proponente</b>",
+         "9º"
+        ],
+        [
+         "Sucessão",
+         "<b>último domicílio</b> do falecido; bens no Brasil: lei brasileira, salvo se a do domicílio for mais favorável ao cônjuge e aos filhos brasileiros",
+         "10"
+        ],
+        [
+         "Sociedades e fundações",
+         "lugar da constituição",
+         "11"
+        ],
+        [
+         "Competência brasileira",
+         "réu domiciliado aqui ou obrigação a cumprir aqui; imóveis no Brasil: competência exclusiva",
+         "12"
+        ],
+        [
+         "Sentença estrangeira",
+         "requisitos do art. 15 + homologação pelo <b>STJ</b> (EC 45/2004)",
+         "15"
+        ],
+        [
+         "Ordem pública",
+         "lei, ato ou sentença estrangeira sem eficácia se ofender soberania, ordem pública e bons costumes",
+         "17"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 17",
+       "texto": "Art. 17. As leis, atos e sentenças de outro país, bem como quaisquer declarações de vontade, não terão eficácia no Brasil, quando ofenderem a ==soberania nacional, a ordem pública e os bons costumes==."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Art. 9º, § 2º × CC, art. 435",
+       "html": "O CC diz que o contrato se reputa celebrado no lugar em que foi <b>proposto</b>; a LINDB, no lugar em que <b>reside o proponente</b>. Pela especialidade, o CC vale para contratos nacionais e a LINDB para internacionais."
+      }
+     ]
+    },
+    {
+     "titulo": "Antinomias: os critérios de Bobbio",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Antinomia não é revogação: é conflito entre duas normas <b>válidas</b>. Os metacritérios de Norberto Bobbio, do mais fraco ao mais forte: <b>cronológico</b> (posterior prevalece; é o do art. 2º), <b>especialidade</b> (especial prevalece) e <b>hierárquico</b> (superior prevalece)."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "1º grau, aparente",
+         "sub": "um critério resolve",
+         "texto": "Posterior × anterior; especial × geral; superior × inferior."
+        },
+        {
+         "titulo": "2º grau, aparente",
+         "sub": "dois critérios, um vence",
+         "texto": "Especial anterior × geral posterior: vence a <b>especial</b>. Superior anterior × inferior posterior: vence a <b>superior</b>."
+        },
+        {
+         "titulo": "2º grau, real",
+         "sub": "hierárquico × especialidade",
+         "texto": "Geral superior × especial inferior: não há solução pelos critérios. O Legislativo edita uma terceira norma; o Judiciário adota o princípio máximo de justiça (LINDB, arts. 4º e 5º; CPC, art. 8º)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Segurança jurídica no direito público: arts. 20 a 30",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A Lei 13.655/2018 acrescentou os arts. 20 a 30 (com vetos) para dar segurança jurídica e eficiência na criação e aplicação do direito público: Administrativo, Financeiro, Orçamentário e Tributário. Valem nas esferas <b>administrativa, controladora</b> (Tribunais de Contas) <b>e judicial</b>. É o bloco que mais cai em prova de procuradoria."
+      },
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 20",
+       "texto": "Art. 20. Nas esferas administrativa, controladora e judicial, não se decidirá com base em ==valores jurídicos abstratos== sem que sejam consideradas as ==consequências práticas da decisão==.\nParágrafo único. A motivação demonstrará a ==necessidade e a adequação== da medida imposta ou da invalidação de ato, contrato, ajuste, processo ou norma administrativa, inclusive em face das possíveis alternativas."
+      },
+      {
+       "t": "texto",
+       "html": "O art. 20 <b>não proíbe</b> decidir com valores abstratos (dignidade, moralidade, meio ambiente): exige considerar antes as consequências práticas, sobretudo as econômicas. Necessidade e adequação vêm da proporcionalidade (adequação, necessidade e proporcionalidade em sentido estrito)."
+      },
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 21",
+       "texto": "Art. 21. A decisão que, nas esferas administrativa, controladora ou judicial, decretar a invalidação de ato, contrato, ajuste, processo ou norma administrativa deverá ==indicar de modo expresso suas consequências jurídicas e administrativas==.\nParágrafo único. A decisão a que se refere o caput deste artigo deverá, quando for o caso, indicar as condições para que a regularização ocorra de modo proporcional e equânime e sem prejuízo aos interesses gerais, não se podendo impor aos sujeitos atingidos ônus ou perdas que, em função das peculiaridades do caso, sejam ==anormais ou excessivos==."
+      },
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 22",
+       "texto": "Art. 22. Na interpretação de normas sobre gestão pública, serão considerados os ==obstáculos e as dificuldades reais do gestor== e as exigências das políticas públicas a seu cargo, sem prejuízo dos direitos dos administrados.\n§ 1º Em decisão sobre regularidade de conduta ou validade de ato, contrato, ajuste, processo ou norma administrativa, serão consideradas as ==circunstâncias práticas== que houverem imposto, limitado ou condicionado a ação do agente.\n§ 2º Na aplicação de sanções, serão consideradas a natureza e a gravidade da infração cometida, os danos que dela provierem para a administração pública, as circunstâncias agravantes ou atenuantes e os antecedentes do agente.\n§ 3º As sanções aplicadas ao agente serão levadas em conta na ==dosimetria== das demais sanções de mesma natureza e relativas ao mesmo fato."
+      },
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 23",
+       "texto": "Art. 23. A decisão administrativa, controladora ou judicial que estabelecer interpretação ou orientação nova sobre norma de conteúdo indeterminado, impondo novo dever ou novo condicionamento de direito, deverá prever ==regime de transição== quando indispensável para que o novo dever ou condicionamento de direito seja cumprido de modo proporcional, equânime e eficiente e sem prejuízo aos interesses gerais.\nParágrafo único. (VETADO)"
+      },
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 24",
+       "texto": "Art. 24. A revisão, nas esferas administrativa, controladora ou judicial, quanto à validade de ato, contrato, ajuste, processo ou norma administrativa cuja produção já se houver completado levará em conta as ==orientações gerais da época==, sendo vedado que, com base em mudança posterior de orientação geral, se declarem inválidas ==situações plenamente constituídas==.\nParágrafo único. Consideram-se orientações gerais as interpretações e especificações contidas em atos públicos de caráter geral ou em jurisprudência judicial ou administrativa majoritária, e ainda as adotadas por prática administrativa reiterada e de amplo conhecimento público."
+      },
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 26",
+       "texto": "Art. 26. Para eliminar irregularidade, incerteza jurídica ou situação contenciosa na aplicação do direito público, inclusive no caso de expedição de licença, a autoridade administrativa poderá, ==após oitiva do órgão jurídico== e, quando for o caso, após realização de consulta pública, e presentes razões de relevante interesse geral, ==celebrar compromisso== com os interessados, observada a legislação aplicável, o qual só produzirá efeitos ==a partir de sua publicação oficial==.\n§ 1º O compromisso referido no caput deste artigo:\nI - buscará solução jurídica proporcional, equânime, eficiente e compatível com os interesses gerais; II  (VETADO);\nIII - não poderá conferir ==desoneração permanente== de dever ou condicionamento de direito reconhecidos por orientação geral;\nIV - deverá prever com clareza as obrigações das partes, o prazo para seu cumprimento e as sanções aplicáveis em caso de descumprimento.\n§ 2º (VETADO)"
+      },
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 27",
+       "texto": "Art. 27. A decisão do processo, nas esferas administrativa, controladora ou judicial, poderá impor ==compensação== por benefícios indevidos ou prejuízos anormais ou injustos resultantes do processo ou da conduta dos envolvidos.\n§ 1º A decisão sobre a compensação será motivada, ouvidas previamente as partes sobre seu cabimento, sua forma e, se for o caso, seu valor.\n§ 2º Para prevenir ou regular a compensação, poderá ser celebrado compromisso processual entre os envolvidos."
+      },
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 28",
+       "texto": "Art. 28. O agente público responderá pessoalmente por suas decisões ou opiniões técnicas em caso de ==dolo ou erro grosseiro==.\n§ 1º (VETADO)\n§ 2º (VETADO)\n§ 3º (VETADO)"
+      },
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 29",
+       "texto": "Art. 29. Em qualquer órgão ou Poder, a edição de atos normativos por autoridade administrativa, salvo os de mera organização interna, poderá ser precedida de ==consulta pública== para manifestação de interessados, preferencialmente por meio eletrônico, a qual será considerada na decisão.\n§ 1º A convocação conterá a minuta do ato normativo e fixará o prazo e demais condições da consulta pública, observadas as normas legais e regulamentares específicas, se houver.\n§ 2º (VETADO)"
+      },
+      {
+       "t": "lei",
+       "ref": "LINDB, art. 30",
+       "texto": "Art. 30. As autoridades públicas devem atuar para aumentar a segurança jurídica na aplicação das normas, inclusive por meio de regulamentos, súmulas administrativas e respostas a consultas.\nParágrafo único. Os instrumentos previstos no caput deste artigo terão ==caráter vinculante== em relação ao órgão ou entidade a que se destinam, até ulterior revisão."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Artigo",
+        "Ideia-chave",
+        "Pode cair assim"
+       ],
+       "linhas": [
+        [
+         "20",
+         "consequencialismo",
+         "\"é vedado decidir com base em valores abstratos\": errado, exige-se ponderar as consequências"
+        ],
+        [
+         "21",
+         "invalidar e dizer as consequências",
+         "a decisão que anula contrato deve indicar como regularizar, sem ônus anormais"
+        ],
+        [
+         "22",
+         "realidade do gestor e dosimetria",
+         "sanções anteriores pelo mesmo fato entram na dosimetria"
+        ],
+        [
+         "23",
+         "regime de transição",
+         "só para interpretação <b>nova</b> sobre norma de conteúdo <b>indeterminado</b> que imponha novo dever"
+        ],
+        [
+         "24",
+         "orientação da época",
+         "não se invalida situação plenamente constituída por mudança posterior de orientação"
+        ],
+        [
+         "26",
+         "compromisso",
+         "exige <b>oitiva do órgão jurídico</b> (a PGE), consulta pública quando for o caso, e só vale após publicação"
+        ],
+        [
+         "28",
+         "responsabilidade do agente",
+         "só por <b>dolo ou erro grosseiro</b>"
+        ],
+        [
+         "30",
+         "segurança jurídica",
+         "regulamentos, súmulas administrativas e respostas a consultas vinculam o órgão até revisão"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "O art. 28 não alcança todos",
+       "html": "Segundo o material, o \"agente público\" do art. 28 não alcança magistrados (respondem por dolo ou fraude, regressivamente: CPC, art. 143, I, e LOMAN, art. 49, I) nem membros do MP, da Advocacia Pública e da Defensoria, que têm regime próprio no CPC (arts. 181, 184 e 187)."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 184",
+       "texto": "Art. 184. O membro da Advocacia Pública será civil e regressivamente responsável quando agir com ==dolo ou fraude== no exercício de suas funções\n"
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Na PGE",
+       "html": "O art. 26 põe a Procuradoria no centro: compromisso para eliminar irregularidade ou litígio no direito público depende da <b>oitiva do órgão jurídico</b>. E o art. 28 é a defesa típica do gestor e do parecerista em processo de Tribunal de Contas: sem dolo ou erro grosseiro, não há responsabilidade pessoal."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "As decisões abaixo vêm do material EBEJI \"Estudo da Lei de Introdução\". O material cita ainda o Enunciado 109 da I Jornada de Direito Civil (CJF) e um julgado do STJ (Informativo 563) que mitigou o art. 10, sem número."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 363.889/DF, Rel. Min. Dias Toffoli, 7/4/2011 (Info 622)",
+       "tese": "Relativiza-se a coisa julgada em investigação de paternidade julgada improcedente por falta de prova quando não havia exame de DNA: o reconhecimento do estado de filiação é personalíssimo, indisponível e imprescritível, e a segurança jurídica não prevalece sobre a dignidade, no acesso à informação genética e à personalidade."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "1ª Turma, MS 27.867-AgR/DF, Rel. Min. Dias Toffoli, 18/9/2012 (Info 680)",
+       "tese": "O advogado público pode ser responsabilizado pela emissão de parecer de natureza opinativa, desde que configurada a existência de culpa ou erro grosseiro."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Enunciado 109 da I Jornada de Direito Civil (CJF):</b> \"A restrição da coisa julgada oriunda de demandas reputadas improcedentes por insuficiência de prova não deve prevalecer para inibir a busca da identidade genética pelo investigando.\""
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A coisa julgada é absoluta e impede nova ação de investigação de paternidade em qualquer caso.",
+         "v": false,
+         "porque": "RE 363.889: relativização quando não havia DNA."
+        },
+        {
+         "texto": "O parecerista público só responde pessoalmente se houver culpa ou erro grosseiro.",
+         "v": true,
+         "porque": "MS 27.867-AgR e, hoje, o art. 28 da LINDB (dolo ou erro grosseiro)."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Como a FCC troca",
+       "html": "\"O compromisso do art. 26 produz efeitos desde a assinatura, dispensada a manifestação do órgão jurídico.\" <b>Errado</b> nas duas partes: só após a publicação oficial, e depois da oitiva do órgão jurídico. E \"o agente público responde pessoalmente por culpa leve\": errado, só dolo ou erro grosseiro."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O que pode cair assim",
+       "html": "Prazos: <b>45 dias</b> no Brasil, <b>3 meses</b> no exterior.<br>Repristinação: só <b>expressa</b>.<br>Lei geral nova não revoga a especial antiga, e vice-versa (art. 2º, § 2º).<br>Integração: analogia, costumes, princípios gerais; equidade só nos casos da lei.<br>Arts. 20 a 30: consequências práticas, regime de transição, compromisso com oitiva do órgão jurídico, dolo ou erro grosseiro."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "Salvo disposição contrária, a lei começa a vigorar 45 dias depois de oficialmente publicada.",
+         "v": true,
+         "porque": "Art. 1º."
+        },
+        {
+         "texto": "Lei nova que estabeleça disposições gerais a par das especiais existentes revoga a lei anterior.",
+         "v": false,
+         "porque": "Art. 2º, § 2º: não revoga nem modifica."
+        },
+        {
+         "texto": "Correções a texto de lei já em vigor consideram-se lei nova.",
+         "v": true,
+         "porque": "Art. 1º, § 4º."
+        },
+        {
+         "texto": "Os costumes contra legem são forma de integração admitida pela LINDB.",
+         "v": false,
+         "porque": "O integrativo é o praeter legem."
+        },
+        {
+         "texto": "A sucessão por morte obedece à lei do país em que estiverem os bens.",
+         "v": false,
+         "porque": "Último domicílio do falecido (art. 10)."
+        },
+        {
+         "texto": "Pelo art. 23, toda nova interpretação administrativa exige regime de transição.",
+         "v": false,
+         "porque": "Só sobre norma de conteúdo indeterminado que imponha novo dever, quando indispensável."
+        },
+        {
+         "texto": "O compromisso do art. 26 exige oitiva prévia do órgão jurídico.",
+         "v": true,
+         "porque": "Art. 26, caput."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B6-a02",
+   "topico_id": "B6-02",
+   "numero": 2,
+   "titulo": "Parte geral: pessoas",
+   "status": "a_montar"
+  },
+  {
+   "id": "B6-a03",
+   "topico_id": "B6-03",
+   "numero": 3,
+   "titulo": "Parte geral: bens e fatos jurídicos",
+   "status": "a_montar"
+  },
+  {
+   "id": "B6-a04",
+   "topico_id": "B6-04",
+   "numero": 4,
+   "titulo": "Prescrição e decadência",
+   "status": "a_montar"
+  },
+  {
+   "id": "B6-a05",
+   "topico_id": "B6-05",
+   "numero": 5,
+   "titulo": "Obrigações",
+   "status": "a_montar"
+  },
+  {
+   "id": "B6-a06",
+   "topico_id": "B6-06",
+   "numero": 6,
+   "titulo": "Contratos em geral",
+   "status": "a_montar"
+  },
+  {
+   "id": "B6-a07",
+   "topico_id": "B6-07",
+   "numero": 7,
+   "titulo": "Contratos em espécie",
+   "status": "a_montar"
+  },
+  {
+   "id": "B6-a08",
+   "topico_id": "B6-08",
+   "numero": 8,
+   "titulo": "Responsabilidade civil",
+   "status": "a_montar"
+  },
+  {
+   "id": "B6-a09",
+   "topico_id": "B6-09",
+   "numero": 9,
+   "titulo": "Direito de empresa",
+   "status": "a_montar"
+  },
+  {
+   "id": "B6-a10",
+   "topico_id": "B6-10",
+   "numero": 10,
+   "titulo": "Direito das coisas",
+   "status": "a_montar"
+  },
+  {
+   "id": "B6-a11",
+   "topico_id": "B6-11",
+   "numero": 11,
+   "titulo": "Direito de família",
+   "status": "a_montar"
+  },
+  {
+   "id": "B6-a12",
+   "topico_id": "B6-12",
+   "numero": 12,
+   "titulo": "Direito das sucessões",
+   "status": "a_montar"
+  },
+  {
+   "id": "B6-a13",
+   "topico_id": "B6-13",
+   "numero": 13,
+   "titulo": "Direito do consumidor",
+   "status": "a_montar"
+  },
+  {
+   "id": "B6-a14",
+   "topico_id": "B6-14",
+   "numero": 14,
+   "titulo": "Direito digital aplicado",
+   "status": "a_montar"
+  }
+ ],
+ "glossario": [
+  [
+   "Sobredireito",
+   "Norma que regula outras normas (lex legum)."
+  ],
+  [
+   "Ab-rogação",
+   "Revogação total."
+  ],
+  [
+   "Derrogação",
+   "Revogação parcial."
+  ],
+  [
+   "Repristinação",
+   "Volta a valer da lei revogada quando a revogadora é revogada. Só com previsão expressa."
+  ],
+  [
+   "Antinomia real",
+   "Conflito que os critérios cronológico, hierárquico e da especialidade não resolvem."
+  ]
+ ]
+}

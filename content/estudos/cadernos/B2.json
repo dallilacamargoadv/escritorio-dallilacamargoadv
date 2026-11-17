@@ -92,18 +92,115 @@
    "numero": 1,
    "titulo": "Estado, função administrativa e Administração Pública",
    "status": "pronta",
-   "fonte": "Material EBEJI: Administração Pública (2026)",
+   "fonte": "Material EBEJI: Administração Pública (2026), itens 1 a 5.3 e Mapa para provas de procuradoria; CF e CC, textos vigentes",
    "resumo": [
-    "O Estado tem três Poderes, e cada um exerce uma função típica e as outras duas de forma atípica.",
-    "Administrar é função, não é Poder: os três Poderes administram.",
-    "Administração Pública tem sentido subjetivo (quem administra) e objetivo (a atividade). O Brasil adota o subjetivo, também chamado formal ou orgânico.",
-    "Por isso uma estatal que explora atividade econômica integra a Administração formalmente, mesmo sem exercer função administrativa.",
-    "Entidades políticas (União, Estados, DF e Municípios) legislam; entidades administrativas (indireta) só executam a lei e são vinculadas, não subordinadas."
+    "Estado: pessoa jurídica territorial soberana (povo, território, governo soberano). União, Estados, DF e Municípios são pessoas jurídicas de direito público (CC, art. 41) e as únicas pessoas políticas.",
+    "Federação (cláusula pétrea): coordenação, sem hierarquia, mas todas as administrações seguem a CF e as leis nacionais.",
+    "Separação flexível: cada Poder tem função típica e atípicas. O Legislativo tem duas típicas: legislar e fiscalizar. Poderes não têm personalidade jurídica. Município não tem Judiciário; o do DF é da União.",
+    "Presidencialismo: chefia de Estado e de Governo na mesma pessoa. República: eletividade, temporalidade, representatividade e responsabilidade.",
+    "O Brasil adota o critério formal: estatal econômica integra a Administração, embora não exerça administração em sentido material (serviço público, polícia, fomento, intervenção)."
    ],
    "secoes": [
     {
-     "titulo": "Tudo começa na separação de Poderes",
+     "titulo": "De onde vem: o Estado, pessoa jurídica",
      "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Toda a matéria começa numa frase do material: o Estado é <b>pessoa jurídica territorial soberana</b>, capaz de contrair direitos e obrigações, formada por três elementos indissociáveis. Se falta um, não há Estado."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Povo",
+         "titulo": "elemento humano",
+         "texto": "O conjunto dos nacionais."
+        },
+        {
+         "tag": "Território",
+         "titulo": "base geográfica",
+         "texto": "Onde o Estado exerce o seu poder."
+        },
+        {
+         "tag": "Governo soberano",
+         "titulo": "poder de autodeterminação",
+         "texto": "A capacidade de se organizar e de mandar em última instância."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "No Brasil, a organização político-administrativa (CF, art. 18) compreende União, Estados, DF e Municípios. Os quatro são <b>pessoas jurídicas de direito público interno</b> (CC, art. 41) e, mais do que isso, são <b>pessoas políticas</b>: só eles têm autonomia política, financeira e administrativa. Uma autarquia também é pessoa de direito público (CC, art. 41, IV), mas não é pessoa política."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 18, caput",
+       "texto": "Art. 18. A organização político-administrativa da República Federativa do Brasil compreende a União, os Estados, o Distrito Federal e os Municípios, ==todos autônomos==, nos termos desta Constituição."
+      },
+      {
+       "t": "lei",
+       "ref": "CC, art. 41",
+       "texto": "Art. 41. São pessoas jurídicas de direito público interno:\n==I - a União;==\nII - os Estados, o Distrito Federal e os Territórios;\nIII - os Municípios;\n==IV - as autarquias, inclusive as associações públicas;==\nV - as demais entidades de caráter público criadas por lei."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Ponto de prova do material",
+       "html": "\"Toda pessoa jurídica de direito público é pessoa política.\" <b>Errado</b>. Autarquias e associações públicas são de direito público, mas só têm autonomia <b>administrativa</b>. Pessoas políticas são apenas União, Estados, DF e Municípios."
+      }
+     ]
+    },
+    {
+     "titulo": "Forma de Estado: por que não há hierarquia entre os entes",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "tabela",
+       "cab": [
+        "Forma de Estado",
+        "Como o poder político se distribui",
+        "Exemplo do material"
+       ],
+       "linhas": [
+        [
+         "<b>Unitário</b>",
+         "centralização política: um só poder político central",
+         "Uruguai"
+        ],
+        [
+         "<b>Federado</b>",
+         "descentralização política: entidades autônomas convivem no mesmo território",
+         "Brasil"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "No Brasil, convivem no mesmo território quatro esferas políticas: a <b>União</b> (poder central), os <b>Estados</b> (regional), o <b>DF</b> (regional e local ao mesmo tempo) e os <b>Municípios</b> (local). Cada uma recebe competências direto da Constituição. A forma federativa é cláusula pétrea."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 60, § 4º, I",
+       "texto": "§ 4º Não será objeto de deliberação a proposta de emenda tendente a abolir:\nI - ==a forma federativa de Estado;=="
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Duas consequências que a FCC cobra",
+       "html": "<b>1. Coordenação, não subordinação.</b> Entre os entes não há hierarquia, e por isso cada um tem a sua administração pública autônoma: federal, estadual, distrital e municipal.<br><b>2. Mesmo regime para todos.</b> Apesar da autonomia, todas as administrações se submetem às regras e princípios de Direito Administrativo da CF e às <b>leis nacionais</b>, como a Lei 14.133/2021, que traz normas gerais de licitações e contratos para todos os entes."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Liga com outro tema",
+       "html": "Essa autonomia explica a ADI 4579 (aula 5): lei estadual não pode impor representante da OAB, autarquia federal, num órgão da administração do Estado, sob pena de ofender o art. 18. E explica por que o Estado do Maranhão aplica a Lei 14.133 (lei nacional) mas pode ter a sua própria lei de processo administrativo."
+      }
+     ]
+    },
+    {
+     "titulo": "Poderes do Estado: funções típicas e atípicas",
+     "etapa": "regra",
      "blocos": [
       {
        "t": "lei",
@@ -112,7 +209,7 @@
       },
       {
        "t": "texto",
-       "html": "A Constituição divide o poder do Estado em três, mas a divisão não é estanque. Cada Poder tem uma <b>função típica</b>, aquela para a qual existe, e exerce as outras duas de forma <b>atípica</b>, para conseguir funcionar sozinho. É por isso que o Direito Administrativo acompanha a <b>função</b> de administrar, onde quer que ela apareça, e não um Poder específico.<br><br>Toque nas células para ver um exemplo de cada combinação."
+       "html": "O modelo brasileiro de separação é <b>flexível</b>: cada Poder exerce, em alguma medida, as três funções. Toque nas células: cada uma traz o exemplo que o material dá."
       },
       {
        "t": "matriz",
@@ -130,139 +227,366 @@
         [
          [
           true,
-          "Função típica: criar leis."
+          "Típica. E o Legislativo tem <b>duas</b> funções típicas de igual peso: legislar e <b>fiscalizar o Executivo</b> (CF, arts. 49, X, 58, § 2º, III, e 70)."
          ],
          [
           false,
-          "Administra os próprios serviços: nomeia servidores, faz licitação."
+          "Atípica: gestão dos próprios bens, pessoal e serviços."
          ],
          [
           false,
-          "O Senado processa e julga o Presidente nos crimes de responsabilidade (CF, art. 52, I)."
+          "Atípica: julga autoridades nos crimes de responsabilidade (CF, art. 52, I e II, e parágrafo único)."
          ]
         ],
         [
          [
           false,
-          "Medida provisória, com força de lei (CF, art. 62)."
+          "Atípica: medidas provisórias e leis delegadas."
          ],
          [
           true,
-          "Função típica: aplicar a lei no dia a dia, prestando serviço, fiscalizando e contratando."
+          "Típica: a função administrativa é predominante no Executivo."
          ],
          [
           false,
-          "Julga processo administrativo disciplinar. A decisão pode ser revista pelo Judiciário (CF, art. 5º, XXXV)."
+          "Atípica: decide processos administrativos."
          ]
         ],
         [
          [
           false,
-          "Os tribunais elaboram o regimento interno (CF, art. 96, I, a)."
+          "Atípica: elabora os regimentos internos dos tribunais."
          ],
          [
           false,
-          "Concurso e licitação do próprio tribunal."
+          "Atípica: gestão de bens, pessoal e serviços (concurso e licitação do tribunal)."
          ],
          [
           true,
-          "Função típica: resolver conflitos com definitividade."
+          "Típica: função jurisdicional."
          ]
         ]
        ]
       },
       {
+       "t": "lei",
+       "ref": "CF, art. 49, X",
+       "texto": "X - ==fiscalizar e controlar==, diretamente, ou por qualquer de suas Casas, os atos do Poder Executivo, ==incluídos os da administração indireta==;"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 70, caput",
+       "texto": "Art. 70. A fiscalização contábil, financeira, orçamentária, operacional e patrimonial da União e das entidades da administração direta e indireta, quanto à legalidade, legitimidade, economicidade, aplicação das subvenções e renúncia de receitas, será exercida pelo Congresso Nacional, ==mediante controle externo==, e pelo sistema de ==controle interno de cada Poder==."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Três observações do material",
+       "html": "<b>Municípios não têm Poder Judiciário.</b><br>No <b>DF</b>, organizar e manter o Judiciário compete à <b>União</b>.<br>Os <b>Poderes não têm personalidade jurídica</b>: são órgãos da estrutura do ente. Quem é parte num processo é o Estado, não a Assembleia ou o Tribunal de Justiça."
+      },
+      {
        "t": "nota",
        "tom": "pegadinha",
-       "titulo": "\"A função administrativa é exclusiva do Poder Executivo.\"",
-       "html": "Errado. Os três Poderes administram. Repare no art. 37, caput: a administração pública direta e indireta <b>de qualquer dos Poderes</b>."
+       "titulo": "\"O Legislativo tem como única função típica a elaboração das leis.\"",
+       "html": "Errado. Legislar e fiscalizar o Executivo são <b>as duas</b> funções típicas, de igual relevância."
+      },
+      {
+       "t": "texto",
+       "html": "A conclusão do material fecha o raciocínio: há administração pública <b>em cada ente</b> e <b>em todos os Poderes</b>. E, qualquer que seja o órgão que administre, a atividade se sujeita às regras e princípios do Direito Administrativo. É por isso que o art. 37 fala em administração \"de qualquer dos Poderes\"."
       },
       {
        "t": "lei",
        "ref": "CF, art. 37, caput",
-       "texto": "Art. 37. A administração pública direta e indireta ==de qualquer dos Poderes== da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência"
+       "texto": "Art. 37. A administração pública direta e indireta ==de qualquer dos Poderes== da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência e, também, ao seguinte:"
       }
      ]
     },
     {
-     "titulo": "Os dois sentidos de Administração Pública",
+     "titulo": "Governo: sistema e forma",
      "etapa": "regra",
      "blocos": [
       {
        "t": "texto",
-       "html": "A expressão tem dois usos. No sentido <b>subjetivo</b> (também chamado <b>formal</b> ou <b>orgânico</b>), Administração Pública é <b>quem</b> o ordenamento aponta como tal: os órgãos da administração direta e as entidades da indireta, seja qual for a atividade. No sentido <b>objetivo</b> (<b>material</b> ou <b>funcional</b>), é a própria <b>atividade</b> administrativa: serviço público, polícia administrativa, fomento e intervenção.<br><br>Há ainda a distinção entre sentido <b>amplo</b> (inclui os órgãos de governo e a função política) e sentido <b>estrito</b> (só a função meramente administrativa). Daqui em diante, a matéria usa o sentido estrito."
+       "html": "No Direito Administrativo, <b>governo</b> é o conjunto de órgãos constitucionais responsáveis pela <b>função política</b> do Estado. Não confunda com administração, que executa. A FCC costuma comparar os dois modelos de cada escolha."
       },
       {
-       "t": "virar",
-       "cartas": [
-        {
-         "frente": "Quem?",
-         "sub": "Sentido subjetivo, formal ou orgânico",
-         "verso": "Órgãos da administração direta e entidades da indireta (autarquias, fundações, empresas públicas e sociedades de economia mista).",
-         "detalhe": "É o critério adotado no Brasil."
-        },
-        {
-         "frente": "O quê?",
-         "sub": "Sentido objetivo, material ou funcional",
-         "verso": "A atividade: serviço público, polícia administrativa, fomento e intervenção.",
-         "detalhe": "Atuação direta como agente econômico não entra aqui."
-        }
+       "t": "tabela",
+       "cab": [
+        "",
+        "Brasil",
+        "Contraste"
+       ],
+       "linhas": [
+        [
+         "<b>Sistema de governo</b>",
+         "<b>Presidencialismo</b>: o Presidente acumula chefia de Estado e de Governo, com mandato fixo, sem depender da confiança do Legislativo. Por simetria, Governadores e Prefeitos chefiam o Executivo e a administração dos seus entes",
+         "<b>Parlamentarismo</b>: colaboração entre Executivo e Legislativo e chefia bipartida (chefe de Estado diferente do chefe de Governo)"
+        ],
+        [
+         "<b>Forma de governo</b>",
+         "<b>República</b>: eletividade (direta ou indireta), temporalidade no exercício do poder, representatividade popular e responsabilidade do governante (dever de prestar contas)",
+         "<b>Monarquia</b>: hereditariedade, vitaliciedade e ausência de representação popular"
+        ]
        ]
       },
       {
        "t": "nota",
        "tom": "macete",
-       "titulo": "Subjetivo = sujeito; objetivo = objeto",
-       "html": "Subjetivo pergunta quem faz. Objetivo pergunta o que se faz."
+       "titulo": "República = ETRR",
+       "html": "<b>E</b>letividade, <b>T</b>emporalidade, <b>R</b>epresentatividade, <b>R</b>esponsabilidade. Cada uma tem um oposto na Monarquia: hereditariedade, vitaliciedade, ausência de representação e irresponsabilidade."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Liga com outro tema",
+       "html": "O dever de prestar contas da República é a raiz do art. 70, parágrafo único (todo aquele que gere dinheiro público presta contas) e da improbidade. E o presidencialismo explica a direção superior da administração pelo Chefe do Executivo (art. 84, II), argumento das ADIs contra leis da Assembleia que amarram o Governador."
       }
      ]
     },
     {
-     "titulo": "A consequência que a FCC adora",
-     "etapa": "excecao",
+     "titulo": "Os sentidos de Administração Pública",
+     "etapa": "regra",
      "blocos": [
       {
        "t": "texto",
-       "html": "Como o Brasil adota o critério <b>formal</b>, uma empresa pública ou sociedade de economia mista que explora atividade econômica (o exemplo clássico do material é o Banco do Brasil) <b>integra a Administração Pública</b>, embora sua atividade não seja função administrativa em sentido material. Para o critério formal importa quem é, não o que faz."
+       "html": "Primeiro corte: <b>sentido amplo</b> abrange os órgãos de governo e a função política, mais os órgãos e pessoas que só administram. <b>Sentido estrito</b> fica só com os órgãos e pessoas administrativas e a função puramente administrativa. Daqui em diante, o material (e a prova) usa o sentido estrito."
       },
       {
        "t": "texto",
-       "html": "Outra distinção de base: <b>entidades políticas</b> (União, Estados, DF e Municípios) têm autonomia política, legislam e se auto-organizam. <b>Entidades administrativas</b> (a administração indireta) só executam a lei. Elas não são subordinadas ao ente que as criou: são <b>vinculadas</b>, sob controle de <b>tutela</b> ou <b>supervisão</b>, que verifica se cumprem as finalidades para as quais foram criadas."
+       "html": "Segundo corte, o mais cobrado: <b>quem</b> é a Administração ou <b>o que</b> é administrar."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Formal, subjetivo ou orgânico",
+        "Material, objetivo ou funcional"
+       ],
+       "linhas": [
+        [
+         "Pergunta",
+         "<b>Quem</b> exerce?",
+         "<b>O que</b> se exerce?"
+        ],
+        [
+         "Critério",
+         "o ordenamento diz quem é Administração, seja qual for a atividade",
+         "as atividades próprias da função administrativa, seja quem for o sujeito"
+        ],
+        [
+         "Composição",
+         "órgãos da administração direta + entidades da indireta (autarquias, fundações, empresas públicas, sociedades de economia mista)",
+         "serviço público, polícia administrativa, fomento e intervenção"
+        ],
+        [
+         "No Brasil",
+         "<b>é o critério adotado</b>",
+         "usado pela doutrina, não é o critério jurídico"
+        ]
+       ]
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Serviço público",
+         "titulo": "prestação",
+         "texto": "Prestações concretas à população."
+        },
+        {
+         "tag": "Polícia administrativa",
+         "titulo": "restrição",
+         "texto": "Restrições ao exercício de atividades privadas em favor do interesse público."
+        },
+        {
+         "tag": "Fomento",
+         "titulo": "incentivo",
+         "texto": "Incentivo à iniciativa privada de utilidade pública."
+        },
+        {
+         "tag": "Intervenção",
+         "titulo": "atuação no setor privado",
+         "texto": "Exceto a atuação direta do Estado como agente econômico."
+        }
+       ]
       },
       {
        "t": "nota",
        "tom": "pegadinha",
-       "titulo": "\"As entidades da administração indireta são subordinadas hierarquicamente ao ente que as criou.\"",
-       "html": "Errado. Há vinculação e controle finalístico (tutela ou supervisão ministerial), nunca hierarquia."
+       "titulo": "A pegadinha clássica do material",
+       "html": "A atuação direta do Estado como <b>agente econômico</b> (Estado-empresário, como o Banco do Brasil) <b>não</b> é administração pública em sentido material. Mas a empresa <b>integra</b> a Administração em sentido formal. As duas frases são verdadeiras ao mesmo tempo, e a FCC troca uma pela outra."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Entidades políticas × entidades administrativas.</b> As políticas (União, Estados, DF e Municípios) formam a Federação, têm autonomia política e <b>editam leis</b>. As administrativas (a indireta) são criadas por um ente político, não têm autonomia política e só <b>executam a lei</b>. A entidade administrativa é <b>vinculada</b>, não subordinada: o ente exerce sobre ela controle de <b>tutela ou supervisão</b>, para verificar se cumpre as finalidades para as quais foi criada."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Liga com outro tema",
+       "html": "Vinculação, e não hierarquia, é a base da aula 3 (descentralização) e das autarquias (aula 6): o Secretário não pode simplesmente anular ou rever um ato da autarquia como se ela fosse um departamento seu."
       }
      ]
     },
     {
-     "titulo": "Teste rápido",
-     "etapa": "banca",
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
      "blocos": [
+      {
+       "t": "texto",
+       "html": "A função administrativa pertence, em primeiro lugar, ao <b>Executivo</b>, e o STF protege esse espaço nos dois sentidos. De um lado, o <b>Legislativo</b> não pode governar no lugar do Executivo: não pode amarrar políticas públicas, exigir autorização prévia para atos de gestão nem tirar do Governador a escolha dos dirigentes. De outro, o <b>Judiciário</b> pode controlar a Administração quando ela descumpre direito fundamental, sem com isso violar a separação dos Poderes. A FCC gosta de cobrar os dois lados na mesma questão."
+      },
+      {
+       "t": "texto",
+       "html": "<b>1. O Legislativo não administra no lugar do Executivo.</b>"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 179, Rel. Min. Dias Toffoli, 19/2/2014",
+       "tese": "É inconstitucional qualquer tentativa do Legislativo de definir previamente conteúdos ou fixar prazos para que o Executivo apresente proposições nas matérias de sua iniciativa, mesmo na Constituição estadual: cria um verdadeiro plano de governo e ofende a direção superior da administração pelo Chefe do Executivo (CF, arts. 2º e 84, II)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 4.102, Rel. Min. Cármen Lúcia, 30/10/2014",
+       "tese": "As restrições impostas ao exercício das competências constitucionais do Executivo, incluída a definição de políticas públicas, contrariam a independência e a harmonia entre os Poderes."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 4.348/RR, Rel. Min. Ricardo Lewandowski, 10/10/2018 (Info 919)",
+       "tese": "É inconstitucional lei estadual que exige autorização prévia da Assembleia Legislativa para que os órgãos do SISNAMA firmem instrumentos de cooperação, ou para que a fundação estadual de meio ambiente transfira atribuições a outros órgãos do sistema."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 1.949, Rel. Min. Dias Toffoli, 17/9/2014",
+       "tese": "São inconstitucionais as normas que entregam somente à Assembleia Legislativa a destituição dos dirigentes de agência reguladora estadual, excluindo o Governador."
+      },
+      {
+       "t": "texto",
+       "html": "<b>2. O Judiciário controla, sem administrar.</b> Quando a Administração omite um direito fundamental, a ordem judicial não invade a função administrativa: ela corrige uma ilegalidade."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 592.581/RS, Rel. Min. Ricardo Lewandowski, 13/8/2015, repercussão geral (Info 794)",
+       "tese": "É lícito ao Judiciário impor à Administração obrigação de fazer, consistente em medidas ou obras emergenciais em estabelecimentos prisionais, para assegurar a integridade física e moral dos presos (CF, art. 5º, XLIX). Não se pode opor a reserva do possível nem a separação dos Poderes."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "1ª Turma, RE 429.903/RJ, Rel. Min. Ricardo Lewandowski, 25/6/2014 (Info 752)",
+       "tese": "A Administração pode ser obrigada pelo Judiciário a manter estoque mínimo de medicamento para doença grave, para evitar a interrupção do tratamento. O Judiciário não fixa metas nem prioridades: controla a ilegalidade de quem se comprometeu a comprar e deixou faltar."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "1ª Turma, RE 440.028/SP, Rel. Min. Marco Aurélio, 29/10/2013 (Info 726)",
+       "tese": "Em situações excepcionais, o Judiciário pode determinar que a Administração adote medidas que assegurem direitos essenciais, como a acessibilidade de pessoas com deficiência a prédios públicos, sem violar a separação dos Poderes."
+      },
       {
        "t": "vf",
        "itens": [
         {
-         "texto": "No Brasil, adota-se o critério material para identificar quem integra a Administração Pública.",
+         "texto": "A Constituição do Estado pode fixar prazo para o Governador enviar projeto de lei sobre a reestruturação das secretarias.",
          "v": false,
-         "porque": "Adota-se o critério formal (subjetivo ou orgânico)."
+         "porque": "Fixar conteúdo ou prazo para proposição de iniciativa do Executivo é plano de governo imposto pelo Legislativo (ADI 179)."
         },
         {
-         "texto": "Uma sociedade de economia mista que explora atividade econômica integra a administração indireta.",
-         "v": true,
-         "porque": "Pelo critério formal, sim, mesmo sem exercer função administrativa em sentido material."
-        },
-        {
-         "texto": "O Poder Judiciário exerce função administrativa atípica ao fazer licitação.",
-         "v": true,
-         "porque": "Administrar é função típica do Executivo e atípica dos demais Poderes."
-        },
-        {
-         "texto": "Entidades administrativas podem editar leis sobre a sua área de atuação.",
+         "texto": "Lei estadual pode condicionar o convênio ambiental firmado pela fundação estadual à aprovação prévia da Assembleia.",
          "v": false,
-         "porque": "Só as entidades políticas legislam. As administrativas executam a lei."
+         "porque": "Autorização prévia do Legislativo para ato de gestão viola a separação dos Poderes (ADI 4.348)."
+        },
+        {
+         "texto": "O juiz pode mandar o Estado fazer obras emergenciais num presídio, mesmo sem previsão orçamentária específica.",
+         "v": true,
+         "porque": "Tema da repercussão geral no RE 592.581: a reserva do possível e a separação dos Poderes não podem ser opostas."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Na PGE",
+       "html": "Nas ações em que o Estado é réu por omissão (saúde, presídio, acessibilidade), a tese da separação dos Poderes sozinha costuma perder. A defesa útil discute o <b>como</b>: prazo, alternativa menos onerosa, impacto orçamentário comprovado. Já nas ADIs contra leis da Assembleia que amarram o Governador, a separação dos Poderes é o argumento central."
+      }
+     ]
+    },
+    {
+     "titulo": "CF × Maranhão: o que muda no Estado",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "No Maranhão, a mesma estrutura: os três Poderes do Estado (art. 6º da CE-MA, com a indelegabilidade expressa) e a administração pública em todos eles (art. 19, caput). Repare que o art. 19 traz um princípio a mais que o art. 37 da CF."
+      },
+      {
+       "t": "lei",
+       "ref": "CE-MA, art. 6º",
+       "texto": "Art. 6° São Poderes do Estado, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário.\nParágrafo único. Salvo exceções previstas nesta Constituição, ==é vedado a qualquer dos Poderes delegar atribuições==, e quem for investido na função de um deles não poderá exercer a de outro."
+      },
+      {
+       "t": "lei",
+       "ref": "CE-MA, art. 19, caput",
+       "texto": "Art. 19. A Administração Pública direta, indireta ou fundacional ==de qualquer dos Poderes do Estado e dos Municípios== obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade, ==razoabilidade== e eficiência e, também, ao seguinte:"
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Pode cair assim na PGE-MA",
+       "html": "\"A Constituição do Maranhão reproduz literalmente os cinco princípios do art. 37 da CF.\" <b>Errado</b>: acrescenta a <b>razoabilidade</b> (LIMPE + R). E fala em administração \"direta, indireta ou <b>fundacional</b>\"."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O que pode cair assim",
+       "html": "\"O Poder Judiciário, ao realizar licitação, exerce função jurisdicional atípica.\" Errado: exerce função <b>administrativa</b> atípica.<br>\"O Município tem Poder Judiciário próprio, organizado por lei orgânica.\" Errado.<br>\"A Assembleia Legislativa é pessoa jurídica de direito público.\" Errado: é órgão do Estado.<br>\"Pelo critério material, adotado no Brasil, a sociedade de economia mista que explora atividade econômica não integra a Administração.\" Errado duas vezes: o Brasil adota o <b>formal</b>, e por ele a estatal integra a Administração."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "O Estado é pessoa jurídica territorial soberana, formada por povo, território e governo soberano.",
+         "v": true,
+         "porque": "É o conceito do material."
+        },
+        {
+         "texto": "Entre a União e os Estados há relação de coordenação, sem hierarquia.",
+         "v": true,
+         "porque": "Federação: autonomia recíproca."
+        },
+        {
+         "texto": "No sistema presidencialista, a chefia de Estado e a de Governo ficam com pessoas diferentes.",
+         "v": false,
+         "porque": "Ficam com a mesma pessoa. Chefia bipartida é do parlamentarismo."
+        },
+        {
+         "texto": "A vitaliciedade é característica da forma republicana de governo.",
+         "v": false,
+         "porque": "A República tem temporalidade; vitaliciedade é da Monarquia."
+        },
+        {
+         "texto": "O fomento à iniciativa privada de utilidade pública é atividade de administração pública em sentido material.",
+         "v": true,
+         "porque": "Serviço público, polícia, fomento e intervenção."
+        },
+        {
+         "texto": "A organização e a manutenção do Poder Judiciário do DF competem ao próprio Distrito Federal.",
+         "v": false,
+         "porque": "Competem à União."
+        },
+        {
+         "texto": "As entidades administrativas podem editar leis nas matérias da sua especialidade.",
+         "v": false,
+         "porque": "Só executam a lei; editar lei é das entidades políticas."
         }
        ]
       }
@@ -641,6 +965,62 @@
      ]
     },
     {
+     "titulo": "CF × Maranhão: o que muda no Estado",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Para o Executivo do Maranhão, a lista de princípios do processo administrativo está na Lei 8.959/2009, e a CE-MA acrescenta a razoabilidade ao art. 19. A regra que mais pode cair é a da <b>invalidação em até cinco anos</b>, escrita de forma diferente da lei federal."
+      },
+      {
+       "t": "lei",
+       "ref": "CE-MA, art. 19, caput",
+       "texto": "Art. 19. A Administração Pública direta, indireta ou fundacional de qualquer dos Poderes do Estado e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade, ==razoabilidade== e eficiência e, também, ao seguinte:"
+      },
+      {
+       "t": "lei",
+       "ref": "Lei MA 8.959/2009, art. 2º (texto original da Lei 8.959/2009; confira se a Lei 10.559/2017 alterou este dispositivo)",
+       "texto": "Art. 2º A Administração Pública obedecerá, ==dentre outros==, aos princípios da legalidade, ==igualdade==, finalidade, motivação, razoabilidade, moralidade, ampla defesa, contraditório, segurança jurídica, interesse público e eficiência.\nParágrafo único. A norma administrativa deve ser interpretada e aplicada da forma que melhor atenda a realização do fim público a que se dirige."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei MA 8.959/2009, arts. 15 a 17 (texto original da Lei 8.959/2009; confira se a Lei 10.559/2017 alterou este dispositivo)",
+       "texto": "Art. 15. A motivação deverá indicar as razões que justifiquem a edição do ato, sobretudo a regra de competência, os fundamentos de fato e de direito, assim como a finalidade objetivada.\nParágrafo único. A motivação do ato administrativo poderá consistir na ==remissão a pareceres== ou manifestações proferidas no respectivo processo administrativo.\nArt. 16. Os atos administrativos que apresentarem defeitos sanáveis poderão ser ==convalidados ou convertidos== pela própria Administração, em decisão fundamentada na qual se evidencie não acarretar lesões ao interesse público nem prejuízo a terceiros.\nArt. 17. A administração, de ofício ou por provocação de pessoa interessada, ==no prazo de até cinco anos, invalidará== seus atos que não possam ser convalidados ou convertidos."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Ponto",
+        "Lei 9.784/1999 (federal)",
+        "Lei 8.959/2009 (Maranhão, texto original)"
+       ],
+       "linhas": [
+        [
+         "Princípios",
+         "legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade, ampla defesa, contraditório, segurança jurídica, interesse público e eficiência (art. 2º)",
+         "acrescenta <b>igualdade</b> e não menciona a proporcionalidade (art. 2º)"
+        ],
+        [
+         "Anular",
+         "deve anular; decai em 5 anos para atos com efeitos <b>favoráveis</b>, salvo má-fé (arts. 53 e 54)",
+         "<b>invalidará</b>, em até 5 anos, os atos que não possam ser convalidados ou convertidos (art. 17), sem a ressalva da má-fé no texto"
+        ],
+        [
+         "Convalidar",
+         "atos com defeitos sanáveis, sem lesão ao interesse público nem a terceiros (art. 55)",
+         "convalidar <b>ou converter</b> (art. 16)"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Pode cair assim na PGE-MA",
+       "html": "\"Pela Lei estadual 8.959/2009, a Administração pode invalidar seus atos a qualquer tempo, por não haver prazo para a autotutela.\" <b>Errado</b>: até cinco anos (art. 17). Antes de responder, confira se a Lei 10.559/2017 mudou a redação."
+      }
+     ]
+    },
+    {
      "titulo": "Como a FCC cobra",
      "etapa": "banca",
      "blocos": [
@@ -704,153 +1084,234 @@
    "numero": 3,
    "titulo": "Centralização, descentralização e desconcentração",
    "status": "pronta",
-   "fonte": "Material EBEJI: Administração Pública (2026)",
+   "fonte": "Material EBEJI: Administração Pública (2026), itens 1 a 5.3 e Mapa para provas de procuradoria; CF e CC, textos vigentes",
    "resumo": [
-    "Centralizar é o Estado atuar por conta própria, com seus órgãos e agentes (administração direta).",
-    "Descentralizar é passar a atividade para outra pessoa: por lei (outorga, cria entidade) ou por contrato ou ato (delegação a particular).",
-    "Desconcentrar é repartir competências dentro da mesma pessoa jurídica: nascem os órgãos.",
-    "Descentralização não tem hierarquia (só tutela). Desconcentração tem hierarquia.",
-    "Concentração é o caminho inverso: extinguir órgãos e juntar competências."
+    "Centralização: o próprio Estado, por órgãos da direta. Descentralização: outra pessoa. Desconcentração: dentro da mesma pessoa, cria órgãos. Concentração: o inverso.",
+    "Outorga (lei, titularidade, prazo indeterminado, especialização); delegação (contrato com prazo ou ato precário, só execução); territorial (Territórios, exceção à especialização).",
+    "Concessão só a pessoa jurídica; permissão e autorização também a pessoa física.",
+    "Descentralização: vinculação e controle finalístico, limitado e dependente de lei. Desconcentração: hierarquia, controle permanente e total, inclusive na indireta."
    ],
    "secoes": [
     {
-     "titulo": "O problema que essas palavras resolvem",
+     "titulo": "De onde vem: o Estado faz sozinho ou passa adiante?",
      "etapa": "origem",
      "blocos": [
       {
        "t": "texto",
-       "html": "O Estado precisa executar milhares de tarefas. Ele pode fazer isso <b>ele mesmo</b> ou <b>entregar a outra pessoa</b>. E, quando faz ele mesmo, pode dividir o trabalho internamente. Essas três escolhas têm nome: centralização, descentralização e desconcentração. A banca quase sempre testa a troca de uma palavra pela outra."
+       "html": "Centralização e descentralização são as duas formas básicas de o Estado se organizar e atuar. A pergunta é sempre a mesma: <b>quantas pessoas jurídicas aparecem?</b> Se é uma só, falamos de centralização (e, dentro dela, de desconcentração). Se aparece uma segunda pessoa, é descentralização."
       },
       {
        "t": "passos",
        "nos": [
         {
-         "titulo": "Estado",
-         "sub": "faz ele mesmo?"
+         "titulo": "Centralização",
+         "sub": "o próprio Estado"
         },
         {
-         "titulo": "Outra pessoa",
-         "sub": "descentraliza"
+         "titulo": "Descentralização",
+         "sub": "outra pessoa"
         },
         {
-         "titulo": "Dentro de si",
-         "sub": "desconcentra"
+         "titulo": "Desconcentração",
+         "sub": "dentro da mesma pessoa"
+        },
+        {
+         "titulo": "Concentração",
+         "sub": "o caminho inverso"
         }
        ],
        "passos": [
         {
          "no": 0,
-         "texto": "<b>Centralização:</b> o Estado executa a atividade diretamente, por seus órgãos e agentes. É a administração direta."
+         "texto": "<b>Centralização:</b> a atividade é exercida diretamente pelo Estado, pelos órgãos e agentes da administração direta, todos despersonalizados e da mesma pessoa política."
         },
         {
          "no": 1,
-         "texto": "<b>Descentralização:</b> a atividade sai do Estado e vai para outra pessoa, física ou jurídica, pública ou privada."
+         "texto": "<b>Descentralização:</b> o Estado desempenha a função por meio de <b>outra pessoa</b>. Pressupõe duas pessoas distintas."
         },
         {
          "no": 2,
-         "texto": "<b>Desconcentração:</b> a atividade continua na mesma pessoa jurídica, só é repartida entre órgãos. Pode ocorrer tanto na direta quanto dentro de uma entidade da indireta."
+         "texto": "<b>Desconcentração:</b> distribuição interna de competências na mesma pessoa jurídica. É técnica administrativa e cria <b>órgãos</b>: Ministérios, Secretarias, Departamentos."
         },
         {
-         "no": 1,
-         "texto": "Em <b>nenhuma</b> forma de descentralização há hierarquia: o ente só exerce controle finalístico (tutela ou supervisão)."
+         "no": 3,
+         "texto": "<b>Concentração:</b> a pessoa jurídica extingue órgãos e reúne as competências em menos unidades."
         }
        ]
       }
      ]
     },
     {
-     "titulo": "As formas de descentralização",
+     "titulo": "Como funciona: as três formas de descentralizar",
      "etapa": "regra",
      "blocos": [
       {
        "t": "tabela",
        "cab": [
-        "Forma",
-        "Como nasce",
-        "O que passa",
-        "Exemplo"
+        "Modalidade",
+        "Instrumento",
+        "O que se transfere",
+        "Para quem",
+        "Prazo"
        ],
        "linhas": [
         [
-         "Outorga (por serviços)",
-         "Lei",
-         "A titularidade e a execução do serviço",
-         "Lei cria uma autarquia"
+         "<b>Outorga</b> (por serviços)",
+         "lei",
+         "titularidade e execução do serviço",
+         "entidade da administração indireta criada para isso",
+         "indeterminado"
         ],
         [
-         "Delegação (por colaboração)",
-         "Contrato ou ato unilateral",
-         "Só a execução",
-         "Concessão e permissão de serviço público"
+         "<b>Delegação</b> (por colaboração)",
+         "contrato ou ato unilateral",
+         "só a execução",
+         "concessionárias, permissionárias, autorizatárias",
+         "determinado no contrato; sem prazo no ato unilateral, pela precariedade"
         ],
         [
-         "Territorial (geográfica)",
-         "Lei federal",
-         "Competências amplas e genéricas num território",
-         "Territórios Federais"
+         "<b>Territorial</b> ou geográfica",
+         "lei da União",
+         "competências amplas, genéricas e heterogêneas num território",
+         "Território Federal (\"autarquia territorial\")",
+         ""
         ]
        ]
       },
       {
        "t": "texto",
-       "html": "A outorga se apoia no <b>princípio da especialidade</b>: cria-se uma pessoa especializada para desempenhar melhor aquela competência. Os <b>Territórios Federais</b> são chamados de autarquias territoriais, mas são a exceção a esse princípio, porque recebem competências amplas e heterogêneas."
+       "html": "A outorga se apoia no <b>princípio da especialização</b> (especialidade): a especialização do serviço dá mais capacidade para desempenhá-lo bem. Por isso a autarquia comum é criada para uma área determinada. O <b>Território Federal</b> é a exceção: é chamado de autarquia territorial, mas atua em áreas variadas, de forma abrangente, e por isso <b>excepciona</b> o princípio da especialização."
       },
       {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Quem pode receber a delegação",
+       "html": "A <b>concessão</b> de serviço público só é possível para <b>pessoa jurídica</b>. <b>Permissão</b> e <b>autorização</b> podem ser dadas a pessoa jurídica <b>ou física</b>."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"A delegação por ato unilateral tem prazo determinado, como a concessão.\"",
+       "html": "Errado. Por ato unilateral não há prazo, por causa da <b>precariedade</b>. Prazo determinado é da delegação por <b>contrato</b>."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e detalhes: hierarquia × tutela",
+     "etapa": "excecao",
+     "blocos": [
+      {
        "t": "texto",
-       "html": "Detalhes que caem: na delegação <b>por contrato</b> há prazo determinado; na delegação <b>por ato unilateral</b> não há, porque o ato é precário. A <b>concessão</b> só pode ser feita a pessoa jurídica (ou consórcio de empresas), enquanto permissão e autorização admitem pessoa física."
+       "html": "O ponto que mais cai: em <b>nenhuma</b> forma de descentralização há hierarquia. Há só controle finalístico (tutela, supervisão). Na desconcentração, ao contrário, há hierarquia, com todos os seus poderes: comando, fiscalização, revisão, punição, solução de conflitos de competência, delegação e avocação."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Descentralização",
+        "Desconcentração"
+       ],
+       "linhas": [
+        [
+         "Pessoas",
+         "duas ou mais pessoas jurídicas",
+         "uma só"
+        ],
+        [
+         "Resultado",
+         "cria <b>entidades</b> (ou contrata delegatários)",
+         "cria <b>órgãos</b>"
+        ],
+        [
+         "Relação",
+         "vinculação (tutela)",
+         "subordinação (hierarquia)"
+        ],
+        [
+         "Controle",
+         "<b>finalístico</b>: limitado e depende de lei",
+         "<b>hierárquico</b>: permanente, total, automático, dispensa lei"
+        ],
+        [
+         "Onde ocorre",
+         "entre pessoas diferentes",
+         "na administração direta <b>e na indireta</b>"
+        ]
+       ]
       },
       {
        "t": "alternar",
        "opcoes": [
         {
-         "rotulo": "Desconcentração",
+         "rotulo": "Controle hierárquico",
          "modo": "dentro",
          "caixas": [
           {
-           "titulo": "Uma só pessoa jurídica (ex.: o Estado do Maranhão)",
-           "sub": ""
+           "titulo": "Mesma pessoa",
+           "sub": "Secretário e Superintendência"
           },
           {
-           "titulo": "Secretaria",
-           "sub": "órgão"
-          },
-          {
-           "titulo": "Procuradoria",
-           "sub": "órgão"
-          },
-          {
-           "titulo": "Departamento",
-           "sub": "órgão"
+           "titulo": "Sem lei",
+           "sub": "decorre da subordinação"
           }
          ],
-         "texto": "A mesma pessoa reparte tarefas internamente. Resultado: <b>órgãos</b>, sem personalidade jurídica e com <b>hierarquia</b> (comando, fiscalização, revisão, punição, delegação e avocação)."
+         "texto": "É <b>permanente</b>, abrange <b>todos os aspectos</b> da atuação e decorre automaticamente da subordinação, sem precisar de lei."
         },
         {
-         "rotulo": "Descentralização",
+         "rotulo": "Controle finalístico",
          "modo": "fora",
          "caixas": [
           {
-           "titulo": "Estado",
-           "sub": "pessoa política"
+           "titulo": "Duas pessoas",
+           "sub": "Estado e autarquia"
           },
           {
-           "titulo": "Autarquia",
-           "sub": "outra pessoa jurídica"
+           "titulo": "Com lei",
+           "sub": "nos limites da lei"
           }
          ],
-         "texto": "A tarefa passa para outra pessoa. Resultado: <b>entidade</b> com personalidade própria, <b>sem hierarquia</b>, só com controle finalístico."
+         "texto": "É <b>limitado</b>, depende de <b>previsão legal expressa</b> e serve para verificar se a entidade cumpre as finalidades para as quais foi criada. Não há hierarquia."
         }
        ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "A desconcentração só existe na administração direta?",
+       "html": "Não. Uma autarquia também se desconcentra quando cria as suas diretorias e gerências. A FCC adora a frase \"a desconcentração é exclusiva da administração direta\": errada."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Liga com outro tema",
+       "html": "Hierarquia é o que permite <b>delegar e avocar</b> (aula 11, poderes administrativos) e o recurso hierárquico próprio no processo administrativo (aula 13). Contra decisão de autarquia, o recurso ao Secretário é <b>hierárquico impróprio</b> e só cabe se a lei previr, justamente porque não há hierarquia."
       }
      ]
     },
     {
-     "titulo": "Exceções e detalhes de doutrina",
+     "titulo": "CF × Maranhão: o que muda no Estado",
      "etapa": "excecao",
      "blocos": [
       {
        "t": "texto",
-       "html": "<b>Concentração</b>: o inverso da desconcentração. A pessoa jurídica extingue órgãos e reúne as competências em menos unidades.<br><br>Existe desconcentração <b>dentro da indireta</b> também: uma autarquia grande pode ter seus próprios órgãos internos. Por isso a frase \"desconcentração só ocorre na administração direta\" está errada."
+       "html": "A Lei estadual 8.959/2009 (atos e processos administrativos do Executivo do Maranhão) regula a delegação e a avocação, que são instrumentos da <b>hierarquia</b>, portanto da desconcentração. Leia com a Lei 9.784/1999 ao lado: a estrutura é a mesma."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei MA 8.959/2009, arts. 11 a 13 (texto original da Lei 8.959/2009; confira se a Lei 10.559/2017 alterou este dispositivo)",
+       "texto": "Art. 11. Salvo vedação legal, as autoridades superiores poderão ==delegar aos seus subordinados== a prática de atos de sua competência ou ==avocar, em caráter excepcional, temporária e motivadamente==, os de competência destes.\nArt. 12. Não podem ser objeto de delegação: I - ==os atos de caráter normativo==; II - ==decisões de recursos administrativos==; III - matéria de ==competência exclusiva== de entidades, órgãos ou autoridade.\nArt. 13. O ato de delegação e sua revogação deverão ser publicados no Diário Oficial do Estado."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Diferença para a lei federal",
+       "html": "Na Lei 9.784 (art. 12), a delegação pode ser feita a órgãos ou titulares <b>ainda que não sejam hierarquicamente subordinados</b>. A Lei 8.959, no art. 11, fala em delegar \"aos seus <b>subordinados</b>\". Compare as duas na sua leitura de lei seca."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Pode cair assim",
+       "html": "\"O Secretário de Estado pode delegar ao Superintendente a decisão de recursos administrativos.\" <b>Errado</b> (art. 12, II). \"A avocação é a regra e pode ser permanente.\" Errado: é excepcional, temporária e motivada (art. 11)."
       }
      ]
     },
@@ -861,37 +1322,41 @@
       {
        "t": "nota",
        "tom": "pegadinha",
-       "titulo": "Troca de palavras",
-       "html": "\"A criação de uma autarquia é exemplo de desconcentração.\" Errado: é descentralização por outorga, porque nasce outra pessoa jurídica."
-      },
-      {
-       "t": "nota",
-       "tom": "pegadinha",
-       "titulo": "Hierarquia no lugar errado",
-       "html": "\"Na descentralização, o ente exerce controle hierárquico sobre a entidade.\" Errado: o controle é finalístico (tutela). Hierarquia é marca da desconcentração."
+       "titulo": "O que pode cair assim",
+       "html": "\"O Estado do Maranhão, ao criar uma Superintendência dentro da Secretaria de Fazenda, descentraliza a atividade.\" Errado: <b>desconcentra</b> (mesma pessoa, cria órgão).<br>\"Na outorga, transfere-se apenas a execução do serviço.\" Errado: transfere-se a <b>titularidade</b>.<br>\"O controle exercido sobre as autarquias é hierárquico e independe de lei.\" Errado: é <b>finalístico</b> e depende de lei."
       },
       {
        "t": "vf",
        "itens": [
         {
-         "texto": "A desconcentração pode ocorrer no interior de uma autarquia.",
+         "texto": "A criação de uma autarquia é exemplo de descentralização por outorga.",
          "v": true,
-         "porque": "Desconcentração é repartição interna de competências, e isso acontece também na indireta."
+         "porque": "Lei cria a entidade e transfere o serviço."
         },
         {
          "texto": "A concessão de serviço público pode ser feita a pessoa física.",
          "v": false,
-         "porque": "Concessão só para pessoa jurídica ou consórcio de empresas. Permissão e autorização admitem pessoa física."
+         "porque": "Só a pessoa jurídica. Permissão e autorização admitem pessoa física."
         },
         {
-         "texto": "A descentralização por outorga exige lei.",
-         "v": true,
-         "porque": "A outorga transfere a titularidade do serviço e depende de lei."
-        },
-        {
-         "texto": "Concentração é o mesmo que centralização.",
+         "texto": "Os Territórios Federais são autarquias que confirmam o princípio da especialização.",
          "v": false,
-         "porque": "Centralização é o Estado atuar diretamente. Concentração é extinguir órgãos e juntar competências."
+         "porque": "Excepcionam o princípio: têm competências amplas e heterogêneas."
+        },
+        {
+         "texto": "Na desconcentração, há poderes de avocação e de revisão.",
+         "v": true,
+         "porque": "São poderes da hierarquia."
+        },
+        {
+         "texto": "Concentração administrativa é a extinção de órgãos com a reunião das suas competências em menos unidades.",
+         "v": true,
+         "porque": "É o inverso da desconcentração."
+        },
+        {
+         "texto": "O controle finalístico é permanente e alcança todos os aspectos da atuação da entidade.",
+         "v": false,
+         "porque": "Isso é o hierárquico. O finalístico é limitado e depende de lei."
         }
        ]
       }
@@ -1079,6 +1544,46 @@
        "html": "Errado. Só os órgãos de cúpula (independentes e autônomos), e só para defender prerrogativas institucionais."
       }
      ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Órgão é criado e organizado por <b>lei</b>, e a lei de criação de órgão do Executivo é de iniciativa do Chefe do Executivo (CF, art. 61, § 1º, II, e). O STF tira daí três consequências que caem em prova: a regra vale para Estados e Municípios por <b>simetria</b>; as <b>atribuições</b> de um cargo também dependem de lei; e o legislador estadual não pode impor quem vai compor um órgão do Executivo."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 2.295/RS",
+       "tese": "A iniciativa privativa do Chefe do Executivo para a lei que cria ou extingue órgãos e entidades da administração (CF, art. 61, § 1º, II, e) é de observância obrigatória pelos Estados, pelo princípio da simetria."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "MS 26.740/DF, Rel. Min. Ayres Britto, 30/8/2011 (Info 638)",
+       "tese": "Exige-se lei para definir as atribuições de cargo público e também para alterá-las."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 5.406, Rel. Min. Edson Fachin, 27/4/2020",
+       "tese": "A alteração das atribuições de um cargo deve respeitar limites: não pode criar competências novas e inteiramente estranhas às originalmente previstas para o cargo."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 4.579/RJ, Rel. Min. Luiz Fux, 13/2/2020 (Info 966)",
+       "tese": "É inconstitucional lei estadual que impõe a participação de representante da OAB na composição de órgão da Administração Pública local, por ofensa à autonomia dos entes. O Chefe do Executivo pode convidar, em consenso com a OAB, um representante; a lei não pode impor."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Como a FCC troca",
+       "html": "\"A Assembleia Legislativa pode, por lei de iniciativa parlamentar, criar uma Superintendência na Secretaria de Fazenda.\" <b>Errado</b>: criar órgão do Executivo é lei de iniciativa do Governador (simetria, ADI 2.295). E \"lei estadual pode exigir que um conselheiro do órgão seja indicado pela OAB\": <b>errado</b> (ADI 4.579)."
+      }
+     ]
     }
    ],
    "questoes": [
@@ -1092,161 +1597,412 @@
    "numero": 5,
    "titulo": "Administração indireta: criação, extinção e subsidiárias",
    "status": "pronta",
-   "fonte": "Material EBEJI: Administração Pública (2026)",
+   "fonte": "Material EBEJI: Administração Pública (2026), itens 1 a 5.3 e Mapa para provas de procuradoria; CF e CC, textos vigentes",
    "resumo": [
-    "Lei específica CRIA a autarquia e só AUTORIZA a instituição de empresa pública, sociedade de economia mista e fundação.",
-    "Fundação pode ser de direito público (criada por lei, é espécie de autarquia) ou de direito privado (autorizada por lei). Tema 545 do STF: depende do estatuto e das atividades.",
-    "A lei de iniciativa privativa do Chefe do Executivo, por simetria em todos os entes.",
-    "Subsidiária e participação em empresa privada: autorização legislativa, que pode ser genérica na lei da estatal matriz (ADI 1649).",
-    "Vender o controle da estatal-mãe exige lei e licitação; transferir o controle de subsidiária não exige lei nem licitação formal (ADI 5624)."
+    "Direta: órgãos, atuação centralizada. Indireta: autarquias, fundações, empresas públicas e sociedades de economia mista, vinculadas. Paraestatais (Sistema S, OS, OSCIP) não integram a Administração.",
+    "Organização legal: cargos e órgãos por lei. Decreto autônomo só para organização sem despesa nem criação ou extinção de órgão e para extinguir cargo vago.",
+    "Lei cria autarquia e autoriza as demais (art. 37, XIX), por iniciativa do Chefe do Executivo, em todos os entes (ADI 2295). A LC das fundações nunca foi editada.",
+    "Subsidiária: autorização legislativa genérica basta (ADI 1649). Alienar controle da matriz exige lei e licitação; da subsidiária, não (ADI 5.624).",
+    "Atribuição de cargo só por lei e sem desvio de natureza; ascensão funcional é vedada (ADI 6.355, Tema 697)."
    ],
    "secoes": [
     {
-     "titulo": "Por que a lei aparece em cada nascimento",
+     "titulo": "De onde vem: direta, indireta e paraestatais",
      "etapa": "origem",
      "blocos": [
       {
        "t": "texto",
-       "html": "A indireta nasce da descentralização por outorga: o ente tira uma competência de si e entrega a uma pessoa nova, especializada. Como isso mexe na estrutura do Estado, a Constituição exige <b>lei específica</b>. O detalhe está no verbo: para a autarquia, a lei <b>cria</b>; para as demais, a lei <b>autoriza</b>, e a pessoa só nasce com o registro dos atos constitutivos."
+       "html": "<b>Administração direta</b>: órgãos públicos com competências para exercer a atividade de forma <b>centralizada</b>. <b>Administração indireta</b>: entidades <b>vinculadas</b> às pessoas políticas que as instituíram, para atuar de forma <b>descentralizada</b>. O modelo vem do art. 4º do Decreto-Lei 200/1967 (transcrito no material): na esfera federal, a direta são os serviços da Presidência e dos Ministérios; a indireta, as autarquias, empresas públicas, sociedades de economia mista e fundações públicas, todas com personalidade jurídica própria e vinculadas ao Ministério da sua área."
       },
       {
-       "t": "lei",
-       "ref": "CF, art. 37, XIX",
-       "texto": "XIX - somente por lei específica ==poderá ser criada autarquia== e ==autorizada a instituição== de empresa pública, de sociedade de economia mista e de fundação, cabendo à lei complementar, neste último caso, definir as áreas de sua atuação;"
-      }
-     ]
-    },
-    {
-     "titulo": "Como funciona para cada entidade",
-     "etapa": "regra",
-     "blocos": [
+       "t": "texto",
+       "html": "O Decreto-Lei 200 fala do Executivo federal, mas a organização vale para todos os entes e todos os Poderes, porque a Constituição dá administração direta e indireta a cada um deles (art. 37, caput)."
+      },
       {
        "t": "tabela",
        "cab": [
-        "Entidade",
-        "Personalidade",
-        "Lei faz o quê?",
-        "Nasce quando?"
+        "",
+        "Administração indireta",
+        "Entidades paraestatais"
        ],
        "linhas": [
         [
-         "Autarquia",
-         "Direito público",
-         "Cria",
-         "Com a vigência da lei"
+         "Natureza",
+         "autarquias, fundações públicas, empresas públicas e sociedades de economia mista",
+         "pessoas jurídicas <b>privadas, sem fins lucrativos</b>"
         ],
         [
-         "Fundação pública de direito público",
-         "Direito público (espécie de autarquia)",
-         "Cria",
-         "Com a vigência da lei"
+         "Integram a Administração?",
+         "sim",
+         "<b>não</b>: colaboram com o Estado e recebem fomento"
         ],
         [
-         "Fundação pública de direito privado",
-         "Direito privado",
-         "Autoriza",
-         "Com o registro dos atos constitutivos"
-        ],
-        [
-         "Empresa pública",
-         "Direito privado",
-         "Autoriza",
-         "Com o registro"
-        ],
-        [
-         "Sociedade de economia mista",
-         "Direito privado",
-         "Autoriza",
-         "Com o registro"
+         "Exemplos",
+         "Banco do Brasil (exemplo do material)",
+         "Sistema S, organizações sociais, OSCIPs, instituições comunitárias de educação superior, entidades de apoio"
         ]
        ]
       },
       {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "Plenário, RE 716.378/SP, Tema 545 da repercussão geral (Info 946)",
-       "tese": "A qualificação de uma fundação instituída pelo Estado como sujeita ao regime público ou privado depende do estatuto de sua criação ou autorização e das atividades por ela prestadas. As atividades de conteúdo econômico e as passíveis de delegação podem se submeter ao regime de direito privado."
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Estatal econômica é Administração?",
+       "html": "Sim. Mesmo a empresa pública ou sociedade de economia mista que explora atividade econômica em sentido estrito integra a Administração, porque o Brasil usa o critério <b>formal</b> (aula 1). Já o Sistema S <b>não</b> integra, mesmo prestando atividade de interesse público."
       },
       {
        "t": "texto",
-       "html": "A <b>extinção</b> segue a simetria: por lei diretamente, se autarquia ou fundação de direito público; por autorização legal, se empresa estatal. Em qualquer caso, a lei é de iniciativa privativa do Chefe do Executivo. A lei complementar que deveria definir as áreas de atuação das fundações (parte final do inciso XIX) ainda não foi editada."
-      }
-     ]
-    },
-    {
-     "titulo": "Subsidiárias: onde moram as exceções",
-     "etapa": "excecao",
-     "blocos": [
+       "html": "<b>O que toda a indireta tem em comum</b> (mapa do material): personalidade jurídica e patrimônio próprios, autonomia administrativa, vinculação (não subordinação) ao ente, controle finalístico, criação e extinção dependentes de lei e controle pelo Judiciário, pelo Legislativo e pelos Tribunais de Contas. E as regras constitucionais que valem para todas:"
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Regra",
+        "Dispositivo"
+       ],
+       "linhas": [
+        [
+         "Concurso público para ingresso",
+         "CF, art. 37, II"
+        ],
+        [
+         "Vedação de acumulação remunerada (estende-se a autarquias, fundações, empresas públicas, sociedades de economia mista, subsidiárias e controladas)",
+         "CF, art. 37, XVI e XVII"
+        ],
+        [
+         "Licitação obrigatória",
+         "CF, art. 37, XXI"
+        ],
+        [
+         "Receitas e despesas no orçamento fiscal",
+         "CF, art. 165, § 5º, I"
+        ],
+        [
+         "Controle pelos Tribunais de Contas",
+         "CF, arts. 71 a 75"
+        ]
+       ]
+      },
       {
        "t": "lei",
-       "ref": "CF, art. 37, XX",
-       "texto": "XX - depende de autorização legislativa, ==em cada caso==, a criação de subsidiárias das entidades mencionadas no inciso anterior, assim como a participação de qualquer delas em empresa privada;"
-      },
-      {
-       "t": "texto",
-       "html": "<b>Subsidiária</b> é a pessoa jurídica controlada por uma entidade da indireta: integral, se a matriz tem todo o capital; controlada, se tem só o controle. Ela tem personalidade própria e é de direito privado. A doutrina diverge sobre se integra a administração indireta; o material prefere dizer que não."
-      },
-      {
-       "t": "nota",
-       "tom": "atencao",
-       "titulo": "\"Em cada caso\" não significa uma lei para cada subsidiária",
-       "html": "O STF entende que basta autorização genérica na própria lei que criou a estatal matriz."
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "Plenário, ADI 1.649, rel. Min. Maurício Corrêa, 2004",
-       "tese": "É dispensável a autorização legislativa para a criação de empresas subsidiárias, desde que haja previsão para esse fim na própria lei que instituiu a empresa matriz, porque a lei criadora é a própria medida autorizadora."
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "Plenário, ADI 5.624 MC-Ref, rel. Min. Ricardo Lewandowski, 2019",
-       "tese": "A alienação do controle acionário de empresas públicas e sociedades de economia mista exige autorização legislativa e licitação. A transferência do controle de subsidiárias e controladas não exige anuência do Legislativo e pode ocorrer sem licitação, desde que garantida a competitividade e observados os princípios do art. 37."
-      },
-      {
-       "t": "texto",
-       "html": "Sobre pessoal, o material registra a posição predominante: os empregados das estatais e das demais entidades controladas também se submetem a concurso público (Súmula 231 do TCU)."
+       "ref": "CF, art. 37, II",
+       "texto": "II - a investidura em ==cargo ou emprego público== depende de aprovação prévia em ==concurso público== de provas ou de provas e títulos, de acordo com a natureza e a complexidade do cargo ou emprego, na forma prevista em lei, ressalvadas as nomeações para cargo em comissão declarado em lei de livre nomeação e exoneração;"
       }
      ]
     },
     {
      "titulo": "Organização legal: o que precisa de lei e o que cabe em decreto",
-     "etapa": "excecao",
+     "etapa": "regra",
      "blocos": [
       {
        "t": "texto",
-       "html": "Regra: cargos, empregos, funções, ministérios e órgãos são criados e extintos <b>por lei</b>. As exceções e detalhes que o material destaca:"
+       "html": "O <b>princípio da organização legal do serviço público</b>: cargos, empregos e funções, ministérios e órgãos são criados e extintos <b>por lei</b>. A Constituição abre exceções e reserva iniciativas. Leia os dispositivos em sequência, que eles contam a história completa:"
       },
       {
-       "t": "abrir",
-       "cartas": [
+       "t": "lei",
+       "ref": "CF, art. 48, X e XI",
+       "texto": "X – criação, transformação e extinção de cargos, empregos e funções públicas, ==observado o que estabelece o art. 84, VI, b==;\nXI – criação e extinção de Ministérios e órgãos da administração pública;"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 61, § 1º, II, a e e",
+       "texto": "§ 1º São de iniciativa privativa do Presidente da República as leis que:\nII - disponham sobre:\na) criação de cargos, funções ou empregos públicos na ==administração direta e autárquica== ou aumento de sua remuneração;\ne) ==criação e extinção de Ministérios e órgãos da administração pública==, observado o disposto no art. 84, VI;"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 84, VI",
+       "texto": "VI – dispor, ==mediante decreto==, sobre:\na) organização e funcionamento da administração federal, ==quando não implicar aumento de despesa nem criação ou extinção de órgãos públicos==;\nb) extinção de funções ou cargos públicos, ==quando vagos==;"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 96, II, b",
+       "texto": "b) ==a criação e a extinção de cargos== e a remuneração dos seus serviços auxiliares e dos juízos que lhes forem vinculados, bem como a fixação do subsídio de seus membros e dos juízes, inclusive dos tribunais inferiores, onde houver;"
+      },
+      {
+       "t": "escada",
+       "degraus": [
         {
-         "tag": "Câmara e Senado",
-         "titulo": "Resolução",
-         "texto": "Cargos, funções e empregos dos serviços da Câmara e do Senado são criados, transformados e extintos por resolução da própria Casa (CF, arts. 51, IV, e 52, XIII)."
+         "titulo": "Câmara e Senado",
+         "sub": "resolução",
+         "texto": "Criação, transformação e extinção dos cargos das próprias Casas: <b>resolução</b> (CF, arts. 51, IV, e 52, XIII). Sem sanção."
         },
         {
-         "tag": "Decreto autônomo",
-         "titulo": "Art. 84, VI",
-         "texto": "O Presidente pode, por decreto, organizar a administração federal (sem aumentar despesa nem criar ou extinguir órgão) e extinguir funções ou cargos <b>vagos</b>."
+         "titulo": "Executivo: cargos",
+         "sub": "lei de iniciativa do Chefe do Executivo",
+         "texto": "Cargos, funções e empregos na administração <b>direta e autárquica</b>: iniciativa privativa do Presidente (art. 61, § 1º, II, a), e por simetria do Governador e do Prefeito."
         },
         {
-         "tag": "Judiciário",
-         "titulo": "Iniciativa dos tribunais",
-         "texto": "Criar e extinguir cargos do Judiciário exige lei de iniciativa do STF, dos Tribunais Superiores ou dos TJs, conforme o caso (CF, art. 96, II, b)."
+         "titulo": "Executivo: órgãos",
+         "sub": "lei de iniciativa do Chefe do Executivo",
+         "texto": "Criação e extinção de Ministérios e órgãos: lei de iniciativa privativa (arts. 48, XI, e 61, § 1º, II, e)."
         },
         {
-         "tag": "Atribuições",
-         "titulo": "Também por lei",
-         "texto": "Definir e alterar as atribuições de cargo exige lei (STF, MS 26.740), e a alteração não pode criar atribuições estranhas ao cargo original (STF, ADI 5.406)."
+         "titulo": "Decreto autônomo",
+         "sub": "só duas hipóteses",
+         "texto": "Organização e funcionamento sem aumento de despesa nem criação ou extinção de órgão; e extinção de função ou cargo <b>vago</b> (art. 84, VI)."
+        },
+        {
+         "titulo": "Judiciário",
+         "sub": "lei de iniciativa dos tribunais",
+         "texto": "Criação e extinção de cargos do Judiciário: iniciativa do STF, dos Tribunais Superiores e dos Tribunais de Justiça (art. 96, II, b)."
         }
        ]
       },
       {
-       "t": "leia",
-       "ref": "CF, arts. 48, X e XI; 51, IV; 52, XIII; 61, § 1º, II, a e e; 84, VI; 96, II, b",
-       "motivo": "É o mapa completo de quem cria e quem extingue cada coisa. A FCC troca lei por decreto e resolução por lei."
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "A crítica do material à Lei 14.204/2021",
+       "html": "Na esfera federal, essa lei autoriza alterar por decreto, por transformação, os quantitativos e a distribuição de cargos em comissão executivos, funções de confiança e gratificações, sem aumento de despesa (arts. 6º e 7º). O material aponta que isso pode ser questionado diante do art. 48, X, e parece extrapolar o decreto autônomo do art. 84, VI. É argumento de prova discursiva, não resposta pronta de objetiva."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"O Governador pode extinguir, por decreto, cargo público ocupado, desde que sem aumento de despesa.\"",
+       "html": "Errado. O decreto autônomo só extingue cargo ou função <b>vago</b>. Cargo ocupado só se extingue por lei."
+      }
+     ]
+    },
+    {
+     "titulo": "Criação e extinção das entidades: art. 37, XIX e XX",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Pelo princípio da especialização, o ente edita lei específica com as competências que transfere à nova pessoa. A diferença está no verbo: a lei <b>cria</b> a autarquia e só <b>autoriza</b> as demais."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, XIX",
+       "texto": "XIX – somente por lei específica poderá ser ==criada autarquia== e ==autorizada a instituição== de empresa pública, de sociedade de economia mista e de fundação, cabendo à ==lei complementar==, neste último caso, definir as áreas de sua atuação;"
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Entidade",
+        "Como nasce",
+        "Como se extingue"
+       ],
+       "linhas": [
+        [
+         "Autarquia",
+         "a lei específica <b>cria</b>",
+         "lei específica, diretamente"
+        ],
+        [
+         "Fundação de direito público (autarquia fundacional)",
+         "criada por lei, como espécie do gênero autarquia (STF e doutrina dominante)",
+         "lei específica, diretamente"
+        ],
+        [
+         "Fundação de direito privado",
+         "lei autoriza; nasce com o registro dos atos constitutivos",
+         "por autorização legal"
+        ],
+        [
+         "Empresa pública e sociedade de economia mista",
+         "lei autoriza; nasce com o registro dos atos constitutivos",
+         "por autorização legal"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Três detalhes que o material faz questão de registrar:</b> (1) a lei de criação ou extinção de entidade vinculada ao Executivo é de <b>iniciativa privativa do Chefe do Executivo</b> (art. 61, § 1º, II, e), e por simetria em todos os entes (ADI 2295); a palavra \"órgãos\" ali tem sentido amplo, abrangendo unidades personalizadas ou não; (2) a <b>lei complementar</b> das áreas de atuação das fundações (parte final do inciso XIX) <b>até hoje não foi editada</b>; (3) a natureza da fundação (pública ou privada) depende do estatuto e das atividades (Tema 545)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, XX",
+       "texto": "XX - depende de ==autorização legislativa, em cada caso==, a criação de subsidiárias das entidades mencionadas no inciso anterior, assim como a participação de qualquer delas em empresa privada;"
+      },
+      {
+       "t": "texto",
+       "html": "<b>Subsidiárias</b> são pessoas jurídicas controladas por uma entidade da indireta: <b>integral</b>, se a matriz tem todo o capital; <b>controlada</b>, se tem só o controle. Sempre têm personalidade própria, são de direito privado e se sujeitam a algumas regras de direito público. Há divergência se integram a administração indireta; o material considera mais prudente dizer que <b>não</b> integram. O Decreto 8.945/2016 (federal) define subsidiária como a empresa estatal cuja maioria do capital votante pertence, direta ou indiretamente, a empresa pública ou sociedade de economia mista."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Em cada caso\" não é uma lei para cada subsidiária",
+       "html": "Para o STF, a autorização é dada por <b>lei ordinária</b> e pode ser <b>genérica</b>, na própria lei que criou a estatal matriz (ADI 1649)."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Operação",
+        "Lei?",
+        "Licitação?"
+       ],
+       "linhas": [
+        [
+         "Alienar o controle acionário da empresa pública ou sociedade de economia mista (a matriz)",
+         "<b>sim</b>",
+         "<b>sim</b>"
+        ],
+        [
+         "Transferir o controle de subsidiária ou controlada",
+         "não",
+         "não, mas com competitividade e os princípios do art. 37"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Pessoal das estatais e subsidiárias.</b> O tema não é pacífico, mas prevalece que os empregados entram por concurso. É a Súmula 231 do TCU, transcrita no material: a exigência de concurso se estende a toda a administração indireta, inclusive às demais entidades controladas direta ou indiretamente pela União, mesmo que visem a objetivos estritamente econômicos, em regime de competitividade com a iniciativa privada."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A aula já mostrou a regra do art. 37, XIX e XX: lei específica cria a autarquia e autoriza as demais; subsidiária depende de autorização legislativa, que pode ser genérica. O STF completou o desenho na hora de <b>sair</b> do Estado (desestatização), com a lógica do <b>paralelismo das formas</b>: o que nasce por lei sai por lei. A diferença está entre a empresa-mãe e as subsidiárias."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 5.624 MC-Ref/DF, Rel. Min. Ricardo Lewandowski, 5 e 6/6/2019 (Info 943)",
+       "tese": "A alienação do controle acionário de empresas públicas e sociedades de economia mista exige autorização legislativa e licitação. Já a alienação do controle de subsidiárias e controladas não exige autorização legislativa e pode ser feita sem licitação, desde que garantida a competitividade e observados os princípios do art. 37."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 6.241, Rel. Min. Cármen Lúcia, 8/2/2021",
+       "tese": "Para a desestatização de entidades administrativas basta, em regra, autorização genérica em lei que veicule programa de desestatização."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADPF 794/DF, Rel. Min. Gilmar Mendes, 24/5/2021 (Info 1.018)",
+       "tese": "É dispensável a autorização legislativa para a alienação de controle acionário de empresas subsidiárias."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Situação",
+        "Precisa de lei?",
+        "Precisa de licitação?"
+       ],
+       "linhas": [
+        [
+         "Vender o controle da empresa-mãe (EP ou SEM)",
+         "Sim (autorização; pode ser a genérica de um programa de desestatização, ADI 6.241)",
+         "Sim"
+        ],
+        [
+         "Vender o controle de subsidiária ou controlada",
+         "Não (ADPF 794)",
+         "Não; basta procedimento competitivo que respeite o art. 37 (ADI 5.624)"
+        ],
+        [
+         "Criar subsidiária",
+         "Sim, mas basta previsão genérica na lei da matriz (ADI 1.649)",
+         "Não se aplica"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Como a FCC troca",
+       "html": "\"A alienação do controle acionário de subsidiária de sociedade de economia mista estadual depende de lei específica e de licitação na modalidade leilão.\" <b>Errado</b> nas duas partes: subsidiária dispensa lei e dispensa licitação, exigindo só competitividade. A exigência de lei e licitação é da <b>empresa-mãe</b>."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Organização legal do serviço público (item 5.1 do material).</b> Sete decisões que a banca pode pôr num caso de reestruturação de carreira ou de órgão:"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "MS 26.740/DF, Rel. Min. Ayres Britto, 30/8/2011 (Info 638)",
+       "tese": "Exige-se lei para definir as atribuições do cargo público e para alterá-las."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 5.406, Rel. Min. Edson Fachin, j. 27/4/2020; no mesmo sentido, Plenário, RE 642.895, Rel. Min. Marco Aurélio, red. p/ o acórdão Min. Alexandre de Moraes, j. 15/5/2020",
+       "tese": "A alteração das atribuições de um cargo deve respeitar limites: não se podem criar competências novas e inteiramente estranhas às originalmente previstas para o cargo."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 6.355/PE, Rel. Min. Cármen Lúcia, j. 28/5/2021 (Info 1019)",
+       "tese": "A equiparação de carreira de nível médio a outra de nível superior constitui ascensão funcional, vedada pelo art. 37, II."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 740.008/RR, Rel. Min. Marco Aurélio, j. 19/12/2020, repercussão geral, Tema 697 (Info 1003)",
+       "tese": "É inconstitucional o aproveitamento de servidor aprovado em concurso de nível médio em cargo que pressuponha escolaridade superior."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 7.081/BA, Rel. Min. Edson Fachin, j. 21/9/2022 (Info 1074)",
+       "tese": "É constitucional a alteração, por lei, dos requisitos de escolaridade para o provimento, por concurso, de cargo efetivo."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 4.579/RJ, Rel. Min. Luiz Fux, j. 13/2/2020 (Info 966)",
+       "tese": "É inconstitucional lei estadual que impõe representante da OAB na composição de órgão da administração local (no caso, Corregedoria Tributária de Controle Externo do RJ). O Governador pode convidar, em consenso com a OAB, mas a lei não pode impor representante de autarquia em órgão estadual, sob pena de ofender a autonomia dos entes (art. 18)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 2.295/RS",
+       "tese": "Por simetria, a lei de criação ou extinção de entidade da administração indireta vinculada ao Executivo é de iniciativa privativa do Chefe do Executivo também nos Estados, no DF e nos Municípios (art. 61, § 1º, II, e). Decisão citada no material sem relator e data."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "Lei estadual pode transformar cargos de nível médio em cargos de nível superior, aproveitando os mesmos servidores.",
+         "v": false,
+         "porque": "É ascensão funcional vedada (ADI 6.355) e aproveitamento inconstitucional (Tema 697)."
+        },
+        {
+         "texto": "Lei pode aumentar a escolaridade exigida para concursos futuros de um cargo efetivo.",
+         "v": true,
+         "porque": "ADI 7.081."
+        },
+        {
+         "texto": "Decreto do Governador pode alterar as atribuições de cargo efetivo previstas em lei.",
+         "v": false,
+         "porque": "Atribuição de cargo se define e se altera por lei (MS 26.740)."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Na PGE",
+       "html": "Reestruturação de carreira é rotina de parecer. A sequência de perguntas: (1) a mudança é por lei? (2) a iniciativa foi do Governador? (3) as novas atribuições são afins às antigas (ADI 5.406)? (4) há mudança de nível de escolaridade com aproveitamento dos atuais servidores (ADI 6.355 e Tema 697)? Se a resposta à quarta for sim, o parecer é pela inconstitucionalidade."
+      }
+     ]
+    },
+    {
+     "titulo": "CF × Maranhão: o que muda no Estado",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A Constituição do Maranhão repete, no art. 19, XVIII, a regra do art. 37, XIX, da CF, na redação da EC estadual 100/2024. E a Lei 8.959/2009 diz expressamente que alcança a administração estadual direta e indireta."
+      },
+      {
+       "t": "lei",
+       "ref": "CE-MA, art. 19, XVIII",
+       "texto": "XVIII - somente por lei específica poderá ser ==criada autarquia== e ==autorizada a instituição== de empresa pública, de sociedade de economia mista e de fundação, cabendo à lei complementar, neste último caso, definir as áreas de sua atuação;"
+      },
+      {
+       "t": "lei",
+       "ref": "Lei MA 8.959/2009, art. 1º (texto original da Lei 8.959/2009; confira se a Lei 10.559/2017 alterou este dispositivo)",
+       "texto": "Art. 1º Esta Lei estabelece normas básicas sobre os atos e processos administrativos no âmbito do ==Poder Executivo estadual==, objetivando principalmente a proteção dos direitos dos administrados e a salvaguarda do interesse público.\nParágrafo único. A presente Lei abrange os órgãos e entidades da Administração estadual ==direta e indireta==."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Na PGE",
+       "html": "Atenção ao número do inciso: no Maranhão, a criação de entidades está no art. 19, <b>XVIII</b> (na CF, art. 37, XIX). Em peça ou parecer, cite os dois."
       }
      ]
     },
@@ -1257,37 +2013,36 @@
       {
        "t": "nota",
        "tom": "pegadinha",
-       "titulo": "\"Por lei específica é criada a empresa pública.\"",
-       "html": "Errado. A lei específica só autoriza a instituição. Quem é criada por lei é a autarquia."
-      },
-      {
-       "t": "nota",
-       "tom": "pegadinha",
-       "titulo": "\"O Presidente pode extinguir, por decreto, cargo público ocupado.\"",
-       "html": "Errado. O decreto autônomo só extingue funções ou cargos quando vagos."
+       "titulo": "O que pode cair assim",
+       "html": "\"Por lei específica é criada a empresa pública.\" Errado: a lei <b>autoriza</b>; a empresa nasce com o registro.<br>\"As organizações sociais integram a administração indireta.\" Errado: são paraestatais.<br>\"A criação de cada subsidiária exige lei específica própria.\" Errado: basta autorização genérica (ADI 1649).<br>\"A lei complementar que define as áreas de atuação das fundações foi editada em 2016.\" Errado: até hoje não foi editada."
       },
       {
        "t": "vf",
        "itens": [
         {
-         "texto": "A fundação pública de direito público é espécie do gênero autarquia.",
+         "texto": "As entidades paraestatais são pessoas jurídicas privadas sem fins lucrativos que não integram a Administração.",
          "v": true,
-         "porque": "É chamada de fundação autárquica ou autarquia fundacional, criada diretamente por lei."
+         "porque": "Colaboram com o Estado e recebem fomento."
         },
         {
-         "texto": "Cada subsidiária de uma sociedade de economia mista precisa de lei específica própria.",
-         "v": false,
-         "porque": "Basta autorização genérica na lei da matriz (ADI 1.649)."
-        },
-        {
-         "texto": "A venda do controle acionário de uma empresa pública exige autorização legislativa e licitação.",
+         "texto": "A criação de cargos na Câmara dos Deputados se faz por resolução da própria Casa.",
          "v": true,
-         "porque": "É o item I da tese da ADI 5.624."
+         "porque": "CF, art. 51, IV."
         },
         {
-         "texto": "Decreto autônomo pode criar órgão público, desde que não aumente despesa.",
+         "texto": "O Presidente pode, por decreto, criar órgão público, desde que sem aumento de despesa.",
          "v": false,
-         "porque": "O art. 84, VI, a, veda expressamente a criação ou extinção de órgãos por decreto."
+         "porque": "O art. 84, VI, a, veda criação ou extinção de órgão por decreto."
+        },
+        {
+         "texto": "A vedação de acumulação remunerada alcança empregos em sociedades de economia mista.",
+         "v": true,
+         "porque": "CF, art. 37, XVII."
+        },
+        {
+         "texto": "A transferência do controle de subsidiária exige autorização legislativa e licitação.",
+         "v": false,
+         "porque": "Só a alienação do controle da matriz exige (ADI 5.624 MC-Ref)."
         }
        ]
       }
@@ -1563,6 +2318,92 @@
      ]
     },
     {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Quase toda a jurisprudência de autarquia sai de uma pergunta só: <b>ela é de direito público?</b> Se é, recebe o regime da Fazenda (pessoal, prescrição, imunidade, precatório). As decisões abaixo seguem essa ordem: pessoal, dirigentes, prerrogativas e, por fim, os conselhos profissionais, que são autarquias com particularidades."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 2.135/DF, red. p/ acórdão Min. Gilmar Mendes, 7/11/2024 (Info 1.158)",
+       "tese": "É constitucional a revogação, pela EC 19/1998, da redação original do art. 39 da CF, que impunha regime jurídico único para os servidores da administração direta, das autarquias e das fundações públicas. A mudança não afasta o concurso público, qualquer que seja o regime adotado."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 573.202, Rel. Min. Ricardo Lewandowski, 21/8/2008, repercussão geral",
+       "tese": "Os contratados por tempo determinado para atender necessidade temporária de excepcional interesse público têm relação funcional de direito público, e não trabalhista."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 960.429/RN, Rel. Min. Gilmar Mendes, 4 e 5/3/2020, Tema 992 (Info 968)",
+       "tese": "Compete à Justiça comum julgar controvérsias da fase pré-contratual de seleção (concurso) e de admissão de pessoal, e eventual nulidade do certame, na administração direta e indireta, mesmo quando adotado o regime celetista."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 1.949/RS",
+       "tese": "É inconstitucional lei que condiciona a <b>exoneração</b> de dirigentes de entidades da administração indireta à aprovação prévia do Legislativo, por ofensa à separação dos Poderes."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula 383",
+       "tese": "Contra a Fazenda (e a autarquia), a prescrição interrompida recomeça pela metade, dois anos e meio (Decreto 20.910/1932, arts. 8º e 9º), mas a soma dos períodos, antes e depois da interrupção, não pode ficar abaixo de cinco anos."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ACO 1.098, Rel. Min. Roberto Barroso, 11/5/2020 (Info 980)",
+       "tese": "A imunidade tributária recíproca (CF, art. 150, VI, a) impede a cobrança de impostos entre os entes públicos, mas não veda a imposição de obrigações acessórias."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADPF 357/DF, Rel. Min. Cármen Lúcia, 24/6/2021 (Info 1.023)",
+       "tese": "A ordem de preferência entre União, Estados e Municípios na cobrança judicial de créditos (concurso de preferência) não foi recepcionada pela CF/1988, por violar o pacto federativo e o art. 19, III, que veda preferências entre as pessoas políticas."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Conselhos profissionais.</b> São autarquias, mas o STF os tratou de modo próprio em vários pontos:"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADC 36/DF, ADI 5.637/DF e ADPF 367/DF, red. p/ acórdão Min. Alexandre de Moraes, 4/9/2020",
+       "tese": "É constitucional a contratação do pessoal dos conselhos de fiscalização profissional pelo regime da CLT; esses conselhos não integram a estrutura orgânica do Estado."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 938.837/SP, red. p/ acórdão Min. Marco Aurélio, 19/4/2017, repercussão geral (Info 861)",
+       "tese": "Os pagamentos devidos por conselhos de fiscalização profissional em razão de decisão judicial não se submetem ao regime de precatórios."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "1ª Turma, RMS 33.572 AgR, Rel. Min. Roberto Barroso, 9/8/2016",
+       "tese": "Os conselhos profissionais, apesar da natureza autárquica, não estão isentos de custas judiciais (Lei 9.289/1996, art. 4º, parágrafo único)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 4.697/DF, Rel. Min. Edson Fachin, 6/10/2016 (Info 842)",
+       "tese": "É constitucional a Lei 12.514/2011, que trata das anuidades dos conselhos profissionais: não trata de normas gerais de Direito Tributário (dispensa lei complementar) e respeita capacidade contributiva, não confisco e legalidade."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Como a FCC troca",
+       "html": "Três trocas comuns: (1) \"o pessoal das autarquias deve ser, obrigatoriamente, estatutário, pelo regime jurídico único\" (<b>errado</b> desde a ADI 2.135, de 2024); (2) \"conselho profissional paga suas condenações por precatório, por ser autarquia\" (<b>errado</b>, RE 938.837); (3) \"a lei estadual pode exigir aprovação da Assembleia para exonerar dirigente de autarquia\" (<b>errado</b>, ADI 1.949). Para a <b>nomeação</b>, veja a ADI 2.167 desta aula."
+      }
+     ]
+    },
+    {
      "titulo": "Como a FCC cobra",
      "etapa": "banca",
      "blocos": [
@@ -1759,6 +2600,46 @@
        "t": "leia",
        "ref": "ADCT, art. 19",
        "motivo": "É a estabilidade dos servidores com 5 anos de serviço contínuo na promulgação da Constituição. A FCC pergunta a quem ela se aplica."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O Tema 545 resolveu o regime da fundação pelo estatuto e pela atividade. As decisões abaixo mostram as consequências para a fundação de <b>direito privado</b>: ela fica mais perto do privado, mas o STF puxa para o regime público quando presta serviço essencial sem concorrência."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 4.197/SE, Rel. Min. Roberto Barroso, 1º/3/2023 (Info 1.085)",
+       "tese": "O art. 5º, IV, do DL 200/1967 foi recepcionado com eficácia de lei complementar pelo art. 37, XIX, da CF, que pede lei complementar para definir as áreas de atuação das fundações."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADPF 547/PA, Rel. Min. Roberto Barroso, 24/5/2021",
+       "tese": "As fundações públicas de direito privado que prestem serviço público essencial, em regime não concorrencial e sem intuito lucrativo primário, sujeitam-se ao regime de precatórios (CF, art. 100)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 4.247/RJ, Rel. Min. Marco Aurélio, 3/11/2020 (Info 997)",
+       "tese": "É constitucional lei estadual que aplica o regime celetista às relações de trabalho das fundações públicas de direito privado destinadas a serviços de saúde."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 716.378/SP, repercussão geral (Info 946)",
+       "tese": "A expressão \"fundações públicas\" do art. 19 do ADCT (estabilidade excepcional) abrange só as fundações autárquicas, de direito público. Não alcança os empregados celetistas das fundações públicas de direito privado."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Como a FCC troca",
+       "html": "\"Fundação pública de direito privado nunca paga por precatório, porque seus bens são privados.\" <b>Errado</b>: se presta serviço essencial, sem concorrência e sem lucro como fim, paga por precatório (ADPF 547)."
       }
      ]
     },
@@ -2009,6 +2890,80 @@
        "tom": "atencao",
        "titulo": "Imunidade dos Correios agora está no texto",
        "html": "A EC 132/2023 passou a citar expressamente, no art. 150, § 2º, a empresa pública prestadora de serviço postal. Na prática, só positivou o que o STF já dizia."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Nas estatais, o STF decide quase tudo pelo <b>objeto</b>: quanto mais perto do serviço público essencial, exclusivo e sem lucro como fim, mais regime público (imunidade, precatório, impenhorabilidade). Quanto mais perto da atividade econômica em concorrência, mais regime privado (CF, art. 173, § 1º, II). A exceção que corta os dois grupos é a motivação da dispensa."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, MS 21.322/DF, Rel. Min. Paulo Brossard, 3/12/1992",
+       "tese": "A exigência de concurso público alcança as empresas públicas e as sociedades de economia mista, inclusive as que exploram atividade econômica. O concurso não colide com o art. 173, § 1º."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 589.998 ED, Rel. Min. Roberto Barroso, Plenário, 10/10/2018",
+       "tese": "A ECT tem o dever jurídico de motivar, em ato formal, a demissão de seus empregados. Os empregados públicos não têm a estabilidade do art. 41."
+      },
+      {
+       "t": "texto",
+       "html": "Em 2024, o Tema 1.022 (já visto nesta aula) estendeu o dever de motivar a <b>todas</b> as estatais, prestadoras ou exploradoras, sem exigir processo administrativo nem justa causa: basta fundamento razoável."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 407.099/RS; RE 773.992/BA; ACO 2.167/MG",
+       "tese": "Têm imunidade tributária recíproca as estatais que prestam serviço público de prestação obrigatória pelo Estado: ECT, INFRAERO e Casa da Moeda são os exemplos clássicos."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADPF 387/PI, Rel. Min. Gilmar Mendes, 23/3/2017 (Info 858)",
+       "tese": "O regime de precatórios se aplica às empresas públicas e sociedades de economia mista que prestam serviços públicos essenciais e próprios de Estado, em regime não concorrencial."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADPF 275/PB, Rel. Min. Alexandre de Moraes, 17/10/2018 (Info 920)",
+       "tese": "É inconstitucional decisão judicial que decreta a constrição de bens de sociedade de economia mista prestadora de serviço público em regime não concorrencial para pagar débitos trabalhistas: ela se sujeita ao regime de precatórios."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADPF 588/PB, Rel. Min. Roberto Barroso, 26/4/2021 (Info 1.014)",
+       "tese": "Os recursos públicos vinculados ao orçamento de estatais prestadoras de serviço público essencial, em regime não concorrencial e sem intuito lucrativo primário, não podem ser bloqueados ou sequestrados por decisão judicial para pagar verbas trabalhistas."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 655.283/DF, repercussão geral, red. p/ acórdão Min. Dias Toffoli, 16/6/2021 (Info 1.022)",
+       "tese": "Compete à Justiça Comum julgar a reintegração de empregados públicos dispensados em razão de aposentadoria espontânea, porque a questão não diz respeito à relação de trabalho."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 1.288.440/SP, repercussão geral, Rel. Min. Roberto Barroso, 3/7/2023",
+       "tese": "Compete à Justiça Comum julgar ação de servidor celetista contra o Poder Público em que se pede parcela de natureza administrativa."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula 517",
+       "tese": "As sociedades de economia mista só têm foro na Justiça Federal quando a União intervém como assistente ou opoente."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Como a FCC troca",
+       "html": "\"A sociedade de economia mista estadual de saneamento, que atua sem concorrência, pode ter suas contas bloqueadas pela Justiça do Trabalho para pagar condenação.\" <b>Errado</b> (ADPF 275 e 588): paga por precatório. E \"a sociedade de economia mista federal é julgada na Justiça Federal\": <b>errado</b>, em regra é a Estadual (Súmula 517); a empresa pública federal é que vai para a Federal (CF, art. 109, I)."
       }
      ]
     },
@@ -5210,6 +6165,91 @@
        "t": "lei",
        "ref": "Lei 14.133/2021, art. 156, §§ 4º e 5º",
        "texto": "§ 4º A sanção prevista no inciso III do caput deste artigo será aplicada ao responsável pelas infrações administrativas previstas nos incisos II, III, IV, V, VI e VII do caput do art. 155 desta Lei, quando não se justificar a imposição de penalidade mais grave, e impedirá o responsável de licitar ou contratar no âmbito da Administração Pública direta e indireta do ==ente federativo que tiver aplicado a sanção==, pelo ==prazo máximo de 3 (três) anos==.\n§ 5º A sanção prevista no inciso IV do caput deste artigo será aplicada ao responsável pelas infrações administrativas previstas nos incisos VIII, IX, X, XI e XII do caput do art. 155 desta Lei, bem como pelas infrações administrativas previstas nos incisos II, III, IV, V, VI e VII do caput do referido artigo que justifiquem a imposição de penalidade mais grave que a sanção referida no § 4º deste artigo, e impedirá o responsável de licitar ou contratar no âmbito da Administração Pública direta e indireta de ==todos os entes federativos==, pelo prazo ==mínimo de 3 (três) anos e máximo de 6 (seis) anos==."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O ponto de contratos que mais chega à mesa de uma procuradoria é este: a empresa contratada deixa de pagar os empregados e eles cobram do <b>Estado</b> na Justiça do Trabalho. A lei diz que o encargo é só do contratado; a jurisprudência foi, em quatro passos, dizendo quando o Estado responde mesmo assim. Siga a ordem, porque a FCC cobra a <b>evolução</b>."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 121, caput e §§ 1º e 2º",
+       "texto": "Art. 121. ==Somente o contratado== será responsável pelos encargos trabalhistas, previdenciários, fiscais e comerciais resultantes da execução do contrato.<br>§ 1º A inadimplência do contratado em relação aos encargos trabalhistas, fiscais e comerciais ==não transferirá à Administração== a responsabilidade pelo seu pagamento (...), ressalvada a hipótese prevista no § 2º deste artigo.<br>§ 2º ==Exclusivamente== nas contratações de serviços contínuos com regime de dedicação exclusiva de mão de obra, a Administração responderá ==solidariamente pelos encargos previdenciários e subsidiariamente pelos encargos trabalhistas== se comprovada falha na fiscalização do cumprimento das obrigações do contratado."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "1. ADC 16 (2011)",
+         "sub": "A regra da lei vale",
+         "texto": "O STF declarou constitucional o art. 71, § 1º, da Lei 8.666 (hoje art. 121, § 1º, da Lei 14.133): o inadimplemento da contratada não passa automaticamente para a Administração."
+        },
+        {
+         "titulo": "2. Súmula 331, V, do TST",
+         "sub": "Responde se houver culpa",
+         "texto": "O TST passou a condenar a Administração só quando evidenciada a conduta culposa na fiscalização. O mero inadimplemento não basta."
+        },
+        {
+         "titulo": "3. RE 760.931 (Tema 246, 2017)",
+         "sub": "Nada de transferência automática",
+         "texto": "O STF reafirmou: o inadimplemento não transfere ao Poder Público, de forma automática, a responsabilidade, nem solidária nem subsidiária. O TST, ainda assim, seguiu exigindo que o ente provasse que fiscalizou."
+        },
+        {
+         "titulo": "4. RE 1.298.647 (Tema 1.118, 2025)",
+         "sub": "Quem prova é o autor",
+         "texto": "O STF fechou a divergência: a condenação não pode se apoiar só na inversão do ônus da prova. Cabe a quem aciona a Justiça provar a negligência da Administração."
+        }
+       ]
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADC 16, Rel. Min. Cezar Peluso (acórdão de 9/9/2011)",
+       "tese": "É constitucional o art. 71, § 1º, da Lei 8.666/1993: é juridicamente impossível a transferência consequente e automática dos encargos trabalhistas, fiscais e comerciais da contratada inadimplente à Administração."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 760.931, Rel. Min. Rosa Weber, 26/4/2017, Tema 246",
+       "tese": "O inadimplemento dos encargos trabalhistas dos empregados do contratado não transfere automaticamente ao Poder Público contratante a responsabilidade pelo seu pagamento, seja em caráter solidário ou subsidiário (Lei 8.666, art. 71, § 1º; hoje Lei 14.133, art. 121, § 1º)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 1.298.647, Rel. Min. Nunes Marques, 13/2/2025, Tema 1.118",
+       "tese": "(1) Não há responsabilidade subsidiária da Administração por encargos trabalhistas da contratada se amparada exclusivamente na inversão do ônus da prova: cabe à parte autora demonstrar a conduta negligente da Administração ou o nexo causal com o dano. (2) Há comportamento negligente quando a Administração permanece inerte após receber notificação formal de descumprimento (do trabalhador, sindicato, Ministério do Trabalho, Ministério Público, Defensoria ou outro meio idôneo). (3) A Administração responde pela segurança, higiene e salubridade quando o trabalho é feito em suas dependências ou local previsto em contrato (Lei 6.019, art. 5º-A, § 3º). (4) Nos contratos de terceirização, deve exigir capital social compatível com o número de empregados (Lei 6.019, art. 4º-B) e adotar medidas do art. 121, § 3º, da Lei 14.133, como condicionar o pagamento à prova de quitação das obrigações trabalhistas do mês anterior."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 14.133/2021, art. 121, § 3º, I a IV",
+       "texto": "§ 3º Nas contratações de serviços contínuos com regime de dedicação exclusiva de mão de obra, para assegurar o cumprimento de obrigações trabalhistas pelo contratado, a Administração, mediante disposição em edital ou em contrato, poderá, entre outras medidas:<br>I - exigir caução, fiança bancária ou contratação de seguro-garantia com cobertura para verbas rescisórias inadimplidas;<br>II - condicionar o pagamento à comprovação de quitação das obrigações trabalhistas vencidas relativas ao contrato;<br>III - efetuar o depósito de valores em conta vinculada;<br>IV - em caso de inadimplemento, efetuar diretamente o pagamento das verbas trabalhistas, que serão deduzidas do pagamento devido ao contratado;"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADPF 324/DF, Rel. Min. Roberto Barroso, e RE 958.252/MG, Rel. Min. Luiz Fux, 29 e 30/8/2018, repercussão geral (Info 913)",
+       "tese": "É lícita a terceirização ou qualquer outra forma de divisão do trabalho entre pessoas jurídicas distintas, independentemente do objeto social das empresas envolvidas, mantida a responsabilidade subsidiária da empresa contratante. Os itens I e III da Súmula 331 do TST são inconstitucionais."
+      },
+      {
+       "t": "texto",
+       "html": "Na Administração, a terceirização tem um limite que o particular não tem: o <b>concurso público</b> (CF, art. 37, II). Por isso a contratação irregular por empresa interposta <b>não gera vínculo</b> com o ente público (Súmula 331, II, do TST), e o Decreto 9.507/2018 proíbe, na esfera federal, terceirizar tomada de decisão, atividades estratégicas, poder de polícia, regulação, outorga de serviço público e aplicação de sanção."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Como a FCC troca",
+       "html": "\"Nos contratos de serviço contínuo com dedicação exclusiva de mão de obra, a Administração responde <b>solidariamente</b> pelos encargos trabalhistas.\" <b>Errado</b>: solidária só pelos <b>previdenciários</b>; pelos trabalhistas é <b>subsidiária</b>, e só se comprovada falha na fiscalização (art. 121, § 2º). E \"cabe ao ente público provar que fiscalizou\": <b>errado</b> desde o Tema 1.118 (2025): o ônus é do autor."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "No caso concreto da PGE",
+       "html": "Reclamação trabalhista de vigilante terceirizado contra o Estado. Na contestação: (1) art. 121, § 1º, e Tema 246, nada de responsabilidade automática; (2) Tema 1.118, o ônus de provar a negligência é do reclamante; (3) junte as provas de fiscalização mesmo assim (retenções, conta vinculada, notificações respondidas), porque a inércia depois de notificação formal é exatamente o que caracteriza a negligência."
       }
      ]
     },
