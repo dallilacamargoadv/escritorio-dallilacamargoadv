@@ -1,0 +1,1769 @@
+{
+ "materia_id": "B3",
+ "titulo": "Constitucional",
+ "subtitulo": "Da teoria da Constituição ao controle de constitucionalidade, em cadeia.",
+ "fontes": [
+  "CF, texto vigente no Planalto (CF88_texto_vigente.txt e CF88_paragrafos.txt)",
+  "Material EBEJI: A Constituição (2026)",
+  "Material EBEJI: Princípios Fundamentais (2026)",
+  "Material EBEJI: Separação dos Poderes (2026)",
+  "Material EBEJI: Poder Constituinte (2026)",
+  "Material EBEJI: Eficácia e Aplicabilidade das Normas Constitucionais (2026)"
+ ],
+ "aulas": [
+  {
+   "id": "B3-a01",
+   "topico_id": "B3-01",
+   "numero": 1,
+   "titulo": "A Constituição: conceito, classificação, elementos e supremacia",
+   "status": "pronta",
+   "fonte": "Material EBEJI: A Constituição (2026); Material EBEJI: Poder Constituinte (2026), itens 7 e 8; CF, texto vigente",
+   "resumo": [
+    "Lassalle: fatores reais de poder (sociológica). Schmitt: decisão política fundamental (política). Kelsen: norma pura, em sentido lógico-jurídico e jurídico-positivo (jurídica).",
+    "O Brasil mistura os critérios material e formal: tratado de direitos humanos só vale como emenda se seguir o rito do art. 5º, § 3º.",
+    "CF/88: promulgada, escrita, analítica, formal, dogmática, rígida, eclética, normativa (pretensão), principiológica, garantia e dirigente.",
+    "Elementos (José Afonso): orgânicos, limitativos, socioideológicos, de estabilização e formais de aplicabilidade.",
+    "Lei anterior compatível é recepcionada, até com nova roupagem; incompatível é revogada. Não há inconstitucionalidade superveniente nem ADI contra lei pré-constitucional: cabe ADPF.",
+    "Repristinação e desconstitucionalização só com previsão expressa. O originário tem, em regra, retroatividade mínima."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: o que é uma Constituição",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Antes de decorar classificação, entenda a pergunta que as concepções tentam responder: <b>de onde a Constituição tira a sua força?</b> Cada autor clássico deu uma resposta, e a FCC costuma dar a frase do autor para você dizer qual é a concepção.<br><br>Vire as cartas."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Sociológica",
+         "sub": "Ferdinand Lassalle",
+         "verso": "A Constituição é a soma dos fatores reais de poder dentro de uma sociedade.",
+         "detalhe": "Só é legítima se representar as forças sociais que constituem o poder."
+        },
+        {
+         "frente": "Política",
+         "sub": "Carl Schmitt",
+         "verso": "A Constituição é a decisão política fundamental do titular do poder constituinte.",
+         "detalhe": "Estrutura do Estado e direitos individuais são Constituição. O resto do texto são meras <b>leis constitucionais</b>."
+        },
+        {
+         "frente": "Jurídica",
+         "sub": "Hans Kelsen",
+         "verso": "A Constituição é norma pura, dever-ser, sem apoio na sociologia ou na política.",
+         "detalhe": "Dois sentidos: <b>lógico-jurídico</b> (norma hipotética fundamental, suposta) e <b>jurídico-positivo</b> (norma posta, que regula a criação das demais)."
+        },
+        {
+         "frente": "Culturalista",
+         "sub": "Constituição total",
+         "verso": "A Constituição é produto de um fato cultural da sociedade, e também influi nela.",
+         "detalhe": "Sintetiza aspectos sociais, econômicos, jurídicos e filosóficos numa Carta que consagra a unidade política."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Para Kelsen, a Constituição é a decisão política fundamental.\"",
+       "html": "Errado. Decisão política fundamental é <b>Schmitt</b>. Kelsen é o sentido jurídico, com a pirâmide: cada norma busca validade na de cima, até a Constituição, que se apoia na norma hipotética fundamental."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Material ou formal?</b> A concepção material olha o <b>conteúdo</b>: é constitucional o que estrutura o Estado e a sociedade, esteja onde estiver. A formal olha o <b>modo de entrada</b>: é constitucional o que passou pelo processo mais solene, qualquer que seja o assunto. As duas têm um efeito colateral. Pela material, pode haver norma constitucional fora da Constituição. Pela formal, qualquer coisa escrita com o processo rígido vira constitucional."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Material",
+        "Formal"
+       ],
+       "linhas": [
+        [
+         "Critério",
+         "conteúdo da norma",
+         "processo de elaboração"
+        ],
+        [
+         "Consequência",
+         "pode existir norma constitucional fora do texto",
+         "tudo o que está no texto rígido é constitucional"
+        ],
+        [
+         "Exemplo na história",
+         "Constituição de 1824",
+         "Constituição de 1988"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "O Brasil usa um <b>critério misto</b>. A prova está no art. 5º, § 3º: um tratado de direitos humanos (conteúdo materialmente constitucional) só ganha força de emenda se passar por uma <b>forma</b> específica."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, § 3º",
+       "texto": "§ 3º Os tratados e convenções internacionais sobre direitos humanos que forem aprovados, ==em cada Casa do Congresso Nacional, em dois turnos, por três quintos dos votos dos respectivos membros==, serão ==equivalentes às emendas constitucionais==."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Os papéis da Constituição",
+       "html": "<b>Constituição-lei:</b> só um norte para o legislador, sem obrigar. <b>Constituição-fundamento</b> (total): regula toda a vida do Estado e não sobra espaço ao legislador, parecida com a dirigente. <b>Constituição-moldura:</b> fixa os limites, e dentro deles o legislador decide. <b>Constituição dúctil</b>: reflete o pluralismo e garante a convivência, sem um projeto fechado."
+      }
+     ]
+    },
+    {
+     "titulo": "A história das Constituições brasileiras",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O histórico explica as classificações: cada Constituição oscila entre <b>outorga e promulgação</b>, <b>centralização e federação</b>. Guarde as marcas de cada uma."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Constituição",
+        "Origem",
+        "Marcas que caem em prova"
+       ],
+       "linhas": [
+        [
+         "1824 (Império)",
+         "outorgada",
+         "Estado unitário, monarquia; <b>quatro Poderes</b> (com o Moderador, do Imperador); religião oficial católica; <b>semirrígida</b>; voto censitário"
+        ],
+        [
+         "1891",
+         "promulgada",
+         "1ª da República; federação, presidencialismo e república (influência norte-americana); fim do Moderador; Estado laico; <b>rígida</b>; habeas corpus expresso"
+        ],
+        [
+         "1934",
+         "promulgada",
+         "influência de Weimar: direitos sociais (2ª dimensão); voto feminino e secreto; <b>mandado de segurança</b> e <b>ação popular</b>; representação classista"
+        ],
+        [
+         "1937 (\"Polaca\")",
+         "outorgada",
+         "Estado Novo; Executivo forte; sem MS e sem ação popular; o Presidente podia submeter ao Congresso lei declarada inconstitucional, que por 2/3 tornava sem efeito a decisão"
+        ],
+        [
+         "1946",
+         "promulgada",
+         "redemocratização; volta do MS e da ação popular; direito de greve; inafastabilidade da jurisdição; parlamentarismo de 1961"
+        ],
+        [
+         "1967 e EC 1/1969",
+         "outorgadas",
+         "centralização na União; AI-5 (1968) suspendeu o habeas corpus; a EC 1/69 é vista como manifestação do originário"
+        ],
+        [
+         "1988",
+         "promulgada",
+         "república, federação (DF ente federativo), presidencialismo; Estado laico, com Deus no preâmbulo; criou o STJ; separou ordem econômica e ordem social"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Primeira vez de cada remédio",
+       "html": "Habeas corpus: expresso em <b>1891</b>. Mandado de segurança e ação popular: <b>1934</b> (suprimidos em 1937 e de volta em 1946)."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: as classificações e o retrato da CF/88",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Classificar é só responder perguntas sobre a Constituição: <b>quem fez?</b> (origem), <b>como está escrita?</b> (forma), <b>do que trata e com que tamanho?</b> (conteúdo e extensão), <b>como muda?</b> (estabilidade), <b>corresponde à realidade?</b> (ontológica). A tabela traz os critérios que caem em concurso."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Critério",
+        "Espécies",
+        "Brasil"
+       ],
+       "linhas": [
+        [
+         "Origem",
+         "<b>outorgada</b> (imposta, \"Carta\"); <b>promulgada</b> (democrática, votada); <b>cesarista</b> ou bonapartista (projeto do ditador só ratificado pelo povo, em plebiscito ou referendo); <b>pactuada</b> ou dualista (poder dividido entre mais de um titular, como a Magna Carta)",
+         "Outorgadas: 1824, 1937, 1967 (e, para alguns, a EC 1/69). Promulgadas: 1891, 1934, 1946 e 1988"
+        ],
+        [
+         "Forma",
+         "<b>escrita</b> (um documento sistematizado) ou <b>costumeira</b> (usos, costumes, jurisprudência, convenções)",
+         "CF/88 escrita; a inglesa é costumeira"
+        ],
+        [
+         "Extensão",
+         "<b>sintética</b> (só princípios e estrutura, mais duradoura) ou <b>analítica</b> (trata de tudo o que se considerou fundamental)",
+         "CF/88 analítica; a norte-americana de 1787 é sintética"
+        ],
+        [
+         "Conteúdo",
+         "<b>material</b> ou <b>formal</b>",
+         "CF/88 formal"
+        ],
+        [
+         "Modo de elaboração",
+         "<b>dogmática</b> (de uma vez, por assembleia, a partir de teorias) ou <b>histórica</b> (lenta formação de tradições)",
+         "CF/88 dogmática; a inglesa é histórica"
+        ],
+        [
+         "Estabilidade",
+         "<b>rígida</b> (processo mais difícil que o da lei), <b>flexível</b>, <b>semirrígida</b> (parte rígida, parte flexível), <b>imutável</b>; para parte da doutrina, <b>super-rígida</b> (rígida e com núcleo imutável)",
+         "CF/88 rígida (art. 60). A de 1824 era semirrígida"
+        ],
+        [
+         "Dogmática (ideologia)",
+         "<b>ortodoxa</b> (uma só ideologia) ou <b>eclética</b> (concilia várias)",
+         "CF/88 eclética"
+        ],
+        [
+         "Ontológica",
+         "<b>normativa</b> (o poder se submete a ela), <b>nominal</b> (prevê controle do poder, mas não se efetiva), <b>semântica</b> (mero instrumento de quem detém o poder)",
+         "CF/88 pretende ser normativa; 1824 e 1891 nominais; 1937 e 1967 semânticas"
+        ],
+        [
+         "Sistema",
+         "<b>principiológica</b> (predominam princípios) ou <b>preceitual</b> (predominam regras)",
+         "CF/88 principiológica; a mexicana é preceitual"
+        ],
+        [
+         "Finalidade (Manoel Gonçalves)",
+         "<b>garantia</b> (limita o poder), <b>balanço</b> (descreve o presente), <b>dirigente</b> (projeta um futuro, com normas programáticas)",
+         "CF/88 garantia e dirigente"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "A rigidez está no art. 60: emenda exige proposta de legitimados restritos, dois turnos em cada Casa e três quintos. Lei ordinária exige maioria simples. É essa diferença de dificuldade que dá à Constituição a <b>supremacia formal</b>."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 60, § 2º e § 4º",
+       "texto": "§ 2º A proposta será discutida e votada em cada Casa do Congresso Nacional, ==em dois turnos==, considerando-se aprovada se obtiver, em ambos, ==três quintos dos votos== dos respectivos membros.\n§ 4º Não será objeto de deliberação a proposta de emenda tendente a abolir:\nI - a forma federativa de Estado;\nII - o voto direto, secreto, universal e periódico;\nIII - a separação dos Poderes;\nIV - os direitos e garantias individuais."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "A CF/88 é super-rígida?",
+       "html": "Para parte da doutrina, sim, por causa das cláusulas pétreas do art. 60, § 4º. O material de apoio registra que o STF entende de forma contrária. Na prova objetiva, a resposta segura é <b>rígida</b>. Só marque \"super-rígida\" se o enunciado pedir expressamente a posição doutrinária."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "O retrato completo da CF/88",
+       "html": "Promulgada, escrita, analítica, formal, dogmática, rígida, reduzida (um só código), eclética, pretende ser normativa, principiológica, definitiva, autônoma, garantia, dirigente, social e expansiva."
+      }
+     ]
+    },
+    {
+     "titulo": "Os elementos da Constituição (José Afonso da Silva)",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Os elementos são os <b>grupos de normas</b> que aparecem dentro de qualquer Constituição, conforme a função de cada uma. A classificação de José Afonso da Silva é a mais cobrada. Abra as cartas e repare que o nome já diz a função."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Orgânicos",
+         "titulo": "Estrutura do Estado e do Poder",
+         "texto": "Normas que regulam a organização do Estado e dos Poderes."
+        },
+        {
+         "tag": "Limitativos",
+         "titulo": "Direitos e garantias fundamentais",
+         "texto": "Normas que limitam o poder estatal em favor da pessoa."
+        },
+        {
+         "tag": "Socioideológicos",
+         "titulo": "Compromisso social",
+         "texto": "Revelam o compromisso do Estado com as demandas sociais."
+        },
+        {
+         "tag": "De estabilização",
+         "titulo": "Defesa da Constituição",
+         "texto": "Asseguram a solução dos conflitos constitucionais e a defesa do Estado, da Constituição e das instituições democráticas."
+        },
+        {
+         "tag": "Formais de aplicabilidade",
+         "titulo": "Regras de aplicação",
+         "texto": "Regras sobre como aplicar a própria Constituição. Exemplo do material: o preâmbulo."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Limitativo ou de estabilização?",
+       "html": "Direito fundamental limita o poder: é elemento <b>limitativo</b>. Já a norma que protege a ordem constitucional contra crises (controle de constitucionalidade, intervenção, estado de defesa e de sítio) é de <b>estabilização</b>. A FCC troca um pelo outro."
+      }
+     ]
+    },
+    {
+     "titulo": "Supremacia: o que acontece com as leis antigas quando nasce uma Constituição nova",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Aqui a teoria vira prática de procuradoria. A Constituição é suprema, e uma Constituição nova cria uma ordem jurídica nova. A pergunta é: <b>e as milhares de leis editadas antes dela?</b> O Brasil responde com a ideia de <b>contemporaneidade</b>: uma lei só é constitucional ou inconstitucional perante a Constituição do seu tempo. Diante da Constituição nova, a lei velha é <b>recepcionada</b> ou <b>revogada</b>. Não existe \"inconstitucionalidade superveniente\"."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Lei anterior compatível",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Recepção",
+           "sub": "continua valendo"
+          },
+          {
+           "titulo": "Nova roupagem",
+           "sub": "pode mudar de espécie"
+          }
+         ],
+         "texto": "Se o <b>conteúdo</b> combina com a Constituição nova, a lei é recepcionada, mesmo que a forma não combine. Por isso o CTN, editado como lei ordinária, foi recebido como lei complementar. Também pode mudar a competência: matéria que era da União pode passar a ser dos Estados (exemplo do material: região metropolitana, hoje no art. 25, § 3º)."
+        },
+        {
+         "rotulo": "Lei anterior incompatível",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Revogação",
+           "sub": "não recepção"
+          },
+          {
+           "titulo": "Sem ADI",
+           "sub": "cabe ADPF"
+          }
+         ],
+         "texto": "Se o conteúdo contraria a Constituição nova, a lei é <b>revogada</b> por não recepção. Não cabe ADI genérica, porque o art. 102, I, a, trata de lei editada na vigência da Constituição. No controle concentrado, o instrumento é a <b>ADPF</b>. No difuso, qualquer juiz reconhece a não recepção."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 102, I, a",
+       "texto": "Art. 102. Compete ao Supremo Tribunal Federal, precipuamente, a guarda da Constituição, cabendo-lhe:\nI - processar e julgar, originariamente:\na) ==a ação direta de inconstitucionalidade de lei ou ato normativo federal ou estadual== e a ação declaratória de constitucionalidade de lei ou ato normativo federal;"
+      },
+      {
+       "t": "texto",
+       "html": "<b>Requisitos para a recepção</b>, segundo o material: (1) a lei estar em vigor quando a Constituição nova chega; (2) não ter sido declarada inconstitucional na vigência da anterior; (3) ter sido compatível, na forma e no conteúdo, com a Constituição sob a qual nasceu; (4) ser compatível <b>só no conteúdo</b> com a nova. A forma não importa diante da Constituição nova."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Repristinação",
+         "sub": "lei revogada volta?"
+        },
+        {
+         "titulo": "Desconstitucionalização",
+         "sub": "norma constitucional vira lei?"
+        },
+        {
+         "titulo": "Recepção material",
+         "sub": "norma constitucional antiga sobrevive?"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Repristinação:</b> a lei revogada pela ordem anterior <b>não volta</b> a valer com a Constituição nova, salvo se a nova ordem disser expressamente."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Desconstitucionalização:</b> as normas da Constituição anterior continuarem valendo como lei comum. Em regra, <b>não</b> ocorre no Brasil. Só aconteceria se a nova Constituição dissesse, já que o poder originário é ilimitado e autônomo."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Recepção material de normas constitucionais</b> (Jorge Miranda): normas da Constituição anterior mantidas, por prazo certo, com a qualidade de normas constitucionais. Exemplo: o art. 34 do ADCT, que manteve por alguns meses o sistema tributário da Constituição de 1967."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>E o direito adquirido?</b> A lei nova pode ter três graus de retroatividade. <b>Máxima</b> (restitutória): atinge a coisa julgada e os fatos consumados. <b>Média</b>: atinge os efeitos pendentes, as prestações vencidas e ainda não pagas. <b>Mínima</b> (temperada ou mitigada): atinge só os efeitos futuros de fatos passados. A norma do poder constituinte <b>originário</b>, em regra, tem retroatividade mínima, mas pode ir além se disser expressamente. Já Constituições estaduais, emendas e leis respeitam o art. 5º, XXXVI."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, XXXVI",
+       "texto": "XXXVI - a lei não prejudicará o ==direito adquirido==, o ==ato jurídico perfeito== e a ==coisa julgada==;"
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Por que a emenda não pode o que o originário pode",
+       "html": "O originário é ilimitado juridicamente: pode, por cláusula expressa, desfazer até a coisa julgada. A emenda é poder derivado e está presa ao art. 5º, XXXVI, que é direito e garantia individual (cláusula pétrea, art. 60, § 4º, IV)."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Os três precedentes abaixo vêm do material EBEJI de Poder Constituinte (itens 7 e 8). Eles fecham a cadeia desta aula: a lei anterior não é julgada em ADI, e a Constituição nova alcança, em regra, só os efeitos futuros de fatos passados. Não encontrei no material decisão do STJ sobre o tema."
+      },
+      {
+       "t": "texto",
+       "html": "<b>1. Lei anterior à Constituição: revogação, não inconstitucionalidade.</b>"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 7-QO/DF, Rel. Min. Celso de Mello, DJ de 4/9/1992",
+       "tese": "A ação direta de inconstitucionalidade não é instrumento idôneo para examinar atos normativos editados antes da vigência da Constituição. A incompatibilidade superveniente com a nova ordem traduz hipótese de pura e simples revogação, matéria estranha à função da ADI. Por isso o STF não admite a inconstitucionalidade superveniente."
+      },
+      {
+       "t": "texto",
+       "html": "<b>2. A Constituição nova tem retroatividade mínima, salvo disposição expressa.</b>"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "1ª Turma, RE 140.499, Rel. Min. Moreira Alves, DJ de 9/9/1994",
+       "tese": "Pensões especiais vinculadas ao salário mínimo: aplica-se de imediato a vedação do art. 7º, IV, da CF/88. Os dispositivos constitucionais têm vigência imediata e alcançam os efeitos futuros de fatos passados (retroatividade mínima). Salvo disposição expressa em contrário, e a Constituição pode fazê-lo, não alcançam os fatos consumados no passado nem as prestações já vencidas e não pagas (retroatividades máxima e média)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "1ª Turma, RE 168.618/PR, Rel. Min. Moreira Alves, j. 6/9/1994, DJ de 9/6/1995",
+       "tese": "Prefeito sem foro especial na época do fato, com ação penal em curso quando a CF/88 deu foro aos Prefeitos (art. 29, X). A Constituição tem eficácia imediata e alcança os efeitos futuros de fatos passados. Para atingir caso em que o réu já não era Prefeito quando o foro surgiu, com o processo em andamento (retroatividade média), seria preciso que a Constituição o dissesse expressamente, o que não ocorre."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "O Governador pode propor ADI no STF contra lei estadual de 1985 que contraria a CF/88.",
+         "v": false,
+         "porque": "Lei anterior à Constituição não é objeto de ADI (ADI 7-QO). O caminho concentrado é a ADPF."
+        },
+        {
+         "texto": "A norma do constituinte originário alcança, em regra, as prestações futuras de contratos firmados antes de 1988.",
+         "v": true,
+         "porque": "É a retroatividade mínima (RE 140.499)."
+        },
+        {
+         "texto": "As parcelas vencidas antes de 1988 e ainda não pagas são atingidas pela Constituição nova, mesmo sem previsão expressa.",
+         "v": false,
+         "porque": "Isso seria retroatividade média, que exige disposição expressa (RE 140.499 e RE 168.618)."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Como a FCC troca",
+       "html": "\"Lei anterior à Constituição e com ela incompatível é declarada inconstitucional pelo STF em ADI, com efeitos ex tunc.\" <b>Errado</b> nas duas partes: não há inconstitucionalidade superveniente, a lei é <b>revogada</b> (não recepcionada), e o controle concentrado se faz por <b>ADPF</b>. Outra troca: \"a lei editada como ordinária e recepcionada como complementar só pode ser alterada por lei ordinária\". Errado: recebida como complementar, só lei complementar a altera."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Na PGE",
+       "html": "Em ação contra o Estado fundada em lei estadual antiga, verifique a data. Se a lei é anterior a 1988 e incompatível, a tese é de <b>não recepção</b> (revogação), discutida no próprio processo, sem precisar de ADI. E, se o autor pede parcelas anteriores à Constituição, lembre que a regra é a retroatividade mínima."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "Lassalle é <b>sociológica</b>; Schmitt, <b>política</b> (decisão fundamental); Kelsen, <b>jurídica</b>.<br><b>Cesarista</b> é o projeto do ditador ratificado pelo povo; <b>pactuada</b> é o poder dividido entre titulares.<br>CF/88: <b>analítica</b>, não sintética; <b>dogmática</b>, não histórica; <b>eclética</b>, não ortodoxa.<br>Constituição <b>semântica</b> serve ao poder; <b>nominal</b> não se efetiva; <b>normativa</b> submete o poder.<br>Lei anterior incompatível: <b>revogada</b>, não inconstitucional."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "Constituição outorgada é aquela elaborada por assembleia eleita pelo povo.",
+         "v": false,
+         "porque": "Essa é a promulgada. Outorgada é imposta unilateralmente, sem participação popular."
+        },
+        {
+         "texto": "A Constituição de 1824 era semirrígida.",
+         "v": true,
+         "porque": "Exigia processo mais difícil para algumas matérias e mais simples para outras."
+        },
+        {
+         "texto": "Segundo José Afonso da Silva, os direitos e garantias fundamentais são elementos limitativos da Constituição.",
+         "v": true,
+         "porque": "Limitam o poder estatal."
+        },
+        {
+         "texto": "No Brasil, a Constituição nova faz voltar a valer, automaticamente, a lei que havia sido revogada na ordem anterior.",
+         "v": false,
+         "porque": "Repristinação só com previsão expressa."
+        },
+        {
+         "texto": "A Constituição semântica é a que tem suas normas efetivamente respeitadas pelos detentores do poder.",
+         "v": false,
+         "porque": "Essa é a normativa. A semântica é mero instrumento de quem detém o poder."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B3-a02",
+   "topico_id": "B3-02",
+   "numero": 2,
+   "titulo": "Princípios fundamentais: arts. 1º a 4º",
+   "status": "pronta",
+   "fonte": "Material EBEJI: Princípios Fundamentais (2026); Material EBEJI: Separação dos Poderes (2026); CF, texto vigente",
+   "resumo": [
+    "Estado = povo + território + poder político (soberania). A finalidade não é elemento.",
+    "República (forma de governo): não é cláusula pétrea, é princípio sensível, confirmada em plebiscito. Federação (forma de Estado): cláusula pétrea.",
+    "Fundamentos (art. 1º): SO-CI-DI-VA-PLU. Objetivos (art. 3º): começam com verbo. Relações internacionais: art. 4º.",
+    "Democracia semidireta: o poder é exercido por representantes ou diretamente (art. 1º, parágrafo único).",
+    "Separação dos Poderes é cláusula pétrea, com funções típicas e atípicas e indelegabilidade.",
+    "ADPF 153: a Lei da Anistia foi mantida pelo STF; a Corte IDH (Gomes Lund) a julgou incompatível com a Convenção Americana."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: o Estado e as três escolhas de 1988",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O Título I responde a três perguntas antes de qualquer direito: <b>que Estado é este, para que ele existe e como se comporta lá fora</b>. Para entender, comece pelo próprio Estado. Na definição de Jellinek, é a corporação de um povo, assentada num território e dotada de um poder originário de mando. Em versão curta: <b>povo organizado politicamente num território</b>."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Povo",
+         "titulo": "Os nacionais",
+         "texto": "Conjunto dos cidadãos de um Estado. Não confunda com <b>população</b> (número de habitantes) nem com <b>nação</b> (comunidade histórica e cultural homogênea)."
+        },
+        {
+         "tag": "Território",
+         "titulo": "Onde vale o poder",
+         "texto": "Espaço em que o Estado exerce a soberania: terra, águas, mar territorial, subsolo, plataforma continental e espaço aéreo."
+        },
+        {
+         "tag": "Poder político",
+         "titulo": "Soberania",
+         "texto": "Poder de mando de última instância (Jean Bodin, século XVI). Indivisível, irrevogável, perpétuo e supremo. Titular: o Estado."
+        },
+        {
+         "tag": "Finalidade?",
+         "titulo": "Não é elemento",
+         "texto": "O Estado persegue o bem comum, mas não deixa de ser Estado se falhar nisso. Por isso a finalidade não é elemento constitutivo."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 1º, caput",
+       "texto": "Art. 1º A República Federativa do Brasil, formada pela ==união indissolúvel== dos Estados e Municípios e do Distrito Federal, constitui-se em ==Estado Democrático de Direito== e tem como fundamentos:"
+      },
+      {
+       "t": "texto",
+       "html": "Daí saem as três escolhas estruturais de 1988. Repare na diferença de proteção de cada uma, porque é exatamente isso que a FCC cobra."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Escolha",
+        "Qual é",
+        "Proteção"
+       ],
+       "linhas": [
+        [
+         "Forma de governo",
+         "República",
+         "<b>Não</b> é cláusula pétrea em 1988 (foi de 1891 em diante). É princípio sensível (art. 34, VII, a) e foi confirmada pelo povo no plebiscito do art. 2º do ADCT"
+        ],
+        [
+         "Forma de Estado",
+         "Federação",
+         "Cláusula pétrea (art. 60, § 4º, I). Federalismo por <b>desagregação</b>, a partir do Estado unitário"
+        ],
+        [
+         "Sistema de governo",
+         "Presidencialismo",
+         "Também foi submetido ao plebiscito do art. 2º do ADCT"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 34, VII, a",
+       "texto": "VII - assegurar a observância dos seguintes princípios constitucionais:\na) ==forma republicana==, sistema representativo e regime democrático;"
+      },
+      {
+       "t": "lei",
+       "ref": "ADCT, art. 2º, caput",
+       "texto": "Art. 2º. No dia 7 de setembro de 1993 o eleitorado definirá, através de ==plebiscito==, a forma (república ou monarquia constitucional) e o sistema de governo (parlamentarismo ou presidencialismo) que devem vigorar no País."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Emenda pode trazer a Monarquia?",
+       "html": "A República não está no art. 60, § 4º. Mas, segundo o material, como o povo a confirmou em plebiscito, uma emenda que instituísse a Monarquia violaria a soberania popular, salvo nova consulta ao povo."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Federação.</b> No Estado federal só o Estado federal tem soberania; os entes têm <b>autonomia</b> (auto-organização, autogoverno e autoadministração), não há hierarquia entre eles e não existe direito de secessão. O modelo brasileiro é <b>assimétrico</b> e de <b>terceiro grau</b>, porque inclui os Municípios. José Afonso da Silva nega que o Município seja ente federado, mas a posição majoritária, inclusive no STF, é de que é. O <b>Território</b> não é ente federado: integra a União."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 18, caput e § 2º",
+       "texto": "Art. 18. A organização político-administrativa da República Federativa do Brasil compreende a União, os Estados, o Distrito Federal e os Municípios, ==todos autônomos==, nos termos desta Constituição.\n§ 2º ==Os Territórios Federais integram a União==, e sua criação, transformação em Estado ou reintegração ao Estado de origem serão reguladas em lei complementar."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: fundamentos, objetivos e relações internacionais",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O Título I tem uma lógica de verbo. O art. 1º diz <b>o que o Brasil é</b> (fundamentos, substantivos). O art. 3º diz <b>o que o Brasil quer</b> (objetivos, todos começam com verbo). O art. 4º diz <b>como o Brasil se porta no mundo</b>. Leia os três artigos inteiros: a FCC copia a lista e troca um item de lugar."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 1º",
+       "texto": "Art. 1º A República Federativa do Brasil, formada pela união indissolúvel dos Estados e Municípios e do Distrito Federal, constitui-se em Estado Democrático de Direito e tem como fundamentos:\n==I - a soberania;==\n==II - a cidadania;==\n==III - a dignidade da pessoa humana;==\n==IV - os valores sociais do trabalho e da livre iniciativa;==\n==V - o pluralismo político.==\nParágrafo único. Todo o poder emana do povo, que o exerce por meio de representantes eleitos ou diretamente, nos termos desta Constituição."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "SO-CI-DI-VA-PLU",
+       "html": "<b>So</b>berania, <b>Ci</b>dadania, <b>Di</b>gnidade da pessoa humana, <b>Va</b>lores sociais do trabalho e da livre iniciativa, <b>Plu</b>ralismo político. Atenção: são os <b>valores sociais</b> do trabalho e da livre iniciativa, juntos no mesmo inciso."
+      },
+      {
+       "t": "texto",
+       "html": "O parágrafo único do art. 1º define a <b>democracia semidireta</b> (participativa): o povo exerce o poder por representantes eleitos <b>ou diretamente</b>, por plebiscito, referendo, iniciativa popular e outros meios, como a ação popular. A <b>cidadania</b>, como fundamento, vai além dos direitos políticos e abrange os direitos e deveres fundamentais. A <b>dignidade</b> é a regra matriz dos direitos fundamentais e orienta a solução dos conflitos entre eles."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 2º",
+       "texto": "Art. 2º São Poderes da União, ==independentes e harmônicos== entre si, o Legislativo, o Executivo e o Judiciário."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 3º",
+       "texto": "Art. 3º Constituem objetivos fundamentais da República Federativa do Brasil:\nI - ==construir== uma sociedade livre, justa e solidária;\nII - ==garantir== o desenvolvimento nacional;\nIII - ==erradicar== a pobreza e a marginalização e ==reduzir== as desigualdades sociais e regionais;\nIV - ==promover== o bem de todos, sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discriminação."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 4º",
+       "texto": "Art. 4º A República Federativa do Brasil rege-se nas suas relações internacionais pelos seguintes princípios:\nI - independência nacional;\nII - ==prevalência dos direitos humanos==;\nIII - autodeterminação dos povos;\nIV - ==não-intervenção==;\nV - igualdade entre os Estados;\nVI - defesa da paz;\nVII - solução pacífica dos conflitos;\nVIII - repúdio ao terrorismo e ao racismo;\nIX - cooperação entre os povos para o progresso da humanidade;\nX - ==concessão de asilo político==.\nParágrafo único. A República Federativa do Brasil buscará a integração econômica, política, social e cultural dos povos da América Latina, visando à formação de uma ==comunidade latino-americana de nações==.\n\n"
+      },
+      {
+       "t": "texto",
+       "html": "Agora teste a separação. Toque em cada célula para ver em que artigo o item está."
+      },
+      {
+       "t": "matriz",
+       "linhas": [
+        "Soberania",
+        "Independência nacional",
+        "Garantir o desenvolvimento nacional",
+        "Dignidade da pessoa humana",
+        "Prevalência dos direitos humanos",
+        "Pluralismo político",
+        "Erradicar a pobreza e a marginalização",
+        "Repúdio ao terrorismo e ao racismo"
+       ],
+       "colunas": [
+        "Fundamento (art. 1º)",
+        "Objetivo (art. 3º)",
+        "Relações internacionais (art. 4º)"
+       ],
+       "celulas": [
+        [
+         [
+          true,
+          "Art. 1º, I. Soberania interna é fundamento."
+         ],
+         [
+          false,
+          "Não está no art. 3º."
+         ],
+         [
+          false,
+          "No art. 4º o que aparece é a independência nacional (I)."
+         ]
+        ],
+        [
+         [
+          false,
+          "No art. 1º o fundamento é a soberania."
+         ],
+         [
+          false,
+          "Não é objetivo."
+         ],
+         [
+          true,
+          "Art. 4º, I."
+         ]
+        ],
+        [
+         [
+          false,
+          "Não é fundamento."
+         ],
+         [
+          true,
+          "Art. 3º, II. Começa com verbo."
+         ],
+         [
+          false,
+          "No art. 4º, o que existe é a cooperação entre os povos para o progresso da humanidade (IX)."
+         ]
+        ],
+        [
+         [
+          true,
+          "Art. 1º, III."
+         ],
+         [
+          false,
+          "O objetivo é promover o bem de todos sem preconceitos (IV)."
+         ],
+         [
+          false,
+          "No art. 4º, o correspondente é a prevalência dos direitos humanos (II)."
+         ]
+        ],
+        [
+         [
+          false,
+          "No art. 1º, o fundamento é a dignidade da pessoa humana."
+         ],
+         [
+          false,
+          "Não é objetivo."
+         ],
+         [
+          true,
+          "Art. 4º, II."
+         ]
+        ],
+        [
+         [
+          true,
+          "Art. 1º, V."
+         ],
+         [
+          false,
+          "Não é objetivo."
+         ],
+         [
+          false,
+          "Não está no art. 4º."
+         ]
+        ],
+        [
+         [
+          false,
+          "Não é fundamento."
+         ],
+         [
+          true,
+          "Art. 3º, III, junto com reduzir as desigualdades sociais e regionais."
+         ],
+         [
+          false,
+          "Não está no art. 4º."
+         ]
+        ],
+        [
+         [
+          false,
+          "Não é fundamento."
+         ],
+         [
+          false,
+          "Não é objetivo."
+         ],
+         [
+          true,
+          "Art. 4º, VIII."
+         ]
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Desigualdades: sociais e regionais",
+       "html": "O art. 3º, III, manda <b>erradicar</b> a pobreza e a marginalização e <b>reduzir</b> as desigualdades. A FCC troca: \"erradicar as desigualdades sociais e regionais\". Errado: desigualdade se <b>reduz</b>; pobreza e marginalização se erradicam."
+      },
+      {
+       "t": "texto",
+       "html": "O parágrafo único do art. 4º é a base constitucional do <b>Mercosul</b> (Brasil, Argentina, Paraguai e Uruguai, segundo o material). Na integração regional há três etapas: <b>zona de livre comércio</b> (sem barreiras entre os membros), <b>união aduaneira</b> (mais a Tarifa Externa Comum) e <b>mercado comum</b> (mais a livre circulação de capital e trabalho). O Mercosul busca o mercado comum. Os documentos-base são o Tratado de Assunção (1991), o Protocolo de Brasília (1991) e o de Ouro Preto (1994); o Protocolo de Olivos (2002) criou o Tribunal Permanente de Revisão."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e tensões: Estado de Direito, anistia e separação dos Poderes",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Estado de Direito</b> é aquele em que governantes e governados se submetem à lei e à jurisdição. O oposto é o Estado despótico, em que quem manda trata os súditos como o senhor trata os escravos. O <b>Democrático</b> acrescenta a origem popular do poder (art. 1º, parágrafo único)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>A separação dos Poderes</b> (art. 2º) não é rígida. Cada Poder atua na parcela de competência que o constituinte originário lhe deu, com funções típicas e atípicas. Daí o princípio da <b>indelegabilidade</b>: nenhum Poder transfere a outro função que é sua, salvo quando a própria Constituição prevê como atípica. Em 1988 a separação virou cláusula pétrea."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 60, § 4º, I e III",
+       "texto": "§ 4º Não será objeto de deliberação a proposta de emenda tendente a abolir:\nI - ==a forma federativa de Estado;==\nIII - ==a separação dos Poderes;=="
+      },
+      {
+       "t": "texto",
+       "html": "<b>Lei da Anistia e Corte Interamericana.</b> A Lei 6.683/1979 anistiou crimes políticos e conexos de 2/9/1961 a 15/8/1979. O STF manteve a lei na ADPF 153 (abaixo). Depois, em 14/12/2010, a Corte Interamericana de Direitos Humanos, no caso Gomes Lund e outros (Guerrilha do Araguaia) contra o Brasil, responsabilizou o país pelo desaparecimento forçado de 62 pessoas e entendeu que a Lei da Anistia é incompatível com a Convenção Americana. A Lei 12.528/2011 criou a Comissão Nacional da Verdade. Guarde a tensão: o STF julga a constitucionalidade; a Corte Interamericana julga a convencionalidade."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A ADPF 153 vem do material EBEJI de Princípios Fundamentais. As três decisões seguintes vêm do material EBEJI de Separação dos Poderes, e aparecem também na aula 1 do caderno de Administrativo, com o olhar da função administrativa. O material cita ainda, sem número de julgamento completo, o uso da solidariedade (art. 3º, I) na ADI 3.510 (pesquisa com células-tronco embrionárias) e do art. 3º, IV, no reconhecimento da união estável entre pessoas do mesmo sexo. Não encontrei decisão do STJ sobre os arts. 1º a 4º no material."
+      },
+      {
+       "t": "texto",
+       "html": "<b>1. Estado Democrático de Direito: o Judiciário não reescreve lei de anistia.</b>"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADPF 153, Rel. Min. Eros Grau, j. 29/4/2010, DJe de 6/8/2010",
+       "tese": "A Lei 6.683/1979 é uma lei-medida, ligada à transição conciliada de 1979, e deve ser interpretada a partir da realidade daquele momento. O art. 5º, XLIII, da CF/88, que torna a tortura insuscetível de graça e anistia, não alcança, por impossibilidade lógica, anistias consumadas antes da sua vigência. No Estado Democrático de Direito, nem o STF pode reescrever leis de anistia: a revisão, se vier, cabe ao Legislativo. A anistia foi reafirmada pela EC 26/1985, e a nova Constituição a reinstaurou."
+      },
+      {
+       "t": "texto",
+       "html": "<b>2. Separação dos Poderes: o Legislativo não governa no lugar do Executivo.</b>"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 179, Rel. Min. Dias Toffoli, 19/2/2014",
+       "tese": "É inconstitucional qualquer tentativa do Legislativo de definir previamente conteúdos ou fixar prazos para que o Executivo apresente proposições nas matérias de sua iniciativa, mesmo na Constituição estadual: cria um verdadeiro plano de governo e ofende a direção superior da administração pelo Chefe do Executivo (CF, arts. 2º e 84, II)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 4.348/RR, Rel. Min. Ricardo Lewandowski, 10/10/2018 (Info 919)",
+       "tese": "É inconstitucional lei estadual que exige autorização prévia da Assembleia Legislativa para que os órgãos do SISNAMA firmem instrumentos de cooperação, ou para que a fundação estadual de meio ambiente transfira atribuições a outros órgãos do sistema."
+      },
+      {
+       "t": "texto",
+       "html": "<b>3. Separação dos Poderes: o Judiciário pode corrigir omissão que fere direito fundamental.</b>"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 592.581/RS, Rel. Min. Ricardo Lewandowski, 13/8/2015, repercussão geral (Info 794)",
+       "tese": "É lícito ao Judiciário impor à Administração obrigação de fazer, consistente em medidas ou obras emergenciais em estabelecimentos prisionais, para assegurar a integridade física e moral dos presos (CF, art. 5º, XLIX). Não se pode opor a reserva do possível nem a separação dos Poderes."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "Para o STF, a vedação de anistia à tortura do art. 5º, XLIII, alcança a Lei da Anistia de 1979.",
+         "v": false,
+         "porque": "Não alcança anistias consumadas antes da CF/88 (ADPF 153)."
+        },
+        {
+         "texto": "A Constituição do Estado pode fixar prazo para o Governador enviar projeto de lei de matéria da iniciativa dele.",
+         "v": false,
+         "porque": "Fixar conteúdo ou prazo é impor plano de governo (ADI 179)."
+        },
+        {
+         "texto": "O juiz pode determinar obras emergenciais em presídio sem violar a separação dos Poderes.",
+         "v": true,
+         "porque": "Tese de repercussão geral do RE 592.581."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Como a FCC troca",
+       "html": "\"A Corte Interamericana confirmou a validade da Lei da Anistia, na linha da ADPF 153.\" <b>Errado</b>: no caso Gomes Lund, a Corte entendeu que a lei é <b>incompatível</b> com a Convenção Americana. Quem a manteve foi o STF. E: \"a forma republicana de governo é cláusula pétrea expressa\". <b>Errado</b>: o art. 60, § 4º, protege a forma <b>federativa</b>; a República é princípio sensível (art. 34, VII, a)."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Na PGE",
+       "html": "Nas ADIs estaduais contra leis da Assembleia que amarram o Governador, o argumento central é o art. 2º, com a direção superior da administração (art. 84, II, por simetria). Nas ações por omissão em direitos fundamentais (presídio, saúde), a separação dos Poderes sozinha costuma perder: discuta prazo, alternativa e impacto orçamentário comprovado."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "Fundamento é substantivo; objetivo começa com <b>verbo</b>.<br><b>Soberania</b> é fundamento (art. 1º); <b>independência nacional</b> é princípio das relações internacionais (art. 4º).<br><b>Dignidade</b> é fundamento; <b>prevalência dos direitos humanos</b> é art. 4º.<br>Pobreza se <b>erradica</b>; desigualdades se <b>reduzem</b>.<br>A federação é cláusula pétrea; a República é princípio sensível.<br>O Território não é ente federado."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A cidadania e o pluralismo político são fundamentos da República Federativa do Brasil.",
+         "v": true,
+         "porque": "Art. 1º, II e V."
+        },
+        {
+         "texto": "Garantir o desenvolvimento nacional é princípio que rege o Brasil nas relações internacionais.",
+         "v": false,
+         "porque": "É objetivo fundamental (art. 3º, II)."
+        },
+        {
+         "texto": "A concessão de asilo político é um dos objetivos fundamentais da República.",
+         "v": false,
+         "porque": "É princípio das relações internacionais (art. 4º, X)."
+        },
+        {
+         "texto": "Os Territórios Federais são entes federativos dotados de autonomia.",
+         "v": false,
+         "porque": "Integram a União (art. 18, § 2º)."
+        },
+        {
+         "texto": "A forma republicana de governo é princípio constitucional sensível.",
+         "v": true,
+         "porque": "Art. 34, VII, a."
+        },
+        {
+         "texto": "Pelo art. 1º, parágrafo único, o poder é exercido apenas por representantes eleitos.",
+         "v": false,
+         "porque": "Também diretamente, nos termos da Constituição: democracia semidireta."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B3-a03",
+   "topico_id": "B3-01",
+   "numero": 3,
+   "titulo": "Poder constituinte e reforma da Constituição",
+   "status": "pronta",
+   "fonte": "Material EBEJI: Poder Constituinte (2026); CF e ADCT, texto vigente",
+   "resumo": [
+    "Titular: o povo (art. 1º, parágrafo único). Para Sieyès, a nação.",
+    "Originário: inicial, autônomo, ilimitado juridicamente (corrente positivista, adotada), incondicionado e permanente; poder de fato.",
+    "Reformador: limites formais (iniciativa, 3/5, dois turnos, promulgação pelas Mesas), circunstanciais (intervenção, defesa, sítio), materiais (cláusulas pétreas) e implícitos. Sem dupla revisão.",
+    "Decorrente: Estados, pelas Assembleias (art. 25 e ADCT, art. 11), limitado por princípios sensíveis, estabelecidos e extensíveis. DF tem Lei Orgânica com natureza de Constituição local. Município não tem.",
+    "Revisor: art. 3º do ADCT, uma só vez, maioria absoluta, unicameral, preso às cláusulas pétreas (ADI 981-MC).",
+    "Difuso: mutação constitucional, muda o sentido sem mudar o texto."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: quem cria a Constituição",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Para Canotilho, o poder constituinte é uma questão de <b>poder, força ou autoridade política</b> capaz de criar, garantir ou eliminar uma Constituição. Na CF/88, o titular é o <b>povo</b>, pelo art. 1º, parágrafo único. Sieyès, o teórico clássico, dizia que o titular era a <b>nação</b>. A FCC pergunta isso com frequência."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 1º, parágrafo único",
+       "texto": "Parágrafo único. ==Todo o poder emana do povo==, que o exerce por meio de representantes eleitos ou diretamente, nos termos desta Constituição."
+      },
+      {
+       "t": "texto",
+       "html": "O poder constituinte aparece quando há um <b>hiato constitucional</b>: um descompasso entre o conteúdo da Constituição e a realidade social. O hiato pode levar a uma nova Constituição, a uma reforma, a uma mutação (mudança de sentido sem mudança de texto) ou a um hiato autoritário."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Espécie",
+        "O que faz",
+        "Natureza"
+       ],
+       "linhas": [
+        [
+         "<b>Originário</b> (inicial, genuíno, de 1º grau)",
+         "cria uma ordem jurídica nova, rompendo com a anterior. Pode ser histórico (o primeiro) ou revolucionário (os seguintes)",
+         "poder de fato, político, pré-jurídico"
+        ],
+        [
+         "<b>Derivado reformador</b>",
+         "altera a Constituição por emenda (arts. 59, I, e 60)",
+         "poder jurídico, condicionado, de 2º grau"
+        ],
+        [
+         "<b>Derivado decorrente</b>",
+         "elabora e altera a Constituição dos Estados (e a Lei Orgânica do DF)",
+         "poder jurídico, condicionado"
+        ],
+        [
+         "<b>Derivado revisor</b>",
+         "fez a revisão única do art. 3º do ADCT",
+         "poder jurídico, já esgotado"
+        ],
+        [
+         "<b>Difuso</b>",
+         "muda o sentido da Constituição sem mudar o texto (mutação)",
+         "poder de fato, informal"
+        ],
+        [
+         "<b>Supranacional</b>",
+         "cria ordem de cunho constitucional acima dos Estados (exemplo de estudo: União Europeia)",
+         "fundado na cidadania universal e numa soberania remodelada"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: o originário e os seus atributos",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Vire as cartas. Cada atributo do originário responde a uma pergunta: ele depende de alguém? Respeita o direito anterior? Segue uma forma? Some depois de usado?"
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Inicial",
+         "verso": "Instaura uma nova ordem jurídica e rompe por completo com a anterior."
+        },
+        {
+         "frente": "Autônomo",
+         "verso": "Quem o exerce decide sozinho a estrutura da nova Constituição."
+        },
+        {
+         "frente": "Ilimitado juridicamente",
+         "verso": "Não precisa respeitar os limites do direito anterior.",
+         "detalhe": "Com ressalvas: veja a divergência abaixo."
+        },
+        {
+         "frente": "Incondicionado",
+         "verso": "Não se submete a nenhuma forma prefixada de manifestação."
+        },
+        {
+         "frente": "Permanente",
+         "verso": "Não se esgota com a edição da Constituição: sobrevive a ela e fora dela."
+        },
+        {
+         "frente": "Pré-jurídico",
+         "verso": "É energia ou força social: a ordem jurídica começa com ele, não antes dele."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "O originário é mesmo ilimitado?",
+       "html": "Duas correntes. <b>Positivista</b>: totalmente ilimitado do ponto de vista jurídico; é a tradicionalmente adotada no Brasil. <b>Jusnaturalista</b>: há ao menos o limite do direito natural. Autores modernos como Canotilho e Paulo Branco lembram que ele obedece a padrões culturais, éticos e sociais, a princípios de justiça e ao direito internacional. Se a questão não pedir a corrente, marque a <b>positivista</b>."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Formas de expressão:</b> <b>outorga</b> (declaração unilateral do agente revolucionário: 1824, 1937, 1967 e EC 1/69) ou <b>assembleia nacional constituinte</b> (deliberação da representação popular: 1891, 1934, 1946 e 1988). O material também registra a crítica de Pedro Lenza a uma \"constituinte exclusiva\" para a reforma política: hoje, a única forma de mudar a Constituição é a PEC, com os limites do art. 60."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: a reforma por emenda e os seus limites",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O reformador é criado pelo originário e está preso às regras dele. Leia o art. 60 inteiro: cada parágrafo é uma espécie de limite."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 60",
+       "texto": "Art. 60. A Constituição poderá ser emendada mediante proposta:\nI - ==de um terço, no mínimo==, dos membros da Câmara dos Deputados ou do Senado Federal;\nII - do Presidente da República;\nIII - ==de mais da metade das Assembléias Legislativas== das unidades da Federação, manifestando-se, cada uma delas, pela maioria relativa de seus membros.\n§ 1º A Constituição não poderá ser emendada ==na vigência de intervenção federal, de estado de defesa ou de estado de sítio==.\n§ 2º A proposta será discutida e votada em cada Casa do Congresso Nacional, em dois turnos, considerando-se aprovada se obtiver, em ambos, ==três quintos== dos votos dos respectivos membros.\n§ 3º A emenda à Constituição será promulgada ==pelas Mesas da Câmara dos Deputados e do Senado Federal==, com o respectivo número de ordem.\n§ 4º Não será objeto de deliberação a proposta de emenda ==tendente a abolir==:\nI - a forma federativa de Estado;\nII - o voto direto, secreto, universal e periódico;\nIII - a separação dos Poderes;\nIV - os direitos e garantias individuais.\n§ 5º A matéria constante de proposta de emenda rejeitada ou havida por prejudicada não pode ser objeto de nova proposta ==na mesma sessão legislativa==."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Formais",
+         "sub": "quem propõe e como vota",
+         "texto": "Iniciativa restrita (1/3 da Câmara ou do Senado, Presidente, mais da metade das Assembleias), dois turnos em cada Casa, 3/5 e promulgação pelas Mesas. Não há sanção nem veto do Presidente. A matéria rejeitada só volta na sessão legislativa seguinte (§ 5º)."
+        },
+        {
+         "titulo": "Circunstanciais",
+         "sub": "quando não pode",
+         "texto": "Nada de emenda durante intervenção federal, estado de defesa ou estado de sítio (§ 1º)."
+        },
+        {
+         "titulo": "Materiais",
+         "sub": "o que não pode",
+         "texto": "Cláusulas pétreas: forma federativa, voto direto, secreto, universal e periódico, separação dos Poderes e direitos e garantias individuais (§ 4º). O texto proíbe a emenda <b>tendente a abolir</b>, não qualquer mudança."
+        },
+        {
+         "titulo": "Implícitos",
+         "sub": "o que o sistema proíbe",
+         "texto": "Não se pode mudar o titular do poder originário nem o do reformador, nem suprimir as próprias limitações expressas. O Brasil <b>não</b> adota a teoria da dupla revisão (primeiro derrubar o limite, depois mudar o protegido)."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"O voto obrigatório é cláusula pétrea.\"",
+       "html": "Errado. O § 4º, II, protege o voto direto, secreto, universal e <b>periódico</b>. A obrigatoriedade não está lá."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Emenda não tem sanção",
+       "html": "Quem promulga a emenda são as <b>Mesas</b> da Câmara e do Senado, com número de ordem (§ 3º). O Presidente pode <b>propor</b> (II), mas não sanciona nem veta."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções: o poder decorrente, o revisor e o difuso",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Decorrente.</b> Os Estados se auto-organizam por Constituições próprias, e o exercício desse poder foi dado às Assembleias Legislativas. Ele tem duas modalidades: <b>inicial</b> (instituidor, que elabora a Constituição estadual) e <b>de revisão estadual</b> (que a modifica)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 25, caput",
+       "texto": "Art. 25. Os Estados organizam-se e regem-se pelas Constituições e leis que adotarem, ==observados os princípios desta Constituição==."
+      },
+      {
+       "t": "lei",
+       "ref": "ADCT, art. 11, caput",
+       "texto": "Art. 11. Cada Assembléia Legislativa, ==com poderes constituintes==, elaborará a Constituição do Estado, no prazo de um ano, contado da promulgação da Constituição Federal, obedecidos os princípios desta."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Princípios que limitam o decorrente",
+        "O que são",
+        "Exemplo"
+       ],
+       "linhas": [
+        [
+         "<b>Sensíveis</b>",
+         "expressos na CF; violados, autorizam intervenção",
+         "art. 34, VII, a a e"
+        ],
+        [
+         "<b>Estabelecidos</b> (organizatórios)",
+         "extraídos das normas centrais espalhadas na CF; podem ser limites explícitos vedatórios, inerentes ou decorrentes",
+         "repartição de competências, sistema tributário, organização dos Poderes"
+        ],
+        [
+         "<b>Extensíveis</b>",
+         "normas da estrutura federal que se estendem aos Estados",
+         "investidura em cargos eletivos (art. 77), processo legislativo (art. 59), orçamento (arts. 165 e seguintes), Administração Pública (arts. 37 e seguintes)"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Distrito Federal.</b> Rege-se por lei orgânica que, pelo STF, tem natureza de verdadeira Constituição local (RE 577.025, abaixo). Por isso cabe controle concentrado no TJDFT tendo a Lei Orgânica como parâmetro."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 32, caput",
+       "texto": "Art. 32. O Distrito Federal, vedada sua divisão em Municípios, reger- se-á por ==lei orgânica==, votada em dois turnos com interstício mínimo de dez dias, e aprovada por ==dois terços da Câmara Legislativa==, que a promulgará, atendidos os princípios estabelecidos nesta Constituição."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "E os Municípios?",
+       "html": "<b>Não</b> têm poder constituinte decorrente. A lei orgânica municipal deve respeitar a Constituição Estadual e a Federal (art. 29), e ato local contrário à lei orgânica gera controle de <b>legalidade</b>, não de constitucionalidade. Territórios integram a União e também não têm esse poder."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Revisor.</b> O art. 3º do ADCT previu uma revisão após cinco anos da promulgação, por maioria absoluta, em sessão unicameral. Foi feita <b>uma só vez</b>: a norma tem eficácia exaurida. Mesmo sendo procedimento simplificado, a revisão estava presa às cláusulas pétreas (ADI 981-MC, abaixo)."
+      },
+      {
+       "t": "lei",
+       "ref": "ADCT, art. 3º",
+       "texto": "Art. 3º. A revisão constitucional será realizada após cinco anos, contados da promulgação da Constituição, pelo voto da ==maioria absoluta== dos membros do Congresso Nacional, em ==sessão unicameral==."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Difuso.</b> É o poder de fato que explica a <b>mutação constitucional</b>: processo informal e espontâneo que muda o sentido interpretativo, com o texto intacto. A mutação não pode atingir os princípios estruturantes da Constituição."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "As duas decisões abaixo vêm do material EBEJI de Poder Constituinte. Uma fecha a questão do revisor; a outra, a do DF. Não encontrei no material decisão do STJ sobre o tema."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 981-MC, Rel. Min. Néri da Silveira, j. 17/3/1993, DJ de 5/8/1994",
+       "tese": "Emenda ou revisão, como processos de mudança na Constituição, são manifestações do poder constituinte instituído e, por sua natureza, limitado. A revisão do art. 3º do ADCT está sujeita aos limites do art. 60, § 4º. O resultado do plebiscito de 21/4/1993 não tornou sem objeto a revisão, que seria feita uma só vez após 5/10/1993, e as mudanças dela decorrentes estão sujeitas ao controle judicial diante das cláusulas pétreas."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 577.025, voto do Rel. Min. Ricardo Lewandowski, j. 11/12/2008, DJe de 6/3/2009",
+       "tese": "Embora o DF não conste do art. 125, § 2º, a Lei Orgânica do Distrito Federal tem natureza de verdadeira Constituição local, pela autonomia política, administrativa e financeira que a Carta confere ao ente. Por isso foi cabível a ação direta de inconstitucionalidade proposta pelo MPDFT no caso."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A revisão constitucional do ADCT podia alterar cláusulas pétreas, porque era procedimento especial.",
+         "v": false,
+         "porque": "Estava sujeita ao art. 60, § 4º (ADI 981-MC)."
+        },
+        {
+         "texto": "A revisão do art. 3º do ADCT pode ser feita de novo, se o Congresso entender necessário.",
+         "v": false,
+         "porque": "Era uma só vez: eficácia exaurida."
+        },
+        {
+         "texto": "Para o STF, a Lei Orgânica do DF pode servir de parâmetro para controle concentrado no TJDFT.",
+         "v": true,
+         "porque": "Tem natureza de Constituição local (RE 577.025)."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Como a FCC troca",
+       "html": "\"A Câmara Municipal exerce poder constituinte decorrente ao votar a Lei Orgânica.\" <b>Errado</b>: Município não tem poder decorrente. E: \"a revisão constitucional, por ser manifestação do poder originário, não se sujeitava a limites\". Errado: revisor é poder <b>derivado</b>, limitado pelas cláusulas pétreas (ADI 981-MC)."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Na PGE",
+       "html": "A PGE defende a Constituição do Estado e as emendas a ela. Antes de sustentar uma norma da Constituição estadual, confira se ela respeita os princípios sensíveis, estabelecidos e extensíveis: é o argumento que derruba, no STF, normas estaduais que copiam mal o modelo federal."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "Titular do poder constituinte na CF/88: <b>povo</b> (Sieyès: nação).<br>Originário: poder de <b>fato</b>, pré-jurídico. Derivado: poder <b>jurídico</b>.<br>Emenda: <b>3/5</b>, dois turnos, em cada Casa, promulgada pelas <b>Mesas</b>, sem sanção.<br>Revisão: <b>maioria absoluta</b>, sessão <b>unicameral</b>, uma vez, presa às cláusulas pétreas.<br>Matéria de PEC rejeitada: só na <b>próxima sessão legislativa</b>.<br>Mutação: muda o sentido, <b>não</b> o texto."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A Constituição pode ser emendada mediante proposta de um terço, no mínimo, dos membros da Câmara dos Deputados.",
+         "v": true,
+         "porque": "Art. 60, I."
+        },
+        {
+         "texto": "Pode haver emenda à Constituição durante o estado de defesa, desde que aprovada por três quintos.",
+         "v": false,
+         "porque": "Limite circunstancial: art. 60, § 1º."
+        },
+        {
+         "texto": "O Brasil admite a dupla revisão, para suprimir primeiro a cláusula pétrea e depois a matéria protegida.",
+         "v": false,
+         "porque": "Não adotada: seria violar limite implícito."
+        },
+        {
+         "texto": "A emenda constitucional aprovada é encaminhada ao Presidente da República para sanção.",
+         "v": false,
+         "porque": "É promulgada pelas Mesas da Câmara e do Senado (art. 60, § 3º)."
+        },
+        {
+         "texto": "A proposta de emenda rejeitada pode ser reapresentada na mesma sessão legislativa por iniciativa da maioria absoluta da Câmara.",
+         "v": false,
+         "porque": "Para PEC não há essa ressalva: art. 60, § 5º. A exceção da maioria absoluta é do projeto de lei (art. 67)."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B3-a04",
+   "topico_id": "B3-01",
+   "numero": 4,
+   "titulo": "Eficácia e aplicabilidade das normas constitucionais",
+   "status": "pronta",
+   "fonte": "Material EBEJI: Eficácia e Aplicabilidade das Normas Constitucionais (2026); CF, texto vigente",
+   "resumo": [
+    "Toda norma constitucional tem eficácia jurídica: no mínimo, vincula o legislador e revoga as normas contrárias.",
+    "Plena: direta, imediata e integral. Contida: imediata, mas a lei pode restringir. Limitada: mediata, depende de lei que complete.",
+    "Art. 37, I: contida para brasileiros, limitada para estrangeiros. Art. 5º, XIII: contida. Art. 37, VII: limitada.",
+    "Maria Helena Diniz acrescenta as supereficazes (cláusulas pétreas). Bulos: eficácia exaurida (ADCT).",
+    "Programática não é promessa inconsequente (art. 196, RE 271.286-AgR). A falta de lei se combate por MI e ADO."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: toda norma constitucional tem eficácia",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A ideia de partida, que a FCC adora: <b>não existe norma constitucional sem eficácia nenhuma</b>. A diferença está no grau. Primeiro separe dois conceitos. <b>Eficácia jurídica</b> é a aptidão para produzir efeitos jurídicos: a simples edição da norma já revoga as anteriores que conflitam com ela. <b>Eficácia social</b> (efetividade) é a aplicação real aos casos concretos. Algumas normas têm as duas; outras, só a jurídica."
+      },
+      {
+       "t": "texto",
+       "html": "José Afonso da Silva, seguindo Vezio Crisafulli e contra a doutrina norte-americana das normas \"não autoaplicáveis\", conclui que até a norma mais dependente de lei produz um efeito mínimo: <b>vincula o legislador</b> e condiciona a atividade da Administração e do Judiciário."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: plena, contida e limitada (José Afonso da Silva)",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Plena",
+         "sub": "aplicabilidade direta, imediata e integral",
+         "texto": "Recebeu do constituinte normatividade suficiente. Não precisa de providência posterior e cria situações exigíveis desde logo. Exemplo do STF: o direito de resposta do art. 5º, V."
+        },
+        {
+         "titulo": "Contida",
+         "sub": "aplicabilidade direta e imediata, mas pode ser restringida",
+         "texto": "Nasce plena, mas a própria Constituição permite que lei (ou outro meio) <b>reduza</b> o alcance. Enquanto a restrição não vem, vale por inteiro. Exemplo: liberdade profissional do art. 5º, XIII, restringida pelo Estatuto da OAB."
+        },
+        {
+         "titulo": "Limitada",
+         "sub": "aplicabilidade mediata, indireta e reduzida",
+         "texto": "Não produz todos os efeitos de imediato: precisa de norma integrativa, lei ou emenda. Exemplos: greve do servidor (art. 37, VII), criação de Municípios (art. 18, § 4º), aviso prévio proporcional (art. 7º, XXI)."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "A chave para diferenciar contida de limitada está no papel da lei. Na <b>contida</b>, a lei <b>restringe</b> um direito que já existe. Na <b>limitada</b>, a lei <b>completa</b> um direito que ainda não funciona sozinho. Compare os dois incisos do art. 37 e o art. 5º, XIII."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, XIII",
+       "texto": "XIII - ==é livre== o exercício de qualquer trabalho, ofício ou profissão, ==atendidas as qualificações profissionais que a lei estabelecer==;"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, I e VII",
+       "texto": "I - os cargos, empregos e funções públicas são acessíveis aos brasileiros que preencham os requisitos estabelecidos em lei, ==assim como aos estrangeiros, na forma da lei==;\nVII - o direito de greve será exercido ==nos termos e nos limites definidos em lei específica==;"
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Um inciso, duas eficácias",
+       "html": "O art. 37, I, é de eficácia <b>contida</b> para os brasileiros (a lei fixa requisitos que restringem o acesso) e <b>limitada</b> para os estrangeiros (sem a lei, não há acesso). O STF já decidiu assim (RE 544.655-AgR, abaixo)."
+      },
+      {
+       "t": "texto",
+       "html": "E a liberdade profissional tem um limite próprio: segundo o STF, citado no material, nem todo ofício pode ser condicionado por lei. A regra é a liberdade; só quando a atividade tem <b>potencial lesivo</b> pode ser exigida inscrição em conselho."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, § 1º",
+       "texto": "§ 1º As normas definidoras dos direitos e garantias fundamentais têm ==aplicação imediata==."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Aplicação imediata não é sinônimo de eficácia plena",
+       "html": "O art. 5º, § 1º, manda aplicar de imediato os direitos e garantias fundamentais. Mas, quando a própria norma remete a uma lei integradora, ela continua de eficácia limitada: é o caso da greve do servidor (art. 37, VII) e da aposentadoria especial (art. 40, § 4º). O remédio para a falta da lei é o <b>mandado de injunção</b> (caso concreto) ou a <b>ADO</b> (constituir o legislador em mora)."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e outras classificações",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "tabela",
+       "cab": [
+        "José Afonso da Silva",
+        "Maria Helena Diniz",
+        "Celso Bastos e Ayres Britto"
+       ],
+       "linhas": [
+        [
+         "",
+         "<b>Supereficazes</b> (eficácia absoluta): intangíveis, nem emenda as atinge. Ex.: cláusulas pétreas",
+         ""
+        ],
+        [
+         "Plena",
+         "<b>Eficácia plena</b>: produzem efeitos de imediato, mas podem ser emendadas",
+         "<b>De aplicação</b>, irregulamentáveis (ex.: art. 2º) ou regulamentáveis (a regulamentação não pode restringir)"
+        ],
+        [
+         "Contida",
+         "<b>Eficácia relativa restringível</b>",
+         "<b>De integração</b> restringíveis"
+        ],
+        [
+         "Limitada",
+         "<b>Eficácia relativa complementável</b> (dependente de complementação legislativa)",
+         "<b>De integração</b> completáveis"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Eficácia exaurida e aplicabilidade esgotada</b> (Uadi Lammêgo Bulos): normas que já cumpriram o seu papel e não produzem mais efeitos. São próprias do <b>ADCT</b>, como os arts. 1º, 2º, 3º, 14, 20, 25 e 48. O art. 3º (revisão) é o exemplo clássico, visto na aula 3."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Normas programáticas.</b> As que traçam fins para o Estado, como o art. 196, são de eficácia limitada. Mas o STF não as trata como conselho: a interpretação da norma programática <b>não pode transformá-la em promessa constitucional inconsequente</b> (RE 271.286-AgR, abaixo)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 196",
+       "texto": "Art. 196. A saúde é ==direito de todos e dever do Estado==, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Todas as decisões abaixo vêm da tabela \"Eficácia e aplicabilidade na jurisprudência do STF\" do material EBEJI. Organizei por resultado: primeiro as normas que o STF declarou <b>plenas</b>, depois a <b>contida</b> e as <b>limitadas</b>. Não há decisão do STJ sobre o tema no material."
+      },
+      {
+       "t": "texto",
+       "html": "<b>1. Plenas: valem sem lei.</b>"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADPF 130, Rel. Min. Carlos Britto, j. 30/4/2009, DJe de 6/11/2009",
+       "tese": "Mesmo com a não recepção da Lei de Imprensa (Lei 5.250/1967), o direito de resposta proporcional ao agravo (art. 5º, V) se qualifica como regra de suficiente densidade normativa e pode ser aplicado imediatamente, sem regulamentação legal."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "1ª Turma, RE 161.547, Rel. Min. Sepúlveda Pertence, j. 24/3/1998, DJ de 8/5/1998",
+       "tese": "A contribuição confederativa instituída pela assembleia geral (art. 8º, IV) tem eficácia plena e aplicabilidade imediata. Coerente com o seu caráter não tributário, o STF afirma a eficácia plena e imediata da norma que a previu."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 3.768, Rel. Min. Cármen Lúcia, j. 19/9/2007, DJ de 26/10/2007",
+       "tese": "A gratuidade dos transportes coletivos urbanos aos maiores de 65 anos (art. 230, § 2º) é norma de eficácia plena e aplicabilidade imediata. O art. 39 do Estatuto do Idoso apenas repete o texto constitucional, e não há invalidade na lei que repete a Constituição e manda cumpri-la. ADI julgada improcedente."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 3.569, Rel. Min. Sepúlveda Pertence, j. 2/4/2007, DJ de 11/5/2007",
+       "tese": "É de eficácia plena e aplicabilidade imediata o art. 134, § 2º (EC 45/2004), que assegura às Defensorias Públicas estaduais autonomia funcional e administrativa e a iniciativa da sua proposta orçamentária."
+      },
+      {
+       "t": "texto",
+       "html": "<b>2. Limitadas: dependem de lei.</b>"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, Ext. 541, Rel. p/ o acórdão Min. Sepúlveda Pertence, j. 7/11/1991, DJ de 18/12/1992; Plenário, Ext. 934-QO, Rel. Min. Eros Grau, j. 9/9/2004, DJ de 12/11/2004",
+       "tese": "A extradição do brasileiro naturalizado por comprovado envolvimento em tráfico de drogas, na parte final do art. 5º, LI, não é regra de eficácia plena nem de aplicabilidade imediata: a Constituição impõe à lei a criação de procedimento específico, com cognição mais ampla da acusação. Já a primeira exceção (crime comum anterior à naturalização) é de eficácia plena."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 544.655-AgR, Rel. Min. Eros Grau, j. 9/9/2008, DJe de 10/10/2008",
+       "tese": "O art. 37, I (redação da EC 19/1998), quanto ao acesso de estrangeiros a cargos públicos, é preceito de eficácia limitada: depende de regulamentação para produzir efeitos e não é autoaplicável."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, MI 670 e MI 712 (Rel. p/ o acórdão Min. Gilmar Mendes no MI 670) e MI 708, Rel. Min. Gilmar Mendes, j. 25/10/2007, DJe de 31/10/2008",
+       "tese": "O direito de greve dos servidores (art. 37, VII) é de eficácia limitada. Adotando a posição concretista geral, o STF julgou procedentes os mandados de injunção e mandou aplicar a todo o funcionalismo a lei de greve da iniciativa privada, até que o Congresso legisle."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 2.240, Rel. Min. Eros Grau, j. 9/5/2007, DJ de 3/8/2007; Plenário, ADO 3.682, Rel. Min. Gilmar Mendes, j. 9/5/2007, DJe de 6/9/2007",
+       "tese": "O art. 18, § 4º (criação de Municípios) é de eficácia limitada. Na ADI 2.240, o STF reconheceu a nulidade de lei estadual que criou Município sem a lei complementar federal e modulou os efeitos por 24 meses. Na ADO 3.682, fez apelo ao Legislativo para suprir a omissão em 18 meses. O Congresso não legislou, e a EC 57/2008 convalidou os atos de criação, fusão, incorporação e desmembramento cuja lei fora publicada até 31/12/2006."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADPF 144, Rel. Min. Celso de Mello, j. 6/8/2008, DJe de 26/2/2010",
+       "tese": "O art. 14, § 9º, não é autoaplicável: outras hipóteses de inelegibilidade, além das previstas na Constituição, dependem de lei complementar (LC 64/1990 e, depois, LC 135/2010)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "2ª Turma, RE 271.286-AgR, Rel. Min. Celso de Mello, j. 12/9/2000, DJ de 24/11/2000",
+       "tese": "O direito à saúde (art. 196) é prerrogativa jurídica indisponível, consequência indissociável do direito à vida. O caráter programático da norma não pode convertê-la em promessa constitucional inconsequente. É válido o reconhecimento judicial de programas de distribuição gratuita de medicamentos a pessoas carentes, inclusive portadoras de HIV."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, MI 369, Rel. p/ o acórdão Min. Francisco Rezek, j. 19/8/1992, DJ de 26/2/1993; Plenário, MI 1.090, Rel. Min. Gilmar Mendes, j. 6/2/2013, DJe de 23/4/2013",
+       "tese": "O aviso prévio proporcional ao tempo de serviço (art. 7º, XXI) é norma de eficácia limitada. A matéria foi regulamentada pela Lei 12.506/2011."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 169.173, Rel. Min. Moreira Alves, j. 16/5/1997",
+       "tese": "O adicional para atividades penosas, insalubres ou perigosas (art. 7º, XXIII) teve aplicação imediata para os trabalhadores porque a CF/88 recebeu o art. 193 da CLT. Para os servidores civis da União, dos Estados, do DF e dos Municípios, depende da legislação do respectivo regime jurídico: aí a eficácia é limitada."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "O direito de resposta do art. 5º, V, ficou sem aplicação depois que o STF declarou não recepcionada a Lei de Imprensa.",
+         "v": false,
+         "porque": "É norma de eficácia plena, aplicável sem lei (ADPF 130)."
+        },
+        {
+         "texto": "Lei que apenas repete a gratuidade do transporte para maiores de 65 anos é inválida, por ser desnecessária.",
+         "v": false,
+         "porque": "A norma é plena, e repeti-la em lei não gera invalidade (ADI 3.768)."
+        },
+        {
+         "texto": "Sem lei, o estrangeiro não tem direito subjetivo a tomar posse em cargo público estadual.",
+         "v": true,
+         "porque": "Para estrangeiros, o art. 37, I, é de eficácia limitada (RE 544.655-AgR)."
+        },
+        {
+         "texto": "No MI da greve dos servidores, o STF adotou a posição concretista individual, valendo só para os impetrantes.",
+         "v": false,
+         "porque": "Adotou a concretista geral, aplicando a lei da iniciativa privada a todo o funcionalismo."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Como a FCC troca",
+       "html": "\"O art. 5º, XIII, é norma de eficácia limitada, pois depende de lei que estabeleça as qualificações profissionais.\" <b>Errado</b>: é de eficácia <b>contida</b>. A lei restringe; sem ela, o exercício é livre. Outra troca frequente: \"o art. 196 é norma programática e, por isso, não gera direito exigível em juízo\". Errado diante do RE 271.286-AgR."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Na PGE",
+       "html": "Em ação de servidor que pede direito com base em norma de eficácia limitada (aposentadoria especial, adicional de insalubridade, greve), a primeira defesa é a eficácia: sem a lei do ente, não há direito subjetivo, e o caminho seria o mandado de injunção, não a ação ordinária de cobrança. Confira, porém, se o STF já supriu a omissão no caso (como na greve)."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "<b>Contida</b>: a lei <b>restringe</b>; sem lei, vale tudo. <b>Limitada</b>: a lei <b>completa</b>; sem lei, falta efeito.<br>Até a limitada tem eficácia jurídica mínima: <b>vincula o legislador</b> e revoga o que for contrário.<br>Art. 5º, § 1º: aplicação imediata não torna toda norma plena.<br>Norma do ADCT que já cumpriu o papel: eficácia <b>exaurida</b>."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "Norma de eficácia limitada não produz nenhum efeito antes da lei regulamentadora.",
+         "v": false,
+         "porque": "Produz ao menos eficácia jurídica: vincula o legislador e revoga as normas contrárias."
+        },
+        {
+         "texto": "Norma de eficácia contida tem aplicabilidade imediata e pode ter o alcance reduzido por lei.",
+         "v": true,
+         "porque": "Enquanto a restrição não vem, vale por inteiro."
+        },
+        {
+         "texto": "Para Maria Helena Diniz, as cláusulas pétreas são normas de eficácia absoluta.",
+         "v": true,
+         "porque": "Supereficazes: intangíveis até para a emenda."
+        },
+        {
+         "texto": "O art. 14, § 9º, é autoaplicável e permite à Justiça Eleitoral criar inelegibilidades pela vida pregressa do candidato.",
+         "v": false,
+         "porque": "Depende de lei complementar (ADPF 144)."
+        },
+        {
+         "texto": "O art. 3º do ADCT, que previu a revisão constitucional, é norma de eficácia exaurida.",
+         "v": true,
+         "porque": "A revisão foi feita uma só vez."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B3-a05",
+   "topico_id": "B3-01",
+   "numero": 5,
+   "titulo": "Hermenêutica constitucional e neoconstitucionalismo",
+   "status": "a_montar"
+  },
+  {
+   "id": "B3-a06",
+   "topico_id": "B3-03",
+   "numero": 6,
+   "titulo": "Direitos e garantias fundamentais: teoria geral e direitos individuais",
+   "status": "a_montar"
+  },
+  {
+   "id": "B3-a07",
+   "topico_id": "B3-03",
+   "numero": 7,
+   "titulo": "Remédios constitucionais",
+   "status": "a_montar"
+  },
+  {
+   "id": "B3-a08",
+   "topico_id": "B3-03",
+   "numero": 8,
+   "titulo": "Direitos sociais, nacionalidade e direitos políticos",
+   "status": "a_montar"
+  },
+  {
+   "id": "B3-a09",
+   "topico_id": "B3-04",
+   "numero": 9,
+   "titulo": "Organização do Estado: Federação e repartição de competências",
+   "status": "a_montar"
+  },
+  {
+   "id": "B3-a10",
+   "topico_id": "B3-04",
+   "numero": 10,
+   "titulo": "Intervenção federal e estadual",
+   "status": "a_montar"
+  },
+  {
+   "id": "B3-a11",
+   "topico_id": "B3-05",
+   "numero": 11,
+   "titulo": "Administração Pública na Constituição",
+   "status": "a_montar"
+  },
+  {
+   "id": "B3-a12",
+   "topico_id": "B3-06",
+   "numero": 12,
+   "titulo": "Poder Legislativo e processo legislativo",
+   "status": "a_montar"
+  },
+  {
+   "id": "B3-a13",
+   "topico_id": "B3-07",
+   "numero": 13,
+   "titulo": "Poder Executivo",
+   "status": "a_montar"
+  },
+  {
+   "id": "B3-a14",
+   "topico_id": "B3-08",
+   "numero": 14,
+   "titulo": "Poder Judiciário",
+   "status": "a_montar"
+  },
+  {
+   "id": "B3-a15",
+   "topico_id": "B3-09",
+   "numero": 15,
+   "titulo": "Funções essenciais à Justiça",
+   "status": "a_montar"
+  },
+  {
+   "id": "B3-a16",
+   "topico_id": "B3-10",
+   "numero": 16,
+   "titulo": "Controle de constitucionalidade",
+   "status": "a_montar"
+  },
+  {
+   "id": "B3-a17",
+   "topico_id": "B3-11",
+   "numero": 17,
+   "titulo": "Defesa do Estado e segurança pública",
+   "status": "a_montar"
+  },
+  {
+   "id": "B3-a18",
+   "topico_id": "B3-12",
+   "numero": 18,
+   "titulo": "Tributação, orçamento e ordem econômica e social",
+   "status": "a_montar"
+  },
+  {
+   "id": "B3-a19",
+   "topico_id": "B3-13",
+   "numero": 19,
+   "titulo": "Constituição do Estado do Maranhão",
+   "status": "a_montar"
+  }
+ ],
+ "glossario": [
+  [
+   "Recepção",
+   "Acolhimento, pela Constituição nova, da lei anterior compatível com ela no conteúdo."
+  ],
+  [
+   "Repristinação",
+   "Volta a valer de uma lei revogada quando a lei que a revogou deixa de existir. No Brasil, só se houver previsão expressa."
+  ],
+  [
+   "Desconstitucionalização",
+   "Normas da Constituição anterior que continuam valendo como lei comum. No Brasil, só com previsão expressa."
+  ],
+  [
+   "Cláusula pétrea",
+   "Matéria do art. 60, § 4º, que emenda não pode tender a abolir."
+  ],
+  [
+   "Princípio sensível",
+   "Princípio do art. 34, VII, cuja violação pelo Estado autoriza intervenção federal."
+  ],
+  [
+   "Mutação constitucional",
+   "Mudança do sentido da norma sem mudança do texto. Obra do poder constituinte difuso."
+  ],
+  [
+   "Norma programática",
+   "Norma de eficácia limitada que traça fins e programas para o Estado."
+  ]
+ ]
+}
