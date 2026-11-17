@@ -271,9 +271,437 @@
    ]
   },
   {
+   "id": "B2-a09",
+   "topico_id": "B2-01",
+   "numero": 2,
+   "titulo": "Regime jurídico-administrativo e princípios",
+   "status": "pronta",
+   "fonte": "Material EBEJI: Princípios Fundamentais da Administração Pública (2026); CF, arts. 5º, 37 e 84, e Lei 9.784/1999 (textos vigentes, conferidos em 15/11/2026)",
+   "resumo": [
+    "O regime jurídico-administrativo é o conjunto de princípios que dá ao Estado prerrogativas (supremacia do interesse público) e sujeições (indisponibilidade do interesse público). São as duas pedras de toque.",
+    "Os princípios expressos estão no caput do art. 37 da CF: legalidade, impessoalidade, moralidade, publicidade e eficiência (LIMPE). Valem para todos os Poderes na função administrativa, em todos os entes, na direta e na indireta.",
+    "Legalidade para a Administração é agir só segundo a lei; o particular pode tudo o que a lei não proíbe. Ofensa à moralidade, à razoabilidade ou à proporcionalidade é ilegalidade: o ato é anulado, não revogado.",
+    "Publicidade é requisito de eficácia, não de validade. Impessoalidade proíbe a promoção pessoal na publicidade oficial (art. 37, § 1º).",
+    "Pela autotutela (Súmula 473 do STF; Lei 9.784, art. 53), a Administração anula o ato ilegal e revoga o inconveniente. Para anular ato favorável, o prazo é de cinco anos, salvo má-fé (art. 54)."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: prerrogativas e sujeições",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O Direito Administrativo nasce de uma tensão. De um lado, o Estado precisa de <b>poderes</b> que o particular não tem para cuidar do interesse de todos: desapropriar, fiscalizar, alterar um contrato sozinho. De outro, ele <b>não é dono</b> do que administra: gere coisa alheia, do povo.<br><br>Esse conjunto harmônico de princípios é o <b>regime jurídico-administrativo</b>. Celso Antônio Bandeira de Mello chamou seus dois pilares de <b>pedras de toque</b>: a supremacia e a indisponibilidade do interesse público. Os dois são <b>implícitos</b>: não aparecem com esse nome na Constituição."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Supremacia",
+         "sub": "do interesse público sobre o privado",
+         "verso": "Em conflito, o interesse público prevalece sobre o privado, dentro dos limites da lei. É a fonte das prerrogativas.",
+         "detalhe": "Ex.: intervenção na propriedade, cláusulas exorbitantes, poder de polícia, presunção de legitimidade dos atos."
+        },
+        {
+         "frente": "Indisponibilidade",
+         "sub": "do interesse público",
+         "verso": "O administrador não é dono dos bens e interesses públicos. Não pode renunciar a receitas nem alienar bem afetado. É a fonte das sujeições.",
+         "detalhe": "Ex.: renunciar a tributo ou multa só se a lei prever (anistia, remissão, transação); licitação; concurso."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Atos de gestão",
+       "html": "A supremacia incide <b>diretamente</b> nos atos de império, mas <b>não</b> nos atos de gestão e de mero expediente, em que a Administração age como um particular gerindo bens. Já a <b>indisponibilidade</b> está presente em <b>toda</b> atuação pública, inclusive quando o Estado age sob regime de direito privado (como agente econômico)."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Interesse público primário",
+        "Interesse público secundário"
+       ],
+       "linhas": [
+        [
+         "Titular",
+         "O povo, a coletividade",
+         "O Estado como pessoa jurídica"
+        ],
+        [
+         "Conteúdo",
+         "Interesses gerais imediatos",
+         "Interesses patrimoniais (aumentar a riqueza do Estado)"
+        ],
+        [
+         "Legitimidade",
+         "Sempre o fim da atuação",
+         "Só é legítimo se servir ao primário, nunca contra ele"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Princípio não é regra.</b> A regra resolve uma situação concreta (o modo e o momento de agir). O princípio é norma geral que dá sentido ao sistema e orienta todas as regras. Por isso um ato pode cumprir a letra de uma regra e mesmo assim ser inválido por ferir um princípio."
+      }
+     ]
+    },
+    {
+     "titulo": "Os expressos do art. 37: LIMPE",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, caput",
+       "texto": "Art. 37. A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de ==legalidade, impessoalidade, moralidade, publicidade e eficiência== e, também, ao seguinte:"
+      },
+      {
+       "t": "texto",
+       "html": "Repare no alcance: administração <b>direta e indireta</b>, de <b>qualquer dos Poderes</b> (quando exercem função administrativa), de <b>todos os entes</b>. A eficiência entrou pela <b>EC 19/1998</b>; os outros quatro são originais."
+      },
+      {
+       "t": "texto",
+       "html": "<b>1. Legalidade.</b> O particular pode fazer tudo o que a lei não proíbe. A Administração só pode fazer o que a lei determina ou autoriza: age <i>secundum legem</i>, nunca <i>contra legem</i> nem <i>praeter legem</i>. Mesmo no ato discricionário, ela fica dentro dos limites da lei."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, II, e Lei 9.784/1999, art. 2º, parágrafo único, I",
+       "texto": "II - ninguém será obrigado a fazer ou deixar de fazer alguma coisa ==senão em virtude de lei==;\nI - atuação conforme a lei ==e o Direito==;"
+      },
+      {
+       "t": "texto",
+       "html": "A expressão \"a lei <b>e o Direito</b>\" é o que a doutrina chama de <b>bloco de legalidade</b> ou <b>juridicidade</b>: a Administração obedece a todo o ordenamento, inclusive princípios e seus próprios atos normativos. Por isso, o ato normativo típico da Administração <b>não inova</b> na ordem jurídica: não cria direito nem obrigação nova."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Exceção",
+         "titulo": "Decreto autônomo",
+         "texto": "Introduzido pela EC 32/2001, é ato primário, fundado direto na Constituição, sem lei para regulamentar. Só serve para as duas matérias do art. 84, VI: (a) organização e funcionamento da administração federal, quando não implicar aumento de despesa nem criação ou extinção de órgãos públicos; (b) extinção de funções ou cargos públicos, quando vagos;"
+        },
+        {
+         "tag": "Ponderação",
+         "titulo": "Legalidade × segurança jurídica",
+         "texto": "A legalidade não é absoluta. Em conflito com a segurança jurídica, pondera-se caso a caso. Às vezes a própria lei já fez a ponderação: é o prazo de decadência de cinco anos do art. 54 da Lei 9.784."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>2. Impessoalidade.</b> Tem duas faces. A primeira é a <b>finalidade</b>: todo ato busca o interesse público, e o ato com outro objetivo é <b>nulo por desvio de finalidade</b>. Basta desviar da finalidade específica (a que a lei fixou para aquele ato) para gerar nulidade. A segunda é a <b>vedação à promoção pessoal</b>:"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, § 1º",
+       "texto": "§ 1º A publicidade dos atos, programas, obras, serviços e campanhas dos órgãos públicos deverá ter ==caráter educativo, informativo ou de orientação social==, dela não podendo constar ==nomes, símbolos ou imagens que caracterizem promoção pessoal== de autoridades ou servidores públicos."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 6.522/DF, Rel. Min. Cármen Lúcia, 14/5/2021 (Info 1017)",
+       "tese": "O § 1º do art. 37 não admite flexibilização por norma infraconstitucional ou regulamentar. É inconstitucional a lei orgânica que deixa cada Poder definir, por norma interna, quando a divulgação não será promoção pessoal."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Funcionário de fato",
+       "html": "O agente com investidura viciada pratica atos que, em regra, valem. O fundamento é a impessoalidade (o ato é imputado ao <b>órgão</b>, não à pessoa) somada à boa-fé dos administrados, ligada à moralidade."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 615",
+       "tese": "Não pode ocorrer ou permanecer a inscrição do município em cadastros restritivos fundada em irregularidades na gestão anterior quando, na gestão sucessora, são tomadas as providências cabíveis à reparação dos danos eventualmente cometidos."
+      },
+      {
+       "t": "texto",
+       "html": "Essa súmula aplica a <b>intranscendência subjetiva das sanções</b>: a sanção não passa da pessoa do infrator. O STF usa a mesma ideia para livrar o novo gestor (1ª Turma, AC 2.614/PE, Rel. Min. Luiz Fux, 23/6/2015, Info 791) e para impedir que a inscrição de uma autarquia, ou de pendências do Legislativo e do Judiciário locais, atinja o Executivo do Estado (ACO 1.848 AgR, 2014; ACO 2.995 AgR, 2018)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>3. Moralidade.</b> O agente deve agir com ética, honestidade e boa-fé. A moralidade é <b>objetiva</b>: sai do ordenamento, não da convicção íntima do agente. Como está expressa na CF, é <b>condição de validade</b> do ato: o ato imoral é <b>nulo</b>, deve ser <b>anulado</b> (não revogado) e pode ser controlado pelo Judiciário."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, arts. 37, § 4º, e 5º, LXXIII",
+       "texto": "§ 4º - Os atos de improbidade administrativa importarão a ==suspensão dos direitos políticos==, a ==perda da função pública==, a ==indisponibilidade dos bens== e o ==ressarcimento ao erário==, na forma e gradação previstas em lei, sem prejuízo da ação penal cabível.\nLXXIII - qualquer cidadão é parte legítima para propor ==ação popular== que vise a anular ato lesivo ao patrimônio público ou de entidade de que o Estado participe, à ==moralidade administrativa==, ao meio ambiente e ao patrimônio histórico e cultural, ficando o autor, salvo comprovada má-fé, isento de custas judiciais e do ônus da sucumbência;"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula Vinculante 13",
+       "tese": "A nomeação de cônjuge, companheiro ou parente em linha reta, colateral ou por afinidade, até o terceiro grau, inclusive, da autoridade nomeante ou de servidor da mesma pessoa jurídica investido em cargo de direção, chefia ou assessoramento, para o exercício de cargo em comissão ou de confiança ou, ainda, de função gratificada na Administração Pública direta e indireta em qualquer dos poderes da União, dos Estados, do Distrito Federal e dos municípios, compreendido o ajuste mediante designações recíprocas, viola a Constituição Federal."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "1ª Turma, Rcl 28.024 AgR, Rel. Min. Roberto Barroso, 29/5/2018",
+       "tese": "Em regra, a SV 13 não alcança a nomeação para cargo de natureza política (como secretário), salvo fraude ou falta evidente de qualificação técnica ou de idoneidade moral do nomeado."
+      },
+      {
+       "t": "texto",
+       "html": "<b>4. Publicidade.</b> Tem dois sentidos. Como <b>requisito de eficácia</b>: o ato pode ser perfeito e válido, mas, enquanto não publicado, não produz efeitos. Como <b>transparência</b>: permite o controle pelo povo e pelos órgãos de controle, e por isso se liga ao dever de motivar."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 2º, parágrafo único, V",
+       "texto": "V - divulgação oficial dos atos administrativos, ==ressalvadas as hipóteses de sigilo== previstas na Constituição;"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADPF 872/DF, Rel. Min. Cármen Lúcia, 15/8/2023 (Info 1103)",
+       "tese": "O ato de qualquer dos poderes públicos restritivo de publicidade deve ser motivado objetiva, específica e formalmente, sendo nulos os atos públicos que imponham, genericamente e sem fundamentação válida e específica, impeditivo do direito fundamental à informação."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ARE 652.777/SP, Rel. Min. Teori Zavascki, 23/4/2015, repercussão geral (Info 782)",
+       "tese": "É legítima a publicação, inclusive em sítio eletrônico mantido pela Administração Pública, dos nomes de seus servidores e do valor dos correspondentes vencimentos e vantagens pecuniárias."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Lei de Acesso à Informação",
+       "html": "A LAI (Lei 12.527/2011) com prazos de sigilo, pedidos e recursos fica para a aula 24 (Anticorrupção e transparência). Aqui guarde a regra: <b>publicidade é a regra e o sigilo é exceção</b>, sempre temporário e motivado."
+      },
+      {
+       "t": "texto",
+       "html": "<b>5. Eficiência.</b> Exige serviço de qualidade, adequado e com a melhor relação custo-benefício (liga-se à <b>economicidade</b> do art. 70). Tem duas faces: o modo de atuar do agente (ex.: avaliação especial de desempenho para a estabilidade, art. 41) e o modo de organizar a Administração. A expressão mais nítida é o contrato do § 8º:"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, § 8º",
+       "texto": "§ 8º A autonomia gerencial, orçamentária e financeira dos órgãos e entidades da administração direta e indireta ==poderá ser ampliada mediante contrato==, a ser firmado entre seus administradores e o poder público, que tenha por objeto a ==fixação de metas de desempenho== para o órgão ou entidade, cabendo à lei dispor sobre:\nI - o prazo de duração do contrato;\nII - os controles e critérios de avaliação de desempenho, direitos, obrigações e responsabilidade dos dirigentes;\nIII - a remuneração do pessoal."
+      },
+      {
+       "t": "texto",
+       "html": "No âmbito federal, a Lei 13.934/2019 regulamentou esse ajuste com o nome de <b>contrato de desempenho</b>. Como a eficiência é princípio expresso, também é controle de legalidade: se o Judiciário for provocado, pode anular o ato que a desrespeite."
+      }
+     ]
+    },
+    {
+     "titulo": "Implícitos, ponderação e autotutela",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Além dos cinco do art. 37, a Lei 9.784/1999 lista expressamente outros princípios que, na CF, são implícitos. Para a Administração federal, eles são letra de lei:"
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 2º, caput",
+       "texto": "Art. 2o A Administração Pública obedecerá, dentre outros, aos princípios da legalidade, ==finalidade==, ==motivação==, ==razoabilidade, proporcionalidade==, moralidade, ampla defesa, contraditório, ==segurança jurídica==, ==interesse público== e eficiência."
+      },
+      {
+       "t": "leia",
+       "ref": "Lei 9.784/1999, art. 2º, parágrafo único, I a XIII",
+       "motivo": "Os 13 critérios traduzem cada princípio em conduta (ex.: III é impessoalidade, IV é moralidade, V é publicidade, XIII protege a segurança jurídica). A FCC copia esses incisos nas alternativas."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Razoabilidade e proporcionalidade.</b> Não estão escritas na CF, mas o STF as extrai do <b>devido processo legal substantivo</b> (art. 5º, LIV): além das garantias de processo (sentido formal), protege-se o próprio bem jurídico contra excessos (sentido material). No Direito Administrativo, a razoabilidade costuma ser o <b>gênero</b>, e a proporcionalidade, a parte ligada aos atos sancionatórios."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Adequação",
+         "sub": "o meio serve?"
+        },
+        {
+         "titulo": "Necessidade",
+         "sub": "é o menos gravoso?"
+        },
+        {
+         "titulo": "Estrita",
+         "sub": "vale a pena?"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Adequação:</b> o ato precisa ser apto a atingir o fim pretendido."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Necessidade:</b> entre os meios igualmente eficazes, usa-se o menos restritivo, o mais brando."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Proporcionalidade em sentido estrito</b> (para parte dos autores): as vantagens ao interesse público devem superar as restrições impostas. Senão, o ato é ilegítimo."
+        },
+        {
+         "no": 1,
+         "texto": "Na sanção, mede-se a pena pela gravidade e pela lesividade da conduta. É o que diz o inciso VI do art. 2º, parágrafo único."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 2º, parágrafo único, VI",
+       "texto": "VI - adequação entre meios e fins, ==vedada a imposição de obrigações, restrições e sanções em medida superior== àquelas ==estritamente necessárias== ao atendimento do interesse público;"
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Legalidade, não mérito",
+       "html": "O controle pela razoabilidade e pela proporcionalidade é controle de <b>legalidade</b> (ou legitimidade), não de mérito. Por isso o Judiciário pode fazê-lo, sobretudo em atos discricionários que restringem direitos, e a consequência é a <b>anulação</b>."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Segurança jurídica e proteção da confiança.</b> A segurança jurídica tem uma face subjetiva: a <b>proteção da confiança legítima</b> de quem acreditou, de boa-fé, num ato do Estado. Ela aparece na proibição de aplicar nova interpretação de forma retroativa e no prazo de decadência para anular:"
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, arts. 2º, parágrafo único, XIII, e 54",
+       "texto": "XIII - interpretação da norma administrativa da forma que melhor garanta o atendimento do fim público a que se dirige, ==vedada aplicação retroativa de nova interpretação==.\nArt. 54. O direito da Administração de anular os atos administrativos de que decorram efeitos favoráveis para os destinatários ==decai em cinco anos==, contados da data em que foram praticados, ==salvo comprovada má-fé==.\n§ 1o No caso de efeitos patrimoniais contínuos, o prazo de decadência contar-se-á ==da percepção do primeiro pagamento==.\n§ 2o Considera-se exercício do direito de anular ==qualquer medida de autoridade administrativa== que importe impugnação à validade do ato."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Autotutela.</b> A Administração revê os próprios atos, <b>de ofício</b>, sem precisar ir ao Judiciário: anula os ilegais (controle de legalidade) e revoga os válidos que ficaram inconvenientes (controle de mérito). O Judiciário, provocado, só faz o controle de legalidade."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula 473",
+       "tese": "A Administração pode anular seus próprios atos quando eivados de vícios que os tornem ilegais, porque deles não se originam direitos; ou revogá-los, por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos, e ressalvada, em todos os casos, a apreciação judicial."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 9.784/1999, art. 53",
+       "texto": "Art. 53. A Administração ==deve anular== seus próprios atos, quando eivados de vício de legalidade, e ==pode revogá-los== por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Anular",
+        "Revogar"
+       ],
+       "linhas": [
+        [
+         "Motivo",
+         "Vício de legalidade",
+         "Conveniência e oportunidade"
+        ],
+        [
+         "Quem faz",
+         "Administração (de ofício) e Judiciário (provocado)",
+         "Só a Administração que praticou o ato"
+        ],
+        [
+         "Dever ou faculdade",
+         "Dever (\"deve anular\")",
+         "Faculdade (\"pode revogar\")"
+        ],
+        [
+         "Limite",
+         "Decadência de 5 anos para ato favorável, salvo má-fé",
+         "Respeito aos direitos adquiridos"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Contraditório antes de desfazer",
+       "html": "Se o desfazimento atinge a esfera de interesses do administrado, é preciso processo com contraditório e ampla defesa (STF, Info 641; STJ, 6ª Turma, RMS 26.261/AP, 7/2/2012). Durante esse processo, a Administração pode, com base no poder cautelar do art. 45 da Lei 9.784, suspender o pagamento da verba impugnada (STF, 2ª Turma, RMS 31.973/DF, 25/2/2014, Info 737)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, MS 26.860/DF, Rel. Min. Luiz Fux, 2/4/2014 (Info 741)",
+       "tese": "O prazo decadencial do art. 54 da Lei nº 9.784/99 não se aplica quando o ato a ser anulado afronta diretamente a Constituição Federal (caso de efetivação em cartório sem concurso, art. 236, § 3º)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 6.019/SP, red. p/ acórdão Min. Roberto Barroso, 12/4/2021 (Info 1012)",
+       "tese": "É inconstitucional lei estadual que fixa prazo decadencial de 10 anos para a anulação de atos administrativos inválidos pela Administração estadual."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 636.553/RS, Rel. Min. Gilmar Mendes, 19/2/2020, repercussão geral, Tema 445 (Info 967)",
+       "tese": "Em atenção aos princípios da segurança jurídica e da confiança legítima, os Tribunais de Contas estão sujeitos ao prazo de cinco anos para o julgamento da legalidade do ato de concessão inicial de aposentadoria, reforma ou pensão, a contar da chegada do processo à respectiva Corte de Contas."
+      },
+      {
+       "t": "texto",
+       "html": "No Tema 445, esgotados os cinco anos, o ato se considera <b>registrado tacitamente</b>. Dentro do prazo, o Tribunal de Contas aprecia o ato complexo <b>sem</b> contraditório, porque não há litígio. E o STJ fixou que, para atos anteriores à Lei 9.784, os cinco anos contam da vigência da lei, 1º/2/1999 (2ª Turma, REsp 1.270.474/RN, 18/10/2012)."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "E a continuidade?",
+       "html": "O princípio da continuidade dos serviços públicos também é implícito e decorre da indisponibilidade. Ele tem regras próprias (Lei 8.987/1995, art. 6º, § 3º, corte por inadimplemento) e fica para a aula 17 (Serviços públicos)."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "<b>Publicidade</b> é requisito de <b>eficácia</b>, não de validade.<br>Ato <b>imoral</b>, desarrazoado ou desproporcional é <b>anulado</b>, nunca revogado.<br>A <b>supremacia</b> não incide diretamente nos atos de gestão; a <b>indisponibilidade</b> incide sempre.<br>O interesse <b>secundário</b> (patrimonial do Estado) só vale se servir ao <b>primário</b>.<br>A <b>eficiência</b> veio com a EC 19/1998.<br>Na Lei 9.784, a Administração <b>deve</b> anular e <b>pode</b> revogar."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A Administração Pública pode fazer tudo o que a lei não proíbe.",
+         "v": false,
+         "porque": "Isso vale para o particular (CF, art. 5º, II). A Administração só faz o que a lei determina ou autoriza."
+        },
+        {
+         "texto": "O ato administrativo ainda não publicado, quando a publicação é exigida, é inválido.",
+         "v": false,
+         "porque": "É válido, mas ineficaz: publicidade é requisito de eficácia."
+        },
+        {
+         "texto": "O Judiciário pode anular ato discricionário que ofenda a razoabilidade.",
+         "v": true,
+         "porque": "É controle de legalidade (legitimidade), não de mérito."
+        },
+        {
+         "texto": "A publicidade de obra pública pode trazer o nome do prefeito, desde que tenha caráter informativo.",
+         "v": false,
+         "porque": "O art. 37, § 1º, proíbe nomes, símbolos ou imagens que caracterizem promoção pessoal."
+        },
+        {
+         "texto": "No caso de efeitos patrimoniais contínuos, a decadência do art. 54 da Lei 9.784 conta-se da percepção do primeiro pagamento.",
+         "v": true,
+         "porque": "Art. 54, § 1º."
+        },
+        {
+         "texto": "O prazo decadencial de cinco anos impede a anulação de ato que afronta diretamente a Constituição.",
+         "v": false,
+         "porque": "STF, MS 26.860: o art. 54 não se aplica a ato que afronta diretamente a CF."
+        },
+        {
+         "texto": "A Súmula Vinculante 13 alcança, em regra, a nomeação de parente para cargo de secretário municipal.",
+         "v": false,
+         "porque": "Em regra não alcança cargo político, salvo fraude ou falta de qualificação ou idoneidade (Rcl 28.024)."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "adm-cad-15",
+    "adm-cad-16"
+   ]
+  },
+  {
    "id": "B2-a02",
    "topico_id": "B2-02",
-   "numero": 2,
+   "numero": 3,
    "titulo": "Centralização, descentralização e desconcentração",
    "status": "pronta",
    "fonte": "Material EBEJI: Administração Pública (2026)",
@@ -478,7 +906,7 @@
   {
    "id": "B2-a03",
    "topico_id": "B2-02",
-   "numero": 3,
+   "numero": 4,
    "titulo": "Órgãos públicos",
    "status": "pronta",
    "fonte": "Material EBEJI: Administração Pública (2026)",
@@ -661,7 +1089,7 @@
   {
    "id": "B2-a04",
    "topico_id": "B2-02",
-   "numero": 4,
+   "numero": 5,
    "titulo": "Administração indireta: criação, extinção e subsidiárias",
    "status": "pronta",
    "fonte": "Material EBEJI: Administração Pública (2026)",
@@ -874,7 +1302,7 @@
   {
    "id": "B2-a05",
    "topico_id": "B2-02",
-   "numero": 5,
+   "numero": 6,
    "titulo": "Autarquias e agências reguladoras",
    "status": "pronta",
    "fonte": "Material EBEJI: Administração Pública (2026)",
@@ -1191,7 +1619,7 @@
   {
    "id": "B2-a06",
    "topico_id": "B2-02",
-   "numero": 6,
+   "numero": 7,
    "titulo": "Fundações públicas",
    "status": "pronta",
    "fonte": "Material EBEJI: Administração Pública (2026)",
@@ -1391,7 +1819,7 @@
   {
    "id": "B2-a07",
    "topico_id": "B2-02",
-   "numero": 7,
+   "numero": 8,
    "titulo": "Empresas estatais (Lei 13.303/2016)",
    "status": "pronta",
    "fonte": "Material EBEJI: Administração Pública (2026)",
@@ -1641,7 +2069,7 @@
   {
    "id": "B2-a08",
    "topico_id": "B2-02",
-   "numero": 8,
+   "numero": 9,
    "titulo": "Consórcios públicos e terceiro setor",
    "status": "pronta",
    "fonte": "Material EBEJI: Administração Pública (2026), seção 6.3.18; Leis 11.107/2005, 9.637/1998, 9.790/1999 e 13.019/2014 (Planalto, conferidas em 15/11/2026)",
@@ -2197,372 +2625,287 @@
    ]
   },
   {
-   "id": "B2-a09",
-   "topico_id": "B2-01",
-   "numero": 9,
-   "titulo": "Regime jurídico-administrativo e princípios",
+   "id": "B2-a16",
+   "topico_id": "B2-08",
+   "titulo": "Agentes públicos",
    "status": "pronta",
-   "fonte": "Material EBEJI: Princípios Fundamentais da Administração Pública (2026); CF, arts. 5º, 37 e 84, e Lei 9.784/1999 (textos vigentes, conferidos em 15/11/2026)",
+   "fonte": "Material EBEJI: Servidores públicos, disposições constitucionais gerais (2026); CF, arts. 37 e 41 (texto vigente, conferido em 15/11/2026)",
    "resumo": [
-    "O regime jurídico-administrativo é o conjunto de princípios que dá ao Estado prerrogativas (supremacia do interesse público) e sujeições (indisponibilidade do interesse público). São as duas pedras de toque.",
-    "Os princípios expressos estão no caput do art. 37 da CF: legalidade, impessoalidade, moralidade, publicidade e eficiência (LIMPE). Valem para todos os Poderes na função administrativa, em todos os entes, na direta e na indireta.",
-    "Legalidade para a Administração é agir só segundo a lei; o particular pode tudo o que a lei não proíbe. Ofensa à moralidade, à razoabilidade ou à proporcionalidade é ilegalidade: o ato é anulado, não revogado.",
-    "Publicidade é requisito de eficácia, não de validade. Impessoalidade proíbe a promoção pessoal na publicidade oficial (art. 37, § 1º).",
-    "Pela autotutela (Súmula 473 do STF; Lei 9.784, art. 53), a Administração anula o ato ilegal e revoga o inconveniente. Para anular ato favorável, o prazo é de cinco anos, salvo má-fé (art. 54)."
+    "Cargo efetivo ou emprego exige concurso de provas ou provas e títulos (CF, art. 37, II), com validade de até 2 anos, prorrogável uma vez por igual período. Sem concurso, o ato é nulo e não convalida nem pelo tempo.",
+    "Aprovado dentro das vagas tem direito subjetivo à nomeação no prazo de validade (RE 598.099). Fora das vagas, só se houver preterição arbitrária (Tema 784, RE 837.311). Preterição na ordem gera direito (Súmula 15).",
+    "Funções de confiança: só servidores efetivos. Cargos em comissão: direção, chefia e assessoramento. Temporários (art. 37, IX): lei define os casos; contratação irregular só gera salário e FGTS.",
+    "Greve: norma de eficácia limitada; aplica-se a Lei 7.783/1989 por analogia (MI 708). Dias parados podem ser descontados (Tema 531). Policiais e segurança pública não fazem greve (Tema 541).",
+    "Teto: subsídio de Ministro do STF; no Estado, subteto por Poder. Procuradores estaduais e municipais seguem o teto do Judiciário estadual (90,25%). Acumulação só nas exceções do art. 37, XVI, com compatibilidade de horários e respeito ao teto."
    ],
    "secoes": [
     {
-     "titulo": "De onde vem: prerrogativas e sujeições",
+     "titulo": "De onde vem: o concurso como porta de entrada",
      "etapa": "origem",
      "blocos": [
       {
        "t": "texto",
-       "html": "O Direito Administrativo nasce de uma tensão. De um lado, o Estado precisa de <b>poderes</b> que o particular não tem para cuidar do interesse de todos: desapropriar, fiscalizar, alterar um contrato sozinho. De outro, ele <b>não é dono</b> do que administra: gere coisa alheia, do povo.<br><br>Esse conjunto harmônico de princípios é o <b>regime jurídico-administrativo</b>. Celso Antônio Bandeira de Mello chamou seus dois pilares de <b>pedras de toque</b>: a supremacia e a indisponibilidade do interesse público. Os dois são <b>implícitos</b>: não aparecem com esse nome na Constituição."
+       "html": "Agente público é toda pessoa que exerce função pública, com ou sem vínculo permanente e com ou sem remuneração. A Constituição organiza o acesso a essas funções pela <b>impessoalidade</b>: quem ocupa cargo efetivo entra pelo mérito, em disputa aberta a todos, e não pela escolha de quem manda."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, I a IV",
+       "texto": "I - os cargos, empregos e funções públicas são acessíveis aos brasileiros que preencham os requisitos estabelecidos em lei, assim como aos estrangeiros, na forma da lei;\nII - a investidura em cargo ou emprego público depende de ==aprovação prévia em concurso público de provas ou de provas e títulos==, de acordo com a natureza e a complexidade do cargo ou emprego, na forma prevista em lei, ==ressalvadas as nomeações para cargo em comissão== declarado em lei de livre nomeação e exoneração;\nIII - o prazo de validade do concurso público será de ==até dois anos==, ==prorrogável uma vez, por igual período==;\nIV - durante o prazo improrrogável previsto no edital de convocação, aquele aprovado em concurso público de provas ou de provas e títulos será convocado ==com prioridade sobre novos concursados== para assumir cargo ou emprego, na carreira;"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, § 2º",
+       "texto": "§ 2º A não observância do disposto nos incisos II e III implicará a ==nulidade do ato== e a ==punição da autoridade responsável==, nos termos da lei."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Sem concurso não há prazo que salve",
+       "html": "A nomeação sem concurso é nula e <b>não se estabiliza</b> pelo tempo: o prazo do art. 54 da Lei 9.784 não protege ato que afronta diretamente a CF (aula 2). Também não se aplica a <b>teoria do fato consumado</b> a quem tomou posse por decisão judicial precária."
       },
       {
        "t": "virar",
        "cartas": [
         {
-         "frente": "Supremacia",
-         "sub": "do interesse público sobre o privado",
-         "verso": "Em conflito, o interesse público prevalece sobre o privado, dentro dos limites da lei. É a fonte das prerrogativas.",
-         "detalhe": "Ex.: intervenção na propriedade, cláusulas exorbitantes, poder de polícia, presunção de legitimidade dos atos."
+         "frente": "Limite de idade",
+         "sub": "concurso",
+         "verso": "Só é legítimo quando justificado pela natureza das atribuições do cargo e previsto em lei.",
+         "detalhe": "STF, ARE 678.112 (repercussão geral). Súmula 683: a idade se verifica na inscrição."
         },
         {
-         "frente": "Indisponibilidade",
-         "sub": "do interesse público",
-         "verso": "O administrador não é dono dos bens e interesses públicos. Não pode renunciar a receitas nem alienar bem afetado. É a fonte das sujeições.",
-         "detalhe": "Ex.: renunciar a tributo ou multa só se a lei prever (anistia, remissão, transação); licitação; concurso."
+         "frente": "Exame psicotécnico",
+         "sub": "SV 44",
+         "verso": "Só por lei se pode sujeitar a exame psicotécnico a habilitação de candidato a cargo público.",
+         "detalhe": "E com critérios objetivos e possibilidade de recurso."
+        },
+        {
+         "frente": "Tatuagem",
+         "sub": "RE 898.450",
+         "verso": "O edital não pode restringir candidatos com tatuagem, salvo conteúdo que viole valores constitucionais.",
+         "detalhe": "STF, Plenário (repercussão geral)."
+        },
+        {
+         "frente": "Correção de prova",
+         "sub": "Judiciário",
+         "verso": "O juiz não substitui a banca para avaliar respostas e notas.",
+         "detalhe": "Só controla legalidade, como a cobrança de conteúdo fora do edital."
         }
        ]
       },
       {
+       "t": "texto",
+       "html": "<b>Direito à nomeação.</b> A aprovação, sozinha, já foi vista como mera expectativa. Hoje o STF reconhece direito subjetivo em três situações:"
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Dentro das vagas",
+         "sub": "RE 598.099",
+         "texto": "Aprovado dentro do número de vagas do edital tem <b>direito subjetivo</b> à nomeação no prazo de validade. A Administração escolhe o momento, e só em situação excepcionalíssima, superveniente e motivada pode deixar de nomear."
+        },
+        {
+         "titulo": "Preterição na ordem",
+         "sub": "Súmula 15 do STF",
+         "texto": "Se alguém pior classificado é nomeado antes, o preterido passa a ter direito à nomeação."
+        },
+        {
+         "titulo": "Fora das vagas",
+         "sub": "Tema 784, RE 837.311",
+         "texto": "Surgir vaga ou abrir novo concurso no prazo de validade <b>não</b> gera direito automático. Só há direito se houver <b>preterição arbitrária e imotivada</b>, provada pelo candidato."
+        }
+       ]
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Tema 784, RE 837.311 (Info 811)",
+       "tese": "O surgimento de novas vagas ou a abertura de novo concurso para o mesmo cargo, durante o prazo de validade do certame anterior, não gera automaticamente o direito à nomeação dos candidatos aprovados fora das vagas previstas no edital, ressalvadas as hipóteses de preterição arbitrária e imotivada por parte da administração, caracterizada por comportamento tácito ou expresso do Poder Público capaz de revelar a inequívoca necessidade de nomeação do aprovado durante o período de validade do certame, a ser demonstrada de forma cabal pelo candidato."
+      },
+      {
        "t": "nota",
-       "tom": "pegadinha",
-       "titulo": "Atos de gestão",
-       "html": "A supremacia incide <b>diretamente</b> nos atos de império, mas <b>não</b> nos atos de gestão e de mero expediente, em que a Administração age como um particular gerindo bens. Já a <b>indisponibilidade</b> está presente em <b>toda</b> atuação pública, inclusive quando o Estado age sob regime de direito privado (como agente econômico)."
+       "tom": "atencao",
+       "titulo": "Nomeado por ordem judicial",
+       "html": "Quem toma posse tarde por decisão judicial <b>não</b> tem direito a indenização pelo tempo em que deveria ter sido nomeado, salvo arbitrariedade flagrante (STF, RE 724.347, 26/2/2015, Info 775)."
+      }
+     ]
+    },
+    {
+     "titulo": "Comissionados, temporários, greve e associação",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, V, VIII e IX",
+       "texto": "V - as funções de confiança, exercidas ==exclusivamente por servidores ocupantes de cargo efetivo==, e os cargos em comissão, a serem preenchidos por servidores de carreira nos casos, condições e percentuais mínimos previstos em lei, destinam-se apenas às atribuições de ==direção, chefia e assessoramento==;\nVIII - a lei reservará percentual dos cargos e empregos públicos para as pessoas portadoras de deficiência e definirá os critérios de sua admissão;\nIX - a lei estabelecerá os casos de contratação por tempo determinado para atender a ==necessidade temporária de excepcional interesse público==;"
       },
       {
        "t": "tabela",
        "cab": [
         "",
-        "Interesse público primário",
-        "Interesse público secundário"
+        "Função de confiança",
+        "Cargo em comissão"
        ],
        "linhas": [
         [
-         "Titular",
-         "O povo, a coletividade",
-         "O Estado como pessoa jurídica"
+         "Quem ocupa",
+         "Só servidor de cargo efetivo",
+         "Qualquer pessoa, respeitado o percentual mínimo de servidores de carreira fixado em lei"
         ],
         [
-         "Conteúdo",
-         "Interesses gerais imediatos",
-         "Interesses patrimoniais (aumentar a riqueza do Estado)"
+         "Para quê",
+         "Direção, chefia e assessoramento",
+         "Direção, chefia e assessoramento"
         ],
         [
-         "Legitimidade",
-         "Sempre o fim da atuação",
-         "Só é legítimo se servir ao primário, nunca contra ele"
+         "Vínculo",
+         "Um encargo a mais para quem já é servidor",
+         "Livre nomeação e exoneração (ad nutum)"
         ]
        ]
       },
       {
-       "t": "texto",
-       "html": "<b>Princípio não é regra.</b> A regra resolve uma situação concreta (o modo e o momento de agir). O princípio é norma geral que dá sentido ao sistema e orienta todas as regras. Por isso um ato pode cumprir a letra de uma regra e mesmo assim ser inválido por ferir um princípio."
-      }
-     ]
-    },
-    {
-     "titulo": "Os expressos do art. 37: LIMPE",
-     "etapa": "regra",
-     "blocos": [
-      {
-       "t": "lei",
-       "ref": "CF, art. 37, caput",
-       "texto": "Art. 37. A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de ==legalidade, impessoalidade, moralidade, publicidade e eficiência== e, também, ao seguinte:"
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Comissão não é para tudo",
+       "html": "Criar cargo em comissão para atividade técnica ou burocrática, que não seja de direção, chefia ou assessoramento, é inconstitucional; o controle disso é de <b>legalidade</b>, não de mérito. E o nepotismo continua vedado pela SV 13 (aula 2)."
       },
       {
-       "t": "texto",
-       "html": "Repare no alcance: administração <b>direta e indireta</b>, de <b>qualquer dos Poderes</b> (quando exercem função administrativa), de <b>todos os entes</b>. A eficiência entrou pela <b>EC 19/1998</b>; os outros quatro são originais."
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 765.320/MG, Rel. Min. Teori Zavascki, 15/9/2016, repercussão geral",
+       "tese": "A contratação temporária em desconformidade com o art. 37, IX, da CF não gera efeitos jurídicos válidos, salvo o direito aos salários do período trabalhado e ao levantamento do FGTS (Lei 8.036/1990, art. 19-A)."
       },
       {
-       "t": "texto",
-       "html": "<b>1. Legalidade.</b> O particular pode fazer tudo o que a lei não proíbe. A Administração só pode fazer o que a lei determina ou autoriza: age <i>secundum legem</i>, nunca <i>contra legem</i> nem <i>praeter legem</i>. Mesmo no ato discricionário, ela fica dentro dos limites da lei."
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Tema 551, RE 1.066.677, red. p/ acórdão Min. Alexandre de Moraes, 22/5/2020",
+       "tese": "Servidores temporários não fazem jus a décimo terceiro salário e férias remuneradas acrescidas do terço constitucional, salvo (I) expressa previsão legal e/ou contratual em sentido contrário, ou (II) comprovado desvirtuamento da contratação temporária pela Administração Pública, em razão de sucessivas e reiteradas renovações e/ou prorrogações."
       },
       {
        "t": "lei",
-       "ref": "CF, art. 5º, II, e Lei 9.784/1999, art. 2º, parágrafo único, I",
-       "texto": "II - ninguém será obrigado a fazer ou deixar de fazer alguma coisa ==senão em virtude de lei==;\nI - atuação conforme a lei ==e o Direito==;"
-      },
-      {
-       "t": "texto",
-       "html": "A expressão \"a lei <b>e o Direito</b>\" é o que a doutrina chama de <b>bloco de legalidade</b> ou <b>juridicidade</b>: a Administração obedece a todo o ordenamento, inclusive princípios e seus próprios atos normativos. Por isso, o ato normativo típico da Administração <b>não inova</b> na ordem jurídica: não cria direito nem obrigação nova."
+       "ref": "CF, art. 37, VI e VII",
+       "texto": "VI - é garantido ao servidor público civil o direito à livre associação sindical;\nVII - o direito de greve será exercido nos termos e nos limites definidos em ==lei específica==;"
       },
       {
        "t": "abrir",
        "cartas": [
         {
-         "tag": "Exceção",
-         "titulo": "Decreto autônomo",
-         "texto": "Introduzido pela EC 32/2001, é ato primário, fundado direto na Constituição, sem lei para regulamentar. Só serve para as duas matérias do art. 84, VI: (a) organização e funcionamento da administração federal, quando não implicar aumento de despesa nem criação ou extinção de órgãos públicos; (b) extinção de funções ou cargos públicos, quando vagos;"
+         "tag": "Eficácia limitada",
+         "titulo": "Sem lei, aplica-se a do setor privado",
+         "texto": "O art. 37, VII, depende de lei específica que nunca veio. O STF mandou aplicar, no que couber, a <b>Lei 7.783/1989</b> (greve no setor privado) até o Congresso legislar (MI 708)."
         },
         {
-         "tag": "Ponderação",
-         "titulo": "Legalidade × segurança jurídica",
-         "texto": "A legalidade não é absoluta. Em conflito com a segurança jurídica, pondera-se caso a caso. Às vezes a própria lei já fez a ponderação: é o prazo de decadência de cinco anos do art. 54 da Lei 9.784."
+         "tag": "Tema 531",
+         "titulo": "Desconto dos dias parados",
+         "texto": "A Administração <b>deve</b> descontar os dias de paralisação, porque o vínculo fica suspenso; pode haver compensação por acordo. Não cabe desconto se a greve foi provocada por conduta ilícita do Poder Público (RE 693.456, Info 845)."
+        },
+        {
+         "tag": "Tema 541",
+         "titulo": "Segurança pública não faz greve",
+         "texto": "É vedada a greve, sob qualquer forma, a policiais civis e a todos os servidores que atuem diretamente na segurança pública; o Poder Público deve participar de mediação com as categorias (ARE 654.432, Info 860)."
+        },
+        {
+         "tag": "Competência",
+         "titulo": "Quem julga a greve",
+         "texto": "A Justiça comum julga a abusividade de greve de servidores, inclusive celetistas da direta, autarquias e fundações (RE 846.854, Info 871)."
+        },
+        {
+         "tag": "Estágio probatório",
+         "titulo": "Sem punição diferente",
+         "texto": "Norma que pune de forma especial o servidor em estágio probatório por aderir à greve é inconstitucional: fere a isonomia."
         }
        ]
-      },
-      {
-       "t": "texto",
-       "html": "<b>2. Impessoalidade.</b> Tem duas faces. A primeira é a <b>finalidade</b>: todo ato busca o interesse público, e o ato com outro objetivo é <b>nulo por desvio de finalidade</b>. Basta desviar da finalidade específica (a que a lei fixou para aquele ato) para gerar nulidade. A segunda é a <b>vedação à promoção pessoal</b>:"
-      },
-      {
-       "t": "lei",
-       "ref": "CF, art. 37, § 1º",
-       "texto": "§ 1º A publicidade dos atos, programas, obras, serviços e campanhas dos órgãos públicos deverá ter ==caráter educativo, informativo ou de orientação social==, dela não podendo constar ==nomes, símbolos ou imagens que caracterizem promoção pessoal== de autoridades ou servidores públicos."
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "Plenário, ADI 6.522/DF, Rel. Min. Cármen Lúcia, 14/5/2021 (Info 1017)",
-       "tese": "O § 1º do art. 37 não admite flexibilização por norma infraconstitucional ou regulamentar. É inconstitucional a lei orgânica que deixa cada Poder definir, por norma interna, quando a divulgação não será promoção pessoal."
-      },
-      {
-       "t": "nota",
-       "tom": "macete",
-       "titulo": "Funcionário de fato",
-       "html": "O agente com investidura viciada pratica atos que, em regra, valem. O fundamento é a impessoalidade (o ato é imputado ao <b>órgão</b>, não à pessoa) somada à boa-fé dos administrados, ligada à moralidade."
-      },
-      {
-       "t": "juris",
-       "tribunal": "STJ",
-       "ref": "Súmula 615",
-       "tese": "Não pode ocorrer ou permanecer a inscrição do município em cadastros restritivos fundada em irregularidades na gestão anterior quando, na gestão sucessora, são tomadas as providências cabíveis à reparação dos danos eventualmente cometidos."
-      },
-      {
-       "t": "texto",
-       "html": "Essa súmula aplica a <b>intranscendência subjetiva das sanções</b>: a sanção não passa da pessoa do infrator. O STF usa a mesma ideia para livrar o novo gestor (1ª Turma, AC 2.614/PE, Rel. Min. Luiz Fux, 23/6/2015, Info 791) e para impedir que a inscrição de uma autarquia, ou de pendências do Legislativo e do Judiciário locais, atinja o Executivo do Estado (ACO 1.848 AgR, 2014; ACO 2.995 AgR, 2018)."
-      },
-      {
-       "t": "texto",
-       "html": "<b>3. Moralidade.</b> O agente deve agir com ética, honestidade e boa-fé. A moralidade é <b>objetiva</b>: sai do ordenamento, não da convicção íntima do agente. Como está expressa na CF, é <b>condição de validade</b> do ato: o ato imoral é <b>nulo</b>, deve ser <b>anulado</b> (não revogado) e pode ser controlado pelo Judiciário."
-      },
-      {
-       "t": "lei",
-       "ref": "CF, arts. 37, § 4º, e 5º, LXXIII",
-       "texto": "§ 4º - Os atos de improbidade administrativa importarão a ==suspensão dos direitos políticos==, a ==perda da função pública==, a ==indisponibilidade dos bens== e o ==ressarcimento ao erário==, na forma e gradação previstas em lei, sem prejuízo da ação penal cabível.\nLXXIII - qualquer cidadão é parte legítima para propor ==ação popular== que vise a anular ato lesivo ao patrimônio público ou de entidade de que o Estado participe, à ==moralidade administrativa==, ao meio ambiente e ao patrimônio histórico e cultural, ficando o autor, salvo comprovada má-fé, isento de custas judiciais e do ônus da sucumbência;"
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "Súmula Vinculante 13",
-       "tese": "A nomeação de cônjuge, companheiro ou parente em linha reta, colateral ou por afinidade, até o terceiro grau, inclusive, da autoridade nomeante ou de servidor da mesma pessoa jurídica investido em cargo de direção, chefia ou assessoramento, para o exercício de cargo em comissão ou de confiança ou, ainda, de função gratificada na Administração Pública direta e indireta em qualquer dos poderes da União, dos Estados, do Distrito Federal e dos municípios, compreendido o ajuste mediante designações recíprocas, viola a Constituição Federal."
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "1ª Turma, Rcl 28.024 AgR, Rel. Min. Roberto Barroso, 29/5/2018",
-       "tese": "Em regra, a SV 13 não alcança a nomeação para cargo de natureza política (como secretário), salvo fraude ou falta evidente de qualificação técnica ou de idoneidade moral do nomeado."
-      },
-      {
-       "t": "texto",
-       "html": "<b>4. Publicidade.</b> Tem dois sentidos. Como <b>requisito de eficácia</b>: o ato pode ser perfeito e válido, mas, enquanto não publicado, não produz efeitos. Como <b>transparência</b>: permite o controle pelo povo e pelos órgãos de controle, e por isso se liga ao dever de motivar."
-      },
-      {
-       "t": "lei",
-       "ref": "Lei 9.784/1999, art. 2º, parágrafo único, V",
-       "texto": "V - divulgação oficial dos atos administrativos, ==ressalvadas as hipóteses de sigilo== previstas na Constituição;"
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "Plenário, ADPF 872/DF, Rel. Min. Cármen Lúcia, 15/8/2023 (Info 1103)",
-       "tese": "O ato de qualquer dos poderes públicos restritivo de publicidade deve ser motivado objetiva, específica e formalmente, sendo nulos os atos públicos que imponham, genericamente e sem fundamentação válida e específica, impeditivo do direito fundamental à informação."
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "Plenário, ARE 652.777/SP, Rel. Min. Teori Zavascki, 23/4/2015, repercussão geral (Info 782)",
-       "tese": "É legítima a publicação, inclusive em sítio eletrônico mantido pela Administração Pública, dos nomes de seus servidores e do valor dos correspondentes vencimentos e vantagens pecuniárias."
-      },
-      {
-       "t": "nota",
-       "tom": "atencao",
-       "titulo": "Lei de Acesso à Informação",
-       "html": "A LAI (Lei 12.527/2011) com prazos de sigilo, pedidos e recursos fica para a aula 22 (Anticorrupção e transparência). Aqui guarde a regra: <b>publicidade é a regra e o sigilo é exceção</b>, sempre temporário e motivado."
-      },
-      {
-       "t": "texto",
-       "html": "<b>5. Eficiência.</b> Exige serviço de qualidade, adequado e com a melhor relação custo-benefício (liga-se à <b>economicidade</b> do art. 70). Tem duas faces: o modo de atuar do agente (ex.: avaliação especial de desempenho para a estabilidade, art. 41) e o modo de organizar a Administração. A expressão mais nítida é o contrato do § 8º:"
-      },
-      {
-       "t": "lei",
-       "ref": "CF, art. 37, § 8º",
-       "texto": "§ 8º A autonomia gerencial, orçamentária e financeira dos órgãos e entidades da administração direta e indireta ==poderá ser ampliada mediante contrato==, a ser firmado entre seus administradores e o poder público, que tenha por objeto a ==fixação de metas de desempenho== para o órgão ou entidade, cabendo à lei dispor sobre:\nI - o prazo de duração do contrato;\nII - os controles e critérios de avaliação de desempenho, direitos, obrigações e responsabilidade dos dirigentes;\nIII - a remuneração do pessoal."
-      },
-      {
-       "t": "texto",
-       "html": "No âmbito federal, a Lei 13.934/2019 regulamentou esse ajuste com o nome de <b>contrato de desempenho</b>. Como a eficiência é princípio expresso, também é controle de legalidade: se o Judiciário for provocado, pode anular o ato que a desrespeite."
       }
      ]
     },
     {
-     "titulo": "Implícitos, ponderação e autotutela",
+     "titulo": "Remuneração, teto, acumulação e estabilidade",
      "etapa": "excecao",
      "blocos": [
       {
-       "t": "texto",
-       "html": "Além dos cinco do art. 37, a Lei 9.784/1999 lista expressamente outros princípios que, na CF, são implícitos. Para a Administração federal, eles são letra de lei:"
-      },
-      {
        "t": "lei",
-       "ref": "Lei 9.784/1999, art. 2º, caput",
-       "texto": "Art. 2o A Administração Pública obedecerá, dentre outros, aos princípios da legalidade, ==finalidade==, ==motivação==, ==razoabilidade, proporcionalidade==, moralidade, ampla defesa, contraditório, ==segurança jurídica==, ==interesse público== e eficiência."
-      },
-      {
-       "t": "leia",
-       "ref": "Lei 9.784/1999, art. 2º, parágrafo único, I a XIII",
-       "motivo": "Os 13 critérios traduzem cada princípio em conduta (ex.: III é impessoalidade, IV é moralidade, V é publicidade, XIII protege a segurança jurídica). A FCC copia esses incisos nas alternativas."
-      },
-      {
-       "t": "texto",
-       "html": "<b>Razoabilidade e proporcionalidade.</b> Não estão escritas na CF, mas o STF as extrai do <b>devido processo legal substantivo</b> (art. 5º, LIV): além das garantias de processo (sentido formal), protege-se o próprio bem jurídico contra excessos (sentido material). No Direito Administrativo, a razoabilidade costuma ser o <b>gênero</b>, e a proporcionalidade, a parte ligada aos atos sancionatórios."
-      },
-      {
-       "t": "passos",
-       "nos": [
-        {
-         "titulo": "Adequação",
-         "sub": "o meio serve?"
-        },
-        {
-         "titulo": "Necessidade",
-         "sub": "é o menos gravoso?"
-        },
-        {
-         "titulo": "Estrita",
-         "sub": "vale a pena?"
-        }
-       ],
-       "passos": [
-        {
-         "no": 0,
-         "texto": "<b>Adequação:</b> o ato precisa ser apto a atingir o fim pretendido."
-        },
-        {
-         "no": 1,
-         "texto": "<b>Necessidade:</b> entre os meios igualmente eficazes, usa-se o menos restritivo, o mais brando."
-        },
-        {
-         "no": 2,
-         "texto": "<b>Proporcionalidade em sentido estrito</b> (para parte dos autores): as vantagens ao interesse público devem superar as restrições impostas. Senão, o ato é ilegítimo."
-        },
-        {
-         "no": 1,
-         "texto": "Na sanção, mede-se a pena pela gravidade e pela lesividade da conduta. É o que diz o inciso VI do art. 2º, parágrafo único."
-        }
-       ]
-      },
-      {
-       "t": "lei",
-       "ref": "Lei 9.784/1999, art. 2º, parágrafo único, VI",
-       "texto": "VI - adequação entre meios e fins, ==vedada a imposição de obrigações, restrições e sanções em medida superior== àquelas ==estritamente necessárias== ao atendimento do interesse público;"
-      },
-      {
-       "t": "nota",
-       "tom": "pegadinha",
-       "titulo": "Legalidade, não mérito",
-       "html": "O controle pela razoabilidade e pela proporcionalidade é controle de <b>legalidade</b> (ou legitimidade), não de mérito. Por isso o Judiciário pode fazê-lo, sobretudo em atos discricionários que restringem direitos, e a consequência é a <b>anulação</b>."
-      },
-      {
-       "t": "texto",
-       "html": "<b>Segurança jurídica e proteção da confiança.</b> A segurança jurídica tem uma face subjetiva: a <b>proteção da confiança legítima</b> de quem acreditou, de boa-fé, num ato do Estado. Ela aparece na proibição de aplicar nova interpretação de forma retroativa e no prazo de decadência para anular:"
-      },
-      {
-       "t": "lei",
-       "ref": "Lei 9.784/1999, arts. 2º, parágrafo único, XIII, e 54",
-       "texto": "XIII - interpretação da norma administrativa da forma que melhor garanta o atendimento do fim público a que se dirige, ==vedada aplicação retroativa de nova interpretação==.\nArt. 54. O direito da Administração de anular os atos administrativos de que decorram efeitos favoráveis para os destinatários ==decai em cinco anos==, contados da data em que foram praticados, ==salvo comprovada má-fé==.\n§ 1o No caso de efeitos patrimoniais contínuos, o prazo de decadência contar-se-á ==da percepção do primeiro pagamento==.\n§ 2o Considera-se exercício do direito de anular ==qualquer medida de autoridade administrativa== que importe impugnação à validade do ato."
-      },
-      {
-       "t": "texto",
-       "html": "<b>Autotutela.</b> A Administração revê os próprios atos, <b>de ofício</b>, sem precisar ir ao Judiciário: anula os ilegais (controle de legalidade) e revoga os válidos que ficaram inconvenientes (controle de mérito). O Judiciário, provocado, só faz o controle de legalidade."
+       "ref": "CF, art. 37, X",
+       "texto": "X - a remuneração dos servidores públicos e o subsídio de que trata o § 4º do art. 39 somente poderão ser fixados ou alterados por ==lei específica==, observada a iniciativa privativa em cada caso, assegurada ==revisão geral anual==, sempre na mesma data e sem distinção de índices;"
       },
       {
        "t": "juris",
        "tribunal": "STF",
-       "ref": "Súmula 473",
-       "tese": "A Administração pode anular seus próprios atos quando eivados de vícios que os tornem ilegais, porque deles não se originam direitos; ou revogá-los, por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos, e ressalvada, em todos os casos, a apreciação judicial."
+       "ref": "Plenário, RE 710.293, Rel. Min. Luiz Fux, 16/9/2020, repercussão geral, Tema 600 (Info 998)",
+       "tese": "O não encaminhamento de projeto de lei de revisão anual dos vencimentos dos servidores públicos, previsto no inciso X do art. 37 da CF/1988, não gera direito subjetivo a indenização."
       },
       {
        "t": "lei",
-       "ref": "Lei 9.784/1999, art. 53",
-       "texto": "Art. 53. A Administração ==deve anular== seus próprios atos, quando eivados de vício de legalidade, e ==pode revogá-los== por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos."
+       "ref": "CF, art. 37, XI",
+       "texto": "XI - a remuneração e o subsídio dos ocupantes de cargos, funções e empregos públicos da administração direta, autárquica e fundacional, dos membros de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios, dos detentores de mandato eletivo e dos demais agentes políticos e os proventos, pensões ou outra espécie remuneratória, percebidos cumulativamente ou não, incluídas as vantagens pessoais ou de qualquer outra natureza, não poderão exceder o subsídio mensal, em espécie, dos ==Ministros do Supremo Tribunal Federal==, aplicando-se como limite, nos Municípios, o subsídio do Prefeito, e nos Estados e no Distrito Federal, o subsídio mensal do Governador no âmbito do Poder Executivo, o subsídio dos Deputados Estaduais e Distritais no âmbito do Poder Legislativo e o subsidio dos Desembargadores do Tribunal de Justiça, limitado a ==noventa inteiros e vinte e cinco centésimos por cento== do subsídio mensal, em espécie, dos Ministros do Supremo Tribunal Federal, no âmbito do Poder Judiciário, aplicável este limite aos membros do Ministério Público, ==aos Procuradores e aos Defensores Públicos==;"
       },
       {
        "t": "tabela",
        "cab": [
-        "",
-        "Anular",
-        "Revogar"
+        "Onde",
+        "Teto"
        ],
        "linhas": [
         [
-         "Motivo",
-         "Vício de legalidade",
-         "Conveniência e oportunidade"
+         "Geral (todos)",
+         "Subsídio de Ministro do STF"
         ],
         [
-         "Quem faz",
-         "Administração (de ofício) e Judiciário (provocado)",
-         "Só a Administração que praticou o ato"
+         "Municípios",
+         "Subsídio do Prefeito"
         ],
         [
-         "Dever ou faculdade",
-         "Dever (\"deve anular\")",
-         "Faculdade (\"pode revogar\")"
+         "Estados e DF, Executivo",
+         "Subsídio do Governador"
         ],
         [
-         "Limite",
-         "Decadência de 5 anos para ato favorável, salvo má-fé",
-         "Respeito aos direitos adquiridos"
+         "Estados e DF, Legislativo",
+         "Subsídio dos Deputados Estaduais e Distritais"
+        ],
+        [
+         "Estados e DF, Judiciário",
+         "Subsídio dos Desembargadores, limitado a 90,25% do Ministro do STF; vale também para MP, <b>Procuradores</b> e Defensores"
         ]
        ]
       },
       {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, RE 663.696/MG, Rel. Min. Luiz Fux, 28/2/2019 (Info 932)",
+       "tese": "A expressão \"Procuradores\", contida na parte final do inciso XI do art. 37 da Constituição da República, compreende os procuradores municipais, uma vez que estes se inserem nas funções essenciais à Justiça, estando, portanto, submetidos ao teto de 90,25% do subsídio mensal, em espécie, dos ministros do STF."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 6.135/GO e outras, Rel. Min. Rosa Weber, 19/10/2020 (Info 995)",
+       "tese": "É constitucional a percepção de honorários de sucumbência por procuradores de estados-membros, observado o teto previsto no art. 37, XI, da Constituição Federal no somatório total às demais verbas remuneratórias recebidas mensalmente."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Como o teto é calculado",
+       "html": "O teto incide sobre a remuneração <b>bruta</b>; os tributos incidem depois do abate-teto (RE 675.978, Info 781). Vantagens pessoais entram na conta (Tema 257). Parcelas <b>indenizatórias</b> previstas em lei ficam fora (art. 37, § 11). Magistrados estaduais não se sujeitam ao subteto de 90,25% (ADI 3.854 MC)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 37, XVI e XVII",
+       "texto": "XVI - é vedada a acumulação remunerada de cargos públicos, exceto, quando houver ==compatibilidade de horários==, observado em qualquer caso o disposto no ==inciso XI==:\na) a de dois cargos de professor;\nb) a de um cargo de professor com outro de qualquer natureza;\nc) a de dois cargos ou empregos privativos de profissionais de saúde, com profissões regulamentadas;\nXVII - a proibição de acumular estende-se a empregos e funções e abrange autarquias, fundações, ==empresas públicas, sociedades de economia mista==, suas subsidiárias, e ==sociedades controladas==, direta ou indiretamente, pelo poder público;"
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Mudou em 2025: professor + qualquer cargo",
+       "html": "A <b>EC 138/2025</b> trocou a alínea b: antes era professor com outro cargo <b>técnico ou científico</b>; hoje é professor com outro <b>de qualquer natureza</b> (texto conferido no Planalto). Questões e materiais antigos ainda trazem a redação anterior. Continua exigida a compatibilidade de horários e o respeito ao teto, e a proibição alcança toda a indireta, inclusive estatais e controladas (XVII)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 41, caput e §§ 1º e 4º",
+       "texto": "Art. 41. São estáveis após ==três anos de efetivo exercício== os servidores nomeados para ==cargo de provimento efetivo== em virtude de ==concurso público==.\n§ 1º O servidor público estável só perderá o cargo:\nI - em virtude de sentença judicial transitada em julgado;\nII - mediante processo administrativo em que lhe seja assegurada ampla defesa;\nIII - mediante procedimento de avaliação periódica de desempenho, na forma de ==lei complementar==, assegurada ampla defesa.\n§ 4º Como condição para a aquisição da estabilidade, é obrigatória a ==avaliação especial de desempenho== por comissão instituída para essa finalidade."
+      },
+      {
        "t": "nota",
        "tom": "atencao",
-       "titulo": "Contraditório antes de desfazer",
-       "html": "Se o desfazimento atinge a esfera de interesses do administrado, é preciso processo com contraditório e ampla defesa (STF, Info 641; STJ, 6ª Turma, RMS 26.261/AP, 7/2/2012). Durante esse processo, a Administração pode, com base no poder cautelar do art. 45 da Lei 9.784, suspender o pagamento da verba impugnada (STF, 2ª Turma, RMS 31.973/DF, 25/2/2014, Info 737)."
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "Plenário, MS 26.860/DF, Rel. Min. Luiz Fux, 2/4/2014 (Info 741)",
-       "tese": "O prazo decadencial do art. 54 da Lei nº 9.784/99 não se aplica quando o ato a ser anulado afronta diretamente a Constituição Federal (caso de efetivação em cartório sem concurso, art. 236, § 3º)."
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "Plenário, ADI 6.019/SP, red. p/ acórdão Min. Roberto Barroso, 12/4/2021 (Info 1012)",
-       "tese": "É inconstitucional lei estadual que fixa prazo decadencial de 10 anos para a anulação de atos administrativos inválidos pela Administração estadual."
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "RE 636.553/RS, Rel. Min. Gilmar Mendes, 19/2/2020, repercussão geral, Tema 445 (Info 967)",
-       "tese": "Em atenção aos princípios da segurança jurídica e da confiança legítima, os Tribunais de Contas estão sujeitos ao prazo de cinco anos para o julgamento da legalidade do ato de concessão inicial de aposentadoria, reforma ou pensão, a contar da chegada do processo à respectiva Corte de Contas."
-      },
-      {
-       "t": "texto",
-       "html": "No Tema 445, esgotados os cinco anos, o ato se considera <b>registrado tacitamente</b>. Dentro do prazo, o Tribunal de Contas aprecia o ato complexo <b>sem</b> contraditório, porque não há litígio. E o STJ fixou que, para atos anteriores à Lei 9.784, os cinco anos contam da vigência da lei, 1º/2/1999 (2ª Turma, REsp 1.270.474/RN, 18/10/2012)."
-      },
-      {
-       "t": "nota",
-       "tom": "hipotese",
-       "titulo": "E a continuidade?",
-       "html": "O princípio da continuidade dos serviços públicos também é implícito e decorre da indisponibilidade. Ele tem regras próprias (Lei 8.987/1995, art. 6º, § 3º, corte por inadimplemento) e fica para a aula 15 (Serviços públicos)."
+       "titulo": "Estabilidade é do cargo efetivo",
+       "html": "Só se estabiliza quem foi nomeado para <b>cargo efetivo</b> por concurso, depois de <b>3 anos</b> de exercício e da <b>avaliação especial de desempenho</b>. Comissionado e empregado público não adquirem a estabilidade do art. 41. Invalidada a demissão, o estável é <b>reintegrado</b>; extinto o cargo, fica em <b>disponibilidade</b> com remuneração proporcional (§§ 2º e 3º)."
       }
      ]
     },
@@ -2574,45 +2917,45 @@
        "t": "nota",
        "tom": "pegadinha",
        "titulo": "As trocas preferidas",
-       "html": "<b>Publicidade</b> é requisito de <b>eficácia</b>, não de validade.<br>Ato <b>imoral</b>, desarrazoado ou desproporcional é <b>anulado</b>, nunca revogado.<br>A <b>supremacia</b> não incide diretamente nos atos de gestão; a <b>indisponibilidade</b> incide sempre.<br>O interesse <b>secundário</b> (patrimonial do Estado) só vale se servir ao <b>primário</b>.<br>A <b>eficiência</b> veio com a EC 19/1998.<br>Na Lei 9.784, a Administração <b>deve</b> anular e <b>pode</b> revogar."
+       "html": "Validade do concurso: <b>até 2 anos</b>, prorrogável <b>uma vez</b>, por <b>igual</b> período.<br>Função de confiança: <b>só efetivo</b>. Cargo em comissão: qualquer pessoa, com percentual mínimo de carreira.<br>Dentro das vagas: <b>direito</b>. Fora: só com <b>preterição arbitrária</b>.<br>Greve: Lei 7.783 por analogia; desconto dos dias parados é a regra.<br>Procurador estadual: teto do <b>Judiciário estadual</b> (90,25%).<br>Estabilidade: <b>3 anos</b> + avaliação especial; perde por sentença transitada, PAD ou avaliação periódica (LC)."
       },
       {
        "t": "vf",
        "itens": [
         {
-         "texto": "A Administração Pública pode fazer tudo o que a lei não proíbe.",
-         "v": false,
-         "porque": "Isso vale para o particular (CF, art. 5º, II). A Administração só faz o que a lei determina ou autoriza."
-        },
-        {
-         "texto": "O ato administrativo ainda não publicado, quando a publicação é exigida, é inválido.",
-         "v": false,
-         "porque": "É válido, mas ineficaz: publicidade é requisito de eficácia."
-        },
-        {
-         "texto": "O Judiciário pode anular ato discricionário que ofenda a razoabilidade.",
+         "texto": "O prazo de validade do concurso é de até dois anos, prorrogável uma vez por igual período.",
          "v": true,
-         "porque": "É controle de legalidade (legitimidade), não de mérito."
+         "porque": "CF, art. 37, III."
         },
         {
-         "texto": "A publicidade de obra pública pode trazer o nome do prefeito, desde que tenha caráter informativo.",
+         "texto": "Candidato aprovado fora do número de vagas tem direito à nomeação sempre que for aberto novo concurso no prazo de validade.",
          "v": false,
-         "porque": "O art. 37, § 1º, proíbe nomes, símbolos ou imagens que caracterizem promoção pessoal."
+         "porque": "Tema 784: só com preterição arbitrária e imotivada."
         },
         {
-         "texto": "No caso de efeitos patrimoniais contínuos, a decadência do art. 54 da Lei 9.784 conta-se da percepção do primeiro pagamento.",
+         "texto": "Funções de confiança podem ser exercidas por pessoas sem vínculo com a Administração.",
+         "v": false,
+         "porque": "Art. 37, V: exclusivamente por servidores de cargo efetivo."
+        },
+        {
+         "texto": "Os dias de greve do servidor devem ser descontados, salvo se a greve decorreu de conduta ilícita do Poder Público.",
          "v": true,
-         "porque": "Art. 54, § 1º."
+         "porque": "Tema 531."
         },
         {
-         "texto": "O prazo decadencial de cinco anos impede a anulação de ato que afronta diretamente a Constituição.",
+         "texto": "Procuradores do Estado submetem-se ao teto do subsídio do Governador.",
          "v": false,
-         "porque": "STF, MS 26.860: o art. 54 não se aplica a ato que afronta diretamente a CF."
+         "porque": "Art. 37, XI, parte final: teto do Judiciário estadual (90,25%)."
         },
         {
-         "texto": "A Súmula Vinculante 13 alcança, em regra, a nomeação de parente para cargo de secretário municipal.",
+         "texto": "O servidor estável pode perder o cargo mediante avaliação periódica de desempenho, na forma de lei complementar.",
+         "v": true,
+         "porque": "Art. 41, § 1º, III."
+        },
+        {
+         "texto": "Nomeação sem concurso para cargo efetivo convalida-se após cinco anos.",
          "v": false,
-         "porque": "Em regra não alcança cargo político, salvo fraude ou falta de qualificação ou idoneidade (Rcl 28.024)."
+         "porque": "Art. 37, § 2º: nulidade; não há decadência contra afronta direta à CF."
         }
        ]
       }
@@ -2620,14 +2963,15 @@
     }
    ],
    "questoes": [
-    "adm-cad-15",
-    "adm-cad-16"
-   ]
+    "adm-cad-33",
+    "adm-cad-34"
+   ],
+   "numero": 10
   },
   {
    "id": "B2-a10",
    "topico_id": "B2-03",
-   "numero": 10,
+   "numero": 11,
    "titulo": "Poderes administrativos",
    "status": "pronta",
    "fonte": "Material EBEJI: Deveres e Poderes Administrativos (2026); CF, art. 84; CTN, art. 78; Lei 9.784/1999, arts. 11 a 15 (textos vigentes, conferidos em 15/11/2026)",
@@ -2645,7 +2989,7 @@
      "blocos": [
       {
        "t": "texto",
-       "html": "Na aula 9 vimos os dois pilares do regime administrativo. Eles explicam esta aula inteira: da <b>supremacia</b> do interesse público saem os <b>poderes</b>; da <b>indisponibilidade</b> saem os <b>deveres</b>.<br><br>No direito privado, poder é faculdade: o dono usa se quiser. No Direito Administrativo, o poder é dado para cumprir uma função pública, então o agente <b>não pode dispor dele</b>. É um <b>poder-dever</b>, e a omissão também é ilegal."
+       "html": "Na aula 2 vimos os dois pilares do regime administrativo. Eles explicam esta aula inteira: da <b>supremacia</b> do interesse público saem os <b>poderes</b>; da <b>indisponibilidade</b> saem os <b>deveres</b>.<br><br>No direito privado, poder é faculdade: o dono usa se quiser. No Direito Administrativo, o poder é dado para cumprir uma função pública, então o agente <b>não pode dispor dele</b>. É um <b>poder-dever</b>, e a omissão também é ilegal."
       },
       {
        "t": "lei",
@@ -2777,7 +3121,7 @@
       },
       {
        "t": "texto",
-       "html": "Repare: o inciso IV <b>não</b> está na lista do parágrafo único, então o decreto de execução é <b>indelegável</b>. Ele é ato <b>secundário</b>: pressupõe a lei e não pode restringir, ampliar nem contrariar o que ela prevê, sob pena de ilegalidade. O decreto autônomo (art. 84, VI, visto na aula 9) é a exceção primária, e só a alínea \"a\" é norma; a alínea \"b\" é ato de efeitos concretos (Di Pietro)."
+       "html": "Repare: o inciso IV <b>não</b> está na lista do parágrafo único, então o decreto de execução é <b>indelegável</b>. Ele é ato <b>secundário</b>: pressupõe a lei e não pode restringir, ampliar nem contrariar o que ela prevê, sob pena de ilegalidade. O decreto autônomo (art. 84, VI, visto na aula 2) é a exceção primária, e só a alínea \"a\" é norma; a alínea \"b\" é ato de efeitos concretos (Di Pietro)."
       },
       {
        "t": "juris",
@@ -3056,7 +3400,7 @@
   {
    "id": "B2-a11",
    "topico_id": "B2-04",
-   "numero": 11,
+   "numero": 12,
    "titulo": "Atos administrativos",
    "status": "pronta",
    "fonte": "Material EBEJI: Atos Administrativos (2026); Lei 9.784/1999, arts. 22, 50, 55, 61 e 64, e LINDB, art. 28 (textos vigentes, conferidos em 15/11/2026)",
@@ -3492,7 +3836,7 @@
   {
    "id": "B2-a12",
    "topico_id": "B2-11",
-   "numero": 12,
+   "numero": 13,
    "titulo": "Processo administrativo (Lei 9.784)",
    "status": "pronta",
    "fonte": "Material EBEJI: O Processo Administrativo Federal, Lei 9.784/1999 (2026); Lei 9.784/1999 (texto vigente, conferido em 15/11/2026)",
@@ -3884,7 +4228,7 @@
   {
    "id": "B2-a13",
    "topico_id": "B2-05",
-   "numero": 13,
+   "numero": 14,
    "titulo": "Licitações (Lei 14.133)",
    "status": "pronta",
    "fonte": "Material EBEJI: Licitações Públicas, parte 1 (2026); CF, arts. 22, XXVII, 37, XXI, e 175; Lei 14.133/2021 (texto vigente, conferido em 15/11/2026)",
@@ -4229,7 +4573,7 @@
   {
    "id": "B2-a13b",
    "topico_id": "B2-05",
-   "numero": 14,
+   "numero": 15,
    "titulo": "Licitações II: habilitação, contratação direta e recursos",
    "status": "pronta",
    "fonte": "Material EBEJI: Licitações Públicas, parte 2 (2026); Lei 14.133/2021, arts. 62, 71 a 75 e 165 a 168 (texto vigente, conferido em 15/11/2026)",
@@ -4307,7 +4651,7 @@
       {
        "t": "nota",
        "tom": "macete",
-       "titulo": "Liga com a aula 11",
+       "titulo": "Liga com a aula 12",
        "html": "Mesma lógica dos atos: <b>anula</b> por ilegalidade (insanável), <b>revoga</b> por conveniência. Aqui a lei exige que a revogação venha de <b>fato superveniente comprovado</b> e que os interessados se manifestem <b>antes</b>."
       }
      ]
@@ -4639,7 +4983,7 @@
        "t": "nota",
        "tom": "atencao",
        "titulo": "Estatais ficam de fora",
-       "html": "Os contratos de empresas públicas e sociedades de economia mista seguem a Lei 13.303/2016, não a 14.133 (art. 1º, § 1º, visto na aula 13)."
+       "html": "Os contratos de empresas públicas e sociedades de economia mista seguem a Lei 13.303/2016, não a 14.133 (art. 1º, § 1º, visto na aula 14)."
       },
       {
        "t": "virar",
@@ -4926,7 +5270,7 @@
     "adm-cad-27",
     "adm-cad-28"
    ],
-   "numero": 15
+   "numero": 16
   },
   {
    "id": "B2-a15",
@@ -5111,7 +5455,7 @@
       {
        "t": "nota",
        "tom": "macete",
-       "titulo": "Liga com a aula 2",
+       "titulo": "Liga com a aula 3",
        "html": "Outorga (por lei) passa titularidade e execução; delegação (por contrato ou ato) passa só a execução. A titularidade do serviço delegado continua sempre com o poder público."
       }
      ]
@@ -5262,7 +5606,7 @@
     "adm-cad-29",
     "adm-cad-30"
    ],
-   "numero": 16
+   "numero": 17
   },
   {
    "id": "B2-a15b",
@@ -5284,7 +5628,7 @@
      "blocos": [
       {
        "t": "texto",
-       "html": "Na aula 16 vimos que o Estado é titular do serviço e pode delegá-lo. A delegação é feita por <b>contrato</b> (concessão ou permissão) e sempre com licitação (CF, art. 175). O particular executa <b>por sua conta e risco</b>, remunerado em regra pela tarifa; o Estado continua titular, regula e fiscaliza.<br><br>A lei geral é a <b>Lei 8.987/1995</b>, nacional. Para obras e serviços de grande vulto que o usuário sozinho não paga, a <b>Lei 11.079/2004</b> criou as PPPs, uma espécie de concessão com dinheiro público no meio."
+       "html": "Na aula 17 vimos que o Estado é titular do serviço e pode delegá-lo. A delegação é feita por <b>contrato</b> (concessão ou permissão) e sempre com licitação (CF, art. 175). O particular executa <b>por sua conta e risco</b>, remunerado em regra pela tarifa; o Estado continua titular, regula e fiscaliza.<br><br>A lei geral é a <b>Lei 8.987/1995</b>, nacional. Para obras e serviços de grande vulto que o usuário sozinho não paga, a <b>Lei 11.079/2004</b> criou as PPPs, uma espécie de concessão com dinheiro público no meio."
       },
       {
        "t": "lei",
@@ -5488,7 +5832,7 @@
        "t": "nota",
        "tom": "pegadinha",
        "titulo": "Encampação × caducidade",
-       "html": "<b>Encampação</b>: o Estado retoma porque <b>quer</b> (interesse público), com <b>lei</b> e indenização <b>antes</b>. <b>Caducidade</b>: retoma porque a concessionária <b>falhou</b>, por <b>decreto</b>, e a indenização vem <b>depois</b>, com descontos. E não confunda com a caducidade do ato administrativo (aula 11), que é extinção por lei nova."
+       "html": "<b>Encampação</b>: o Estado retoma porque <b>quer</b> (interesse público), com <b>lei</b> e indenização <b>antes</b>. <b>Caducidade</b>: retoma porque a concessionária <b>falhou</b>, por <b>decreto</b>, e a indenização vem <b>depois</b>, com descontos. E não confunda com a caducidade do ato administrativo (aula 12), que é extinção por lei nova."
       },
       {
        "t": "texto",
@@ -5610,351 +5954,21 @@
     "adm-cad-31",
     "adm-cad-32"
    ],
-   "numero": 17
+   "numero": 18
   },
   {
-   "id": "B2-a16",
-   "topico_id": "B2-08",
-   "titulo": "Agentes públicos",
-   "status": "pronta",
-   "fonte": "Material EBEJI: Servidores públicos, disposições constitucionais gerais (2026); CF, arts. 37 e 41 (texto vigente, conferido em 15/11/2026)",
-   "resumo": [
-    "Cargo efetivo ou emprego exige concurso de provas ou provas e títulos (CF, art. 37, II), com validade de até 2 anos, prorrogável uma vez por igual período. Sem concurso, o ato é nulo e não convalida nem pelo tempo.",
-    "Aprovado dentro das vagas tem direito subjetivo à nomeação no prazo de validade (RE 598.099). Fora das vagas, só se houver preterição arbitrária (Tema 784, RE 837.311). Preterição na ordem gera direito (Súmula 15).",
-    "Funções de confiança: só servidores efetivos. Cargos em comissão: direção, chefia e assessoramento. Temporários (art. 37, IX): lei define os casos; contratação irregular só gera salário e FGTS.",
-    "Greve: norma de eficácia limitada; aplica-se a Lei 7.783/1989 por analogia (MI 708). Dias parados podem ser descontados (Tema 531). Policiais e segurança pública não fazem greve (Tema 541).",
-    "Teto: subsídio de Ministro do STF; no Estado, subteto por Poder. Procuradores estaduais e municipais seguem o teto do Judiciário estadual (90,25%). Acumulação só nas exceções do art. 37, XVI, com compatibilidade de horários e respeito ao teto."
-   ],
-   "secoes": [
-    {
-     "titulo": "De onde vem: o concurso como porta de entrada",
-     "etapa": "origem",
-     "blocos": [
-      {
-       "t": "texto",
-       "html": "Agente público é toda pessoa que exerce função pública, com ou sem vínculo permanente e com ou sem remuneração. A Constituição organiza o acesso a essas funções pela <b>impessoalidade</b>: quem ocupa cargo efetivo entra pelo mérito, em disputa aberta a todos, e não pela escolha de quem manda."
-      },
-      {
-       "t": "lei",
-       "ref": "CF, art. 37, I a IV",
-       "texto": "I - os cargos, empregos e funções públicas são acessíveis aos brasileiros que preencham os requisitos estabelecidos em lei, assim como aos estrangeiros, na forma da lei;\nII - a investidura em cargo ou emprego público depende de ==aprovação prévia em concurso público de provas ou de provas e títulos==, de acordo com a natureza e a complexidade do cargo ou emprego, na forma prevista em lei, ==ressalvadas as nomeações para cargo em comissão== declarado em lei de livre nomeação e exoneração;\nIII - o prazo de validade do concurso público será de ==até dois anos==, ==prorrogável uma vez, por igual período==;\nIV - durante o prazo improrrogável previsto no edital de convocação, aquele aprovado em concurso público de provas ou de provas e títulos será convocado ==com prioridade sobre novos concursados== para assumir cargo ou emprego, na carreira;"
-      },
-      {
-       "t": "lei",
-       "ref": "CF, art. 37, § 2º",
-       "texto": "§ 2º A não observância do disposto nos incisos II e III implicará a ==nulidade do ato== e a ==punição da autoridade responsável==, nos termos da lei."
-      },
-      {
-       "t": "nota",
-       "tom": "pegadinha",
-       "titulo": "Sem concurso não há prazo que salve",
-       "html": "A nomeação sem concurso é nula e <b>não se estabiliza</b> pelo tempo: o prazo do art. 54 da Lei 9.784 não protege ato que afronta diretamente a CF (aula 9). Também não se aplica a <b>teoria do fato consumado</b> a quem tomou posse por decisão judicial precária."
-      },
-      {
-       "t": "virar",
-       "cartas": [
-        {
-         "frente": "Limite de idade",
-         "sub": "concurso",
-         "verso": "Só é legítimo quando justificado pela natureza das atribuições do cargo e previsto em lei.",
-         "detalhe": "STF, ARE 678.112 (repercussão geral). Súmula 683: a idade se verifica na inscrição."
-        },
-        {
-         "frente": "Exame psicotécnico",
-         "sub": "SV 44",
-         "verso": "Só por lei se pode sujeitar a exame psicotécnico a habilitação de candidato a cargo público.",
-         "detalhe": "E com critérios objetivos e possibilidade de recurso."
-        },
-        {
-         "frente": "Tatuagem",
-         "sub": "RE 898.450",
-         "verso": "O edital não pode restringir candidatos com tatuagem, salvo conteúdo que viole valores constitucionais.",
-         "detalhe": "STF, Plenário (repercussão geral)."
-        },
-        {
-         "frente": "Correção de prova",
-         "sub": "Judiciário",
-         "verso": "O juiz não substitui a banca para avaliar respostas e notas.",
-         "detalhe": "Só controla legalidade, como a cobrança de conteúdo fora do edital."
-        }
-       ]
-      },
-      {
-       "t": "texto",
-       "html": "<b>Direito à nomeação.</b> A aprovação, sozinha, já foi vista como mera expectativa. Hoje o STF reconhece direito subjetivo em três situações:"
-      },
-      {
-       "t": "escada",
-       "degraus": [
-        {
-         "titulo": "Dentro das vagas",
-         "sub": "RE 598.099",
-         "texto": "Aprovado dentro do número de vagas do edital tem <b>direito subjetivo</b> à nomeação no prazo de validade. A Administração escolhe o momento, e só em situação excepcionalíssima, superveniente e motivada pode deixar de nomear."
-        },
-        {
-         "titulo": "Preterição na ordem",
-         "sub": "Súmula 15 do STF",
-         "texto": "Se alguém pior classificado é nomeado antes, o preterido passa a ter direito à nomeação."
-        },
-        {
-         "titulo": "Fora das vagas",
-         "sub": "Tema 784, RE 837.311",
-         "texto": "Surgir vaga ou abrir novo concurso no prazo de validade <b>não</b> gera direito automático. Só há direito se houver <b>preterição arbitrária e imotivada</b>, provada pelo candidato."
-        }
-       ]
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "Tema 784, RE 837.311 (Info 811)",
-       "tese": "O surgimento de novas vagas ou a abertura de novo concurso para o mesmo cargo, durante o prazo de validade do certame anterior, não gera automaticamente o direito à nomeação dos candidatos aprovados fora das vagas previstas no edital, ressalvadas as hipóteses de preterição arbitrária e imotivada por parte da administração, caracterizada por comportamento tácito ou expresso do Poder Público capaz de revelar a inequívoca necessidade de nomeação do aprovado durante o período de validade do certame, a ser demonstrada de forma cabal pelo candidato."
-      },
-      {
-       "t": "nota",
-       "tom": "atencao",
-       "titulo": "Nomeado por ordem judicial",
-       "html": "Quem toma posse tarde por decisão judicial <b>não</b> tem direito a indenização pelo tempo em que deveria ter sido nomeado, salvo arbitrariedade flagrante (STF, RE 724.347, 26/2/2015, Info 775)."
-      }
-     ]
-    },
-    {
-     "titulo": "Comissionados, temporários, greve e associação",
-     "etapa": "regra",
-     "blocos": [
-      {
-       "t": "lei",
-       "ref": "CF, art. 37, V, VIII e IX",
-       "texto": "V - as funções de confiança, exercidas ==exclusivamente por servidores ocupantes de cargo efetivo==, e os cargos em comissão, a serem preenchidos por servidores de carreira nos casos, condições e percentuais mínimos previstos em lei, destinam-se apenas às atribuições de ==direção, chefia e assessoramento==;\nVIII - a lei reservará percentual dos cargos e empregos públicos para as pessoas portadoras de deficiência e definirá os critérios de sua admissão;\nIX - a lei estabelecerá os casos de contratação por tempo determinado para atender a ==necessidade temporária de excepcional interesse público==;"
-      },
-      {
-       "t": "tabela",
-       "cab": [
-        "",
-        "Função de confiança",
-        "Cargo em comissão"
-       ],
-       "linhas": [
-        [
-         "Quem ocupa",
-         "Só servidor de cargo efetivo",
-         "Qualquer pessoa, respeitado o percentual mínimo de servidores de carreira fixado em lei"
-        ],
-        [
-         "Para quê",
-         "Direção, chefia e assessoramento",
-         "Direção, chefia e assessoramento"
-        ],
-        [
-         "Vínculo",
-         "Um encargo a mais para quem já é servidor",
-         "Livre nomeação e exoneração (ad nutum)"
-        ]
-       ]
-      },
-      {
-       "t": "nota",
-       "tom": "pegadinha",
-       "titulo": "Comissão não é para tudo",
-       "html": "Criar cargo em comissão para atividade técnica ou burocrática, que não seja de direção, chefia ou assessoramento, é inconstitucional; o controle disso é de <b>legalidade</b>, não de mérito. E o nepotismo continua vedado pela SV 13 (aula 9)."
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "RE 765.320/MG, Rel. Min. Teori Zavascki, 15/9/2016, repercussão geral",
-       "tese": "A contratação temporária em desconformidade com o art. 37, IX, da CF não gera efeitos jurídicos válidos, salvo o direito aos salários do período trabalhado e ao levantamento do FGTS (Lei 8.036/1990, art. 19-A)."
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "Tema 551, RE 1.066.677, red. p/ acórdão Min. Alexandre de Moraes, 22/5/2020",
-       "tese": "Servidores temporários não fazem jus a décimo terceiro salário e férias remuneradas acrescidas do terço constitucional, salvo (I) expressa previsão legal e/ou contratual em sentido contrário, ou (II) comprovado desvirtuamento da contratação temporária pela Administração Pública, em razão de sucessivas e reiteradas renovações e/ou prorrogações."
-      },
-      {
-       "t": "lei",
-       "ref": "CF, art. 37, VI e VII",
-       "texto": "VI - é garantido ao servidor público civil o direito à livre associação sindical;\nVII - o direito de greve será exercido nos termos e nos limites definidos em ==lei específica==;"
-      },
-      {
-       "t": "abrir",
-       "cartas": [
-        {
-         "tag": "Eficácia limitada",
-         "titulo": "Sem lei, aplica-se a do setor privado",
-         "texto": "O art. 37, VII, depende de lei específica que nunca veio. O STF mandou aplicar, no que couber, a <b>Lei 7.783/1989</b> (greve no setor privado) até o Congresso legislar (MI 708)."
-        },
-        {
-         "tag": "Tema 531",
-         "titulo": "Desconto dos dias parados",
-         "texto": "A Administração <b>deve</b> descontar os dias de paralisação, porque o vínculo fica suspenso; pode haver compensação por acordo. Não cabe desconto se a greve foi provocada por conduta ilícita do Poder Público (RE 693.456, Info 845)."
-        },
-        {
-         "tag": "Tema 541",
-         "titulo": "Segurança pública não faz greve",
-         "texto": "É vedada a greve, sob qualquer forma, a policiais civis e a todos os servidores que atuem diretamente na segurança pública; o Poder Público deve participar de mediação com as categorias (ARE 654.432, Info 860)."
-        },
-        {
-         "tag": "Competência",
-         "titulo": "Quem julga a greve",
-         "texto": "A Justiça comum julga a abusividade de greve de servidores, inclusive celetistas da direta, autarquias e fundações (RE 846.854, Info 871)."
-        },
-        {
-         "tag": "Estágio probatório",
-         "titulo": "Sem punição diferente",
-         "texto": "Norma que pune de forma especial o servidor em estágio probatório por aderir à greve é inconstitucional: fere a isonomia."
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "titulo": "Remuneração, teto, acumulação e estabilidade",
-     "etapa": "excecao",
-     "blocos": [
-      {
-       "t": "lei",
-       "ref": "CF, art. 37, X",
-       "texto": "X - a remuneração dos servidores públicos e o subsídio de que trata o § 4º do art. 39 somente poderão ser fixados ou alterados por ==lei específica==, observada a iniciativa privativa em cada caso, assegurada ==revisão geral anual==, sempre na mesma data e sem distinção de índices;"
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "Plenário, RE 710.293, Rel. Min. Luiz Fux, 16/9/2020, repercussão geral, Tema 600 (Info 998)",
-       "tese": "O não encaminhamento de projeto de lei de revisão anual dos vencimentos dos servidores públicos, previsto no inciso X do art. 37 da CF/1988, não gera direito subjetivo a indenização."
-      },
-      {
-       "t": "lei",
-       "ref": "CF, art. 37, XI",
-       "texto": "XI - a remuneração e o subsídio dos ocupantes de cargos, funções e empregos públicos da administração direta, autárquica e fundacional, dos membros de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios, dos detentores de mandato eletivo e dos demais agentes políticos e os proventos, pensões ou outra espécie remuneratória, percebidos cumulativamente ou não, incluídas as vantagens pessoais ou de qualquer outra natureza, não poderão exceder o subsídio mensal, em espécie, dos ==Ministros do Supremo Tribunal Federal==, aplicando-se como limite, nos Municípios, o subsídio do Prefeito, e nos Estados e no Distrito Federal, o subsídio mensal do Governador no âmbito do Poder Executivo, o subsídio dos Deputados Estaduais e Distritais no âmbito do Poder Legislativo e o subsidio dos Desembargadores do Tribunal de Justiça, limitado a ==noventa inteiros e vinte e cinco centésimos por cento== do subsídio mensal, em espécie, dos Ministros do Supremo Tribunal Federal, no âmbito do Poder Judiciário, aplicável este limite aos membros do Ministério Público, ==aos Procuradores e aos Defensores Públicos==;"
-      },
-      {
-       "t": "tabela",
-       "cab": [
-        "Onde",
-        "Teto"
-       ],
-       "linhas": [
-        [
-         "Geral (todos)",
-         "Subsídio de Ministro do STF"
-        ],
-        [
-         "Municípios",
-         "Subsídio do Prefeito"
-        ],
-        [
-         "Estados e DF, Executivo",
-         "Subsídio do Governador"
-        ],
-        [
-         "Estados e DF, Legislativo",
-         "Subsídio dos Deputados Estaduais e Distritais"
-        ],
-        [
-         "Estados e DF, Judiciário",
-         "Subsídio dos Desembargadores, limitado a 90,25% do Ministro do STF; vale também para MP, <b>Procuradores</b> e Defensores"
-        ]
-       ]
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "Plenário, RE 663.696/MG, Rel. Min. Luiz Fux, 28/2/2019 (Info 932)",
-       "tese": "A expressão \"Procuradores\", contida na parte final do inciso XI do art. 37 da Constituição da República, compreende os procuradores municipais, uma vez que estes se inserem nas funções essenciais à Justiça, estando, portanto, submetidos ao teto de 90,25% do subsídio mensal, em espécie, dos ministros do STF."
-      },
-      {
-       "t": "juris",
-       "tribunal": "STF",
-       "ref": "Plenário, ADI 6.135/GO e outras, Rel. Min. Rosa Weber, 19/10/2020 (Info 995)",
-       "tese": "É constitucional a percepção de honorários de sucumbência por procuradores de estados-membros, observado o teto previsto no art. 37, XI, da Constituição Federal no somatório total às demais verbas remuneratórias recebidas mensalmente."
-      },
-      {
-       "t": "nota",
-       "tom": "macete",
-       "titulo": "Como o teto é calculado",
-       "html": "O teto incide sobre a remuneração <b>bruta</b>; os tributos incidem depois do abate-teto (RE 675.978, Info 781). Vantagens pessoais entram na conta (Tema 257). Parcelas <b>indenizatórias</b> previstas em lei ficam fora (art. 37, § 11). Magistrados estaduais não se sujeitam ao subteto de 90,25% (ADI 3.854 MC)."
-      },
-      {
-       "t": "lei",
-       "ref": "CF, art. 37, XVI e XVII",
-       "texto": "XVI - é vedada a acumulação remunerada de cargos públicos, exceto, quando houver ==compatibilidade de horários==, observado em qualquer caso o disposto no ==inciso XI==:\na) a de dois cargos de professor;\nb) a de um cargo de professor com outro de qualquer natureza;\nc) a de dois cargos ou empregos privativos de profissionais de saúde, com profissões regulamentadas;\nXVII - a proibição de acumular estende-se a empregos e funções e abrange autarquias, fundações, ==empresas públicas, sociedades de economia mista==, suas subsidiárias, e ==sociedades controladas==, direta ou indiretamente, pelo poder público;"
-      },
-      {
-       "t": "nota",
-       "tom": "atencao",
-       "titulo": "Mudou em 2025: professor + qualquer cargo",
-       "html": "A <b>EC 138/2025</b> trocou a alínea b: antes era professor com outro cargo <b>técnico ou científico</b>; hoje é professor com outro <b>de qualquer natureza</b> (texto conferido no Planalto). Questões e materiais antigos ainda trazem a redação anterior. Continua exigida a compatibilidade de horários e o respeito ao teto, e a proibição alcança toda a indireta, inclusive estatais e controladas (XVII)."
-      },
-      {
-       "t": "lei",
-       "ref": "CF, art. 41, caput e §§ 1º e 4º",
-       "texto": "Art. 41. São estáveis após ==três anos de efetivo exercício== os servidores nomeados para ==cargo de provimento efetivo== em virtude de ==concurso público==.\n§ 1º O servidor público estável só perderá o cargo:\nI - em virtude de sentença judicial transitada em julgado;\nII - mediante processo administrativo em que lhe seja assegurada ampla defesa;\nIII - mediante procedimento de avaliação periódica de desempenho, na forma de ==lei complementar==, assegurada ampla defesa.\n§ 4º Como condição para a aquisição da estabilidade, é obrigatória a ==avaliação especial de desempenho== por comissão instituída para essa finalidade."
-      },
-      {
-       "t": "nota",
-       "tom": "atencao",
-       "titulo": "Estabilidade é do cargo efetivo",
-       "html": "Só se estabiliza quem foi nomeado para <b>cargo efetivo</b> por concurso, depois de <b>3 anos</b> de exercício e da <b>avaliação especial de desempenho</b>. Comissionado e empregado público não adquirem a estabilidade do art. 41. Invalidada a demissão, o estável é <b>reintegrado</b>; extinto o cargo, fica em <b>disponibilidade</b> com remuneração proporcional (§§ 2º e 3º)."
-      }
-     ]
-    },
-    {
-     "titulo": "Como a FCC cobra",
-     "etapa": "banca",
-     "blocos": [
-      {
-       "t": "nota",
-       "tom": "pegadinha",
-       "titulo": "As trocas preferidas",
-       "html": "Validade do concurso: <b>até 2 anos</b>, prorrogável <b>uma vez</b>, por <b>igual</b> período.<br>Função de confiança: <b>só efetivo</b>. Cargo em comissão: qualquer pessoa, com percentual mínimo de carreira.<br>Dentro das vagas: <b>direito</b>. Fora: só com <b>preterição arbitrária</b>.<br>Greve: Lei 7.783 por analogia; desconto dos dias parados é a regra.<br>Procurador estadual: teto do <b>Judiciário estadual</b> (90,25%).<br>Estabilidade: <b>3 anos</b> + avaliação especial; perde por sentença transitada, PAD ou avaliação periódica (LC)."
-      },
-      {
-       "t": "vf",
-       "itens": [
-        {
-         "texto": "O prazo de validade do concurso é de até dois anos, prorrogável uma vez por igual período.",
-         "v": true,
-         "porque": "CF, art. 37, III."
-        },
-        {
-         "texto": "Candidato aprovado fora do número de vagas tem direito à nomeação sempre que for aberto novo concurso no prazo de validade.",
-         "v": false,
-         "porque": "Tema 784: só com preterição arbitrária e imotivada."
-        },
-        {
-         "texto": "Funções de confiança podem ser exercidas por pessoas sem vínculo com a Administração.",
-         "v": false,
-         "porque": "Art. 37, V: exclusivamente por servidores de cargo efetivo."
-        },
-        {
-         "texto": "Os dias de greve do servidor devem ser descontados, salvo se a greve decorreu de conduta ilícita do Poder Público.",
-         "v": true,
-         "porque": "Tema 531."
-        },
-        {
-         "texto": "Procuradores do Estado submetem-se ao teto do subsídio do Governador.",
-         "v": false,
-         "porque": "Art. 37, XI, parte final: teto do Judiciário estadual (90,25%)."
-        },
-        {
-         "texto": "O servidor estável pode perder o cargo mediante avaliação periódica de desempenho, na forma de lei complementar.",
-         "v": true,
-         "porque": "Art. 41, § 1º, III."
-        },
-        {
-         "texto": "Nomeação sem concurso para cargo efetivo convalida-se após cinco anos.",
-         "v": false,
-         "porque": "Art. 37, § 2º: nulidade; não há decadência contra afronta direta à CF."
-        }
-       ]
-      }
-     ]
-    }
-   ],
-   "questoes": [
-    "adm-cad-33",
-    "adm-cad-34"
-   ],
-   "numero": 18
+   "id": "B2-a19",
+   "topico_id": "B2-12",
+   "numero": 19,
+   "titulo": "Bens públicos",
+   "status": "a_montar"
+  },
+  {
+   "id": "B2-a20",
+   "topico_id": "B2-13",
+   "numero": 20,
+   "titulo": "Intervenção na propriedade",
+   "status": "a_montar"
   },
   {
    "id": "B2-a17",
@@ -6316,27 +6330,13 @@
     "adm-cad-35",
     "adm-cad-36"
    ],
-   "numero": 19
+   "numero": 21
   },
   {
    "id": "B2-a18",
    "topico_id": "B2-10",
-   "numero": 20,
-   "titulo": "Improbidade administrativa",
-   "status": "a_montar"
-  },
-  {
-   "id": "B2-a19",
-   "topico_id": "B2-12",
-   "numero": 21,
-   "titulo": "Bens públicos",
-   "status": "a_montar"
-  },
-  {
-   "id": "B2-a20",
-   "topico_id": "B2-13",
    "numero": 22,
-   "titulo": "Intervenção na propriedade",
+   "titulo": "Improbidade administrativa",
    "status": "a_montar"
   },
   {

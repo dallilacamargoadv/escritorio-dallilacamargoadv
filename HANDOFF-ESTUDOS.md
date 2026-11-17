@@ -109,6 +109,15 @@ Migrations: `estudos_onda1_edital_cronograma`, `estudos_onda2_respostas_eventos_
 - Storage: bucket privado `biblioteca` (PDF, até 20 MB), caminho `<doc>.pdf`, upload direto do navegador (evita o limite de 4,5 MB da Vercel). Migration `estudos_onda6_biblioteca_bucket` (já aplicada em produção).
 - Falta: teste logada; depois apagar a chave `biblioteca` de `estudo_config` e os PDFs de teste. Mapas mentais e jurisprudência ficam para quando houver material.
 
+## 7f. Redação, trilhas e desafio semanal (15/11/2026, branch `feat/estudos-redacao`, sem commit)
+
+- Rotas: `/admin/estudos/redacao` (banco + discursivas), `/redacao/[tema]` (`livre` = recortador de tema próprio), `/redacao/discursiva/[caso]`, `/desafios/trilha` e `/desafios/trilha/[id]?dia=`.
+- Conteúdo (só servidor): `content/estudos/redacao.json` (12 temas), `discursivas.json` (7 casos), `trilhas.json` (10 trilhas, 1.371 C/E, `CONCURSO PGE-MA/geradores/gerar_trilhas.py`).
+- Lógica: `lib/estudos-trilhas.ts` (trilha, agenda semanal, métodos de revisão ativa), `lib/estudos-redacao.ts` (tangenciamento, linhas ~75 car., grade). Servidor: `lib/db-estudos-trilhas.ts`, `lib/db-estudos-redacao.ts`. APIs `api/admin/estudos/{trilhas,redacao}`.
+- Estado em `estudo_config`, chaves `trilhas` (`resp`, `concluidos`) e `redacao` (`temas`, `casos`, `feitos`). Sem migration.
+- Componentes: `HojeDesafios` (trilha da matéria do cronograma de hoje + desafio da semana), `AlertaRevisao` (Início e Desafios), `TrilhaClient`, `RedacaoClient`, `DiscursivaClient`, `MarcarSemanal`.
+- Falta: teste logada e depois apagar as chaves `trilhas` e `redacao` de `estudo_config`.
+
 ## 8. Roteiro
 
 1. Etapa 1 (feita): Início, Edital, Cronograma.
@@ -118,7 +127,7 @@ Migrations: `estudos_onda1_edital_cronograma`, `estudos_onda2_respostas_eventos_
 4b. Etapa 4b (feita, 15/11/2026, branch `feat/estudos-simulados`): aba Simulados em `/admin/estudos/simulados`. Ao entregar, o servidor corrige e grava uma resposta por questão (`contexto = simulado`; motivo padrão: errada = conteúdo, em branco = estratégia, certa = segurança), editável no relatório. Evolução semanal agrupa por semana de segunda a domingo.
 5. Etapa 5 (feita em 15/11/2026, ver 7e): biblioteca (PDFs no Storage com busca por texto e página, lei grifada, jurisprudência com fonte e data, questões comentadas, mapas, etiquetas, pesquisa global). Antes: conferir o limite de armazenamento do plano Supabase. Marca d'água com dados pessoais das apostilas nunca pode aparecer.
 6. Etapa 6: banca FCC (cadastro de provas reais) e prontidão.
-7. Etapa 7: redação e discursivas.
+7. Etapa 7 (feita em 15/11/2026, ver 7f): redação e discursivas.
 8. Etapa 8: RPG (XP, níveis, missões, loja só de itens visuais).
 9. Etapa 9 (opcional e paga): IA dentro do site, com camada que aceita qualquer provedor, chave só no servidor, teto mensal. A assinatura do Claude dela **não** dá acesso à API. O tutor sem custo extra é um Projeto no claude.ai (instruções em `CONCURSO PGE-MA/tutor/INSTRUCOES-PROJETO-OPERACAO-APROVACAO.md`).
 

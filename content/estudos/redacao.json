@@ -1,0 +1,385 @@
+[
+  {
+    "id": "ciencia-destino",
+    "eixo": "Ciência e tecnologia",
+    "assunto": "Educação científica e pseudociência",
+    "tema": "Apenas uma sociedade versada na ciência pode escolher o seu destino responsavelmente.",
+    "comando": "Proposição para defender ou contestar: a palavra que limita é \"apenas\"",
+    "nucleos": [["ciência", "científico", "científica", "conhecimento científico", "método científico", "pesquisa"], ["sociedade", "cidadãos", "população", "coletividade"], ["destino", "futuro", "escolhas", "decisões", "rumos"], ["responsável", "responsavelmente", "responsabilidade", "consciente"]],
+    "comandoSinonimos": ["apenas", "somente", "só", "condição", "imprescindível", "indispensável", "sem a qual"],
+    "armadilhas": [
+      {"termo": "história da ciência", "porque": "contar a evolução da ciência desde Galileu sem ligar à escolha coletiva é tangenciar"},
+      {"termo": "inteligência artificial", "porque": "pode ser exemplo, mas virar o assunto principal foge do recorte"},
+      {"termo": "religião", "porque": "opor fé e ciência não é o que o tema pede"}
+    ],
+    "coletanea": [
+      {"titulo": "Provocação 1", "texto": "Conteúdos sem base em evidência circulam com mais facilidade do que a divulgação científica cuidadosa. Quem se informa só pela cultura popular encontra mais fábula do que avaliação equilibrada."},
+      {"titulo": "Provocação 2", "texto": "O que separa o senso comum do conhecimento científico é o rigor: hipótese, teste, revisão. Uma decisão pública tomada sem esse filtro corre o risco de seguir a opinião mais barulhenta."},
+      {"titulo": "Provocação 3", "texto": "Os frutos da pesquisa básica muitas vezes aparecem décadas depois. Medir a ciência só pelo retorno imediato pode cortar justamente o que vai resolver os problemas de amanhã."}
+    ],
+    "recorte": {
+      "fazer": ["Discutir se o letramento científico da população é condição para decisões coletivas responsáveis (vacinação, clima, políticas públicas).", "Tomar posição sobre o \"apenas\": concordar, ou relativizar mostrando que ciência sem ética e sem participação democrática também não basta."],
+      "tangenciar": ["Elogiar a ciência em geral sem falar de escolhas da sociedade.", "Falar só de investimento em universidades, sem ligar ao cidadão que decide.", "Ficar no combate às fake news como tema central."]
+    },
+    "tese": "O letramento científico é condição necessária, embora não suficiente, para que a sociedade decida o seu futuro com responsabilidade: sem ele, a escolha coletiva fica refém da desinformação.",
+    "argumentos": [
+      {"titulo": "Desinformação ocupa o vazio", "texto": "Onde a divulgação científica é escassa, a pseudociência preenche o espaço e orienta decisões de saúde e de voto. Exemplo: resistência a vacinas comprovadamente seguras."},
+      {"titulo": "Políticas públicas exigem evidência", "texto": "Clima, saneamento e saúde dependem de dados. Uma população que entende o método cobra do gestor decisões baseadas em evidência e não em conveniência."},
+      {"titulo": "Contraponto que enriquece", "texto": "Ciência sem ética já serviu a projetos desastrosos. Por isso o \"apenas\" pede ciência somada a valores democráticos e direitos fundamentais."}
+    ],
+    "repertorios": [
+      {"tipo": "Lei", "nome": "CF/88, art. 218", "uso": "O Estado promoverá e incentivará o desenvolvimento científico, a pesquisa e a inovação: a ciência como dever estatal, não luxo."},
+      {"tipo": "Livro", "nome": "Carl Sagan, O mundo assombrado pelos demônios", "uso": "A ciência como \"vela no escuro\" e o ceticismo como ferramenta do cidadão contra a pseudociência."},
+      {"tipo": "Filosofia", "nome": "Kant, \"Sapere aude\" (O que é o Esclarecimento?)", "uso": "Ousar pensar por si mesmo: a saída da menoridade como condição de autonomia coletiva."}
+    ],
+    "conclusao": "Retome a tese: investir em educação científica desde a escola e em divulgação de qualidade é o que permite à sociedade escolher, e não ser escolhida pela desinformação."
+  },
+  {
+    "id": "idosos-trabalho",
+    "eixo": "Sociedade e direitos",
+    "assunto": "Envelhecimento da população",
+    "tema": "Obstáculos para a inserção das pessoas idosas no mercado de trabalho brasileiro",
+    "comando": "Obstáculos: o que dificulta ou impede",
+    "nucleos": [["idosa", "idosas", "idoso", "idosos", "pessoa idosa", "terceira idade", "envelhecimento"], ["mercado de trabalho", "emprego", "empregabilidade", "vagas", "contratação", "trabalho"], ["brasil", "brasileiro", "brasileira", "país"]],
+    "comandoSinonimos": ["obstáculo", "obstáculos", "barreira", "barreiras", "entrave", "entraves", "dificulta", "impede", "dificuldade"],
+    "armadilhas": [
+      {"termo": "geração z", "porque": "comparar gerações ou falar de empatia dos jovens não é mercado de trabalho"},
+      {"termo": "banco", "porque": "idoso nos serviços bancários é consumo, não empregabilidade"},
+      {"termo": "universidade", "porque": "idoso na universidade é educação, outro recorte"},
+      {"termo": "mais lento", "porque": "estereótipo: a banca penaliza preconceito"}
+    ],
+    "coletanea": [
+      {"titulo": "Provocação 1", "texto": "A população brasileira envelhece rápido, mas muitos anúncios de vaga ainda pedem, nas entrelinhas, alguém \"jovem e dinâmico\"."},
+      {"titulo": "Provocação 2", "texto": "Idadismo (ou etarismo) é o preconceito baseado na idade. Ele aparece na seleção, na promoção e no desligamento."}
+    ],
+    "recorte": {
+      "fazer": ["Apontar o que impede a contratação e a permanência da pessoa idosa: idadismo, estereótipos, falta de requalificação oferecida pelas empresas.", "Mostrar a violação de direitos como consequência."],
+      "tangenciar": ["Falar de consumo, bancos ou universidade.", "Escrever sobre aposentadoria e previdência como foco.", "Comparar gerações."]
+    },
+    "tese": "A inserção da pessoa idosa no trabalho esbarra sobretudo no idadismo, que transforma experiência em suspeita, e na ausência de políticas de requalificação.",
+    "argumentos": [
+      {"titulo": "Idadismo na seleção", "texto": "O estereótipo da baixa produtividade filtra currículos antes de qualquer avaliação real de competência."},
+      {"titulo": "Falta de requalificação", "texto": "Empresas investem em treinamento de quem acabou de entrar e não de quem tem mais tempo de casa, o que alimenta o desligamento precoce."}
+    ],
+    "repertorios": [
+      {"tipo": "Lei", "nome": "CF/88, art. 230", "uso": "Família, sociedade e Estado têm o dever de amparar as pessoas idosas e assegurar sua participação na comunidade."},
+      {"tipo": "Lei", "nome": "Estatuto da Pessoa Idosa (Lei 10.741/2003)", "uso": "Garante o direito ao exercício de atividade profissional, respeitadas as condições físicas, intelectuais e psíquicas."},
+      {"tipo": "Conceito", "nome": "Idadismo (OMS)", "uso": "A Organização Mundial da Saúde trata o preconceito etário como problema global de saúde e de direitos."}
+    ],
+    "conclusao": "Retome os obstáculos e indique quem pode removê-los: empresas (seleção às cegas, requalificação) e Estado (fiscalização e incentivo)."
+  },
+  {
+    "id": "calor-extremo",
+    "eixo": "Meio ambiente",
+    "assunto": "Mudanças climáticas",
+    "tema": "Efeitos do calor extremo na sociedade brasileira",
+    "comando": "Efeitos: consequências, não causas nem soluções",
+    "nucleos": [["calor extremo", "ondas de calor", "temperaturas extremas", "calor"], ["sociedade", "população", "brasileiros", "cidades", "trabalhadores"], ["efeitos", "consequências", "impactos", "reflexos"]],
+    "comandoSinonimos": ["efeito", "efeitos", "consequência", "consequências", "impacto", "impactos", "reflexo", "acarreta", "provoca"],
+    "armadilhas": [
+      {"termo": "desmatamento", "porque": "é causa; o tema pede efeitos"},
+      {"termo": "acordo de paris", "porque": "falar de metas globais desloca para soluções diplomáticas"},
+      {"termo": "enchente", "porque": "evento extremo diferente; o recorte é calor"}
+    ],
+    "coletanea": [
+      {"titulo": "Provocação 1", "texto": "Ondas de calor mais longas pesam sobre a saúde de idosos e crianças e sobre quem trabalha ao ar livre."},
+      {"titulo": "Provocação 2", "texto": "Bairros sem arborização ficam mais quentes: o calor não atinge todos da mesma forma."}
+    ],
+    "recorte": {
+      "fazer": ["Discutir consequências na saúde, no trabalho, na desigualdade urbana e na economia."],
+      "tangenciar": ["Explicar as causas do aquecimento global.", "Propor soluções como foco do texto."]
+    },
+    "tese": "O calor extremo não é só desconforto: ele agrava a desigualdade, porque adoece e empobrece primeiro quem tem menos proteção.",
+    "argumentos": [
+      {"titulo": "Saúde", "texto": "Desidratação e agravamento de doenças crônicas pressionam o sistema público de saúde."},
+      {"titulo": "Desigualdade urbana", "texto": "Ilhas de calor concentram-se nas periferias, sem arborização e com moradias precárias."}
+    ],
+    "repertorios": [
+      {"tipo": "Lei", "nome": "CF/88, art. 225", "uso": "Direito de todos ao meio ambiente ecologicamente equilibrado, dever do Poder Público e da coletividade, para as presentes e futuras gerações."},
+      {"tipo": "Conceito", "nome": "Racismo ambiental / justiça climática", "uso": "Os danos ambientais recaem de modo desigual sobre grupos vulneráveis."}
+    ],
+    "conclusao": "Feche reafirmando que os efeitos são desiguais e que reconhecer isso é o primeiro passo para proteger os mais expostos."
+  },
+  {
+    "id": "turismo-sustentavel",
+    "eixo": "Meio ambiente",
+    "assunto": "Desenvolvimento sustentável",
+    "tema": "Desafios para a promoção do turismo sustentável no Brasil",
+    "comando": "Desafios: o que torna difícil promover (não a importância)",
+    "nucleos": [["turismo sustentável", "turismo", "ecoturismo", "turistas"], ["sustentável", "sustentabilidade", "preservação", "comunidades locais"], ["brasil", "brasileiro", "país"]],
+    "comandoSinonimos": ["desafio", "desafios", "obstáculo", "entrave", "dificuldade", "barreira"],
+    "armadilhas": [
+      {"termo": "importância", "porque": "o tema pede desafios; defender a importância é outro texto"},
+      {"termo": "pandemia", "porque": "crise do turismo em geral não é o recorte sustentável"}
+    ],
+    "coletanea": [
+      {"titulo": "Provocação 1", "texto": "Destinos naturais lotados na alta temporada sofrem com lixo, esgoto e especulação imobiliária."},
+      {"titulo": "Provocação 2", "texto": "Comunidades tradicionais nem sempre participam da renda que o turismo gera no seu território."}
+    ],
+    "recorte": {
+      "fazer": ["Apontar entraves: fiscalização fraca, infraestrutura (saneamento), exclusão das comunidades locais, visão de lucro imediato."],
+      "tangenciar": ["Defender a importância do turismo.", "Falar de turismo no exterior."]
+    },
+    "tese": "Promover turismo sustentável no Brasil esbarra na lógica do lucro imediato e na exclusão das comunidades locais da gestão dos destinos.",
+    "argumentos": [
+      {"titulo": "Lucro imediato", "texto": "Sem planejamento de capacidade, o destino é explorado até se degradar."},
+      {"titulo": "Comunidades fora da decisão", "texto": "Quem vive no local e mais preserva é quem menos decide e menos recebe."}
+    ],
+    "repertorios": [
+      {"tipo": "Lei", "nome": "CF/88, art. 225", "uso": "Dever de preservar o meio ambiente para as presentes e futuras gerações."},
+      {"tipo": "Documento", "nome": "Agenda 2030 da ONU (ODS)", "uso": "Os Objetivos de Desenvolvimento Sustentável ligam crescimento econômico, inclusão e preservação."}
+    ],
+    "conclusao": "Reafirme os desafios e indique que vencê-los passa por planejamento público e participação das comunidades."
+  },
+  {
+    "id": "reconhecimento-facial",
+    "eixo": "Ciência e tecnologia",
+    "assunto": "Tecnologia e segurança pública",
+    "tema": "O uso do reconhecimento facial na segurança pública: entre o combate à criminalidade e o direito à privacidade",
+    "comando": "Tensão entre dois valores: o texto precisa tratar dos dois lados",
+    "nucleos": [["reconhecimento facial", "biometria facial", "câmeras", "vigilância"], ["segurança pública", "criminalidade", "polícia", "crime"], ["privacidade", "intimidade", "dados pessoais", "proteção de dados"]],
+    "comandoSinonimos": ["entre", "equilíbrio", "ponderação", "por outro lado", "limite", "limites"],
+    "armadilhas": [
+      {"termo": "redes sociais", "porque": "privacidade nas redes é outro recorte"},
+      {"termo": "celular", "porque": "desbloqueio do celular não é segurança pública"}
+    ],
+    "coletanea": [
+      {"titulo": "Provocação 1", "texto": "Câmeras com reconhecimento facial prometem localizar foragidos em multidões."},
+      {"titulo": "Provocação 2", "texto": "Algoritmos treinados com bases pouco diversas erram mais com certos grupos, e um erro pode levar um inocente à prisão."}
+    ],
+    "recorte": {
+      "fazer": ["Pesar eficiência no combate ao crime contra privacidade, risco de erro e viés.", "Tomar posição: uso possível com limites legais, controle e transparência."],
+      "tangenciar": ["Falar só de privacidade na internet.", "Falar só de violência urbana."]
+    },
+    "tese": "O reconhecimento facial pode servir à segurança pública, desde que limitado por lei, por controle externo e pela proteção de dados, sob pena de transformar todo cidadão em suspeito.",
+    "argumentos": [
+      {"titulo": "Eficiência tem valor", "texto": "Localizar foragidos e desaparecidos é interesse legítimo do Estado."},
+      {"titulo": "Erro e viés", "texto": "Falsos positivos recaem mais sobre grupos já vulneráveis, e a prisão de inocente viola direitos fundamentais."}
+    ],
+    "repertorios": [
+      {"tipo": "Lei", "nome": "CF/88, art. 5º, X e LXXIX", "uso": "Inviolabilidade da intimidade e da vida privada; direito fundamental à proteção dos dados pessoais."},
+      {"tipo": "Lei", "nome": "LGPD (Lei 13.709/2018)", "uso": "Dado biométrico é dado sensível."},
+      {"tipo": "Livro", "nome": "Michel Foucault, Vigiar e punir (o panóptico)", "uso": "A vigilância permanente como forma de poder e controle."}
+    ],
+    "conclusao": "Feche com a ponderação: tecnologia sim, vigilância sem limite não."
+  },
+  {
+    "id": "remicao-leitura",
+    "eixo": "Justiça e cidadania",
+    "assunto": "Sistema prisional e ressocialização",
+    "tema": "A remição da pena pela leitura",
+    "comando": "Tema nominal: discutir o instituto, seus fundamentos e seus limites",
+    "nucleos": [["remição", "remir", "redução da pena", "desconto da pena"], ["leitura", "livros", "ler", "resenha", "educação"], ["pena", "presos", "pessoas privadas de liberdade", "sistema prisional", "ressocialização"]],
+    "comandoSinonimos": ["remição", "ressocialização", "reintegração", "efeito", "importância", "limite"],
+    "armadilhas": [
+      {"termo": "pena de morte", "porque": "debate sobre punição em geral foge do instituto"},
+      {"termo": "superlotação", "porque": "pode ser contexto, mas não o foco"}
+    ],
+    "coletanea": [
+      {"titulo": "Provocação 1", "texto": "A Lei de Execução Penal permite remir parte da pena por trabalho ou por estudo, e a leitura com resenha passou a ser reconhecida como prática educativa."},
+      {"titulo": "Provocação 2", "texto": "Críticos falam em \"benefício fácil\"; defensores lembram que a leitura muda horizontes e reduz a reincidência."}
+    ],
+    "recorte": {
+      "fazer": ["Discutir a leitura como instrumento de ressocialização e os desafios de implementação (acervo, avaliação, alcance)."],
+      "tangenciar": ["Falar do sistema prisional em geral.", "Defender penas mais duras."]
+    },
+    "tese": "A remição pela leitura concretiza a função ressocializadora da pena, desde que acompanhada de acervo, mediação e avaliação séria.",
+    "argumentos": [
+      {"titulo": "Função da pena", "texto": "A execução penal tem também o objetivo de integração social do condenado; a leitura amplia repertório e perspectivas."},
+      {"titulo": "Desafios práticos", "texto": "Sem bibliotecas e sem quem avalie as resenhas, o direito fica só no papel."}
+    ],
+    "repertorios": [
+      {"tipo": "Lei", "nome": "Lei de Execução Penal (Lei 7.210/1984), art. 126", "uso": "O condenado em regime fechado ou semiaberto pode remir parte da pena por trabalho ou por estudo."},
+      {"tipo": "Norma", "nome": "Resolução CNJ 391/2021", "uso": "Disciplina a remição por práticas sociais educativas, entre elas a leitura."},
+      {"tipo": "Livro", "nome": "Paulo Freire, Pedagogia do oprimido", "uso": "Educação como prática da liberdade."}
+    ],
+    "conclusao": "Reforce: ler não é favor, é caminho de volta à sociedade, se o Estado der as condições."
+  },
+  {
+    "id": "desinformacao-democracia",
+    "eixo": "Comunicação e política",
+    "assunto": "Desinformação",
+    "tema": "Os riscos da desinformação para a democracia brasileira",
+    "comando": "Riscos: perigos e ameaças, não soluções",
+    "nucleos": [["desinformação", "notícias falsas", "fake news", "boatos"], ["democracia", "democrático", "eleições", "instituições", "debate público"], ["brasil", "brasileira", "país"]],
+    "comandoSinonimos": ["risco", "riscos", "ameaça", "ameaças", "perigo", "compromete", "ameaça"],
+    "armadilhas": [
+      {"termo": "algoritmo", "porque": "explicar a tecnologia em si sem ligar à democracia é tangenciar"},
+      {"termo": "censura", "porque": "pode ser contraponto, não o foco"}
+    ],
+    "coletanea": [
+      {"titulo": "Provocação 1", "texto": "Conteúdo falso costuma se espalhar mais rápido que a correção, porque explora medo e indignação."},
+      {"titulo": "Provocação 2", "texto": "Quando ninguém confia nos mesmos fatos, o debate público vira disputa de torcidas."}
+    ],
+    "recorte": {
+      "fazer": ["Mostrar como a desinformação ameaça o voto consciente, a confiança nas instituições e o debate."],
+      "tangenciar": ["Falar de golpes financeiros na internet.", "Falar só de vício em redes sociais."]
+    },
+    "tese": "A desinformação corrói a democracia porque destrói o terreno comum de fatos sobre o qual o cidadão vota e fiscaliza.",
+    "argumentos": [
+      {"titulo": "Voto contaminado", "texto": "Escolha baseada em mentira não é escolha livre."},
+      {"titulo": "Descrédito das instituições", "texto": "Ataques falsos a instituições minam a confiança necessária para o funcionamento do Estado."}
+    ],
+    "repertorios": [
+      {"tipo": "Lei", "nome": "CF/88, art. 1º, parágrafo único", "uso": "Todo o poder emana do povo: sem informação confiável, a soberania popular fica comprometida."},
+      {"tipo": "Livro", "nome": "Hannah Arendt, Verdade e política", "uso": "A mentira organizada ameaça a base factual comum da vida política."}
+    ],
+    "conclusao": "Feche reafirmando que proteger a informação é proteger a própria democracia."
+  },
+  {
+    "id": "governo-digital",
+    "eixo": "Ciência e tecnologia",
+    "assunto": "Transformação digital do Estado",
+    "tema": "Desafios para a ampliação dos serviços públicos digitais no Brasil",
+    "comando": "Desafios: o que dificulta ampliar",
+    "nucleos": [["serviços públicos digitais", "governo digital", "serviços digitais", "gov.br", "digitalização"], ["serviços públicos", "administração pública", "estado", "cidadão"], ["brasil", "brasileiro", "país"]],
+    "comandoSinonimos": ["desafio", "desafios", "obstáculo", "entrave", "barreira", "dificuldade"],
+    "armadilhas": [
+      {"termo": "redes sociais", "porque": "uso pessoal de tecnologia não é serviço público"},
+      {"termo": "home office", "porque": "trabalho remoto é outro assunto"}
+    ],
+    "coletanea": [
+      {"titulo": "Provocação 1", "texto": "Pedir benefício, emitir documento e consultar processo pelo celular economiza tempo e dinheiro."},
+      {"titulo": "Provocação 2", "texto": "Quem não tem internet de qualidade ou não sabe usar o aplicativo pode ficar do lado de fora do serviço."}
+    ],
+    "recorte": {
+      "fazer": ["Exclusão digital, segurança de dados, integração de sistemas, atendimento humano para quem precisa."],
+      "tangenciar": ["Elogiar a tecnologia em geral.", "Falar de empresas privadas."]
+    },
+    "tese": "Ampliar o governo digital exige vencer a exclusão digital e garantir segurança de dados, sem fechar a porta do atendimento presencial.",
+    "argumentos": [
+      {"titulo": "Exclusão digital", "texto": "O serviço só digital exclui justamente quem mais depende dele."},
+      {"titulo": "Segurança e confiança", "texto": "Vazamentos de dados minam a confiança do cidadão no Estado digital."}
+    ],
+    "repertorios": [
+      {"tipo": "Lei", "nome": "Lei do Governo Digital (Lei 14.129/2021)", "uso": "Princípios e regras para a eficiência pública por meio da desburocratização e da inovação."},
+      {"tipo": "Lei", "nome": "CF/88, art. 37, caput", "uso": "Princípio da eficiência na administração pública."}
+    ],
+    "conclusao": "Reafirme que digitalizar é incluir, ou não é serviço público de verdade."
+  },
+  {
+    "id": "transparencia-gestao",
+    "eixo": "Estado e cidadania",
+    "assunto": "Controle social",
+    "tema": "A importância da transparência na gestão pública brasileira",
+    "comando": "Importância: por que é relevante (não desafios)",
+    "nucleos": [["transparência", "acesso à informação", "publicidade", "dados abertos"], ["gestão pública", "administração pública", "governo", "gastos públicos"], ["brasil", "brasileira", "país"]],
+    "comandoSinonimos": ["importância", "importante", "relevância", "fundamental", "essencial", "contribui", "permite"],
+    "armadilhas": [
+      {"termo": "desafios", "porque": "o tema pede importância; listar dificuldades é outro texto"},
+      {"termo": "empresas privadas", "porque": "transparência corporativa não é gestão pública"}
+    ],
+    "coletanea": [
+      {"titulo": "Provocação 1", "texto": "Portais de transparência permitem a qualquer pessoa ver contratos e salários públicos."},
+      {"titulo": "Provocação 2", "texto": "O que é público e não é divulgado dificulta o controle e favorece desvios."}
+    ],
+    "recorte": {
+      "fazer": ["Transparência como meio de controle social, prevenção da corrupção e melhora da confiança."],
+      "tangenciar": ["Falar só de corrupção.", "Listar desafios."]
+    },
+    "tese": "A transparência é o que transforma o cidadão em fiscal do gasto público e, por isso, é instrumento de eficiência e de prevenção da corrupção.",
+    "argumentos": [
+      {"titulo": "Controle social", "texto": "Informação aberta permite que imprensa, conselhos e cidadãos fiscalizem."},
+      {"titulo": "Prevenção", "texto": "O gestor que sabe que será visto tende a decidir melhor."}
+    ],
+    "repertorios": [
+      {"tipo": "Lei", "nome": "CF/88, art. 37, caput", "uso": "Princípio da publicidade."},
+      {"tipo": "Lei", "nome": "Lei de Acesso à Informação (Lei 12.527/2011)", "uso": "Publicidade como regra e sigilo como exceção."},
+      {"tipo": "Frase", "nome": "Louis Brandeis: \"a luz do sol é o melhor desinfetante\"", "uso": "Abertura como antídoto contra abusos."}
+    ],
+    "conclusao": "Reafirme a importância e ligue à confiança do cidadão no Estado."
+  },
+  {
+    "id": "saude-mental-trabalho",
+    "eixo": "Saúde",
+    "assunto": "Saúde mental",
+    "tema": "Os impactos da hiperconectividade na saúde mental do trabalhador",
+    "comando": "Impactos: efeitos sobre a saúde mental",
+    "nucleos": [["hiperconectividade", "conectado", "conexão permanente", "mensagens", "celular", "disponibilidade"], ["saúde mental", "esgotamento", "burnout", "ansiedade", "adoecimento"], ["trabalhador", "trabalhadores", "trabalho", "jornada"]],
+    "comandoSinonimos": ["impacto", "impactos", "efeito", "efeitos", "consequência", "consequências", "provoca", "acarreta"],
+    "armadilhas": [
+      {"termo": "adolescentes", "porque": "saúde mental de jovens nas redes é outro público"},
+      {"termo": "jogos", "porque": "vício em jogos não é relação de trabalho"}
+    ],
+    "coletanea": [
+      {"titulo": "Provocação 1", "texto": "A mensagem do chefe às 22h borra a fronteira entre jornada e descanso."},
+      {"titulo": "Provocação 2", "texto": "Estar sempre disponível vira expectativa silenciosa, e o descanso passa a gerar culpa."}
+    ],
+    "recorte": {
+      "fazer": ["Efeitos da conexão permanente: esgotamento, ansiedade, perda do descanso, queda de produtividade."],
+      "tangenciar": ["Falar de redes sociais em geral.", "Falar de desemprego."]
+    },
+    "tese": "A hiperconectividade adoece o trabalhador porque elimina o tempo de desligamento, que é condição da saúde mental.",
+    "argumentos": [
+      {"titulo": "Fim do descanso", "texto": "Sem fronteira entre trabalho e vida privada, o descanso nunca é completo."},
+      {"titulo": "Autoexploração", "texto": "A cobrança passa a ser interna: o trabalhador se cobra estar sempre disponível."}
+    ],
+    "repertorios": [
+      {"tipo": "Livro", "nome": "Byung-Chul Han, Sociedade do cansaço", "uso": "O sujeito do desempenho que se explora até o esgotamento."},
+      {"tipo": "Lei", "nome": "CF/88, art. 6º e art. 7º, XXII", "uso": "Saúde e trabalho como direitos sociais; redução dos riscos inerentes ao trabalho."}
+    ],
+    "conclusao": "Reafirme: o direito de se desconectar é parte da saúde do trabalhador."
+  },
+  {
+    "id": "solucao-consensual",
+    "eixo": "Justiça e cidadania",
+    "assunto": "Acesso à justiça",
+    "tema": "A importância dos métodos consensuais de solução de conflitos para o acesso à justiça",
+    "comando": "Importância: por que conciliação e mediação ampliam o acesso",
+    "nucleos": [["conciliação", "mediação", "métodos consensuais", "acordo", "solução consensual"], ["acesso à justiça", "justiça", "judiciário", "litígio", "processo"]],
+    "comandoSinonimos": ["importância", "importante", "relevância", "contribui", "permite", "essencial"],
+    "armadilhas": [
+      {"termo": "morosidade", "porque": "pode ser contexto, mas falar só da lentidão do Judiciário tangencia"},
+      {"termo": "arbitragem", "porque": "arbitragem não é método consensual (há decisão de terceiro)"}
+    ],
+    "coletanea": [
+      {"titulo": "Provocação 1", "texto": "Um acordo bem construído resolve em semanas o que o processo levaria anos."},
+      {"titulo": "Provocação 2", "texto": "Quando as partes constroem a solução, a chance de cumprimento espontâneo aumenta."}
+    ],
+    "recorte": {
+      "fazer": ["Mostrar como os métodos consensuais aproximam a justiça do cidadão, dão celeridade e pacificam."],
+      "tangenciar": ["Criticar o Judiciário em geral.", "Tratar arbitragem como se fosse consensual."]
+    },
+    "tese": "Os métodos consensuais ampliam o acesso à justiça porque entregam solução mais rápida e mais aceita pelas partes, sem substituir o direito de ir ao juiz.",
+    "argumentos": [
+      {"titulo": "Celeridade", "texto": "A solução consensual evita anos de recursos."},
+      {"titulo": "Pacificação", "texto": "A decisão construída pelas partes é mais cumprida e preserva relações."}
+    ],
+    "repertorios": [
+      {"tipo": "Lei", "nome": "CPC, art. 3º, §§ 2º e 3º", "uso": "O Estado promoverá, sempre que possível, a solução consensual; conciliação e mediação devem ser estimuladas por juízes, advogados, defensores e membros do MP."},
+      {"tipo": "Lei", "nome": "CF/88, art. 5º, XXXV", "uso": "A lei não excluirá da apreciação do Judiciário lesão ou ameaça a direito: o consenso é opção, não barreira."}
+    ],
+    "conclusao": "Reafirme a importância e o equilíbrio: consenso como primeira porta, juiz sempre disponível."
+  },
+  {
+    "id": "saneamento",
+    "eixo": "Meio ambiente",
+    "assunto": "Saúde pública e infraestrutura",
+    "tema": "Desafios para a universalização do saneamento básico no Brasil",
+    "comando": "Desafios: o que impede chegar a todos",
+    "nucleos": [["saneamento", "esgoto", "água tratada", "coleta de esgoto", "abastecimento de água"], ["universalização", "todos", "acesso", "periferias", "zonas rurais"], ["brasil", "brasileiro", "país"]],
+    "comandoSinonimos": ["desafio", "desafios", "obstáculo", "entrave", "barreira", "dificuldade"],
+    "armadilhas": [
+      {"termo": "lixo", "porque": "resíduos sólidos fazem parte do saneamento, mas o foco do texto não pode virar só reciclagem"},
+      {"termo": "importância", "porque": "o tema pede desafios"}
+    ],
+    "coletanea": [
+      {"titulo": "Provocação 1", "texto": "Obra de esgoto fica enterrada e não aparece na foto da inauguração."},
+      {"titulo": "Provocação 2", "texto": "Falta de saneamento se traduz em doenças evitáveis e faltas na escola."}
+    ],
+    "recorte": {
+      "fazer": ["Investimento alto e de longo prazo, desigualdade regional, ocupação irregular, baixa visibilidade política."],
+      "tangenciar": ["Falar só de poluição dos rios.", "Defender a importância."]
+    },
+    "tese": "A universalização do saneamento esbarra na baixa visibilidade política das obras e na desigualdade regional do investimento.",
+    "argumentos": [
+      {"titulo": "Obra invisível", "texto": "O retorno eleitoral baixo empurra o saneamento para o fim da fila."},
+      {"titulo": "Desigualdade", "texto": "Periferias e zonas rurais, onde o custo por ligação é maior, ficam por último."}
+    ],
+    "repertorios": [
+      {"tipo": "Lei", "nome": "Novo Marco Legal do Saneamento (Lei 14.026/2020)", "uso": "Fixou metas de universalização e estimulou concessões e regionalização."},
+      {"tipo": "Lei", "nome": "CF/88, art. 23, IX", "uso": "Competência comum para promover a melhoria das condições de saneamento básico."}
+    ],
+    "conclusao": "Reafirme os desafios e lembre que saneamento é saúde preventiva."
+  }
+]

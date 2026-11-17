@@ -3,6 +3,7 @@
 import type { Classificacao, Questao, Resposta } from "@/lib/estudos-desempenho";
 import { addDaysToDateString } from "@/lib/atividades-utils";
 import { MATERIA_POR_ID } from "@/lib/estudos-utils";
+import { dataBelem } from "@/lib/estudos-revisao";
 
 export type TipoSimulado = "lei_seca" | "simuladao" | "outro";
 export const TIPO_LABEL: Record<TipoSimulado, string> = {
@@ -103,6 +104,26 @@ function embaralhar<T>(arr: T[]): T[] {
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
+}
+
+export const TAMANHOS_SEMANA = [20, 30];
+
+/**
+ * Temas praticados nos últimos 7 dias (qualquer contexto), como "materia|tema".
+ * Base do simulado de domingo: só cobra o que ela já estudou na semana.
+ */
+export function temasDaSemana(respostas: Resposta[], questoes: Map<string, Questao>, desde: string): Set<string> {
+  const temas = new Set<string>();
+  for (const r of respostas) {
+    if (dataBelem(r.respondida_em) < desde) continue;
+    const q = questoes.get(r.questao_id);
+    if (q?.tema) temas.add(`${q.materia_id}|${q.tema}`);
+  }
+  return temas;
+}
+
+export function poolSemana(questoes: Questao[], temas: Set<string>): Questao[] {
+  return questoes.filter((q) => temas.has(`${q.materia_id}|${q.tema}`));
 }
 
 /** Inéditas primeiro (sorteadas); faltando, as respondidas há mais tempo. */

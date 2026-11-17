@@ -1,0 +1,944 @@
+{
+ "materia_id": "A3",
+ "titulo": "Informática",
+ "subtitulo": "Do hardware ao governo digital, na ordem do edital previsto.",
+ "fontes": [
+  "Edital verticalizado previsto (13/11/2026), matéria A3, 11 tópicos. Conferir quando o edital sair.",
+  "Prova FCC 2022, PGE-AM, Analista Procuratorial: questões 16 a 20 (Noções de Informática)",
+  "Conceitos padrão de arquitetura de computadores (aula 1, sem material próprio)",
+  "Material InfoDSO: Windows 10 (curso PF 2025)",
+  "Free Software Foundation: definição de software livre (quatro liberdades)"
+ ],
+ "banca": {
+  "titulo": "O que a FCC cobrou em Informática",
+  "fonte": "Prova real FCC 2022, PGE-AM, Analista Procuratorial (5 questões de Noções de Informática, de 50). Uma prova só: use como pista do estilo, não como estatística.",
+  "stats": [
+   {
+    "valor": "5",
+    "rotulo": "questões de Informática em 50 (10%)"
+   },
+   {
+    "valor": "5 de 5",
+    "rotulo": "com distratores \"quase certos\": sintaxe errada, unidade errada ou nome parecido"
+   },
+   {
+    "valor": "1",
+    "rotulo": "versão de software citada (Excel 2010, em português)"
+   }
+  ],
+  "ranking": [
+   [
+    "Redes: endereço IPv6 válido",
+    1
+   ],
+   [
+    "Arquivos: .zip e unidades de medida",
+    1
+   ],
+   [
+    "Planilhas: PROCV",
+    1
+   ],
+   [
+    "Pesquisa no Google: operador site:",
+    1
+   ],
+   [
+    "Nuvem: SaaS",
+    1
+   ]
+  ],
+  "notas": [
+   {
+    "titulo": "O padrão das 5 questões",
+    "html": "A FCC não pede definição solta: dá um caso (um pen drive com arquivo, uma planilha de saldo, uma empresa que contrata nuvem) e põe alternativas que <b>parecem</b> certas, mas trazem um detalhe errado: letra que não existe em hexadecimal, função em inglês num Excel em português, VERDADEIRO no lugar de FALSO, operador inexistente. Treine olhando o detalhe."
+   },
+   {
+    "titulo": "Matéria condicional",
+    "html": "Informática está no edital <b>previsto</b> montado em 13/11/2026, não no oficial. Quando o edital sair, confira se ela entra e quais versões de programa são citadas."
+   }
+  ]
+ },
+ "aulas": [
+  {
+   "id": "A3-a01",
+   "topico_id": "A3-01",
+   "numero": 1,
+   "titulo": "Hardware, software e unidades de medida",
+   "status": "pronta",
+   "fonte": "Conceitos de arquitetura de computadores; prova FCC PGE-AM 2022, questão 17",
+   "resumo": [
+    "Hardware é a parte física; software é o conjunto de programas. O computador segue o ciclo entrada, processamento, armazenamento e saída.",
+    "O processador (CPU) tem unidade de controle, unidade lógica e aritmética (ULA) e registradores.",
+    "Quanto mais perto do processador, mais rápida, menor e mais cara a memória: registradores, cache, RAM, SSD, HD.",
+    "RAM é volátil (perde os dados sem energia); ROM e armazenamento (HD, SSD, pen drive) são não voláteis.",
+    "1 byte = 8 bits. Na prova, 1 KB = 1.024 bytes. Velocidade de rede se mede em bits por segundo (Mbps), arquivo em bytes (MB)."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: o computador como sistema de processamento",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Todo computador, do notebook da Procuradoria ao servidor do PJe, faz a mesma coisa: <b>recebe dados</b>, <b>processa</b>, <b>guarda</b> e <b>devolve um resultado</b>. A parte física que faz isso é o <b>hardware</b>. As instruções que dizem o que fazer são o <b>software</b>. Sem software o hardware não faz nada; sem hardware o software não roda.<br><br>Siga o caminho de um documento, do teclado até a impressora."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Entrada",
+         "sub": "teclado, mouse"
+        },
+        {
+         "titulo": "Memória RAM",
+         "sub": "dados em uso"
+        },
+        {
+         "titulo": "Processador",
+         "sub": "UC + ULA"
+        },
+        {
+         "titulo": "Armazenamento",
+         "sub": "SSD, HD, nuvem"
+        },
+        {
+         "titulo": "Saída",
+         "sub": "monitor, impressora"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Você digita o parecer. O teclado é dispositivo de <b>entrada</b>: transforma a tecla em dado."
+        },
+        {
+         "no": 1,
+         "texto": "O texto em edição fica na <b>RAM</b>, a memória principal. Ela é rápida, mas <b>volátil</b>: se faltar energia antes de salvar, o que não foi salvo se perde."
+        },
+        {
+         "no": 2,
+         "texto": "O <b>processador</b> executa as instruções do editor de texto. A <b>unidade de controle</b> busca e coordena as instruções; a <b>ULA</b> faz as contas e as comparações lógicas; os <b>registradores</b> guardam os valores em uso naquele instante."
+        },
+        {
+         "no": 3,
+         "texto": "Ao salvar, o arquivo vai para o <b>armazenamento secundário</b> (SSD, HD, pen drive ou nuvem), que é <b>não volátil</b>: mantém os dados sem energia."
+        },
+        {
+         "no": 4,
+         "texto": "O parecer aparece no monitor e sai na impressora: dispositivos de <b>saída</b>."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Principal e secundária",
+       "html": "Memória <b>principal</b> é a que o processador acessa diretamente (RAM, cache, ROM). Memória <b>secundária</b> é o armazenamento de massa (HD, SSD, pen drive). Salvar é levar da principal para a secundária."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: memórias, periféricos e software",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "As memórias formam uma <b>hierarquia</b>. Quanto mais perto do processador, mais rápida, menor e mais cara por byte. Quanto mais longe, mais lenta, maior e mais barata. Suba a escada do armazenamento até o processador."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "HD",
+         "sub": "magnético",
+         "texto": "Disco rígido: pratos magnéticos e cabeça de leitura, com <b>partes móveis</b>. Grande capacidade e menor custo por byte, porém o mais lento da lista e sensível a impacto. Não volátil."
+        },
+        {
+         "titulo": "SSD",
+         "sub": "memória flash",
+         "texto": "Unidade de estado sólido: memória <b>flash</b>, <b>sem partes móveis</b>. Mais rápido e mais resistente a impacto que o HD. Não volátil. O pen drive também usa memória flash."
+        },
+        {
+         "titulo": "RAM",
+         "sub": "memória principal",
+         "texto": "Guarda os programas e dados <b>em uso</b>. Leitura e escrita. <b>Volátil</b>. Mais RAM permite manter mais programas abertos sem lentidão."
+        },
+        {
+         "titulo": "Cache",
+         "sub": "entre CPU e RAM",
+         "texto": "Memória pequena e muito rápida, que guarda o que o processador usa com mais frequência, para não esperar a RAM. Volátil. É <b>mais rápida</b> que a RAM."
+        },
+        {
+         "titulo": "Registradores",
+         "sub": "dentro da CPU",
+         "texto": "A memória mais rápida e de menor capacidade, dentro do próprio processador. Guarda o dado da operação em curso."
+        }
+       ]
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Memória",
+        "Volátil?",
+        "Para que serve"
+       ],
+       "linhas": [
+        [
+         "RAM",
+         "Sim",
+         "Programas e dados em uso"
+        ],
+        [
+         "Cache",
+         "Sim",
+         "Acelerar o acesso do processador"
+        ],
+        [
+         "ROM",
+         "Não",
+         "Firmware de inicialização (BIOS ou UEFI), gravado pelo fabricante"
+        ],
+        [
+         "Memória virtual",
+         "Não é chip: usa o disco",
+         "Espaço do HD ou SSD usado como extensão da RAM quando ela acaba; bem mais lenta"
+        ],
+        [
+         "HD, SSD, pen drive",
+         "Não",
+         "Armazenamento permanente de arquivos"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Os <b>periféricos</b> se classificam pelo sentido do dado. <b>Entrada</b> leva dado para o computador; <b>saída</b> traz o resultado para fora; os <b>híbridos</b> (de entrada e saída) fazem as duas coisas.<br><br>Toque nas células: cada linha é um periférico."
+      },
+      {
+       "t": "matriz",
+       "linhas": [
+        "Teclado",
+        "Monitor comum",
+        "Tela sensível ao toque",
+        "Impressora multifuncional",
+        "Scanner"
+       ],
+       "colunas": [
+        "Entrada",
+        "Saída"
+       ],
+       "celulas": [
+        [
+         [
+          true,
+          "Envia o que você digita."
+         ],
+         [
+          false,
+          "Não exibe resultado."
+         ]
+        ],
+        [
+         [
+          false,
+          "Não recebe comandos do usuário."
+         ],
+         [
+          true,
+          "Exibe a imagem: só saída."
+         ]
+        ],
+        [
+         [
+          true,
+          "Recebe o toque."
+         ],
+         [
+          true,
+          "Exibe a imagem. Por isso é de entrada e saída."
+         ]
+        ],
+        [
+         [
+          true,
+          "Digitaliza (função de scanner)."
+         ],
+         [
+          true,
+          "Imprime. Também é híbrida."
+         ]
+        ],
+        [
+         [
+          true,
+          "Digitaliza o papel para o computador."
+         ],
+         [
+          false,
+          "Não imprime nem exibe."
+         ]
+        ]
+       ]
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Software básico",
+         "sub": "ou de sistema",
+         "verso": "Faz o computador funcionar e gerencia o hardware: sistema operacional (Windows, Linux), drivers e firmware.",
+         "detalhe": "Driver é o programa que ensina o sistema a usar um dispositivo, como a impressora."
+        },
+        {
+         "frente": "Software aplicativo",
+         "sub": "para o usuário",
+         "verso": "Resolve a tarefa do usuário: editor de texto, planilha, navegador, sistema do processo eletrônico.",
+         "detalhe": "Utilitário (antivírus, compactador, desfragmentador) é o que dá manutenção ao sistema."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e divergências: licenças e o KB de 1.024",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Licença diz o que você pode fazer com o programa. A confusão que a banca explora é entre <b>livre</b> e <b>gratuito</b>. Software <b>livre</b> é questão de <b>liberdade</b>, não de preço: pela definição da Free Software Foundation, garante quatro liberdades. Para estudar e modificar, é preciso <b>acesso ao código-fonte</b>."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Liberdade 0",
+         "titulo": "Executar",
+         "texto": "Usar o programa para qualquer finalidade."
+        },
+        {
+         "tag": "Liberdade 1",
+         "titulo": "Estudar e adaptar",
+         "texto": "Ver como funciona e modificar. Exige o código-fonte."
+        },
+        {
+         "tag": "Liberdade 2",
+         "titulo": "Redistribuir",
+         "texto": "Fazer e distribuir cópias, inclusive vendendo."
+        },
+        {
+         "tag": "Liberdade 3",
+         "titulo": "Aperfeiçoar e publicar",
+         "texto": "Distribuir as versões modificadas, para que todos se beneficiem."
+        }
+       ]
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Tipo",
+        "Pago?",
+        "Código-fonte aberto?",
+        "Ponto-chave"
+       ],
+       "linhas": [
+        [
+         "Software livre (ex.: Linux, LibreOffice)",
+         "Pode ser vendido",
+         "Sim",
+         "As 4 liberdades. Copyleft (ex.: licença GPL) obriga a manter livres as versões derivadas."
+        ],
+        [
+         "Código aberto (open source)",
+         "Pode ser vendido",
+         "Sim",
+         "Ênfase técnica no código disponível; na prática, muito próximo do livre."
+        ],
+        [
+         "Freeware",
+         "Gratuito",
+         "Em regra, não",
+         "Grátis não é livre: você usa, mas não estuda nem modifica."
+        ],
+        [
+         "Shareware (demo, trial)",
+         "Pago após o teste",
+         "Não",
+         "Uso por tempo limitado ou com funções reduzidas."
+        ],
+        [
+         "Proprietário",
+         "Em regra, pago (licença de uso)",
+         "Não",
+         "Você compra o direito de usar, não o programa."
+        ],
+        [
+         "Domínio público",
+         "Gratuito",
+         "Pode ter",
+         "Sem titular de direitos patrimoniais."
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Software livre é aquele distribuído gratuitamente.\"",
+       "html": "Errado. Software livre pode ser vendido. E um freeware é gratuito sem ser livre, porque não libera o código-fonte."
+      },
+      {
+       "t": "texto",
+       "html": "Agora as unidades. <b>Bit</b> é o menor dado (0 ou 1). <b>Byte</b> = 8 bits, e equivale a um caractere simples. Os múltiplos: KB, MB, GB, TB. Aqui há uma divergência técnica: o padrão internacional (SI) usa potências de 10 (1 KB = 1.000 bytes) e criou os prefixos binários KiB e MiB para 1.024. <b>A FCC, porém, trabalha com 1.024</b>, como mostra a questão real da PGE-AM: 13.656.064 bytes ÷ 1.024 ÷ 1.024 ≈ 13,02 MB, e o gabarito foi \"aproximadamente 13,0 MB\". Pelo SI daria 13,7 MB, que não estava nas alternativas."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Unidade",
+        "Na prova (base 1.024)"
+       ],
+       "linhas": [
+        [
+         "1 byte",
+         "8 bits"
+        ],
+        [
+         "1 KB",
+         "1.024 bytes"
+        ],
+        [
+         "1 MB",
+         "1.024 KB = 1.048.576 bytes"
+        ],
+        [
+         "1 GB",
+         "1.024 MB"
+        ],
+        [
+         "1 TB",
+         "1.024 GB"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "b minúsculo é bit, B maiúsculo é byte",
+       "html": "Internet de <b>100 Mbps</b> (megabits por segundo) baixa no máximo cerca de <b>12,5 MB/s</b> (megabytes por segundo): divida por 8. Velocidade de transmissão vem em bits; tamanho de arquivo vem em bytes."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "Cache é <b>mais rápida</b> que a RAM, e não o contrário.<br>RAM é <b>volátil</b>; ROM não.<br>Memória virtual fica no <b>disco</b> e é <b>mais lenta</b> que a RAM.<br>SSD <b>não tem</b> partes móveis; HD tem.<br>Tela touch e multifuncional são de <b>entrada e saída</b>.<br>Livre não é sinônimo de gratuito.<br>Mbps é bit; MB é byte."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A memória cache é mais lenta que a RAM, mas tem capacidade maior.",
+         "v": false,
+         "porque": "É o inverso: a cache é mais rápida e menor."
+        },
+        {
+         "texto": "Se a energia cair antes de salvar, perde-se o conteúdo que estava apenas na RAM.",
+         "v": true,
+         "porque": "A RAM é volátil."
+        },
+        {
+         "texto": "A memória virtual usa espaço do armazenamento secundário como extensão da RAM.",
+         "v": true,
+         "porque": "Por isso, quando muito usada, deixa o computador lento."
+        },
+        {
+         "texto": "O SSD é mais rápido que o HD porque gira os discos em velocidade maior.",
+         "v": false,
+         "porque": "O SSD não tem discos nem partes móveis: usa memória flash."
+        },
+        {
+         "texto": "Um programa freeware sempre permite estudar e modificar o código-fonte.",
+         "v": false,
+         "porque": "Freeware é só gratuito; em regra o código é fechado."
+        },
+        {
+         "texto": "Um arquivo de 2.097.152 bytes tem 2 MB, considerando 1 KB = 1.024 bytes.",
+         "v": true,
+         "porque": "2.097.152 ÷ 1.048.576 = 2."
+        },
+        {
+         "texto": "Uma conexão de 80 Mbps transfere, no máximo teórico, 80 MB por segundo.",
+         "v": false,
+         "porque": "80 megabits ÷ 8 = 10 megabytes por segundo."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "inf-cad-01",
+    "inf-cad-02",
+    "inf-cad-03"
+   ]
+  },
+  {
+   "id": "A3-a02",
+   "topico_id": "A3-02",
+   "numero": 2,
+   "titulo": "Windows: arquivos, pastas, atalhos e gerenciamento",
+   "status": "pronta",
+   "fonte": "Material InfoDSO: Windows 10 (curso PF 2025), conferido em 16/11/2026",
+   "resumo": [
+    "O sistema operacional gerencia hardware, memória, processos e arquivos; o Explorador de Arquivos é onde você organiza pastas e arquivos.",
+    "Arrastar na mesma unidade move; para outra unidade copia. Ctrl força copiar, Shift força mover, Alt cria atalho.",
+    "Delete manda para a Lixeira; Shift+Delete exclui sem passar por ela. Pen drive e pasta de rede não usam a Lixeira.",
+    "Nome de arquivo não aceita \\ / : * ? \" < > |. A extensão indica o tipo (.docx, .xlsx, .pdf, .zip, .exe).",
+    "Atalhos-chave: Win+E, Win+L, Win+D, Win+R, Win+I, Ctrl+Shift+Esc, Alt+Tab, F2."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: o que um sistema operacional faz",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O <b>sistema operacional</b> (SO) é o software básico que fica entre o usuário, os programas e o hardware. Ele decide qual programa usa o processador e a memória, conversa com os dispositivos pelos drivers e organiza os dados em <b>arquivos</b> e <b>pastas</b> num <b>sistema de arquivos</b>. O Windows (Microsoft, proprietário) e o Linux (livre) são os exemplos que caem.<br><br>O SO guarda os arquivos numa árvore: unidade, pastas, subpastas e arquivo. O endereço completo é o <b>caminho</b>, como <code>C:\\PGE\\Pareceres\\parecer-012.docx</code>."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "NTFS",
+         "sub": "padrão do Windows",
+         "verso": "Sistema de arquivos do disco do Windows: permissões por usuário, criptografia e arquivos maiores que 4 GB.",
+         "detalhe": "É o que está no C:."
+        },
+        {
+         "frente": "FAT32",
+         "sub": "pen drives antigos",
+         "verso": "Compatível com quase tudo, mas cada arquivo tem no máximo 4 GB.",
+         "detalhe": "O exFAT foi feito para pen drives e cartões, sem esse limite."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Na Procuradoria",
+       "html": "Você tenta copiar para um pen drive um vídeo de audiência de 6 GB e o Windows recusa, embora haja espaço livre. Causa provável: pen drive formatado em <b>FAT32</b>, que não aceita arquivo acima de 4 GB."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: Explorador, copiar, mover e excluir",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Arrastar um arquivo com o mouse muda de efeito conforme o <b>destino</b>. A lógica: dentro da mesma unidade, o Windows supõe que você está reorganizando (move); para outra unidade, supõe que quer uma cópia de segurança (copia). As teclas mudam o padrão.<br><br>Alterne para ver cada caso."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Mesma unidade",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "C:\\Entrada",
+           "sub": "origem"
+          },
+          {
+           "titulo": "C:\\Pareceres",
+           "sub": "destino"
+          }
+         ],
+         "texto": "Arrastar sem tecla <b>move</b>. Com <b>Ctrl</b>, copia."
+        },
+        {
+         "rotulo": "Outra unidade",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "C:\\Pareceres",
+           "sub": "origem"
+          },
+          {
+           "titulo": "E:\\ (pen drive)",
+           "sub": "destino"
+          }
+         ],
+         "texto": "Arrastar sem tecla <b>copia</b>. Com <b>Shift</b>, move. Com <b>Alt</b> (ou Ctrl+Shift), cria um <b>atalho</b>."
+        }
+       ]
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Ação",
+        "Teclas",
+        "Resultado"
+       ],
+       "linhas": [
+        [
+         "Copiar / Recortar / Colar",
+         "Ctrl+C / Ctrl+X / Ctrl+V",
+         "Recortar e colar = mover"
+        ],
+        [
+         "Desfazer / Refazer",
+         "Ctrl+Z / Ctrl+Y",
+         "Desfaz a última ação"
+        ],
+        [
+         "Selecionar tudo",
+         "Ctrl+A",
+         "No Explorador do Windows em português (no Word em português é Ctrl+T)"
+        ],
+        [
+         "Renomear",
+         "F2",
+         "Edita o nome do item selecionado"
+        ],
+        [
+         "Nova pasta",
+         "Ctrl+Shift+N",
+         "No Explorador de Arquivos"
+        ],
+        [
+         "Excluir",
+         "Delete ou Ctrl+D",
+         "Vai para a Lixeira (se for unidade local); no Windows 10, sem pedir confirmação por padrão"
+        ],
+        [
+         "Excluir permanentemente",
+         "Shift+Delete",
+         "Não passa pela Lixeira; pede confirmação"
+        ],
+        [
+         "Propriedades",
+         "Alt+Enter",
+         "Tamanho, local, datas e atributos"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "A <b>Lixeira</b> é uma pasta especial do disco local. O que vai para ela pode ser <b>restaurado</b> para o local original. Mas há três situações em que o arquivo é <b>excluído de vez</b>, sem Lixeira: Shift+Delete, arquivo em <b>unidade removível</b> (pen drive, cartão) ou em <b>pasta de rede</b>, e falta de espaço suficiente na Lixeira (o Windows avisa).<br><br>Cuidado com a exceção da exceção: o <b>HD externo</b> normalmente aparece como <b>Disco Local</b>, e por isso o que se exclui nele <b>vai para a Lixeira</b>, ao contrário do pen drive. E arrastar com o <b>botão direito</b> do mouse abre um menu para você escolher copiar, mover ou criar atalho."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Itens excluídos de qualquer dispositivo USB são apagados sem passar pela Lixeira.\"",
+       "html": "Errado na generalização. Pen drive e cartão de memória, sim. O HD externo costuma ser reconhecido como Disco Local e manda os itens para a Lixeira."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Apagar o atalho apaga o arquivo original.\"",
+       "html": "Errado. Atalho (arquivo .lnk, com a setinha no ícone) só aponta para o original. Excluir o atalho não mexe no arquivo. Já excluir o original deixa o atalho quebrado."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções: nomes, extensões, compactação e travamentos",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Nome de arquivo ou pasta no Windows <b>não aceita</b> estes nove caracteres, porque o sistema os usa para outra coisa (caminho, curinga, redirecionamento): <code>\\ / : * ? \" &lt; &gt; |</code>. Espaço, hífen, sublinhado, ponto e acento são permitidos. O Windows <b>não diferencia</b> maiúsculas de minúsculas: Parecer.docx e parecer.docx não podem ficar na mesma pasta."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": ".docx .xlsx .pptx",
+         "titulo": "Microsoft Office",
+         "texto": "Texto, planilha e apresentação."
+        },
+        {
+         "tag": ".odt .ods .odp",
+         "titulo": "LibreOffice (formato aberto ODF)",
+         "texto": "Writer, Calc e Impress."
+        },
+        {
+         "tag": ".pdf",
+         "titulo": "Documento portátil",
+         "texto": "Mantém a formatação em qualquer equipamento. Padrão do processo eletrônico."
+        },
+        {
+         "tag": ".zip .rar .7z",
+         "titulo": "Compactado",
+         "texto": "Reúne e reduz arquivos. O Windows abre .zip nativamente (Extrair tudo / Compactar para ZIP)."
+        },
+        {
+         "tag": ".exe .msi .bat",
+         "titulo": "Executável",
+         "texto": "Roda programas. Anexo .exe em e-mail é sinal de risco."
+        },
+        {
+         "tag": ".jpg .png .mp3 .mp4",
+         "titulo": "Mídia",
+         "texto": "Imagem, áudio e vídeo. São formatos já comprimidos: compactar ganha pouco."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Extensão oculta e o golpe do nome duplo",
+       "html": "Por padrão o Explorador esconde a extensão dos tipos conhecidos. Um anexo <b>intimacao.pdf.exe</b> aparece como \"intimacao.pdf\", mas é um programa. Exibir as extensões (guia Exibir) ajuda a perceber."
+      },
+      {
+       "t": "texto",
+       "html": "Quando um programa trava, o caminho é o <b>Gerenciador de Tarefas</b> (<b>Ctrl+Shift+Esc</b>, direto; ou Ctrl+Alt+Del e escolher). Nele você vê os <b>processos</b> em execução, o uso de CPU, memória e disco (<b>Desempenho</b>), os <b>aplicativos de inicialização</b> e pode <b>finalizar a tarefa</b> que parou de responder. Configurações do sistema ficam em <b>Configurações</b> (Win+I); o Painel de Controle clássico continua existindo para várias opções."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Atalho com a tecla Windows",
+        "Faz o quê"
+       ],
+       "linhas": [
+        [
+         "Win+E",
+         "Abre o Explorador de Arquivos"
+        ],
+        [
+         "Win+L",
+         "Bloqueia a sessão (ao sair da mesa)"
+        ],
+        [
+         "Win+D",
+         "Mostra a área de trabalho (de novo: volta as janelas)"
+        ],
+        [
+         "Win+R",
+         "Abre o Executar"
+        ],
+        [
+         "Win+I",
+         "Abre as Configurações"
+        ],
+        [
+         "Win+V",
+         "Histórico da área de transferência (se ativado)"
+        ],
+        [
+         "Win+Shift+S",
+         "Recorte de tela"
+        ],
+        [
+         "Alt+Tab / Alt+F4",
+         "Alterna janelas / fecha a janela ativa"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As trocas preferidas",
+       "html": "Arrastar para <b>outra unidade copia</b>; na mesma unidade <b>move</b>.<br><b>Shift+Delete</b> não usa a Lixeira; <b>pen drive</b> também não.<br>Atalho apagado não apaga o original.<br><b>Ctrl+Shift+Esc</b> abre o Gerenciador direto.<br>Ctrl+A seleciona tudo no Windows; Ctrl+T é o selecionar tudo do Word em português.<br>Nome não aceita \\ / : * ? \" &lt; &gt; |."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "Arrastar um arquivo de C:\\Pareceres para um pen drive, sem pressionar tecla, copia o arquivo.",
+         "v": true,
+         "porque": "Unidades diferentes: o padrão é copiar."
+        },
+        {
+         "texto": "Arquivo excluído com Delete de um pen drive pode ser restaurado pela Lixeira do computador.",
+         "v": false,
+         "porque": "Unidade removível não usa a Lixeira: a exclusão é definitiva."
+        },
+        {
+         "texto": "O nome Parecer 12-2026 (final).docx é válido no Windows.",
+         "v": true,
+         "porque": "Espaço, hífen e parênteses são permitidos."
+        },
+        {
+         "texto": "O nome Parecer 12/2026.docx é válido no Windows.",
+         "v": false,
+         "porque": "A barra / é caractere proibido."
+        },
+        {
+         "texto": "Win+L bloqueia o computador sem fechar os programas abertos.",
+         "v": true,
+         "porque": "A sessão continua; só exige a senha para voltar."
+        },
+        {
+         "texto": "Excluir um atalho da área de trabalho envia o arquivo original para a Lixeira.",
+         "v": false,
+         "porque": "Só o atalho é excluído."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "inf-cad-04",
+    "inf-cad-05",
+    "inf-cad-06"
+   ]
+  },
+  {
+   "id": "A3-a03",
+   "topico_id": "A3-03",
+   "numero": 3,
+   "titulo": "Editores de texto (Word e Writer)",
+   "status": "a_montar"
+  },
+  {
+   "id": "A3-a04",
+   "topico_id": "A3-04",
+   "numero": 4,
+   "titulo": "Planilhas (Excel e Calc)",
+   "status": "a_montar"
+  },
+  {
+   "id": "A3-a05",
+   "topico_id": "A3-05",
+   "numero": 5,
+   "titulo": "Apresentações (PowerPoint e Impress)",
+   "status": "a_montar"
+  },
+  {
+   "id": "A3-a06",
+   "topico_id": "A3-06",
+   "numero": 6,
+   "titulo": "Internet, navegadores e redes",
+   "status": "a_montar"
+  },
+  {
+   "id": "A3-a07",
+   "topico_id": "A3-07",
+   "numero": 7,
+   "titulo": "Correio eletrônico e colaboração",
+   "status": "a_montar"
+  },
+  {
+   "id": "A3-a08",
+   "topico_id": "A3-08",
+   "numero": 8,
+   "titulo": "Computação em nuvem",
+   "status": "a_montar"
+  },
+  {
+   "id": "A3-a09",
+   "topico_id": "A3-09",
+   "numero": 9,
+   "titulo": "Segurança da informação",
+   "status": "a_montar"
+  },
+  {
+   "id": "A3-a10",
+   "topico_id": "A3-10",
+   "numero": 10,
+   "titulo": "Inteligência artificial e tecnologias emergentes",
+   "status": "a_montar"
+  },
+  {
+   "id": "A3-a11",
+   "topico_id": "A3-11",
+   "numero": 11,
+   "titulo": "Governo digital e processo eletrônico",
+   "status": "a_montar"
+  }
+ ],
+ "glossario": [
+  [
+   "Hardware",
+   "Parte física do computador: processador, memórias, placas e periféricos."
+  ],
+  [
+   "Software",
+   "Programas e instruções que fazem o hardware funcionar."
+  ],
+  [
+   "ULA",
+   "Unidade lógica e aritmética: parte do processador que faz contas e comparações."
+  ],
+  [
+   "Unidade de controle",
+   "Parte do processador que busca, interpreta e coordena a execução das instruções."
+  ],
+  [
+   "Memória volátil",
+   "A que perde o conteúdo sem energia, como a RAM e a cache."
+  ],
+  [
+   "Cache",
+   "Memória pequena e muito rápida entre o processador e a RAM."
+  ],
+  [
+   "ROM",
+   "Memória não volátil que guarda o firmware de inicialização (BIOS ou UEFI)."
+  ],
+  [
+   "Memória virtual",
+   "Espaço do disco usado como extensão da RAM; mais lenta."
+  ],
+  [
+   "SSD",
+   "Unidade de armazenamento com memória flash, sem partes móveis."
+  ],
+  [
+   "Firmware",
+   "Software gravado no próprio hardware para controlá-lo."
+  ],
+  [
+   "Driver",
+   "Programa que permite ao sistema operacional usar um dispositivo."
+  ],
+  [
+   "Software livre",
+   "Programa com as quatro liberdades: executar, estudar e modificar, redistribuir e distribuir melhorias. Não precisa ser gratuito."
+  ],
+  [
+   "Freeware",
+   "Programa gratuito, em regra de código fechado."
+  ],
+  [
+   "Copyleft",
+   "Cláusula de licença livre (como a GPL) que obriga as versões derivadas a continuarem livres."
+  ],
+  [
+   "Byte",
+   "Conjunto de 8 bits."
+  ],
+  [
+   "Sistema de arquivos",
+   "Forma como o SO organiza os dados no disco (NTFS, FAT32, exFAT)."
+  ],
+  [
+   "Caminho",
+   "Endereço completo de um arquivo: unidade, pastas e nome."
+  ],
+  [
+   "Atalho",
+   "Arquivo (.lnk) que aponta para outro; apagá-lo não apaga o original."
+  ],
+  [
+   "Extensão",
+   "Sufixo após o ponto que indica o tipo do arquivo (.docx, .pdf, .zip)."
+  ],
+  [
+   "Compactação",
+   "Reduzir e agrupar arquivos num só (.zip, .rar, .7z)."
+  ]
+ ]
+}

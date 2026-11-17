@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AlertaRevisao } from "@/components/estudos/AlertaRevisao";
 import { redirect } from "next/navigation";
 import {
   getAtrasados,
@@ -89,6 +90,7 @@ export default async function EstudosInicioPage() {
 
   return (
     <div className="space-y-5">
+      <AlertaRevisao />
       <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <p className="text-[11px] uppercase tracking-[0.14em] text-e-dim">
