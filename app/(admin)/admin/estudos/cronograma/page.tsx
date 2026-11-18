@@ -4,6 +4,7 @@ import { getAtrasados, getCronograma, getEstudoConfig } from "@/lib/db-estudos";
 import { addDaysToDateString, todayBelemDateString } from "@/lib/atividades-utils";
 import { diaDaSemana, formatarData } from "@/lib/estudos-utils";
 import { BlocosDoDia } from "@/components/admin/estudos/BlocosDoDia";
+import { linksDosBlocos } from "@/lib/estudos-links";
 import { CronogramaConfig } from "@/components/admin/estudos/CronogramaConfig";
 import { Cabecalho } from "@/components/estudos/ui";
 
@@ -63,7 +64,7 @@ export default async function CronogramaPage(props: PageProps<"/admin/estudos/cr
             ajusta a partir de hoje.
           </p>
           <div className="mt-3 max-h-72 overflow-y-auto">
-            <BlocosDoDia itens={atrasados} vazio="" />
+            <BlocosDoDia itens={atrasados} links={linksDosBlocos(atrasados)} vazio="" />
           </div>
         </section>
       )}
@@ -90,7 +91,7 @@ export default async function CronogramaPage(props: PageProps<"/admin/estudos/cr
                   {d === hoje ? " · hoje" : ""}
                 </h3>
                 <div className="mt-2">
-                  <BlocosDoDia itens={doDia} vazio="Dia livre." />
+                  <BlocosDoDia itens={doDia} links={linksDosBlocos(doDia)} vazio="Dia livre." />
                 </div>
               </div>
             );

@@ -20,6 +20,7 @@ import {
 import { fonteHtml, htmlSeguro } from "@/lib/estudos-html";
 import { Cabecalho } from "@/components/estudos/ui";
 import { RevisaoClient, type CartaoFila } from "@/components/estudos/RevisaoClient";
+import { RevisaoDeOntem } from "@/components/estudos/RevisaoDeOntem";
 
 export default async function RevisaoPage() {
   const hoje = todayBelemDateString();
@@ -81,6 +82,7 @@ export default async function RevisaoPage() {
         titulo="Revisão"
         sub="A fila do dia junta questões que você errou, cartões e artigos de lei. Cada acerto empurra o item para 1, 3, 7, 15 e 30 dias. Errou, ele volta para amanhã."
       />
+      <RevisaoDeOntem hoje={hoje} respostas={respostas} />
       <RevisaoClient
         hoje={hoje}
         questoes={questoesHoje.map((q) => ({ id: q.id, materia: q.materia, tema: q.tema, ref: q.ref, etapa: q.etapa, vence_em: q.vence_em }))}
