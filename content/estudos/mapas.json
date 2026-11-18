@@ -258,5 +258,39 @@
    "v": false,
    "exp": "Errado. Intervir conjuga como vir: \"se o Estado intervier\". O futuro do subjuntivo de vir é \"vier\"."
   }
+ },
+ "História do MA|Balaiada": {
+  "titulo": "Balaiada em 5 passos",
+  "passos": [
+   {
+    "t": "Contexto: Regência e elite dividida",
+    "r": "e o povo?",
+    "d": "Bem-te-vis (liberais) contra cabanos (conservadores). A Lei dos Prefeitos (1838) acirrou a disputa."
+   },
+   {
+    "t": "Base popular: recrutamento, miséria, escravidão",
+    "r": "como começa?",
+    "d": "Vaqueiros, lavradores e escravizados sofriam com o recrutamento forçado e a violência das autoridades."
+   },
+   {
+    "t": "Dez. 1838: Raimundo Gomes na Vila da Manga",
+    "r": "quem adere?",
+    "d": "Invade a cadeia para soltar presos. Aderem Manuel Balaio e Cosme Bento, com milhares de aquilombados."
+   },
+   {
+    "t": "1839: Caxias tomada; a elite se afasta",
+    "r": "e a repressão?",
+    "d": "Com a radicalização popular, os bem-te-vis passam a apoiar o governo."
+   },
+   {
+    "t": "1840 a 1841: Lima e Silva e a anistia",
+    "d": "Presidente e comandante de armas, reprime a revolta; anistia após a Maioridade. Vira Barão de Caxias. Cosme é enforcado."
+   }
+  ],
+  "teste": {
+   "p": "Os cabanos, na Balaiada, eram os liberais que apoiaram os rebeldes até o fim.",
+   "v": false,
+   "exp": "Errado. Cabanos eram os conservadores. Os liberais eram os bem-te-vis, que se afastaram quando a revolta se radicalizou."
+  }
  }
 }

@@ -1,0 +1,921 @@
+{
+ "materia_id": "A4",
+ "titulo": "História do Maranhão",
+ "subtitulo": "Da França Equinocial aos grandes projetos, na ordem do edital.",
+ "fontes": [
+  "IBGE, Censo 2022 (SIDRA) e API de localidades",
+  "UNESCO: Patrimônio Mundial e Lista Representativa do Patrimônio Imaterial",
+  "Planalto: Decreto 86.060/1981 e Decreto 88.136/1983",
+  "Historiografia acadêmica (SciELO, ANPUH, Revista Marítima, ASBRAP)",
+  "Questões FCC de 2006 e 2016 sobre o Maranhão"
+ ],
+ "banca": {
+  "titulo": "O que a FCC já cobrou sobre o Maranhão",
+  "fonte": "Questões FCC de 2006 e 2016 sobre o Maranhão no banco Estude Grátis (órgão não identificado; parte é de prova de Geografia). Pista de estilo, não estatística.",
+  "stats": [
+   {
+    "valor": "2006 e 2016",
+    "rotulo": "anos com questões FCC sobre o Maranhão no banco consultado"
+   },
+   {
+    "valor": "mapas",
+    "rotulo": "vegetação, clima e rede urbana aparecem com mapa ou figura"
+   },
+   {
+    "valor": "causa × efeito",
+    "rotulo": "a FCC pergunta o porquê (soja, Alcântara), não só a data"
+   }
+  ],
+  "ranking": [
+   [
+    "Vegetação e rios (mapa)",
+    3
+   ],
+   [
+    "Grandes projetos e território (Alcântara, soja)",
+    3
+   ],
+   [
+    "São Luís: rede urbana e organização",
+    2
+   ],
+   [
+    "Clima de São Luís",
+    1
+   ]
+  ],
+  "notas": [
+   {
+    "titulo": "Como estudar",
+    "html": "Decore os <b>pares</b> (personagem e revolta, bem e reconhecimento, rio e baía) e treine a pergunta de <b>causa e consequência</b>. A FCC gosta de afirmações I, II e III e de alternativas que trocam um único nome ou ano."
+   },
+   {
+    "titulo": "Matéria condicional",
+    "html": "Geografia e História do Maranhão aparece no edital de outros cargos do Concurso Unificado (17/11/2026). Confirme no edital do seu cargo."
+   }
+  ]
+ },
+ "aulas": [
+  {
+   "id": "A4-a01",
+   "topico_id": "A4-01",
+   "numero": 1,
+   "titulo": "Maranhão antes da colonização",
+   "status": "a_montar"
+  },
+  {
+   "id": "A4-a02",
+   "topico_id": "A4-02",
+   "numero": 2,
+   "titulo": "França Equinocial e fundação de São Luís (1612)",
+   "status": "pronta",
+   "fonte": "Revista Marítima (Marinha do Brasil) e Revista da ASBRAP sobre a conquista do Maranhão; historiografia consolidada",
+   "resumo": [
+    "Em 1612 uma expedição francesa, chefiada por Daniel de La Touche, senhor de La Ravardière, fundou o forte e a vila de São Luís, homenagem ao rei Luís XIII.",
+    "Os franceses se aliaram aos Tupinambá da Ilha do Maranhão. Missionários capuchinhos acompanharam a expedição.",
+    "O Brasil vivia a União Ibérica (1580 a 1640): a reação contra os franceses partiu de Pernambuco, sob a Coroa de Filipe III.",
+    "Em 19 de novembro de 1614, Jerônimo de Albuquerque venceu a Batalha de Guaxenduba, apesar da inferioridade numérica, e passou a assinar \"Maranhão\".",
+    "Em novembro de 1615 os franceses se renderam às forças de Alexandre de Moura, capitão-mor de Pernambuco."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: a costa leste-oeste e a disputa europeia",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A costa norte do Brasil corre de leste para oeste e ficava longe dos centros da colonização portuguesa (Bahia e Pernambuco). Franceses frequentavam o litoral para trocar mercadorias com os indígenas. Em 1612 decidiram fundar uma colônia permanente: a <b>França Equinocial</b>, nome que vem da proximidade com a linha do Equador."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "1612",
+         "sub": "fundação"
+        },
+        {
+         "titulo": "1614",
+         "sub": "Guaxenduba"
+        },
+        {
+         "titulo": "1615",
+         "sub": "rendição"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Expedição de <b>Daniel de La Touche</b> (La Ravardière) com François de Razilly chega à ilha, ergue o forte e funda <b>São Luís</b>, em homenagem a <b>Luís XIII</b>. Aliança com os <b>Tupinambá</b>."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Jerônimo de Albuquerque</b>, vindo de Pernambuco, vence os franceses em <b>Guaxenduba</b> (19 de novembro de 1614). Segue-se uma trégua."
+        },
+        {
+         "no": 2,
+         "texto": "A Coroa não aceita a trégua e manda reforços. Em <b>novembro de 1615</b>, La Ravardière se rende a <b>Alexandre de Moura</b>. Começa a colonização portuguesa."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: por que Portugal reagiu",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "tabela",
+       "cab": [
+        "Ponto",
+        "O que saber"
+       ],
+       "linhas": [
+        [
+         "Contexto",
+         "União Ibérica (1580 a 1640): Portugal e Espanha sob o mesmo rei. A expulsão foi feita por forças luso-brasileiras de Pernambuco."
+        ],
+        [
+         "Aliados dos franceses",
+         "Tupinambá, que já tinham relações de troca com eles."
+        ],
+        [
+         "Vitória decisiva",
+         "Guaxenduba, 1614, com inferioridade numérica portuguesa."
+        ],
+        [
+         "Desfecho",
+         "Rendição em 1615 a Alexandre de Moura e início da ocupação portuguesa da região."
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Nome francês, cidade portuguesa",
+       "html": "São Luís é a <b>única capital brasileira fundada por franceses</b>, mas foi a ocupação portuguesa que deu o traçado urbano e a arquitetura que viraram patrimônio."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Trocas comuns",
+       "html": "Quem fundou: <b>La Ravardière</b> (não Villegaignon, que é da França Antártica, no Rio, em 1555).<br>Quem venceu Guaxenduba: <b>Jerônimo de Albuquerque</b>.<br>Quem recebeu a rendição: <b>Alexandre de Moura</b>.<br>Homenagem: <b>Luís XIII</b>."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A França Equinocial foi fundada por Villegaignon na Baía de Guanabara.",
+         "v": false,
+         "porque": "Villegaignon chefiou a França Antártica (Rio). A França Equinocial é a do Maranhão, de La Ravardière."
+        },
+        {
+         "texto": "A reação contra os franceses ocorreu durante a União Ibérica.",
+         "v": true,
+         "porque": "1612 a 1615 está dentro do período 1580 a 1640."
+        },
+        {
+         "texto": "Os franceses foram expulsos logo após Guaxenduba, ainda em 1614.",
+         "v": false,
+         "porque": "Houve trégua. A rendição foi em novembro de 1615."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "ma-hist-01",
+    "ma-hist-02"
+   ]
+  },
+  {
+   "id": "A4-a03",
+   "topico_id": "A4-03",
+   "numero": 3,
+   "titulo": "Colonização portuguesa e Estado do Maranhão e Grão-Pará",
+   "status": "a_montar"
+  },
+  {
+   "id": "A4-a04",
+   "topico_id": "A4-04",
+   "numero": 4,
+   "titulo": "Invasão holandesa (1641 a 1644)",
+   "status": "a_montar"
+  },
+  {
+   "id": "A4-a05",
+   "topico_id": "A4-05",
+   "numero": 5,
+   "titulo": "Estado do Maranhão, holandeses e Revolta de Beckman",
+   "status": "pronta",
+   "fonte": "Historiografia acadêmica (Revista Brasileira de História/SciELO; anais da ANPUH; Revista Clio/UFPE) sobre o Estado do Maranhão e a revolta de 1684",
+   "resumo": [
+    "Em 1621 a Coroa criou o Estado do Maranhão, separado do Estado do Brasil e ligado diretamente a Lisboa. Em 1751 passou a se chamar Estado do Grão-Pará e Maranhão.",
+    "Os holandeses da Companhia das Índias Ocidentais ocuparam São Luís em 1641 e foram expulsos em 1644.",
+    "Em 1682 foi criada a Companhia de Comércio do Maranhão, com monopólio (estanco) e promessa de trazer africanos escravizados.",
+    "Em 1684 os irmãos Manuel e Tomás Beckman lideraram a revolta contra o estanco e contra os jesuítas, que limitavam a escravização indígena.",
+    "Com a chegada do governador Gomes Freire de Andrade, a revolta acabou. Manuel Beckman e Jorge de Sampaio foram enforcados."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: uma colônia separada",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Pelo regime de ventos e correntes, era mais fácil navegar do Maranhão para <b>Lisboa</b> do que para Salvador. Por isso a Coroa criou, em <b>1621</b>, o <b>Estado do Maranhão</b>, com governo próprio e ligado diretamente a Portugal. A colônia era pobre, dependia do trabalho indígena e vivia em conflito entre <b>colonos</b> (que queriam escravizar indígenas) e <b>jesuítas</b> (que controlavam os aldeamentos)."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "1621",
+         "sub": "Estado do Maranhão"
+        },
+        {
+         "titulo": "1641",
+         "sub": "holandeses"
+        },
+        {
+         "titulo": "1644",
+         "sub": "expulsão"
+        },
+        {
+         "titulo": "1682",
+         "sub": "Companhia"
+        },
+        {
+         "titulo": "1684",
+         "sub": "Beckman"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Criação do <b>Estado do Maranhão</b>, separado do Estado do Brasil."
+        },
+        {
+         "no": 1,
+         "texto": "A <b>Companhia das Índias Ocidentais</b> (holandesa) ocupa <b>São Luís</b>, a partir de Pernambuco."
+        },
+        {
+         "no": 2,
+         "texto": "Resistência luso-maranhense expulsa os holandeses em <b>1644</b>."
+        },
+        {
+         "no": 3,
+         "texto": "Criação da <b>Companhia de Comércio do Maranhão</b>: monopólio (<b>estanco</b>) sobre o comércio e a obrigação de trazer africanos escravizados."
+        },
+        {
+         "no": 4,
+         "texto": "<b>Revolta de Beckman</b>: colonos tomam o poder em São Luís, fecham o estanco e expulsam os jesuítas."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: as duas queixas dos revoltosos",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Queixa 1",
+         "titulo": "Contra o estanco",
+         "texto": "A Companhia vendia caro, pagava pouco pelos produtos locais e não cumpria a entrega de escravizados."
+        },
+        {
+         "tag": "Queixa 2",
+         "titulo": "Contra os jesuítas",
+         "texto": "Os padres, com o apoio de leis régias, restringiam a escravização indígena, que era a mão de obra dos colonos."
+        },
+        {
+         "tag": "Desfecho",
+         "titulo": "Repressão",
+         "texto": "O novo governador, Gomes Freire de Andrade, restabeleceu a ordem. Manuel Beckman e Jorge de Sampaio foram enforcados; a Companhia foi extinta."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Revolta nativista, não separatista",
+       "html": "A Revolta de Beckman é classificada como <b>nativista</b>: protestava contra a política colonial, sem projeto de independência. Não confunda com a Inconfidência Mineira."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Trocas comuns",
+       "html": "Companhia de Comércio do Maranhão (<b>1682</b>, alvo de Beckman) não é a Companhia Geral de Comércio do Grão-Pará e Maranhão (<b>1755</b>, pombalina).<br>Os revoltosos eram <b>contra</b> os jesuítas, não aliados deles."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A Revolta de Beckman tinha como objetivo a independência do Maranhão.",
+         "v": false,
+         "porque": "Era nativista: contra o estanco e os jesuítas, sem projeto de independência."
+        },
+        {
+         "texto": "Os holandeses ocuparam São Luís entre 1641 e 1644.",
+         "v": true,
+         "porque": "Ocupação curta, encerrada pela resistência luso-maranhense."
+        },
+        {
+         "texto": "O Estado do Maranhão, de 1621, era subordinado ao governo-geral de Salvador.",
+         "v": false,
+         "porque": "Era separado do Estado do Brasil e ligado diretamente a Lisboa."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "ma-hist-03",
+    "ma-hist-04"
+   ]
+  },
+  {
+   "id": "A4-a06",
+   "topico_id": "A4-06",
+   "numero": 6,
+   "titulo": "Pombal, a Companhia Geral e o algodão",
+   "status": "pronta",
+   "fonte": "Historiografia acadêmica sobre a Companhia Geral de Comércio do Grão-Pará e Maranhão (Manuel Nunes Dias e estudos da USP)",
+   "resumo": [
+    "Em 1751 o Estado passou a se chamar Grão-Pará e Maranhão, com sede em Belém.",
+    "A Companhia Geral de Comércio do Grão-Pará e Maranhão foi instituída em 1755: monopólio do comércio, crédito aos produtores e tráfico de africanos escravizados.",
+    "O Diretório dos Índios (1757) tirou dos missionários o governo dos aldeamentos. Os jesuítas foram expulsos em 1759.",
+    "O algodão e o arroz cresceram. O algodão maranhense foi vendido à indústria têxtil inglesa da Revolução Industrial.",
+    "A riqueza do algodão financiou os sobrados com azulejos de São Luís e deu origem a uma elite agrária e comercial."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: a política de Pombal",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O Marquês de Pombal, ministro de D. José I, quis tornar a Amazônia e o Maranhão lucrativos. A ferramenta foi uma <b>companhia de comércio monopolista</b>, criada em <b>1755</b>, que financiava a produção, comprava a safra e trazia <b>africanos escravizados</b> em grande número. É aqui que a escravidão africana se torna a base da economia maranhense."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "1751",
+         "sub": "Grão-Pará e Maranhão"
+        },
+        {
+         "titulo": "1755",
+         "sub": "Companhia Geral"
+        },
+        {
+         "titulo": "1757",
+         "sub": "Diretório"
+        },
+        {
+         "titulo": "1759",
+         "sub": "jesuítas expulsos"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "O Estado muda de nome e de sede: <b>Grão-Pará e Maranhão</b>, com capital em <b>Belém</b>."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Companhia Geral de Comércio do Grão-Pará e Maranhão</b>: monopólio, crédito e tráfico."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Diretório dos Índios</b>: os aldeamentos saem do controle dos missionários e passam a diretores leigos."
+        },
+        {
+         "no": 3,
+         "texto": "Expulsão dos <b>jesuítas</b> de Portugal e de suas colônias."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: o ciclo do algodão",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "tabela",
+       "cab": [
+        "Fator",
+        "Efeito no Maranhão"
+       ],
+       "linhas": [
+        [
+         "Crédito e escravizados da Companhia",
+         "Expansão das lavouras de algodão e arroz nos vales do Itapecuru e do Mearim."
+        ],
+        [
+         "Revolução Industrial inglesa",
+         "Demanda crescente de algodão para a indústria têxtil."
+        ],
+        [
+         "Guerra de Independência dos EUA",
+         "Queda da oferta americana, abrindo espaço ao algodão maranhense."
+        ],
+        [
+         "Riqueza da elite",
+         "Sobrados com azulejos portugueses em São Luís, hoje patrimônio."
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Da riqueza ao patrimônio",
+       "html": "O Centro Histórico de São Luís, Patrimônio Mundial, é em grande parte <b>fruto do algodão</b>: a elite enriquecida construiu os casarões dos séculos XVIII e XIX."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A Companhia Geral de Comércio do Grão-Pará e Maranhão foi criada no período pombalino e ampliou o tráfico de africanos escravizados.",
+         "v": true,
+         "porque": "Instituída em 1755, no governo de D. José I."
+        },
+        {
+         "texto": "O Diretório dos Índios reforçou o poder dos jesuítas sobre os aldeamentos.",
+         "v": false,
+         "porque": "Fez o contrário: tirou dos missionários o governo dos aldeamentos."
+        },
+        {
+         "texto": "A expansão algodoeira se ligou à demanda da indústria têxtil inglesa.",
+         "v": true,
+         "porque": "É a conexão com a Revolução Industrial."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "ma-hist-05",
+    "ma-hist-06"
+   ]
+  },
+  {
+   "id": "A4-a07",
+   "topico_id": "A4-07",
+   "numero": 7,
+   "titulo": "Prosperidade do algodão",
+   "status": "a_montar"
+  },
+  {
+   "id": "A4-a08",
+   "topico_id": "A4-08",
+   "numero": 8,
+   "titulo": "Adesão do Maranhão à Independência (1823)",
+   "status": "pronta",
+   "fonte": "Lei estadual 2.457/1964 (feriado de 28 de julho); historiografia sobre a adesão (RIHGB; Revista Ágora/UFES)",
+   "resumo": [
+    "Em 1822 a elite de São Luís continuou fiel a Portugal: o comércio da província era feito diretamente com Lisboa.",
+    "No interior houve guerra. Forças vindas do Piauí e do Ceará cercaram Caxias, onde resistia o major João José da Cunha Fidié.",
+    "Lord Cochrane, a serviço do Império, chegou à baía de São Marcos em 26 de julho de 1823.",
+    "Em 28 de julho de 1823 o Maranhão aderiu oficialmente ao Império do Brasil. A data é feriado estadual (Lei 2.457/1964).",
+    "A adesão veio por pressão militar e política, não de forma espontânea. O Pará aderiu depois, em agosto de 1823."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: uma província ligada a Lisboa",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O 7 de setembro de 1822 não foi aceito de imediato em todo o país. No Maranhão, os grandes comerciantes, muitos deles portugueses, e a administração eram ligados a <b>Lisboa</b>, não ao Rio. A Independência só chegou com <b>guerra no interior</b> e com o <b>bloqueio naval</b> do porto."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "1822",
+         "sub": "fidelidade a Lisboa"
+        },
+        {
+         "titulo": "1823",
+         "sub": "guerra no interior"
+        },
+        {
+         "titulo": "26/7/1823",
+         "sub": "Cochrane"
+        },
+        {
+         "titulo": "28/7/1823",
+         "sub": "adesão"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Junta de governo em São Luís mantém a província fiel às Cortes de Lisboa."
+        },
+        {
+         "no": 1,
+         "texto": "Tropas independentistas do Piauí e do Ceará avançam. <b>Fidié</b> resiste em <b>Caxias</b>, que é cercada."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Lord Cochrane</b> chega à baía de São Marcos e pressiona a capital."
+        },
+        {
+         "no": 3,
+         "texto": "A Câmara proclama a <b>adesão ao Império</b>. Em Caxias, Fidié capitula pouco depois."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Mito da última província",
+       "html": "O Maranhão não foi a última: o <b>Pará</b> aderiu depois, em <b>agosto de 1823</b>."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A adesão do Maranhão à Independência ocorreu em 28 de julho de 1823.",
+         "v": true,
+         "porque": "É a data do feriado estadual."
+        },
+        {
+         "texto": "A adesão foi pacífica e imediata, logo após o 7 de setembro de 1822.",
+         "v": false,
+         "porque": "Houve quase um ano de resistência e guerra no interior."
+        },
+        {
+         "texto": "Caxias foi o principal foco da resistência portuguesa no interior, com Fidié.",
+         "v": true,
+         "porque": "A cidade foi cercada pelas tropas independentistas."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "ma-hist-07"
+   ]
+  },
+  {
+   "id": "A4-a09",
+   "topico_id": "A4-09",
+   "numero": 9,
+   "titulo": "Balaiada (1838 a 1841)",
+   "status": "pronta",
+   "fonte": "Historiografia consolidada sobre as revoltas regenciais; dados biográficos de Raimundo Gomes, Manuel Balaio e Cosme Bento",
+   "resumo": [
+    "A Balaiada aconteceu no Período Regencial. Começou em dezembro de 1838, na Vila da Manga, quando o vaqueiro Raimundo Gomes invadiu a cadeia para soltar presos, entre eles seu irmão.",
+    "No pano de fundo estava a disputa da elite: bem-te-vis (liberais) contra cabanos (conservadores), agravada pela Lei dos Prefeitos (1838) e pelo recrutamento forçado.",
+    "Os líderes populares foram Raimundo Gomes, Manuel Francisco dos Anjos Ferreira (o Balaio, fazedor de balaios) e Cosme Bento das Chagas, ex-escravizado que liderou um grande quilombo.",
+    "Os rebeldes tomaram Caxias em 1839. Com a radicalização popular, os bem-te-vis se afastaram do movimento.",
+    "Luís Alves de Lima e Silva, presidente da província e comandante das tropas, reprimiu a revolta. Houve anistia em 1840. Ele recebeu o título de Barão de Caxias. Cosme foi capturado e enforcado."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: elite dividida, povo pobre",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A Regência (1831 a 1840) foi um período de revoltas provinciais. No Maranhão, a elite estava dividida entre <b>bem-te-vis</b> (liberais, nome de um jornal) e <b>cabanos</b> (conservadores). Em 1838 os cabanos aprovaram a <b>Lei dos Prefeitos</b>, que dava ao presidente da província o poder de nomear prefeitos com funções policiais. Para os pobres do campo (vaqueiros, lavradores, artesãos) e para os escravizados, o peso maior era o <b>recrutamento forçado</b>, a violência das autoridades e a miséria."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "dez/1838",
+         "sub": "Vila da Manga"
+        },
+        {
+         "titulo": "1839",
+         "sub": "Caxias tomada"
+        },
+        {
+         "titulo": "1840",
+         "sub": "Lima e Silva"
+        },
+        {
+         "titulo": "1841",
+         "sub": "fim"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Raimundo Gomes</b> invade a cadeia da Vila da Manga e solta os presos. Começa a revolta."
+        },
+        {
+         "no": 1,
+         "texto": "Adesão de <b>Manuel Balaio</b> e de <b>Cosme Bento</b>, com milhares de escravizados aquilombados. Os rebeldes ocupam <b>Caxias</b>, a segunda cidade da província."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Luís Alves de Lima e Silva</b> assume a presidência da província e o comando das tropas. Depois da Maioridade de D. Pedro II, sai a <b>anistia</b> para quem se rendesse."
+        },
+        {
+         "no": 3,
+         "texto": "Fim da revolta. Lima e Silva recebe o título de <b>Barão de Caxias</b>. Cosme Bento é capturado e enforcado."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: quem era quem",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Raimundo Gomes",
+         "sub": "vaqueiro",
+         "verso": "Iniciou a revolta em 1838, ao invadir a cadeia da Vila da Manga."
+        },
+        {
+         "frente": "Manuel Balaio",
+         "sub": "fazedor de balaios",
+         "verso": "Manuel Francisco dos Anjos Ferreira. Deu nome ao movimento. Morreu durante a luta."
+        },
+        {
+         "frente": "Cosme Bento das Chagas",
+         "sub": "o Negro Cosme",
+         "verso": "Ex-escravizado, liderou um grande quilombo e a luta contra a escravidão. Foi enforcado."
+        },
+        {
+         "frente": "Lima e Silva",
+         "sub": "futuro Duque de Caxias",
+         "verso": "Reprimiu a revolta como presidente e comandante de armas. Ganhou o título de Barão de Caxias."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Por que a elite largou a revolta",
+       "html": "No começo os <b>bem-te-vis</b> usaram o descontentamento contra os cabanos. Quando a revolta ganhou força popular e escrava, os liberais se afastaram e apoiaram a repressão."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Trocas comuns",
+       "html": "<b>Cabanos</b> do Maranhão são os conservadores. Não confunda com a <b>Cabanagem</b> (Pará, 1835).<br>Caxias é a <b>cidade</b> tomada pelos rebeldes e também o <b>título</b> de quem os venceu."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A Balaiada teve forte participação popular e de escravizados, como o quilombo liderado por Cosme Bento.",
+         "v": true,
+         "porque": "É o traço que mais aparece nas provas."
+        },
+        {
+         "texto": "Os bem-te-vis eram conservadores aliados do governo provincial.",
+         "v": false,
+         "porque": "Eram liberais. Os conservadores eram os cabanos."
+        },
+        {
+         "texto": "A repressão foi comandada por Luís Alves de Lima e Silva, futuro Duque de Caxias.",
+         "v": true,
+         "porque": "Ganhou o título de Barão de Caxias por essa campanha."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "ma-hist-08",
+    "ma-hist-09",
+    "ma-hist-10"
+   ]
+  },
+  {
+   "id": "A4-a10",
+   "topico_id": "A4-10",
+   "numero": 10,
+   "titulo": "Atenas Brasileira",
+   "status": "a_montar"
+  },
+  {
+   "id": "A4-a11",
+   "topico_id": "A4-11",
+   "numero": 11,
+   "titulo": "Abolição, República e oligarquias",
+   "status": "a_montar"
+  },
+  {
+   "id": "A4-a12",
+   "topico_id": "A4-12",
+   "numero": 12,
+   "titulo": "Século XX: oligarquias e grandes projetos",
+   "status": "pronta",
+   "fonte": "Decreto 88.136/1983 (CLA), artigo da UFPA e relatório CDHM da Câmara dos Deputados (2019); questão FCC 2016 sobre Alcântara",
+   "resumo": [
+    "Depois de 1945 o senador Vitorino Freire dominou a política estadual (vitorinismo). Em 1951 São Luís viveu uma greve e protestos contra a posse de Eugênio Barros.",
+    "José Sarney governou de 1966 a 1970 com o lema \"Maranhão Novo\" e abriu um novo ciclo político.",
+    "Nas décadas de 1970 e 1980 chegaram os grandes projetos: Porto do Itaqui, Alumar (alumínio), Estrada de Ferro Carajás e terminal de Ponta da Madeira (minério da Vale).",
+    "O Centro de Lançamento de Alcântara foi criado pelo Decreto 88.136, de 1º de março de 1983. Sua instalação removeu 312 famílias quilombolas para agrovilas.",
+    "A Constituição do Estado do Maranhão foi promulgada em 1989, depois da Constituição Federal de 1988."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: do vitorinismo ao Maranhão Novo",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "1945+",
+         "sub": "vitorinismo"
+        },
+        {
+         "titulo": "1951",
+         "sub": "greve em São Luís"
+        },
+        {
+         "titulo": "1966",
+         "sub": "Sarney"
+        },
+        {
+         "titulo": "1983",
+         "sub": "CLA"
+        },
+        {
+         "titulo": "1989",
+         "sub": "Constituição estadual"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Vitorino Freire</b> controla a política estadual por cerca de duas décadas."
+        },
+        {
+         "no": 1,
+         "texto": "Protestos e greve em São Luís contra a posse de <b>Eugênio Barros</b>, eleito em pleito contestado."
+        },
+        {
+         "no": 2,
+         "texto": "<b>José Sarney</b> assume o governo (1966 a 1970) com o discurso do <b>Maranhão Novo</b>."
+        },
+        {
+         "no": 3,
+         "texto": "Criação do <b>Centro de Lançamento de Alcântara</b> (Decreto 88.136/1983)."
+        },
+        {
+         "no": 4,
+         "texto": "Promulgação da <b>Constituição do Estado do Maranhão</b>."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: o corredor de exportação",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "tabela",
+       "cab": [
+        "Projeto",
+        "O que é",
+        "Ligação"
+       ],
+       "linhas": [
+        [
+         "Porto do Itaqui",
+         "Porto público em São Luís, na baía de São Marcos",
+         "Grãos, combustíveis e carga geral"
+        ],
+        [
+         "Estrada de Ferro Carajás",
+         "Ferrovia da Vale",
+         "Leva o minério de Carajás (PA) até São Luís"
+        ],
+        [
+         "Ponta da Madeira",
+         "Terminal privado da Vale",
+         "Embarque do minério de ferro"
+        ],
+        [
+         "Alumar",
+         "Consórcio de alumínio e alumina em São Luís",
+         "Metalurgia"
+        ],
+        [
+         "CLA (Alcântara)",
+         "Base de lançamento de foguetes",
+         "Política espacial; conflito com quilombolas"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "O lado social",
+       "html": "A FCC já cobrou Alcântara pelo ângulo da <b>desterritorialização</b>: a base foi uma política nacional que removeu comunidades quilombolas (312 famílias, transferidas para agrovilas)."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A instalação do Centro de Lançamento de Alcântara deslocou comunidades quilombolas.",
+         "v": true,
+         "porque": "312 famílias foram removidas para agrovilas."
+        },
+        {
+         "texto": "A Estrada de Ferro Carajás liga o sul do Maranhão ao porto de Belém.",
+         "v": false,
+         "porque": "Liga Carajás (PA) a São Luís (MA)."
+        },
+        {
+         "texto": "A Constituição do Maranhão é anterior à Constituição Federal de 1988.",
+         "v": false,
+         "porque": "É de 1989, feita após a CF/88."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "ma-hist-11",
+    "ma-hist-12"
+   ]
+  },
+  {
+   "id": "A4-a13",
+   "topico_id": "A4-13",
+   "numero": 13,
+   "titulo": "Século XXI",
+   "status": "a_montar"
+  }
+ ],
+ "glossario": [
+  [
+   "Estanco",
+   "Monopólio comercial concedido pela Coroa a uma companhia."
+  ],
+  [
+   "Nativista",
+   "Revolta colonial contra a política da metrópole, sem projeto de independência."
+  ],
+  [
+   "Bem-te-vis",
+   "Liberais maranhenses na época da Balaiada."
+  ],
+  [
+   "Cabanos",
+   "Conservadores maranhenses na época da Balaiada."
+  ]
+ ]
+}
