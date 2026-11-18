@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   CLASSIFICACAO_LABEL,
@@ -70,6 +71,9 @@ export function QuestaoClient({
 
   const pos = questao ? ids.indexOf(questao.id) : -1;
   const proximo = ids.length ? ids[(pos + 1) % ids.length] : undefined;
+  // na revisão, a próxima é a seguinte da fila (sem dar a volta para a mesma questão)
+  const proximaRevisao = revisao ? ids.slice(pos + 1).concat(ids.slice(0, Math.max(pos, 0))).find((id) => id !== questao?.id) : undefined;
+  const urlRevisao = (id?: string) => (id ? `/admin/estudos/questoes?status=erradas&revisao=1&id=${encodeURIComponent(id)}` : "/admin/estudos/revisao");
 
   function filtrar(novo: Partial<Filtros>) {
     const f = { ...filtros, ...novo };
@@ -106,7 +110,7 @@ export function QuestaoClient({
       setErro(j.error ?? "Não consegui salvar agora. Confira a conexão e tente de novo.");
       return;
     }
-    router.push(revisao ? "/admin/estudos/revisao" : urlDe(filtros, irPara));
+    router.push(revisao ? urlRevisao(proximaRevisao) : urlDe(filtros, irPara));
     router.refresh();
   }
 
@@ -207,10 +211,22 @@ export function QuestaoClient({
               <button type="button" onClick={responder} className={BOTAO_PRIMARIO}>
                 Responder
               </button>
-              {proximo && proximo !== questao.id && (
-                <button type="button" onClick={() => router.push(urlDe(filtros, proximo))} className={BOTAO_SECUNDARIO}>
-                  Pular
-                </button>
+              {revisao
+                ? proximaRevisao && (
+                    <button type="button" onClick={() => router.push(urlRevisao(proximaRevisao))} className={BOTAO_SECUNDARIO}>
+                      Pular
+                    </button>
+                  )
+                : proximo &&
+                  proximo !== questao.id && (
+                    <button type="button" onClick={() => router.push(urlDe(filtros, proximo))} className={BOTAO_SECUNDARIO}>
+                      Pular
+                    </button>
+                  )}
+              {revisao && (
+                <Link href="/admin/estudos/revisao" className="text-xs text-e-dim underline-offset-2 hover:text-e-ink hover:underline">
+                  Voltar à fila da revisão
+                </Link>
               )}
             </div>
           ) : (
@@ -262,7 +278,7 @@ export function QuestaoClient({
               <div className="flex flex-wrap items-center gap-2">
                 <button type="button" onClick={() => salvar(proximo)} disabled={salvando} className={BOTAO_PRIMARIO}>
                   {salvando && <Sparkle size={14} variante="carregando" cor="var(--e-bg)" />}
-                  {salvando ? "Salvando" : revisao ? "Salvar e voltar à fila" : "Salvar e próxima"}
+                  {salvando ? "Salvando" : revisao ? (proximaRevisao ? "Salvar e próxima da revisão" : "Salvar e voltar à fila") : "Salvar e próxima"}
                 </button>
                 {!revisao && (
                   <button type="button" onClick={() => salvar(questao.id)} disabled={salvando} className={BOTAO_SECUNDARIO}>
