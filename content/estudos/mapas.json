@@ -292,5 +292,42 @@
    "v": false,
    "exp": "Errado. Cabanos eram os conservadores. Os liberais eram os bem-te-vis, que se afastaram quando a revolta se radicalizou."
   }
+ },
+ "Constitucional|Princípios fundamentais": {
+  "titulo": "Fundamento, objetivo ou relação internacional?",
+  "passos": [
+   {
+    "t": "O item tem verbo de tarefa?",
+    "r": "sim",
+    "d": "Construir, garantir, erradicar, reduzir, promover: é algo que o Estado quer fazer. Vai para o art. 3º.",
+    "lei": "Art. 3º Constituem objetivos fundamentais da República Federativa do Brasil: I - construir uma sociedade livre, justa e solidária; II - garantir o desenvolvimento nacional; III - erradicar a pobreza e a marginalização e reduzir as desigualdades sociais e regionais; IV - promover o bem de todos, sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discriminação."
+   },
+   {
+    "t": "Objetivo fundamental (art. 3º)",
+    "r": "e se não tem verbo?",
+    "d": "Atenção à lista do inciso IV: origem, raça, sexo, cor, idade, e quaisquer outras formas de discriminação."
+   },
+   {
+    "t": "Só faz sentido entre países?",
+    "r": "sim",
+    "d": "Asilo, não-intervenção, autodeterminação, defesa da paz: assunto entre Estados. Vai para o art. 4º. Repúdio ao terrorismo e ao racismo também está aqui.",
+    "lei": "Art. 4º A República Federativa do Brasil rege-se nas suas relações internacionais pelos seguintes princípios: I - independência nacional; II - prevalência dos direitos humanos; III - autodeterminação dos povos; IV - não-intervenção; V - igualdade entre os Estados; VI - defesa da paz; VII - solução pacífica dos conflitos; VIII - repúdio ao terrorismo e ao racismo; IX - cooperação entre os povos para o progresso da humanidade; X - concessão de asilo político.\nParágrafo único. A República Federativa do Brasil buscará a integração econômica, política, social e cultural dos povos da América Latina, visando à formação de uma comunidade latino-americana de nações."
+   },
+   {
+    "t": "Princípio das relações internacionais (art. 4º)",
+    "r": "e se não é?",
+    "d": "Parágrafo único: integração econômica, política, social e cultural da América Latina."
+   },
+   {
+    "t": "É a base do Estado: fundamento (art. 1º)",
+    "d": "Soberania, cidadania, dignidade, valores sociais do trabalho e da livre iniciativa, pluralismo político. O caput não cita a União.",
+    "lei": "Art. 1º A República Federativa do Brasil, formada pela união indissolúvel dos Estados e Municípios e do Distrito Federal, constitui-se em Estado Democrático de Direito e tem como fundamentos: I - a soberania; II - a cidadania; III - a dignidade da pessoa humana; IV - os valores sociais do trabalho e da livre iniciativa;\nV - o pluralismo político."
+   }
+  ],
+  "teste": {
+   "p": "O pluralismo político é princípio que rege o Brasil nas suas relações internacionais.",
+   "v": false,
+   "exp": "Errado. É fundamento da República (art. 1º, V). Não é assunto entre países."
+  }
  }
 }
