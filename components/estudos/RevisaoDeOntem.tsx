@@ -41,6 +41,10 @@ export async function RevisaoDeOntem({ hoje, respostas }: { hoje: string; respos
     const q = QUESTAO_POR_ID.get(r.questao_id);
     if (q) erradas.set(q.id, q);
   }
+  // já refeitas hoje: guarda a última resposta de hoje de cada uma
+  const refeitaHoje = new Map<string, Resposta>();
+  for (const r of respostas) if (dataBelem(r.respondida_em) === hoje && erradas.has(r.questao_id)) refeitaHoje.set(r.questao_id, r);
+  const pendentes = [...erradas.keys()].filter((id) => !refeitaHoje.has(id));
   // lei seca das erradas, sem repetir o mesmo dispositivo
   const artigos = new Map<string, { ref: string; fonte: string; materia: string }>();
   for (const q of erradas.values()) {
@@ -81,7 +85,16 @@ export async function RevisaoDeOntem({ hoje, respostas }: { hoje: string; respos
       </section>
 
       <section className="mb-4">
-        <h3 className="text-[11px] uppercase tracking-[0.14em] text-e-dim">2. Seus erros ({erradas.size})</h3>
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 className="text-[11px] uppercase tracking-[0.14em] text-e-dim">
+            2. Seus erros ({erradas.size}{erradas.size ? `, ${erradas.size - pendentes.length} refeitos hoje` : ""})
+          </h3>
+          {pendentes.length > 0 && (
+            <Link href={`/admin/estudos/questoes?status=erradas&revisao=1&id=${encodeURIComponent(pendentes[0])}`} className={CHIP}>
+              Refazer as {pendentes.length} pendentes em sequência →
+            </Link>
+          )}
+        </div>
         {erradas.size ? (
           <ul className="mt-2 space-y-1.5">
             {[...erradas.values()].map((q) => (
@@ -90,9 +103,15 @@ export async function RevisaoDeOntem({ hoje, respostas }: { hoje: string; respos
                   {MATERIA_POR_ID.get(q.materia_id)?.nome ?? q.mat}: {q.tema}
                   <span className="text-e-dim"> · {q.ref}</span>
                 </span>
-                <Link href={`/admin/estudos/questoes?status=erradas&revisao=1&id=${encodeURIComponent(q.id)}`} className={CHIP}>
-                  Refazer →
-                </Link>
+                {refeitaHoje.has(q.id) ? (
+                  <span className={`text-[11px] ${ehFalha(refeitaHoje.get(q.id)!) ? "text-e-warn" : "text-e-ok"}`}>
+                    {ehFalha(refeitaHoje.get(q.id)!) ? "refeita hoje, ainda errou: volta amanhã" : "refeita hoje ✓"}
+                  </span>
+                ) : (
+                  <Link href={`/admin/estudos/questoes?status=erradas&revisao=1&id=${encodeURIComponent(q.id)}`} className={CHIP}>
+                    Refazer →
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

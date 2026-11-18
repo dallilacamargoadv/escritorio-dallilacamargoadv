@@ -1,6 +1,9 @@
 import { redirect } from "next/navigation";
 import { getRespostas, QUESTOES, QUESTAO_POR_ID } from "@/lib/db-estudos";
 import { MATERIA_POR_ID } from "@/lib/estudos-utils";
+import type { Resposta } from "@/lib/estudos-desempenho";
+import { agendaQuestoes, dataBelem, ehFalha } from "@/lib/estudos-revisao";
+import { todayBelemDateString } from "@/lib/atividades-utils";
 import { Cabecalho } from "@/components/estudos/ui";
 import { QuestaoClient } from "@/components/estudos/QuestaoClient";
 
@@ -33,6 +36,8 @@ export default async function QuestoesPage(props: PageProps<"/admin/estudos/ques
 
   const pedida = s("id");
   const atual = (pedida && lista.find((q) => q.id === pedida)) || lista.find((q) => !ultima.has(q.id)) || lista[0] || null;
+  const revisao = s("revisao") === "1";
+  const ids = revisao ? filaDaRevisao(respostas, atual?.id ?? null) : lista.map((q) => q.id);
   const materias = [...new Set(QUESTOES.map((q) => q.materia_id))].map((id) => ({
     id,
     nome: MATERIA_POR_ID.get(id)?.nome ?? id,
@@ -50,13 +55,32 @@ export default async function QuestoesPage(props: PageProps<"/admin/estudos/ques
       <QuestaoClient
         key={atual?.id ?? "vazio"}
         questao={atual ? QUESTAO_POR_ID.get(atual.id)! : null}
-        ids={lista.map((q) => q.id)}
+        ids={ids}
         filtros={{ materia, tema, status }}
         materias={materias}
         temas={temas}
         historico={historico}
-        revisao={s("revisao") === "1"}
+        revisao={revisao}
       />
     </>
   );
+}
+
+/**
+ * Fila da revisão: as erradas que vencem hoje mais os erros do último dia de estudo ainda não refeitos hoje.
+ * A matéria da questão aberta vem primeiro, para dar para zerar uma matéria de uma vez.
+ */
+function filaDaRevisao(respostas: Resposta[], atual: string | null): string[] {
+  const hoje = todayBelemDateString();
+  const feitasHoje = new Set(respostas.filter((r) => dataBelem(r.respondida_em) === hoje).map((r) => r.questao_id));
+  const vencidas = agendaQuestoes(respostas, QUESTAO_POR_ID)
+    .filter((q) => q.vence_em <= hoje)
+    .sort((a, b) => a.vence_em.localeCompare(b.vence_em))
+    .map((q) => q.id);
+  const dia = respostas.map((r) => dataBelem(r.respondida_em)).filter((d) => d < hoje).sort().at(-1);
+  const deOntem = respostas.filter((r) => dataBelem(r.respondida_em) === dia && ehFalha(r)).map((r) => r.questao_id);
+  const fila = [...new Set([...vencidas, ...deOntem])].filter((id) => QUESTAO_POR_ID.has(id) && (id === atual || !feitasHoje.has(id)));
+  if (atual && !fila.includes(atual)) fila.unshift(atual);
+  const materia = atual ? QUESTAO_POR_ID.get(atual)?.materia_id : undefined;
+  return [...fila.filter((id) => QUESTAO_POR_ID.get(id)?.materia_id === materia), ...fila.filter((id) => QUESTAO_POR_ID.get(id)?.materia_id !== materia)];
 }
