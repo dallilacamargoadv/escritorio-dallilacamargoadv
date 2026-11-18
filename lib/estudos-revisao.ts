@@ -128,6 +128,12 @@ export interface Cartao {
   f: string;
   v: string;
   x?: string;
+  /** texto literal da lei ou da súmula que fundamenta o cartão */
+  lei?: string;
+  /** como a FCC costuma cobrar (pegadinha) */
+  fcc?: string;
+  /** nível: 1 fácil, 2 médio, 3 difícil */
+  nv?: 1 | 2 | 3;
 }
 
 /** Estado gravado em `estudo_cartoes.estado`. Os cartões migrados usam ms em `due` e `int` (dias). */

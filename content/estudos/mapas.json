@@ -1,0 +1,262 @@
+{
+ "Administrativo|Organização administrativa": {
+  "titulo": "Desconcentração ou descentralização?",
+  "passos": [
+   {
+    "t": "A atividade sai da pessoa jurídica?",
+    "r": "não",
+    "d": "Se a distribuição é dentro da mesma pessoa jurídica, entre órgãos, é desconcentração. Há hierarquia.",
+    "lei": "I - órgão - a unidade de atuação integrante da estrutura da Administração direta e da estrutura da Administração indireta; II - entidade - a unidade de atuação dotada de personalidade jurídica;"
+   },
+   {
+    "t": "Desconcentração: órgãos, sem personalidade, com hierarquia",
+    "r": "e se sai?",
+    "d": "O órgão não tem personalidade jurídica: sua atuação é imputada à pessoa a que pertence (teoria do órgão)."
+   },
+   {
+    "t": "Descentralização: vai para outra pessoa",
+    "r": "por lei ou por contrato?",
+    "d": "Outra pessoa jurídica (ou um particular) passa a exercer a atividade. Não há hierarquia, só controle finalístico (tutela)."
+   },
+   {
+    "t": "Por lei: outorga a entidade da Administração indireta",
+    "d": "Lei específica cria a autarquia e autoriza a instituição de empresa pública, sociedade de economia mista e fundação.",
+    "lei": "XIX – somente por lei específica poderá ser criada autarquia e autorizada a instituição de empresa pública, de sociedade de economia mista e de fundação, cabendo à lei complementar, neste último caso, definir as áreas de sua atuação;"
+   },
+   {
+    "t": "Por contrato ou ato: delegação a particular",
+    "d": "Concessão e permissão de serviço público transferem só a execução, sempre por licitação.",
+    "lei": "Art. 175. Incumbe ao Poder Público, na forma da lei, diretamente ou sob regime de concessão ou permissão, sempre através de licitação, a prestação de serviços públicos."
+   }
+  ],
+  "teste": {
+   "p": "Entre a União e uma autarquia federal existe relação de hierarquia.",
+   "v": false,
+   "exp": "Errado. Entre pessoas jurídicas diferentes há controle finalístico (tutela), não hierarquia. Hierarquia só existe dentro da mesma pessoa, entre órgãos."
+  }
+ },
+ "Administrativo|Regime jurídico administrativo": {
+  "titulo": "Supremacia, indisponibilidade, tutela e autotutela",
+  "passos": [
+   {
+    "t": "É poder (prerrogativa) ou limite (sujeição)?",
+    "r": "poder",
+    "d": "O regime jurídico administrativo tem duas pedras de toque: supremacia do interesse público (prerrogativas) e indisponibilidade (sujeições)."
+   },
+   {
+    "t": "Supremacia: prerrogativas",
+    "r": "e o limite?",
+    "d": "Ex.: cláusulas exorbitantes, desapropriação, autoexecutoriedade, presunção de legitimidade."
+   },
+   {
+    "t": "Indisponibilidade: sujeições",
+    "r": "quem controla quem?",
+    "d": "O administrador não é dono do interesse público: precisa de licitação, concurso, motivação, publicidade. Não pode renunciar a créditos sem lei."
+   },
+   {
+    "t": "Controle dos próprios atos: autotutela",
+    "r": "e da indireta?",
+    "d": "Autotutela: a Administração revê os próprios atos (anula ilegais, revoga inconvenientes), sem precisar do Judiciário.",
+    "lei": "Súmula 473 do STF: \"A administração pode anular seus próprios atos, quando eivados de vícios que os tornam ilegais, porque deles não se originam direitos; ou revogá-los, por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos, e ressalvada, em todos os casos, a apreciação judicial.\""
+   },
+   {
+    "t": "Controle sobre a entidade da indireta: tutela",
+    "d": "Tutela (supervisão ministerial, controle finalístico): a Administração direta controla a autarquia ou estatal nos limites da lei. Não é hierarquia."
+   }
+  ],
+  "teste": {
+   "p": "Autotutela é o controle que a Administração direta exerce sobre as entidades da Administração indireta.",
+   "v": false,
+   "exp": "Errado. Isso é tutela (controle finalístico). Autotutela é a Administração revendo os próprios atos."
+  }
+ },
+ "Administrativo|Princípios da Administração Pública": {
+  "titulo": "Anular, revogar ou convalidar?",
+  "passos": [
+   {
+    "t": "O ato tem vício de legalidade?",
+    "r": "sim",
+    "d": "Primeira pergunta sempre: o problema é de legalidade ou de mérito (conveniência e oportunidade)? Legalidade leva à anulação; mérito, à revogação.",
+    "lei": "Art. 53. A Administração deve anular seus próprios atos, quando eivados de vício de legalidade, e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos."
+   },
+   {
+    "t": "O vício é sanável e não lesa ninguém?",
+    "r": "sim",
+    "d": "Defeito sanável, sem lesão ao interesse público nem prejuízo a terceiros: a Administração pode convalidar (art. 55). Se não for sanável, anula.",
+    "lei": "Art. 55. Em decisão na qual se evidencie não acarretarem lesão ao interesse público nem prejuízo a terceiros, os atos que apresentarem defeitos sanáveis poderão ser convalidados pela própria Administração."
+   },
+   {
+    "t": "Não dá para convalidar: anular (dever, ex tunc)",
+    "r": "ato favorável e boa-fé?",
+    "d": "Anular é dever e retroage. A Súmula 473 do STF diz o mesmo e ressalva a apreciação judicial.",
+    "lei": "Súmula 473 do STF: \"A administração pode anular seus próprios atos, quando eivados de vícios que os tornam ilegais, porque deles não se originam direitos; ou revogá-los, por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos, e ressalvada, em todos os casos, a apreciação judicial.\""
+   },
+   {
+    "t": "Passaram 5 anos: decaiu o direito de anular",
+    "d": "Atos com efeitos favoráveis ao destinatário: o direito de anular decai em 5 anos da prática, salvo má-fé comprovada. Efeitos patrimoniais contínuos: conta do primeiro pagamento.",
+    "lei": "Art. 54. O direito da Administração de anular os atos administrativos de que decorram efeitos favoráveis para os destinatários decai em cinco anos, contados da data em que foram praticados, salvo comprovada má-fé. § 1o No caso de efeitos patrimoniais contínuos, o prazo de decadência contar-se-á da percepção do primeiro pagamento."
+   },
+   {
+    "t": "Ato legal, mas inconveniente: revogar (faculdade, ex nunc)",
+    "d": "Revogação só para ato válido, por mérito. Vale daqui para frente e respeita direitos adquiridos. Judiciário não revoga ato de outro Poder; só anula."
+   }
+  ],
+  "teste": {
+   "p": "A revogação de um ato administrativo produz efeitos retroativos (ex tunc).",
+   "v": false,
+   "exp": "Errado. Quem retroage é a anulação. A revogação é ex nunc, porque o ato era válido."
+  }
+ },
+ "Administrativo|Processo administrativo": {
+  "titulo": "Anular, revogar ou convalidar?",
+  "passos": [
+   {
+    "t": "O ato tem vício de legalidade?",
+    "r": "sim",
+    "d": "Primeira pergunta sempre: o problema é de legalidade ou de mérito (conveniência e oportunidade)? Legalidade leva à anulação; mérito, à revogação.",
+    "lei": "Art. 53. A Administração deve anular seus próprios atos, quando eivados de vício de legalidade, e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos."
+   },
+   {
+    "t": "O vício é sanável e não lesa ninguém?",
+    "r": "sim",
+    "d": "Defeito sanável, sem lesão ao interesse público nem prejuízo a terceiros: a Administração pode convalidar (art. 55). Se não for sanável, anula.",
+    "lei": "Art. 55. Em decisão na qual se evidencie não acarretarem lesão ao interesse público nem prejuízo a terceiros, os atos que apresentarem defeitos sanáveis poderão ser convalidados pela própria Administração."
+   },
+   {
+    "t": "Não dá para convalidar: anular (dever, ex tunc)",
+    "r": "ato favorável e boa-fé?",
+    "d": "Anular é dever e retroage. A Súmula 473 do STF diz o mesmo e ressalva a apreciação judicial.",
+    "lei": "Súmula 473 do STF: \"A administração pode anular seus próprios atos, quando eivados de vícios que os tornam ilegais, porque deles não se originam direitos; ou revogá-los, por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos, e ressalvada, em todos os casos, a apreciação judicial.\""
+   },
+   {
+    "t": "Passaram 5 anos: decaiu o direito de anular",
+    "d": "Atos com efeitos favoráveis ao destinatário: o direito de anular decai em 5 anos da prática, salvo má-fé comprovada. Efeitos patrimoniais contínuos: conta do primeiro pagamento.",
+    "lei": "Art. 54. O direito da Administração de anular os atos administrativos de que decorram efeitos favoráveis para os destinatários decai em cinco anos, contados da data em que foram praticados, salvo comprovada má-fé. § 1o No caso de efeitos patrimoniais contínuos, o prazo de decadência contar-se-á da percepção do primeiro pagamento."
+   },
+   {
+    "t": "Ato legal, mas inconveniente: revogar (faculdade, ex nunc)",
+    "d": "Revogação só para ato válido, por mérito. Vale daqui para frente e respeita direitos adquiridos. Judiciário não revoga ato de outro Poder; só anula."
+   }
+  ],
+  "teste": {
+   "p": "A revogação de um ato administrativo produz efeitos retroativos (ex tunc).",
+   "v": false,
+   "exp": "Errado. Quem retroage é a anulação. A revogação é ex nunc, porque o ato era válido."
+  }
+ },
+ "Tributário|Impostos estaduais": {
+  "titulo": "Impostos estaduais depois da reforma (EC 132)",
+  "passos": [
+   {
+    "t": "É ICMS?",
+    "r": "sim",
+    "d": "O ICMS vai sendo substituído pelo IBS: alíquotas a 9/10 em 2029, 8/10 em 2030, 7/10 em 2031, 6/10 em 2032, e extinção em 2033 (ADCT, arts. 128 e 129).",
+    "lei": "Art. 129. Ficam extintos, a partir de 2033, os impostos previstos nos arts. 155, II, e 156, III, da Constituição Federal."
+   },
+   {
+    "t": "É ITCMD?",
+    "r": "bens móveis?",
+    "d": "Bens móveis, títulos e créditos: Estado do domicílio do de cujus (ou do doador). E agora é progressivo.",
+    "lei": "II - relativamente a bens móveis, títulos e créditos, compete ao Estado onde era domiciliado o de cujus, ou tiver domicílio o doador, ou ao Distrito Federal; […] VI - será progressivo em razão do valor do quinhão, do legado ou da doação;"
+   },
+   {
+    "t": "É IPVA?",
+    "r": "barco ou avião?",
+    "d": "Depois da EC 132 alcança veículos terrestres, aquáticos e aéreos, com exceções (aeronaves agrícolas, embarcações de transporte aquaviário e de pesca, plataformas).",
+    "lei": "§ 6º O imposto previsto no inciso III: I - terá alíquotas mínimas fixadas pelo Senado Federal; II - poderá ter alíquotas diferenciadas em função do tipo, do valor, da utilização e do impacto ambiental;"
+   }
+  ],
+  "teste": {
+   "p": "Depois da EC 132/2023, o ITCMD sobre bens móveis de herança cabe ao Estado onde se processar o inventário.",
+   "v": false,
+   "exp": "Errado. Cabe ao Estado onde era domiciliado o de cujus. \"Onde se processar o inventário\" era a regra antiga."
+  }
+ },
+ "Português|Flexão verbal": {
+  "titulo": "Verbos que a FCC usa para enganar",
+  "passos": [
+   {
+    "t": "O verbo é derivado de ver, vir, ter ou pôr?",
+    "r": "sim",
+    "d": "Derivado conjuga como o primitivo: intervir como vir (ele interveio; se ele intervier), manter como ter (mantive; se ele mantiver), prever como ver (previu; quando ele previr), propor como pôr (propus; se ele propuser)."
+   },
+   {
+    "t": "Cuidado com as exceções",
+    "r": "e os defectivos?",
+    "d": "Requerer não segue querer no pretérito: eu requeiro, ele requereu (nunca \"requis\"). Prover segue ver no presente (eu provejo), mas é regular no pretérito: ele proveu."
+   },
+   {
+    "t": "Defectivos: faltam formas",
+    "r": "e o haver?",
+    "d": "Precaver não tem a 1ª pessoa do presente (\"eu me precavenho\" não existe: use \"eu me acautelo\"). Reaver só tem as formas em que haver tem a letra v: nós reavemos, ele reouve, se ele reouver."
+   },
+   {
+    "t": "Haver no sentido de existir ou de tempo decorrido",
+    "d": "É impessoal: fica no singular e passa o singular para o auxiliar. \"Houve problemas\", \"Deve haver soluções\", \"Havia anos que...\"."
+   }
+  ],
+  "teste": {
+   "p": "Está correta a frase: \"Se o Estado intervir no mercado, os preços cairão.\"",
+   "v": false,
+   "exp": "Errado. Intervir conjuga como vir: \"se o Estado intervier\". O futuro do subjuntivo de vir é \"vier\"."
+  }
+ },
+ "Português|Tempos e modos verbais": {
+  "titulo": "Verbos que a FCC usa para enganar",
+  "passos": [
+   {
+    "t": "O verbo é derivado de ver, vir, ter ou pôr?",
+    "r": "sim",
+    "d": "Derivado conjuga como o primitivo: intervir como vir (ele interveio; se ele intervier), manter como ter (mantive; se ele mantiver), prever como ver (previu; quando ele previr), propor como pôr (propus; se ele propuser)."
+   },
+   {
+    "t": "Cuidado com as exceções",
+    "r": "e os defectivos?",
+    "d": "Requerer não segue querer no pretérito: eu requeiro, ele requereu (nunca \"requis\"). Prover segue ver no presente (eu provejo), mas é regular no pretérito: ele proveu."
+   },
+   {
+    "t": "Defectivos: faltam formas",
+    "r": "e o haver?",
+    "d": "Precaver não tem a 1ª pessoa do presente (\"eu me precavenho\" não existe: use \"eu me acautelo\"). Reaver só tem as formas em que haver tem a letra v: nós reavemos, ele reouve, se ele reouver."
+   },
+   {
+    "t": "Haver no sentido de existir ou de tempo decorrido",
+    "d": "É impessoal: fica no singular e passa o singular para o auxiliar. \"Houve problemas\", \"Deve haver soluções\", \"Havia anos que...\"."
+   }
+  ],
+  "teste": {
+   "p": "Está correta a frase: \"Se o Estado intervir no mercado, os preços cairão.\"",
+   "v": false,
+   "exp": "Errado. Intervir conjuga como vir: \"se o Estado intervier\". O futuro do subjuntivo de vir é \"vier\"."
+  }
+ },
+ "Português|Concordância verbal": {
+  "titulo": "Verbos que a FCC usa para enganar",
+  "passos": [
+   {
+    "t": "O verbo é derivado de ver, vir, ter ou pôr?",
+    "r": "sim",
+    "d": "Derivado conjuga como o primitivo: intervir como vir (ele interveio; se ele intervier), manter como ter (mantive; se ele mantiver), prever como ver (previu; quando ele previr), propor como pôr (propus; se ele propuser)."
+   },
+   {
+    "t": "Cuidado com as exceções",
+    "r": "e os defectivos?",
+    "d": "Requerer não segue querer no pretérito: eu requeiro, ele requereu (nunca \"requis\"). Prover segue ver no presente (eu provejo), mas é regular no pretérito: ele proveu."
+   },
+   {
+    "t": "Defectivos: faltam formas",
+    "r": "e o haver?",
+    "d": "Precaver não tem a 1ª pessoa do presente (\"eu me precavenho\" não existe: use \"eu me acautelo\"). Reaver só tem as formas em que haver tem a letra v: nós reavemos, ele reouve, se ele reouver."
+   },
+   {
+    "t": "Haver no sentido de existir ou de tempo decorrido",
+    "d": "É impessoal: fica no singular e passa o singular para o auxiliar. \"Houve problemas\", \"Deve haver soluções\", \"Havia anos que...\"."
+   }
+  ],
+  "teste": {
+   "p": "Está correta a frase: \"Se o Estado intervir no mercado, os preços cairão.\"",
+   "v": false,
+   "exp": "Errado. Intervir conjuga como vir: \"se o Estado intervier\". O futuro do subjuntivo de vir é \"vier\"."
+  }
+ }
+}
