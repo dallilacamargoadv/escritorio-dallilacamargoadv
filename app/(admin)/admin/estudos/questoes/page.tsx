@@ -6,6 +6,10 @@ import { agendaQuestoes, dataBelem, ehFalha } from "@/lib/estudos-revisao";
 import { todayBelemDateString } from "@/lib/atividades-utils";
 import { Cabecalho } from "@/components/estudos/ui";
 import { QuestaoClient } from "@/components/estudos/QuestaoClient";
+import type { Mapa } from "@/components/estudos/MapaDoTema";
+import mapasJson from "@/content/estudos/mapas.json";
+
+const MAPAS = mapasJson as Record<string, Mapa>;
 
 type Status = "todas" | "nao_respondidas" | "erradas";
 
@@ -60,6 +64,7 @@ export default async function QuestoesPage(props: PageProps<"/admin/estudos/ques
         materias={materias}
         temas={temas}
         historico={historico}
+        mapa={atual ? (MAPAS[`${atual.mat}|${atual.tema}`] ?? null) : null}
         revisao={revisao}
       />
     </>

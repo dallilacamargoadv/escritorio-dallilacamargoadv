@@ -14,6 +14,7 @@ import {
 } from "@/lib/estudos-desempenho";
 import { fonteHtml, htmlSeguro } from "@/lib/estudos-html";
 import { Sparkle } from "@/components/estudos/Sparkle";
+import { MapaDoTema, type Mapa } from "@/components/estudos/MapaDoTema";
 import { BOTAO_PRIMARIO, BOTAO_SECUNDARIO, CAMPO, Card } from "@/components/estudos/ui";
 
 const LETRAS = "ABCDE";
@@ -41,6 +42,7 @@ export function QuestaoClient({
   materias,
   temas,
   historico,
+  mapa = null,
   revisao = false,
 }: {
   questao: Questao | null;
@@ -49,6 +51,8 @@ export function QuestaoClient({
   materias: { id: string; nome: string; total: number }[];
   temas: string[];
   historico: Resposta[];
+  /** fluxograma do tema, mostrado quando ela erra */
+  mapa?: Mapa | null;
   /** Veio da aba Revisão: grava como "revisao" e volta para a fila ao salvar. */
   revisao?: boolean;
 }) {
@@ -234,6 +238,20 @@ export function QuestaoClient({
               <p className={`text-sm font-medium ${acertou ? "text-e-ok" : "text-e-bad"}`}>
                 {acertou ? "Você acertou." : `Você marcou ${LETRAS[marcada!]}. A correta é ${LETRAS[questao.c]}.`}
               </p>
+
+              {!acertou && (
+                <div className="grid gap-2 sm:grid-cols-2">
+                  <div className="rounded-xl border border-e-bad/40 p-3">
+                    <p className="text-[11px] uppercase tracking-[0.14em] text-e-bad">Por que a {LETRAS[marcada!]} está errada</p>
+                    <p className="mt-1 text-sm leading-relaxed text-e-ink" dangerouslySetInnerHTML={{ __html: htmlSeguro(questao.why[marcada!]) }} />
+                  </div>
+                  <div className="rounded-xl border border-e-ok/40 p-3">
+                    <p className="text-[11px] uppercase tracking-[0.14em] text-e-ok">Por que a {LETRAS[questao.c]} está certa</p>
+                    <p className="mt-1 text-sm leading-relaxed text-e-ink" dangerouslySetInnerHTML={{ __html: htmlSeguro(questao.why[questao.c]) }} />
+                  </div>
+                </div>
+              )}
+              {mapa && <MapaDoTema mapa={mapa} aberto={!acertou} />}
 
               <div className="rounded-xl border border-e-line bg-e-card-2 p-3">
                 <p className="text-[11px] uppercase tracking-[0.14em] text-e-dim">Fonte</p>

@@ -1,0 +1,295 @@
+{
+ "materia_id": "A6",
+ "titulo": "Cultura do Maranhão",
+ "subtitulo": "Patrimônio material, imaterial e natural, com o que cada título significa.",
+ "fontes": [
+  "IBGE, Censo 2022 (SIDRA) e API de localidades",
+  "UNESCO: Patrimônio Mundial e Lista Representativa do Patrimônio Imaterial",
+  "Planalto: Decreto 86.060/1981 e Decreto 88.136/1983",
+  "Historiografia acadêmica (SciELO, ANPUH, Revista Marítima, ASBRAP)",
+  "Questões FCC de 2006 e 2016 sobre o Maranhão"
+ ],
+ "banca": {
+  "titulo": "O que a FCC já cobrou sobre o Maranhão",
+  "fonte": "Questões FCC de 2006 e 2016 sobre o Maranhão no banco Estude Grátis (órgão não identificado; parte é de prova de Geografia). Pista de estilo, não estatística.",
+  "stats": [
+   {
+    "valor": "2006 e 2016",
+    "rotulo": "anos com questões FCC sobre o Maranhão no banco consultado"
+   },
+   {
+    "valor": "mapas",
+    "rotulo": "vegetação, clima e rede urbana aparecem com mapa ou figura"
+   },
+   {
+    "valor": "causa × efeito",
+    "rotulo": "a FCC pergunta o porquê (soja, Alcântara), não só a data"
+   }
+  ],
+  "ranking": [
+   [
+    "Vegetação e rios (mapa)",
+    3
+   ],
+   [
+    "Grandes projetos e território (Alcântara, soja)",
+    3
+   ],
+   [
+    "São Luís: rede urbana e organização",
+    2
+   ],
+   [
+    "Clima de São Luís",
+    1
+   ]
+  ],
+  "notas": [
+   {
+    "titulo": "Como estudar",
+    "html": "Decore os <b>pares</b> (personagem e revolta, bem e reconhecimento, rio e baía) e treine a pergunta de <b>causa e consequência</b>. A FCC gosta de afirmações I, II e III e de alternativas que trocam um único nome ou ano."
+   },
+   {
+    "titulo": "Matéria condicional",
+    "html": "Geografia e História do Maranhão aparece no edital de outros cargos do Concurso Unificado (17/11/2026). Confirme no edital do seu cargo."
+   }
+  ]
+ },
+ "aulas": [
+  {
+   "id": "A6-a01",
+   "topico_id": "A6-01",
+   "numero": 1,
+   "titulo": "Literatura e artes",
+   "status": "a_montar"
+  },
+  {
+   "id": "A6-a02",
+   "topico_id": "A6-02",
+   "numero": 2,
+   "titulo": "Patrimônio material",
+   "status": "a_montar"
+  },
+  {
+   "id": "A6-a03",
+   "topico_id": "A6-03",
+   "numero": 3,
+   "titulo": "Patrimônio: São Luís, Bumba meu boi, Tambor de Crioula e Mina",
+   "status": "pronta",
+   "fonte": "UNESCO (Bumba meu boi, Lista Representativa, 2019); dossiê de registro do Tambor de Crioula (IPHAN, 2007); estudos sobre o Centro Histórico de São Luís",
+   "resumo": [
+    "O Centro Histórico de São Luís foi tombado pelo IPHAN em 1974 e inscrito pela UNESCO como Patrimônio Mundial em 1997: traçado português e casarões com azulejos dos séculos XVIII e XIX.",
+    "O Tambor de Crioula foi registrado pelo IPHAN como patrimônio imaterial em 2007: dança de matriz africana, com a punga (umbigada) e devoção a São Benedito.",
+    "O Complexo Cultural do Bumba meu boi do Maranhão foi registrado pelo IPHAN em 2011 e entrou na Lista Representativa da UNESCO em 2019.",
+    "O boi tem cinco sotaques principais: matraca, zabumba, orquestra, baixada e costa de mão. O ciclo inclui ensaios, batizado, apresentações e a morte do boi.",
+    "O Tambor de Mina é a religião de matriz africana típica do Maranhão. A Casa das Minas é de tradição jeje (culto aos voduns) e a Casa de Nagô, de tradição nagô."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: patrimônio material e imaterial",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Material</b> é o que se toca: prédios, conjuntos urbanos (protegidos por <b>tombamento</b>). <b>Imaterial</b> é o que se faz: festas, danças, saberes (protegidos por <b>registro</b>, nos livros do IPHAN). O Maranhão tem os dois tipos com reconhecimento nacional e internacional."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Bem",
+        "Tipo",
+        "Reconhecimento"
+       ],
+       "linhas": [
+        [
+         "Centro Histórico de São Luís",
+         "Material",
+         "Tombamento federal (1974) e Patrimônio Mundial da UNESCO (1997)"
+        ],
+        [
+         "Tambor de Crioula",
+         "Imaterial",
+         "Registro no IPHAN (2007)"
+        ],
+        [
+         "Bumba meu boi do Maranhão",
+         "Imaterial",
+         "Registro no IPHAN (2011) e Lista Representativa da UNESCO (2019)"
+        ],
+        [
+         "Lençóis Maranhenses",
+         "Natural",
+         "Patrimônio Mundial natural da UNESCO (2024)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: o boi e o tambor",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Matraca",
+         "titulo": "da Ilha",
+         "texto": "Matracas e pandeirões, ritmo forte; típico de São Luís."
+        },
+        {
+         "tag": "Zabumba",
+         "titulo": "Guimarães",
+         "texto": "Zabumbas grandes; um dos sotaques mais antigos."
+        },
+        {
+         "tag": "Orquestra",
+         "titulo": "instrumentos de sopro",
+         "texto": "Metais e cordas, mais melódico."
+        },
+        {
+         "tag": "Baixada",
+         "titulo": "Pindaré",
+         "texto": "Matracas menores e personagens como o cazumbá."
+        },
+        {
+         "tag": "Costa de mão",
+         "titulo": "Cururupu",
+         "texto": "Pandeiros tocados com as costas da mão."
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "ensaios",
+         "sub": "meses antes"
+        },
+        {
+         "titulo": "batizado",
+         "sub": "junho"
+        },
+        {
+         "titulo": "brincadas",
+         "sub": "apresentações"
+        },
+        {
+         "titulo": "morte do boi",
+         "sub": "encerramento"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Os grupos ensaiam e criam as toadas e o couro bordado do boi do ano."
+        },
+        {
+         "no": 1,
+         "texto": "O boi é <b>batizado</b> no fim de junho, no auge do ciclo junino."
+        },
+        {
+         "no": 2,
+         "texto": "As <b>brincadas</b> levam o boi aos arraiais."
+        },
+        {
+         "no": 3,
+         "texto": "A <b>morte do boi</b> fecha o ciclo, que pode durar de quatro a oito meses (UNESCO)."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Tambor de Crioula em três palavras",
+       "html": "<b>Punga</b> (a umbigada que convida a próxima dançarina), <b>coreiras</b> (as mulheres que dançam), <b>São Benedito</b> (o santo homenageado). Os homens tocam a parelha de tambores."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Trocas comuns",
+       "html": "Tambor de <b>Crioula</b> é dança/festa. Tambor de <b>Mina</b> é religião.<br>São Luís na UNESCO: <b>1997</b> (cultural). Lençóis: <b>2024</b> (natural). Bumba meu boi: <b>2019</b> (imaterial)."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "O Tambor de Mina é uma dança profana sem vínculo religioso.",
+         "v": false,
+         "porque": "É religião de matriz africana; a Casa das Minas cultua voduns."
+        },
+        {
+         "texto": "O Bumba meu boi do Maranhão está na Lista Representativa do Patrimônio Imaterial da UNESCO.",
+         "v": true,
+         "porque": "Inscrito em 2019."
+        },
+        {
+         "texto": "O Centro Histórico de São Luís foi reconhecido pela UNESCO como Patrimônio Mundial em 1997.",
+         "v": true,
+         "porque": "É o principal bem material do estado."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "ma-cult-01",
+    "ma-cult-02",
+    "ma-cult-03"
+   ]
+  },
+  {
+   "id": "A6-a04",
+   "topico_id": "A6-04",
+   "numero": 4,
+   "titulo": "Religiosidade afro-brasileira",
+   "status": "a_montar"
+  },
+  {
+   "id": "A6-a05",
+   "topico_id": "A6-05",
+   "numero": 5,
+   "titulo": "Música e festas",
+   "status": "a_montar"
+  },
+  {
+   "id": "A6-a06",
+   "topico_id": "A6-06",
+   "numero": 6,
+   "titulo": "Culinária e artesanato",
+   "status": "a_montar"
+  },
+  {
+   "id": "A6-a07",
+   "topico_id": "A6-07",
+   "numero": 7,
+   "titulo": "Povos e comunidades tradicionais",
+   "status": "a_montar"
+  }
+ ],
+ "glossario": [
+  [
+   "Tombamento",
+   "Proteção de bem material (prédio, conjunto urbano)."
+  ],
+  [
+   "Registro",
+   "Proteção de bem imaterial nos livros do IPHAN."
+  ],
+  [
+   "Sotaque",
+   "Estilo de Bumba meu boi, com instrumentos e ritmos próprios."
+  ],
+  [
+   "Punga",
+   "Umbigada do Tambor de Crioula."
+  ]
+ ]
+}
