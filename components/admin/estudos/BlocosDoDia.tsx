@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { MATERIA_POR_ID, TIPO_LABELS, type CronogramaItem } from "@/lib/estudos-utils";
+import type { LinkBloco } from "@/lib/estudos-links";
 
-export function BlocosDoDia({ itens, vazio }: { itens: CronogramaItem[]; vazio: string }) {
+export function BlocosDoDia({ itens, vazio, links = {} }: { itens: CronogramaItem[]; vazio: string; links?: Record<string, LinkBloco[]> }) {
   const router = useRouter();
   const [estado, setEstado] = useState<Record<string, boolean>>({});
   const [erro, setErro] = useState<string | null>(null);
@@ -45,6 +47,19 @@ export function BlocosDoDia({ itens, vazio }: { itens: CronogramaItem[]; vazio: 
                   </span>
                 </span>
               </label>
+              {!feito && (links[item.id]?.length ?? 0) > 0 && (
+                <div className="-mt-1 flex flex-wrap gap-1.5 pb-2.5 pl-7">
+                  {links[item.id].map((l) => (
+                    <Link
+                      key={l.href + l.rotulo}
+                      href={l.href}
+                      className="rounded-full border border-e-line px-2.5 py-0.5 text-[11px] text-e-dim transition-colors duration-150 hover:border-e-accent hover:text-e-ink"
+                    >
+                      {l.rotulo} →
+                    </Link>
+                  ))}
+                </div>
+              )}
             </li>
           );
         })}

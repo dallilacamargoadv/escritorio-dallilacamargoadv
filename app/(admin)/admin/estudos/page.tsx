@@ -32,6 +32,7 @@ import {
   tempoMedio,
 } from "@/lib/estudos-desempenho";
 import { BlocosDoDia } from "@/components/admin/estudos/BlocosDoDia";
+import { linksDosBlocos } from "@/lib/estudos-links";
 import { Sparkle } from "@/components/estudos/Sparkle";
 import { Barra, BOTAO_PRIMARIO, Card, CardTitulo, Kpi, tomPorPct } from "@/components/estudos/ui";
 
@@ -178,7 +179,7 @@ export default async function EstudosInicioPage() {
           <CardTitulo acao={<Link href="/admin/estudos/cronograma" className="text-xs text-e-dim hover:text-e-ink">Ver semana</Link>}>
             Hoje no cronograma
           </CardTitulo>
-          <BlocosDoDia itens={itensHoje} vazio="Nada planejado para hoje. Monte ou refaça o plano na aba Cronograma." />
+          <BlocosDoDia itens={itensHoje} links={linksDosBlocos(itensHoje)} vazio="Nada planejado para hoje. Monte ou refaça o plano na aba Cronograma." />
         </Card>
       </div>
 
