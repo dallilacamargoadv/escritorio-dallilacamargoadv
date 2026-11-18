@@ -799,35 +799,35 @@
    "id": "A3-a03",
    "topico_id": "A3-03",
    "numero": 3,
-   "titulo": "Editores de texto (Word e Writer)",
+   "titulo": "Editores de texto (Word e Google Docs)",
    "status": "a_montar"
   },
   {
    "id": "A3-a04",
    "topico_id": "A3-04",
    "numero": 4,
-   "titulo": "Planilhas (Excel e Calc)",
+   "titulo": "Planilhas (Excel e Google Planilhas)",
    "status": "a_montar"
   },
   {
    "id": "A3-a05",
    "topico_id": "A3-05",
    "numero": 5,
-   "titulo": "Apresentações (PowerPoint e Impress)",
+   "titulo": "Apresentações (PowerPoint e Google Apresentações)",
    "status": "a_montar"
   },
   {
    "id": "A3-a06",
    "topico_id": "A3-06",
    "numero": 6,
-   "titulo": "Internet, navegadores e redes",
+   "titulo": "Internet e navegadores",
    "status": "a_montar"
   },
   {
    "id": "A3-a07",
    "topico_id": "A3-07",
    "numero": 7,
-   "titulo": "Correio eletrônico e colaboração",
+   "titulo": "Correio eletrônico e reuniões virtuais",
    "status": "a_montar"
   },
   {
@@ -848,14 +848,14 @@
    "id": "A3-a10",
    "topico_id": "A3-10",
    "numero": 10,
-   "titulo": "Inteligência artificial e tecnologias emergentes",
+   "titulo": "Inteligência artificial generativa e uso responsável",
    "status": "a_montar"
   },
   {
    "id": "A3-a11",
    "topico_id": "A3-11",
    "numero": 11,
-   "titulo": "Governo digital e processo eletrônico",
+   "titulo": "Governo digital, LGPD e processo eletrônico",
    "status": "a_montar"
   }
  ],

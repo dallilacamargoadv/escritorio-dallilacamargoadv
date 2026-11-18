@@ -1,5 +1,5 @@
 {
- "fonte": "Edital verticalizado previsto (13/11/2026), montado antes do edital oficial. Conferir quando o edital sair.",
+ "fonte": "Edital verticalizado previsto (13/11/2026). Conhecimentos Gerais ajustados em 18/11/2026 ao edital do Concurso Unificado do Maranhão publicado para outros cargos; conferir tudo quando sair o edital do Analista Jurídico.",
  "prova": {
   "objetiva": "50 questões (20 de Conhecimentos Gerais e 30 de Conhecimentos Específicos)",
   "discursiva": "Estudo de caso ou redação",
@@ -27,7 +27,9 @@
       "texto verbal e não verbal (charges, tirinhas, gráficos)",
       "ironia e humor",
       "função do título",
-      "paráfrase e resumo"
+      "paráfrase e resumo",
+      "relação do texto com seu contexto histórico",
+      "compreensão de textos de gêneros variados"
      ]
     },
     {
@@ -68,7 +70,10 @@
       "nominalização",
       "transformação de oração em termo e o inverso",
       "reescrita com correção gramatical",
-      "alteração de sentido por pontuação"
+      "alteração de sentido por pontuação",
+      "confronto e reconhecimento de frases corretas e incorretas",
+      "organização e reorganização de orações e períodos",
+      "equivalência e transformação de estruturas"
      ]
     },
     {
@@ -94,7 +99,10 @@
       "flexão de nomes e verbos",
       "derivação e composição",
       "pronomes (pessoais, relativos, demonstrativos, indefinidos, de tratamento)",
-      "valores de que, se e como"
+      "valores de que, se e como",
+      "elementos estruturais das palavras",
+      "flexão nominal e flexão verbal",
+      "morfossintaxe"
      ]
     },
     {
@@ -118,7 +126,8 @@
       "coordenação (aditivas, adversativas, alternativas, conclusivas, explicativas)",
       "subordinação substantiva, adjetiva (restritiva e explicativa) e adverbial",
       "orações reduzidas",
-      "orações sem conectivo"
+      "orações sem conectivo",
+      "conectivos e o valor de cada um"
      ]
     },
     {
@@ -180,12 +189,13 @@
     {
      "id": "A1-13",
      "n": 13,
-     "titulo": "Colocação pronominal",
+     "titulo": "Pronomes e colocação pronominal",
      "sub": [
       "ênclise, próclise e mesóclise",
       "atração por palavras negativas, advérbios, pronomes e conjunções",
       "locuções verbais",
-      "pronome com formas verbais no futuro"
+      "pronome com formas verbais no futuro",
+      "emprego dos pronomes"
      ]
     },
     {
@@ -198,7 +208,10 @@
       "formas nominais",
       "verbos irregulares, defectivos e abundantes",
       "vozes verbal (ativa, passiva, reflexiva)",
-      "emprego do subjuntivo e do futuro"
+      "emprego do subjuntivo e do futuro",
+      "vozes do verbo e transposição",
+      "correlação de tempos e modos verbais",
+      "flexão verbal"
      ]
     },
     {
@@ -210,7 +223,8 @@
       "polissemia e ambiguidade",
       "denotação e conotação",
       "metáfora, metonímia, comparação, antítese, paradoxo, hipérbole, ironia, eufemismo, prosopopeia",
-      "vícios de linguagem (pleonasmo, cacofonia, ambiguidade)"
+      "vícios de linguagem (pleonasmo, cacofonia, ambiguidade)",
+      "figuras de linguagem"
      ]
     },
     {
@@ -257,7 +271,8 @@
       "validade e verdade",
       "silogismos",
       "diagramas lógicos",
-      "falácias"
+      "falácias",
+      "processo lógico: de um conjunto de hipóteses a conclusões válidas"
      ]
     },
     {
@@ -269,7 +284,11 @@
       "associação lógica em quadros",
       "sequências numéricas, alfabéticas e de figuras",
       "calendários e datas",
-      "ordenação e posições"
+      "ordenação e posições",
+      "estrutura lógica de relações arbitrárias entre pessoas, lugares, objetos ou eventos fictícios",
+      "raciocínio verbal, matemático e sequencial",
+      "orientação espacial e temporal",
+      "formação de conceitos e discriminação de elementos"
      ]
     },
     {
@@ -293,10 +312,11 @@
       "razão e proporção, grandezas",
       "regra de três simples e composta",
       "porcentagem, aumentos e descontos",
-      "juros simples e compostos",
-      "equações de 1º e 2º graus e sistemas",
-      "unidades de medida",
-      "geometria básica (perímetro, área, volume)"
+      "números inteiros e racionais; expressões numéricas",
+      "múltiplos e divisores de números naturais",
+      "frações e operações com frações",
+      "divisão em partes proporcionais",
+      "porcentagem, acréscimos e descontos"
      ]
     },
     {
@@ -325,11 +345,14 @@
     {
      "id": "A2-08",
      "n": 8,
-     "titulo": "Estatística básica",
+     "titulo": "Estatística básica (tendência central e dispersão)",
      "sub": [
       "média, mediana e moda",
       "desvio-padrão",
-      "leitura de tabelas e gráficos"
+      "leitura de tabelas e gráficos",
+      "média aritmética simples e ponderada",
+      "desvio médio, amplitude e variância",
+      "histogramas, gráficos de setores e infográficos"
      ]
     }
    ]
@@ -348,7 +371,9 @@
       "componentes e periféricos",
       "memórias e armazenamento (HD, SSD, nuvem)",
       "unidades de medida",
-      "tipos de software e licenças"
+      "tipos de software e licenças",
+      "dispositivos de entrada, saída e armazenamento",
+      "softwares utilitários"
      ]
     },
     {
@@ -360,43 +385,47 @@
       "atalhos de teclado",
       "configurações e painel de controle",
       "gerenciador de tarefas",
-      "extensões e compactação"
+      "extensões e compactação",
+      "gerenciamento de arquivos e pastas"
      ]
     },
     {
      "id": "A3-03",
      "n": 3,
-     "titulo": "Editores de texto (Word e Writer)",
+     "titulo": "Editores de texto (Word e Google Docs)",
      "sub": [
       "formatação e estilos",
       "índices e sumários",
       "cabeçalho e rodapé",
       "mala direta",
       "revisão e controle de alterações",
-      "atalhos"
+      "atalhos",
+      "Google Docs"
      ]
     },
     {
      "id": "A3-04",
      "n": 4,
-     "titulo": "Planilhas (Excel e Calc)",
+     "titulo": "Planilhas (Excel e Google Planilhas)",
      "sub": [
       "fórmulas e referências relativas e absolutas",
       "funções SOMA, MÉDIA, SE, PROCV, CONT.SE, SOMASE",
       "gráficos",
       "tabela dinâmica",
       "filtros e classificação",
-      "formatação condicional"
+      "formatação condicional",
+      "Google Planilhas"
      ]
     },
     {
      "id": "A3-05",
      "n": 5,
-     "titulo": "Apresentações (PowerPoint e Impress)",
+     "titulo": "Apresentações (PowerPoint e Google Apresentações)",
      "sub": [
       "slides, layouts, transições",
       "modos de exibição",
-      "atalhos"
+      "atalhos",
+      "Google Apresentações"
      ]
     },
     {
@@ -408,19 +437,21 @@
       "Chrome, Edge e Firefox",
       "favoritos, histórico, cookies, modo anônimo",
       "pesquisa avançada",
-      "intranet, extranet e VPN"
+      "intranet, extranet e VPN",
+      "pesquisa e busca avançada na internet"
      ]
     },
     {
      "id": "A3-07",
      "n": 7,
-     "titulo": "Correio eletrônico e colaboração",
+     "titulo": "Correio eletrônico e reuniões virtuais",
      "sub": [
       "Outlook e Gmail",
       "Cc e Cco",
       "anexos",
       "protocolos SMTP, IMAP e POP3",
-      "videoconferência e Teams"
+      "videoconferência e Teams",
+      "reuniões virtuais (Teams, Zoom e Google Meet)"
      ]
     },
     {
@@ -430,7 +461,8 @@
      "sub": [
       "IaaS, PaaS e SaaS",
       "Google Drive e OneDrive",
-      "sincronização e trabalho colaborativo"
+      "sincronização e trabalho colaborativo",
+      "armazenamento e compartilhamento em rede e na nuvem"
      ]
     },
     {
@@ -451,31 +483,37 @@
     {
      "id": "A3-10",
      "n": 10,
-     "titulo": "Inteligência artificial e tecnologias emergentes",
+     "titulo": "Inteligência artificial generativa e uso responsável",
      "sub": [
       "IA generativa e aprendizado de máquina",
       "big data",
       "internet das coisas",
       "blockchain",
-      "riscos, ética e regulação"
+      "riscos, ética e regulação",
+      "IA generativa em ferramentas de produtividade (Copilot e Gemini)",
+      "pesquisa, elaboração de documentos e automação de tarefas administrativas",
+      "uso responsável da IA e proteção de informações"
      ]
     },
     {
      "id": "A3-11",
      "n": 11,
-     "titulo": "Governo digital e processo eletrônico",
+     "titulo": "Governo digital, LGPD e processo eletrônico",
      "sub": [
       "serviços públicos digitais",
       "processo eletrônico (PJe, SEI)",
       "assinatura eletrônica",
-      "noções de LGPD"
+      "Lei Geral de Proteção de Dados (LGPD)",
+      "processos e documentos eletrônicos",
+      "assinaturas eletrônicas",
+      "interoperabilidade entre sistemas"
      ]
     }
    ]
   },
   {
    "id": "A4",
-   "nome": "História do Maranhão",
+   "nome": "Geografia e História do Maranhão: história",
    "fase": 5,
    "condicional": true,
    "topicos": [
@@ -508,7 +546,9 @@
       "capitanias hereditárias",
       "missões jesuíticas e Padre Antônio Vieira",
       "escravização indígena",
-      "tabaco e açúcar"
+      "tabaco e açúcar",
+      "economia e sociedade colonial",
+      "escravidão indígena e africana"
      ]
     },
     {
@@ -551,7 +591,8 @@
      "sub": [
       "Maranhão como grande exportador",
       "elite agrária",
-      "crescimento de São Luís e casarões com azulejos"
+      "crescimento de São Luís e casarões com azulejos",
+      "transformações econômicas"
      ]
     },
     {
@@ -562,7 +603,8 @@
       "resistência portuguesa e junta de governo",
       "Lord Cochrane",
       "adesão em 28 de julho de 1823",
-      "guerra no interior (Caxias, Itapecuru) e Piauí"
+      "guerra no interior (Caxias, Itapecuru) e Piauí",
+      "formação da província"
      ]
     },
     {
@@ -574,7 +616,8 @@
       "Raimundo Gomes, Manuel Balaio, Cosme Bento das Chagas",
       "quilombo e escravos rebelados",
       "repressão de Luís Alves de Lima e Silva (futuro Duque de Caxias)",
-      "Lei dos Prefeitos"
+      "Lei dos Prefeitos",
+      "contexto, causas, principais personagens, desenvolvimento e consequências"
      ]
     },
     {
@@ -608,7 +651,9 @@
       "período Sarney e o “Maranhão Novo”",
       "Projeto Carajás, Alumar, Porto do Itaqui",
       "Centro de Lançamento de Alcântara",
-      "redemocratização e Constituição estadual de 1989"
+      "redemocratização e Constituição estadual de 1989",
+      "industrialização, urbanização, grandes projetos, mineração e infraestrutura",
+      "redemocratização"
      ]
     },
     {
@@ -626,7 +671,7 @@
   },
   {
    "id": "A5",
-   "nome": "Geografia do Maranhão",
+   "nome": "Geografia e História do Maranhão: geografia",
    "fase": 5,
    "condicional": true,
    "topicos": [
@@ -638,7 +683,9 @@
       "Região Nordeste e limites (Pará, Tocantins, Piauí, Atlântico)",
       "217 municípios",
       "regiões geográficas",
-      "São Luís, Ilha do Maranhão (Upaon-Açu)"
+      "São Luís, Ilha do Maranhão (Upaon-Açu)",
+      "formação territorial e ocupação do espaço",
+      "regionalização"
      ]
     },
     {
@@ -650,7 +697,8 @@
       "planaltos, chapadas e Chapada das Mesas",
       "Baixada Maranhense e Golfão Maranhense",
       "Reentrâncias Maranhenses",
-      "Lençóis Maranhenses e dunas"
+      "Lençóis Maranhenses e dunas",
+      "solos"
      ]
     },
     {
@@ -662,7 +710,8 @@
       "Mata dos Cocais e babaçu",
       "manguezais",
       "campos inundáveis da Baixada",
-      "cerrado do sul"
+      "cerrado do sul",
+      "biomas e domínios de transição"
      ]
     },
     {
@@ -672,7 +721,8 @@
      "sub": [
       "bacias do Itapecuru, Mearim, Pindaré, Grajaú, Munim e Parnaíba",
       "Tocantins e Gurupi nos limites",
-      "baías de São Marcos e São José"
+      "baías de São Marcos e São José",
+      "litoral maranhense, ecossistemas costeiros e recursos naturais"
      ]
     },
     {
@@ -695,7 +745,8 @@
       "distribuição e urbanização",
       "IDH e desigualdades",
       "quilombolas e indígenas",
-      "migrações"
+      "migrações",
+      "dinâmica demográfica, migrações e rede urbana"
      ]
     },
     {
@@ -710,7 +761,9 @@
       "complexo portuário (Itaqui e Ponta da Madeira)",
       "Ferrovia Carajás e Transnordestina",
       "energia e gás natural",
-      "turismo e pesca"
+      "turismo e pesca",
+      "comércio, serviços e indústria",
+      "portos e ferrovias"
      ]
     },
     {
@@ -722,14 +775,15 @@
       "portos e aeroportos",
       "desmatamento e queimadas",
       "conflitos pela terra",
-      "mudanças climáticas e Amazônia Legal"
+      "mudanças climáticas e Amazônia Legal",
+      "conservação da biodiversidade e desenvolvimento sustentável"
      ]
     }
    ]
   },
   {
    "id": "A6",
-   "nome": "Cultura do Maranhão",
+   "nome": "Geografia e História do Maranhão: cultura",
    "fase": 5,
    "condicional": true,
    "topicos": [
@@ -740,7 +794,8 @@
      "sub": [
       "Gonçalves Dias, Aluísio Azevedo, Graça Aranha",
       "Maria Firmina dos Reis, Josué Montello, Ferreira Gullar",
-      "azulejaria e arquitetura colonial"
+      "azulejaria e arquitetura colonial",
+      "literatura e personalidades maranhenses"
      ]
     },
     {
@@ -782,7 +837,8 @@
       "reggae maranhense e “Jamaica brasileira”",
       "Carnaval e blocos tradicionais",
       "São João e festas juninas",
-      "Lençóis e Alcântara nas festas"
+      "Lençóis e Alcântara nas festas",
+      "reggae e demais manifestações populares"
      ]
     },
     {
@@ -803,14 +859,15 @@
       "quilombolas",
       "indígenas",
       "quebradeiras de coco babaçu",
-      "ribeirinhos e pescadores"
+      "ribeirinhos e pescadores",
+      "povos indígenas, comunidades quilombolas e populações tradicionais"
      ]
     }
    ]
   },
   {
    "id": "A7",
-   "nome": "Atualidades",
+   "nome": "Maranhão na atualidade",
    "fase": 5,
    "condicional": true,
    "topicos": [
@@ -894,7 +951,8 @@
       "programas sociais e de desenvolvimento humano",
       "investimentos em portos, energia e agronegócio",
       "Alcântara e questões quilombolas",
-      "turismo e eventos culturais"
+      "turismo e eventos culturais",
+      "aspectos políticos, sociais, econômicos, ambientais e culturais do Maranhão na atualidade"
      ]
     }
    ]
