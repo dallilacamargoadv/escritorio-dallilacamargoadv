@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpen, Library, CalendarDays, CalendarRange, CircleHelp, FlaskConical, Layers, Puzzle, LayoutDashboard, ListChecks, LogOut, PenLine, Repeat, Target, Timer } from "lucide-react";
+import { BookOpen, Library, CalendarDays, CalendarRange, CircleHelp, FlaskConical, Languages, Layers, Puzzle, LayoutDashboard, ListChecks, LogOut, PenLine, Repeat, Sun, Target, Timer } from "lucide-react";
 import { ModoSwitch } from "@/components/admin/ModoSwitch";
 import { InstallAppButton } from "@/components/admin/InstallAppButton";
 import { Sparkle } from "@/components/estudos/Sparkle";
@@ -13,6 +13,8 @@ const ITENS = [
   { href: "/admin/estudos/cronograma", label: "Cronograma", icon: CalendarDays, exact: false },
   { href: "/admin/estudos/cadernos", label: "Cadernos", icon: BookOpen, exact: false },
   { href: "/admin/estudos/flashcards", label: "Flashcards", icon: Layers, exact: false },
+  { href: "/admin/estudos/leitura", label: "Leitura diária", icon: Sun, exact: false },
+  { href: "/admin/estudos/verbos", label: "Treino de verbos", icon: Languages, exact: false },
   { href: "/admin/estudos/questoes", label: "Questões", icon: CircleHelp, exact: false },
   { href: "/admin/estudos/simulados", label: "Simulados", icon: Timer, exact: false },
   { href: "/admin/estudos/desafios", label: "Desafios", icon: Puzzle, exact: false },
