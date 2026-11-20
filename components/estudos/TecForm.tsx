@@ -10,12 +10,37 @@ interface Linha {
   acertos: number | null;
 }
 
-/** Aceita uma linha por assunto: "Assunto ; questões ; acertos", com tab, ponto e vírgula ou barra vertical. Também entende "12 de 17" e "71%". */
+/** Junta o formato copiado do TEC (assunto numa linha, números nas linhas seguintes) num bloco só por assunto. */
+function agrupar(texto: string): string[] {
+  const blocos: { t: string; cabecalho: boolean }[] = [];
+  for (const l of texto.split("\n").map((x) => x.trim()).filter(Boolean)) {
+    if (!/\d/.test(l)) {
+      const ult = blocos[blocos.length - 1];
+      // Cabeçalho seguido de outro cabeçalho (ex.: nome da matéria acima do assunto): fica só o último.
+      if (ult?.cabecalho && !/\d/.test(ult.t)) ult.t = l;
+      else blocos.push({ t: l, cabecalho: true });
+    } else {
+      const ult = blocos[blocos.length - 1];
+      if (ult?.cabecalho) ult.t += ` ; ${l}`;
+      else blocos.push({ t: l, cabecalho: false });
+    }
+  }
+  return blocos.map((b) => b.t);
+}
+
+/** Aceita uma linha por assunto: "Assunto ; questões ; acertos", com tab, ponto e vírgula ou barra vertical. Também entende "12 de 17", "71%" e o bloco do TEC ("Assunto", "39 de 2435", "62% (24) 38% (15)"). */
 export function interpretar(texto: string, comAcertos: boolean): { linhas: Linha[]; erros: string[] } {
   const linhas: Linha[] = [];
   const erros: string[] = [];
-  for (const bruta of texto.split("\n").map((l) => l.trim()).filter(Boolean)) {
+  for (const bruta of agrupar(texto)) {
     const partes = bruta.split(/\t|;|\|/).map((p) => p.trim()).filter(Boolean);
+    // Bloco do TEC: "62% (24) 38% (15)" = 24 acertos e 15 erros. O "39 de 2435" ali é resolvidas de existentes.
+    const tec = bruta.match(/\d+(?:[.,]\d+)?\s*%\s*\((\d+)\)\s*;?\s*\d+(?:[.,]\d+)?\s*%\s*\((\d+)\)/);
+    if (tec && partes[0] && !/\d/.test(partes[0])) {
+      const certas = Number(tec[1]);
+      linhas.push({ assunto: partes[0], questoes: certas + Number(tec[2]), acertos: comAcertos ? certas : null });
+      continue;
+    }
     let assunto = partes[0] ?? "";
     const resto = partes.slice(1).join(" ");
     let questoes: number | null = null;
@@ -98,7 +123,7 @@ export function TecForm({ materias }: { materias: { id: string; nome: string }[]
       </div>
       <p className="mt-2 text-xs text-e-dim">
         {tipo === "resolucao"
-          ? "Uma linha por assunto: assunto ; questões ; acertos. Também aceito “Das pessoas 16 de 18” ou “Crase 20 75%”."
+          ? "Uma linha por assunto: assunto ; questões ; acertos. Também aceito “Das pessoas 16 de 18”, “Crase 20 75%” ou o bloco copiado direto do TEC (assunto, “39 de 2435”, “62% (24) 38% (15)”)."
           : "No TEC, filtre banca FCC e a matéria, e copie a quantidade de questões de cada assunto. Uma linha por assunto: assunto ; quantidade. Isso mostra o que a FCC cobra mais e menos."}
       </p>
       <label className="mt-3 block text-[11px] text-e-dim">
