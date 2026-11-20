@@ -44,6 +44,19 @@ export interface EstudoConfig {
   minutosPorDia: number[];
   /** matérias de Conhecimentos Gerais que só entram se o edital trouxer */
   incluirCondicionais: string[];
+  /** horas diferentes em datas específicas (de/ate inclusive); a última que casar vale */
+  excecoes?: ExcecaoHoras[];
+}
+
+export interface ExcecaoHoras {
+  de: string;
+  ate: string;
+  minutos: number;
+}
+
+export function minutosDoDia(config: EstudoConfig, data: string, dow: number): number {
+  const ex = (config.excecoes ?? []).filter((e) => data >= e.de && data <= e.ate).pop();
+  return ex ? ex.minutos : (config.minutosPorDia[dow] ?? 0);
 }
 
 export const EDITAL = editalJson as {
@@ -104,7 +117,14 @@ export function normalizarConfig(valor: unknown): EstudoConfig {
   const cond = Array.isArray(v.incluirCondicionais)
     ? v.incluirCondicionais.filter((id) => MATERIA_POR_ID.get(id)?.condicional)
     : [];
-  return { dataProva: data, minutosPorDia: minutos, incluirCondicionais: cond };
+  const iso = (x: unknown) => typeof x === "string" && /^\d{4}-\d{2}-\d{2}$/.test(x);
+  const excecoes = Array.isArray(v.excecoes)
+    ? v.excecoes
+        .filter((e) => e && iso(e.de) && iso(e.ate) && e.de <= e.ate)
+        .slice(0, 20)
+        .map((e) => ({ de: e.de, ate: e.ate, minutos: Math.max(0, Math.min(600, Math.round(Number(e.minutos) || 0))) }))
+    : [];
+  return { dataProva: data, minutosPorDia: minutos, incluirCondicionais: cond, ...(excecoes.length ? { excecoes } : {}) };
 }
 
 export function materiaAtiva(m: Materia, config: EstudoConfig): boolean {
@@ -225,7 +245,7 @@ export function gerarCronograma(
   for (let d = 0; d <= total; d++) {
     const data = addDaysToDateString(hoje, d);
     const dow = diaDaSemana(data);
-    let resta = config.minutosPorDia[dow] ?? 0;
+    let resta = minutosDoDia(config, data, dow);
     if (resta < 15) continue;
     let ordem = 0;
     const add = (it: Omit<NovoItem, "data" | "ordem">) => {

@@ -28,6 +28,7 @@ export function CronogramaConfig({ config, temPlano }: { config: EstudoConfig; t
     setSalvando(true);
     setMsg(null);
     const cfg: EstudoConfig = {
+      ...config,
       dataProva: dataProva || null,
       minutosPorDia: minutos.map((h) => Math.round(h * 60)),
       incluirCondicionais: cond,
@@ -71,6 +72,20 @@ export function CronogramaConfig({ config, temPlano }: { config: EstudoConfig; t
               </label>
             ))}
           </div>
+          {(config.excecoes ?? []).length > 0 && (
+            <ul className="mt-2 space-y-0.5 text-xs text-e-dim">
+              {(config.excecoes ?? []).map((e) => (
+                <li key={e.de + e.ate}>
+                  {e.ate >= "2099-01-01"
+                    ? `A partir de ${e.de.split("-").reverse().join("/")}`
+                    : e.de === e.ate
+                      ? `Em ${e.de.split("-").reverse().join("/")}`
+                      : `De ${e.de.split("-").reverse().join("/")} a ${e.ate.split("-").reverse().join("/")}`}
+                  : {Math.round((e.minutos / 60) * 10) / 10} h por dia, no lugar da tabela acima.
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
       <fieldset className="mt-4">
