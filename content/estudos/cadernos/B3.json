@@ -2100,7 +2100,813 @@
    "topico_id": "B3-01",
    "numero": 5,
    "titulo": "Hermenêutica constitucional e neoconstitucionalismo",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Hermenêutica constitucional (2026), itens 1 a 9.1, e Constitucionalismo e neoconstitucionalismo (2026), itens 1 a 11; CF e Constituição do Maranhão, textos vigentes",
+   "resumo": [
+    "Neoconstitucionalismo: Constituição no centro, hierarquia também de valor, foco na concretização dos direitos fundamentais. Marcos (Barroso): histórico (pós-guerra; CF 88), filosófico (pós-positivismo), teórico (força normativa, jurisdição constitucional, nova interpretação).",
+    "Reforma muda o texto por emenda; mutação muda o sentido (interpretação, legislador, costume), sem romper princípios estruturantes. Decisão do STF não vincula o Legislativo: reversão por emenda (limite do art. 60) ou por lei (ônus argumentativo, ADI 5.105).",
+    "Regras: definição, tudo ou nada, validade. Princípios: otimização, ponderação, peso. Sem hierarquia entre eles. Derrotabilidade e postulados (Ávila).",
+    "Métodos: clássico (CF é lei), tópico (do problema), concretizador (da CF, pré-compreensão), científico-espiritual (valores), normativo-estruturante (norma não é texto), comparativo.",
+    "Princípios: unidade, efeito integrador, máxima efetividade, justeza, concordância prática, força normativa, interpretação conforme, proporcionalidade (adequação, necessidade, estrita).",
+    "Limites: sentenças interpretativas e manipuladoras (aditivas, substitutivas), pensamento do possível (ADI 1.289), poderes implícitos, sociedade aberta (Häberle). Preâmbulo: irrelevância jurídica; Deus não é de reprodução obrigatória (ADI 2.076), mas a CE-MA o invoca."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: por que a Constituição se interpreta de um jeito próprio",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Nas aulas 1 a 4 você viu o que é a Constituição, de onde vem o poder de fazê-la e mudá-la, e quanto cada norma produz de efeito. Agora a pergunta é: <b>como se lê</b> esse texto. A Constituição tem muito princípio, muita palavra aberta (\"dignidade\", \"moralidade\", \"razoável\") e está no topo da pirâmide de Kelsen. Por isso, além dos métodos da lei comum, ela tem métodos e princípios próprios."
+      },
+      {
+       "t": "texto",
+       "html": "<b>O pano de fundo: o neoconstitucionalismo.</b> No constitucionalismo moderno (Constituições americana de 1787 e francesa de 1791), o foco era <b>limitar o poder</b>. Depois da 2ª Guerra, a Constituição passou a ser também <b>norma jurídica para concretizar direitos fundamentais</b>, no centro do sistema e com conteúdo de valor. É o neoconstitucionalismo (ou pós-positivismo). No Brasil, ele chega com a CF de 1988."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Constitucionalismo moderno",
+        "Neoconstitucionalismo"
+       ],
+       "linhas": [
+        [
+         "Hierarquia só formal (diferença de grau entre CF e lei)",
+         "Hierarquia formal e também axiológica (de valor)"
+        ],
+        [
+         "Foco na limitação do poder",
+         "Foco na concretização dos direitos fundamentais"
+        ],
+        [
+         "Lei no centro",
+         "Constituição no centro: tudo se lê à luz dela"
+        ]
+       ]
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Marco histórico",
+         "sub": "Barroso",
+         "verso": "O Estado constitucional de direito do pós-guerra: Alemanha 1949, Portugal 1976, Espanha 1978.",
+         "detalhe": "No Brasil: redemocratização e CF de 1988."
+        },
+        {
+         "frente": "Marco filosófico",
+         "sub": "Barroso",
+         "verso": "O pós-positivismo: aproxima Direito e ética e dá normatividade aos princípios.",
+         "detalhe": "Supera o positivismo que igualava Direito à lei."
+        },
+        {
+         "frente": "Marco teórico",
+         "sub": "Barroso",
+         "verso": "Força normativa da Constituição, expansão da jurisdição constitucional e nova interpretação constitucional.",
+         "detalhe": "A força normativa é de Konrad Hesse."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Mesma ideia, outros rótulos.</b> A Constituição como centro também afeta o direito privado: a separação entre direito público e privado fica só didática, e os direitos fundamentais valem entre particulares (<b>eficácia horizontal</b>). O constitucionalismo <b>contemporâneo</b> fala em totalitarismo constitucional (Constituição dirigente, cheia de normas programáticas, como a de 1988); o <b>do futuro</b> (Dromi) se pauta em verdade, solidariedade, consenso, continuidade, participação, integração e universalidade. O <b>novo constitucionalismo latino-americano</b> propõe o Estado plurinacional e o pluralismo jurídico (ciclos multicultural, pluricultural e plurinacional)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Soberania popular.</b> O titular do poder é o povo; o exercício é por representantes ou diretamente. Por isso a CF adota a <b>democracia semidireta ou participativa</b>. Representam o povo os deputados (federais, estaduais, distritais) e os vereadores; os <b>senadores representam os Estados e o DF</b>."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 1º, parágrafo único",
+       "texto": "Parágrafo único. ==Todo o poder emana do povo==, que o exerce por meio de representantes eleitos ou diretamente, nos termos desta Constituição."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 14, I a III",
+       "texto": "Art. 14. A soberania popular será exercida pelo sufrágio universal e pelo voto direto e secreto, com valor igual para todos, e, nos termos da lei, mediante:\nI - ==plebiscito==;\nII - ==referendo==;\nIII - ==iniciativa popular==."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: mutação, regras, princípios e postulados",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Reforma x mutação.</b> A Constituição muda de dois jeitos. Pela <b>reforma</b>, o texto muda por procedimento formal fixado pelo constituinte originário: emenda. Pela <b>mutação</b>, o texto fica igual e muda o <b>sentido</b>, por processo informal. Barroso aponta três mecanismos de mutação:"
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Interpretação",
+         "sub": "judicial ou administrativa"
+        },
+        {
+         "titulo": "Legislador",
+         "sub": "lei muda o sentido"
+        },
+        {
+         "titulo": "Costume",
+         "sub": "prática reiterada"
+        },
+        {
+         "titulo": "Limite",
+         "sub": "princípios estruturantes"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Interpretação</b>: o STF muda a jurisprudência, ou a Administração dá novo sentido, como a Resolução 7 do CNJ (nepotismo) leu de outro modo a impessoalidade e a moralidade."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Atuação do legislador</b>: lei que altera o sentido já dado a uma norma. Exemplo: o STF cancelou a Súmula 394 (foro após o mandato) e o Congresso tentou resgatar o entendimento pela Lei 10.628/2002."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Costume constitucional</b> (não pacífico em Constituição escrita e rígida): o chefe do Executivo que se recusa, fundamentadamente, a aplicar lei que entende inconstitucional."
+        },
+        {
+         "no": 3,
+         "texto": "Toda mutação tem <b>limite</b>: não pode afrontar os princípios estruturantes da Constituição. Mutação que rompe a estrutura é inconstitucional."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Reversão legislativa da jurisprudência",
+       "html": "O efeito vinculante das decisões do STF em controle concentrado e das súmulas vinculantes <b>não alcança o Legislativo</b> na função de legislar: o Congresso pode editar lei com conteúdo igual ao da declarada inconstitucional. Na ADI 5.105, o STF distinguiu: se a reversão vem por <b>emenda</b>, o controle se limita ao art. 60; se vem por <b>lei</b>, a lei nasce com presunção relativa de inconstitucionalidade e o legislador tem o ônus de demonstrar a necessidade da correção, com controle mais rigoroso. Não há \"última palavra definitiva\" do STF: há diálogo institucional."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Regras x princípios.</b> Os dois são espécies de <b>norma</b> e não há hierarquia entre eles (unidade da Constituição). Canotilho fala em <b>sistema normativo aberto de regras e princípios</b>. A distinção mais cobrada é a de Dworkin e Alexy, adotada por Barroso:"
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Critério",
+        "Regras",
+        "Princípios"
+       ],
+       "linhas": [
+        [
+         "Natureza",
+         "Mandamentos de definição",
+         "Mandamentos de otimização"
+        ],
+        [
+         "Aplicação",
+         "Tudo ou nada, por subsunção",
+         "Ponderação, na medida do possível"
+        ],
+        [
+         "Dimensão",
+         "Validade",
+         "Peso e importância"
+        ],
+        [
+         "Conflito",
+         "Uma regra é afastada: hierarquia, especialidade, cronologia ou cláusula de exceção (invalidade)",
+         "Colisão: um prevalece no caso concreto, sem que o outro seja invalidado"
+        ],
+        [
+         "Abstração (Canotilho)",
+         "Reduzida; aplicação direta",
+         "Elevada; precisa de concretização"
+        ],
+        [
+         "Função (Canotilho)",
+         "Conteúdo funcional",
+         "Normogenética: fundamento das regras"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Princípio não vence regra só por ser princípio",
+       "html": "A FCC gosta da frase \"os princípios constitucionais são hierarquicamente superiores às regras\". <b>Errado</b>: não há hierarquia entre normas constitucionais originárias. O que muda é o modo de aplicar. E não existe norma originária inconstitucional (ADI 815, aula 3)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Derrotabilidade</b> (Humberto Ávila): uma regra pode ser superada no caso concreto por uma exceção que o legislador não previu. Requisitos <b>materiais</b>: a superação não pode trair o valor da regra nem gerar insegurança expressiva. Requisitos <b>procedimentais</b>: justificativa, fundamentação e comprovação condizentes (alegar não basta). A decisão deve poder se universalizar. O STF ainda <b>não usou a expressão</b> \"derrotabilidade\"; o material cita o TRF1 (matrícula de dependente de servidor transferido sem escola congênere) e um caso de BPC."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Postulados normativos</b> (Ávila): normas de <b>segundo grau</b>, metódicas, que dizem como aplicar regras e princípios. <b>Inespecíficos</b>: ponderação, concordância prática e proibição de excesso. <b>Específicos</b>: igualdade, razoabilidade e proporcionalidade."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: métodos e princípios de interpretação",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Os <b>métodos</b> se complementam; a FCC cobra pelo nome do autor e pela palavra-chave. Vire as cartas."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Jurídico ou clássico",
+         "sub": "Forsthoff",
+         "verso": "A Constituição é uma lei e se interpreta pelos elementos tradicionais: gramatical, lógico, sistemático, histórico, teleológico, genético.",
+         "detalhe": "Palavra-chave: <b>a Constituição é lei</b>."
+        },
+        {
+         "frente": "Tópico-problemático",
+         "sub": "Viehweg",
+         "verso": "Parte do <b>problema</b> para a norma: a interpretação é prática e aberta, e se apoia em lugares comuns (topoi).",
+         "detalhe": "Do problema para a Constituição."
+        },
+        {
+         "frente": "Hermenêutico-concretizador",
+         "sub": "Hesse",
+         "verso": "Parte da <b>Constituição para o problema</b>, a partir das pré-compreensões do intérprete, num círculo hermenêutico.",
+         "detalhe": "Interpretar e aplicar são um processo único."
+        },
+        {
+         "frente": "Científico-espiritual",
+         "sub": "Smend",
+         "verso": "Lê a Constituição pelos <b>valores</b> subjacentes e pela realidade social, como elemento de integração.",
+         "detalhe": "Também chamado valorativo ou sociológico."
+        },
+        {
+         "frente": "Normativo-estruturante",
+         "sub": "Müller",
+         "verso": "<b>Norma não é texto</b>: o texto é só o ponto de partida; a norma resulta da concretização na realidade.",
+         "detalhe": "Fala-se em concretização, não em interpretação."
+        },
+        {
+         "frente": "Comparação constitucional",
+         "sub": "Häberle",
+         "verso": "Compara ordenamentos de vários países, com seus contextos.",
+         "detalhe": ""
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Problema ou Constituição primeiro?",
+       "html": "<b>Tópico</b>: do problema para a norma. <b>Concretizador</b>: da norma (com a pré-compreensão) para o problema. A FCC troca os dois."
+      },
+      {
+       "t": "texto",
+       "html": "Os <b>princípios de interpretação</b> (catálogo de Canotilho e Hesse) são os que mais caem:"
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Princípio",
+        "O que manda"
+       ],
+       "linhas": [
+        [
+         "Unidade da Constituição",
+         "Ler a CF como um todo, sem hierarquia interna, harmonizando tensões"
+        ],
+        [
+         "Efeito integrador",
+         "Preferir a solução que favoreça a integração política e social"
+        ],
+        [
+         "Máxima efetividade (eficiência)",
+         "Dar à norma a maior eficácia possível, sobretudo aos direitos fundamentais"
+        ],
+        [
+         "Justeza ou conformidade funcional",
+         "O intérprete (o STF) não pode subverter a repartição de funções, como a separação de Poderes"
+        ],
+        [
+         "Concordância prática (harmonização)",
+         "Na colisão de bens constitucionais, reduzir proporcionalmente cada um, sem sacrificar nenhum por inteiro"
+        ],
+        [
+         "Força normativa",
+         "Preferir a solução que dê eficácia ótima e permanência à Constituição (Hesse)"
+        ],
+        [
+         "Interpretação conforme",
+         "Diante de norma com vários sentidos, ficar com o compatível com a CF"
+        ],
+        [
+         "Proporcionalidade ou razoabilidade",
+         "Aferir a legitimidade da restrição a direitos: adequação, necessidade e proporcionalidade em sentido estrito"
+        ]
+       ]
+      },
+      {
+       "t": "cena",
+       "titulo": "Os três portões da proporcionalidade",
+       "altura": 230,
+       "elementos": [
+        {
+         "id": "p1",
+         "tipo": "caixa",
+         "x": 150,
+         "y": 40,
+         "w": 130,
+         "h": 60,
+         "texto": "1. Adequação",
+         "sub": "o meio atinge o fim?",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "p2",
+         "tipo": "caixa",
+         "x": 320,
+         "y": 40,
+         "w": 130,
+         "h": 60,
+         "texto": "2. Necessidade",
+         "sub": "há meio menos gravoso?",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "p3",
+         "tipo": "caixa",
+         "x": 490,
+         "y": 40,
+         "w": 150,
+         "h": 60,
+         "texto": "3. Em sentido estrito",
+         "sub": "ganho supera a restrição?",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "med",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 150,
+         "w": 110,
+         "h": 48,
+         "texto": "Medida",
+         "sub": "restringe direito",
+         "cor": "warn",
+         "fixo": true
+        },
+        {
+         "id": "ok",
+         "tipo": "rotulo",
+         "x": 560,
+         "y": 175,
+         "texto": "legítima",
+         "cor": "ok"
+        },
+        {
+         "id": "barra",
+         "tipo": "rotulo",
+         "x": 385,
+         "y": 175,
+         "texto": "parou aqui: inválida",
+         "cor": "bad"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Uma lei restringe um direito fundamental. Para ser válida, ela precisa passar pelos três portões, <b>nesta ordem</b>."
+        },
+        {
+         "texto": "<b>Adequação</b>: o meio escolhido serve para atingir o objetivo? Se não serve, nem adianta continuar.",
+         "anima": {
+          "p1": "pulsa"
+         },
+         "move": {
+          "med": [
+           150,
+           0
+          ]
+         }
+        },
+        {
+         "texto": "<b>Necessidade</b> (exigibilidade): existe outro meio, igualmente eficaz, que restrinja menos? Se existe, a medida para aqui e é inválida.",
+         "mostra": [
+          "barra"
+         ],
+         "anima": {
+          "p2": "treme"
+         },
+         "move": {
+          "med": [
+           320,
+           0
+          ]
+         }
+        },
+        {
+         "texto": "Passou pelos dois? Falta a <b>proporcionalidade em sentido estrito</b>: o que se ganha vale mais do que o que se restringe? Só então a medida é legítima.",
+         "mostra": [
+          "ok"
+         ],
+         "anima": {
+          "p3": "pulsa"
+         },
+         "move": {
+          "med": [
+           500,
+           0
+          ]
+         }
+        }
+       ]
+      },
+      {
+       "t": "cena",
+       "titulo": "Interpretação conforme: salva o texto, corta o sentido",
+       "altura": 230,
+       "elementos": [
+        {
+         "id": "lei",
+         "tipo": "caixa",
+         "x": 250,
+         "y": 20,
+         "w": 180,
+         "h": 50,
+         "texto": "Art. X da Lei",
+         "sub": "texto com 3 sentidos",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "s1",
+         "tipo": "caixa",
+         "x": 60,
+         "y": 140,
+         "w": 150,
+         "h": 50,
+         "texto": "Sentido A",
+         "sub": "contraria a CF",
+         "cor": "bad"
+        },
+        {
+         "id": "s2",
+         "tipo": "caixa",
+         "x": 265,
+         "y": 140,
+         "w": 150,
+         "h": 50,
+         "texto": "Sentido B",
+         "sub": "contraria a CF",
+         "cor": "bad"
+        },
+        {
+         "id": "s3",
+         "tipo": "caixa",
+         "x": 470,
+         "y": 140,
+         "w": 150,
+         "h": 50,
+         "texto": "Sentido C",
+         "sub": "compatível",
+         "cor": "ok"
+        },
+        {
+         "id": "f1",
+         "tipo": "seta",
+         "x": 300,
+         "y": 72,
+         "w": 135,
+         "h": 138,
+         "cor": "dim"
+        },
+        {
+         "id": "f2",
+         "tipo": "seta",
+         "x": 340,
+         "y": 72,
+         "w": 340,
+         "h": 138,
+         "cor": "dim"
+        },
+        {
+         "id": "f3",
+         "tipo": "seta",
+         "x": 380,
+         "y": 72,
+         "w": 545,
+         "h": 138,
+         "cor": "ok"
+        },
+        {
+         "id": "fica",
+         "tipo": "rotulo",
+         "x": 545,
+         "y": 210,
+         "texto": "o texto continua válido",
+         "cor": "ok"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Uma lei tem texto <b>polissêmico</b>: dá para extrair dela vários sentidos.",
+         "mostra": [
+          "s1",
+          "s2",
+          "s3",
+          "f1",
+          "f2",
+          "f3"
+         ]
+        },
+        {
+         "texto": "Dois sentidos ferem a Constituição. O STF não derruba a lei: declara inconstitucionais <b>essas leituras</b>.",
+         "mostra": [
+          "s1",
+          "s2",
+          "s3",
+          "f1",
+          "f2",
+          "f3"
+         ],
+         "anima": {
+          "s1": "treme",
+          "s2": "treme"
+         }
+        },
+        {
+         "texto": "Fica só o sentido compatível. O texto permanece válido, com a interpretação fixada. Hoje é <b>técnica de decisão</b> no controle de constitucionalidade, não só um princípio de leitura.",
+         "mostra": [
+          "s3",
+          "f3",
+          "fica"
+         ],
+         "anima": {
+          "s3": "pulsa"
+         }
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Concordância prática x ponderação",
+       "html": "Na <b>concordância prática</b>, os dois bens sobrevivem, cada um reduzido. Na <b>ponderação</b>, um prevalece no caso concreto. E <b>máxima efetividade</b> (eficácia de uma norma) não se confunde com <b>força normativa</b> (eficácia e permanência da Constituição como um todo)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Teoria dos poderes implícitos</b> (McCulloch v. Maryland, 1819): quem recebe uma competência expressa recebe também os meios necessários para exercê-la, com razoabilidade. O STF aplicou ao <b>TCU</b> (cautelares, MS 26.547-MC), ao <b>TJ</b> (reclamação para preservar sua competência, ADI 2.480) e ao <b>Ministério Público</b> (investigação penal, RE 593.727, reafirmada no Pacote Anticrime)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Sociedade aberta dos intérpretes</b> (Peter Häberle): a interpretação não é só dos juízes; todos que \"vivem\" a Constituição são intérpretes legítimos. Quanto mais pluralista a sociedade, mais abertos os critérios. No Brasil: <b>amicus curiae</b> e <b>audiências públicas</b>."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e limites: até onde o intérprete pode ir",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Interpretar não autoriza o juiz a legislar à vontade. Por isso a doutrina classifica as decisões que mexem no sentido da lei:"
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Decisão",
+        "O que faz"
+       ],
+       "linhas": [
+        [
+         "Sentença interpretativa de aceitação",
+         "Escolhe a interpretação conforme e afasta as contrárias"
+        ],
+        [
+         "Sentença interpretativa de rechaço",
+         "Anula decisões que adotaram interpretação inconstitucional: o texto fica, aquela leitura cai"
+        ],
+        [
+         "Sentença aditiva (manipulativa)",
+         "Declara inconstitucional o que a norma <b>omite</b> e amplia seu alcance, comum quando exclui alguém em afronta à isonomia"
+        ],
+        [
+         "Sentença substitutiva",
+         "Declara inconstitucional o que a norma diz e <b>põe outra regra</b> no lugar, criada pela corte"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Pensamento jurídico do possível.</b> Na ADI 1.289 (embargos infringentes), o art. 115, I exigia mais de 10 anos de carreira para o quinto do TRT, mas ainda não havia membros do MPT com esse tempo. Diante da <b>lacuna constitucional</b>, o STF admitiu alternativa possível, com base no direito dúctil (maleável) das sociedades pluralistas."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Riscos que a doutrina aponta.</b> <b>Pamprincipiologismo</b>: criar princípios para decidir qualquer coisa, gerando \"carnavalização da Constituição\"; a resposta é aplicar regras e princípios pelos postulados de Ávila. <b>Supremocracia</b>: o STF como intérprete final e no centro do arranjo político. <b>Desacordo moral razoável</b> (Barroso): temas em que pessoas esclarecidas pensam o contrário (aborto, células-tronco, eutanásia); o papel do Estado é garantir a autonomia de cada um."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Constitucionalismo popular",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Tushnet",
+           "sub": "e Kramer"
+          },
+          {
+           "titulo": "Povo",
+           "sub": "melhor intérprete"
+          }
+         ],
+         "texto": "Critica a <b>dificuldade contramajoritária</b>: juízes não eleitos derrubando leis do Parlamento. Propõe tirar a Constituição dos tribunais; Tushnet chega a propor o afastamento total das cortes."
+        },
+        {
+         "rotulo": "Constitucionalismo democrático",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Post e Siegel",
+           "sub": "backlash"
+          },
+          {
+           "titulo": "Cortes e povo",
+           "sub": "juntos"
+          }
+         ],
+         "texto": "Aceita a reação social (<b>backlash</b>) como normal e até saudável, sem tirar das cortes o papel de intérprete. O STF falou em backlash na Lei da Ficha Limpa."
+        },
+        {
+         "rotulo": "Minimalismo judicial",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Cass Sunstein",
+           "sub": "cautela"
+          },
+          {
+           "titulo": "Temas polêmicos",
+           "sub": "evitar"
+          }
+         ],
+         "texto": "Recomenda intervenção mínima e que os tribunais não tomem posição em temas de desacordo profundo."
+        },
+        {
+         "rotulo": "Constitucionalismo abusivo",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "David Landau",
+           "sub": "ADPF 622"
+          },
+          {
+           "titulo": "Emendas e leis",
+           "sub": "formalmente válidas"
+          }
+         ],
+         "texto": "Usar mecanismos de mudança constitucional, sem armas e dentro das regras, para <b>corroer a democracia</b>. Barroso citou na ADPF 622 (decreto que destituiu os membros do CONANDA). Não confundir com o constitucionalismo autoritário de Tushnet."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Papéis das cortes (Barroso).</b> <b>Contramajoritário</b>: proteger as regras do jogo democrático e os direitos fundamentais contra a tirania da maioria. <b>Representativo</b>: atender demandas sociais que o Parlamento não atende (nesses casos, Barroso prefere dizer \"contralegislativo\"). <b>Iluminista</b>: avançar contra o senso comum em nome da razão, de forma excepcional. E a ideia da \"<b>última palavra provisória</b>\" (Kramer): supremacia judicial é ter a última palavra; soberania judicial seria ter a única palavra."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Estrutura da CF: preâmbulo e ADCT.</b> Sobre o preâmbulo há três teses: irrelevância jurídica, eficácia plena e relevância jurídica indireta. O STF adota a da <b>irrelevância jurídica</b> (ADI 2.076): o preâmbulo está no campo da política, não é norma de reprodução obrigatória, e a <b>invocação de Deus</b> não precisa constar das Constituições estaduais (o que não enfraquece a laicidade). Já o <b>ADCT</b> é norma constitucional de verdade: só muda por emenda, sujeita aos limites do art. 60 e ao controle de constitucionalidade. Norma transitória já exaurida não pode ser alterada."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, preâmbulo (trecho)",
+       "texto": "promulgamos, ==sob a proteção de Deus==, a seguinte CONSTITUIÇÃO DA REPÚBLICA FEDERATIVA DO BRASIL"
+      },
+      {
+       "t": "texto",
+       "html": "<b>CF x Constituição do Maranhão.</b> A Constituição do Maranhão (1989) também <b>invoca a proteção de Deus</b> no preâmbulo. Pela ADI 2.076, isso é <b>permitido, mas não obrigatório</b>: o Estado poderia ter deixado de fora, e a invocação não tem força normativa em nenhum dos dois textos."
+      },
+      {
+       "t": "lei",
+       "ref": "Constituição do Maranhão, preâmbulo",
+       "texto": "A Assembleia Constituinte do Estado do Maranhão, usando dos poderes que lhe foram conferidos pela Constituição Federal, ==invocando a proteção de Deus==, a defesa do regime democrático e a garantia dos direitos do homem e da sociedade, promulga a seguinte CONSTITUIÇÃO DO ESTADO DO MARANHÃO"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 102, caput",
+       "texto": "Art. 102. Compete ao Supremo Tribunal Federal, precipuamente, ==a guarda da Constituição==, cabendo-lhe:"
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF decidiu",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 2.076, Plenário, Rel. Min. Carlos Velloso, 15/08/2002",
+       "tese": "Preâmbulo da Constituição: não constitui norma central. Invocação da proteção de Deus: não se trata de norma de reprodução obrigatória na Constituição estadual, não tendo força normativa. Fonte: ementa transcrita no material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 5.105, Plenário, Rel. Min. Luiz Fux, 01/10/2015",
+       "tese": "Síntese do material EBEJI: a reversão legislativa da jurisprudência do STF é legítima. Por emenda, o controle fica restrito aos limites do art. 60; por lei, cabe ao legislador o ônus de demonstrar a necessidade da correção do precedente, com controle judicial mais rigoroso."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 1.289 (embargos infringentes)",
+       "tese": "Síntese do material EBEJI: diante de lacuna constitucional no preenchimento do quinto do TRT (ainda sem membros do MPT com mais de 10 anos), o STF adotou o \"pensamento jurídico do possível\"."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "MS 26.547-MC; ADI 2.480; RE 593.727",
+       "tese": "Síntese do material EBEJI: teoria dos poderes implícitos aplicada ao TCU (poder geral de cautela), ao TJ estadual (reclamação para preservar sua competência e a autoridade de suas decisões) e ao Ministério Público (poder de investigação penal)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADPF 622/DF, Plenário, Rel. Min. Roberto Barroso, 27/02/2021 (Info 1007)",
+       "tese": "As maiores ameaças à democracia e ao constitucionalismo são resultado de alterações normativas pontuais, aparentemente válidas do ponto de vista formal, que, se examinadas isoladamente, deixam dúvidas quanto à sua inconstitucionalidade. Porém, em seu conjunto, expressam a adoção de medidas que vão progressivamente corroendo a tutela de direitos e o regime democrático. Fonte: voto transcrito no material EBEJI."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Hermenêutica cai em questão teórica curta: nome do método ou princípio + definição, ou um caso em que você precisa dizer qual princípio o STF usou. Os truques: trocar tópico por concretizador, dizer que princípio é superior a regra, chamar mutação de reforma, achar que o preâmbulo tem força normativa e dizer que a decisão do STF vincula o Legislativo."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O que pode cair assim",
+       "html": "1) Mutação muda o texto? <b>Não</b>, muda o sentido. 2) Princípio é superior a regra? <b>Não</b>. 3) Regra: <b>tudo ou nada</b>; princípio: <b>otimização</b>. 4) Do problema para a norma: <b>tópico</b>. 5) Norma não é texto: <b>normativo-estruturante</b>. 6) Valores e integração: <b>científico-espiritual</b>. 7) Colisão com redução de ambos: <b>concordância prática</b>. 8) STF não pode subverter separação de Poderes: <b>justeza</b>. 9) Proporcionalidade: <b>adequação, necessidade, estrita</b>, nessa ordem. 10) Preâmbulo: <b>irrelevância jurídica</b>; Deus não é de reprodução obrigatória. 11) Efeito vinculante alcança o Legislativo? <b>Não</b>. 12) Senador representa o povo? <b>Não</b>, os Estados e o DF."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A mutação constitucional altera o texto da Constituição por meio de procedimento informal.",
+         "v": false,
+         "porque": "O texto fica igual; muda o sentido."
+        },
+        {
+         "texto": "Segundo Dworkin e Alexy, as regras são mandamentos de otimização, aplicadas por ponderação.",
+         "v": false,
+         "porque": "Regras são mandamentos de definição, tudo ou nada. Princípios é que são de otimização."
+        },
+        {
+         "texto": "Para o método hermenêutico-concretizador, a leitura do texto constitucional parte das pré-compreensões do intérprete.",
+         "v": true,
+         "porque": "Hesse: da Constituição para o problema, em círculo hermenêutico."
+        },
+        {
+         "texto": "O princípio da justeza impede que o órgão intérprete subverta o esquema de repartição de funções fixado na Constituição.",
+         "v": true,
+         "porque": "Conformidade ou exatidão funcional."
+        },
+        {
+         "texto": "O STF adota a tese da plena eficácia do preâmbulo, cuja reprodução é obrigatória nas Constituições estaduais.",
+         "v": false,
+         "porque": "Irrelevância jurídica (ADI 2.076)."
+        },
+        {
+         "texto": "A eficácia vinculante das decisões do STF em ADI impede o Congresso de editar nova lei com conteúdo idêntico ao da declarada inconstitucional.",
+         "v": false,
+         "porque": "Não vincula o Legislativo na função típica (ADI 5.105)."
+        },
+        {
+         "texto": "As disposições do ADCT têm natureza de norma constitucional e só podem ser alteradas por emenda.",
+         "v": true,
+         "porque": "Sujeitas aos limites do art. 60."
+        },
+        {
+         "texto": "O amicus curiae e as audiências públicas concretizam a ideia de sociedade aberta dos intérpretes da Constituição.",
+         "v": true,
+         "porque": "Peter Häberle."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "cf-he-01",
+    "cf-he-02",
+    "cf-he-03",
+    "cf-he-04",
+    "cf-he-05",
+    "cf-he-06",
+    "cf-he-07",
+    "cf-he-08",
+    "cf-he-09",
+    "cf-he-10",
+    "cf-he-11",
+    "cf-he-12"
+   ]
   },
   {
    "id": "B3-a06",
@@ -2223,12 +3029,32 @@
    "Princípio do art. 34, VII, cuja violação pelo Estado autoriza intervenção federal."
   ],
   [
-   "Mutação constitucional",
-   "Mudança do sentido da norma sem mudança do texto. Obra do poder constituinte difuso."
-  ],
-  [
    "Norma programática",
    "Norma de eficácia limitada que traça fins e programas para o Estado."
+  ],
+  [
+   "Mutação constitucional",
+   "Mudança informal do sentido da Constituição, sem alteração do texto."
+  ],
+  [
+   "Mandamento de otimização",
+   "Norma (princípio) que manda realizar algo na maior medida possível, conforme as possibilidades do caso."
+  ],
+  [
+   "Derrotabilidade",
+   "Possibilidade de uma regra ser superada por exceção não prevista no caso concreto."
+  ],
+  [
+   "Interpretação conforme",
+   "Escolha, entre os sentidos possíveis de uma lei, do único compatível com a Constituição."
+  ],
+  [
+   "Concordância prática",
+   "Harmonização de bens constitucionais em colisão, reduzindo cada um sem sacrificar nenhum."
+  ],
+  [
+   "Backlash",
+   "Forte reação social ou política contra uma decisão judicial."
   ]
  ]
 }

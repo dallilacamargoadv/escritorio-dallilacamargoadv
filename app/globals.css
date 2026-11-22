@@ -719,3 +719,18 @@ h4 {
 .fonte-lei mark { background: var(--e-accent-soft); color: var(--e-ink); border-bottom: 1px solid var(--e-accent); padding: 0 2px; border-radius: 2px; }
 @keyframes e-surge { from { opacity: 0; transform: translateY(6px) scale(.98); } to { opacity: 1; transform: none; } }
 @keyframes e-cresce { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* Bloco "cena" dos cadernos: desenho que se anima por passos. */
+@keyframes cn-cai { 0% { transform: translateY(-50px); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateY(var(--cn-q, 160px)); opacity: 0; } }
+@keyframes cn-bate { 0% { transform: translateY(-50px); opacity: 0; } 15% { opacity: 1; } 55% { transform: translateY(var(--cn-q, 60px)); opacity: 1; } 100% { transform: translate(var(--cn-lado, 60px), calc(var(--cn-q, 60px) + 30px)); opacity: 0; } }
+@keyframes cn-pulsa { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+@keyframes cn-treme { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
+.cn-el { transition: opacity .6s ease, transform .9s cubic-bezier(.5,0,.2,1); transform-box: fill-box; transform-origin: center; }
+.cn-cai { animation: cn-cai 1.9s ease-in infinite; }
+.cn-bate { animation: cn-bate 1.9s ease-in infinite; }
+.cn-pulsa { animation: cn-pulsa 1.4s ease-in-out infinite; }
+.cn-treme { animation: cn-treme .5s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .cn-el { transition: none; }
+  .cn-cai, .cn-bate, .cn-pulsa, .cn-treme { animation: none; }
+}

@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import type { Bloco } from "@/lib/estudos-cadernos";
+import { useEffect, useId, useRef, useState, type CSSProperties } from "react";
+import type { Bloco, CenaCor, CenaEl } from "@/lib/estudos-cadernos";
 import { fonteHtml, htmlSeguro } from "@/lib/estudos-html";
 import { Sparkle } from "@/components/estudos/Sparkle";
 
@@ -285,6 +285,108 @@ function Abrir({ b }: { b: Extract<Bloco, { t: "abrir" }> }) {
   );
 }
 
+const CENA_COR: Record<CenaCor, [string, string]> = {
+  ok: ["var(--e-ok-soft)", "var(--e-ok)"],
+  bad: ["var(--e-bad-soft)", "var(--e-bad)"],
+  accent: ["var(--e-accent-soft)", "var(--e-accent)"],
+  warn: ["var(--e-warn-soft)", "var(--e-warn)"],
+  blue: ["var(--e-card-2)", "var(--e-blue)"],
+  dim: ["var(--e-card-2)", "var(--e-line)"],
+};
+
+function CenaPeca({ e, seta }: { e: CenaEl; seta: string }) {
+  const [fundo, traco] = CENA_COR[e.cor ?? "dim"];
+  const w = e.w ?? 120;
+  const h = e.h ?? 48;
+  switch (e.tipo) {
+    case "caixa":
+      return (
+        <g>
+          <rect x={e.x} y={e.y} width={w} height={h} rx="10" fill={fundo} stroke={traco} strokeWidth="1.2" />
+          <text x={e.x + w / 2} y={e.y + (e.sub ? h / 2 - 7 : h / 2)} textAnchor="middle" dominantBaseline="central" fill="var(--e-ink)" fontSize="14">{e.texto}</text>
+          {e.sub && <text x={e.x + w / 2} y={e.y + h / 2 + 11} textAnchor="middle" dominantBaseline="central" fill="var(--e-dim)" fontSize="11">{e.sub}</text>}
+        </g>
+      );
+    case "gota":
+      return (
+        <g>
+          <circle cx={e.x} cy={e.y} r={e.w ?? 17} fill={traco} />
+          <text x={e.x} y={e.y} textAnchor="middle" dominantBaseline="central" fill="var(--e-bg)" fontSize="11" fontWeight="600">{e.texto}</text>
+        </g>
+      );
+    case "cupula": {
+      const arco = e.h ?? 80;
+      const meio = e.x + w / 2;
+      return (
+        <g>
+          <path d={`M${e.x} ${e.y} Q${meio} ${e.y - 2 * arco} ${e.x + w} ${e.y} Q${meio} ${e.y - 18} ${e.x} ${e.y} Z`} fill={fundo} stroke={traco} strokeWidth="1.5" />
+          <path d={`M${meio} ${e.y - 14} V${e.y + 70} q0 14 -14 14 q-10 0 -12 -10`} fill="none" stroke="var(--e-dim)" strokeWidth="2.5" strokeLinecap="round" />
+          {e.texto && <text x={meio} y={e.y - arco * 0.55} textAnchor="middle" dominantBaseline="central" fill="var(--e-ink)" fontSize="14">{e.texto}</text>}
+          {e.sub && <text x={meio} y={e.y - arco * 0.55 + 17} textAnchor="middle" dominantBaseline="central" fill="var(--e-dim)" fontSize="11">{e.sub}</text>}
+        </g>
+      );
+    }
+    case "seta":
+      return <line x1={e.x} y1={e.y} x2={w} y2={h} stroke={traco === "var(--e-line)" ? "var(--e-dim)" : traco} strokeWidth="2" markerEnd={`url(#${seta})`} />;
+    case "rotulo":
+      return (
+        <g>
+          <text x={e.x} y={e.y} textAnchor="middle" fill={e.cor ? traco : "var(--e-ink)"} fontSize="13">{e.texto}</text>
+          {e.sub && <text x={e.x} y={e.y + 16} textAnchor="middle" fill="var(--e-dim)" fontSize="11">{e.sub}</text>}
+        </g>
+      );
+  }
+}
+
+function Cena({ b }: { b: Extract<Bloco, { t: "cena" }> }) {
+  const [p, setP] = useState(0);
+  const seta = `cn-seta-${useId().replace(/:/g, "")}`;
+  const passo = b.passos[p];
+  const vistos = new Set(passo.mostra ?? []);
+  const altura = b.altura ?? 320;
+  return (
+    <div className="rounded-2xl border border-e-line bg-e-card p-4">
+      {b.titulo && <p className="mb-2 text-[11px] uppercase tracking-[0.12em] text-e-dim">Cena · {b.titulo}</p>}
+      <svg viewBox={`0 0 680 ${altura}`} className="w-full overflow-visible" role="img" aria-label={b.titulo ?? "Cena animada"}>
+        <defs>
+          <marker id={seta} viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </marker>
+        </defs>
+        {b.elementos.map((e) => {
+          const visivel = e.fixo || vistos.has(e.id);
+          const [dx, dy] = passo.move?.[e.id] ?? [0, 0];
+          const anim = visivel ? passo.anima?.[e.id] : undefined;
+          const q = passo.q?.[e.id];
+          return (
+            <g key={e.id} className="cn-el" style={{ opacity: visivel ? 1 : 0, transform: `translate(${dx}px, ${dy}px)` }} aria-hidden={!visivel}>
+              <g className={anim ? `cn-${anim}` : undefined} style={q !== undefined ? ({ "--cn-q": `${q}px` } as CSSProperties) : undefined}>
+                <CenaPeca e={e} seta={seta} />
+              </g>
+            </g>
+          );
+        })}
+      </svg>
+      <p className="mt-2 min-h-14 text-sm text-e-ink" aria-live="polite">
+        <b className="font-medium">Passo {p + 1} de {b.passos.length}.</b> <span dangerouslySetInnerHTML={H(passo.texto)} />
+      </p>
+      <div className="mt-2 flex flex-wrap items-center gap-2">
+        <button type="button" className={BTN} onClick={() => setP((x) => Math.max(0, x - 1))}>Anterior</button>
+        {p < b.passos.length - 1 ? (
+          <button type="button" className={BTN_ON} onClick={() => setP((x) => x + 1)}>Próximo</button>
+        ) : (
+          <button type="button" className={BTN_ON} onClick={() => setP(0)}>Ver de novo</button>
+        )}
+        <span className="ml-1 flex gap-1" aria-hidden="true">
+          {b.passos.map((_, i) => (
+            <span key={i} className={`h-1.5 w-1.5 rounded-full ${i === p ? "bg-e-accent" : "bg-e-line"}`} />
+          ))}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 const TOM: Record<string, { cls: string; rot: string }> = {
   pegadinha: { cls: "border-e-bad/50 bg-e-bad-soft", rot: "Pegadinha FCC" },
   atencao: { cls: "border-e-warn/50 bg-e-warn-soft", rot: "Atenção" },
@@ -361,5 +463,7 @@ export function BlocoView({ b }: { b: Bloco }) {
       return <Escada b={b} />;
     case "abrir":
       return <Abrir b={b} />;
+    case "cena":
+      return <Cena b={b} />;
   }
 }
