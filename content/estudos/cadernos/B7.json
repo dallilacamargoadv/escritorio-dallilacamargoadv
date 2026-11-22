@@ -1793,14 +1793,2137 @@
    "topico_id": "B7-01",
    "numero": 4,
    "titulo": "Imunidades",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Limitações constitucionais ao poder de tributar, parte 2, imunidades (2026), itens 16.1 a 16.6; CF (com as ECs 116/2022 e 132/2023), CTN e Constituição do Maranhão, textos vigentes",
+   "resumo": [
+    "Imunidade: a CF delimita a competência (não incidência constitucionalmente qualificada). Isenção: lei do ente, no exercício da competência. Alíquota zero: fato gerador com cálculo nulo. O art. 195, § 7º diz \"isentas\", mas é imunidade.",
+    "Art. 150, VI: só impostos e, pela reforma, IBS e CBS (art. 149-B, parágrafo único). Taxas continuam. Ente imune pode ser responsável e reter na fonte (CTN, art. 9º, § 1º).",
+    "Recíproca: cláusula pétrea. Autarquias, fundações e, desde a EC 132/2023, Correios, só no vinculado às finalidades. Estatal de serviço público exclusivo sem lucro: imune; estatal na bolsa (Tema 508) e arrendatária privada (Tema 385): não. Promitente comprador paga (Súmula 583).",
+    "Templos: todo patrimônio, renda e serviços ligados às finalidades, inclusive aluguel; IPTU não incide nem como locatária (art. 156, § 1º-A). Maçonaria e cemitério lucrativo: fora.",
+    "Alínea c: partidos e fundações, sindicatos de trabalhadores, educação e assistência sem fins lucrativos, com os requisitos do art. 14 do CTN (não distribuir, aplicar no País, escriturar). Alcança IOF (Tema 328). Contribuinte de direito sim, de fato não (Tema 342).",
+    "Livros: objetiva; e-book, e-reader (SV 57), apostila, figurinhas, lista telefônica, papel fotográfico (Súmula 657); não máquinas, tablet nem encarte. Música: mista, produzida no Brasil, suporte importado paga (Tema 1.083)."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: imunidade é a CF desenhando o limite da competência",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Na aula 2 você viu que a CF <b>entrega</b> a competência para tributar. A imunidade é o outro lado da mesma moeda: é a CF <b>recortando</b> essa competência, deixando certas pessoas, coisas ou operações fora do alcance do ente. Por isso a doutrina chama a imunidade de <b>não incidência constitucionalmente qualificada</b>. O ente nem chega a ter poder sobre aquele fato."
+      },
+      {
+       "t": "texto",
+       "html": "Quatro institutos parecidos dispensam o pagamento, mas cada um mora num lugar diferente. Vire as cartas."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Imunidade",
+         "sub": "na Constituição",
+         "verso": "A própria CF delimita a competência e impede o ente de definir aquela situação como fato gerador.",
+         "detalhe": "Atua na <b>delimitação</b> da competência. É sempre heterônoma: vem da CF."
+        },
+        {
+         "frente": "Isenção",
+         "sub": "na lei",
+         "verso": "O ente tem a competência, cria o tributo e, por lei, dispensa o pagamento em certas situações.",
+         "detalhe": "Atua no <b>exercício</b> da competência. O fato gerador ocorre."
+        },
+        {
+         "frente": "Não incidência",
+         "sub": "fora do campo",
+         "verso": "O fato simplesmente não está na hipótese de incidência: ou o ente não quis tributá-lo, ou a competência não o abrange.",
+         "detalhe": "Quando é a CF que proíbe, o nome técnico é imunidade."
+        },
+        {
+         "frente": "Alíquota zero",
+         "sub": "na conta",
+         "verso": "Há competência, há fato gerador, mas o cálculo dá zero.",
+         "detalhe": "Muito usada nos reguladores (II, IE, IPI, IOF), alteráveis pelo Executivo."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Vale o lugar, não a palavra",
+       "html": "O art. 195, § 7º diz que as entidades beneficentes são <b>\"isentas\"</b> de contribuição para a seguridade. Como está na CF, é <b>imunidade</b> (STF, RMS 22.192). A FCC adora o \"falso amigo\": se a dispensa está na Constituição, é imunidade, qualquer que seja o verbo usado."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 195, § 7º",
+       "texto": "§ 7º ==São isentas== de contribuição para a seguridade social as entidades beneficentes de assistência social que atendam às exigências estabelecidas em lei."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Imunidade alcança quais tributos?</b> Pode recair sobre qualquer espécie (há imunidades de taxa no art. 5º, de contribuição no art. 149, § 2º, I e no art. 195, § 7º). Mas as do <b>art. 150, VI</b>, as mais cobradas, são só de <b>impostos</b> e, depois da reforma, também do <b>IBS e da CBS</b>, por força do art. 149-B, parágrafo único. Taxa e contribuição de melhoria continuam cobráveis dos entes imunes: o Município pode cobrar taxa de coleta de lixo da repartição federal."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 149-B, parágrafo único",
+       "texto": "Parágrafo único. Os tributos de que trata o caput ==observarão as imunidades previstas no art. 150, VI==, ==não se aplicando a ambos os tributos o disposto no art. 195, § 7º==."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 150, VI",
+       "texto": "VI - ==instituir impostos== sobre:\na) patrimônio, renda ou serviços, uns dos outros;\nb) entidades religiosas e templos de qualquer culto, inclusive suas organizações assistenciais e beneficentes;\nc) patrimônio, renda ou serviços dos partidos políticos, inclusive suas fundações, das entidades sindicais dos trabalhadores, das instituições de educação e de assistência social, sem fins lucrativos, atendidos os requisitos da lei;\nd) livros, jornais, periódicos e o papel destinado a sua impressão.\ne) fonogramas e videofonogramas musicais produzidos no Brasil contendo obras musicais ou literomusicais de autores brasileiros e/ou obras em geral interpretadas por artistas brasileiros bem como os suportes materiais ou arquivos digitais que os contenham, salvo na etapa de replicação industrial de mídias ópticas de leitura a laser."
+      },
+      {
+       "t": "texto",
+       "html": "<b>As classificações</b> que a FCC cobra (Ricardo Alexandre, citado no material):"
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Critério",
+        "Espécies",
+        "Exemplo"
+       ],
+       "linhas": [
+        [
+         "Quanto ao parâmetro",
+         "Subjetivas (pela pessoa), objetivas (pela coisa) e mistas",
+         "Recíproca é subjetiva; livros (alínea d) é objetiva; pequena gleba rural (ITR) e música (alínea e) são mistas"
+        ],
+        [
+         "Quanto à origem",
+         "Ontológicas (existiriam mesmo sem texto, pela isonomia e pelo pacto federativo) e políticas (opção do constituinte)",
+         "Recíproca e entidades de educação e assistência são ontológicas; templos e livros são políticas"
+        ],
+        [
+         "Quanto ao alcance",
+         "Gerais (todos os entes, vários impostos) e específicas ou tópicas (um tributo de um ente)",
+         "Art. 150, VI é geral; IPI e ICMS na exportação e ITBI na integralização de capital são tópicas"
+        ],
+        [
+         "Quanto à forma",
+         "Explícitas e implícitas",
+         "As políticas são sempre explícitas; algumas ontológicas existem por si"
+        ],
+        [
+         "Quanto à regulamentação",
+         "Incondicionadas (eficácia plena) e condicionadas (dependem de lei)",
+         "Alíneas a, b e d são incondicionadas; a alínea c depende dos requisitos da lei"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Imune pode pagar como responsável",
+       "html": "A imunidade subjetiva protege o ente como <b>contribuinte</b>, não como <b>responsável</b>. O Município imune ao IR que paga salário tem de <b>reter</b> o IR na fonte (CTN, art. 9º, § 1º). E a imunidade se afere no <b>momento do fato gerador</b>: quem compra imóvel de particular não apaga o IPTU já ocorrido. A imunidade recíproca não exonera o sucessor pelos fatos anteriores à sucessão (RE 599.176, Tema 224)."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 9º, § 1º",
+       "texto": "§ 1º O disposto no inciso IV não exclui a atribuição, por lei, às entidades nêle referidas, ==da condição de responsáveis pelos tributos que lhes caiba reter na fonte==, e não as dispensa da prática de atos, previstos em lei, assecuratórios do cumprimento de obrigações tributárias por terceiros."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: imunidade recíproca (art. 150, VI, a)",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Por que existe.</b> Um ente tributar o outro seria um jeito de subordiná-lo, e a Federação é de iguais. Por isso a recíproca é ontológica e <b>cláusula pétrea</b> (ADI 939, IPMF). Vale para patrimônio, renda e serviços <b>uns dos outros</b>: IPTU do prédio estadual, IR sobre aplicação financeira do Município, IPVA do carro da União, até o comprado com alienação fiduciária (Tema 685)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 150, §§ 2º e 3º",
+       "texto": "§ 2º A vedação do inciso VI, \"a\", é extensiva às autarquias e às fundações instituídas e mantidas pelo poder público e à ==empresa pública prestadora de serviço postal==, no que se refere ao patrimônio, à renda e aos serviços ==vinculados a suas finalidades essenciais== ou às delas decorrentes.\n§ 3º As vedações do inciso VI, \"a\", e do parágrafo anterior não se aplicam ao patrimônio, à renda e aos serviços, relacionados com ==exploração de atividades econômicas== regidas pelas normas aplicáveis a empreendimentos privados, ou em que haja contraprestação ou pagamento de preços ou tarifas pelo usuário, ==nem exonera o promitente comprador== da obrigação de pagar imposto relativamente ao bem imóvel."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Quem entra.</b> Os entes políticos, sem limite de finalidade. As <b>autarquias e fundações públicas</b>, só no que for <b>vinculado às finalidades essenciais</b> (§ 2º), proteção menor que a dos entes. Desde a EC 132/2023, também a <b>empresa pública prestadora de serviço postal</b>, os Correios, nominalmente. E, pela jurisprudência, estatais que prestam <b>serviço público de prestação obrigatória e exclusiva do Estado</b>, sem intuito de lucro e com capital privado ínfimo (RE 407.099; Infraero, Casa da Moeda, CODESP, saneamento; saúde: RE 580.264)."
+      },
+      {
+       "t": "cena",
+       "titulo": "O guarda-chuva da imunidade recíproca",
+       "altura": 300,
+       "elementos": [
+        {
+         "id": "guarda",
+         "tipo": "cupula",
+         "x": 170,
+         "y": 135,
+         "w": 340,
+         "h": 72,
+         "texto": "CF, art. 150, VI, a",
+         "sub": "imunidade recíproca",
+         "cor": "ok"
+        },
+        {
+         "id": "uniao",
+         "tipo": "caixa",
+         "x": 200,
+         "y": 228,
+         "w": 80,
+         "h": 44,
+         "texto": "União",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "estado",
+         "tipo": "caixa",
+         "x": 290,
+         "y": 228,
+         "w": 80,
+         "h": 44,
+         "texto": "Estado",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "municipio",
+         "tipo": "caixa",
+         "x": 380,
+         "y": 228,
+         "w": 80,
+         "h": 44,
+         "texto": "Município",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "g1",
+         "tipo": "gota",
+         "x": 230,
+         "y": 40,
+         "texto": "IPTU",
+         "cor": "accent"
+        },
+        {
+         "id": "g2",
+         "tipo": "gota",
+         "x": 335,
+         "y": 26,
+         "texto": "IR",
+         "cor": "accent"
+        },
+        {
+         "id": "g3",
+         "tipo": "gota",
+         "x": 440,
+         "y": 40,
+         "texto": "IPVA",
+         "cor": "accent"
+        },
+        {
+         "id": "taxa",
+         "tipo": "gota",
+         "x": 285,
+         "y": 34,
+         "texto": "taxa",
+         "cor": "warn"
+        },
+        {
+         "id": "aut",
+         "tipo": "caixa",
+         "x": 470,
+         "y": 228,
+         "w": 120,
+         "h": 48,
+         "texto": "Autarquia",
+         "sub": "fora da finalidade",
+         "cor": "accent"
+        },
+        {
+         "id": "g4",
+         "tipo": "gota",
+         "x": 560,
+         "y": 40,
+         "texto": "IPTU",
+         "cor": "accent"
+        },
+        {
+         "id": "arr",
+         "tipo": "caixa",
+         "x": 40,
+         "y": 228,
+         "w": 130,
+         "h": 48,
+         "texto": "Arrendatária",
+         "sub": "privada, com lucro",
+         "cor": "bad"
+        },
+        {
+         "id": "g5",
+         "tipo": "gota",
+         "x": 105,
+         "y": 40,
+         "texto": "IPTU",
+         "cor": "accent"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Sem a CF, chove imposto em cima de todo mundo: um ente poderia cobrar IPTU, IR e IPVA do outro.",
+         "mostra": [
+          "g1",
+          "g2",
+          "g3"
+         ],
+         "anima": {
+          "g1": "cai",
+          "g2": "cai",
+          "g3": "cai"
+         },
+         "q": {
+          "g1": 175,
+          "g2": 175,
+          "g3": 175
+         },
+         "move": {
+          "aut": [
+           140,
+           0
+          ]
+         }
+        },
+        {
+         "texto": "A CF abre o guarda-chuva da <b>imunidade recíproca</b>. Os impostos batem e escorrem: nenhum ente cobra imposto do outro.",
+         "mostra": [
+          "guarda",
+          "g1",
+          "g2",
+          "g3"
+         ],
+         "anima": {
+          "g1": "bate",
+          "g2": "bate",
+          "g3": "bate"
+         },
+         "q": {
+          "g1": 62,
+          "g2": 50,
+          "g3": 62
+         },
+         "move": {
+          "aut": [
+           140,
+           0
+          ]
+         }
+        },
+        {
+         "texto": "Mas a gota amarela atravessa: o guarda-chuva só segura <b>imposto</b> (e IBS e CBS). A <b>taxa</b> continua caindo, como a da coleta de lixo.",
+         "mostra": [
+          "guarda",
+          "g1",
+          "g2",
+          "g3",
+          "taxa"
+         ],
+         "anima": {
+          "g1": "bate",
+          "g2": "bate",
+          "g3": "bate",
+          "taxa": "cai"
+         },
+         "q": {
+          "g1": 62,
+          "g2": 50,
+          "g3": 62,
+          "taxa": 180
+         },
+         "move": {
+          "aut": [
+           140,
+           0
+          ]
+         }
+        },
+        {
+         "texto": "A <b>autarquia</b> fica só em parte embaixo: o que é vinculado às finalidades essenciais está protegido; o que não é, toma chuva (art. 150, § 2º).",
+         "mostra": [
+          "guarda",
+          "g1",
+          "g2",
+          "g3",
+          "aut",
+          "g4"
+         ],
+         "anima": {
+          "g1": "bate",
+          "g2": "bate",
+          "g3": "bate",
+          "g4": "cai"
+         },
+         "q": {
+          "g1": 62,
+          "g2": 50,
+          "g3": 62,
+          "g4": 175
+         }
+        },
+        {
+         "texto": "A empresa privada que <b>arrenda imóvel público</b> para lucrar fica do lado de fora e se molha: paga IPTU (Tema 385).",
+         "mostra": [
+          "guarda",
+          "g1",
+          "g2",
+          "g3",
+          "aut",
+          "arr",
+          "g5"
+         ],
+         "anima": {
+          "g1": "bate",
+          "g2": "bate",
+          "g3": "bate",
+          "g5": "cai",
+          "arr": "treme"
+         },
+         "q": {
+          "g1": 62,
+          "g2": 50,
+          "g3": 62,
+          "g5": 175
+         }
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Agora a prova de fogo: toque em cada caso para ver se fica dentro ou fora do guarda-chuva."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Correios entregando encomenda",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "ECT",
+           "sub": "empresa pública"
+          },
+          {
+           "titulo": "Encomenda",
+           "sub": "concorre com o privado"
+          }
+         ],
+         "texto": "<b>Imune, inclusive ao ICMS do transporte de mercadorias</b> (RE 627.051). O STF aplica o <b>subsídio cruzado</b>: a receita das atividades em concorrência sustenta o serviço postal obrigatório nos rincões (RE 601.392). Para a banca, é verdadeira a frase \"é irrelevante o exercício de atividades em regime de exclusividade e em concorrência com a iniciativa privada\"."
+        },
+        {
+         "rotulo": "Estatal com ações na Bolsa",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Sociedade de economia mista",
+           "sub": "capital aberto"
+          },
+          {
+           "titulo": "Lucro",
+           "sub": "remunera acionistas"
+          }
+         ],
+         "texto": "<b>Fora.</b> Sociedade de economia mista com ações negociadas em bolsa e voltada a remunerar o capital não tem imunidade só por causa da atividade (RE 600.867, Tema 508)."
+        },
+        {
+         "rotulo": "Empresa privada arrendatária de imóvel público",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Imóvel da União",
+           "sub": "arrendado"
+          },
+          {
+           "titulo": "Empresa privada",
+           "sub": "atividade lucrativa"
+          }
+         ],
+         "texto": "<b>Fora: incide IPTU.</b> A imunidade não se estende à arrendatária privada que explora atividade econômica com lucro (RE 594.015, Tema 385). Na cessão de uso, o particular cessionário também é devedor (RE 601.720, Tema 437)."
+        },
+        {
+         "rotulo": "Caixa de Assistência dos Advogados",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "OAB",
+           "sub": "serviço público independente"
+          },
+          {
+           "titulo": "CAA",
+           "sub": "órgão da OAB"
+          }
+         ],
+         "texto": "<b>Imunes.</b> A OAB não é autarquia (é <i>sui generis</i>), mas exerce atividade própria de Estado; e as Caixas de Assistência também estão protegidas (STF, desde 2018)."
+        },
+        {
+         "rotulo": "Cartório (serventia extrajudicial)",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Notário",
+           "sub": "delegação estatal"
+          },
+          {
+           "titulo": "Caráter privado",
+           "sub": "emolumentos"
+          }
+         ],
+         "texto": "<b>Fora: incide ISS.</b> A atividade é estatal delegada, mas exercida em caráter privado e com intuito lucrativo (ADI 3.089)."
+        },
+        {
+         "rotulo": "Estado estrangeiro",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Embaixada",
+           "sub": "Convenções de Viena"
+          },
+          {
+           "titulo": "Não está na CF",
+           "sub": "tratado"
+          }
+         ],
+         "texto": "<b>Tecnicamente não é imunidade, é isenção</b>, porque vem das Convenções de Viena (1961 e 1963), não da CF. Na prática, a imunidade de jurisdição impede a execução de taxa não paga, salvo renúncia expressa do Estado estrangeiro."
+        }
+       ]
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Ente político",
+         "sub": "proteção máxima",
+         "texto": "União, Estados, DF e Municípios: patrimônio, renda e serviços, sem exigência de vínculo com finalidade."
+        },
+        {
+         "titulo": "Autarquia e fundação pública",
+         "sub": "§ 2º",
+         "texto": "Só o que estiver <b>vinculado às finalidades essenciais</b> ou delas decorrente."
+        },
+        {
+         "titulo": "Correios",
+         "sub": "§ 2º, desde a EC 132/2023",
+         "texto": "Agora expressos. O material defende que a nova redação <b>não</b> reduziu a imunidade (o subsídio cruzado já considerava a vinculação) nem a retirou das demais estatais reconhecidas pelo STF."
+        },
+        {
+         "titulo": "Estatal de serviço público exclusivo",
+         "sub": "jurisprudência",
+         "texto": "Prestação obrigatória e exclusiva do Estado, sem fim de lucro, capital privado ínfimo, sem quebra da livre concorrência. Casa da Moeda: só nas atividades em monopólio (ACO 2.107)."
+        },
+        {
+         "titulo": "Atividade econômica ou tarifa",
+         "sub": "§ 3º, fora",
+         "texto": "Nem o ente nem a autarquia são imunes no que explorarem atividade econômica sob regras privadas ou cobrarem preço ou tarifa do usuário."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Imunidade não dispensa obrigação acessória",
+       "html": "A recíproca impede criar obrigação de <b>pagar imposto</b>, não deveres de <b>declarar e informar</b>. A União pode exigir declaração de débitos e créditos de Estados e Municípios, até por ato infralegal (ACO 1.098, Info 980). E causa que discute a recíproca entre entes é do <b>STF originariamente</b>, pelo risco ao pacto federativo."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Promitente comprador paga.</b> O § 3º, parte final, fecha a porta da elisão: comprar imóvel de ente imune por compromisso de compra e venda não leva a imunidade junto. Súmula 583 do STF: o promitente comprador de imóvel residencial transcrito em nome de autarquia é contribuinte do IPTU (desde que a lei municipal o eleja contribuinte, Súmula 399 do STJ)."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: templos, partidos, sindicatos, educação e assistência (alíneas b e c)",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Templos (alínea b).</b> Protege a liberdade de crença (art. 5º, VI). Não é só o prédio: é <b>todo o patrimônio, renda e serviços</b> ligados às finalidades essenciais (§ 4º). Sem isso, nada impediria IR sobre o dízimo ou ISS sobre o casamento religioso. Alcança as dependências contíguas sem fim lucrativo e os imóveis <b>alugados</b>, se a renda vai para as finalidades (RE 325.822). A EC 132/2023 escreveu \"entidades religiosas e templos\" e incluiu as <b>organizações assistenciais e beneficentes</b> delas, que ficam livres dos requisitos do art. 14 do CTN."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 150, § 4º",
+       "texto": "§ 4º As vedações expressas no inciso VI, alíneas \"b\" e \"c\", compreendem somente o patrimônio, a renda e os serviços, ==relacionados com as finalidades essenciais== das entidades nelas mencionadas."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 156, § 1º-A",
+       "texto": "§ 1º-A O imposto previsto no inciso I do caput deste artigo não incide sobre templos de qualquer culto, ==ainda que== as entidades abrangidas pela imunidade de que trata a alínea \"b\" do inciso VI do caput do art. 150 desta Constituição ==sejam apenas locatárias== do bem imóvel."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Locatário, maçonaria e cemitério",
+       "html": "A regra geral é que imunidade de quem é <b>locatário</b> não afasta o IPTU do dono. Para templos, a EC 116/2022 abriu exceção expressa: o IPTU não incide nem quando a igreja é só <b>locatária</b>. Já a <b>maçonaria</b> não é religião para o STF, é ideologia de vida (RE 562.351). E <b>cemitério particular</b> com finalidade lucrativa não é imune (RE 578.562)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Alínea c.</b> Partidos políticos e suas fundações (pluralismo político), <b>entidades sindicais dos trabalhadores</b> (liberdade sindical, art. 8º; sindicato patronal <b>não</b>), instituições de <b>educação</b> e de <b>assistência social</b> sem fins lucrativos, \"atendidos os requisitos da lei\". É a única do art. 150, VI que é <b>condicionada</b>. Depender de lei não a transforma em isenção: é norma constitucional de eficácia limitada. Alcança até o <b>IOF</b> sobre aplicações financeiras (RE 611.510, Tema 328)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Que lei regula?</b> Imunidade é limitação ao poder de tributar, então pede <b>lei complementar</b> (art. 146, II). Esse papel é do <b>art. 14 do CTN</b>, recebido como LC. Para o art. 195, § 7º, o STF fixou: requisitos de <b>contrapartida</b> e da própria existência da imunidade, por LC; aspectos meramente <b>procedimentais</b> (certificação, fiscalização), por lei ordinária (RE 566.622 ED, Info 964). Hoje a LC é a 187/2021."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 14",
+       "texto": "Art. 14. O disposto na alínea c do inciso IV do art. 9º é subordinado à observância dos seguintes requisitos pelas entidades nêle referidas:\nI – ==não distribuírem qualquer parcela== de seu patrimônio ou de suas rendas, a qualquer título;\nII - ==aplicarem integralmente, no País==, os seus recursos na manutenção dos seus objetivos institucionais;\nIII - ==manterem escrituração== de suas receitas e despesas em livros revestidos de formalidades capazes de assegurar sua exatidão.\n§ 1º Na falta de cumprimento do disposto neste artigo, ou no\n§ 1º do art. 9º, a autoridade competente pode suspender a aplicação do benefício.\n§ 2º Os serviços a que se refere a alínea c do inciso IV do art. 9º são exclusivamente, os diretamente relacionados com os objetivos institucionais das entidades de que trata este artigo, previstos nos respectivos estatutos ou atos constitutivos."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Não distribuir",
+         "sub": "art. 14, I"
+        },
+        {
+         "titulo": "Aplicar no País",
+         "sub": "art. 14, II"
+        },
+        {
+         "titulo": "Escriturar",
+         "sub": "art. 14, III"
+        },
+        {
+         "titulo": "Descumpriu?",
+         "sub": "art. 14, § 1º"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Sem fim lucrativo não é sem superávit.</b> A entidade pode e deve ter receitas maiores que as despesas. O que ela não pode é <b>distribuir</b> o excedente a sócios, diretores ou quem quer que seja."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Aplicar integralmente no País</b> os recursos na manutenção dos objetivos institucionais."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Manter escrituração</b> de receitas e despesas em livros com formalidades que assegurem sua exatidão."
+        },
+        {
+         "no": 3,
+         "texto": "Faltou requisito: a autoridade <b>suspende</b> o benefício (na esfera federal, pelo procedimento do art. 32 da Lei 9.430/1996, com direito de impugnação). E o CEBAS, no prazo de validade, é <b>declaratório</b>: retroage à data em que os requisitos foram cumpridos (Súmula 612 do STJ)."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Renda de atividade \"estranha\" continua imune se volta para a finalidade.</b> O STF presume, a favor da entidade, que patrimônio, renda e serviços estão vinculados às finalidades. Exemplos do material: aluguel de imóvel a particular (Súmula Vinculante 52), estacionamento explorado pela entidade (RE 144.900), livraria de entidade beneficente (RE 345.830), venda de ingressos pelo SESC, imóvel de lazer dos funcionários (RE 236.174). Escolas do SENAC e do SENAI também são imunes."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Contribuinte de direito x contribuinte de fato",
+       "html": "Tema 342 (RE 608.872): a imunidade subjetiva vale para o beneficiário como <b>contribuinte de direito</b>, não como <b>contribuinte de fato</b>, e a repercussão econômica é irrelevante. Traduzindo: a entidade imune que <b>vende</b> não paga ICMS (RE 186.175); a entidade imune que <b>compra</b> paga o ICMS embutido no preço, porque quem recolhe é o vendedor."
+      },
+      {
+       "t": "cena",
+       "titulo": "Contribuinte de direito x contribuinte de fato (Tema 342)",
+       "altura": 210,
+       "elementos": [
+        {
+         "id": "ind",
+         "tipo": "caixa",
+         "x": 30,
+         "y": 120,
+         "w": 150,
+         "h": 52,
+         "texto": "Indústria",
+         "sub": "vende à entidade",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "ent",
+         "tipo": "caixa",
+         "x": 265,
+         "y": 120,
+         "w": 150,
+         "h": 52,
+         "texto": "Entidade imune",
+         "sub": "assistência social",
+         "cor": "ok",
+         "fixo": true
+        },
+        {
+         "id": "cli",
+         "tipo": "caixa",
+         "x": 500,
+         "y": 120,
+         "w": 150,
+         "h": 52,
+         "texto": "Comprador",
+         "sub": "compra da entidade",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "s1",
+         "tipo": "seta",
+         "x": 182,
+         "y": 146,
+         "w": 262,
+         "h": 146,
+         "cor": "warn"
+        },
+        {
+         "id": "s2",
+         "tipo": "seta",
+         "x": 417,
+         "y": 146,
+         "w": 497,
+         "h": 146,
+         "cor": "ok"
+        },
+        {
+         "id": "icms1",
+         "tipo": "gota",
+         "x": 222,
+         "y": 80,
+         "texto": "ICMS",
+         "cor": "bad"
+        },
+        {
+         "id": "livre",
+         "tipo": "rotulo",
+         "x": 457,
+         "y": 95,
+         "texto": "sem ICMS",
+         "cor": "ok"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "A entidade imune está no meio de duas operações. A pergunta da prova é sempre a mesma: nesta operação, ela é <b>contribuinte de direito</b> (quem recolhe)?"
+        },
+        {
+         "texto": "Quando a entidade <b>vende</b>, quem recolhe é ela: é contribuinte de direito, a imunidade vale e não há ICMS (RE 186.175).",
+         "mostra": [
+          "s2",
+          "livre"
+         ],
+         "anima": {
+          "ent": "pulsa"
+         }
+        },
+        {
+         "texto": "Quando a entidade <b>compra</b>, quem recolhe é a indústria. A entidade só suporta o imposto embutido no preço (contribuinte de fato): paga.",
+         "mostra": [
+          "s1",
+          "icms1"
+         ],
+         "anima": {
+          "icms1": "treme"
+         }
+        },
+        {
+         "texto": "Regra de bolso do Tema 342: imune que <b>vende</b>, sem ICMS; imune que <b>compra</b>, com ICMS. A repercussão econômica é irrelevante.",
+         "mostra": [
+          "s1",
+          "s2",
+          "icms1",
+          "livre"
+         ]
+        }
+       ]
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Igreja que vira assistência social",
+         "sub": "Tema 336",
+         "verso": "Entidade religiosa pode se caracterizar como de assistência social e ter a imunidade da alínea c, inclusive sobre a <b>importação</b> de bens para seus objetivos.",
+         "detalhe": "RE 630.790, 2022."
+        },
+        {
+         "frente": "Previdência privada fechada",
+         "sub": "em regra, não",
+         "verso": "A imunidade é da assistência, não da previdência. Se o beneficiário contribui, o caráter é contributivo: sem imunidade.",
+         "detalhe": "Só é imune se <b>apenas o patrocinador</b> contribui. Patrocinador público nunca: o art. 202, § 3º proíbe contribuir mais que o segurado."
+        },
+        {
+         "frente": "Sindicato patronal",
+         "sub": "fora",
+         "verso": "A alínea c fala em entidades sindicais <b>dos trabalhadores</b>.",
+         "detalhe": "Proteção da liberdade sindical do art. 8º."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: livros (alínea d) e música (alínea e)",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Imunidade cultural (alínea d).</b> É <b>objetiva</b>: protege o livro, o jornal, o periódico e o papel, não a pessoa. Então a editora e a livraria continuam pagando IR sobre o lucro e IPTU do prédio; o que não pode é imposto sobre o objeto (ICMS, IPI, II, IE na circulação, produção, importação e exportação)."
+      },
+      {
+       "t": "cena",
+       "titulo": "Imunidade objetiva: protege o livro, não a editora",
+       "altura": 240,
+       "elementos": [
+        {
+         "id": "guarda",
+         "tipo": "cupula",
+         "x": 230,
+         "y": 128,
+         "w": 220,
+         "h": 52,
+         "texto": "alínea d",
+         "cor": "ok"
+        },
+        {
+         "id": "livro",
+         "tipo": "caixa",
+         "x": 265,
+         "y": 150,
+         "w": 150,
+         "h": 52,
+         "texto": "Livro",
+         "sub": "o objeto",
+         "cor": "warn",
+         "fixo": true
+        },
+        {
+         "id": "editora",
+         "tipo": "caixa",
+         "x": 500,
+         "y": 150,
+         "w": 150,
+         "h": 52,
+         "texto": "Editora",
+         "sub": "a pessoa",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "icms",
+         "tipo": "gota",
+         "x": 300,
+         "y": 30,
+         "texto": "ICMS",
+         "cor": "accent"
+        },
+        {
+         "id": "ipi",
+         "tipo": "gota",
+         "x": 380,
+         "y": 30,
+         "texto": "IPI",
+         "cor": "accent"
+        },
+        {
+         "id": "ir",
+         "tipo": "gota",
+         "x": 545,
+         "y": 30,
+         "texto": "IR",
+         "cor": "accent"
+        },
+        {
+         "id": "iptu",
+         "tipo": "gota",
+         "x": 605,
+         "y": 30,
+         "texto": "IPTU",
+         "cor": "accent"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Sem imunidade, chove imposto no livro e na editora.",
+         "mostra": [
+          "icms",
+          "ipi",
+          "ir",
+          "iptu"
+         ],
+         "anima": {
+          "icms": "cai",
+          "ipi": "cai",
+          "ir": "cai",
+          "iptu": "cai"
+         },
+         "q": {
+          "icms": 105,
+          "ipi": 105,
+          "ir": 105,
+          "iptu": 105
+         }
+        },
+        {
+         "texto": "A alínea d abre o guarda-chuva <b>só sobre o objeto</b>: ICMS, IPI, II e IE sobre o livro (e o papel) não incidem.",
+         "mostra": [
+          "guarda",
+          "icms",
+          "ipi"
+         ],
+         "anima": {
+          "icms": "bate",
+          "ipi": "bate"
+         },
+         "q": {
+          "icms": 52,
+          "ipi": 52
+         }
+        },
+        {
+         "texto": "Mas a editora continua pagando <b>IR</b> sobre o lucro e <b>IPTU</b> do prédio: a imunidade é da coisa, não da pessoa.",
+         "mostra": [
+          "guarda",
+          "icms",
+          "ipi",
+          "ir",
+          "iptu"
+         ],
+         "anima": {
+          "icms": "bate",
+          "ipi": "bate",
+          "ir": "cai",
+          "iptu": "cai"
+         },
+         "q": {
+          "icms": 52,
+          "ipi": 52,
+          "ir": 105,
+          "iptu": 105
+         }
+        }
+       ]
+      },
+      {
+       "t": "matriz",
+       "linhas": [
+        "E-book e audiolivro",
+        "E-reader, ainda que com funções acessórias",
+        "Tablet ou smartphone",
+        "Apostila",
+        "Álbum de figurinhas",
+        "Lista telefônica",
+        "Filme e papel fotográfico para publicação",
+        "Máquinas do parque gráfico",
+        "Encarte de propaganda solto no jornal",
+        "Peças eletrônicas de curso em fascículos"
+       ],
+       "colunas": [
+        "Imune à luz do STF?"
+       ],
+       "celulas": [
+        [
+         [
+          true,
+          "Sim. O suporte papel não é essencial ao conceito de livro (RE 330.817)."
+         ]
+        ],
+        [
+         [
+          true,
+          "Sim. Súmula Vinculante 57, se feito exclusivamente para ler livros."
+         ]
+        ],
+        [
+         [
+          false,
+          "Não. Aparelho multifuncional não é suporte exclusivo."
+         ]
+        ],
+        [
+         [
+          true,
+          "Sim. \"Veículo de transmissão de cultura simplificado\" (RE 183.403)."
+         ]
+        ],
+        [
+         [
+          true,
+          "Sim (RE 221.239)."
+         ]
+        ],
+        [
+         [
+          true,
+          "Sim. A imunidade é objetiva e ampla, mesmo sem caráter literário (RE 794.285 AgR)."
+         ]
+        ],
+        [
+         [
+          true,
+          "Sim. Súmula 657 do STF: insumos assimiláveis ao papel."
+         ]
+        ],
+        [
+         [
+          false,
+          "Não. Interpretação restritiva; não se assimilam ao papel (RE 202.149)."
+         ]
+        ],
+        [
+         [
+          false,
+          "Não. Não é parte indissociável do jornal (RE 213.094). Já a publicidade no corpo do jornal não tira a imunidade."
+         ]
+        ],
+        [
+         [
+          true,
+          "Sim, se exclusivamente destinadas à unidade didática (RE 595.676)."
+         ]
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Tinta, cola e ISS ficam de fora",
+       "html": "Dos insumos, o texto só protege o <b>papel</b> e o que se assimila a ele. Tinta, cola e linha pagam. E o <b>ISS</b> da composição gráfica de livros incide (AI 723.018-AgR)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Música nacional (alínea e, EC 75/2013).</b> Objetivo declarado: baratear o produto original e combater a <b>pirataria</b>. É <b>mista</b>: exige o objeto (fonograma ou videofonograma musical <b>produzido no Brasil</b>) e a pessoa (autor <b>ou</b> intérprete brasileiro; basta um dos dois). Vale para suporte físico (CD, vinil) e arquivo digital (lojas de aplicativo). Ressalva expressa: a <b>replicação industrial de mídias ópticas de leitura a laser</b>."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Vinil prensado na Argentina paga",
+       "html": "Tema 1.083 (ARE 1.244.302, 2024): a imunidade não se aplica à importação de suportes materiais produzidos fora do Brasil, ainda que contenham obra de artista brasileiro. Para o STF, \"produzido no Brasil\" inclui a fabricação do suporte. E a alínea e só afasta os impostos <b>sobre o fonograma</b> (IPI, ICMS, IE): IR, PIS, Cofins e CSLL continuam."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e outras imunidades espalhadas pela CF",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "tabela",
+       "cab": [
+        "Dispositivo",
+        "O que é imune",
+        "Tributo afastado"
+       ],
+       "linhas": [
+        [
+         "Art. 5º, XXXIV",
+         "Direito de petição e certidões para defesa de direitos",
+         "Taxas"
+        ],
+        [
+         "Art. 5º, LXXIII",
+         "Ação popular, salvo má-fé comprovada",
+         "Custas (taxa)"
+        ],
+        [
+         "Art. 5º, LXXVI",
+         "Registro de nascimento e certidão de óbito para os reconhecidamente pobres",
+         "Emolumentos (taxa)"
+        ],
+        [
+         "Art. 5º, LXXVII",
+         "Habeas corpus, habeas data e atos da cidadania",
+         "Custas e emolumentos"
+        ],
+        [
+         "Art. 149, § 2º, I",
+         "Receitas de exportação, inclusive exportação indireta por trading (ADI 4.735, Tema 674)",
+         "Contribuições sociais e CIDE"
+        ],
+        [
+         "Art. 153, § 3º, III",
+         "Exportação de industrializados",
+         "IPI"
+        ],
+        [
+         "Art. 153, § 4º, II",
+         "Pequenas glebas rurais exploradas por quem não tem outro imóvel",
+         "ITR"
+        ],
+        [
+         "Art. 153, § 5º",
+         "Ouro como ativo financeiro ou instrumento cambial",
+         "Tudo, salvo IOF"
+        ],
+        [
+         "Art. 155, § 2º, X",
+         "Exportação; petróleo, combustíveis e energia para outros Estados; rádio e TV abertos",
+         "ICMS"
+        ],
+        [
+         "Art. 155, § 3º",
+         "Energia elétrica, telecomunicações, derivados de petróleo, combustíveis e minerais",
+         "Outros impostos, salvo ICMS, II, IE e IBS; nos combustíveis e minerais, também o Imposto Seletivo (redação da EC 132/2023)"
+        ],
+        [
+         "Art. 156, § 2º, I",
+         "Bens incorporados ao capital de pessoa jurídica, fusão, cisão, extinção (salvo atividade imobiliária preponderante)",
+         "ITBI"
+        ],
+        [
+         "Art. 184, § 5º",
+         "Transferência de imóveis desapropriados para reforma agrária",
+         "Impostos"
+        ],
+        [
+         "Art. 195, II",
+         "Aposentadorias e pensões do RGPS",
+         "Contribuição previdenciária"
+        ],
+        [
+         "Art. 195, § 7º",
+         "Entidades beneficentes de assistência social",
+         "Contribuições da seguridade"
+        ],
+        [
+         "Art. 226, § 1º",
+         "Celebração do casamento civil",
+         "Taxas"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Certidões no Judiciário.</b> Na ADI 2.259 (2020), o STF incluiu o Poder Judiciário em \"repartições públicas\" e declarou a imunidade das certidões para defesa de direitos ou esclarecimento de situação pessoal. Se a certidão é <b>do próprio requerente</b>, a finalidade se <b>presume</b>; se é de terceiro ou de interesse indireto, é preciso demonstrar a finalidade. É imunidade <b>incondicionada</b>, de eficácia plena."
+      },
+      {
+       "t": "texto",
+       "html": "<b>CF x Constituição do Maranhão.</b> O art. 124, VI da Constituição Estadual repete as cinco alíneas (a EC estadual 100/2024 já trouxe a nova redação dos templos e a música). Mas o <b>§ 1º</b> ficou com a redação antiga: estende a recíproca só às autarquias e fundações, <b>sem citar os Correios</b>. Não muda nada na prática, porque a CF vale direto para o Estado e o STF já reconhecia a imunidade dos Correios. Na prova, se perguntarem \"segundo a CF\", os Correios estão no texto."
+      },
+      {
+       "t": "lei",
+       "ref": "Constituição do Maranhão, art. 124, VI, a; § 1º",
+       "texto": "VI - instituir impostos sobre:\na) patrimônio, renda ou serviços uns dos outros;\n§ 1° A vedação expressa no inciso VI, a, é extensiva ==às autarquias e às fundações instituídas e mantidas pelo Poder Público== no que se refere ao patrimônio, à renda e aos serviços vinculados a suas finalidades essenciais ou às delas decorrentes."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 601.392/PR, Plenário, 28/02/2013 (repercussão geral)",
+       "tese": "A imunidade recíproca alcança todas as atividades dos Correios, inclusive as exercidas em concorrência com a iniciativa privada, pela teoria do subsídio cruzado. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 627.051/PE, Plenário, 12/11/2014 (Info 767)",
+       "tese": "Não incide o ICMS sobre o serviço de transporte de bens e mercadorias realizado pela Empresa Brasileira de Correios e Telégrafos. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 600.867, Plenário, 29/06/2020 (repercussão geral, Tema 508, Info 993)",
+       "tese": "Sociedade de economia mista, cuja participação acionária é negociada em Bolsas de Valores, e que, inequivocamente, está voltada à remuneração do capital de seus controladores ou acionistas, não está abrangida pela regra de imunidade tributária prevista no art. 150, VI, \"a\", da Constituição, unicamente em razão das atividades desempenhadas."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 594.015/SP, Plenário, 06/04/2017 (repercussão geral, Tema 385)",
+       "tese": "A imunidade recíproca, prevista no art. 150, VI, a, da Constituição não se estende a empresa privada arrendatária de imóvel público, quando seja ela exploradora de atividade econômica com fins lucrativos. Nessa hipótese é constitucional a cobrança do IPTU pelo Município."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 601.720/RJ, Plenário, 19/04/2017 (repercussão geral, Tema 437)",
+       "tese": "Incide o IPTU, considerado imóvel de pessoa jurídica de direito público cedido a pessoa jurídica de direito privado, devedora do tributo."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 727.851, Plenário, 22/06/2020 (repercussão geral, Tema 685, Info 985)",
+       "tese": "Não incide IPVA sobre veículo automotor adquirido, mediante alienação fiduciária, por pessoa jurídica de direito público."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 611.510/SP, Plenário, 12/04/2021 (repercussão geral, Tema 328, Info 1012)",
+       "tese": "A imunidade assegurada pelo art. 150, VI, \"c\", da Constituição da República aos partidos políticos, inclusive suas fundações, às entidades sindicais dos trabalhadores e às instituições de educação e de assistência social, sem fins lucrativos, que atendam aos requisitos da lei, alcança o IOF, inclusive o incidente sobre aplicações financeiras."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 608.872/MG, Plenário, 23/02/2017 (repercussão geral, Tema 342)",
+       "tese": "A imunidade tributária subjetiva aplica-se a seus beneficiários na posição de contribuinte de direito, mas não na de simples contribuinte de fato, sendo irrelevante para a verificação da existência do beneplácito constitucional a repercussão econômica do tributo envolvido."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 630.790/SP, Plenário, 18/03/2022 (repercussão geral, Tema 336, Info 1047)",
+       "tese": "As entidades religiosas podem se caracterizar como instituições de assistência social a fim de se beneficiarem da imunidade tributária prevista no art. 150, VI, \"c\", da Constituição, que abrangerá não só os impostos sobre o seu patrimônio, renda e serviços, mas também os impostos sobre a importação de bens a serem utilizados na consecução de seus objetivos estatutários."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula Vinculante 57",
+       "tese": "A imunidade tributária constante do art. 150, VI, d, da CF/88 aplica-se à importação e comercialização, no mercado interno, do livro eletrônico (e-book) e dos suportes exclusivamente utilizados para fixá-los, como leitores de livros eletrônicos (e-readers), ainda que possuam funcionalidades acessórias."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ARE 1.244.302/SP, Plenário, 09/09/2024 (repercussão geral, Tema 1.083)",
+       "tese": "A imunidade tributária prevista no art. 150, inciso VI, alínea e, da Constituição Federal não se aplica às importações de suportes materiais produzidos fora do Brasil, ainda que contenham obra musical de artista brasileiro."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmulas 583 e 657",
+       "tese": "Promitente comprador de imóvel residencial transcrito em nome de autarquia é contribuinte do imposto predial territorial urbano (583). A imunidade prevista no art. 150, VI, \"d\", da Constituição Federal abrange os filmes e papéis fotográficos necessários à publicação de jornais e periódicos (657)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 612",
+       "tese": "O certificado de entidade beneficente de assistência social (CEBAS), no prazo de sua validade, possui natureza declaratória para fins tributários, retroagindo seus efeitos à data em que demonstrado o cumprimento dos requisitos estabelecidos por lei complementar para a fruição da imunidade."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A FCC cobra imunidade pelo <b>texto literal</b> do art. 150, VI e §§ 2º a 4º e pelos casos famosos do STF. Os truques mais comuns: trocar \"impostos\" por \"tributos\" (a imunidade do art. 150, VI não alcança taxas), chamar de isenção o que está na CF, esquecer que autarquia só é imune no que é vinculado à finalidade, e pôr o sindicato patronal junto com o dos trabalhadores."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O que pode cair assim",
+       "html": "1) A imunidade do art. 150, VI alcança taxas? <b>Não</b>: impostos (e IBS e CBS). 2) Art. 195, § 7º é isenção? <b>Não</b>, imunidade. 3) Autarquia imune a tudo? <b>Não</b>, só no vinculado às finalidades. 4) Correios em concorrência com o privado? <b>Imunes</b>. 5) Arrendatária privada de imóvel público? <b>Paga IPTU</b>. 6) Promitente comprador de imóvel de autarquia? <b>Paga</b>. 7) Igreja locatária? <b>Sem IPTU</b> (art. 156, § 1º-A). 8) Maçonaria? <b>Sem imunidade</b>. 9) Sindicato patronal? <b>Sem imunidade</b>. 10) E-reader? <b>Imune</b> (SV 57); tablet não. 11) Vinil prensado fora? <b>Paga</b> (Tema 1.083). 12) Entidade imune compradora paga ICMS embutido? <b>Sim</b> (Tema 342). 13) Ente imune retém IR na fonte? <b>Sim</b>."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A vedação de instituir impostos sobre patrimônio, renda ou serviços uns dos outros impede que o Município cobre taxa de coleta de lixo de imóvel da União.",
+         "v": false,
+         "porque": "A imunidade do art. 150, VI só alcança impostos (e IBS e CBS)."
+        },
+        {
+         "texto": "As autarquias gozam de imunidade recíproca sobre todo o seu patrimônio, ainda que não vinculado às finalidades essenciais.",
+         "v": false,
+         "porque": "Art. 150, § 2º: só o vinculado às finalidades essenciais ou delas decorrente."
+        },
+        {
+         "texto": "A imunidade tributária dos templos abrange imóvel alugado a terceiro, se a renda é aplicada nas finalidades essenciais da entidade.",
+         "v": true,
+         "porque": "RE 325.822 e § 4º do art. 150."
+        },
+        {
+         "texto": "O IPTU não incide sobre templos de qualquer culto, ainda que a entidade religiosa seja apenas locatária do imóvel.",
+         "v": true,
+         "porque": "CF, art. 156, § 1º-A (EC 116/2022)."
+        },
+        {
+         "texto": "A imunidade da alínea c do art. 150, VI alcança os sindicatos de empregadores.",
+         "v": false,
+         "porque": "Só as entidades sindicais dos trabalhadores."
+        },
+        {
+         "texto": "A imunidade tributária dos livros alcança os aparelhos leitores de livros eletrônicos, ainda que possuam funcionalidades acessórias.",
+         "v": true,
+         "porque": "Súmula Vinculante 57."
+        },
+        {
+         "texto": "A imunidade dos livros alcança as máquinas utilizadas na impressão de jornais.",
+         "v": false,
+         "porque": "RE 202.149: interpretação restritiva."
+        },
+        {
+         "texto": "Por depender de requisitos previstos em lei, a dispensa tributária das instituições de educação sem fins lucrativos é isenção, e não imunidade.",
+         "v": false,
+         "porque": "É imunidade condicionada, de eficácia limitada: está na CF."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "trib-005",
+    "trib-im-01",
+    "trib-im-02",
+    "trib-im-03",
+    "trib-im-04",
+    "trib-im-05",
+    "trib-im-06",
+    "trib-im-07",
+    "trib-im-08",
+    "trib-im-09",
+    "trib-im-10",
+    "trib-im-11",
+    "trib-im-12"
+   ]
   },
   {
    "id": "B7-a05",
    "topico_id": "B7-01",
    "numero": 5,
    "titulo": "Repartição de receitas tributárias",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Repartição constitucional de receitas tributárias (2026), itens 1 a 9; CF (com as ECs 108/2020, 113/2021 e 132/2023) e Constituição do Maranhão, textos vigentes",
+   "resumo": [
+    "Sistema misto: discriminação pela fonte (competência) + pelo produto (repartição), sempre do ente maior para o menor. Direta: arts. 153, § 5º, 157 e 158. Indireta, por fundos: art. 159, I e II.",
+    "Repartem: impostos (com exceções) e a CIDE-combustíveis. Não repartem: taxas, contribuição de melhoria, empréstimo compulsório, COSIP, demais contribuições, impostos municipais e do DF, ITCMD, II, IE, IGF e o extraordinário de guerra.",
+    "Estados e DF: IR-fonte deles (Tema 1.130; Súmula 447), 20% do residual, 30% do IOF-ouro. Municípios: IR-fonte, 50% do ITR (100% se optarem), 70% do IOF-ouro, 50% do IPVA, 25% do ICMS (65% mínimo por valor adicionado, até 35% lei estadual, 10 pontos educação) e 25% do IBS (80% população, 10 educação, 5 ambiente, 5 iguais).",
+    "Art. 159, I: 50% de IR, IPI e IS: FPE 21,5; FPM 22,5 + 1 (dez) + 1 (jul) + 1 (set); 3 para Norte, Nordeste e Centro-Oeste. Rateio por LC (art. 161, II; ADI 5.069); TCU calcula as quotas.",
+    "Art. 159, II: 10% de IPI e IS pela exportação, teto de 20% por Estado, 25% aos Municípios. Art. 159, III: 29% da CIDE aos Estados, que dão 25% aos Municípios (7,25% do total), calculado antes da DRU (ADI 5.628).",
+    "Art. 160: proibida retenção, salvo condicionar a crédito do ente (e autarquias) e ao mínimo da saúde; acordos com a União preveem dedução da cota. Renúncia do ente maior é válida (RE 705.423). CE-MA, art. 130: ficou com 3/4 e 1/4; vale a CF."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: por que a CF manda dividir o que foi arrecadado",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Nas aulas 2 a 4 você viu quem <b>pode cobrar</b> (competência) e quem <b>não pode ser cobrado</b> (imunidade). Esta aula começa depois que o dinheiro já entrou no cofre. A relação tributária com o contribuinte acabou; agora a questão é só entre os entes: <b>quem fica com quanto</b>."
+      },
+      {
+       "t": "texto",
+       "html": "A repartição protege o <b>pacto federativo</b>. Autonomia (auto-organização, autogoverno e autoadministração) sem dinheiro próprio é só no papel. Como a CF deu mais impostos à União que aos Estados, e mais aos Estados que aos Municípios, ela usa um <b>sistema misto</b>:"
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Discriminação pela fonte",
+         "sub": "competência",
+         "verso": "A CF dá a cada ente os seus próprios tributos para instituir e cobrar.",
+         "detalhe": "É o que você estudou na aula 2."
+        },
+        {
+         "frente": "Discriminação pelo produto",
+         "sub": "repartição",
+         "verso": "O ente maior entrega ao menor uma parte do que arrecadou.",
+         "detalhe": "Também chamada de <b>participação na receita</b> ou <b>repartição de receitas</b>: tudo o mesmo assunto."
+        },
+        {
+         "frente": "Repartição direta",
+         "sub": "sem fundo",
+         "verso": "O ente recebe o dinheiro diretamente, sem passar por fundo.",
+         "detalhe": "Arts. 153, § 5º, 157 e 158."
+        },
+        {
+         "frente": "Repartição indireta",
+         "sub": "por fundo",
+         "verso": "O dinheiro vai para um fundo e o fundo divide entre os beneficiários.",
+         "detalhe": "Art. 159, I (FPE, FPM, regiões) e II (exportação)."
+        }
+       ]
+      },
+      {
+       "t": "cena",
+       "titulo": "A cascata: o dinheiro só desce",
+       "altura": 300,
+       "elementos": [
+        {
+         "id": "uniao",
+         "tipo": "caixa",
+         "x": 255,
+         "y": 20,
+         "w": 170,
+         "h": 50,
+         "texto": "União",
+         "sub": "arrecada mais",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "estado",
+         "tipo": "caixa",
+         "x": 255,
+         "y": 125,
+         "w": 170,
+         "h": 50,
+         "texto": "Estado",
+         "sub": "recebe e também reparte",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "mun",
+         "tipo": "caixa",
+         "x": 255,
+         "y": 230,
+         "w": 170,
+         "h": 50,
+         "texto": "Município",
+         "sub": "só recebe",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "s1",
+         "tipo": "seta",
+         "x": 340,
+         "y": 72,
+         "w": 340,
+         "h": 122,
+         "cor": "ok"
+        },
+        {
+         "id": "s2",
+         "tipo": "seta",
+         "x": 340,
+         "y": 177,
+         "w": 340,
+         "h": 227,
+         "cor": "ok"
+        },
+        {
+         "id": "s3",
+         "tipo": "seta",
+         "x": 430,
+         "y": 45,
+         "w": 470,
+         "h": 255,
+         "cor": "ok"
+        },
+        {
+         "id": "r1",
+         "tipo": "rotulo",
+         "x": 470,
+         "y": 100,
+         "texto": "IR-fonte, residual, IOF-ouro, FPE, IPI-exportação, CIDE",
+         "cor": "ok"
+        },
+        {
+         "id": "r2",
+         "tipo": "rotulo",
+         "x": 160,
+         "y": 205,
+         "texto": "IPVA 50%, ICMS 25%, IBS 25%",
+         "cor": "ok"
+        },
+        {
+         "id": "r3",
+         "tipo": "rotulo",
+         "x": 560,
+         "y": 235,
+         "texto": "IR-fonte, ITR, IOF-ouro, FPM",
+         "cor": "ok"
+        },
+        {
+         "id": "volta",
+         "tipo": "gota",
+         "x": 200,
+         "y": 240,
+         "texto": "sobe?",
+         "cor": "bad"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "A CF deu mais impostos aos entes maiores. Para equilibrar, manda parte da arrecadação <b>descer</b>: é a discriminação <b>pelo produto</b>, que completa a discriminação <b>pela fonte</b> (a competência)."
+        },
+        {
+         "texto": "A União entrega aos Estados e ao DF: IR retido na fonte por eles, 20% do imposto residual, 30% do IOF-ouro, o FPE, o IPI e o Imposto Seletivo da exportação e 29% da CIDE-combustíveis.",
+         "mostra": [
+          "s1",
+          "r1"
+         ],
+         "anima": {
+          "estado": "pulsa"
+         }
+        },
+        {
+         "texto": "O Estado repassa aos seus Municípios: 50% do IPVA, 25% do ICMS, 25% do IBS que lhe é distribuído e 25% do que recebe do IPI-exportação e da CIDE.",
+         "mostra": [
+          "s1",
+          "r1",
+          "s2",
+          "r2"
+         ],
+         "anima": {
+          "mun": "pulsa"
+         }
+        },
+        {
+         "texto": "E a União entrega direto aos Municípios: IR retido na fonte por eles, 50% do ITR (ou 100%, se o Município fiscaliza e cobra), 70% do IOF-ouro e o FPM.",
+         "mostra": [
+          "s1",
+          "r1",
+          "s2",
+          "r2",
+          "s3",
+          "r3"
+         ],
+         "anima": {
+          "mun": "pulsa"
+         }
+        },
+        {
+         "texto": "Pegadinha clássica: o Município divide alguma coisa com o Estado? <b>Nunca.</b> A repartição vai sempre do maior para o menor. Município e DF não repartem nenhum imposto próprio.",
+         "mostra": [
+          "s1",
+          "s2",
+          "s3",
+          "volta"
+         ],
+         "anima": {
+          "volta": "treme"
+         }
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Quais tributos se repartem?</b> O natural é repartir <b>imposto</b>, porque é não vinculado. Os tributos vinculados ficam com quem os cobra:"
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Tributo",
+        "Reparte?",
+        "Por quê"
+       ],
+       "linhas": [
+        [
+         "Impostos (com exceções)",
+         "Sim",
+         "Não vinculados: servem a qualquer despesa"
+        ],
+        [
+         "CIDE-combustíveis",
+         "Sim, 29% (art. 159, III)",
+         "É a única contribuição repartida"
+        ],
+        [
+         "Taxas e contribuição de melhoria",
+         "Não",
+         "Vinculados a uma atuação estatal"
+        ],
+        [
+         "Empréstimo compulsório",
+         "Não",
+         "Receita presa à despesa que o justificou (art. 148, parágrafo único)"
+        ],
+        [
+         "Contribuição de iluminação pública e demais contribuições",
+         "Não",
+         "Receita com destinação própria"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Impostos que não se repartem:</b> todos os <b>municipais</b> (IPTU, ISS, ITBI) e todos os arrecadados pelo <b>DF</b>; o <b>ITCMD</b>, único estadual que fica todo com o Estado; e os federais <b>II, IE, IGF</b> e o <b>extraordinário de guerra</b>. Repare: o IOF só é repartido quando incide sobre o <b>ouro ativo financeiro</b>."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Os federais que o Estado e o Município recebem",
+       "html": "Guarde as siglas que descem da União: <b>IR</b> (fonte e fundos), <b>IPI</b> (fundos e exportação), <b>IS</b> (Imposto Seletivo, que entrou na reforma ao lado do IPI), <b>ITR</b>, <b>IOF-ouro</b>, <b>residual</b> e <b>CIDE-combustíveis</b>. Ficaram fora da lista? Não repartem."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: a repartição direta",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>IOF-ouro (art. 153, § 5º).</b> O ouro ativo financeiro só paga IOF, com alíquota mínima de 1%, e a União não fica com nada: <b>30%</b> para o Estado (ou DF, ou Território) de origem e <b>70%</b> para o Município de origem. No DF, que acumula as duas competências, fica 100%."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 153, § 5º",
+       "texto": "§ 5º O ouro, quando definido em lei como ativo financeiro ou instrumento cambial, sujeita-se exclusivamente à incidência do imposto de que trata o inciso V do \"caput\" deste artigo, devido na operação de origem; a alíquota mínima será de um por cento, assegurada a transferência do montante da arrecadação nos seguintes termos:\nI - ==trinta por cento== para o Estado, o Distrito Federal ou o Território, conforme a origem;\nII - ==setenta por cento== para o Município de origem."
+      },
+      {
+       "t": "texto",
+       "html": "<b>IR retido na fonte (arts. 157, I e 158, I).</b> Quando o Estado, o Município, suas autarquias e fundações pagam rendimentos e retêm o IR, o valor <b>é deles por inteiro</b>. O STF ampliou: vale para <b>qualquer</b> pagamento, não só salário de servidor, incluindo o que pagam a pessoas físicas ou jurídicas que lhes vendem bens ou prestam serviços (Tema 1.130)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 157",
+       "texto": "Art. 157. Pertencem aos Estados e ao Distrito Federal:\nI - o produto da arrecadação do imposto da União sobre renda e proventos de qualquer natureza, ==incidente na fonte==, sobre rendimentos pagos, a qualquer título, por eles, suas autarquias e pelas fundações que instituírem e mantiverem;\nII - ==vinte por cento== do produto da arrecadação do imposto que a União instituir no exercício da competência que lhe é atribuída pelo art. 154, I."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Quem responde na ação do servidor?",
+       "html": "Se o servidor estadual pede de volta o IR <b>retido na fonte</b>, o réu é o <b>Estado</b>, na Justiça Estadual (Súmula 447 do STJ). Mas se o pedido nasce da <b>declaração anual</b> do IR, quem analisa é a Receita Federal: a ação é contra a <b>União</b>, na Justiça Federal. Olhar de procurador: em contestação, essa é a preliminar de ilegitimidade."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Imposto residual (art. 157, II).</b> Se a União criar imposto novo pelo art. 154, I, <b>20%</b> são dos Estados e do DF. Os Estados tentaram puxar para essa regra os 30% das contribuições desvinculadas pela DRU, dizendo que viravam \"imposto\". O STF negou: a DRU não muda a natureza da contribuição e não gera partilha (ADPF 523)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Para os Municípios (art. 158).</b> Além do IR-fonte: <b>50% do ITR</b> dos imóveis neles situados, ou <b>100%</b> se o Município optar por fiscalizar e cobrar o ITR (art. 153, § 4º, III), sem reduzir o imposto. <b>50% do IPVA</b> dos veículos licenciados no seu território (e, desde a EC 132/2023, dos aquáticos e aéreos cujo dono mora lá). <b>25% do ICMS</b> e <b>25% do IBS</b> distribuído ao Estado."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 158, I a IV",
+       "texto": "Art. 158. Pertencem aos Municípios:\nI - o produto da arrecadação do imposto da União sobre renda e proventos de qualquer natureza, incidente na fonte, sobre rendimentos pagos, a qualquer título, por eles, suas autarquias e pelas fundações que instituírem e mantiverem;\nII - cinqüenta por cento do produto da arrecadação do imposto da União sobre a propriedade territorial rural, relativamente aos imóveis neles situados, ==cabendo a totalidade== na hipótese da opção a que se refere o art. 153, § 4º, III;\nIII - 50% (cinquenta por cento) do produto da arrecadação do imposto do Estado sobre a propriedade de veículos automotores licenciados em seus territórios e, em relação a ==veículos aquáticos e aéreos==, cujos proprietários sejam domiciliados em seus territórios;\nIV - ==25% (vinte e cinco por cento)==:\na) do produto da arrecadação do imposto do Estado sobre operações relativas à circulação de mercadorias e sobre prestações de serviços de transporte interestadual e intermunicipal e de comunicação;\nb) do produto da arrecadação do imposto previsto no art. 156-A distribuída aos Estados."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 153, § 4º, III",
+       "texto": "§ 4º O imposto previsto no inciso VI do caput:\nIII - será fiscalizado e cobrado pelos Municípios que assim optarem, na forma da lei, ==desde que não implique redução do imposto== ou qualquer outra forma de renúncia fiscal."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Como os 25% do ICMS são divididos entre os Municípios (§ 1º, EC 108/2020).</b> O Estado não escolhe livremente:"
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "65%, no mínimo",
+         "sub": "valor adicionado"
+        },
+        {
+         "titulo": "Até 35%",
+         "sub": "lei estadual"
+        },
+        {
+         "titulo": "10 pontos",
+         "sub": "educação"
+        },
+        {
+         "titulo": "Limite",
+         "sub": "razoabilidade"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Pelo menos 65%</b> na proporção do <b>valor adicionado</b> no território do Município: premia quem gera mais circulação. Valor adicionado é definido por <b>lei complementar</b> (art. 161, I; LC 63/1990: saídas mais serviços, menos entradas, no ano). No Simples Nacional, considera-se 32% da receita bruta."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Até 35%</b> segundo <b>lei estadual</b>. A EC 108/2020 subiu essa fatia (era um quarto)."
+        },
+        {
+         "no": 2,
+         "texto": "Dentro dos 35%, <b>no mínimo 10 pontos percentuais</b> por indicadores de melhoria da <b>aprendizagem</b> e de aumento da <b>equidade</b>: o chamado ICMS educacional (como no Ceará e em Pernambuco)."
+        },
+        {
+         "no": 3,
+         "texto": "A liberdade da lei estadual tem limite: não pode criar critério desarrazoado, como excluir totalmente um Município rico da parcela (STF, RE 401.953)."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 158, §§ 1º e 2º",
+       "texto": "§ 1º As parcelas de receita pertencentes aos Municípios mencionadas no inciso IV, \"a\", serão creditadas conforme os seguintes critérios:\nI - ==65% (sessenta e cinco por cento), no mínimo==, na proporção do valor adicionado nas operações relativas à circulação de mercadorias e nas prestações de serviços, realizadas em seus territórios;\nII - ==até 35%== (trinta e cinco por cento), de acordo com o que dispuser lei estadual, observada, obrigatoriamente, a distribuição de, no mínimo, 10 (dez) pontos percentuais com base em indicadores de melhoria nos resultados de aprendizagem e de aumento da equidade, considerado o nível socioeconômico dos educandos.\n§ 2º As parcelas de receita pertencentes aos Municípios mencionadas no inciso IV, \"b\", serão creditadas conforme os seguintes critérios:\nI - ==80% (oitenta por cento) na proporção da população==;\nII - 10% (dez por cento) com base em indicadores de melhoria nos resultados de aprendizagem e de aumento da equidade, considerado o nível socioeconômico dos educandos, de acordo com o que dispuser lei estadual;\nIII - 5% (cinco por cento) com base em indicadores de ==preservação ambiental==, de acordo com o que dispuser lei estadual;\nIV - 5% (cinco por cento) ==em montantes iguais== para todos os Municípios do Estado."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Critério",
+        "Cota do ICMS (§ 1º)",
+        "Cota do IBS (§ 2º)"
+       ],
+       "linhas": [
+        [
+         "Base econômica",
+         "65%, no mínimo, por valor adicionado",
+         "Nenhuma"
+        ],
+        [
+         "População",
+         "Nenhuma",
+         "80%"
+        ],
+        [
+         "Educação",
+         "No mínimo 10 pontos, dentro dos até 35%",
+         "10%"
+        ],
+        [
+         "Meio ambiente",
+         "Nenhum (fica para a lei estadual, se quiser)",
+         "5%"
+        ],
+        [
+         "Partes iguais",
+         "Nenhuma",
+         "5% para todos os Municípios"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Distribuição do IBS não é repartição",
+       "html": "O IBS é de competência <b>compartilhada</b> entre Estados, DF e Municípios. O Comitê Gestor <b>distribui</b> o produto aos entes (art. 156-A, § 4º, II): isso é discriminação <b>pela fonte</b>, regulada por lei complementar nacional. Depois, o Estado <b>reparte</b> 25% do que recebeu com seus Municípios (art. 158, IV, b): isso é discriminação <b>pelo produto</b>, regulada na CF e completada por lei estadual. O DF recebe na distribuição, mas não reparte, porque não tem Municípios."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: a repartição indireta (os fundos)",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Art. 159, I.</b> A União separa <b>50%</b> do que arrecada com <b>IR, IPI e Imposto Seletivo</b> (este entrou com a EC 132/2023) e divide assim:"
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Destino",
+        "Percentual",
+        "Quando"
+       ],
+       "linhas": [
+        [
+         "FPE (Estados e DF)",
+         "21,5%",
+         "Ao longo do ano"
+        ],
+        [
+         "FPM (Municípios)",
+         "22,5%",
+         "Ao longo do ano"
+        ],
+        [
+         "Programas de financiamento do setor produtivo do Norte, Nordeste e Centro-Oeste",
+         "3%",
+         "Metade da parcela do Nordeste é do semiárido"
+        ],
+        [
+         "FPM extra",
+         "1%",
+         "1º decêndio de dezembro (EC 55/2007)"
+        ],
+        [
+         "FPM extra",
+         "1%",
+         "1º decêndio de julho (EC 84/2014)"
+        ],
+        [
+         "FPM extra",
+         "1%",
+         "1º decêndio de setembro (EC 112/2021)"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Fechando a conta do 50%",
+       "html": "21,5 + 22,5 + 3 + 1 + 1 + 1 = <b>50</b>. O FPM leva no total <b>25,5%</b>. E o IR retido na fonte pelos Estados e Municípios <b>sai da base</b> antes do cálculo (§ 1º), porque já é deles."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 159, I",
+       "texto": "Art. 159. A União entregará:\nI - do produto da arrecadação dos impostos sobre renda e proventos de qualquer natureza e sobre produtos industrializados e ==do imposto previsto no art. 153, VIII, 50%== (cinquenta por cento), da seguinte forma:\na) vinte e um inteiros e cinco décimos por cento ao Fundo de Participação dos Estados e do Distrito Federal;\nb) vinte e dois inteiros e cinco décimos por cento ao Fundo de Participação dos Municípios;\nc) três por cento, para aplicação em programas de financiamento ao setor produtivo das Regiões Norte, Nordeste e Centro-Oeste, através de suas instituições financeiras de caráter regional, de acordo com os planos regionais de desenvolvimento, ficando assegurada ao ==semi-árido do Nordeste== a metade dos recursos destinados à Região, na forma que a lei estabelecer;\nd) um por cento ao Fundo de Participação dos Municípios, que será entregue no primeiro decêndio do mês de dezembro de cada ano;\ne) 1% (um por cento) ao Fundo de Participação dos Municípios, que será entregue no primeiro decêndio do mês de julho de cada ano;\nf) 1% (um por cento) ao Fundo de Participação dos Municípios, que será entregue no primeiro decêndio do mês de setembro de cada ano;"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 159, § 1º",
+       "texto": "§ 1º Para efeito de cálculo da entrega a ser efetuada de acordo com o previsto no inciso I, ==excluir-se-á== a parcela da arrecadação do imposto de renda e proventos de qualquer natureza pertencente aos Estados, ao Distrito Federal e aos Municípios, nos termos do disposto nos arts. 157, I, e 158, I."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Quem define a divisão entre os Estados e entre os Municípios?</b> A CF não diz. O art. 161, II manda a <b>lei complementar</b> fixar os critérios de rateio dos fundos, <b>para promover o equilíbrio socioeconômico</b>. E quem calcula as quotas de cada um é o <b>TCU</b> (parágrafo único), não o montante que a União repassa."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 161",
+       "texto": "Art. 161. Cabe à lei complementar:\nI - definir valor adicionado para fins do disposto no art. 158, § 1º, I;\nII - estabelecer normas sobre a entrega dos recursos de que trata o art. 159, especialmente sobre os critérios de rateio dos fundos previstos em seu inciso I, ==objetivando promover o equilíbrio sócio-econômico== entre Estados e entre Municípios;\nIII - dispor sobre o acompanhamento, pelos beneficiários, do cálculo das quotas e da liberação das participações previstas nos arts. 157, 158 e 159.\nParágrafo único. ==O Tribunal de Contas da União efetuará o cálculo das quotas== referentes aos fundos de participação a que alude o inciso II."
+      },
+      {
+       "t": "texto",
+       "html": "<b>A novela do FPE.</b> A LC 62/1989 fixou coeficientes em tabela, quase congelados. O STF declarou a omissão e a inconstitucionalidade (ADI 875 e outras, 2010) e deu prazo até 2012. Veio a LC 143/2013, mas ela manteve, disfarçada, a sistemática antiga e uma transição longa demais: o STF voltou a declarar inconstitucional por não promover o equilíbrio socioeconômico (ADI 5.069, 2023) e manteve a aplicação até 31/12/2025, para o Congresso fazer nova lei."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Art. 159, II: fundo de compensação das exportações.</b> Como a exportação é imune ao ICMS (art. 155, § 2º, X), a União entrega <b>10% do IPI e, desde a EC 132/2023, do Imposto Seletivo</b> aos Estados e ao DF, proporcionalmente às exportações de industrializados. Dois detalhes que a banca cobra: nenhum Estado recebe <b>mais de 20%</b> do fundo, e o excedente vai para os outros (§ 2º); e o Estado entrega <b>25%</b> da sua cota aos Municípios (§ 3º), pelos critérios do ICMS (parcela do IPI) ou do IBS (parcela do IS)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 159, II, III e §§ 2º a 4º",
+       "texto": "II - do produto da arrecadação do imposto sobre produtos industrializados e do imposto previsto no art. 153, VIII, ==10% (dez por cento)== aos Estados e ao Distrito Federal, proporcionalmente ao valor das respectivas exportações de produtos industrializados;\nIII - do produto da arrecadação da contribuição de intervenção no domínio econômico prevista no art. 177, § 4º, ==29% (vinte e nove por cento)== para os Estados e o Distrito Federal, distribuídos na forma da lei, observadas as destinações a que se referem as alíneas \"c\" e \"d\" do inciso II do referido parágrafo.\n§ 2º A nenhuma unidade federada poderá ser destinada ==parcela superior a vinte por cento== do montante a que se refere o inciso II, devendo o eventual excedente ser distribuído entre os demais participantes, mantido, em relação a esses, o critério de partilha nele estabelecido.\n§ 3º Os Estados entregarão aos respectivos Municípios 25% (vinte e cinco por cento) dos recursos que receberem nos termos do inciso II docaputdeste artigo, observados os critérios estabelecidos no art. 158, § 1º, para a parcela relativa ao imposto sobre produtos industrializados, e no art. 158, § 2º, para a parcela relativa ao imposto previsto no art. 153, VIII.\n§ 4º Do montante de recursos de que trata o inciso III que cabe a cada Estado, ==vinte e cinco por cento serão destinados aos seus Municípios==, na forma da lei a que se refere o mencionado inciso."
+      },
+      {
+       "t": "cena",
+       "titulo": "CIDE-combustíveis: a conta do 29%",
+       "altura": 260,
+       "elementos": [
+        {
+         "id": "cide",
+         "tipo": "caixa",
+         "x": 40,
+         "y": 105,
+         "w": 150,
+         "h": 52,
+         "texto": "CIDE",
+         "sub": "100% da arrecadação",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "est",
+         "tipo": "caixa",
+         "x": 265,
+         "y": 105,
+         "w": 150,
+         "h": 52,
+         "texto": "Estados e DF",
+         "sub": "29%",
+         "cor": "blue"
+        },
+        {
+         "id": "mun",
+         "tipo": "caixa",
+         "x": 490,
+         "y": 40,
+         "w": 150,
+         "h": 52,
+         "texto": "Municípios",
+         "sub": "25% dos 29% = 7,25%",
+         "cor": "ok"
+        },
+        {
+         "id": "fica",
+         "tipo": "caixa",
+         "x": 490,
+         "y": 170,
+         "w": 150,
+         "h": 52,
+         "texto": "Estados ficam",
+         "sub": "75% dos 29% = 21,75%",
+         "cor": "warn"
+        },
+        {
+         "id": "s1",
+         "tipo": "seta",
+         "x": 192,
+         "y": 131,
+         "w": 262,
+         "h": 131,
+         "cor": "blue"
+        },
+        {
+         "id": "s2",
+         "tipo": "seta",
+         "x": 417,
+         "y": 120,
+         "w": 487,
+         "h": 70,
+         "cor": "ok"
+        },
+        {
+         "id": "s3",
+         "tipo": "seta",
+         "x": 417,
+         "y": 142,
+         "w": 487,
+         "h": 192,
+         "cor": "warn"
+        },
+        {
+         "id": "dru",
+         "tipo": "rotulo",
+         "x": 115,
+         "y": 80,
+         "texto": "sobre o total, antes da DRU",
+         "cor": "bad"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "A União arrecada a CIDE-combustíveis (art. 177, § 4º). É a <b>única contribuição</b> com receita repartida."
+        },
+        {
+         "texto": "<b>29%</b> vão para os Estados e o DF (art. 159, III). E a conta se faz sobre o <b>total</b> arrecadado, sem tirar antes os 30% da DRU (ADI 5.628).",
+         "mostra": [
+          "est",
+          "s1",
+          "dru"
+         ],
+         "anima": {
+          "est": "pulsa"
+         }
+        },
+        {
+         "texto": "Cada Estado entrega <b>25%</b> do que recebeu aos seus Municípios (art. 159, § 4º): 25% de 29% = <b>7,25%</b> do total.",
+         "mostra": [
+          "est",
+          "s1",
+          "mun",
+          "s2"
+         ],
+         "anima": {
+          "mun": "pulsa"
+         }
+        },
+        {
+         "texto": "Os Estados ficam com o resto: 75% de 29% = <b>21,75%</b>. A FCC gosta de pedir essa conta.",
+         "mostra": [
+          "est",
+          "s1",
+          "mun",
+          "s2",
+          "fica",
+          "s3"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e garantias: o que pode e o que não pode reter",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Regra: é proibido reter.</b> O art. 160 veda a retenção ou qualquer restrição à entrega e ao emprego dos recursos repartidos, incluídos adicionais e acréscimos. Sem essa trava, a União poderia usar o repasse como arma política contra Estado da oposição."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 160",
+       "texto": "Art. 160. ==É vedada a retenção ou qualquer restrição== à entrega e ao emprego dos recursos atribuídos, nesta seção, aos Estados, ao Distrito Federal e aos Municípios, neles compreendidos adicionais e acréscimos relativos a impostos.\n§ 1º A vedação prevista neste artigo não impede a União e os Estados de condicionarem a entrega de recursos: (Renumerado do Parágrafo único pela Emenda Constitucional nº 113, de 2021)\nI – ==ao pagamento de seus créditos, inclusive de suas autarquias==;\nII – ao cumprimento do disposto no art. 198, § 2º, incisos II e III.\n§ 2º Os contratos, os acordos, os ajustes, os convênios, os parcelamentos ou as renegociações de débitos de qualquer espécie, inclusive tributários, firmados pela União com os entes federativos ==conterão cláusulas para autorizar a dedução== dos valores devidos dos montantes a serem repassados relacionados às respectivas cotas nos Fundos de Participação ou aos precatórios federais."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "União retém FPE porque o Estado deve a ela",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Crédito da União",
+           "sub": "ou de autarquia"
+          },
+          {
+           "titulo": "Condicionar a entrega",
+           "sub": "§ 1º, I"
+          }
+         ],
+         "texto": "<b>Pode condicionar.</b> A vedação não impede a União e os Estados de condicionarem a entrega ao <b>pagamento de seus créditos, inclusive de suas autarquias</b>."
+        },
+        {
+         "rotulo": "Estado retém cota de Município que não aplica o mínimo em saúde",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Mínimo da saúde",
+           "sub": "art. 198, § 2º"
+          },
+          {
+           "titulo": "Condicionar a entrega",
+           "sub": "§ 1º, II"
+          }
+         ],
+         "texto": "<b>Pode condicionar</b> ao cumprimento dos percentuais mínimos em ações e serviços públicos de saúde."
+        },
+        {
+         "rotulo": "Parcelamento de dívida com a União",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Acordo com a União",
+           "sub": "EC 113/2021"
+          },
+          {
+           "titulo": "Dedução da cota",
+           "sub": "§ 2º"
+          }
+         ],
+         "texto": "<b>Obrigatório prever.</b> Contratos, acordos, parcelamentos e renegociações com a União <b>conterão</b> cláusula autorizando deduzir o devido da cota dos Fundos de Participação ou dos precatórios federais."
+        },
+        {
+         "rotulo": "Estado retém cota de Município por motivo político",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Sem crédito nem saúde",
+           "sub": "fora do § 1º"
+          },
+          {
+           "titulo": "Retenção",
+           "sub": "art. 160"
+          }
+         ],
+         "texto": "<b>Proibido.</b> Fora das hipóteses do § 1º, qualquer retenção ou restrição é inconstitucional."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Não afetação dos impostos (art. 167, IV).</b> Lei não pode vincular receita de imposto a órgão, fundo ou despesa, salvo as exceções da própria CF (a primeira delas é justamente a repartição dos arts. 158 e 159). O motivo: o governo eleito precisa de liberdade para executar seu programa. O STF derrubou norma da Constituição do Rio de Janeiro que destinava parte do FPE a um fundo de desenvolvimento estadual (ADI 553, 2018)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 167, IV",
+       "texto": "IV - a vinculação de receita de impostos a órgão, fundo ou despesa, ==ressalvadas a repartição do produto da arrecadação dos impostos a que se referem os arts. 158 e 159==, a destinação de recursos para as ações e serviços públicos de saúde, para manutenção e desenvolvimento do ensino e para realização de atividades da administração tributária, como determinado, respectivamente, pelos arts. 198, § 2º, 212 e 37, XXII, e a prestação de garantias às operações de crédito por antecipação de receita, previstas no art. 165, § 8º, bem como o disposto no § 4º deste artigo;"
+      },
+      {
+       "t": "texto",
+       "html": "<b>Renúncia fiscal do ente maior.</b> Se a União concede isenção de IR ou IPI, o FPM encolhe. Os Municípios reclamaram, mas o STF decidiu que a repartição não altera a competência: ela recai sobre o que foi <b>efetivamente arrecadado</b>, não sobre o que poderia ser (RE 705.423, repercussão geral). Na mesma linha, a quota do Município no ICMS só é devida quando há o <b>efetivo recolhimento</b> do imposto (RE 1.288.634, repercussão geral)."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "ICMS pago com precatório conta como arrecadado",
+       "html": "Se o Estado aceita compensar ICMS com precatório, o crédito se extingue naquele momento e o repasse ao Município é devido já, sem esperar a vez do precatório na fila. E o atraso no repasse é corrigido pelos mesmos índices da cobrança de tributo atrasado, Selic se a lei do ente prevê (STJ, REsp 1.894.736, 2021)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Transparência (art. 162).</b> Todos os entes divulgam, até o <b>último dia do mês seguinte</b> ao da arrecadação, quanto arrecadaram, receberam, entregaram e a entregar, e os critérios de rateio. A União discrimina por Estado e por Município; os Estados, por Município."
+      },
+      {
+       "t": "texto",
+       "html": "<b>CF x Constituição do Maranhão.</b> O art. 130 da Constituição Estadual repete a lista dos Municípios, mas o <b>parágrafo único ficou na redação anterior à EC 108/2020</b>: \"três quartos, no mínimo\" pelo valor adicionado e \"até um quarto\" por lei estadual. Hoje vale a CF: <b>65%</b> e <b>até 35%</b>, com 10 pontos para educação. O texto estadual também não fala do IBS. Na prova \"segundo a CF\", use os números novos."
+      },
+      {
+       "t": "lei",
+       "ref": "Constituição do Maranhão, art. 130, parágrafo único",
+       "texto": "Parágrafo único. As parcelas de receitas pertencentes aos Municípios, mencionadas no inciso IV, serão creditadas conforme os seguintes critérios:\nI - ==três quartos, no mínimo==, na proporção do valor adicionado nas operações relativas à circulação de mercadorias e nas prestações de serviços, realizadas em seus territórios;"
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 1.293.453, Plenário, 11/10/2021 (repercussão geral, Tema 1.130)",
+       "tese": "Pertence ao Município, aos Estados e ao Distrito Federal a titularidade das receitas arrecadadas a título de imposto de renda retido na fonte incidente sobre valores pagos por eles, suas autarquias e fundações a pessoas físicas ou jurídicas contratadas para a prestação de bens ou serviços, conforme disposto nos arts. 158, I, e 157, I, da Constituição Federal."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 447",
+       "tese": "Os Estados e o Distrito Federal são partes legítimas na ação de restituição de imposto de renda retido na fonte proposta por seus servidores."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 5.628, Plenário, 24/08/2020",
+       "tese": "O art. 76 do ADCT, na redação dada pela EC 93/2016, não autoriza a dedução do percentual de desvinculação de receitas do montante a ser transferido aos Estados e Municípios em decorrência das normas constitucionais de repartição de receitas. Fonte: ementa transcrita no material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADPF 523, Plenário, 08/02/2021",
+       "tese": "Instituída por emenda constitucional, não adstrita aos mesmos limites normativos e semânticos da legislação infraconstitucional, a DRU não é assimilável à espécie tributária objeto dos arts. 154, I, e 157, II, da Constituição Federal. Fonte: ementa transcrita no material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 553/RJ, Plenário, 13/06/2018 (Info 906)",
+       "tese": "Síntese do material EBEJI: são inconstitucionais as normas que vinculam parcelas das receitas tributárias a órgãos, fundos ou despesas, por violarem a não afetação dos impostos (art. 167, IV); caiu o dispositivo da Constituição do RJ que destinava recursos do FPE a fundo estadual."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 5.069/DF, Plenário, 19/06/2023 (Info 1099)",
+       "tese": "É inconstitucional norma de lei complementar que distribui os recursos do Fundo de Participação dos Estados e do Distrito Federal (FPE) entre esses entes da Federação sem a devida promoção do respectivo equilíbrio socioeconômico. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 705.423, Plenário, 23/11/2016 (repercussão geral)",
+       "tese": "Síntese do material EBEJI: as regras de repartição não alteram a competência tributária; a repartição, direta ou indireta, tem por objeto os recursos efetivamente arrecadados, não os potencialmente arrecadáveis, de modo que a concessão de benefícios fiscais pelo ente competente é legítima."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 1.288.634, Plenário (repercussão geral)",
+       "tese": "Síntese do material EBEJI: a obrigação de transferir a quota municipal do ICMS só surge com o efetivo recolhimento do tributo."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 401.953, Plenário, 16/05/2007 (Info 467)",
+       "tese": "Síntese do material EBEJI: a lei estadual que fixa critérios para a parcela do ICMS dos Municípios tem limites; é vedado critério desarrazoado, como excluir totalmente um Município da participação."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "REsp 1.894.736/PR, Primeira Turma, 21/09/2021",
+       "tese": "O repasse referente à participação que o município faz jus sobre o ICMS compensado com precatório se dá com a aceitação desse último com forma de quitação do crédito tributário, não estando condicionado (o repasse) ao momento em que o crédito estampado no precatório for efetivamente disponibilizado em espécie, segundo a ordem cronológica. Fonte: ementa transcrita no material EBEJI."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Aqui a FCC é <b>quase só números e destinatários</b> do texto literal dos arts. 153, § 5º, 157 a 162. Os truques: trocar 50% por 25% (IPVA x ICMS), dizer que o Município reparte com o Estado, incluir taxa ou ITCMD na repartição, esquecer o Imposto Seletivo depois da reforma, e confundir quem calcula as quotas (TCU) com quem legisla sobre o rateio (lei complementar)."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O que pode cair assim",
+       "html": "1) IPVA: <b>50%</b> ao Município do licenciamento. 2) ICMS: <b>25%</b>; desses, <b>65% no mínimo</b> por valor adicionado e <b>até 35%</b> por lei estadual (10 pontos em educação). 3) ITR: <b>50%</b>, ou <b>100%</b> se o Município optar. 4) IOF-ouro: <b>30%</b> Estado, <b>70%</b> Município. 5) Residual: <b>20%</b> aos Estados. 6) CIDE: <b>29%</b> aos Estados; deles, 25% aos Municípios. 7) Art. 159, I: <b>50%</b> de IR, IPI e IS; FPE 21,5; FPM 22,5 + 3 de 1%. 8) Exportação: <b>10%</b> do IPI e IS; teto de 20% por Estado. 9) IR-fonte de servidor estadual: do <b>Estado</b>, réu na restituição (Súmula 447). 10) Reter repasse: proibido, salvo crédito do ente ou mínimo da saúde. 11) Isenção federal reduz o FPM: <b>válida</b>. 12) DRU: não reduz repasse da CIDE, nem vira imposto residual."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "Pertencem aos Municípios 25% do produto da arrecadação do IPVA relativo aos veículos licenciados em seus territórios.",
+         "v": false,
+         "porque": "São 50% (art. 158, III). Os 25% são do ICMS e do IBS."
+        },
+        {
+         "texto": "Os Municípios devem repassar aos Estados parte da arrecadação do ISS.",
+         "v": false,
+         "porque": "A repartição vai sempre do ente maior para o menor; impostos municipais não se repartem."
+        },
+        {
+         "texto": "O Município que optar por fiscalizar e cobrar o ITR ficará com a totalidade da arrecadação relativa aos imóveis nele situados.",
+         "v": true,
+         "porque": "Arts. 158, II e 153, § 4º, III."
+        },
+        {
+         "texto": "Do IOF incidente sobre o ouro ativo financeiro, 70% pertencem ao Estado de origem.",
+         "v": false,
+         "porque": "Ao Estado, 30%; ao Município de origem, 70% (art. 153, § 5º)."
+        },
+        {
+         "texto": "A União entregará 50% da arrecadação do IR, do IPI e do Imposto Seletivo aos fundos e programas do art. 159, I, excluído o IR retido na fonte pertencente a Estados, DF e Municípios.",
+         "v": true,
+         "porque": "Art. 159, I e § 1º."
+        },
+        {
+         "texto": "Cabe ao Tribunal de Contas da União fixar, por resolução, os critérios de rateio do FPE e do FPM.",
+         "v": false,
+         "porque": "Os critérios são de lei complementar (art. 161, II); o TCU só calcula as quotas."
+        },
+        {
+         "texto": "É vedado à União condicionar a entrega de recursos do FPE ao pagamento de créditos de suas autarquias.",
+         "v": false,
+         "porque": "Art. 160, § 1º, I permite condicionar, inclusive aos créditos das autarquias."
+        },
+        {
+         "texto": "A concessão de isenção de IR pela União, que reduz o FPM, viola o direito dos Municípios à repartição.",
+         "v": false,
+         "porque": "A repartição recai sobre o efetivamente arrecadado (RE 705.423)."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "trib-rr-01",
+    "trib-rr-02",
+    "trib-rr-03",
+    "trib-rr-04",
+    "trib-rr-05",
+    "trib-rr-06",
+    "trib-rr-07",
+    "trib-rr-08",
+    "trib-rr-09",
+    "trib-rr-10",
+    "trib-rr-11",
+    "trib-rr-12"
+   ]
   },
   {
    "id": "B7-a06",
@@ -1992,6 +4115,58 @@
   [
    "Planta Genérica de Valores",
    "Tabela municipal de valores dos imóveis usada para calcular o IPTU."
+  ],
+  [
+   "Imunidade",
+   "Limite que a própria CF impõe à competência tributária; não incidência constitucionalmente qualificada."
+  ],
+  [
+   "Isenção",
+   "Dispensa do pagamento por lei do ente que tem a competência; o fato gerador ocorre."
+  ],
+  [
+   "Alíquota zero",
+   "Há fato gerador, mas o cálculo do tributo resulta em zero."
+  ],
+  [
+   "Imunidade recíproca",
+   "Vedação de um ente cobrar impostos sobre patrimônio, renda ou serviços de outro (art. 150, VI, a)."
+  ],
+  [
+   "Subsídio cruzado",
+   "Receita de atividades em concorrência que sustenta serviço público deficitário, como o postal."
+  ],
+  [
+   "Contribuinte de fato",
+   "Quem suporta o peso econômico do tributo embutido no preço, sem ser o devedor legal."
+  ],
+  [
+   "Imunidade condicionada",
+   "Imunidade que depende do cumprimento de requisitos de lei, como a do art. 150, VI, c."
+  ],
+  [
+   "Discriminação pela fonte",
+   "Técnica de dar a cada ente os seus próprios tributos (competência)."
+  ],
+  [
+   "Discriminação pelo produto",
+   "Técnica de o ente maior entregar ao menor parte do que arrecadou; o mesmo que repartição de receitas."
+  ],
+  [
+   "Valor adicionado",
+   "Valor das saídas de mercadorias e serviços no território do Município, menos as entradas, no ano (LC 63/1990)."
+  ],
+  [
+   "FPE e FPM",
+   "Fundos de Participação dos Estados e DF e dos Municípios, formados por parte do IR, do IPI e do Imposto Seletivo."
+  ],
+  [
+   "DRU",
+   "Desvinculação de Receitas da União (ADCT, art. 76): libera parte das contribuições, taxas e CIDE de destinação específica."
+  ],
+  [
+   "Não afetação",
+   "Proibição de vincular receita de imposto a órgão, fundo ou despesa (art. 167, IV)."
   ]
  ]
 }

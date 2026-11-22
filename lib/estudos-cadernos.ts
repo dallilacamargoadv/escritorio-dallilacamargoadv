@@ -22,7 +22,31 @@ export type Bloco =
   | { t: "alternar"; opcoes: { rotulo: string; modo: "dentro" | "fora"; caixas: { titulo: string; sub: string }[]; texto: string }[] }
   | { t: "vf"; itens: { texto: string; v: boolean; porque: string }[] }
   | { t: "escada"; degraus: { titulo: string; sub: string; texto: string }[] }
-  | { t: "abrir"; cartas: { tag: string; titulo: string; texto: string }[] };
+  | { t: "abrir"; cartas: { tag: string; titulo: string; texto: string }[] }
+  | { t: "cena"; titulo?: string; altura?: number; elementos: CenaEl[]; passos: CenaPasso[] };
+
+// Cena: desenho montado por peças (coordenadas num quadro de 680 de largura) que muda a cada passo.
+export type CenaCor = "ok" | "bad" | "accent" | "blue" | "warn" | "dim";
+export interface CenaEl {
+  id: string;
+  tipo: "caixa" | "gota" | "cupula" | "seta" | "rotulo";
+  x: number;
+  y: number;
+  w?: number; // caixa e cupula: largura; seta: x final
+  h?: number; // caixa: altura; cupula: altura do arco; seta: y final
+  texto?: string;
+  sub?: string;
+  cor?: CenaCor;
+  fixo?: boolean; // sempre visível; os outros só aparecem nos passos que os mostram
+}
+export type CenaAnim = "cai" | "bate" | "pulsa" | "treme";
+export interface CenaPasso {
+  texto: string; // pode ter <b>
+  mostra?: string[];
+  anima?: Record<string, CenaAnim>;
+  move?: Record<string, [number, number]>; // deslocamento [dx, dy] do elemento neste passo
+  q?: Record<string, number>; // queda da gota (px) neste passo: onde ela bate ou some
+}
 
 export interface Secao {
   titulo: string;
