@@ -8,6 +8,7 @@ import { Cabecalho } from "@/components/estudos/ui";
 import { QuestaoClient } from "@/components/estudos/QuestaoClient";
 import type { Mapa } from "@/components/estudos/MapaDoTema";
 import mapasJson from "@/content/estudos/mapas.json";
+import { SUBTEMAS } from "@/lib/estudos-subtemas";
 
 const MAPAS = mapasJson as Record<string, Mapa>;
 
@@ -24,6 +25,7 @@ export default async function QuestoesPage(props: PageProps<"/admin/estudos/ques
   }
   const materia = s("materia");
   const tema = s("tema");
+  const subtema = s("subtema");
   const status: Status = s("status") === "nao_respondidas" || s("status") === "erradas" ? (s("status") as Status) : "todas";
 
   const ultima = new Map<string, (typeof respostas)[number]>();
@@ -33,6 +35,7 @@ export default async function QuestoesPage(props: PageProps<"/admin/estudos/ques
   const daMateria = QUESTOES.filter((q) => !materia || q.materia_id === materia);
   const lista = daMateria.filter((q) => {
     if (tema && q.tema !== tema) return false;
+    if (subtema && q.subtema !== subtema) return false;
     if (status === "nao_respondidas") return !ultima.has(q.id);
     if (status === "erradas") return erradaAlgumaVez.has(q.id);
     return true;
@@ -48,6 +51,9 @@ export default async function QuestoesPage(props: PageProps<"/admin/estudos/ques
     total: QUESTOES.filter((q) => q.materia_id === id).length,
   }));
   const temas = [...new Set(daMateria.map((q) => q.tema))].sort((a, b) => a.localeCompare(b, "pt-BR"));
+  const subtemas = [...new Set(daMateria.filter((q) => !tema || q.tema === tema).map((q) => q.subtema).filter((k): k is string => !!k && !!SUBTEMAS[k]))]
+    .map((k) => ({ k, nome: SUBTEMAS[k].nome }))
+    .sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"));
   const historico = atual ? respostas.filter((r) => r.questao_id === atual.id).slice(-5).reverse() : [];
 
   return (
@@ -60,9 +66,10 @@ export default async function QuestoesPage(props: PageProps<"/admin/estudos/ques
         key={atual?.id ?? "vazio"}
         questao={atual ? QUESTAO_POR_ID.get(atual.id)! : null}
         ids={ids}
-        filtros={{ materia, tema, status }}
+        filtros={{ materia, tema, subtema, status }}
         materias={materias}
         temas={temas}
+        subtemas={subtemas}
         historico={historico}
         mapa={atual ? (MAPAS[`${atual.mat}|${atual.tema}`] ?? null) : null}
         revisao={revisao}

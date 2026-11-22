@@ -1,4 +1,5 @@
 import questoesJson from "@/content/estudos/questoes.json";
+import { SUBTEMA_DA_QUESTAO } from "@/lib/estudos-subtemas";
 import cartoesJson from "@/content/estudos/cartoes.json";
 import type { Classificacao, Questao, Resposta } from "@/lib/estudos-desempenho";
 import { normalizarLabConfig, type LabConfig } from "@/lib/estudos-laboratorio";
@@ -141,7 +142,7 @@ export async function marcarItem(id: string, feito: boolean): Promise<Cronograma
 /* ===================== QUESTÕES, RESPOSTAS E CALENDÁRIO DO CONCURSO ===================== */
 
 /** Banco de questões (fica só no servidor: o arquivo é grande para mandar inteiro ao navegador). */
-export const QUESTOES = questoesJson as Questao[];
+export const QUESTOES = (questoesJson as Questao[]).map((q) => (SUBTEMA_DA_QUESTAO[q.id] ? { ...q, subtema: SUBTEMA_DA_QUESTAO[q.id] } : q));
 export const QUESTAO_POR_ID = new Map(QUESTOES.map((q) => [q.id, q]));
 
 export async function getRespostas(): Promise<Resposta[]> {

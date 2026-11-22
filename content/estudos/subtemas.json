@@ -1,0 +1,582 @@
+{
+  "subtemas": {
+    "adm-descentralizacao": {
+      "nome": "Descentralização × desconcentração",
+      "tema": "Organização administrativa",
+      "revisao": "Descentralizar é passar a atividade para OUTRA pessoa jurídica: por outorga (lei cria a entidade e transfere a titularidade) ou por delegação (contrato ou ato transfere só a execução). Desconcentrar é repartir competência DENTRO da mesma pessoa, criando órgãos sem personalidade, o que também acontece dentro de uma autarquia. Truque: conte as pessoas jurídicas."
+    },
+    "adm-delegacao": {
+      "nome": "Delegação de serviço público a particular",
+      "tema": "Organização administrativa",
+      "revisao": "Lei 8.987/1995, art. 2º: a concessão vai a pessoa jurídica ou consórcio de empresas, por prazo determinado (inciso II); a permissão vai a pessoa física ou jurídica, a título precário (inciso IV). A autorização também admite pessoa física. Outorga legal é para entidade da administração indireta. Concessão: só PJ."
+    },
+    "adm-controle": {
+      "nome": "Controle finalístico × hierárquico",
+      "tema": "Organização administrativa",
+      "revisao": "Entre o ente e a entidade da indireta há vinculação, não subordinação. O controle é finalístico (tutela ou supervisão): limitado e só nos termos da lei. Rever de ofício, por mérito, a decisão de uma autarquia sem previsão legal é tratá-la como órgão subordinado, e isso é inválido. Autarquia: vinculada, nunca subordinada."
+    },
+    "adm-orgaos": {
+      "nome": "Órgãos públicos e teoria do órgão",
+      "tema": "Organização administrativa",
+      "revisao": "Pela teoria do órgão, o ato do agente é imputado diretamente à pessoa jurídica. Órgão não tem personalidade: a ação vai contra o ente, não contra a Secretaria ou a Assembleia. Exceção: órgãos independentes e autônomos têm capacidade processual para defender as próprias prerrogativas (Súmula 525 do STJ, para a Câmara de Vereadores)."
+    },
+    "adm-decreto": {
+      "nome": "Decreto autônomo na organização",
+      "tema": "Organização administrativa",
+      "revisao": "CF, art. 84, VI: por decreto, o chefe do Executivo dispõe sobre a organização e o funcionamento da administração, quando não implicar aumento de despesa nem criação ou extinção de órgãos públicos (alínea a), e extingue funções ou cargos públicos, quando vagos (alínea b). Criar órgão, mesmo sem despesa, exige lei."
+    },
+    "adm-sentidos": {
+      "nome": "Função administrativa e sentidos da Administração",
+      "tema": "Organização administrativa",
+      "revisao": "Sentido formal (subjetivo) é QUEM administra: órgãos e entidades. Sentido material (objetivo) é O QUE se faz: serviço público, polícia administrativa, fomento e intervenção. O Estado-empresário (estatal que explora atividade econômica) não é administração em sentido material. Só as pessoas políticas (União, Estados, DF e Municípios) têm autonomia política."
+    },
+    "adm-poderes": {
+      "nome": "Separação dos Poderes na organização",
+      "tema": "Organização administrativa",
+      "revisao": "Segundo o STF, a lei não pode exigir autorização prévia da Assembleia para atos de gestão do Executivo (ADI 4.348) nem impor a indicação de membro de órgão estadual pela OAB (ADI 4.579). Interferir na gestão viola a separação dos Poderes."
+    },
+    "adm-cargos": {
+      "nome": "Transformação de cargos",
+      "tema": "Organização administrativa",
+      "revisao": "Mudar o requisito de escolaridade de um cargo é possível. Mas aproveitar os servidores do cargo de nível médio no novo cargo de nível superior é forma de provimento derivado sem concurso, que o STF não admite (ADI 6.355 e Tema 697)."
+    },
+    "adm-criacao": {
+      "nome": "Criação de entidades: lei cria × lei autoriza",
+      "tema": "Organização administrativa",
+      "revisao": "CF, art. 37, XIX: somente por lei específica poderá ser CRIADA autarquia e AUTORIZADA a instituição de empresa pública, de sociedade de economia mista e de fundação, cabendo à lei complementar definir as áreas de atuação da fundação. É lei específica (ordinária), não complementar. Inciso XX: as subsidiárias dependem de autorização legislativa, e o STF admite autorização genérica na lei da matriz (ADI 1.649)."
+    },
+    "adm-autarquias": {
+      "nome": "Autarquias e agências",
+      "tema": "Organização administrativa",
+      "revisao": "A autarquia é pessoa jurídica de direito público criada por lei, com prerrogativas da Fazenda: prazo em dobro (CPC, art. 183) e imunidade recíproca nas finalidades essenciais (CF, art. 150, § 2º). A agência reguladora é autarquia de regime especial (Lei 13.848/2019). A agência executiva é uma qualificação dada à autarquia ou fundação que firma contrato de desempenho e cumpre os requisitos legais."
+    },
+    "adm-fundacoes": {
+      "nome": "Fundações públicas",
+      "tema": "Organização administrativa",
+      "revisao": "A fundação de direito público é espécie de autarquia: nasce com a lei e tem as prerrogativas da Fazenda. A de direito privado só tem a instituição autorizada por lei e nasce com o registro (CC, art. 45). Para o STF (Tema 545), o regime depende do estatuto e das atividades. A de direito privado não tem prazo em dobro, nem execução fiscal, nem a curadoria do MP do art. 66 do CC, e a estabilidade do art. 19 do ADCT é só das fundações autárquicas."
+    },
+    "adm-estatais": {
+      "nome": "Empresas públicas e sociedades de economia mista",
+      "tema": "Organização administrativa",
+      "revisao": "Empresa pública federal litiga na Justiça Federal (CF, art. 109, I); a sociedade de economia mista, na Justiça Estadual (Súmula 556 do STF). As estatais seguem a Lei 13.303/2016, não a Lei 14.133/2021 (art. 1º, § 1º). O art. 37, § 6º da CF alcança só as prestadoras de serviço público. Alienar o controle da matriz exige lei e licitação; o da subsidiária não exige nenhuma das duas (ADI 5.624 MC-Ref)."
+    },
+    "adm-consorcios": {
+      "nome": "Consórcios públicos",
+      "tema": "Organização administrativa",
+      "revisao": "Lei 11.107/2005: o consórcio de direito público é associação pública, adquire personalidade com a vigência das leis de ratificação do protocolo de intenções e integra a administração indireta de todos os entes consorciados (art. 6º, I, e § 1º)."
+    },
+    "adm-terceiro-setor": {
+      "nome": "Terceiro setor (OS, OSCIP e parcerias)",
+      "tema": "Organização administrativa",
+      "revisao": "A qualificação como Organização Social é discricionária. A qualificação como OSCIP é ato vinculado: cumpridos os requisitos da Lei 9.790/1999, ela é concedida. As parcerias com organizações da sociedade civil seguem a Lei 13.019/2014."
+    },
+    "pt-se": {
+      "nome": "Partícula SE: voz passiva sintética × índice de indeterminação",
+      "tema": "Concordância verbal",
+      "revisao": "Verbo transitivo direto + SE = voz passiva sintética: o termo seguinte é o sujeito e o verbo concorda com ele (Alugam-se salas = Salas são alugadas). Verbo com preposição + SE = índice de indeterminação: o verbo fica no singular (Precisa-se de analistas). Teste: passe para a voz passiva analítica."
+    },
+    "pt-haver": {
+      "nome": "Haver, fazer e existir",
+      "tema": "Concordância verbal",
+      "revisao": "Haver no sentido de existir e fazer indicando tempo são impessoais: ficam no singular e passam isso ao auxiliar (Houve recursos; Faz três anos; Deve haver dúvidas). Existir é pessoal e concorda com o sujeito, mesmo quando ele vem depois (Existem, entre os candidatos, muitas dúvidas)."
+    },
+    "pt-posposto": {
+      "nome": "Sujeito posposto e sujeito oracional",
+      "tema": "Concordância verbal",
+      "revisao": "Sujeito depois do verbo continua sendo sujeito: ache-o e faça o verbo concordar com ele (Faltavam três dias). Quando o sujeito é uma oração (representar judicialmente o Estado), o verbo fica no singular."
+    },
+    "pt-especiais": {
+      "nome": "Um dos que e fui eu que",
+      "tema": "Concordância verbal",
+      "revisao": "Um dos que + verbo no plural (Ele foi um dos que mais se dedicaram). Com o pronome que, o verbo concorda com o antecedente (Fui eu que redigi). Na mesma questão a banca mistura: fazer indicando tempo é impessoal (Faz dois anos) e existir é pessoal (Devem existir soluções)."
+    },
+    "pt-ser": {
+      "nome": "Concordância do verbo ser",
+      "tema": "Concordância verbal",
+      "revisao": "Com sujeito tudo, isto, isso, aquilo ou o e predicativo no plural, o verbo ser concorda preferencialmente com o predicativo (Tudo são flores). Com distância, datas e horas, ser concorda com o numeral: São dez quilômetros; Hoje são dez (ou Hoje é dia dez); Eram duas horas."
+    },
+    "pt-correlacao": {
+      "nome": "Correlação: subjuntivo + futuro do presente ou do pretérito",
+      "tema": "Tempos e modos verbais",
+      "revisao": "Se ou caso + imperfeito do subjuntivo pede futuro do pretérito (Se publicasse, começariam). Se ou quando + futuro do subjuntivo pede futuro do presente (Se publicar, começarão; Quando chegar, analisará). Oração principal no pretérito pede imperfeito do subjuntivo (Esperava-se que apresentasse); no presente, presente do subjuntivo (É provável que seja julgado)."
+    },
+    "pt-mais-que-perfeito": {
+      "nome": "Pretérito mais-que-perfeito",
+      "tema": "Tempos e modos verbais",
+      "revisao": "O mais-que-perfeito indica um passado anterior a outro passado. A forma simples (decidira) equivale à composta (tinha decidido ou havia decidido)."
+    },
+    "cpc-honorarios-85": {
+      "nome": "Honorários: regras do art. 85 (§§ 7º a 19)",
+      "tema": "Honorários e despesas",
+      "revisao": "CPC, art. 85: não há honorários no cumprimento de sentença contra a Fazenda que gere precatório, se não houver impugnação (§ 7º). No recurso, o tribunal majora, mas sem ultrapassar os limites dos §§ 2º e 3º (§ 11). É vedada a compensação na sucumbência parcial (§ 14). Fixados em quantia certa, os juros correm do trânsito em julgado (§ 16). Os advogados públicos recebem honorários de sucumbência, nos termos da lei (§ 19)."
+    },
+    "cpc-honorarios-fazenda": {
+      "nome": "Honorários contra a Fazenda: faixas do art. 85, § 3º",
+      "tema": "Honorários e despesas",
+      "revisao": "CPC, art. 85, § 3º, em salários-mínimos: até 200, de 10 a 20%; acima de 200 até 2.000, de 8 a 10%; acima de 2.000 até 20.000, de 5 a 8%; acima de 20.000 até 100.000, de 3 a 5%; acima de 100.000, de 1 a 3%. Quanto maior a faixa, menor o percentual. E a faixa é escalonada: aplica-se a inicial e, no que exceder, a seguinte (§ 5º)."
+    },
+    "cpc-despesas": {
+      "nome": "Despesas dos atos da Fazenda (art. 91)",
+      "tema": "Honorários e despesas",
+      "revisao": "CPC, art. 91: as despesas dos atos processuais praticados a requerimento da Fazenda Pública, do Ministério Público ou da Defensoria Pública serão pagas ao final pelo vencido."
+    },
+    "trib-credito": {
+      "nome": "Suspensão × extinção × exclusão do crédito",
+      "tema": "Crédito tributário",
+      "revisao": "CTN, art. 151 (suspendem): moratória, depósito integral, reclamações e recursos administrativos, liminar em MS, liminar ou tutela em outras ações, parcelamento e as hipóteses novas (arbitragem tributária, transação aceita, mediação e seguro garantia ou fiança aceitos). Art. 156 (extinguem): pagamento, compensação, transação, remissão, conversão de depósito em renda, decisão judicial transitada e dação de imóveis, entre outras. Art. 175 (excluem): só isenção e anistia. Remissão perdoa a dívida e extingue; anistia perdoa a penalidade e exclui."
+    },
+    "trib-anterioridade": {
+      "nome": "Anterioridade anual e noventena (exceções do art. 150, § 1º)",
+      "tema": "Limitações ao poder de tributar",
+      "revisao": "CF, art. 150, III, b e c: em regra, o aumento só vale no exercício seguinte E depois de 90 dias da publicação; vale a data mais distante. Por isso o ICMS aumentado em dezembro não é cobrado em 1º de janeiro: espera os 90 dias. O § 1º tira da anual: II, IE, IPI, IOF, empréstimo compulsório de calamidade ou guerra (art. 148, I) e impostos extraordinários. Tira da noventena: II, IE, IR, IOF, os mesmos dois, e a fixação da base de cálculo do IPVA e do IPTU (que esperam só o exercício seguinte). IPI respeita a noventena; IR respeita só a anual."
+    },
+    "trib-legalidade": {
+      "nome": "Legalidade e benefícios fiscais",
+      "tema": "Limitações ao poder de tributar",
+      "revisao": "CF, art. 150, § 6º: subsídio, isenção, redução de base de cálculo, crédito presumido, anistia ou remissão só por lei específica, sem prejuízo do art. 155, § 2º, XII, g (no ICMS, também convênio). Decreto não concede remissão. Já o prazo de pagamento pode ser fixado por ato infralegal."
+    },
+    "trib-confisco": {
+      "nome": "Não confisco nas multas",
+      "tema": "Limitações ao poder de tributar",
+      "revisao": "O não confisco (CF, art. 150, IV) também limita as multas. Para o STF (Tema 863), a multa de ofício não pode passar de 100% do tributo devido."
+    },
+    "trib-heteronoma": {
+      "nome": "Isenção heterônoma",
+      "tema": "Limitações ao poder de tributar",
+      "revisao": "CF, art. 151, III: a União não pode isentar tributos de Estados, DF e Municípios. Não são heterônomas: a isenção dada por tratado internacional firmado pela República (RE 229.096) e a lei complementar federal que exclui do ISS as exportações de serviços (art. 156, § 3º, II)."
+    },
+    "trib-isonomia": {
+      "nome": "Isonomia tributária",
+      "tema": "Limitações ao poder de tributar",
+      "revisao": "CF, art. 150, II: é vedado tratamento desigual entre contribuintes em situação equivalente. Para o STF (Tema 1.174), morar no exterior não tira do aposentado a faixa de isenção e a progressividade do IR."
+    },
+    "trib-trafego": {
+      "nome": "Liberdade de tráfego e não discriminação",
+      "tema": "Limitações ao poder de tributar",
+      "revisao": "CF, art. 150, V: não se limita o tráfego de pessoas ou bens por tributos interestaduais ou intermunicipais, ressalvado o pedágio. O pedágio atual tem natureza de tarifa (ADI 800). Art. 152: Estados e Municípios não podem diferenciar bens pela procedência ou pelo destino."
+    },
+    "cf-gratuidade": {
+      "nome": "Gratuidade: só para pobres × para todos",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, LXXVI: o registro civil de nascimento e a certidão de óbito são gratuitos para os reconhecidamente pobres, na forma da lei. LXXVII: habeas corpus, habeas data e, na forma da lei, os atos necessários ao exercício da cidadania são gratuitos para todos. A Lei 9.534/1997 ampliou a gratuidade do registro, mas a FCC cobra o texto da CF."
+    },
+    "cf-prisao-civil": {
+      "nome": "Prisão civil por dívida",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, LXVII: não haverá prisão civil por dívida, salvo a do responsável pelo inadimplemento VOLUNTÁRIO E INESCUSÁVEL de obrigação alimentícia e a do depositário infiel. O texto ainda cita o depositário, mas a Súmula Vinculante 25 proíbe essa prisão. Devedor de alimentos sem renda, por motivo comprovado, não é preso; dívida comum nunca gera prisão."
+    },
+    "cf-tratados": {
+      "nome": "Tratados de direitos humanos (art. 5º, § 3º)",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, § 3º: tratados sobre direitos humanos aprovados em cada Casa, em dois turnos, por três quintos dos votos dos respectivos membros, equivalem às emendas constitucionais. Contas: três quintos da Câmara = 308; do Senado = 49. Mesmo com esse rito, o tratado é promulgado por decreto presidencial. § 1º: as normas de direitos fundamentais têm aplicação imediata."
+    },
+    "cf-casa": {
+      "nome": "Inviolabilidade do domicílio",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, XI: ninguém entra na casa sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial. Flagrante, desastre e socorro: a qualquer hora. Ordem judicial: só de dia. A FCC desloca o durante o dia para o flagrante."
+    },
+    "cf-reuniao": {
+      "nome": "Reunião e associação",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, XVI: reunião pacífica, sem armas, em local aberto ao público, independe de autorização; exige só prévio aviso à autoridade. XVIII: criar associação independe de autorização. XIX: associação só é dissolvida compulsoriamente ou suspensa por decisão judicial, e a dissolução exige trânsito em julgado. XX: ninguém é obrigado a associar-se ou a permanecer associado."
+    },
+    "cf-crimes-severos": {
+      "nome": "Crimes inafiançáveis, imprescritíveis e sem graça",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, XLII e XLIV: imprescritíveis (e inafiançáveis) são só o racismo e a ação de grupos armados contra a ordem constitucional e o Estado Democrático. XLIII: tortura, tráfico, terrorismo e hediondos são inafiançáveis e insuscetíveis de graça ou anistia, mas prescrevem; respondem mandantes, executores e os que, podendo evitá-los, se omitirem."
+    },
+    "cf-requisicao-pena": {
+      "nome": "Requisição, pena e sucessores",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, XXV: na requisição, por iminente perigo público, a autoridade USA a propriedade particular, com indenização ulterior, se houver dano. XLV: nenhuma pena passa da pessoa do condenado, mas a obrigação de reparar o dano e o perdimento de bens podem ir aos sucessores, até o limite do patrimônio transferido."
+    },
+    "cf-extradicao": {
+      "nome": "Extradição",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, LI: nenhum brasileiro será extraditado, salvo o naturalizado, por crime comum praticado antes da naturalização ou por comprovado envolvimento em tráfico de drogas. LII: não se extradita estrangeiro por crime político ou de opinião. Brasileiro nato nunca é extraditado."
+    },
+    "cf-preso": {
+      "nome": "Garantias do preso e súmulas vinculantes",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, LXIII: o preso será informado de seus direitos, entre eles o de permanecer calado, com assistência da família e de advogado. LVII: ninguém é considerado culpado até o trânsito em julgado da sentença penal condenatória. SV 11: algemas só em caso de resistência, fundado receio de fuga ou perigo, com justificativa por escrito. SV 14: o defensor tem acesso aos elementos de prova já documentados no inquérito."
+    },
+    "cf-esferas": {
+      "nome": "Teoria das esferas (privacidade)",
+      "tema": "Direitos fundamentais",
+      "revisao": "A teoria das esferas vem da doutrina e da jurisprudência alemãs: a vida privada é vista em círculos, do mais interno ao mais externo (íntima ou secreta, privada e social). Quanto mais íntima a informação, maior a proteção."
+    },
+    "cf-titularidade": {
+      "nome": "Titularidade, rol aberto e restrições",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, § 2º: o rol de direitos não é taxativo; outros decorrem do regime, dos princípios e dos tratados. Pessoas jurídicas e estrangeiros também são titulares, no que for compatível. Nenhum direito é absoluto: pode ser restringido pela própria CF ou por lei autorizada, respeitados o núcleo essencial e a proporcionalidade."
+    },
+    "cf-dimensao-objetiva": {
+      "nome": "Dimensão subjetiva × objetiva",
+      "tema": "Direitos fundamentais",
+      "revisao": "Dimensão subjetiva: o direito do indivíduo de exigir algo do Estado. Dimensão objetiva: os direitos como valores que impõem ao Estado o dever de proteger e promover, orientando legislador, administrador e juiz (eficácia dirigente e eficácia irradiante)."
+    },
+    "cf-classificacao-df": {
+      "nome": "Individuais, sociais e políticos",
+      "tema": "Direitos fundamentais",
+      "revisao": "Ir e vir é direito individual (art. 5º, XV). Moradia é direito social (art. 6º, incluído pela EC 26/2000). Sufrágio universal é direito político (art. 14)."
+    },
+    "cf-imprensa": {
+      "nome": "Liberdade de imprensa",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, IV, IX e XIV: sem censura prévia, mas com responsabilidade posterior (X: indenização por dano à honra e à imagem). Para o STF, a verdade apurada com diligência é protegida; a prova da verdade afasta a indenização. Descuido com a apuração não é protegido."
+    },
+    "cf-limites-reforma": {
+      "nome": "Limites ao poder de reforma",
+      "tema": "Poder constituinte",
+      "revisao": "CF, art. 60: a PEC pode ser proposta por um terço, no mínimo, da Câmara ou do Senado (I; no Senado, 27). § 1º: não há emenda durante intervenção federal, estado de defesa ou estado de sítio. § 5º: PEC rejeitada ou prejudicada não volta na mesma sessão legislativa, sem exceção. Além das cláusulas pétreas do § 4º, a doutrina cobrada pela FCC vê limite implícito no presidencialismo e na república confirmados no plebiscito de 1993 (ADCT, art. 2º)."
+    },
+    "cf-derivado": {
+      "nome": "Reforma, revisão, decorrente e mutação",
+      "tema": "Poder constituinte",
+      "revisao": "Mudança FORMAL do texto: reforma (emendas, art. 60) e revisão (ADCT, art. 3º). Mudança INFORMAL do sentido, sem mudar o texto: mutação constitucional. O poder decorrente é o dos Estados para fazer suas Constituições; Município não tem. O revisor também está preso às cláusulas pétreas."
+    },
+    "cf-intertemporal": {
+      "nome": "Constituição nova × normas antigas",
+      "tema": "Teoria da Constituição",
+      "revisao": "Lei antiga compatível com a nova Constituição: recepção. Lei antiga incompatível: revogação (não recepção), e no controle concentrado o caminho é a ADPF. Norma da Constituição antiga que continua valendo como lei: desconstitucionalização, que no Brasil só ocorre com previsão expressa. A norma originária tem retroatividade mínima: alcança os efeitos futuros de fatos passados (RE 140.499)."
+    },
+    "cf-originarias": {
+      "nome": "Normas originárias e controle",
+      "tema": "Teoria da Constituição",
+      "revisao": "O STF não admite controle de constitucionalidade sobre norma ORIGINÁRIA da Constituição (ADI 815): não existem normas constitucionais originárias inconstitucionais (tese de Bachof rejeitada). Norma criada por EMENDA pode ser controlada, à luz das cláusulas pétreas."
+    },
+    "cpc-perpetuacao": {
+      "nome": "Momento da competência (art. 43)",
+      "tema": "Competência",
+      "revisao": "CPC, art. 43: a competência é fixada no registro ou na distribuição da petição inicial. Mudanças posteriores de fato ou de direito são irrelevantes, salvo quando suprimirem órgão judiciário ou alterarem a competência ABSOLUTA. O marco não é a citação nem o despacho."
+    },
+    "cpc-foro-estado": {
+      "nome": "Foro das causas do Estado (art. 52)",
+      "tema": "Competência",
+      "revisao": "CPC, art. 52: quando o Estado é AUTOR, o foro é o do domicílio do réu. Quando o Estado é RÉU, o autor escolhe: o próprio domicílio, o local do ato ou fato, a situação da coisa ou a capital do Estado."
+    },
+    "cpc-eleicao-foro": {
+      "nome": "Eleição de foro e incompetência relativa",
+      "tema": "Competência",
+      "revisao": "CPC, art. 62: matéria, pessoa e função são inderrogáveis. Art. 63: só valor e território se modificam por eleição de foro, que exige instrumento escrito, referência expressa ao negócio e pertinência com o domicílio de uma das partes ou o local da obrigação (§ 1º). O foro contratual obriga herdeiros (§ 2º). Antes da citação, o juiz pode declarar abusiva a cláusula e remeter ao foro do réu (§ 3º); depois, o réu alega na contestação, sob pena de preclusão (§ 4º). Art. 65: a relativa se prorroga se o réu não alegar em preliminar."
+    },
+    "cpc-conexao-continencia": {
+      "nome": "Conexão × continência (arts. 55 a 57)",
+      "tema": "Competência",
+      "revisao": "Conexão (art. 55): pedido OU causa de pedir comum; os processos se reúnem, salvo se um já foi sentenciado. Continência (art. 56): mesmas partes e mesma causa de pedir, e o pedido de uma é mais amplo e abrange o da outra. Art. 57: se a continente (a maior) veio ANTES, a contida é extinta sem resolução de mérito; se a contida veio antes, as ações são necessariamente reunidas."
+    },
+    "pt-concessivas": {
+      "nome": "Conjunções concessivas",
+      "tema": "Conectivos",
+      "revisao": "Concessão admite um fato contrário que não impede o principal: embora, conquanto, ainda que, posto que (na norma-padrão, posto que é concessivo, não causal). Pedem subjuntivo. Não confunda: visto que e porquanto são causais; contanto que é condicional; à medida que é proporcional."
+    },
+    "pt-consequencia": {
+      "nome": "Consequência × causa × conclusão",
+      "tema": "Conectivos",
+      "revisao": "De modo que, de forma que e tanto que introduzem a CONSEQUÊNCIA (o efeito). A causa é o fato que gera o efeito. Por isso e portanto introduzem conclusão a partir do que foi dito. Finalidade seria para que."
+    },
+    "pt-adversativas": {
+      "nome": "Conjunções adversativas",
+      "tema": "Conectivos",
+      "revisao": "Mas, porém, contudo, todavia, entretanto e no entanto opõem ideias e podem substituir-se entre si sem prejuízo do sentido."
+    },
+    "cpc-intervencao": {
+      "nome": "Assistência, denunciação, chamamento e amicus curiae",
+      "tema": "Intervenção de terceiros",
+      "revisao": "CPC: a assistência simples não impede a parte de desistir, renunciar ou transigir (art. 122). Admite-se UMA única denunciação sucessiva (art. 125, § 2º). O chamamento ao processo é requerido pelo RÉU (art. 130). Amicus curiae: admitido por decisão irrecorrível, não altera competência e só recorre por embargos de declaração e da decisão do IRDR (art. 138, §§ 1º e 3º)."
+    },
+    "cpc-idpj": {
+      "nome": "Desconsideração da personalidade jurídica (IDPJ)",
+      "tema": "Intervenção de terceiros",
+      "revisao": "CPC, arts. 133 a 136: instaurado a pedido da parte ou do MP, nunca de ofício. Cabe em todas as fases do conhecimento, no cumprimento de sentença e na execução de título extrajudicial. Pedido na petição inicial dispensa o incidente, e o sócio é citado (art. 134, § 2º). Prazo de manifestação: 15 dias. Resolvido por decisão interlocutória; se do relator, cabe agravo interno."
+    },
+    "lef-inicial": {
+      "nome": "Petição inicial da execução fiscal (LEF, art. 6º)",
+      "tema": "Petição inicial e citação",
+      "revisao": "Lei 6.830/1980, art. 6º: a inicial indica APENAS o juiz, o pedido e o requerimento de citação, e é instruída com a CDA, que pode formar com ela um único documento. A Fazenda não precisa requerer provas na inicial (§ 3º). O valor da causa é o da dívida da certidão, com os encargos legais."
+    },
+    "lef-citacao": {
+      "nome": "Citação na execução fiscal: prazos (LEF, art. 8º)",
+      "tema": "Petição inicial e citação",
+      "revisao": "Lei 6.830/1980, art. 8º: o executado é citado para, em 5 dias, pagar ou garantir a execução. O edital tem prazo de 30 dias (inciso IV), e de 60 dias se o executado estiver ausente do País (§ 1º). Não confunda: 3 dias é a execução de título extrajudicial no CPC; 15 dias é o cumprimento de sentença."
+    },
+    "cpc-contraditorio": {
+      "nome": "Contraditório e decisão-surpresa (arts. 9º e 10)",
+      "tema": "Normas fundamentais",
+      "revisao": "CPC, art. 9º: não se decide contra a parte sem ouvi-la antes, salvo tutela de urgência, tutela da evidência dos incisos II e III do art. 311 e a decisão do art. 701 (monitória). Art. 10: o juiz não decide com base em fundamento sobre o qual as partes não puderam se manifestar, AINDA QUE seja matéria de ofício (ex.: prescrição)."
+    },
+    "cpc-ordem-cronologica": {
+      "nome": "Ordem cronológica (art. 12)",
+      "tema": "Normas fundamentais",
+      "revisao": "CPC, art. 12: juízes e tribunais atendem, PREFERENCIALMENTE, à ordem cronológica de conclusão. Estão fora da regra (§ 2º): sentenças em audiência, homologatórias de acordo e de improcedência liminar; julgamentos em bloco de tese repetitiva; recursos repetitivos e IRDR; decisões dos arts. 485 e 932; embargos de declaração; agravo interno; preferências legais e metas do CNJ. Apelação não está na lista."
+    },
+    "cpc-fundamentacao": {
+      "nome": "Fundamentação das decisões (art. 489, § 1º)",
+      "tema": "Normas fundamentais",
+      "revisao": "CPC, art. 489, § 1º, V: não é fundamentada a decisão que invoca súmula ou precedente sem identificar os fundamentos determinantes nem mostrar que o caso se ajusta a eles. O dever de fazer distinção vale para os precedentes vinculantes."
+    },
+    "cpc-sistema": {
+      "nome": "Sistema processual e instrumentalidade",
+      "tema": "Normas fundamentais",
+      "revisao": "O sistema brasileiro é misto, com preponderância do dispositivo: o processo começa por iniciativa da parte e se desenvolve por impulso oficial (art. 2º), e o juiz pode determinar provas de ofício (art. 370). Instrumentalidade: não há nulidade sem prejuízo, inclusive na falta de intimação do MP (REsp 818.978)."
+    },
+    "cf-concorrente": {
+      "nome": "Competência comum × concorrente (arts. 23 e 24)",
+      "tema": "Competências",
+      "revisao": "CF, art. 24: na concorrente, a União fixa só normas gerais (§ 1º), sem excluir a suplementar dos Estados (§ 2º). Sem lei federal, os Estados legislam plenamente (§ 3º). A lei federal posterior SUSPENDE a eficácia da lei estadual no que for contrário; não revoga (§ 4º). Art. 23 é competência comum (administrativa), por exemplo proteger o meio ambiente. Processual é privativa da União (art. 22); procedimentos em matéria processual são concorrentes (art. 24)."
+    },
+    "cf-competencias-sv": {
+      "nome": "Competências e súmulas vinculantes",
+      "tema": "Competências",
+      "revisao": "SV 38: o Município fixa o horário do comércio local. SV 49: lei municipal que impede a instalação de estabelecimentos do mesmo ramo numa área ofende a livre concorrência. SV 46: crimes de responsabilidade e seu processo são de competência legislativa privativa da União. Horário dos bancos é da União (Súmula 19 do STJ)."
+    },
+    "cpc-conjuges": {
+      "nome": "Cônjuges no processo (art. 73)",
+      "tema": "Partes e capacidade",
+      "revisao": "CPC, art. 73: o cônjuge precisa do consentimento do outro para ação sobre direito real imobiliário, salvo separação absoluta de bens. Nas possessórias, o cônjuge só é indispensável em composse ou ato praticado por ambos (§ 2º), não sempre. As regras valem para a união estável comprovada nos autos (§ 3º)."
+    },
+    "cpc-representacao": {
+      "nome": "Representação em juízo e curador especial (arts. 72 e 75)",
+      "tema": "Partes e capacidade",
+      "revisao": "CPC, art. 75: o Estado é representado por seus procuradores, não pelo Governador; a massa falida, pelo administrador judicial; a herança jacente ou vacante, pelo curador (inventariante é do espólio). O gerente de filial estrangeira presume-se autorizado a receber citação. Estados e DF podem ajustar compromisso recíproco para atos processuais de seus procuradores (§ 4º). Art. 72: curador especial ao réu preso revel e ao revel citado por edital ou com hora certa."
+    },
+    "cf-acao-popular": {
+      "nome": "Ação popular e gratuidade",
+      "tema": "Remédios constitucionais",
+      "revisao": "CF, art. 5º, LXXIII: qualquer CIDADÃO propõe ação popular para anular ato lesivo ao patrimônio público, à moralidade administrativa, ao meio ambiente e ao patrimônio histórico e cultural; o autor fica isento de custas e sucumbência, salvo má-fé. LXXVII: gratuitos para todos são habeas corpus e habeas data, não o mandado de segurança."
+    },
+    "cf-mi-ms": {
+      "nome": "Mandado de injunção e MS coletivo",
+      "tema": "Remédios constitucionais",
+      "revisao": "CF, art. 5º, LXXI: mandado de injunção sempre que a falta de norma regulamentadora torne inviável o exercício de direitos e liberdades constitucionais e das prerrogativas da nacionalidade, soberania e cidadania. LXX: o MS coletivo pode ser impetrado por partido político com representação no Congresso e por organização sindical, entidade de classe ou associação legalmente constituída e em funcionamento há pelo menos um ano."
+    },
+    "rl-pct-sucessiva": {
+      "nome": "Aumentos e descontos sucessivos",
+      "tema": "Porcentagem",
+      "revisao": "Porcentagens sucessivas se MULTIPLICAM, não se somam: aumento de 20% = × 1,20; desconto de 20% = × 0,80. 1,20 × 0,80 = 0,96, ou seja, 4% a menos que o preço inicial."
+    },
+    "rl-pct-de-pct": {
+      "nome": "Porcentagem de porcentagem",
+      "tema": "Porcentagem",
+      "revisao": "Use um total fácil (100 ou 1.000) e monte a tabela por grupo. Ex.: 1.000 candidatos, 40% mulheres = 400; 25% delas aprovadas = 100; homens 600, 10% aprovados = 60. Entre os aprovados (160), as mulheres são 100 ÷ 160 = 62,5%. Atenção à base: a pergunta é sobre os aprovados, não sobre o total."
+    },
+    "adm-principios-37": {
+      "nome": "Princípios do art. 37: alcance e controle",
+      "tema": "Princípios da Administração Pública",
+      "revisao": "LIMPE: legalidade, impessoalidade, moralidade, publicidade e eficiência. O particular faz o que a lei não proíbe (art. 5º, II); a Administração só o que a lei determina ou autoriza. Ato imoral é ANULADO, não revogado. Razoabilidade e proporcionalidade permitem ao Judiciário controlar a legalidade do ato discricionário. Não há hierarquia entre princípios, e existem atos discricionários."
+    },
+    "adm-publicidade": {
+      "nome": "Publicidade e promoção pessoal",
+      "tema": "Princípios da Administração Pública",
+      "revisao": "A publicidade é requisito de EFICÁCIA, não de validade: o ato assinado e não publicado é válido, mas ainda não produz efeitos. CF, art. 37, § 1º: a publicidade oficial não pode ter nomes, símbolos ou imagens que caracterizem promoção pessoal, seja qual for a fonte de custeio. Há sigilo admitido (art. 5º, XXXIII)."
+    },
+    "adm-autotutela": {
+      "nome": "Autotutela: anular × revogar e prazo de 5 anos",
+      "tema": "Princípios da Administração Pública",
+      "revisao": "Lei 9.784/1999, art. 53 (e Súmula 473 do STF): a Administração DEVE anular atos ilegais e PODE revogar os válidos por conveniência e oportunidade, de ofício. Art. 54: para ato com efeitos favoráveis, o direito de anular decai em 5 anos, salvo má-fé; nos efeitos patrimoniais contínuos, conta do primeiro pagamento (§ 1º). Tutela é outra coisa: controle finalístico sobre a entidade da indireta, nos limites da lei."
+    },
+    "adm-supremacia": {
+      "nome": "Supremacia × indisponibilidade",
+      "tema": "Regime jurídico administrativo",
+      "revisao": "Supremacia do interesse público = PODER (prerrogativas, como impor obrigação unilateral). Indisponibilidade = LIMITE: o agente não é dono do interesse que representa. Legalidade (agir só conforme a lei) é outro princípio, ainda que decorra da indisponibilidade."
+    },
+    "adm-implicitos": {
+      "nome": "Princípios expressos × implícitos",
+      "tema": "Regime jurídico administrativo",
+      "revisao": "Expressos no caput do art. 37 são só os do LIMPE. Os demais são implícitos na CF, ainda que expressos em lei, como a segurança jurídica (Lei 9.784/1999, art. 2º, e LINDB, arts. 20 a 30)."
+    },
+    "cf-emenda-procedimento": {
+      "nome": "Emenda: iniciativa, quórum e promulgação",
+      "tema": "Processo legislativo",
+      "revisao": "CF, art. 60: proposta de um terço da Câmara ou do Senado, do Presidente ou de mais da metade das Assembleias, cada uma pela maioria relativa. Votação em cada Casa, em dois turnos, com três quintos (§ 2º). Promulgada pelas Mesas da Câmara e do Senado, sem sanção (§ 3º). Vedada na intervenção federal, estado de defesa ou sítio (§ 1º). PEC rejeitada não volta na mesma sessão legislativa, sem exceção (§ 5º); a exceção da maioria absoluta é só para projeto de lei (art. 67)."
+    },
+    "cf-clausulas-petreas": {
+      "nome": "Cláusulas pétreas (art. 60, § 4º)",
+      "tema": "Processo legislativo",
+      "revisao": "CF, art. 60, § 4º: não será objeto de deliberação PEC tendente a abolir a forma federativa, o voto direto, secreto, universal e periódico, a separação dos Poderes e os direitos e garantias individuais. O voto OBRIGATÓRIO não é cláusula pétrea."
+    },
+    "cf-medidas-provisorias": {
+      "nome": "Medidas provisórias",
+      "tema": "Processo legislativo",
+      "revisao": "CF, art. 62: vedada sobre nacionalidade, cidadania, direitos políticos, partidos e direito eleitoral; direito penal, processual penal e processual civil; organização do Judiciário e do MP; orçamento; sequestro de poupança; matéria de lei complementar; e matéria já aprovada pendente de sanção (§ 1º). Perde eficácia desde a edição se não convertida em 60 dias, prorrogáveis uma vez (§ 3º); o prazo conta da publicação e se suspende no recesso (§ 4º)."
+    },
+    "trib-itcmd": {
+      "nome": "ITCMD: qual Estado cobra e alíquotas",
+      "tema": "Impostos estaduais",
+      "revisao": "CF, art. 155, § 1º: imóveis, ao Estado da situação do bem (I); móveis, títulos e créditos, ao Estado do domicílio do falecido ou do doador (II). Alíquotas máximas fixadas pelo Senado (IV). Desde a EC 132/2023, o ITCMD será progressivo pelo valor do quinhão, legado ou doação (VI). No IPVA, o Senado fixa alíquotas MÍNIMAS."
+    },
+    "trib-icms": {
+      "nome": "ICMS: alíquotas, crédito e seletividade",
+      "tema": "Impostos estaduais",
+      "revisao": "CF, art. 155, § 2º: alíquotas interestaduais e de exportação por resolução do Senado, de iniciativa do Presidente ou de um terço dos Senadores, aprovada pela maioria absoluta (IV). Isenção ou não incidência, salvo lei em contrário, não gera crédito (II). Internas não podem ser inferiores às interestaduais, salvo deliberação dos Estados (VI). O ICMS PODERÁ ser seletivo (III): a troca de poderá por será é típica da FCC."
+    },
+    "pt-concordancia-nominal": {
+      "nome": "Meio, anexo, mesmo, menos, é proibido",
+      "tema": "Concordância nominal",
+      "revisao": "Meio com sentido de um pouco é advérbio e não varia (meio cansados). Anexo e mesmo (= próprio) concordam: anexas as certidões; ela mesma. Menos é invariável (menas não existe). É proibido, é necessário: sem artigo, ficam no masculino (É proibido entrada; É necessário paciência); com artigo, concordam (É proibida a entrada)."
+    }
+  },
+  "questoes": {
+    "adm-cad-01": "adm-descentralizacao",
+    "adm-cad-02": "adm-descentralizacao",
+    "adm-s1-06": "adm-descentralizacao",
+    "adm-eb-06": "adm-descentralizacao",
+    "adm-eb-08": "adm-delegacao",
+    "adm-eb-07": "adm-controle",
+    "adm-cad-03": "adm-orgaos",
+    "adm-cad-04": "adm-orgaos",
+    "adm-s1-07": "adm-orgaos",
+    "adm-eb-03": "adm-orgaos",
+    "adm-eb-09": "adm-decreto",
+    "adm-eb-01": "adm-sentidos",
+    "adm-eb-02": "adm-sentidos",
+    "adm-eb-04": "adm-sentidos",
+    "adm-eb-05": "adm-sentidos",
+    "adm-s1-08": "adm-sentidos",
+    "adm-s1-09": "adm-poderes",
+    "adm-eb-11": "adm-poderes",
+    "adm-eb-10": "adm-cargos",
+    "adm-s1-05": "adm-criacao",
+    "adm-cad-05": "adm-criacao",
+    "adm-cad-07": "adm-autarquias",
+    "adm-cad-08": "adm-autarquias",
+    "adm-cad-09": "adm-fundacoes",
+    "adm-cad-10": "adm-fundacoes",
+    "adm-cad-06": "adm-estatais",
+    "adm-cad-11": "adm-estatais",
+    "adm-cad-12": "adm-estatais",
+    "adm-eb-12": "adm-estatais",
+    "adm-cad-13": "adm-consorcios",
+    "adm-cad-14": "adm-terceiro-setor",
+    "pt-001": "pt-se",
+    "ptx-07": "pt-se",
+    "pt-037": "pt-se",
+    "pt-002": "pt-haver",
+    "pt-016": "pt-posposto",
+    "pt-038": "pt-posposto",
+    "pt-056": "pt-especiais",
+    "pt-065": "pt-ser",
+    "pt-012": "pt-correlacao",
+    "pt-033": "pt-correlacao",
+    "pt-034": "pt-mais-que-perfeito",
+    "cpc-015": "cpc-honorarios-85",
+    "cpc-014": "cpc-honorarios-fazenda",
+    "cpc-016": "cpc-despesas",
+    "trib-009": "trib-credito",
+    "trib-010": "trib-credito",
+    "trib-011": "trib-credito",
+    "trib-012": "trib-credito",
+    "trib-002": "trib-anterioridade",
+    "trib-003": "trib-anterioridade",
+    "trib-pl-r01": "trib-anterioridade",
+    "trib-pl-01": "trib-anterioridade",
+    "trib-pl-02": "trib-anterioridade",
+    "trib-pl-03": "trib-anterioridade",
+    "trib-pl-05": "trib-anterioridade",
+    "trib-pl-06": "trib-anterioridade",
+    "trib-004": "trib-legalidade",
+    "trib-pl-04": "trib-legalidade",
+    "trib-pl-09": "trib-legalidade",
+    "trib-pl-11": "trib-legalidade",
+    "trib-pl-07": "trib-confisco",
+    "trib-pl-08": "trib-heteronoma",
+    "trib-pl-10": "trib-isonomia",
+    "trib-pl-12": "trib-trafego",
+    "cf-df-01": "cf-gratuidade",
+    "cf-104": "cf-prisao-civil",
+    "cf-df-02": "cf-prisao-civil",
+    "cf-004": "cf-tratados",
+    "ls-004": "cf-tratados",
+    "cf-df-03": "cf-tratados",
+    "cf-102": "cf-casa",
+    "ls-001": "cf-casa",
+    "ls-002": "cf-reuniao",
+    "cf-105": "cf-reuniao",
+    "cf-df-08": "cf-crimes-severos",
+    "cf-df-09": "cf-requisicao-pena",
+    "cf-103": "cf-extradicao",
+    "cf-106": "cf-preso",
+    "cf-134": "cf-preso",
+    "cf-df-04": "cf-esferas",
+    "cf-df-05": "cf-titularidade",
+    "cf-df-06": "cf-dimensao-objetiva",
+    "cf-df-07": "cf-classificacao-df",
+    "cf-df-10": "cf-imprensa",
+    "b3-s1-12": "cf-limites-reforma",
+    "b3-s1-14": "cf-limites-reforma",
+    "cf-pc-01": "cf-limites-reforma",
+    "b3-s1-13": "cf-derivado",
+    "cf-pc-02": "cf-derivado",
+    "cf-pc-03": "cf-intertemporal",
+    "cf-144": "cf-intertemporal",
+    "b3-s1-03": "cf-intertemporal",
+    "b3-s1-04": "cf-intertemporal",
+    "cf-pc-04": "cf-originarias",
+    "cpc-004": "cpc-perpetuacao",
+    "cpc-005": "cpc-foro-estado",
+    "cpc-006": "cpc-eleicao-foro",
+    "cpc-007": "cpc-eleicao-foro",
+    "cpc-008": "cpc-conexao-continencia",
+    "pt-008": "pt-concessivas",
+    "ptx-04": "pt-concessivas",
+    "pt-050": "pt-concessivas",
+    "pt-009": "pt-consequencia",
+    "ptx-05": "pt-consequencia",
+    "ptx-03": "pt-adversativas",
+    "pt-051": "pt-adversativas",
+    "cpc-020": "cpc-intervencao",
+    "cpc-022": "cpc-intervencao",
+    "cpc-021": "cpc-idpj",
+    "ef-003": "lef-inicial",
+    "ef-004": "lef-citacao",
+    "cpc-002": "cpc-contraditorio",
+    "pc-s1-01": "cpc-contraditorio",
+    "pc-s1-02": "cpc-contraditorio",
+    "cpc-003": "cpc-ordem-cronologica",
+    "pc-s1-04": "cpc-ordem-cronologica",
+    "pc-s1-03": "cpc-fundamentacao",
+    "pc-s1-05": "cpc-sistema",
+    "pc-s1-06": "cpc-sistema",
+    "cf-008": "cf-concorrente",
+    "cf-112": "cf-concorrente",
+    "cf-110": "cf-competencias-sv",
+    "cf-111": "cf-competencias-sv",
+    "cpc-010": "cpc-conjuges",
+    "cpc-009": "cpc-representacao",
+    "cpc-011": "cpc-representacao",
+    "cf-003": "cf-acao-popular",
+    "ls-003": "cf-acao-popular",
+    "cf-001": "cf-mi-ms",
+    "cf-002": "cf-mi-ms",
+    "rl-010": "rl-pct-sucessiva",
+    "rl-011": "rl-pct-de-pct",
+    "adm-cad-15": "adm-principios-37",
+    "adm-s1-02": "adm-principios-37",
+    "adm-s1-10": "adm-principios-37",
+    "adm-er-07": "adm-principios-37",
+    "adm-s1-03": "adm-publicidade",
+    "adm-s1-04": "adm-publicidade",
+    "adm-cad-16": "adm-autotutela",
+    "adm-s1-01": "adm-autotutela",
+    "adm-er-02": "adm-autotutela",
+    "adm-er-03": "adm-autotutela",
+    "adm-er-04": "adm-autotutela",
+    "adm-er-01": "adm-supremacia",
+    "adm-er-05": "adm-sentidos",
+    "adm-er-06": "adm-estatais",
+    "adm-er-08": "adm-implicitos",
+    "cf-009": "cf-emenda-procedimento",
+    "cf-010": "cf-emenda-procedimento",
+    "ls-007": "cf-emenda-procedimento",
+    "ls-008": "cf-emenda-procedimento",
+    "cf-011": "cf-clausulas-petreas",
+    "cf-012": "cf-medidas-provisorias",
+    "cf-013": "cf-medidas-provisorias",
+    "ls-009": "cf-medidas-provisorias",
+    "trib-006": "trib-itcmd",
+    "trib-007": "trib-itcmd",
+    "trib-008": "trib-icms",
+    "pt-003": "pt-concordancia-nominal",
+    "pt-055": "pt-concordancia-nominal"
+  }
+}
