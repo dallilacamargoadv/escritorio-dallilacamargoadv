@@ -154,6 +154,96 @@
       "nome": "Liberdade de tráfego e não discriminação",
       "tema": "Limitações ao poder de tributar",
       "revisao": "CF, art. 150, V: não se limita o tráfego de pessoas ou bens por tributos interestaduais ou intermunicipais, ressalvado o pedágio. O pedágio atual tem natureza de tarifa (ADI 800). Art. 152: Estados e Municípios não podem diferenciar bens pela procedência ou pelo destino."
+    },
+    "cf-gratuidade": {
+      "nome": "Gratuidade: só para pobres × para todos",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, LXXVI: o registro civil de nascimento e a certidão de óbito são gratuitos para os reconhecidamente pobres, na forma da lei. LXXVII: habeas corpus, habeas data e, na forma da lei, os atos necessários ao exercício da cidadania são gratuitos para todos. A Lei 9.534/1997 ampliou a gratuidade do registro, mas a FCC cobra o texto da CF."
+    },
+    "cf-prisao-civil": {
+      "nome": "Prisão civil por dívida",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, LXVII: não haverá prisão civil por dívida, salvo a do responsável pelo inadimplemento VOLUNTÁRIO E INESCUSÁVEL de obrigação alimentícia e a do depositário infiel. O texto ainda cita o depositário, mas a Súmula Vinculante 25 proíbe essa prisão. Devedor de alimentos sem renda, por motivo comprovado, não é preso; dívida comum nunca gera prisão."
+    },
+    "cf-tratados": {
+      "nome": "Tratados de direitos humanos (art. 5º, § 3º)",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, § 3º: tratados sobre direitos humanos aprovados em cada Casa, em dois turnos, por três quintos dos votos dos respectivos membros, equivalem às emendas constitucionais. Contas: três quintos da Câmara = 308; do Senado = 49. Mesmo com esse rito, o tratado é promulgado por decreto presidencial. § 1º: as normas de direitos fundamentais têm aplicação imediata."
+    },
+    "cf-casa": {
+      "nome": "Inviolabilidade do domicílio",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, XI: ninguém entra na casa sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial. Flagrante, desastre e socorro: a qualquer hora. Ordem judicial: só de dia. A FCC desloca o durante o dia para o flagrante."
+    },
+    "cf-reuniao": {
+      "nome": "Reunião e associação",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, XVI: reunião pacífica, sem armas, em local aberto ao público, independe de autorização; exige só prévio aviso à autoridade. XVIII: criar associação independe de autorização. XIX: associação só é dissolvida compulsoriamente ou suspensa por decisão judicial, e a dissolução exige trânsito em julgado. XX: ninguém é obrigado a associar-se ou a permanecer associado."
+    },
+    "cf-crimes-severos": {
+      "nome": "Crimes inafiançáveis, imprescritíveis e sem graça",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, XLII e XLIV: imprescritíveis (e inafiançáveis) são só o racismo e a ação de grupos armados contra a ordem constitucional e o Estado Democrático. XLIII: tortura, tráfico, terrorismo e hediondos são inafiançáveis e insuscetíveis de graça ou anistia, mas prescrevem; respondem mandantes, executores e os que, podendo evitá-los, se omitirem."
+    },
+    "cf-requisicao-pena": {
+      "nome": "Requisição, pena e sucessores",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, XXV: na requisição, por iminente perigo público, a autoridade USA a propriedade particular, com indenização ulterior, se houver dano. XLV: nenhuma pena passa da pessoa do condenado, mas a obrigação de reparar o dano e o perdimento de bens podem ir aos sucessores, até o limite do patrimônio transferido."
+    },
+    "cf-extradicao": {
+      "nome": "Extradição",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, LI: nenhum brasileiro será extraditado, salvo o naturalizado, por crime comum praticado antes da naturalização ou por comprovado envolvimento em tráfico de drogas. LII: não se extradita estrangeiro por crime político ou de opinião. Brasileiro nato nunca é extraditado."
+    },
+    "cf-preso": {
+      "nome": "Garantias do preso e súmulas vinculantes",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, LXIII: o preso será informado de seus direitos, entre eles o de permanecer calado, com assistência da família e de advogado. LVII: ninguém é considerado culpado até o trânsito em julgado da sentença penal condenatória. SV 11: algemas só em caso de resistência, fundado receio de fuga ou perigo, com justificativa por escrito. SV 14: o defensor tem acesso aos elementos de prova já documentados no inquérito."
+    },
+    "cf-esferas": {
+      "nome": "Teoria das esferas (privacidade)",
+      "tema": "Direitos fundamentais",
+      "revisao": "A teoria das esferas vem da doutrina e da jurisprudência alemãs: a vida privada é vista em círculos, do mais interno ao mais externo (íntima ou secreta, privada e social). Quanto mais íntima a informação, maior a proteção."
+    },
+    "cf-titularidade": {
+      "nome": "Titularidade, rol aberto e restrições",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, § 2º: o rol de direitos não é taxativo; outros decorrem do regime, dos princípios e dos tratados. Pessoas jurídicas e estrangeiros também são titulares, no que for compatível. Nenhum direito é absoluto: pode ser restringido pela própria CF ou por lei autorizada, respeitados o núcleo essencial e a proporcionalidade."
+    },
+    "cf-dimensao-objetiva": {
+      "nome": "Dimensão subjetiva × objetiva",
+      "tema": "Direitos fundamentais",
+      "revisao": "Dimensão subjetiva: o direito do indivíduo de exigir algo do Estado. Dimensão objetiva: os direitos como valores que impõem ao Estado o dever de proteger e promover, orientando legislador, administrador e juiz (eficácia dirigente e eficácia irradiante)."
+    },
+    "cf-classificacao-df": {
+      "nome": "Individuais, sociais e políticos",
+      "tema": "Direitos fundamentais",
+      "revisao": "Ir e vir é direito individual (art. 5º, XV). Moradia é direito social (art. 6º, incluído pela EC 26/2000). Sufrágio universal é direito político (art. 14)."
+    },
+    "cf-imprensa": {
+      "nome": "Liberdade de imprensa",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, IV, IX e XIV: sem censura prévia, mas com responsabilidade posterior (X: indenização por dano à honra e à imagem). Para o STF, a verdade apurada com diligência é protegida; a prova da verdade afasta a indenização. Descuido com a apuração não é protegido."
+    },
+    "cf-limites-reforma": {
+      "nome": "Limites ao poder de reforma",
+      "tema": "Poder constituinte",
+      "revisao": "CF, art. 60: a PEC pode ser proposta por um terço, no mínimo, da Câmara ou do Senado (I; no Senado, 27). § 1º: não há emenda durante intervenção federal, estado de defesa ou estado de sítio. § 5º: PEC rejeitada ou prejudicada não volta na mesma sessão legislativa, sem exceção. Além das cláusulas pétreas do § 4º, a doutrina cobrada pela FCC vê limite implícito no presidencialismo e na república confirmados no plebiscito de 1993 (ADCT, art. 2º)."
+    },
+    "cf-derivado": {
+      "nome": "Reforma, revisão, decorrente e mutação",
+      "tema": "Poder constituinte",
+      "revisao": "Mudança FORMAL do texto: reforma (emendas, art. 60) e revisão (ADCT, art. 3º). Mudança INFORMAL do sentido, sem mudar o texto: mutação constitucional. O poder decorrente é o dos Estados para fazer suas Constituições; Município não tem. O revisor também está preso às cláusulas pétreas."
+    },
+    "cf-intertemporal": {
+      "nome": "Constituição nova × normas antigas",
+      "tema": "Teoria da Constituição",
+      "revisao": "Lei antiga compatível com a nova Constituição: recepção. Lei antiga incompatível: revogação (não recepção), e no controle concentrado o caminho é a ADPF. Norma da Constituição antiga que continua valendo como lei: desconstitucionalização, que no Brasil só ocorre com previsão expressa. A norma originária tem retroatividade mínima: alcança os efeitos futuros de fatos passados (RE 140.499)."
+    },
+    "cf-originarias": {
+      "nome": "Normas originárias e controle",
+      "tema": "Teoria da Constituição",
+      "revisao": "O STF não admite controle de constitucionalidade sobre norma ORIGINÁRIA da Constituição (ADI 815): não existem normas constitucionais originárias inconstitucionais (tese de Bachof rejeitada). Norma criada por EMENDA pode ser controlada, à luz das cláusulas pétreas."
     }
   },
   "questoes": {
@@ -221,6 +311,36 @@
     "trib-pl-07": "trib-confisco",
     "trib-pl-08": "trib-heteronoma",
     "trib-pl-10": "trib-isonomia",
-    "trib-pl-12": "trib-trafego"
+    "trib-pl-12": "trib-trafego",
+    "cf-df-01": "cf-gratuidade",
+    "cf-104": "cf-prisao-civil",
+    "cf-df-02": "cf-prisao-civil",
+    "cf-004": "cf-tratados",
+    "ls-004": "cf-tratados",
+    "cf-df-03": "cf-tratados",
+    "cf-102": "cf-casa",
+    "ls-001": "cf-casa",
+    "ls-002": "cf-reuniao",
+    "cf-105": "cf-reuniao",
+    "cf-df-08": "cf-crimes-severos",
+    "cf-df-09": "cf-requisicao-pena",
+    "cf-103": "cf-extradicao",
+    "cf-106": "cf-preso",
+    "cf-134": "cf-preso",
+    "cf-df-04": "cf-esferas",
+    "cf-df-05": "cf-titularidade",
+    "cf-df-06": "cf-dimensao-objetiva",
+    "cf-df-07": "cf-classificacao-df",
+    "cf-df-10": "cf-imprensa",
+    "b3-s1-12": "cf-limites-reforma",
+    "b3-s1-14": "cf-limites-reforma",
+    "cf-pc-01": "cf-limites-reforma",
+    "b3-s1-13": "cf-derivado",
+    "cf-pc-02": "cf-derivado",
+    "cf-pc-03": "cf-intertemporal",
+    "cf-144": "cf-intertemporal",
+    "b3-s1-03": "cf-intertemporal",
+    "b3-s1-04": "cf-intertemporal",
+    "cf-pc-04": "cf-originarias"
   }
 }
