@@ -299,7 +299,7 @@
       {
        "t": "lei",
        "ref": "CF, art. 149, caput e § 1º",
-       "texto": "Art. 149. Compete ==exclusivamente à União== instituir contribuições sociais, de intervenção no domínio econômico e de interesse das categorias profissionais ou econômicas, como instrumento de sua atuação nas respectivas áreas, observado o disposto nos arts. 146, III, e 150, I e III, e sem prejuízo do previsto no art. 195, § 6º, relativamente às contribuições a que alude o dispositivo.\n§ 1º A União, os Estados, o Distrito Federal e os Municípios instituirão, por meio de lei, contribuições para custeio de regime próprio de previdência social, cobradas dos servidores ativos, dos aposentados e dos pensionistas, que poderão ter alíquotas progressivas de acordo com o valor da base de contribuição ou dos proventos de aposentadoria e de pensões. (Vigência"
+       "texto": "Art. 149. Compete ==exclusivamente à União== instituir contribuições sociais, de intervenção no domínio econômico e de interesse das categorias profissionais ou econômicas, como instrumento de sua atuação nas respectivas áreas, observado o disposto nos arts. 146, III, e 150, I e III, e sem prejuízo do previsto no art. 195, § 6º, relativamente às contribuições a que alude o dispositivo.\n§ 1º A União, os Estados, o Distrito Federal e os Municípios instituirão, por meio de lei, contribuições para custeio de regime próprio de previdência social, cobradas dos servidores ativos, dos aposentados e dos pensionistas, que poderão ter alíquotas progressivas de acordo com o valor da base de contribuição ou dos proventos de aposentadoria e de pensões."
       },
       {
        "t": "texto",
@@ -401,9 +401,9 @@
          "RE 203.684; SV 50"
         ],
         [
-         "Atualizar IPTU pela correção monetária",
-         "Não, se até o índice oficial; acima disso, sim",
-         "Súmula 160 do STJ"
+         "Atualizar a base do IPTU",
+         "Até o índice oficial, não (CTN, art. 97, § 2º). Acima dele, lei, ou ato do Executivo conforme critérios de lei municipal (EC 132/2023)",
+         "CF, art. 156, § 1º, III; Súmula 160 do STJ, superada em parte"
         ],
         [
          "Lei fixa o teto e o ato infralegal fixa o valor da taxa",
@@ -512,7 +512,7 @@
       {
        "t": "juris",
        "tribunal": "STJ",
-       "ref": "Súmula 160",
+       "ref": "Súmula 160 (superada em parte pela EC 132/2023: CF, art. 156, § 1º, III)",
        "tese": "É defeso, ao Município, atualizar o IPTU, mediante decreto, em percentual superior ao índice oficial de correção monetária."
       },
       {
@@ -592,7 +592,6 @@
     }
    ],
    "questoes": [
-    "trib-001",
     "trib-te-r01",
     "trib-te-01",
     "trib-te-02",
@@ -613,14 +612,1181 @@
    "topico_id": "B7-01",
    "numero": 2,
    "titulo": "Competência tributária",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Competência e legislação tributária (2026), item 1; CTN, CF (com a EC 132/2023) e Constituição do Maranhão, textos vigentes",
+   "resumo": [
+    "Legislar sobre direito tributário (CF, art. 24: concorrente, União edita normas gerais, lei federal nova suspende a estadual) é diferente de competência tributária (poder de instituir tributo).",
+    "CTN: lei ordinária recepcionada com status de lei complementar desde a CF de 1967. Art. 146 da CF: LC dispõe sobre conflitos, regula limitações e edita normas gerais.",
+    "Características: facultativa (contraponto: LRF, art. 11), indelegável (CTN, art. 7º), incaducável e não transferível pelo não exercício (art. 8º), privativa e irrenunciável.",
+    "Capacidade ativa (arrecadar, fiscalizar, executar) é delegável entre pessoas de direito público, com garantias e privilégios, revogável a qualquer tempo; banco que arrecada não recebeu delegação.",
+    "Impostos: competência privativa; lista da União aberta (residual por LC e extraordinário de guerra, art. 154). DF tem 6 impostos (art. 147). Taxas e melhoria: competência comum, de quem tem a competência administrativa.",
+    "IPTU x ITR pela localização (CTN, art. 32), salvo imóvel urbano com destinação rural (DL 57/1966, art. 15). Súmula 626 do STJ. Bis in idem (mesmo ente) x bitributação (entes diversos). IBS: competência compartilhada."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: legislar sobre tributo não é o mesmo que criar tributo",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A primeira confusão que a FCC explora é entre duas competências com nomes parecidos. <b>Competência para legislar sobre direito tributário</b> é editar regras gerais sobre o poder de tributar (como se lança, como prescreve, o que é fato gerador). <b>Competência tributária</b> é o poder, dado pela CF, de <b>instituir</b> tributo por lei própria. A primeira está no art. 24; a segunda, nos arts. 145 a 156."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 24, caput, I e §§ 1º a 4º",
+       "texto": "Art. 24. Compete à União, aos Estados e ao Distrito Federal legislar concorrentemente sobre:\nI - direito tributário, financeiro, penitenciário, econômico e urbanístico;\n§ 1º No âmbito da legislação concorrente, a competência da União limitar-se-á a estabelecer ==normas gerais==.\n§ 2º A competência da União para legislar sobre normas gerais não exclui a competência ==suplementar== dos Estados.\n§ 3º Inexistindo lei federal sobre normas gerais, os Estados exercerão a competência legislativa plena, para atender a suas peculiaridades.\n§ 4º A superveniência de lei federal sobre normas gerais ==suspende a eficácia== da lei estadual, no que lhe for contrário."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "União",
+         "sub": "normas gerais"
+        },
+        {
+         "titulo": "Estados e DF",
+         "sub": "suplementam"
+        },
+        {
+         "titulo": "Sem lei federal",
+         "sub": "competência plena"
+        },
+        {
+         "titulo": "Lei federal nova",
+         "sub": "suspende, não revoga"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>A União edita normas gerais</b>, que valem para todos os entes. É por isso que se fala em competência <b>vertical</b>. A principal norma geral é o CTN."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Estados e DF suplementam</b>, sempre em harmonia com as normas gerais. Repare que o art. 24 não cita os Municípios: eles suplementam pelo art. 30, II, no que couber."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Sem lei federal de normas gerais</b>, o Estado exerce a competência legislativa <b>plena</b>, para atender às suas peculiaridades."
+        },
+        {
+         "no": 3,
+         "texto": "<b>Veio a lei federal depois?</b> Ela <b>suspende a eficácia</b> da lei estadual no que for contrário. Não revoga. Se a lei federal cair depois, a estadual volta a produzir efeitos sozinha, e isso não é repristinação."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Por que o CTN, que é lei ordinária de 1966, só muda por lei complementar?</b> Porque trata de matéria que a Constituição reserva à lei complementar. Foi recepcionado com status de lei complementar, e isso vem desde a <b>Constituição de 1967</b>, a primeira a prever lei complementar, e não da CF de 1988. Consequência citada no material: tribunais consideram inválidas regras da Lei de Execuções Fiscais (lei ordinária de 1980) que contrariem o CTN."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 146, caput, I, II e III, a e b",
+       "texto": "Art. 146. Cabe à lei complementar:\nI - dispor sobre ==conflitos de competência==, em matéria tributária, entre a União, os Estados, o Distrito Federal e os Municípios;\nII - ==regular as limitações constitucionais== ao poder de tributar;\nIII - estabelecer ==normas gerais== em matéria de legislação tributária, especialmente sobre:\na) definição de tributos e de suas espécies, bem como, em relação aos impostos discriminados nesta Constituição, a dos respectivos fatos geradores, bases de cálculo e contribuintes;\nb) obrigação, lançamento, crédito, prescrição e decadência tributários;"
+      },
+      {
+       "t": "texto",
+       "html": "O art. 146 dá à lei complementar três papéis. <b>Regular</b> as limitações ao poder de tributar (II) não é criar limitações novas: elas já estão na CF. <b>Dispor sobre conflitos</b> (I): como a CF já repartiu tudo, os conflitos são apenas <b>aparentes</b>, e a lei complementar dá o critério para resolvê-los. O conflito pode ser entre entes <b>homólogos</b> (Estado x Estado, na guerra do ICMS) ou <b>heterólogos</b> (União x Município, no IPTU x ITR)."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 32, caput e §§ 1º e 2º",
+       "texto": "Art. 32. O impôsto, de competência dos Municípios, sôbre a propriedade predial e territorial urbana tem como fato gerador a propriedade, o domínio útil ou a posse de bem imóvel por natureza ou por acessão física, como definido na lei civil, localizado na ==zona urbana== do Município.\n§ 1º Para os efeitos dêste impôsto, entende-se como zona urbana a definida em lei municipal; observado o requisito mínimo da existência de melhoramentos indicados em ==pelo menos 2 (dois)== dos incisos seguintes, construídos ou mantidos pelo Poder Público:\nI - meio-fio ou calçamento, com canalização de águas pluviais;\nII - abastecimento de água;\nIII - sistema de esgotos sanitários;\nIV - rêde de iluminação pública, com ou sem posteamento para distribuição domiciliar;\nV - escola primária ou pôsto de saúde a uma distância máxima de 3 (três) quilômetros do imóvel considerado.\n§ 2º A lei municipal pode considerar urbanas as ==áreas urbanizáveis, ou de expansão urbana==, constantes de loteamentos aprovados pelos órgãos competentes, destinados à habitação, à indústria ou ao comércio, mesmo que localizados fora das zonas definidas nos têrmos do parágrafo anterior."
+      },
+      {
+       "t": "texto",
+       "html": "O exemplo clássico de conflito heterólogo: o imóvel está na zona urbana definida em lei municipal, com pelo menos dois melhoramentos do § 1º? Paga <b>IPTU</b>. Fora disso, <b>ITR</b>. O CTN usa o critério da <b>localização</b>. Mas há uma exceção que a banca adora."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Imóvel urbano que paga ITR",
+       "html": "O art. 15 do Decreto-Lei 57/1966 manda cobrar <b>ITR</b> do imóvel usado em exploração extrativa vegetal, agrícola, pecuária ou agroindustrial, <b>mesmo que esteja na área urbana</b>. A Lei ordinária 5.868/1972 tentou revogar esse artigo, mas foi declarada inconstitucional, porque a regra sobre conflito de competência já tinha status de lei complementar (STF e STJ). O Senado suspendeu a lei revogadora (Resolução 9/2005). Resultado: vale a <b>destinação</b>, por exceção."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 626",
+       "tese": "A incidência do IPTU sobre imóvel situado em área considerada pela lei local como urbanizável ou de expansão urbana não está condicionada à existência dos melhoramentos elencados no art. 32, § 1º, do CTN."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: as características e a repartição da competência",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A CF <b>não cria tributo</b>: ela outorga competência para que cada ente o crie por lei própria. Desse ponto saem as características. Vire as cartas e guarde o artigo de cada uma."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Facultativa",
+         "sub": "o ente decide",
+         "verso": "O ente institui o tributo se e quando quiser, por conveniência política. A União nunca criou o imposto sobre grandes fortunas, e a competência continua dela.",
+         "detalhe": "Contraponto: LRF, art. 11 (abaixo)."
+        },
+        {
+         "frente": "Indelegável",
+         "sub": "CTN, art. 7º",
+         "verso": "Ninguém transfere a outro ente o poder de criar tributo. O que se delega é a capacidade de arrecadar, fiscalizar e executar.",
+         "detalhe": "Delegação só de pessoa jurídica de direito público para outra."
+        },
+        {
+         "frente": "Incaducável",
+         "sub": "CTN, art. 8º",
+         "verso": "Não usar não faz perder. Também não passa a outro ente: se o Município não cria o ISS, o Estado não pode criá-lo no lugar.",
+         "detalhe": "O não exercício não defere a competência a pessoa diversa."
+        },
+        {
+         "frente": "Privativa e inalterável",
+         "sub": "pela CF",
+         "verso": "Cada ente tem os seus tributos, e lei infraconstitucional não amplia nem reduz essa lista. Só emenda à Constituição altera.",
+         "detalhe": "Doutrina (Ricardo Alexandre, autor-base do material)."
+        },
+        {
+         "frente": "Irrenunciável",
+         "sub": "não se abre mão",
+         "verso": "O ente pode não exercer, mas não pode renunciar à competência nem cedê-la por lei.",
+         "detalhe": "Não confunda com renúncia de receita (isenção, anistia), que tem regras próprias."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Facultativa x LRF.</b> O art. 11 da Lei de Responsabilidade Fiscal (LC 101/2000) diz que são requisitos da gestão fiscal responsável a instituição, previsão e efetiva arrecadação de <b>todos</b> os tributos da competência do ente, e o parágrafo único veda <b>transferências voluntárias</b> ao ente que não cumprir isso <b>quanto aos impostos</b>. O material orienta: se a questão citar a LRF, siga a literalidade dela; se não citar, a competência é <b>facultativa</b>."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 6º",
+       "texto": "Art. 6º A atribuição constitucional de competência tributária compreende a ==competência legislativa plena==, ressalvadas as limitações contidas na Constituição Federal, nas Constituições dos Estados e nas Leis Orgânicas do Distrito Federal e dos Municípios, e observado o disposto nesta Lei.\nParágrafo único. Os tributos cuja receita seja distribuída, no todo ou em parte, a outras pessoas jurídicas de direito público ==pertencerá à competência legislativa daquela a que tenham sido atribuídos==."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 7º",
+       "texto": "Art. 7º A competência tributária é ==indelegável==, salvo atribuição das funções de ==arrecadar ou fiscalizar== tributos, ou de executar leis, serviços, atos ou decisões administrativas em matéria tributária, conferida por uma pessoa jurídica de direito público a outra, nos termos do § 3º do art. 18 da Constituição.\n§ 1º A atribuição compreende as garantias e os privilégios processuais que competem à pessoa jurídica de direito público que a conferir.\n§ 2º A atribuição pode ser revogada, a qualquer tempo, por ato unilateral da pessoa jurídica de direito público que a tenha conferido.\n§ 3º ==Não constitui delegação de competência== o cometimento, a pessoas de direito privado, do encargo ou da função de arrecadar tributos."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 8º",
+       "texto": "Art. 8º O não-exercício da competência tributária não a defere a pessoa jurídica de direito público diversa daquela a que a Constituição a tenha atribuído.\n\n"
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Competência tributária",
+        "Capacidade tributária ativa"
+       ],
+       "linhas": [
+        [
+         "Política: criar o tributo por lei",
+         "Administrativa: arrecadar, fiscalizar, executar"
+        ],
+        [
+         "Indelegável (CTN, arts. 7º e 8º)",
+         "Delegável a outra pessoa jurídica de direito público"
+        ],
+        [
+         "Só os entes políticos",
+         "Pode ir a autarquia (ex.: conselho profissional cobra anuidade)"
+        ],
+        [
+         "Ex.: a União criou o ITR",
+         "Ex.: Município que opta por fiscalizar e cobrar o ITR fica com 100% (CF, arts. 153, § 4º, III, e 158, II)"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Três frases que caem literais",
+       "html": "1) A atribuição de arrecadar <b>compreende as garantias e os privilégios processuais</b> de quem a conferiu (§ 1º). 2) Pode ser <b>revogada a qualquer tempo, por ato unilateral</b> (§ 2º). 3) Banco que recebe a guia é <b>pessoa de direito privado</b> com a função de arrecadar: isso <b>não</b> é delegação (§ 3º). Se a alternativa disser \"competência tributária é delegável\" sem ressalva, está errada."
+      },
+      {
+       "t": "texto",
+       "html": "Agora a repartição. A CF usou dois métodos, conforme o tributo seja <b>vinculado</b> ou <b>não vinculado</b>: nos vinculados (taxas e contribuição de melhoria), cobra quem faz a atividade, a chamada <b>competência comum</b>; nos não vinculados (impostos), a CF escolheu o dono, a <b>competência privativa</b>. Toque nas células."
+      },
+      {
+       "t": "matriz",
+       "linhas": [
+        "União",
+        "Estados",
+        "Distrito Federal",
+        "Municípios"
+       ],
+       "colunas": [
+        "Impostos nominados",
+        "Imposto residual e extraordinário",
+        "Taxas e contribuição de melhoria",
+        "Empréstimo compulsório",
+        "Contribuições especiais"
+       ],
+       "celulas": [
+        [
+         [
+          true,
+          "II, IE, IR, IPI, IOF, ITR, IGF e Imposto Seletivo (art. 153). Lista aberta."
+         ],
+         [
+          true,
+          "Só a União: residual por lei complementar (art. 154, I) e extraordinário de guerra (art. 154, II)."
+         ],
+         [
+          true,
+          "Se prestar o serviço, exercer a polícia ou fizer a obra."
+         ],
+         [
+          true,
+          "Só a União, por lei complementar (art. 148)."
+         ],
+         [
+          true,
+          "Regra: sociais, CIDE e corporativas (art. 149)."
+         ]
+        ],
+        [
+         [
+          true,
+          "ITCMD, ICMS e IPVA (art. 155). Lista fechada."
+         ],
+         [
+          false,
+          "Não há. Lista fechada, salvo emenda."
+         ],
+         [
+          true,
+          "Se prestar o serviço, exercer a polícia ou fizer a obra. Para a doutrina citada no material, o Estado tem a competência residual de taxas."
+         ],
+         [
+          false,
+          "Não."
+         ],
+         [
+          true,
+          "Só a do regime próprio dos seus servidores (art. 149, § 1º)."
+         ]
+        ],
+        [
+         [
+          true,
+          "Os 3 estaduais e os 3 municipais: 6 impostos (arts. 147 e 32, § 1º)."
+         ],
+         [
+          false,
+          "Não."
+         ],
+         [
+          true,
+          "Como Estado e como Município."
+         ],
+         [
+          false,
+          "Não."
+         ],
+         [
+          true,
+          "RPPS dos servidores e COSIP (art. 149-A)."
+         ]
+        ],
+        [
+         [
+          true,
+          "IPTU, ITBI e ISS (art. 156). Lista fechada."
+         ],
+         [
+          false,
+          "Não."
+         ],
+         [
+          true,
+          "Se prestar o serviço, exercer a polícia ou fizer a obra."
+         ],
+         [
+          false,
+          "Não."
+         ],
+         [
+          true,
+          "RPPS dos servidores e COSIP (art. 149-A)."
+         ]
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 153, caput e I a VIII",
+       "texto": "Art. 153. Compete à União instituir impostos sobre:\nI - importação de produtos estrangeiros;\nII - exportação, para o exterior, de produtos nacionais ou nacionalizados;\nIII - renda e proventos de qualquer natureza;\nIV - produtos industrializados;\nV - operações de crédito, câmbio e seguro, ou relativas a títulos ou valores mobiliários;\nVI - propriedade territorial rural;\nVII - grandes fortunas, nos termos de lei complementar.\nVIII - produção, extração, comercialização ou importação de bens e serviços prejudiciais à saúde ou ao meio ambiente, nos termos de lei complementar."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 154",
+       "texto": "Art. 154. A União poderá instituir:\nI - ==mediante lei complementar==, impostos não previstos no artigo anterior, desde que sejam ==não-cumulativos== e não tenham fato gerador ou base de cálculo próprios dos discriminados nesta Constituição;\nII - na iminência ou no caso de guerra externa, ==impostos extraordinários, compreendidos ou não em sua competência tributária==, os quais serão suprimidos, gradativamente, cessadas as causas de sua criação.\n"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 155, caput e I a III",
+       "texto": "Art. 155. Compete aos Estados e ao Distrito Federal instituir impostos sobre:\nI - transmissão causa mortis e doação, de quaisquer bens ou direitos;\nII - operações relativas à circulação de mercadorias e sobre prestações de serviços de transporte interestadual e intermunicipal e de comunicação, ainda que as operações e as prestações se iniciem no exterior;\nIII - propriedade de veículos automotores."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 156, caput e I a III",
+       "texto": "Art. 156. Compete aos Municípios instituir impostos sobre:\nI - propriedade predial e territorial urbana;\nII - transmissão \"inter vivos\", a qualquer título, por ato oneroso, de bens imóveis, por natureza ou acessão física, e de direitos reais sobre imóveis, exceto os de garantia, bem como cessão de direitos a sua aquisição;\nIII - serviços de qualquer natureza, não compreendidos no art. 155, II, definidos em lei complementar."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Competência cumulativa.</b> O DF não pode ser dividido em Municípios (CF, art. 32), por isso acumula os impostos estaduais e os municipais. Território Federal não é ente político: a União cobra lá os impostos estaduais e, se o Território não tiver Municípios, também os municipais."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 147",
+       "texto": "Art. 147. Competem à União, em Território Federal, os impostos estaduais e, se o Território não for dividido em Municípios, ==cumulativamente==, os impostos municipais; ao Distrito Federal cabem os impostos municipais."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Competência comum não é \"qualquer ente cobra qualquer taxa\".</b> Só cobra a taxa o ente que tem a competência <b>administrativa</b> para prestar aquele serviço ou exercer aquela polícia. É aqui que o STF tem decidido muito, e o padrão PGE é exatamente este: lei estadual ou municipal criou taxa, ela vale? Vire as cartas."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Taxa estadual de mineração",
+         "sub": "válida",
+         "verso": "Estado pode instituir taxa de fiscalização de pesquisa, lavra e aproveitamento de recursos minerais no seu território: fiscalizar é competência comum (ADIs 4.785, 4.786 e 4.787).",
+         "detalhe": "Limite: inconstitucional se exceder flagrante e desproporcionalmente o custo da fiscalização (ADI 7.400)."
+        },
+        {
+         "frente": "Taxa municipal de antenas",
+         "sub": "inválida",
+         "verso": "Fiscalizar o funcionamento de torres e antenas de telecomunicações é da União (CF, art. 22, IV). Tema 919.",
+         "detalhe": "Mas o Município pode cobrar taxa de fiscalização do uso e ocupação do solo por elas, proporcional ao custo."
+        },
+        {
+         "frente": "Taxa municipal de postes",
+         "sub": "inválida",
+         "verso": "Taxa pela ocupação e permanência de postes de energia nas vias viola a competência da União sobre energia (arts. 21, XII, b, 22, IV, e 175). ADPF 512.",
+         "detalhe": "Energia, como telecomunicações, é da União."
+        },
+        {
+         "frente": "Taxa de segurança em eventos",
+         "sub": "inválida",
+         "verso": "Segurança pública é serviço geral e indivisível (uti universi): remunera-se por impostos, não por taxa. ADI 2.692.",
+         "detalhe": "Serviço indivisível nunca sustenta taxa."
+        },
+        {
+         "frente": "Taxa estadual de bombeiros",
+         "sub": "válida",
+         "verso": "Prevenção e combate a incêndio, busca, salvamento e resgate prestados ou postos à disposição do contribuinte são específicos e divisíveis. Tema 1.282 (2025).",
+         "detalhe": "Cuidado: é o contrário da taxa de segurança pública."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 22, IV",
+       "texto": "IV - águas, ==energia==, informática, ==telecomunicações== e radiodifusão;"
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e divergências: bitributação, bis in idem, reforma e a Constituição do Maranhão",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Os dois fenômenos têm a mesma raiz (o mesmo fato gerador tributado mais de uma vez), mas a diferença é <b>quem</b> cobra. Guarde pela palavra: bis in <b>idem</b>, o <b>mesmo</b> ente."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Bis in idem",
+        "Bitributação"
+       ],
+       "linhas": [
+        [
+         "Conceito",
+         "O mesmo ente institui mais de um tributo sobre o mesmo fato gerador",
+         "Entes diferentes cobram tributo do mesmo sujeito sobre o mesmo fato gerador"
+        ],
+        [
+         "Pode?",
+         "Não há proibição genérica; há limites no residual (arts. 154, I, e 195, § 4º)",
+         "Em regra proibida pela rígida divisão de competências; os casos reais são conflitos aparentes"
+        ],
+        [
+         "Exemplos",
+         "PIS e Cofins sobre a receita; II e IPI na importação",
+         "Imposto extraordinário de guerra (art. 154, II); bitributação internacional da renda, evitada por tratado"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Quando não é nem um nem outro",
+       "html": "O entendimento majoritário exige que os dois tributos sejam da <b>mesma natureza</b>. Por isso <b>CSLL e IRPJ</b> sobre o lucro não são bis in idem, e contribuição que usa base de cálculo de imposto não é bitributação (ADI 2.556; vale também para empréstimo compulsório). E a taxa pode usar elemento da base de imposto, sem identidade integral (SV 29)."
+      },
+      {
+       "t": "texto",
+       "html": "O imposto extraordinário de guerra é a exceção mais cobrada: a União pode instituí-lo <b>compreendido ou não</b> em sua competência, até sobre fato que seria do Estado (um \"novo ICMS\"). Para a doutrina majoritária isso não é invasão de competência, porque a própria CF autoriza. Ele é suprimido <b>gradativamente</b>, cessadas as causas."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Reforma tributária.</b> A EC 132/2023 criou uma figura que não cabe nos modelos clássicos: o IBS é de <b>competência compartilhada</b> entre Estados, DF e Municípios (CF, art. 156-A), com lei complementar única. Não é competência privativa de cada um, nem comum. Para a prova: \"o IBS é de competência privativa dos Estados\" está errado."
+      },
+      {
+       "t": "texto",
+       "html": "<b>CF x Constituição do Maranhão.</b> A Constituição Estadual repete o modelo da CF para o Estado e os Municípios (art. 122) e acrescenta uma regra que a CF não tem com essa redação: a vedação de renunciar à receita sem interesse público justificado (§ 3º). Ela conversa com o art. 11 da LRF e com o art. 14 da LRF, que tratam da renúncia de receita."
+      },
+      {
+       "t": "lei",
+       "ref": "Constituição do Maranhão, art. 122, caput, I a III, §§ 2º e 3º",
+       "texto": "Art. 122. O Estado e os Municípios poderão instituir os seguintes tributos:\nI - impostos;\nII - taxas, em razão do exercício do poder de polícia ou pela utilização, efetiva ou potencial, de serviços públicos específicos e divisíveis, prestados ao contribuinte ou postos a sua disposição;\nIII - contribuição de melhoria, decorrente de obras públicas.\n§ 2° As taxas não poderão ter base de cálculo própria de impostos.\n§ 3° É vedado ao Estado e aos Municípios renunciar à receita e conceder isenções e anistia ==sem interesse público justificado==."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 776.594/SP, Plenário, 02/12/2022 (repercussão geral, Tema 919, Info 1078)",
+       "tese": "A instituição de taxa de fiscalização do funcionamento de torres e antenas de transmissão e recepção de dados e voz é de competência privativa da União, nos termos do art. 22, IV, da Constituição Federal, não competindo aos municípios instituir referida taxa."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 1.417.155/RN, Plenário, 26/03/2025 (repercussão geral, Tema 1.282, Info 1171)",
+       "tese": "São constitucionais as taxas estaduais pela utilização, efetiva ou potencial, dos serviços públicos de prevenção e combate a incêndios, busca, salvamento ou resgate prestados ao contribuinte ou postos a sua disposição pelos corpos de bombeiros militares."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 2.692/DF, Plenário, 30/09/2022 (Info 1070)",
+       "tese": "É inconstitucional a cobrança de taxa de segurança para eventos, pois a segurança pública é serviço geral e indivisível, a ser remunerado por impostos. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADIs 4.785/MG, 4.786/PA e 4.787/AP, Plenário, 01/08/2022 (Info 1062)",
+       "tese": "É constitucional a instituição, por lei estadual, de taxas de controle, monitoramento e fiscalização das atividades de pesquisa, lavra, exploração e aproveitamento de recursos minerários. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 7.400/MT, Plenário, 19/12/2023 (Info 1121)",
+       "tese": "O Estado-membro é competente para instituir taxa pelo exercício regular do poder de polícia sobre as atividades minerárias realizadas no Estado; é inconstitucional a taxa de polícia que exceda flagrante e desproporcionalmente os custos da fiscalização. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADPF 512/DF, Plenário, 22/05/2023 (Info 1095)",
+       "tese": "É inconstitucional lei municipal que institui taxa pela fiscalização da ocupação e da permanência de postes nas vias públicas, por violar a competência da União sobre energia (arts. 21, XII, b, 22, IV, e 175 da CF). Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 626",
+       "tese": "A incidência do IPTU sobre imóvel situado em área considerada pela lei local como urbanizável ou de expansão urbana não está condicionada à existência dos melhoramentos elencados no art. 32, § 1º, do CTN."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Nas provas FCC desta pasta não há questão direta de competência tributária, então aqui não existe estatística. O que a PGE-AM (2022) mostrou é o estilo do Tributário: pede \"nos termos expressos do CTN\" e cobra o texto literal. Neste tema, isso significa os <b>arts. 6º, 7º e 8º do CTN</b> e os <b>arts. 147 e 154 da CF</b>. E, por ser prova de procuradoria, o caso de \"lei estadual criou taxa, é válida?\" é o formato mais provável."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O que pode cair assim",
+       "html": "1) Competência tributária é delegável? <b>Não</b>; a capacidade de arrecadar e fiscalizar é. 2) Banco que arrecada recebeu delegação? <b>Não</b> (art. 7º, § 3º). 3) O Município não criou o ISS: o Estado pode? <b>Não</b> (art. 8º). 4) Estado cria imposto residual? <b>Não</b>; só a União, por LC. 5) Imposto extraordinário só na competência da União? <b>Não</b>: compreendido ou não. 6) DF tem quantos impostos? <b>Seis</b>. 7) Lei federal de normas gerais posterior <b>revoga</b> a estadual? Não, <b>suspende</b> a eficácia. 8) Imóvel urbano usado em pecuária: <b>ITR</b>. 9) Município cria taxa de fiscalização de antenas? <b>Não</b> (Tema 919); de uso do solo, sim."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A competência tributária é indelegável, salvo a atribuição das funções de arrecadar ou fiscalizar tributos, conferida por uma pessoa jurídica de direito público a outra.",
+         "v": true,
+         "porque": "CTN, art. 7º, caput."
+        },
+        {
+         "texto": "A atribuição da função de fiscalizar não compreende as garantias e os privilégios processuais do ente que a conferiu.",
+         "v": false,
+         "porque": "Compreende (art. 7º, § 1º)."
+        },
+        {
+         "texto": "O não exercício da competência tributária pelo Município transfere ao Estado a competência para instituir o imposto.",
+         "v": false,
+         "porque": "CTN, art. 8º."
+        },
+        {
+         "texto": "A superveniência de lei federal sobre normas gerais revoga a lei estadual no que lhe for contrário.",
+         "v": false,
+         "porque": "Suspende a eficácia (CF, art. 24, § 4º)."
+        },
+        {
+         "texto": "Na iminência ou no caso de guerra externa, a União pode instituir impostos extraordinários compreendidos ou não em sua competência tributária.",
+         "v": true,
+         "porque": "CF, art. 154, II."
+        },
+        {
+         "texto": "A incidência do IPTU em área de expansão urbana definida em lei local depende de pelo menos dois melhoramentos do art. 32, § 1º, do CTN.",
+         "v": false,
+         "porque": "Súmula 626 do STJ."
+        },
+        {
+         "texto": "É constitucional a taxa estadual pela utilização, efetiva ou potencial, do serviço de prevenção e combate a incêndios.",
+         "v": true,
+         "porque": "Tema 1.282 do STF."
+        },
+        {
+         "texto": "PIS e Cofins sobre a receita configuram bitributação vedada pela Constituição.",
+         "v": false,
+         "porque": "É bis in idem (mesmo ente), sem vedação genérica."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "trib-ct-01",
+    "trib-ct-02",
+    "trib-ct-03",
+    "trib-ct-04",
+    "trib-ct-05",
+    "trib-ct-06",
+    "trib-ct-07",
+    "trib-ct-08",
+    "trib-ct-09",
+    "trib-ct-10",
+    "trib-ct-11",
+    "trib-ct-12"
+   ]
   },
   {
    "id": "B7-a03",
    "topico_id": "B7-01",
    "numero": 3,
    "titulo": "Princípios e limitações ao poder de tributar",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Limitações constitucionais ao poder de tributar, parte 1 (2026), itens 1 a 15; CF (com a EC 132/2023), CTN e Constituição do Maranhão, textos vigentes; prova FCC 2022 PGE-AM",
+   "resumo": [
+    "Limitações ao poder de tributar: rol não exaustivo (\"sem prejuízo de outras garantias\"); muitas são cláusulas pétreas, pelo indivíduo (art. 60, § 4º, IV) ou pela Federação (I).",
+    "Legalidade: criar sempre por lei (LC só onde a CF exige). Alterar alíquota pelo Executivo: II, IE, IPI, IOF; CIDE e ICMS dos combustíveis. Fora da reserva: atualização monetária, prazo de pagamento, imóvel novo fora da PGV. IPTU: base atualizada pelo Executivo conforme lei municipal (EC 132/2023).",
+    "Isonomia: proibida distinção por ocupação ou função (art. 150, II). Capacidade contributiva: art. 145, § 1º. Tema 1.174: IR de 25% para aposentado no exterior é inconstitucional.",
+    "Não surpresa: irretroatividade (sem exceção), anterioridade anual e noventena somadas. Exceções às duas: II, IE, IOF, empréstimo de guerra ou calamidade, imposto extraordinário. Só à anual: IPI, contribuições da seguridade, CIDE e ICMS dos combustíveis. Só à noventena: IR e base do IPVA e do IPTU.",
+    "Não confisco: carga total do mesmo ente; taxas pela equivalência com o custo; multa punitiva até 100%, qualificada até 100% (150% na reincidência, Tema 863), moratória perto de 20%.",
+    "Art. 151: uniformidade (com incentivo regional), IR dos títulos e agentes, vedação de isenção heterônoma (exceções: ISS e ICMS na exportação; tratado não é heterônoma). Art. 152: não discriminação. Benefício fiscal: lei específica (art. 150, § 6º); ICMS por convênio CONFAZ."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: o poder de tributar tem freio, e o freio é garantia do contribuinte",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Tributar mexe na propriedade e na liberdade. Por isso a CF não deixou o freio para a lei: escreveu as limitações no próprio texto. Duas ideias sustentam tudo o que vem a seguir. Primeira: o caput do art. 150 diz <b>\"sem prejuízo de outras garantias\"</b>, então o rol <b>não é exaustivo</b>. Segunda: boa parte dessas limitações são <b>garantias individuais</b> do contribuinte e, por isso, <b>cláusulas pétreas</b> (CF, art. 60, § 4º, IV). Emenda pode ampliar a proteção, mas não pode tender a aboli-la."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 150, caput e I a V",
+       "texto": "Art. 150. ==Sem prejuízo de outras garantias== asseguradas ao contribuinte, é vedado à União, aos Estados, ao Distrito Federal e aos Municípios:\nI - exigir ou aumentar tributo ==sem lei que o estabeleça==;\nII - instituir tratamento desigual entre contribuintes que se encontrem em situação equivalente, proibida qualquer distinção em razão de ocupação profissional ou função por eles exercida, independentemente da denominação jurídica dos rendimentos, títulos ou direitos;\nIII - cobrar tributos:\na) em relação a fatos geradores ocorridos antes do início da vigência da lei que os houver instituído ou aumentado;\nb) no mesmo exercício financeiro em que haja sido publicada a lei que os instituiu ou aumentou;\nc) antes de decorridos noventa dias da data em que haja sido publicada a lei que os instituiu ou aumentou, observado o disposto na alínea b;\nIV - utilizar tributo com ==efeito de confisco==;\nV - estabelecer limitações ao tráfego de pessoas ou bens, por meio de tributos interestaduais ou intermunicipais, ressalvada a cobrança de pedágio pela utilização de vias conservadas pelo Poder Público;"
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Nem toda limitação é pétrea pelo mesmo motivo",
+       "html": "Algumas protegem o <b>indivíduo</b> (legalidade, anterioridade, não confisco): pétreas pelo inciso IV do § 4º do art. 60. Outras protegem a <b>Federação</b> (as vedações do art. 151 à União, a não discriminação do art. 152): pétreas pelo inciso I. A doutrina moderna chama muitas delas de <b>regras</b>, porque não se ponderam; mas prevalece chamá-las de princípios."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Legalidade.</b> Tributo só nasce e só aumenta por lei. Em regra, lei ordinária (ou medida provisória). <b>Lei complementar</b> só onde a CF exige: imposto sobre grandes fortunas, IBS, CBS, Imposto Seletivo, empréstimos compulsórios, impostos residuais e contribuições residuais. E vale o paralelismo das formas: se a CF exige lei para criar, exige lei para extinguir. O art. 97 do CTN lista o que só a lei faz."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 97",
+       "texto": "Art. 97. Sòmente a lei pode estabelecer:\nI - ==a instituição de tributos, ou a sua extinção==;\nII - ==a majoração de tributos, ou sua redução==, ressalvado o disposto nos arts. 21, 26, 39, 57 e 65;\nIII - a definição do fato gerador da obrigação tributária principal, ressalvado o disposto no inciso I do\n§ 3º do art. 52, e do seu sujeito passivo;\nIV - a fixação de alíquota do tributo e da sua base de cálculo, ressalvado o disposto nos arts. 21, 26, 39, 57 e 65;\nV - a cominação de penalidades para as ações ou omissões contrárias a seus dispositivos, ou para outras infrações nela definidas;\nVI - as hipóteses de exclusão, suspensão e extinção de créditos tributários, ou de dispensa ou redução de penalidades.\n§ 1º ==Equipara-se à majoração== do tributo a modificação da sua base de cálculo, que importe em torná-lo mais oneroso.\n§ 2º ==Não constitui majoração== de tributo, para os fins do disposto no inciso II dêste artigo, a atualização do valor monetário da respectiva base de cálculo."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Fora da reserva de lei",
+         "sub": "nem é majoração",
+         "texto": "Atualização monetária da base (art. 97, § 2º), <b>prazo de pagamento</b> (RE 203.684; SV 50) e avaliação individual de <b>imóvel novo</b> fora da Planta Genérica de Valores, com critérios em lei e contraditório (Tema 1.084)."
+        },
+        {
+         "titulo": "Teto em lei, valor no regulamento",
+         "sub": "flexibilização",
+         "texto": "Lei fixa o teto e o ato infralegal fixa a taxa proporcional ao custo (RE 838.284, taxa da ART). Conselho que fixa anuidade <b>sem teto legal</b>: inconstitucional (RE 704.292). Hoje o teto está na Lei 12.514/2011, válida (ADIs 4.697 e 4.762)."
+        },
+        {
+         "titulo": "Alíquota pelo Executivo",
+         "sub": "exceções da CF",
+         "texto": "II, IE, IPI e IOF, nos limites da lei (art. 153, § 1º). CIDE-combustíveis: <b>reduzir e restabelecer</b> por ato do Executivo (art. 177, § 4º, I, b). ICMS monofásico de combustíveis: alíquotas por <b>convênio</b> (art. 155, § 4º, IV)."
+        },
+        {
+         "titulo": "IPTU depois da reforma",
+         "sub": "EC 132/2023",
+         "texto": "O IPTU pode ter a base de cálculo <b>atualizada pelo Executivo</b>, conforme critérios da lei municipal (art. 156, § 1º, III). Segundo o material, isso superou a Súmula 160 do STJ e o RE 648.245 para quem tiver a lei com critérios."
+        },
+        {
+         "titulo": "Criar tributo",
+         "sub": "sem exceção",
+         "texto": "Nenhuma exceção para <b>instituir</b>. As exceções são para <b>alterar alíquota</b>, nunca para criar."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 153, § 1º",
+       "texto": "§ 1º É facultado ao Poder Executivo, atendidas as condições e os limites estabelecidos em lei, ==alterar as alíquotas== dos impostos enumerados nos incisos I, II, IV e V."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 156, § 1º, III",
+       "texto": "§ 1º Sem prejuízo da progressividade no tempo a que se refere o art. 182, § 4º, inciso II, o imposto previsto no inciso I poderá:\nIII - ter sua base de cálculo ==atualizada pelo Poder Executivo==, conforme ==critérios estabelecidos em lei municipal==."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Medida provisória.</b> Pode instituir e majorar tributo, se houver relevância e urgência e a matéria não for de lei complementar (art. 62, § 1º, III). Para <b>impostos</b>, há uma trava a mais: só produz efeitos no exercício seguinte se for <b>convertida em lei</b> até o último dia do ano em que foi editada. A trava não vale para II, IE, IPI, IOF e imposto extraordinário de guerra. Nos <b>outros tributos</b>, a anterioridade se conta da <b>publicação da MP</b>. Se a majoração só aparecer na lei de conversão, a noventena se conta da conversão."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 62, § 2º",
+       "texto": "§ 2º Medida provisória que implique instituição ou majoração de impostos, exceto os previstos nos arts. 153, I, II, IV, V, e 154, II, só produzirá efeitos no exercício financeiro seguinte se houver sido ==convertida em lei até o último dia daquele em que foi editada==."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: isonomia, capacidade contributiva e não surpresa",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Isonomia</b> tem duas faces: tratar igual quem está na mesma situação (horizontal, art. 150, II) e tratar diferente quem é diferente, na medida da diferença (vertical). O art. 150, II proíbe expressamente distinguir pela <b>ocupação profissional ou função</b>. A <b>capacidade contributiva</b> (art. 145, § 1º) é a isonomia aplicada ao bolso: quem pode mais paga mais. O texto fala em impostos, \"sempre que possível\", mas o STF admite aplicá-la a outras espécies."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 145, § 1º",
+       "texto": "§ 1º ==Sempre que possível==, os impostos terão caráter pessoal e serão graduados segundo a ==capacidade econômica do contribuinte==, facultado à administração tributária, especialmente para conferir efetividade a esses objetivos, identificar, respeitados os direitos individuais e nos termos da lei, o patrimônio, os rendimentos e as atividades econômicas do contribuinte."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Isenção de IPTU para servidor público",
+         "sub": "viola",
+         "verso": "Lei de Niterói isentava de IPTU por ser servidor. Distinção pela função, sem desigualdade real que a justifique.",
+         "detalhe": "Art. 150, II, parte final."
+        },
+        {
+         "frente": "IR de 25% para aposentado no exterior",
+         "sub": "viola",
+         "verso": "Alíquota fixa, sem isenção nem progressividade, para aposentados e pensionistas residentes no exterior. Tema 1.174 (2024).",
+         "detalhe": "Ofende isonomia, capacidade contributiva e não confisco."
+        },
+        {
+         "frente": "Bases diferentes para inativos da União e dos demais entes",
+         "sub": "viola",
+         "verso": "A EC 41/2003 tratou inativos federais melhor que os estaduais e municipais. ADI 3.105.",
+         "detalhe": "Até emenda constitucional se submete à isonomia."
+        },
+        {
+         "frente": "Repatriação sem agentes públicos",
+         "sub": "não viola",
+         "verso": "A Lei 13.254/2016 excluiu ocupantes de cargos de direção ou eletivos e parentes. Constitucional: deles se exige retidão maior (ADI 5.586).",
+         "detalhe": "Exceção à vedação por função, justificada pela moralidade."
+        },
+        {
+         "frente": "Parcelamento sem quem depositou em juízo",
+         "sub": "não viola",
+         "verso": "Excluir do parcelamento da Cofins quem fez depósito judicial não fere isonomia nem acesso à justiça. Tema 573.",
+         "detalhe": "O depósito não é condição para ir a juízo."
+        },
+        {
+         "frente": "Simples sem profissionais liberais",
+         "sub": "não viola",
+         "verso": "Afastar do Simples sociedades cujos sócios disputam o mercado sem ajuda do Estado é extrafiscalidade legítima. ADI 1.643.",
+         "detalhe": "A LC 147/2014 depois abriu o Simples a quase todos."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Progressividade em imposto real",
+       "html": "Antes, só com previsão expressa: IPTU (arts. 156, § 1º, I, e 182, § 4º, II) e ITR (art. 153, § 4º, I). O STF passou a admitir progressividade no <b>ITCMD</b> (RE 562.045), mas as Súmulas 656 (ITBI progressivo é inconstitucional) e 668 (IPTU progressivo antes da EC 29/2000, só pela função social) seguem formalmente vigentes. Orientação do material: se a alternativa reproduz a súmula, marque certo; se diz que imposto real <b>só</b> é progressivo com autorização expressa, desconfie."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Capacidade contributiva e sigilo.</b> O art. 145, § 1º deixa o fisco identificar patrimônio e rendimentos, respeitados os direitos individuais. Por isso a Receita pode requisitar dados bancários <b>sem ordem judicial</b> (LC 105/2001, art. 6º; ADIs 2.390, 2.386, 2.397 e 2.859): não é quebra, é <b>transferência de sigilo</b>. Estados e Municípios precisam de regulamentação semelhante à federal. E o STF validou o Convênio ICMS 134/2016, que obriga bancos a informar ao fisco estadual operações com cartão e PIX (ADI 7.276)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Não surpresa.</b> Três garantias de tempo, cada uma com um marco diferente. Siga os passos."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Irretroatividade",
+         "sub": "marco: vigência"
+        },
+        {
+         "titulo": "Anterioridade anual",
+         "sub": "marco: publicação"
+        },
+        {
+         "titulo": "Noventena",
+         "sub": "90 dias da publicação"
+        },
+        {
+         "titulo": "As duas juntas",
+         "sub": "a regra desde 2003"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Irretroatividade</b> (art. 150, III, a): não se cobra tributo sobre fato gerador anterior à <b>vigência</b> da lei que o criou ou aumentou. <b>Não tem exceção</b> na CF. Lei interpretativa e lei penal tributária mais benéfica retroagem (CTN, art. 106), mas isso não é exceção, porque não criam nem aumentam tributo."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Anterioridade do exercício</b> (art. 150, III, b): lei publicada em um ano só alcança o tributo no ano seguinte. O marco é a <b>publicação</b>. Só vale para instituir ou aumentar: reduzir, extinguir ou mudar prazo de pagamento não espera (SV 50)."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Noventena</b> (art. 150, III, c, da EC 42/2003): além disso, 90 dias da publicação. Para as contribuições da seguridade já existia regra própria (art. 195, § 6º), que dispensa a anterioridade anual."
+        },
+        {
+         "no": 3,
+         "texto": "<b>As duas somadas.</b> Lei publicada em 20 de dezembro: cobra-se só por volta de 20 de março (vale o que vencer por último). Lei publicada em fevereiro: espera-se 1º de janeiro, não maio. Fora das exceções, vale sempre o prazo maior."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 150, § 1º",
+       "texto": "§ 1º A vedação do inciso ==III, b, não se aplica== aos tributos previstos nos arts. 148, I, 153, I, II, IV e V; e 154, II; e a vedação do inciso ==III, c, não se aplica== aos tributos previstos nos arts. 148, I, 153, I, II, III e V; e 154, II, ==nem à fixação da base de cálculo== dos impostos previstos nos arts. 155, III, e 156, I."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 195, § 6º",
+       "texto": "§ 6º As contribuições sociais de que trata este artigo só poderão ser exigidas após decorridos ==noventa dias== da data da publicação da lei que as houver instituído ou modificado, ==não se lhes aplicando o disposto no art. 150, III, \"b\"==."
+      },
+      {
+       "t": "texto",
+       "html": "Agora a matriz que a FCC cobrou na PGE-AM. <b>Verdadeiro</b> quer dizer que o tributo <b>respeita</b> aquela anterioridade; <b>falso</b>, que é exceção. Toque nas células."
+      },
+      {
+       "t": "matriz",
+       "linhas": [
+        "II, IE e IOF",
+        "IPI",
+        "IR",
+        "Empréstimo compulsório de guerra ou calamidade",
+        "Empréstimo compulsório de investimento",
+        "Imposto extraordinário de guerra",
+        "Contribuições da seguridade",
+        "Base de cálculo do IPVA e do IPTU",
+        "CIDE e ICMS dos combustíveis (restabelecimento)"
+       ],
+       "colunas": [
+        "Respeita a anterioridade anual",
+        "Respeita a noventena"
+       ],
+       "celulas": [
+        [
+         [
+          false,
+          "Exceção (art. 150, § 1º): impostos reguladores, nas mãos do Executivo."
+         ],
+         [
+          false,
+          "Exceção às duas. Podem valer no dia seguinte."
+         ]
+        ],
+        [
+         [
+          false,
+          "Exceção à anual."
+         ],
+         [
+          true,
+          "Respeita a noventena: único regulador que espera 90 dias."
+         ]
+        ],
+        [
+         [
+          true,
+          "Respeita a anual."
+         ],
+         [
+          false,
+          "Exceção à noventena. Lei de 31/12 vale em 1º/01."
+         ]
+        ],
+        [
+         [
+          false,
+          "Art. 148, I: exceção às duas, pela urgência."
+         ],
+         [
+          false,
+          "Exceção."
+         ]
+        ],
+        [
+         [
+          true,
+          "Art. 148, II: o próprio texto manda observar o art. 150, III, b."
+         ],
+         [
+          true,
+          "Respeita."
+         ]
+        ],
+        [
+         [
+          false,
+          "Art. 154, II: exceção às duas."
+         ],
+         [
+          false,
+          "Exceção."
+         ]
+        ],
+        [
+         [
+          false,
+          "Art. 195, § 6º: não se aplica a anual."
+         ],
+         [
+          true,
+          "Exigem 90 dias."
+         ]
+        ],
+        [
+         [
+          true,
+          "A base respeita a anual."
+         ],
+         [
+          false,
+          "Exceção à noventena só da base (art. 150, § 1º, parte final). A alíquota respeita as duas."
+         ]
+        ],
+        [
+         [
+          false,
+          "Arts. 177, § 4º, I, b, e 155, § 4º, IV, c: não se aplica o art. 150, III, b."
+         ],
+         [
+          true,
+          "O texto só afasta a alínea b: a noventena continua."
+         ]
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Irretroatividade na jurisprudência.</b> O STF cancelou a <b>Súmula 584</b> (que aplicava ao IR a lei vigente no ano da declaração) no RE 159.180 (2020), por violar anterioridade e irretroatividade. Já para a CSLL, que só espera 90 dias, o STF admite que lei publicada até 2 de outubro alcance o lucro de todo o ano, porque o fato gerador se completa em 31/12. A doutrina critica (retroatividade econômica), mas é a posição da Corte."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 105",
+       "texto": "Art. 105. A legislação tributária aplica-se imediatamente aos ==fatos geradores futuros e aos pendentes==, assim entendidos aquêles cuja ocorrência tenha tido início mas não esteja completa nos têrmos do artigo 116."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e divergências: confisco, tráfego, Federação, benefício fiscal e reforma",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Revogar benefício é aumentar tributo.</b> Para o STF, reduzir ou suprimir benefício fiscal é <b>majoração indireta</b> e se sujeita à anterioridade anual e à noventena (RE 564.225; caso Reintegra, 2020). Mas atenção ao limite: se a redução nunca chegou a produzir efeitos e o ato que a anulou só manteve as alíquotas já pagas, não há surpresa (Tema 1.337, PIS e Cofins de 2023). E mudar o momento do fato gerador do IPVA para respeitar a noventena é válido (ADI 5.282)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Não confisco</b> (art. 150, IV). O texto proíbe tributo com <b>efeito</b> de confisco, conceito aberto. Os parâmetros do STF: olha-se a <b>carga total</b> que o mesmo ente impõe ao contribuinte (ADC 8), como na ADI 2.010, em que a contribuição de 25% somada ao IR de 27,5% levava metade do salário do servidor. Nas taxas, mede-se pela <b>equivalência com o custo</b> (ADI 2.551; ADI 6.211)."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Multa",
+        "Limite fixado pelo STF",
+        "Fonte"
+       ],
+       "linhas": [
+        [
+         "Punitiva (de ofício)",
+         "Até 100% do tributo",
+         "RE 833.106 e seguintes"
+        ],
+        [
+         "Qualificada (sonegação, fraude, conluio)",
+         "Até 100%; até 150% na reincidência",
+         "Tema 863 (RE 736.090, 2024), até vir lei complementar"
+        ],
+        [
+         "Moratória",
+         "Tende a 20% do tributo",
+         "AI 727.872-AgR; RE 938.538-AgR"
+        ],
+        [
+         "Pena de perdimento de bens",
+         "Não é tributo: é sanção, cabível no ilícito",
+         "CF, art. 5º, XLVI, b"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Liberdade de tráfego</b> (art. 150, V): tributo não pode limitar a circulação entre Estados ou Municípios. Ressalvas: o <b>ICMS interestadual</b> e o <b>pedágio</b>. O pedágio atual, cobrado a cada uso, é <b>preço público</b> e dispensa lei (ADI 800). O antigo selo-pedágio, compulsório e independente do uso, era taxa (RE 181.475). Na prova: pedágio é tarifa, salvo modelo parecido com o selo."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 151",
+       "texto": "Art. 151. É vedado à União:\nI - instituir tributo que não seja ==uniforme em todo o território nacional== ou que implique distinção ou preferência em relação a Estado, ao Distrito Federal ou a Município, em detrimento de outro, ==admitida a concessão de incentivos fiscais== destinados a promover o equilíbrio do desenvolvimento sócio-econômico entre as diferentes regiões do País;\nII - tributar a renda das obrigações da dívida pública dos Estados, do Distrito Federal e dos Municípios, bem como a remuneração e os proventos dos respectivos agentes públicos, em níveis superiores aos que fixar para suas obrigações e para seus agentes;\nIII - ==instituir isenções de tributos da competência== dos Estados, do Distrito Federal ou dos Municípios."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Uniformidade geográfica",
+         "sub": "art. 151, I",
+         "verso": "A União não pode tributar de forma diferente entre Estados, salvo incentivo para reduzir desigualdade regional. Zona Franca de Manaus é válida.",
+         "detalhe": "Tema 80: isenção de IPI para açúcar do Norte e Nordeste, válida."
+        },
+        {
+         "frente": "Dívida e servidores dos outros entes",
+         "sub": "art. 151, II",
+         "verso": "A União não pode tributar a renda dos títulos e dos agentes estaduais e municipais acima do que fixa para os seus.",
+         "detalhe": "Vale só para o imposto de renda."
+        },
+        {
+         "frente": "Isenção heterônoma",
+         "sub": "art. 151, III",
+         "verso": "A União não isenta tributo estadual ou municipal. Exceções: lei complementar para ISS na exportação de serviços (art. 156, § 3º, II) e ICMS na exportação (art. 155, § 2º, XII, e).",
+         "detalhe": "Tratado internacional pode isentar, e não é isenção heterônoma: o Presidente age como Chefe de Estado (RE 229.096)."
+        },
+        {
+         "frente": "Imunidade x isenção",
+         "sub": "quem concede",
+         "verso": "Isenção: regra autônoma, por lei do ente competente. Imunidade: sempre heterônoma, porque vem da CF.",
+         "detalhe": "Imunidades: próxima aula."
+        },
+        {
+         "frente": "Não discriminação",
+         "sub": "art. 152",
+         "verso": "Estados, DF e Municípios não diferenciam bens e serviços pela procedência ou destino. Ex.: IPVA maior para carro de outro Estado.",
+         "detalhe": "Vale no plano interno; o tratamento do importado segue o GATT."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 152",
+       "texto": "Art. 152. É vedado aos Estados, ao Distrito Federal e aos Municípios estabelecer diferença tributária entre bens e serviços, de qualquer natureza, em razão de sua ==procedência ou destino==.\n"
+      },
+      {
+       "t": "texto",
+       "html": "<b>Benefício fiscal exige lei específica</b> (art. 150, § 6º): isenção, anistia, remissão, crédito presumido, redução de base. Lei que trate só disso ou só do tributo. O STF não é literal: basta <b>pertinência temática</b> (ADI 1.379; ADI 4.033, isenção dentro da lei do Simples). Extinguir tributo não é benefício e dispensa lei específica (ADI 5.794, contribuição sindical). E o Judiciário não estende isenção por isonomia (ADI 6.025), com a exceção excepcional da ADO 30 (IPI para pessoa com deficiência auditiva)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 150, § 6º",
+       "texto": "§ 6º Qualquer subsídio ou isenção, redução de base de cálculo, concessão de crédito presumido, anistia ou remissão, relativos a impostos, taxas ou contribuições, só poderá ser concedido mediante ==lei específica==, federal, estadual ou municipal, que regule exclusivamente as matérias acima enumeradas ou o correspondente tributo ou contribuição, ==sem prejuízo do disposto no art. 155, § 2.º, XII, g==."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "ICMS: convênio e lei",
+       "html": "Benefício de ICMS precisa de <b>convênio no CONFAZ</b> (LC 24/1975: unanimidade para conceder, 4/5 para revogar). O convênio só <b>autoriza</b>: o ente ainda precisa aprová-lo na sua Casa Legislativa (ADI 5.929; no DF, decreto legislativo bastou). Benefício que não gera guerra fiscal, como ICMS nas contas de templos, dispensa convênio (ADI 3.421). O Estado prejudicado pela guerra fiscal pode glosar o crédito até o valor efetivamente cobrado na origem (ADI 3.692)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Reforma tributária: cinco princípios expressos</b> (art. 145, § 3º): <b>simplicidade</b> (antes implícita, a praticabilidade), <b>transparência</b> (já havia o art. 150, § 5º; agora IBS, CBS e Imposto Seletivo não integram a própria base de cálculo, o fim do cálculo \"por dentro\"), <b>justiça tributária</b> (distributiva nos impostos, comutativa nos tributos vinculados; cesta básica e cashback), <b>cooperação</b> (já havia o art. 37, XXII) e <b>defesa do meio ambiente</b> (Imposto Seletivo, IPVA diferenciado pelo impacto ambiental). E uma exceção nova à noventena: a fixação das <b>alíquotas de referência</b> do IBS e da CBS pelo Senado durante a transição (ADCT, art. 130, § 1º)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 150, § 5º",
+       "texto": "§ 5º A lei determinará medidas para que os consumidores sejam esclarecidos acerca dos impostos que incidam sobre mercadorias e serviços."
+      },
+      {
+       "t": "texto",
+       "html": "<b>CF x Constituição do Maranhão.</b> Dois detalhes. (1) O art. 124, III da Constituição Estadual traz só a irretroatividade e a anterioridade do exercício: <b>não reproduz a noventena</b>, que veio com a EC 42/2003. Não faz diferença: a CF vale diretamente para o Estado. (2) O § 5º do art. 124 exige lei específica para benefício fiscal, mas não repete a ressalva do convênio de ICMS. De novo, prevalece a CF: benefício de ICMS precisa de convênio."
+      },
+      {
+       "t": "lei",
+       "ref": "Constituição do Maranhão, art. 124, caput, I e III; § 5º",
+       "texto": "Art. 124. Sem prejuízo de outras garantias asseguradas ao contribuinte, é vedado ao Estado e aos Municípios:\nI - exigir ou aumentar tributo sem lei que o estabeleça;\nIII - cobrar tributos:\na) em relação a fatos geradores ocorridos antes do início da vigência da lei que os houver instituído ou aumentado;\nb) ==no mesmo exercício financeiro== em que haja sido publicada lei que os instituiu ou aumentou.\n§ 5º Qualquer subsídio ou isenção, redução de base de cálculo, concessão de crédito presumido, anistia ou remissão, relativos a impostos, taxas ou contribuições, só poderá ser concedido mediante lei específica que regule exclusivamente as matérias acima enumeradas ou o correspondente tributo ou contribuição."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ARE 1.245.097/PR, Plenário, 05/06/2023 (repercussão geral, Tema 1.084, Info 1098)",
+       "tese": "É constitucional a lei municipal que delega ao Poder Executivo a avaliação individualizada, para fins de cobrança do IPTU, de imóvel novo não previsto na Planta Genérica de Valores, desde que fixados em lei os critérios para a avaliação técnica e assegurado ao contribuinte o direito ao contraditório."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 1.043.313/RS, Plenário, 10/12/2020 (repercussão geral, Tema 939, Info 1002)",
+       "tese": "É constitucional a flexibilização da legalidade tributária constante do § 2º do art. 27 da Lei 10.865/2004, no que permitiu ao Poder Executivo, prevendo as condições e fixando os tetos, reduzir e restabelecer as alíquotas do PIS e da Cofins sobre receitas financeiras, estando presente o desenvolvimento de função extrafiscal. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ARE 1.327.491/SC, Plenário, 21/10/2024 (repercussão geral, Tema 1.174)",
+       "tese": "É inconstitucional a sujeição, na forma do art. 7º da Lei nº 9.779/99, com a redação conferida pela Lei nº 13.315/16, dos rendimentos de aposentadoria e de pensão pagos, creditados, entregues, empregados ou remetidos a residentes ou domiciliados no exterior à incidência do imposto de renda na fonte à alíquota de 25% (vinte e cinco por cento)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 736.090/SC, Plenário, 03/10/2024 (repercussão geral, Tema 863)",
+       "tese": "Até que seja editada lei complementar federal sobre a matéria, a multa tributária qualificada em razão de sonegação, fraude ou conluio limita-se a 100% (cem por cento) do débito tributário, podendo ser de até 150% (cento e cinquenta por cento) do débito tributário, caso se verifique a reincidência definida no art. 44, § 1º-A, da Lei nº 9.430/96, incluído pela Lei nº 14.689/23, observando-se, ainda, o disposto no § 1º-C do citado artigo."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 1.501.643/PR, Plenário, 19/10/2024 (repercussão geral, Tema 1.337)",
+       "tese": "A restauração das alíquotas integrais do PIS e da COFINS, a partir da repristinação promovida pelo Decreto nº 11.374/2023, não está submetida à anterioridade nonagesimal."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 5.282/PR, Plenário, 18/10/2022",
+       "tese": "Não há desvio de finalidade no caso de lei ordinária alterar o aspecto temporal do IPVA para viabilizar, a um só tempo, o respeito à garantia da anterioridade, inclusive nonagesimal, e viabilizar a tributação dos veículos automotores pela alíquota majorada no exercício financeiro seguinte ao da publicação desse diploma legal."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 1.055.941/SP, Plenário, 04/12/2019 (repercussão geral, Tema 990, Info 962)",
+       "tese": "É constitucional o compartilhamento dos relatórios de inteligência financeira da UIF e da íntegra do procedimento fiscalizatório da Receita Federal com os órgãos de persecução penal, sem prévia autorização judicial, resguardado o sigilo. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 229.096/RS, Plenário, 16/08/2007",
+       "tese": "Tratado internacional que concede isenção de tributo estadual ou municipal não caracteriza isenção heterônoma, pois o Presidente da República o subscreve como Chefe de Estado. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 5.929/DF, Plenário, 14/02/2020",
+       "tese": "Os convênios CONFAZ têm natureza meramente autorizativa, sendo imprescindível a submissão do ato que veicule benefícios fiscais de ICMS à Casa Legislativa. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula Vinculante 50",
+       "tese": "Norma legal que altera prazo de recolhimento de obrigação tributária não se sujeita ao princípio da anterioridade."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmulas 656 e 668",
+       "tese": "É inconstitucional a lei que estabelece alíquotas progressivas para o ITBI com base no valor venal do imóvel (656). É inconstitucional a lei municipal que tenha estabelecido, antes da EC 29/2000, alíquotas progressivas para o IPTU, salvo se destinada a assegurar o cumprimento da função social da propriedade urbana (668)."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Este tema caiu na prova real da PGE-AM (FCC 2022, questão 46): <b>exceções à noventena</b>, cobradas pelo texto literal do art. 150, § 1º. A alternativa certa juntava a <b>base de cálculo do IPVA</b> com a <b>alíquota do II</b>. As erradas trocavam alíquota por base (IPTU), punham o IPI (que respeita a noventena) e o empréstimo compulsório com o IPI. É o padrão: a FCC mistura base e alíquota e mistura a lista da anual com a da noventena. Por isso a matriz desta aula vale ser decorada."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O que pode cair assim",
+       "html": "1) IPI respeita a noventena? <b>Sim</b>, e é exceção só à anual. 2) IR respeita a noventena? <b>Não</b>; respeita a anual. 3) Base do IPVA e do IPTU: exceção só à <b>noventena</b>. 4) Empréstimo compulsório de <b>investimento</b>: respeita as duas. 5) Mudar o prazo de pagamento: sem anterioridade (SV 50). 6) Revogar isenção: <b>majoração indireta</b>, com anterioridade. 7) Irretroatividade tem exceção? <b>Não</b>. 8) MP de imposto: efeitos no ano seguinte só se <b>convertida</b> até 31/12, salvo II, IE, IPI, IOF e extraordinário. 9) Multa punitiva acima de 100%: confiscatória. 10) Tratado que isenta ISS: válido e <b>não</b> é isenção heterônoma. 11) Pedágio atual: <b>preço público</b>."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A vedação de cobrar tributo antes de noventa dias da publicação da lei não se aplica à fixação da base de cálculo do IPVA e do IPTU.",
+         "v": true,
+         "porque": "CF, art. 150, § 1º, parte final."
+        },
+        {
+         "texto": "O IPI é exceção tanto à anterioridade do exercício quanto à noventena.",
+         "v": false,
+         "porque": "É exceção só à anual; respeita a noventena."
+        },
+        {
+         "texto": "A medida provisória que majora o IR só produz efeitos no exercício seguinte se convertida em lei até o último dia daquele em que foi editada.",
+         "v": true,
+         "porque": "CF, art. 62, § 2º: o IR (art. 153, III) não está na lista de exceções."
+        },
+        {
+         "texto": "A redução de benefício fiscal não se submete à anterioridade, pois não cria nem aumenta tributo.",
+         "v": false,
+         "porque": "STF: majoração indireta, sujeita às duas anterioridades."
+        },
+        {
+         "texto": "A União pode, por lei complementar, conceder isenção de ISS nas exportações de serviços para o exterior.",
+         "v": true,
+         "porque": "CF, art. 156, § 3º, II: isenção heterônoma permitida."
+        },
+        {
+         "texto": "Multa tributária de ofício de 120% do valor do tributo é compatível com o não confisco.",
+         "v": false,
+         "porque": "RE 833.106: acima de 100% é confiscatória."
+        },
+        {
+         "texto": "A Constituição do Maranhão não reproduz a noventena, por isso o Estado pode cobrar ICMS majorado em 1º de janeiro por lei de 20 de dezembro.",
+         "v": false,
+         "porque": "A CF (art. 150, III, c) vale diretamente para o Estado."
+        },
+        {
+         "texto": "O Município pode, por lei, autorizar o Executivo a atualizar a base de cálculo do IPTU conforme critérios nela fixados.",
+         "v": true,
+         "porque": "CF, art. 156, § 1º, III (EC 132/2023)."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "trib-002",
+    "trib-003",
+    "trib-004",
+    "trib-pl-r01",
+    "trib-pl-01",
+    "trib-pl-02",
+    "trib-pl-03",
+    "trib-pl-04",
+    "trib-pl-05",
+    "trib-pl-06",
+    "trib-pl-07",
+    "trib-pl-08",
+    "trib-pl-09",
+    "trib-pl-10",
+    "trib-pl-11",
+    "trib-pl-12"
+   ]
   },
   {
    "id": "B7-a04",
@@ -770,6 +1936,62 @@
   [
    "Competência compartilhada",
    "Novidade do IBS: Estados, DF e Municípios dividem o mesmo imposto, com lei complementar única."
+  ],
+  [
+   "Competência tributária",
+   "Poder dado pela Constituição para instituir tributo por lei própria."
+  ],
+  [
+   "Capacidade tributária ativa",
+   "Função administrativa de arrecadar, fiscalizar e cobrar tributo; pode ser delegada."
+  ],
+  [
+   "Competência residual",
+   "Poder da União de criar, por lei complementar, imposto não previsto na CF."
+  ],
+  [
+   "Competência cumulativa",
+   "O DF soma impostos estaduais e municipais; a União, nos Territórios."
+  ],
+  [
+   "Bis in idem",
+   "O mesmo ente cobra mais de um tributo sobre o mesmo fato gerador."
+  ],
+  [
+   "Bitributação",
+   "Entes diferentes cobram tributo sobre o mesmo fato gerador do mesmo contribuinte."
+  ],
+  [
+   "Uti universi",
+   "Serviço prestado a todos, sem como medir o uso de cada um; não sustenta taxa."
+  ],
+  [
+   "Anterioridade do exercício",
+   "Tributo criado ou aumentado só se cobra no ano seguinte ao da publicação da lei."
+  ],
+  [
+   "Noventena",
+   "Tributo criado ou aumentado só se cobra 90 dias depois da publicação da lei."
+  ],
+  [
+   "Majoração indireta",
+   "Aumento de carga por redução ou revogação de benefício fiscal; segue as anterioridades."
+  ],
+  [
+   "Efeito de confisco",
+   "Tributação ou multa tão pesada que absorve parte irrazoável do patrimônio ou da renda."
+  ],
+  [
+   "Isenção heterônoma",
+   "Isenção dada por ente diferente do que tem a competência para o tributo; em regra vedada."
+  ],
+  [
+   "Preço público",
+   "Valor cobrado por contrato e uso voluntário, como o pedágio atual; não é tributo."
+  ],
+  [
+   "Planta Genérica de Valores",
+   "Tabela municipal de valores dos imóveis usada para calcular o IPTU."
   ]
  ]
 }
