@@ -1,6 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { updateTopicoEstado, getTopicoEstados } from "@/lib/db-estudos";
 import type { Caderno } from "@/lib/estudos-cadernos";
+import cadernoA2 from "@/content/estudos/cadernos/A2.json";
 import cadernoA3 from "@/content/estudos/cadernos/A3.json";
 import cadernoA4 from "@/content/estudos/cadernos/A4.json";
 import cadernoA5 from "@/content/estudos/cadernos/A5.json";
@@ -12,6 +13,7 @@ import cadernoB6 from "@/content/estudos/cadernos/B6.json";
 
 /** Cadernos prontos, por matéria. Novo caderno = novo JSON importado aqui. */
 export const CADERNOS: Record<string, Caderno> = {
+  A2: cadernoA2 as Caderno,
   A3: cadernoA3 as Caderno,
   A4: cadernoA4 as Caderno,
   A5: cadernoA5 as Caderno,
