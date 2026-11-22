@@ -60,7 +60,7 @@ export function AdminSidebar({
       label: "Operação",
       items: [
         {
-          href: "/admin",
+          href: "/admin/escritorio",
           label: "Visão Geral",
           icon: LayoutGrid,
           exact: true,
@@ -314,7 +314,7 @@ export function AdminSidebar({
   return (
     <MenuCelular estudos={false} titulo="Painel do escritório">
       <aside className="flex w-56 shrink-0 flex-col border-r border-hairline px-4 py-6 print:hidden">
-        <Link href="/admin" className="px-2">
+        <Link href="/admin/escritorio" className="px-2">
           <Logo />
         </Link>
         <div className="mt-6">

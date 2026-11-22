@@ -7,6 +7,7 @@ import { BlocosDoDia } from "@/components/admin/estudos/BlocosDoDia";
 import { linksDosBlocos } from "@/lib/estudos-links";
 import { CronogramaConfig } from "@/components/admin/estudos/CronogramaConfig";
 import { Cabecalho } from "@/components/estudos/ui";
+import { CalendarioSemana } from "@/components/estudos/CalendarioSemana";
 
 function inicioDaSemana(data: string) {
   return addDaysToDateString(data, -diaDaSemana(data));
@@ -81,21 +82,17 @@ export default async function CronogramaPage(props: PageProps<"/admin/estudos/cr
             Próxima semana
           </Link>
         </div>
-        <div className="mt-4 space-y-4">
-          {dias.map((d) => {
-            const doDia = itens.filter((i) => i.data === d);
-            return (
-              <div key={d} className={`rounded-2xl border bg-e-card p-4 ${d === hoje ? "border-e-accent" : "border-e-line"}`}>
-                <h3 className="text-[11px] uppercase tracking-[0.14em] text-e-dim">
-                  {formatarData(d, { weekday: "long", day: "2-digit", month: "2-digit" })}
-                  {d === hoje ? " · hoje" : ""}
-                </h3>
-                <div className="mt-2">
-                  <BlocosDoDia itens={doDia} links={linksDosBlocos(doDia)} vazio="Dia livre." />
-                </div>
-              </div>
-            );
-          })}
+        <div className="mt-4">
+          <CalendarioSemana
+            hoje={hoje}
+            itens={itens}
+            links={linksDosBlocos(itens)}
+            dias={dias.map((d) => ({
+              data: d,
+              rotulo: formatarData(d, { weekday: "short" }).replace(".", ""),
+              numero: formatarData(d, { day: "2-digit", month: "2-digit" }),
+            }))}
+          />
         </div>
       </section>
     </div>
