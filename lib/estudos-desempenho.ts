@@ -1,5 +1,6 @@
 // Classificação de erros/acertos, estatísticas e "próxima melhor ação". Arquivo puro (Server e Client).
 import { MATERIA_POR_ID, type CronogramaItem } from "@/lib/estudos-utils";
+import { SUBTEMAS } from "@/lib/estudos-subtemas";
 
 export type TipoErro =
   | "conteudo"
@@ -54,6 +55,8 @@ export interface Questao {
   fonte: string;
   alerta?: string;
   orig?: string;
+  /** chave em content/estudos/subtemas.json */
+  subtema?: string;
 }
 export interface Resposta {
   id: string;
@@ -131,6 +134,93 @@ export function temasCriticos(respostas: Resposta[], agoraMs: number): TemaCriti
       tipoMaisComum: ([...s.tipos.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] as TipoErro) ?? null,
     }))
     .sort((a, b) => b.erros - a.erros);
+}
+
+/** texto da explicação da alternativa errada, sem o "Errada." do começo */
+function textoDoErro(q: Questao, alt: number): string {
+  const t = (q.why[alt] ?? "").replace(/^\s*(Errada|Incompleta)\.\s*/i, "").trim();
+  // texto curto ("A II está errada.", "A ordem está trocada.") não ensina nada: completa com a explicação da correta
+  if (t.length < 35 || /^(A|As)\s+[IVX]+(\s+e\s+[IVX]+)?\s+(também\s+)?(está|estão)\s+(errada|correta)s?\.?$/i.test(t)) {
+    const certa = (q.why[q.c] ?? "").replace(/^\s*Correta\.\s*/i, "").trim();
+    return certa ? `${t} ${certa}` : t;
+  }
+  return t;
+}
+const semTags = (t: string) => t.replace(/<br\s*\/?>/gi, " ").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+
+export interface Pegadinha {
+  questao_id: string;
+  alternativa: number;
+  /** texto da alternativa que ela marcou */
+  marcada: string;
+  /** por que essa alternativa está errada */
+  texto: string;
+  vezes: number;
+}
+/** alternativas erradas marcadas, da mais repetida para a menos */
+function pegadinhasDe(respostas: Resposta[], questoes: Map<string, Questao>): Pegadinha[] {
+  const m = new Map<string, Pegadinha>();
+  for (const r of respostas) {
+    const q = questoes.get(r.questao_id);
+    if (r.correta || r.alternativa === null || !q || r.alternativa === q.c) continue;
+    const texto = textoDoErro(q, r.alternativa);
+    if (!texto) continue;
+    const k = r.questao_id + "|" + r.alternativa;
+    const p = m.get(k) ?? { questao_id: r.questao_id, alternativa: r.alternativa, marcada: semTags(q.alts[r.alternativa] ?? "").replace(/[.;:]+$/, ""), texto, vezes: 0 };
+    p.vezes++;
+    m.set(k, p);
+  }
+  return [...m.values()].sort((a, b) => b.vezes - a.vezes);
+}
+
+export interface SubtemaCritico {
+  materia_id: string;
+  tema: string;
+  /** chave do subtema; null quando a questão ainda não tem subtema (agrupa pelo tema) */
+  subtema: string | null;
+  nome: string;
+  erros: number;
+  tentativas: number;
+  questoes: number;
+  tipoMaisComum: TipoErro | null;
+  pegadinha: Pegadinha | null;
+}
+/**
+ * Erros que se repetem, por subtema (ou pelo tema, se a questão não tiver subtema):
+ * 2 ou mais erros (ou acertos sem firmeza) nos últimos 45 dias, com a alternativa errada que ela mais marcou.
+ */
+export function subtemasCriticos(respostas: Resposta[], agoraMs: number, questoes: Map<string, Questao>): SubtemaCritico[] {
+  const limite = agoraMs - 45 * 86400000;
+  const grupos = new Map<string, { base: Omit<SubtemaCritico, "erros" | "tentativas" | "tipoMaisComum" | "pegadinha" | "questoes">; rs: Resposta[] }>();
+  for (const r of respostas) {
+    if (Date.parse(r.respondida_em) < limite) continue;
+    const q = questoes.get(r.questao_id);
+    const tema = q?.tema ?? r.tema;
+    if (!tema) continue;
+    const sub = q?.subtema && SUBTEMAS[q.subtema] ? q.subtema : null;
+    const k = r.materia_id + "|" + (sub ?? "tema:" + tema);
+    const g = grupos.get(k) ?? { base: { materia_id: r.materia_id, tema, subtema: sub, nome: sub ? SUBTEMAS[sub].nome : tema }, rs: [] };
+    g.rs.push(r);
+    grupos.set(k, g);
+  }
+  const contagem = (chave: string | null, materia: string, tema: string) =>
+    [...questoes.values()].filter((q) => q.materia_id === materia && (chave ? q.subtema === chave : q.tema === tema && !(q.subtema && SUBTEMAS[q.subtema]))).length;
+  const out: SubtemaCritico[] = [];
+  for (const { base, rs } of grupos.values()) {
+    const falhas = rs.filter((r) => !acertoFirme(r));
+    if (falhas.length < 2) continue;
+    const tipos = new Map<string, number>();
+    for (const r of falhas) if (EH_ERRO.has(r.classificacao)) tipos.set(r.classificacao, (tipos.get(r.classificacao) ?? 0) + 1);
+    out.push({
+      ...base,
+      erros: falhas.length,
+      tentativas: rs.length,
+      questoes: contagem(base.subtema, base.materia_id, base.tema),
+      tipoMaisComum: ([...tipos.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] as TipoErro) ?? null,
+      pegadinha: pegadinhasDe(falhas, questoes)[0] ?? null,
+    });
+  }
+  return out.sort((a, b) => b.erros - a.erros || a.erros / a.tentativas - b.erros / b.tentativas);
 }
 
 export function tempoMedio(respostas: Resposta[]): number | null {
@@ -211,6 +301,8 @@ export interface ErroCaderno {
   ultimaData: string;
   superado: boolean;
   notas: string[];
+  subtema: string | null;
+  pegadinhas: Pegadinha[];
 }
 /**
  * Caderno de erros de uma matéria: uma linha por questão errada (ou acertada sem firmeza).
@@ -238,7 +330,36 @@ export function cadernoDeErros(respostas: Resposta[], materiaId: string, questoe
       ultimaData: ultima.respondida_em,
       superado: acertoFirme(ultima),
       notas: rs.map((r) => r.nota).filter((n): n is string => !!n),
+      subtema: q?.subtema && SUBTEMAS[q.subtema] ? q.subtema : null,
+      pegadinhas: pegadinhasDe(falhas, questoes),
     });
   }
   return out.sort((a, b) => Number(a.superado) - Number(b.superado) || b.vezes - a.vezes);
+}
+
+export interface GrupoCaderno {
+  chave: string;
+  nome: string;
+  tema: string;
+  /** vezes que errou (ou acertou sem firmeza) no grupo */
+  vezes: number;
+  pendentes: number;
+  pegadinhas: Pegadinha[];
+  itens: ErroCaderno[];
+}
+/** Caderno de erros agrupado por subtema (ou pelo tema, quando a questão não tem subtema). */
+export function cadernoPorSubtema(erros: ErroCaderno[]): GrupoCaderno[] {
+  const m = new Map<string, GrupoCaderno>();
+  for (const e of erros) {
+    const chave = e.subtema ?? "tema:" + e.tema;
+    const g = m.get(chave) ?? { chave, nome: e.subtema ? SUBTEMAS[e.subtema].nome : e.tema, tema: e.tema, vezes: 0, pendentes: 0, pegadinhas: [], itens: [] };
+    g.vezes += e.vezes;
+    if (!e.superado) g.pendentes++;
+    g.pegadinhas.push(...e.pegadinhas);
+    g.itens.push(e);
+    m.set(chave, g);
+  }
+  return [...m.values()]
+    .map((g) => ({ ...g, pegadinhas: g.pegadinhas.sort((a, b) => b.vezes - a.vezes) }))
+    .sort((a, b) => Number(a.pendentes === 0) - Number(b.pendentes === 0) || b.vezes - a.vezes);
 }

@@ -10,10 +10,12 @@ import {
   getRespostas,
   getTopicoEstados,
   getUltimoDiaTeoria,
+  QUESTAO_POR_ID,
 } from "@/lib/db-estudos";
 import { addDaysToDateString, todayBelemDateString } from "@/lib/atividades-utils";
 import {
   EDITAL,
+  MATERIA_POR_ID,
   diasEntre,
   diasSeguidos,
   formatarData,
@@ -28,12 +30,14 @@ import {
   estatisticasPorMateria,
   formatarTempo,
   proximaMelhorAcao,
+  subtemasCriticos,
   temasCriticos,
   tempoMedio,
 } from "@/lib/estudos-desempenho";
 import { BlocosDoDia } from "@/components/admin/estudos/BlocosDoDia";
 import { linksDosBlocos } from "@/lib/estudos-links";
 import { Sparkle } from "@/components/estudos/Sparkle";
+import { htmlSeguro } from "@/lib/estudos-html";
 import { Barra, BOTAO_PRIMARIO, Card, CardTitulo, Kpi, tomPorPct } from "@/components/estudos/ui";
 
 function agora() {
@@ -74,6 +78,7 @@ export default async function EstudosInicioPage() {
   const totalResp = respostas.length;
   const acertoGeral = totalResp ? Math.round((respostas.filter((r) => r.correta).length / totalResp) * 100) : null;
   const criticos = temasCriticos(respostas, agora());
+  const subCriticos = subtemasCriticos(respostas, agora(), QUESTAO_POR_ID);
   const proximoBloco = itensHoje.find((i) => !i.feito) ?? null;
   const acao = proximaMelhorAcao({ criticos, atrasados: atrasados.length, proximoBloco, temPlano: proximos.length > 0 });
   const proximoEvento = eventos.find((e) => e.data && e.data >= hoje && e.situacao !== "realizado") ?? null;
@@ -185,24 +190,48 @@ export default async function EstudosInicioPage() {
 
       <div className="grid gap-5 lg:grid-cols-2">
         <Card>
-          <CardTitulo>Erros que estão se repetindo</CardTitulo>
-          {criticos.length === 0 ? (
-            <p className="text-sm text-e-dim">Nenhum tema com 2 ou mais erros nos últimos 45 dias.</p>
+          <CardTitulo acao={<span className="text-xs text-e-dim">últimos 45 dias</span>}>Erros que estão se repetindo</CardTitulo>
+          {subCriticos.length === 0 ? (
+            <p className="text-sm text-e-dim">Nenhum assunto com 2 ou mais erros nos últimos 45 dias.</p>
           ) : (
-            <ul className="divide-y divide-e-line">
-              {criticos.slice(0, 6).map((t) => (
-                <li key={t.materia_id + t.tema} className="flex items-center justify-between gap-3 py-2.5">
-                  <span className="min-w-0">
-                    <span className="block truncate text-sm text-e-ink">{t.tema}</span>
-                    <span className="text-[11px] text-e-dim">
-                      {t.materia_id}
-                      {t.tipoMaisComum ? ` · ${CLASSIFICACAO_LABEL[t.tipoMaisComum]}` : ""}
-                    </span>
-                  </span>
-                  <span className="shrink-0 rounded-full bg-e-bad-soft px-2 py-0.5 text-[11px] text-e-bad">{t.erros} de {t.tentativas}</span>
-                </li>
-              ))}
-            </ul>
+            <>
+              <ul className="divide-y divide-e-line">
+                {subCriticos.slice(0, 6).map((t) => {
+                  const treinar = `/admin/estudos/questoes?materia=${t.materia_id}&${t.subtema ? `subtema=${encodeURIComponent(t.subtema)}` : `tema=${encodeURIComponent(t.tema)}`}`;
+                  return (
+                    <li key={t.materia_id + (t.subtema ?? t.tema)} className="py-3">
+                      <div className="flex items-start justify-between gap-3">
+                        <span className="min-w-0">
+                          <span className="block text-sm font-medium text-e-ink">{t.nome}</span>
+                          <span className="text-[11px] text-e-dim">
+                            {t.subtema ? `${t.tema} · ` : ""}
+                            {MATERIA_POR_ID.get(t.materia_id)?.nome ?? t.materia_id}
+                            {t.tipoMaisComum ? ` · ${CLASSIFICACAO_LABEL[t.tipoMaisComum]}` : ""}
+                          </span>
+                        </span>
+                        <span className="shrink-0 rounded-full bg-e-bad-soft px-2 py-0.5 text-[11px] tabular-nums text-e-bad">{t.erros} de {t.tentativas}</span>
+                      </div>
+                      {t.pegadinha && (
+                        <div className="mt-2 flex gap-2 rounded-xl border border-e-warn/40 bg-e-card-2 px-3 py-2 text-xs leading-relaxed text-e-ink">
+                          <Sparkle size={12} cor="var(--e-warn)" className="mt-0.5 shrink-0" />
+                          <span>
+                            <span className="text-e-warn">Sua pegadinha{t.pegadinha.vezes > 1 ? ` (${t.pegadinha.vezes} vezes)` : ""}:</span> você marcou “{t.pegadinha.marcada}”.{" "}
+                            <span dangerouslySetInnerHTML={{ __html: htmlSeguro(t.pegadinha.texto) }} />
+                          </span>
+                        </div>
+                      )}
+                      <div className="mt-2 flex items-center justify-between gap-3">
+                        <span className="text-[11px] text-e-dim">{t.questoes} {t.questoes === 1 ? "questão" : "questões"} {t.subtema ? "neste subtema" : "neste tema"}</span>
+                        <Link href={treinar} className="rounded-full border border-e-line px-3 py-1 text-xs text-e-ink hover:border-e-accent">Treinar só isso</Link>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+              {subCriticos.length > 6 && (
+                <p className="mt-2 text-[11px] text-e-dim">Mais: {subCriticos.slice(6, 12).map((t) => `${t.nome} (${t.erros} de ${t.tentativas})`).join(" · ")}</p>
+              )}
+            </>
           )}
         </Card>
 

@@ -1,0 +1,226 @@
+{
+  "subtemas": {
+    "adm-descentralizacao": {
+      "nome": "Descentralização × desconcentração",
+      "tema": "Organização administrativa",
+      "revisao": "Descentralizar é passar a atividade para OUTRA pessoa jurídica: por outorga (lei cria a entidade e transfere a titularidade) ou por delegação (contrato ou ato transfere só a execução). Desconcentrar é repartir competência DENTRO da mesma pessoa, criando órgãos sem personalidade, o que também acontece dentro de uma autarquia. Truque: conte as pessoas jurídicas."
+    },
+    "adm-delegacao": {
+      "nome": "Delegação de serviço público a particular",
+      "tema": "Organização administrativa",
+      "revisao": "Lei 8.987/1995, art. 2º: a concessão vai a pessoa jurídica ou consórcio de empresas, por prazo determinado (inciso II); a permissão vai a pessoa física ou jurídica, a título precário (inciso IV). A autorização também admite pessoa física. Outorga legal é para entidade da administração indireta. Concessão: só PJ."
+    },
+    "adm-controle": {
+      "nome": "Controle finalístico × hierárquico",
+      "tema": "Organização administrativa",
+      "revisao": "Entre o ente e a entidade da indireta há vinculação, não subordinação. O controle é finalístico (tutela ou supervisão): limitado e só nos termos da lei. Rever de ofício, por mérito, a decisão de uma autarquia sem previsão legal é tratá-la como órgão subordinado, e isso é inválido. Autarquia: vinculada, nunca subordinada."
+    },
+    "adm-orgaos": {
+      "nome": "Órgãos públicos e teoria do órgão",
+      "tema": "Organização administrativa",
+      "revisao": "Pela teoria do órgão, o ato do agente é imputado diretamente à pessoa jurídica. Órgão não tem personalidade: a ação vai contra o ente, não contra a Secretaria ou a Assembleia. Exceção: órgãos independentes e autônomos têm capacidade processual para defender as próprias prerrogativas (Súmula 525 do STJ, para a Câmara de Vereadores)."
+    },
+    "adm-decreto": {
+      "nome": "Decreto autônomo na organização",
+      "tema": "Organização administrativa",
+      "revisao": "CF, art. 84, VI: por decreto, o chefe do Executivo dispõe sobre a organização e o funcionamento da administração, quando não implicar aumento de despesa nem criação ou extinção de órgãos públicos (alínea a), e extingue funções ou cargos públicos, quando vagos (alínea b). Criar órgão, mesmo sem despesa, exige lei."
+    },
+    "adm-sentidos": {
+      "nome": "Função administrativa e sentidos da Administração",
+      "tema": "Organização administrativa",
+      "revisao": "Sentido formal (subjetivo) é QUEM administra: órgãos e entidades. Sentido material (objetivo) é O QUE se faz: serviço público, polícia administrativa, fomento e intervenção. O Estado-empresário (estatal que explora atividade econômica) não é administração em sentido material. Só as pessoas políticas (União, Estados, DF e Municípios) têm autonomia política."
+    },
+    "adm-poderes": {
+      "nome": "Separação dos Poderes na organização",
+      "tema": "Organização administrativa",
+      "revisao": "Segundo o STF, a lei não pode exigir autorização prévia da Assembleia para atos de gestão do Executivo (ADI 4.348) nem impor a indicação de membro de órgão estadual pela OAB (ADI 4.579). Interferir na gestão viola a separação dos Poderes."
+    },
+    "adm-cargos": {
+      "nome": "Transformação de cargos",
+      "tema": "Organização administrativa",
+      "revisao": "Mudar o requisito de escolaridade de um cargo é possível. Mas aproveitar os servidores do cargo de nível médio no novo cargo de nível superior é forma de provimento derivado sem concurso, que o STF não admite (ADI 6.355 e Tema 697)."
+    },
+    "adm-criacao": {
+      "nome": "Criação de entidades: lei cria × lei autoriza",
+      "tema": "Organização administrativa",
+      "revisao": "CF, art. 37, XIX: somente por lei específica poderá ser CRIADA autarquia e AUTORIZADA a instituição de empresa pública, de sociedade de economia mista e de fundação, cabendo à lei complementar definir as áreas de atuação da fundação. É lei específica (ordinária), não complementar. Inciso XX: as subsidiárias dependem de autorização legislativa, e o STF admite autorização genérica na lei da matriz (ADI 1.649)."
+    },
+    "adm-autarquias": {
+      "nome": "Autarquias e agências",
+      "tema": "Organização administrativa",
+      "revisao": "A autarquia é pessoa jurídica de direito público criada por lei, com prerrogativas da Fazenda: prazo em dobro (CPC, art. 183) e imunidade recíproca nas finalidades essenciais (CF, art. 150, § 2º). A agência reguladora é autarquia de regime especial (Lei 13.848/2019). A agência executiva é uma qualificação dada à autarquia ou fundação que firma contrato de desempenho e cumpre os requisitos legais."
+    },
+    "adm-fundacoes": {
+      "nome": "Fundações públicas",
+      "tema": "Organização administrativa",
+      "revisao": "A fundação de direito público é espécie de autarquia: nasce com a lei e tem as prerrogativas da Fazenda. A de direito privado só tem a instituição autorizada por lei e nasce com o registro (CC, art. 45). Para o STF (Tema 545), o regime depende do estatuto e das atividades. A de direito privado não tem prazo em dobro, nem execução fiscal, nem a curadoria do MP do art. 66 do CC, e a estabilidade do art. 19 do ADCT é só das fundações autárquicas."
+    },
+    "adm-estatais": {
+      "nome": "Empresas públicas e sociedades de economia mista",
+      "tema": "Organização administrativa",
+      "revisao": "Empresa pública federal litiga na Justiça Federal (CF, art. 109, I); a sociedade de economia mista, na Justiça Estadual (Súmula 556 do STF). As estatais seguem a Lei 13.303/2016, não a Lei 14.133/2021 (art. 1º, § 1º). O art. 37, § 6º da CF alcança só as prestadoras de serviço público. Alienar o controle da matriz exige lei e licitação; o da subsidiária não exige nenhuma das duas (ADI 5.624 MC-Ref)."
+    },
+    "adm-consorcios": {
+      "nome": "Consórcios públicos",
+      "tema": "Organização administrativa",
+      "revisao": "Lei 11.107/2005: o consórcio de direito público é associação pública, adquire personalidade com a vigência das leis de ratificação do protocolo de intenções e integra a administração indireta de todos os entes consorciados (art. 6º, I, e § 1º)."
+    },
+    "adm-terceiro-setor": {
+      "nome": "Terceiro setor (OS, OSCIP e parcerias)",
+      "tema": "Organização administrativa",
+      "revisao": "A qualificação como Organização Social é discricionária. A qualificação como OSCIP é ato vinculado: cumpridos os requisitos da Lei 9.790/1999, ela é concedida. As parcerias com organizações da sociedade civil seguem a Lei 13.019/2014."
+    },
+    "pt-se": {
+      "nome": "Partícula SE: voz passiva sintética × índice de indeterminação",
+      "tema": "Concordância verbal",
+      "revisao": "Verbo transitivo direto + SE = voz passiva sintética: o termo seguinte é o sujeito e o verbo concorda com ele (Alugam-se salas = Salas são alugadas). Verbo com preposição + SE = índice de indeterminação: o verbo fica no singular (Precisa-se de analistas). Teste: passe para a voz passiva analítica."
+    },
+    "pt-haver": {
+      "nome": "Haver, fazer e existir",
+      "tema": "Concordância verbal",
+      "revisao": "Haver no sentido de existir e fazer indicando tempo são impessoais: ficam no singular e passam isso ao auxiliar (Houve recursos; Faz três anos; Deve haver dúvidas). Existir é pessoal e concorda com o sujeito, mesmo quando ele vem depois (Existem, entre os candidatos, muitas dúvidas)."
+    },
+    "pt-posposto": {
+      "nome": "Sujeito posposto e sujeito oracional",
+      "tema": "Concordância verbal",
+      "revisao": "Sujeito depois do verbo continua sendo sujeito: ache-o e faça o verbo concordar com ele (Faltavam três dias). Quando o sujeito é uma oração (representar judicialmente o Estado), o verbo fica no singular."
+    },
+    "pt-especiais": {
+      "nome": "Um dos que e fui eu que",
+      "tema": "Concordância verbal",
+      "revisao": "Um dos que + verbo no plural (Ele foi um dos que mais se dedicaram). Com o pronome que, o verbo concorda com o antecedente (Fui eu que redigi). Na mesma questão a banca mistura: fazer indicando tempo é impessoal (Faz dois anos) e existir é pessoal (Devem existir soluções)."
+    },
+    "pt-ser": {
+      "nome": "Concordância do verbo ser",
+      "tema": "Concordância verbal",
+      "revisao": "Com sujeito tudo, isto, isso, aquilo ou o e predicativo no plural, o verbo ser concorda preferencialmente com o predicativo (Tudo são flores). Com distância, datas e horas, ser concorda com o numeral: São dez quilômetros; Hoje são dez (ou Hoje é dia dez); Eram duas horas."
+    },
+    "pt-correlacao": {
+      "nome": "Correlação: subjuntivo + futuro do presente ou do pretérito",
+      "tema": "Tempos e modos verbais",
+      "revisao": "Se ou caso + imperfeito do subjuntivo pede futuro do pretérito (Se publicasse, começariam). Se ou quando + futuro do subjuntivo pede futuro do presente (Se publicar, começarão; Quando chegar, analisará). Oração principal no pretérito pede imperfeito do subjuntivo (Esperava-se que apresentasse); no presente, presente do subjuntivo (É provável que seja julgado)."
+    },
+    "pt-mais-que-perfeito": {
+      "nome": "Pretérito mais-que-perfeito",
+      "tema": "Tempos e modos verbais",
+      "revisao": "O mais-que-perfeito indica um passado anterior a outro passado. A forma simples (decidira) equivale à composta (tinha decidido ou havia decidido)."
+    },
+    "cpc-honorarios-85": {
+      "nome": "Honorários: regras do art. 85 (§§ 7º a 19)",
+      "tema": "Honorários e despesas",
+      "revisao": "CPC, art. 85: não há honorários no cumprimento de sentença contra a Fazenda que gere precatório, se não houver impugnação (§ 7º). No recurso, o tribunal majora, mas sem ultrapassar os limites dos §§ 2º e 3º (§ 11). É vedada a compensação na sucumbência parcial (§ 14). Fixados em quantia certa, os juros correm do trânsito em julgado (§ 16). Os advogados públicos recebem honorários de sucumbência, nos termos da lei (§ 19)."
+    },
+    "cpc-honorarios-fazenda": {
+      "nome": "Honorários contra a Fazenda: faixas do art. 85, § 3º",
+      "tema": "Honorários e despesas",
+      "revisao": "CPC, art. 85, § 3º, em salários-mínimos: até 200, de 10 a 20%; acima de 200 até 2.000, de 8 a 10%; acima de 2.000 até 20.000, de 5 a 8%; acima de 20.000 até 100.000, de 3 a 5%; acima de 100.000, de 1 a 3%. Quanto maior a faixa, menor o percentual. E a faixa é escalonada: aplica-se a inicial e, no que exceder, a seguinte (§ 5º)."
+    },
+    "cpc-despesas": {
+      "nome": "Despesas dos atos da Fazenda (art. 91)",
+      "tema": "Honorários e despesas",
+      "revisao": "CPC, art. 91: as despesas dos atos processuais praticados a requerimento da Fazenda Pública, do Ministério Público ou da Defensoria Pública serão pagas ao final pelo vencido."
+    },
+    "trib-credito": {
+      "nome": "Suspensão × extinção × exclusão do crédito",
+      "tema": "Crédito tributário",
+      "revisao": "CTN, art. 151 (suspendem): moratória, depósito integral, reclamações e recursos administrativos, liminar em MS, liminar ou tutela em outras ações, parcelamento e as hipóteses novas (arbitragem tributária, transação aceita, mediação e seguro garantia ou fiança aceitos). Art. 156 (extinguem): pagamento, compensação, transação, remissão, conversão de depósito em renda, decisão judicial transitada e dação de imóveis, entre outras. Art. 175 (excluem): só isenção e anistia. Remissão perdoa a dívida e extingue; anistia perdoa a penalidade e exclui."
+    },
+    "trib-anterioridade": {
+      "nome": "Anterioridade anual e noventena (exceções do art. 150, § 1º)",
+      "tema": "Limitações ao poder de tributar",
+      "revisao": "CF, art. 150, III, b e c: em regra, o aumento só vale no exercício seguinte E depois de 90 dias da publicação; vale a data mais distante. Por isso o ICMS aumentado em dezembro não é cobrado em 1º de janeiro: espera os 90 dias. O § 1º tira da anual: II, IE, IPI, IOF, empréstimo compulsório de calamidade ou guerra (art. 148, I) e impostos extraordinários. Tira da noventena: II, IE, IR, IOF, os mesmos dois, e a fixação da base de cálculo do IPVA e do IPTU (que esperam só o exercício seguinte). IPI respeita a noventena; IR respeita só a anual."
+    },
+    "trib-legalidade": {
+      "nome": "Legalidade e benefícios fiscais",
+      "tema": "Limitações ao poder de tributar",
+      "revisao": "CF, art. 150, § 6º: subsídio, isenção, redução de base de cálculo, crédito presumido, anistia ou remissão só por lei específica, sem prejuízo do art. 155, § 2º, XII, g (no ICMS, também convênio). Decreto não concede remissão. Já o prazo de pagamento pode ser fixado por ato infralegal."
+    },
+    "trib-confisco": {
+      "nome": "Não confisco nas multas",
+      "tema": "Limitações ao poder de tributar",
+      "revisao": "O não confisco (CF, art. 150, IV) também limita as multas. Para o STF (Tema 863), a multa de ofício não pode passar de 100% do tributo devido."
+    },
+    "trib-heteronoma": {
+      "nome": "Isenção heterônoma",
+      "tema": "Limitações ao poder de tributar",
+      "revisao": "CF, art. 151, III: a União não pode isentar tributos de Estados, DF e Municípios. Não são heterônomas: a isenção dada por tratado internacional firmado pela República (RE 229.096) e a lei complementar federal que exclui do ISS as exportações de serviços (art. 156, § 3º, II)."
+    },
+    "trib-isonomia": {
+      "nome": "Isonomia tributária",
+      "tema": "Limitações ao poder de tributar",
+      "revisao": "CF, art. 150, II: é vedado tratamento desigual entre contribuintes em situação equivalente. Para o STF (Tema 1.174), morar no exterior não tira do aposentado a faixa de isenção e a progressividade do IR."
+    },
+    "trib-trafego": {
+      "nome": "Liberdade de tráfego e não discriminação",
+      "tema": "Limitações ao poder de tributar",
+      "revisao": "CF, art. 150, V: não se limita o tráfego de pessoas ou bens por tributos interestaduais ou intermunicipais, ressalvado o pedágio. O pedágio atual tem natureza de tarifa (ADI 800). Art. 152: Estados e Municípios não podem diferenciar bens pela procedência ou pelo destino."
+    }
+  },
+  "questoes": {
+    "adm-cad-01": "adm-descentralizacao",
+    "adm-cad-02": "adm-descentralizacao",
+    "adm-s1-06": "adm-descentralizacao",
+    "adm-eb-06": "adm-descentralizacao",
+    "adm-eb-08": "adm-delegacao",
+    "adm-eb-07": "adm-controle",
+    "adm-cad-03": "adm-orgaos",
+    "adm-cad-04": "adm-orgaos",
+    "adm-s1-07": "adm-orgaos",
+    "adm-eb-03": "adm-orgaos",
+    "adm-eb-09": "adm-decreto",
+    "adm-eb-01": "adm-sentidos",
+    "adm-eb-02": "adm-sentidos",
+    "adm-eb-04": "adm-sentidos",
+    "adm-eb-05": "adm-sentidos",
+    "adm-s1-08": "adm-sentidos",
+    "adm-s1-09": "adm-poderes",
+    "adm-eb-11": "adm-poderes",
+    "adm-eb-10": "adm-cargos",
+    "adm-s1-05": "adm-criacao",
+    "adm-cad-05": "adm-criacao",
+    "adm-cad-07": "adm-autarquias",
+    "adm-cad-08": "adm-autarquias",
+    "adm-cad-09": "adm-fundacoes",
+    "adm-cad-10": "adm-fundacoes",
+    "adm-cad-06": "adm-estatais",
+    "adm-cad-11": "adm-estatais",
+    "adm-cad-12": "adm-estatais",
+    "adm-eb-12": "adm-estatais",
+    "adm-cad-13": "adm-consorcios",
+    "adm-cad-14": "adm-terceiro-setor",
+    "pt-001": "pt-se",
+    "ptx-07": "pt-se",
+    "pt-037": "pt-se",
+    "pt-002": "pt-haver",
+    "pt-016": "pt-posposto",
+    "pt-038": "pt-posposto",
+    "pt-056": "pt-especiais",
+    "pt-065": "pt-ser",
+    "pt-012": "pt-correlacao",
+    "pt-033": "pt-correlacao",
+    "pt-034": "pt-mais-que-perfeito",
+    "cpc-015": "cpc-honorarios-85",
+    "cpc-014": "cpc-honorarios-fazenda",
+    "cpc-016": "cpc-despesas",
+    "trib-009": "trib-credito",
+    "trib-010": "trib-credito",
+    "trib-011": "trib-credito",
+    "trib-012": "trib-credito",
+    "trib-002": "trib-anterioridade",
+    "trib-003": "trib-anterioridade",
+    "trib-pl-r01": "trib-anterioridade",
+    "trib-pl-01": "trib-anterioridade",
+    "trib-pl-02": "trib-anterioridade",
+    "trib-pl-03": "trib-anterioridade",
+    "trib-pl-05": "trib-anterioridade",
+    "trib-pl-06": "trib-anterioridade",
+    "trib-004": "trib-legalidade",
+    "trib-pl-04": "trib-legalidade",
+    "trib-pl-09": "trib-legalidade",
+    "trib-pl-11": "trib-legalidade",
+    "trib-pl-07": "trib-confisco",
+    "trib-pl-08": "trib-heteronoma",
+    "trib-pl-10": "trib-isonomia",
+    "trib-pl-12": "trib-trafego"
+  }
+}

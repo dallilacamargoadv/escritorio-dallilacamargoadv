@@ -13,6 +13,7 @@ import {
   type Resposta,
 } from "@/lib/estudos-desempenho";
 import { fonteHtml, htmlSeguro } from "@/lib/estudos-html";
+import { SUBTEMAS } from "@/lib/estudos-subtemas";
 import { Sparkle } from "@/components/estudos/Sparkle";
 import { MapaDoTema, type Mapa } from "@/components/estudos/MapaDoTema";
 import { BOTAO_PRIMARIO, BOTAO_SECUNDARIO, CAMPO, Card } from "@/components/estudos/ui";
@@ -22,6 +23,7 @@ const LETRAS = "ABCDE";
 interface Filtros {
   materia: string;
   tema: string;
+  subtema: string;
   status: "todas" | "nao_respondidas" | "erradas";
 }
 
@@ -29,6 +31,7 @@ function urlDe(f: Filtros, id?: string) {
   const p = new URLSearchParams();
   if (f.materia) p.set("materia", f.materia);
   if (f.tema) p.set("tema", f.tema);
+  if (f.subtema) p.set("subtema", f.subtema);
   if (f.status !== "todas") p.set("status", f.status);
   if (id) p.set("id", id);
   const q = p.toString();
@@ -41,6 +44,7 @@ export function QuestaoClient({
   filtros,
   materias,
   temas,
+  subtemas = [],
   historico,
   mapa = null,
   revisao = false,
@@ -50,6 +54,8 @@ export function QuestaoClient({
   filtros: Filtros;
   materias: { id: string; nome: string; total: number }[];
   temas: string[];
+  /** subtemas das questões do filtro atual (chave e nome) */
+  subtemas?: { k: string; nome: string }[];
   historico: Resposta[];
   /** fluxograma do tema, mostrado quando ela erra */
   mapa?: Mapa | null;
@@ -73,6 +79,7 @@ export function QuestaoClient({
     return () => clearInterval(t);
   }, []);
 
+  const revisaoTema = questao?.subtema ? (SUBTEMAS[questao.subtema] ?? null) : null;
   const pos = questao ? ids.indexOf(questao.id) : -1;
   const proximo = ids.length ? ids[(pos + 1) % ids.length] : undefined;
   // na revisão, a próxima é a seguinte da fila (sem dar a volta para a mesma questão)
@@ -82,6 +89,7 @@ export function QuestaoClient({
   function filtrar(novo: Partial<Filtros>) {
     const f = { ...filtros, ...novo };
     if ("materia" in novo) f.tema = "";
+    if ("materia" in novo || "tema" in novo) f.subtema = "";
     router.push(urlDe(f));
   }
 
@@ -145,6 +153,19 @@ export function QuestaoClient({
             ))}
           </select>
         </label>
+        {subtemas.length > 0 && (
+          <label className="text-[11px] text-e-dim">
+            Subtema
+            <select value={filtros.subtema} onChange={(e) => filtrar({ subtema: e.target.value })} className={CAMPO}>
+              <option value="">Todos</option>
+              {subtemas.map((t) => (
+                <option key={t.k} value={t.k}>
+                  {t.nome}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
         <label className="text-[11px] text-e-dim">
           Mostrar
           <select value={filtros.status} onChange={(e) => filtrar({ status: e.target.value as Filtros["status"] })} className={CAMPO}>
@@ -164,7 +185,7 @@ export function QuestaoClient({
         <Card>
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="text-[11px] uppercase tracking-[0.14em] text-e-dim">
-              {questao.mat} · {questao.tema} · {questao.ref}
+              {questao.mat} · {questao.tema}{revisaoTema ? ` · ${revisaoTema.nome}` : ""} · {questao.ref}
             </p>
             <span className="rounded-full border border-e-line px-2.5 py-0.5 text-xs tabular-nums text-e-blue" aria-label="Tempo nesta questão">
               {formatarTempo(tempoFinal ?? segundos)}
@@ -249,6 +270,14 @@ export function QuestaoClient({
                     <p className="text-[11px] uppercase tracking-[0.14em] text-e-ok">Por que a {LETRAS[questao.c]} está certa</p>
                     <p className="mt-1 text-sm leading-relaxed text-e-ink" dangerouslySetInnerHTML={{ __html: htmlSeguro(questao.why[questao.c]) }} />
                   </div>
+                </div>
+              )}
+              {revisaoTema && (
+                <div className="rounded-xl border border-e-accent/50 bg-e-accent-soft p-3">
+                  <p className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.14em] text-e-dim">
+                    <Sparkle size={11} /> Revise o subtema · {revisaoTema.nome}
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-e-ink" dangerouslySetInnerHTML={{ __html: htmlSeguro(revisaoTema.revisao) }} />
                 </div>
               )}
               {mapa && <MapaDoTema mapa={mapa} aberto={!acertou} />}
