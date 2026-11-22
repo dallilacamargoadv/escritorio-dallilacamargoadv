@@ -579,6 +579,41 @@
       "nome": "Mutação, reversão legislativa e poderes implícitos",
       "tema": "Hermenêutica constitucional",
       "revisao": "Mutação: muda o sentido sem mudar o texto. O efeito vinculante não prende o Legislativo ao legislar: a nova lei pode repetir a declarada inconstitucional, mas nasce com presunção relativa de inconstitucionalidade (ADI 5.105). Poderes implícitos: quem recebe o fim recebe os meios (poder de cautela do TCU, investigação pelo Ministério Público)."
+    },
+    "cf-dg-sigilo-bancario": {
+      "nome": "Sigilo bancário: quem acessa sem juiz",
+      "tema": "Direitos fundamentais",
+      "revisao": "Sem ordem judicial: Judiciário, CPI federal e estadual/distrital e o Fisco (LC 105/2001, art. 6º; RE 601.314, Tema 225), o que o STF chama de transferência do sigilo, não quebra. Estados e Municípios precisam regulamentar. Precisam de juiz: MP, polícia e CPI municipal. Exceção: contas de entes públicos (MP, STJ HC 308.493; TCU, MS 33.340). Tema 990: UIF e Receita compartilham com a persecução penal sem juiz."
+    },
+    "cf-dg-inocencia": {
+      "nome": "Presunção de inocência e execução da pena",
+      "tema": "Direitos fundamentais",
+      "revisao": "CF, art. 5º, LVII: ninguém é culpado até o trânsito em julgado. ADCs 43, 44 e 54 (2019): o art. 283 do CPP é constitucional; sem execução provisória; antes do trânsito, só prisão cautelar fundamentada. Exceção: condenação pelo júri, execução imediata pela soberania dos veredictos (Tema 1.068, 2024)."
+    },
+    "cf-dg-religiao": {
+      "nome": "Liberdade religiosa e laicidade",
+      "tema": "Direitos fundamentais",
+      "revisao": "Laico não é ateu: neutralidade e pluralismo (CF, art. 19, I). Crer é absoluto; o culto é \"na forma da lei\" (art. 5º, VI). Ensino religioso pode ser confessional (ADI 4.439). Escusa de consciência: data alternativa se razoável e sem ônus desproporcional (Tema 386; art. 5º, VIII). Vacinação compulsória (indireta) vale; forçada não (ADI 6.586)."
+    },
+    "cf-dg-expressao": {
+      "nome": "Liberdade de expressão e seus limites",
+      "tema": "Direitos fundamentais",
+      "revisao": "Art. 5º, IV, V e IX: livre manifestação, vedado o anonimato, direito de resposta proporcional e indenização. Posição preferencial, mas não protege o discurso de ódio (HC 82.424, Ellwanger). Marcha da maconha é legítima (ADPF 187). Denúncia anônima só autoriza apuração preliminar (Inq 1.957). Biografias sem autorização (ADI 4.815)."
+    },
+    "cf-dg-seguranca-juridica": {
+      "nome": "Inafastabilidade e direito adquirido",
+      "tema": "Direitos fundamentais",
+      "revisao": "Art. 5º, XXXV: exceção ao acesso direto ao Judiciário só pelo originário (Justiça Desportiva, art. 217); prévio requerimento ao INSS é interesse de agir (RE 631.240). Art. 5º, XXXVI: não vale contra o originário; não há direito adquirido a regime jurídico; Súmula 654: o ente que editou a lei não invoca a irretroatividade."
+    },
+    "cf-dg-comunicacoes": {
+      "nome": "Sigilo das comunicações e interceptação",
+      "tema": "Direitos fundamentais",
+      "revisao": "Art. 5º, XII: só a comunicação telefônica tem ressalva expressa: ordem judicial, hipóteses da Lei 9.296/1996, fins de investigação criminal ou instrução processual penal. CPI não intercepta (reserva de jurisdição). Gravação por um dos interlocutores é, em regra, lícita; interceptação é feita por terceiro. Correspondência pode ser restringida no estado de defesa e de sítio."
+    },
+    "cf-dg-ce-ma": {
+      "nome": "Direitos fundamentais na Constituição do Maranhão",
+      "tema": "Direitos fundamentais",
+      "revisao": "CE-MA, art. 4º: assegura, no território e nos limites da competência do Estado, os direitos e garantias fundamentais nos termos da CF (não repete o art. 5º). Art. 5º: veda a Estado e Municípios subvencionar cultos e criar distinções entre brasileiros (como o art. 19 da CF). Art. 109: Defensoria presta assistência aos necessitados. Art. 268: ninguém é prejudicado por litigar contra a Fazenda estadual ou municipal."
     }
   },
   "questoes": {
@@ -822,6 +857,20 @@
     "cf-he-12": "cf-he-normas",
     "cf-he-01": "cf-he-mutacao",
     "cf-he-10": "cf-he-mutacao",
-    "cf-he-11": "cf-he-mutacao"
+    "cf-he-11": "cf-he-mutacao",
+    "cf-dg-01": "cf-casa",
+    "cf-dg-02": "cf-dg-sigilo-bancario",
+    "cf-dg-03": "cf-reuniao",
+    "cf-dg-04": "cf-crimes-severos",
+    "cf-dg-05": "cf-requisicao-pena",
+    "cf-dg-06": "cf-prisao-civil",
+    "cf-dg-07": "cf-gratuidade",
+    "cf-dg-08": "cf-dg-inocencia",
+    "cf-dg-09": "cf-dg-religiao",
+    "cf-dg-10": "cf-dg-expressao",
+    "cf-dg-11": "cf-extradicao",
+    "cf-dg-12": "cf-dg-seguranca-juridica",
+    "cf-dg-13": "cf-dg-comunicacoes",
+    "cf-dg-14": "cf-dg-ce-ma"
   }
 }

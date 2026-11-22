@@ -2913,7 +2913,996 @@
    "topico_id": "B3-03",
    "numero": 6,
    "titulo": "Direitos e garantias fundamentais: teoria geral e direitos individuais",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Direitos e garantias fundamentais, direitos individuais e coletivos em espécie, partes 1 (itens 10 a 19) e 2 (itens 24 a 47) (2026); teoria geral pela doutrina e pela correção dos erros do TEC; CF e Constituição do Maranhão, textos vigentes",
+   "resumo": [
+    "Teoria geral: dimensões (liberdade, igualdade, fraternidade), subjetiva x objetiva (dirigente e irradiante), eficácia horizontal, esferas (alemã), PJ e estrangeiro de passagem como titulares, nenhum direito absoluto.",
+    "Tratados de direitos humanos: rito do § 3º = equivalentes a emenda (promulgados por decreto); rito comum = supralegais (RE 466.343, SV 25).",
+    "Vida (ADI 3.510, ADPF 54, HC 124.306 sem vinculação), igualdade material (Temas 973 e 457, ADC 41, ADI 4.868), algemas (SV 11), Lei da Anistia (ADPF 153).",
+    "Expressão com posição preferencial, sem ódio (HC 82.424); laicidade (ADI 4.439, Tema 386, vacina compulsória ≠ forçada). Casa: ordem judicial só de dia; flagrante com fundadas razões (Tema 280).",
+    "Sigilo bancário: juiz, CPI federal/estadual e Fisco (transferência); MP, polícia e CPI municipal não, salvo conta pública. Tema 990: UIF e Receita compartilham sem juiz.",
+    "Associação: suspensão por decisão judicial, dissolução com trânsito. Requisição: indenização ulterior, se houver dano. Imprescritíveis: racismo e grupos armados. Prisão civil: só alimentos voluntário e inescusável. Pena só após trânsito (ADCs 43/44/54), salvo júri.",
+    "Gratuidade: registro e óbito para reconhecidamente pobres (texto da CF); HC e HD para todos. CE-MA: art. 4º remete à CF; arts. 5º, 109, 262 e 268."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: o que é direito fundamental e como ele funciona",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Nas aulas anteriores você viu a Constituição, sua leitura e sua força. Agora começa o <b>conteúdo protegido</b>: o Título II da CF (arts. 5º a 17). Ele traz cinco grupos: direitos individuais e coletivos (art. 5º), sociais (arts. 6º a 11), nacionalidade (arts. 12 e 13), políticos (arts. 14 a 16) e partidos (art. 17). Esta aula cobre a teoria geral e o art. 5º; a aula 8 faz os sociais, a nacionalidade e os políticos."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Direitos x garantias.</b> Direito é o bem protegido (a liberdade, a casa, a intimidade). Garantia é o instrumento que assegura o direito (o habeas corpus, a exigência de ordem judicial para entrar na casa). Muitas vezes estão no mesmo inciso."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "1ª dimensão",
+         "sub": "liberdade",
+         "verso": "Direitos civis e políticos: o Estado se abstém. Vida, liberdade, propriedade, voto.",
+         "detalhe": "Direitos de defesa, de status negativo."
+        },
+        {
+         "frente": "2ª dimensão",
+         "sub": "igualdade",
+         "verso": "Direitos sociais, econômicos e culturais: o Estado age e presta. Saúde, educação, trabalho.",
+         "detalhe": "Igualdade material."
+        },
+        {
+         "frente": "3ª dimensão",
+         "sub": "fraternidade",
+         "verso": "Direitos difusos e de solidariedade: meio ambiente, paz, desenvolvimento, consumidor.",
+         "detalhe": "Titularidade coletiva."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Dimensão subjetiva x objetiva.</b> Na <b>subjetiva</b>, o direito é posição do indivíduo, que pode exigi-lo do Estado. Na <b>objetiva</b>, o direito é <b>valor da ordem jurídica</b>: impõe ao Estado deveres de proteção e orienta legislador, administrador e juiz (eficácia <b>dirigente</b> e <b>irradiante</b>). Foi um dos seus erros no TEC."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Eficácia vertical e horizontal.</b> Vertical: indivíduo contra o Estado. Horizontal: entre particulares. O STF admite a eficácia horizontal (aula 5, neoconstitucionalismo): uma associação privada não pode excluir associado sem contraditório."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Teoria das esferas</b> (origem <b>alemã</b>): a privacidade tem círculos, de dentro para fora: esfera íntima (o segredo), esfera privada e esfera social. Quanto mais interna a esfera, maior a proteção. Também caiu no TEC."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Titularidade.</b> O caput fala em brasileiros e estrangeiros residentes, mas o STF lê de forma ampla: estrangeiro de passagem também tem direitos fundamentais (pode impetrar habeas corpus), e a <b>pessoa jurídica</b> é titular dos compatíveis com sua natureza (honra objetiva, propriedade, sigilo). Nenhum direito é absoluto: todos podem ser restringidos, com proporcionalidade."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, caput",
+       "texto": "Art. 5º Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos ==brasileiros e aos estrangeiros residentes no País== a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade, nos termos seguintes:"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, §§ 1º a 3º",
+       "texto": "§ 1º As normas definidoras dos direitos e garantias fundamentais têm ==aplicação imediata==.\n§ 2º Os direitos e garantias expressos nesta Constituição ==não excluem outros== decorrentes do regime e dos princípios por ela adotados, ou dos tratados internacionais em que a República Federativa do Brasil seja parte.\n§ 3º Os tratados e convenções internacionais sobre direitos humanos que forem aprovados, em cada Casa do Congresso Nacional, em dois turnos, por três quintos dos votos dos respectivos membros, serão ==equivalentes às emendas constitucionais==."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Como o tratado de direitos humanos entrou",
+        "Status (RE 466.343)"
+       ],
+       "linhas": [
+        [
+         "Pelo rito do § 3º: 2 turnos, 3/5 em cada Casa",
+         "Equivalente a emenda constitucional"
+        ],
+        [
+         "Pelo rito comum (maioria simples)",
+         "Supralegal: abaixo da CF, acima das leis"
+        ],
+        [
+         "Tratado que não é de direitos humanos",
+         "Lei ordinária"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Tratado com rito de emenda continua sendo tratado",
+       "html": "Mesmo aprovado pelo rito do § 3º, o tratado é <b>promulgado por decreto do Presidente</b>, não pelas Mesas do Congresso. Ele tem <b>força</b> de emenda, mas não vira emenda. Foi um erro seu no TEC (cf-df-03)."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: vida, igualdade, legalidade e tortura",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Vida.</b> Tem dois desdobramentos: o direito de <b>continuar vivo</b> e o de ter <b>vida digna</b>. Do primeiro vem a proibição da pena de morte, salvo guerra declarada (art. 84, XIX). Nem emenda pode ampliá-la (cláusula pétrea), e a doutrina diz que nem uma nova Constituição deveria, pela proibição do retrocesso."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Caso",
+        "O que o STF decidiu"
+       ],
+       "linhas": [
+        [
+         "ADI 3.510 (2008), células-tronco",
+         "Pesquisa com embriões da Lei de Biossegurança não viola a vida (6 x 5). Primeira audiência pública do STF."
+        ],
+        [
+         "ADPF 54 (2012), anencefalia",
+         "Interrupção da gravidez de feto anencéfalo não é aborto tipificado (interpretação conforme do CP)."
+        ],
+        [
+         "HC 124.306 (2016), 1ª Turma",
+         "Interrupção no 1º trimestre: afastou a preventiva por fundamento incidental. <b>Sem efeito vinculante</b>: não deixou de ser crime."
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Morrer com dignidade.</b> Distanásia: prolongar a vida com sofrimento (obstinação terapêutica). Eutanásia: abreviar a vida do doente terminal. Suicídio assistido: o próprio doente pratica o ato, com ajuda. <b>Ortotanásia</b>: deixar a morte seguir seu tempo, sem prolongar nem apressar (Resolução CFM 1.805/2006)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Igualdade.</b> Formal (perante a lei) e, sobretudo, <b>material</b> (tratar desigualmente os desiguais). A própria CF cria desigualdades legítimas: presidiárias com filhos na amamentação (L), licenças-maternidade e paternidade."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Caso",
+        "Tese"
+       ],
+       "linhas": [
+        [
+         "Tema 973 (RE 1.058.333)",
+         "Candidata <b>grávida</b> pode remarcar o teste físico, mesmo sem previsão no edital."
+        ],
+        [
+         "Tema 457 (RE 659.424)",
+         "Requisito diferente para viúvo e viúva receberem pensão por morte viola a isonomia (art. 5º, I)."
+        ],
+        [
+         "ADC 41",
+         "Cota de 20% para negros em concursos federais é constitucional; cabe heteroidentificação, com contraditório."
+        ],
+        [
+         "ADPF 186 e ADI 3.330",
+         "Cotas raciais na UnB e o PROUNI são constitucionais."
+        ],
+        [
+         "ADI 4.868",
+         "Cota de escola pública só para alunos <b>do DF</b> é inconstitucional: distinção entre brasileiros (art. 19, III)."
+        ],
+        [
+         "ADI 7.518 (2024)",
+         "Licença de 180 dias para pai solo; casal de servidores adotantes: os dois usufruem, por prazos distintos."
+        ],
+        [
+         "ADI 3.324 e Tema 57",
+         "Transferência de servidor: só entre instituições <b>congêneres</b> (pública para pública); sem congênere, pode ir para a pública."
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Legalidade (II).</b> Para o particular: pode tudo o que a lei não proíbe. Para a Administração: só pode o que a lei permite (legalidade estrita)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Tortura (III).</b> A Lei 9.455/1997 define os crimes. A <b>Súmula Vinculante 11</b> limita as algemas a resistência, fundado receio de fuga ou perigo à integridade, com justificativa <b>por escrito</b>, sob pena de responsabilidade e nulidade. O CPP (art. 292, parágrafo único) proíbe algemas em mulheres durante o parto e o puerpério imediato. Na ADPF 153, o STF manteve a <b>Lei da Anistia</b> (7 x 2): é lei-medida anterior à CF e ao inciso XLIII."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, I a III",
+       "texto": "I - ==homens e mulheres são iguais== em direitos e obrigações, nos termos desta Constituição;\nII - ninguém será obrigado a fazer ou deixar de fazer alguma coisa ==senão em virtude de lei==;\nIII - ninguém será submetido a ==tortura== nem a tratamento desumano ou degradante;"
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: expressão, religião, privacidade, casa e sigilo",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Manifestação do pensamento (IV e V).</b> Livre, mas <b>sem anonimato</b>; o ofendido tem direito de resposta proporcional e indenização. A liberdade de expressão tem <b>posição preferencial</b>, mas não é absoluta."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Caso",
+        "O que ficou decidido"
+       ],
+       "linhas": [
+        [
+         "HC 82.424 (Ellwanger)",
+         "Livro antissemita é racismo, imprescritível. Liberdade de expressão não protege o discurso de ódio."
+        ],
+        [
+         "RHC 146.303",
+         "Líder religioso que incita ódio contra outras religiões pode responder por racismo."
+        ],
+        [
+         "ADPF 187, marcha da maconha",
+         "Defender a descriminalização é legítimo: reunião (direito-meio) e expressão (direito-fim)."
+        ],
+        [
+         "ADPF 130",
+         "A Lei de Imprensa não foi recepcionada; censura prévia é vedada."
+        ],
+        [
+         "ADI 4.815",
+         "Biografias não precisam de autorização do biografado; abuso se resolve com resposta e indenização."
+        ],
+        [
+         "Inq 1.957",
+         "Denúncia anônima sozinha não instaura investigação, mas autoriza apuração preliminar discreta."
+        ],
+        [
+         "Tema 838 (RE 898.450)",
+         "Edital não pode vetar tatuagem, salvo conteúdo que viole valores constitucionais."
+        ],
+        [
+         "Rcl 38.782 (Porta dos Fundos)",
+         "Tirar do streaming um filme só porque desagrada parte da população viola a liberdade artística."
+        ],
+        [
+         "Tema 786 (RE 1.010.606)",
+         "Direito ao esquecimento não é compatível com a CF; excessos se resolvem caso a caso."
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Consciência, crença e culto (VI a VIII).</b> O Estado é <b>laico</b>, não ateu: deve neutralidade e respeito ao pluralismo. A liberdade religiosa tem dimensão interna (crer: absoluta) e externa (culto: pode ser limitada, porque a CF garante o culto \"na forma da lei\")."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Caso",
+        "Tese"
+       ],
+       "linhas": [
+        [
+         "ADI 4.439",
+         "Ensino religioso em escola pública pode ser <b>confessional</b>, com matrícula facultativa."
+        ],
+        [
+         "Tema 386 (RE 611.874)",
+         "Candidato e servidor podem ter data ou horário alternativo por crença (escusa de consciência), se razoável e sem ônus desproporcional."
+        ],
+        [
+         "Temas 952 e 1.069 (2024)",
+         "Testemunha de Jeová, maior e capaz, pode recusar transfusão; tem direito aos tratamentos alternativos do SUS."
+        ],
+        [
+         "Tema 1.086 (2024)",
+         "Símbolo religioso em prédio público é válido se expressa tradição cultural."
+        ],
+        [
+         "RE 494.601",
+         "Lei de proteção animal pode permitir sacrifício ritual em religiões de matriz africana."
+        ],
+        [
+         "ADI 6.586 e Tema 1.103",
+         "Vacinação <b>compulsória</b> (sanção indireta) é válida; vacinação <b>forçada</b> não. Convicção dos pais não afasta a vacina do filho."
+        ],
+        [
+         "ADPF 811",
+         "Na pandemia, decreto podia restringir cultos presenciais coletivos."
+        ],
+        [
+         "ADI 5.258",
+         "Lei que obriga manter Bíblias em escolas e bibliotecas públicas viola a laicidade."
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, VI e VIII",
+       "texto": "VI - é inviolável a liberdade de consciência e de crença, sendo assegurado o livre exercício dos cultos religiosos e garantida, ==na forma da lei==, a proteção aos locais de culto e a suas liturgias;\nVIII - ninguém será privado de direitos por motivo de crença religiosa ou de convicção filosófica ou política, salvo se as invocar para eximir-se de obrigação legal a todos imposta e ==recusar-se a cumprir prestação alternativa==, fixada em lei;"
+      },
+      {
+       "t": "texto",
+       "html": "<b>Intimidade, vida privada, honra e imagem (X).</b> O sigilo bancário e o fiscal são desdobramentos da intimidade. Veja quem pode acessar os dados sem juiz:"
+      },
+      {
+       "t": "cena",
+       "titulo": "Quem pode ver sua conta bancária sem juiz",
+       "altura": 250,
+       "elementos": [
+        {
+         "id": "conta",
+         "tipo": "caixa",
+         "x": 265,
+         "y": 15,
+         "w": 160,
+         "h": 50,
+         "texto": "Dados bancários",
+         "sub": "intimidade (art. 5º, X)",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "jud",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 110,
+         "w": 120,
+         "h": 50,
+         "texto": "Juiz",
+         "sub": "pode",
+         "cor": "ok"
+        },
+        {
+         "id": "cpi",
+         "tipo": "caixa",
+         "x": 150,
+         "y": 110,
+         "w": 130,
+         "h": 50,
+         "texto": "CPI federal/estadual",
+         "sub": "pode",
+         "cor": "ok"
+        },
+        {
+         "id": "fisco",
+         "tipo": "caixa",
+         "x": 290,
+         "y": 110,
+         "w": 120,
+         "h": 50,
+         "texto": "Fisco",
+         "sub": "LC 105, art. 6º",
+         "cor": "ok"
+        },
+        {
+         "id": "mp",
+         "tipo": "caixa",
+         "x": 420,
+         "y": 110,
+         "w": 120,
+         "h": 50,
+         "texto": "MP e polícia",
+         "sub": "precisam de juiz",
+         "cor": "bad"
+        },
+        {
+         "id": "cpim",
+         "tipo": "caixa",
+         "x": 550,
+         "y": 110,
+         "w": 120,
+         "h": 50,
+         "texto": "CPI municipal",
+         "sub": "não pode",
+         "cor": "bad"
+        },
+        {
+         "id": "transf",
+         "tipo": "rotulo",
+         "x": 350,
+         "y": 185,
+         "texto": "não é quebra: é transferência do sigilo",
+         "cor": "ok"
+        },
+        {
+         "id": "pub",
+         "tipo": "rotulo",
+         "x": 480,
+         "y": 215,
+         "texto": "exceção: conta de ente público (MP e TCU)",
+         "cor": "warn"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Regra: dado bancário é intimidade. Para acessá-lo, em regra, é preciso <b>ordem judicial</b> (reserva de jurisdição)."
+        },
+        {
+         "texto": "Têm o poder diretamente: o <b>Judiciário</b> e as <b>CPIs federais e estaduais</b> (poderes de investigação próprios de autoridade judicial).",
+         "mostra": [
+          "jud",
+          "cpi"
+         ],
+         "anima": {
+          "jud": "pulsa",
+          "cpi": "pulsa"
+         }
+        },
+        {
+         "texto": "O <b>Fisco</b> também requisita direto do banco (RE 601.314, Tema 225). O STF diz que isso <b>não é quebra</b>: o sigilo só passa do banco para o Fisco, que o mantém.",
+         "mostra": [
+          "jud",
+          "cpi",
+          "fisco",
+          "transf"
+         ],
+         "anima": {
+          "fisco": "pulsa"
+         }
+        },
+        {
+         "texto": "<b>MP, polícia e CPI municipal</b> não podem: precisam pedir ao juiz.",
+         "mostra": [
+          "jud",
+          "cpi",
+          "fisco",
+          "transf",
+          "mp",
+          "cpim"
+         ],
+         "anima": {
+          "mp": "treme",
+          "cpim": "treme"
+         }
+        },
+        {
+         "texto": "Exceção: dinheiro público não tem sigilo de intimidade. O MP pode requisitar dados de <b>conta de prefeitura</b> (STJ, HC 308.493) e o TCU, de operações com recursos públicos (MS 33.340).",
+         "mostra": [
+          "jud",
+          "cpi",
+          "fisco",
+          "transf",
+          "mp",
+          "cpim",
+          "pub"
+         ],
+         "anima": {
+          "mp": "pulsa"
+         }
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Tema 990 (RE 1.055.941).</b> A UIF (antigo COAF) e a Receita podem <b>compartilhar</b> com a polícia e o MP, sem ordem judicial, os relatórios e a íntegra do procedimento fiscal, por comunicação formal e com sigilo. O STJ (RHC 147.707) disse que a polícia não poderia <b>pedir</b> o relatório à UIF sem juiz, mas o STF cassou esse acórdão (Rcl 61.944, 2024): o compartilhamento vale também quando o relatório foi solicitado."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Casa (XI).</b>"
+      },
+      {
+       "t": "cena",
+       "titulo": "A porta da casa: quem entra, e quando",
+       "altura": 240,
+       "elementos": [
+        {
+         "id": "casa",
+         "tipo": "caixa",
+         "x": 270,
+         "y": 20,
+         "w": 150,
+         "h": 56,
+         "texto": "Casa",
+         "sub": "asilo inviolável",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "dia",
+         "tipo": "caixa",
+         "x": 60,
+         "y": 120,
+         "w": 170,
+         "h": 56,
+         "texto": "Ordem judicial",
+         "sub": "só durante o dia",
+         "cor": "warn"
+        },
+        {
+         "id": "sempre",
+         "tipo": "caixa",
+         "x": 270,
+         "y": 120,
+         "w": 150,
+         "h": 56,
+         "texto": "Flagrante, desastre, socorro",
+         "sub": "dia ou noite",
+         "cor": "ok"
+        },
+        {
+         "id": "cons",
+         "tipo": "caixa",
+         "x": 460,
+         "y": 120,
+         "w": 170,
+         "h": 56,
+         "texto": "Consentimento",
+         "sub": "livre e provado pelo Estado",
+         "cor": "ok"
+        },
+        {
+         "id": "tema",
+         "tipo": "rotulo",
+         "x": 345,
+         "y": 205,
+         "texto": "flagrante só com fundadas razões (Tema 280)",
+         "cor": "bad"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "A casa é <b>asilo inviolável</b>. Casa, aqui, é qualquer espaço privado ocupado: residência, escritório, oficina, quarto de hotel."
+        },
+        {
+         "texto": "Com <b>ordem judicial</b>, a entrada só pode acontecer <b>durante o dia</b>. À noite, nem com mandado.",
+         "mostra": [
+          "dia"
+         ],
+         "anima": {
+          "dia": "pulsa"
+         }
+        },
+        {
+         "texto": "<b>Flagrante delito, desastre ou socorro</b>: entra-se a qualquer hora, sem mandado.",
+         "mostra": [
+          "dia",
+          "sempre"
+         ],
+         "anima": {
+          "sempre": "pulsa"
+         }
+        },
+        {
+         "texto": "Com o <b>consentimento do morador</b> também pode. Na dúvida, cabe ao Estado provar que ele foi livre (STJ).",
+         "mostra": [
+          "dia",
+          "sempre",
+          "cons"
+         ],
+         "anima": {
+          "cons": "pulsa"
+         }
+        },
+        {
+         "texto": "A pegadinha: o flagrante só legitima a entrada forçada se houver <b>fundadas razões</b>, justificadas depois. Intuição ou denúncia anônima não bastam.",
+         "mostra": [
+          "dia",
+          "sempre",
+          "cons",
+          "tema"
+         ],
+         "anima": {
+          "sempre": "treme"
+         }
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, X a XII",
+       "texto": "X - são invioláveis a intimidade, a vida privada, a honra e a imagem das pessoas, assegurado o direito a indenização pelo dano material ou moral decorrente de sua violação;\nXI - a casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, ==durante o dia, por determinação judicial==;\nXII - é inviolável o sigilo da correspondência e das comunicações telegráficas, de dados e das comunicações telefônicas, salvo, ==no último caso, por ordem judicial==, nas hipóteses e na forma que a lei estabelecer para fins de investigação criminal ou instrução processual penal;"
+      },
+      {
+       "t": "texto",
+       "html": "<b>Comunicações (XII).</b> Correspondência, telegrafia, dados e telefonia são sigilosos; só a <b>telefônica</b> tem ressalva expressa: ordem judicial, nas hipóteses da lei (Lei 9.296/1996) e só para <b>investigação criminal ou instrução processual penal</b>. A correspondência pode ser restringida no estado de defesa e de sítio. <b>Gravação clandestina</b> (feita por um dos interlocutores) é diferente da <b>interceptação</b> (feita por terceiro, sem nenhum dos dois saber): a primeira é, em regra, lícita; a segunda exige juiz."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Lei do Mosquito",
+       "html": "A Lei 13.301/2016 permite entrar à força em imóvel abandonado, com morador ausente ou que recusa, para eliminar focos do mosquito. Não está nas hipóteses do inciso XI, mas a doutrina a admite por ponderação com a vida e a saúde: restrição pontual, temporária e mínima."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: associação, propriedade e garantias do processo",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, XVII a XXI",
+       "texto": "XVII - é plena a liberdade de associação para fins lícitos, vedada a de caráter paramilitar;\nXVIII - a criação de associações e, na forma da lei, a de cooperativas independem de autorização, sendo vedada a interferência estatal em seu funcionamento;\nXIX - as associações só poderão ser compulsoriamente dissolvidas ou ter suas atividades suspensas por ==decisão judicial==, exigindo-se, no primeiro caso, o ==trânsito em julgado==;\nXX - ninguém poderá ser compelido a associar-se ou a permanecer associado;\nXXI - as entidades associativas, quando ==expressamente autorizadas==, têm legitimidade para representar seus filiados judicial ou extrajudicialmente;"
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Criar",
+         "sub": "sem autorização"
+        },
+        {
+         "titulo": "Suspender",
+         "sub": "decisão judicial"
+        },
+        {
+         "titulo": "Dissolver",
+         "sub": "trânsito em julgado"
+        },
+        {
+         "titulo": "Representar",
+         "sub": "autorização expressa"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Criar associação (e, na forma da lei, cooperativa) <b>independe de autorização</b>, e o Estado não pode interferir no funcionamento. Vedada só a de caráter <b>paramilitar</b>."
+        },
+        {
+         "no": 1,
+         "texto": "Para <b>suspender</b> as atividades, basta <b>decisão judicial</b>, mesmo sem trânsito em julgado."
+        },
+        {
+         "no": 2,
+         "texto": "Para <b>dissolver</b> compulsoriamente, decisão judicial <b>transitada em julgado</b>. Nunca por ato administrativo."
+        },
+        {
+         "no": 3,
+         "texto": "Para <b>representar</b> os filiados, a associação precisa de <b>autorização expressa</b> (ato individual ou assembleia), e a coisa julgada só alcança quem era filiado até a inicial, na base do órgão julgador (Tema 499). É representação; o sindicato faz substituição (art. 8º, III)."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Propriedade (XXII a XXVI).</b> Garantida, mas deve cumprir função social. Desapropriação comum: indenização <b>justa, prévia e em dinheiro</b>. Desapropriação-sanção: em títulos (urbana, art. 182; rural, art. 184). Expropriação sem indenização (art. 243): cultura de psicotrópicos ou trabalho escravo; o dono pode afastá-la provando que não teve culpa (Tema 399)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, XXV e XXVI",
+       "texto": "XXV - no caso de iminente perigo público, a autoridade competente poderá usar de propriedade particular, assegurada ao proprietário ==indenização ulterior, se houver dano==;\nXXVI - a pequena propriedade rural, assim definida em lei, desde que trabalhada pela família, não será objeto de penhora para pagamento de débitos decorrentes de sua atividade produtiva, dispondo a lei sobre os meios de financiar o seu desenvolvimento;"
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Requisição: depois e só se houver dano",
+       "html": "Na requisição (iminente perigo público), a indenização é <b>ulterior</b> e <b>só se houver dano</b>. A FCC troca por \"prévia\" ou \"em qualquer caso\". Foi um erro seu no TEC."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Petição e certidões (XXXIV).</b> Para qualquer pessoa, independentemente de taxa e sem precisar de advogado. Negada a certidão, cabe <b>mandado de segurança</b> (não habeas data, que é para informação sobre a própria pessoa)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Inafastabilidade (XXXV).</b> A lei não exclui do Judiciário lesão ou ameaça a direito. Não há mais \"instância administrativa de curso forçado\"; a exceção vem da própria CF: a <b>Justiça Desportiva</b> (art. 217). Mas exigir prévio requerimento ao INSS é válido como interesse de agir (RE 631.240), salvo quando a recusa da Administração é notória."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Direito adquirido, ato jurídico perfeito e coisa julgada (XXXVI).</b> Não valem contra o poder constituinte <b>originário</b>. Não há direito adquirido a regime jurídico de servidor. A <b>Súmula 654</b>: o ente que editou a lei não pode invocar a irretroatividade contra si. A coisa julgada foi relativizada em investigação de paternidade sem DNA (RE 363.889)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Juiz e promotor natural (XXXVII e LIII).</b> Não há tribunal de exceção; foro por prerrogativa e foro de eleição não violam o juiz natural. <b>Júri</b> (XXXVIII): plenitude de defesa, sigilo das votações, soberania dos veredictos e crimes dolosos contra a vida. A <b>Súmula Vinculante 45</b>: a competência do júri prevalece sobre foro por prerrogativa criado <b>só pela Constituição estadual</b>."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: matéria penal, prisão e processo",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "tabela",
+       "cab": [
+        "Crime",
+        "Inafiançável",
+        "Imprescritível",
+        "Sem graça ou anistia"
+       ],
+       "linhas": [
+        [
+         "Racismo (XLII)",
+         "Sim",
+         "<b>Sim</b>",
+         "Não diz"
+        ],
+        [
+         "Ação de grupos armados contra a ordem constitucional (XLIV)",
+         "Sim",
+         "<b>Sim</b>",
+         "Não diz"
+        ],
+        [
+         "Tortura, tráfico, terrorismo e hediondos (XLIII)",
+         "Sim",
+         "Não",
+         "<b>Sim</b>"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, XLII a XLIV",
+       "texto": "XLII - a prática do racismo constitui crime ==inafiançável e imprescritível==, sujeito à pena de reclusão, nos termos da lei;\nXLIII - a lei considerará crimes inafiançáveis e ==insuscetíveis de graça ou anistia== a prática da tortura , o tráfico ilícito de entorpecentes e drogas afins, o terrorismo e os definidos como crimes hediondos, por eles respondendo os mandantes, os executores e os que, podendo evitá-los, se omitirem;\nXLIV - constitui crime inafiançável e imprescritível a ação de grupos armados, civis ou militares, contra a ordem constitucional e o Estado Democrático;"
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Imprescritível é RAÇÃO",
+       "html": "<b>RA</b>cismo + <b>AÇÃO</b> de grupos armados. Tortura, tráfico, terrorismo e hediondos (3TH) são inafiançáveis e sem graça ou anistia, mas <b>prescrevem</b>. O STF incluiu a <b>injúria racial</b> como espécie de racismo (HC 154.248) e a Lei 14.532/2023 seguiu. A homofobia e a transfobia se enquadram no racismo até lei específica (ADO 26 e MI 4.733)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Penas (XLV a XLVIII).</b> A pena não passa da pessoa do condenado; reparar o dano e perder bens pode alcançar os sucessores, até o limite do patrimônio transferido. Proibidas: morte (salvo guerra), perpétua, trabalhos forçados, banimento e cruéis. A <b>SV 26</b> manda observar a progressão nos hediondos; a <b>SV 56</b> impede regime mais gravoso por falta de vaga. O tempo máximo de cumprimento hoje é <b>40 anos</b> (CP, art. 75)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Presos.</b> O Estado responde pela morte do detento quando descumpre o dever de proteção (RE 841.526) e indeniza, em dinheiro, o preso em condição degradante (RE 580.252). O Judiciário pode mandar fazer obras em presídio, sem ofensa à separação de Poderes (RE 592.581)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Extradição (LI e LII).</b> Brasileiro <b>nato</b> nunca. <b>Naturalizado</b>: crime comum antes da naturalização ou tráfico comprovado, a qualquer tempo. Estrangeiro: nunca por crime político ou de opinião. A <b>entrega</b> ao TPI (§ 4º) não é extradição."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Presunção de inocência (LVII).</b> O STF oscilou: admitia execução provisória até 2009, proibiu (HC 84.078), voltou a admitir (HC 126.292, 2016) e, nas <b>ADCs 43, 44 e 54 (2019)</b>, firmou que a pena só se cumpre após o trânsito em julgado. Prisão antes disso, só cautelar e fundamentada. Exceção atual: no <b>júri</b>, a soberania dos veredictos autoriza a execução imediata da condenação, qualquer que seja a pena (Tema 1.068, 2024; o Pacote Anticrime falava em 15 anos ou mais)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, LVII e LXVII",
+       "texto": "LVII - ninguém será considerado culpado até o ==trânsito em julgado== de sentença penal condenatória;\nLXVII - não haverá prisão civil por dívida, salvo a do responsável pelo inadimplemento ==voluntário e inescusável== de obrigação alimentícia e a do depositário infiel;"
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Prisão civil: só alimentos, e só se o atraso for culpa do devedor",
+       "html": "O texto ainda fala no depositário infiel, mas a <b>SV 25</b> diz que essa prisão é ilícita em qualquer modalidade: o Pacto de São José tem status <b>supralegal</b> e paralisa a lei que a regulava (RE 466.343). Sobra o devedor de alimentos, e só se o inadimplemento for <b>voluntário e inescusável</b>: desempregado e internado sem renda não pode ser preso."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Devido processo (LIV e LV).</b> Súmulas vinculantes que caem muito: <b>SV 5</b> (falta de advogado no PAD não ofende a CF); <b>SV 14</b> (defensor tem acesso aos elementos já documentados da investigação); <b>SV 21</b> (não se exige depósito prévio para recurso administrativo); <b>SV 28</b> (nem para ação que discute crédito tributário); <b>SV 3</b> (contraditório no TCU, salvo registro inicial de aposentadoria). Inquérito é procedimento, sem contraditório pleno. Delatado fala por último nas alegações finais."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Provas ilícitas (LVI).</b> São inadmissíveis, e as derivadas também (frutos da árvore envenenada). A prova ilícita pode ser usada <b>a favor do réu</b>, em legítima defesa."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Custódia e identificação.</b> A audiência de custódia vem do Pacto de São José (art. 7º, 5), aplicado como norma supralegal (ADI 5.240); hoje está no CPP (art. 310): em até 24 horas, admitida videoconferência em urgência. Civilmente identificado só é identificado criminalmente nas hipóteses da Lei 12.037/2009 (LVIII)."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e gratuidades: o que a FCC troca",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, LXXIV a LXXVII",
+       "texto": "LXXIV - o Estado prestará assistência jurídica integral e gratuita aos que ==comprovarem insuficiência de recursos==;\nLXXV - o Estado indenizará o condenado por erro judiciário, assim como o que ficar preso além do tempo fixado na sentença;\nLXXVI - são gratuitos ==para os reconhecidamente pobres==, na forma da lei:\nLXXVII - são gratuitas as ações de ==habeas corpus e habeas data==, e, na forma da lei, os atos necessários ao exercício da cidadania. LXXVIII - a todos, no âmbito judicial e administrativo, são assegurados a razoável duração do processo e os meios que garantam a celeridade de sua tramitação."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Só para pobres (LXXVI)",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Registro de nascimento",
+           "sub": "texto da CF"
+          },
+          {
+           "titulo": "Certidão de óbito",
+           "sub": "texto da CF"
+          }
+         ],
+         "texto": "A CF diz <b>\"para os reconhecidamente pobres\"</b>. A Lei 9.534/1997 estendeu a gratuidade a todos (ADC 5 e ADI 1.800), mas a FCC cobra o texto da CF."
+        },
+        {
+         "rotulo": "Para todos (LXXVII)",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Habeas corpus",
+           "sub": "e habeas data"
+          },
+          {
+           "titulo": "Atos de cidadania",
+           "sub": "Lei 9.265/1996"
+          }
+         ],
+         "texto": "HC e HD são <b>gratuitos para todos</b>, assim como os atos necessários ao exercício da cidadania. Mandado de segurança e ação popular não estão aqui (a ação popular tem regra própria: sem custas, salvo má-fé)."
+        },
+        {
+         "rotulo": "Assistência jurídica (LXXIV)",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Defensoria Pública",
+           "sub": "art. 134"
+          },
+          {
+           "titulo": "Quem comprova",
+           "sub": "insuficiência"
+          }
+         ],
+         "texto": "Integral e gratuita aos que <b>comprovarem</b> insuficiência de recursos, prestada pela Defensoria."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Erro judiciário (LXXV).</b> O Estado indeniza o condenado por erro e quem fica preso além do tempo da sentença. Fora disso, em regra, não responde por ato jurisdicional."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Razoável duração do processo (LXXVIII, EC 45/2004)</b> e <b>proteção de dados pessoais (LXXIX, EC 115/2022)</b>, inclusive nos meios digitais. Legislar sobre dados é competência <b>privativa da União</b> (art. 22, XXX)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, LXXIX",
+       "texto": "LXXIX - é assegurado, nos termos da lei, o direito à ==proteção dos dados pessoais==, inclusive nos meios digitais."
+      },
+      {
+       "t": "texto",
+       "html": "<b>CF x Constituição do Maranhão.</b> A CE-MA não repete o catálogo do art. 5º: no art. 4º, ela <b>remete à CF</b> e assegura esses direitos no território do Estado, nos limites de sua competência. O art. 5º da CE-MA repete, para Estado e Municípios, as vedações do art. 19 da CF (laicidade e proibição de distinções entre brasileiros, a mesma base da ADI 4.868). E acrescenta regras próprias: ninguém será prejudicado por litigar contra a Fazenda estadual ou municipal (art. 268), e o ensino público estadual exclui o racismo e a discriminação religiosa (art. 262)."
+      },
+      {
+       "t": "lei",
+       "ref": "Constituição do Maranhão, arts. 4º e 5º",
+       "texto": "Art. 4° É assegurada, no seu território e nos limites de sua competência, a inviolabilidade dos direitos e garantias fundamentais, ==nos termos da Constituição Federal==.\nArt. 5° É vedado ao Estado e ao Município:\nI - estabelecer cultos religiosos ou igrejas, subvencioná-los, embaraçar-lhes o funcionamento ou manter com eles ou seus representantes relações de dependência ou aliança, ressalvada, na forma da lei, a colaboração de interesse público;\nIII - ==criar distinções entre brasileiros== ou preferências entre si."
+      },
+      {
+       "t": "lei",
+       "ref": "Constituição do Maranhão, arts. 109 e 268",
+       "texto": "Art. 109. A Defensoria Pública é instituição essencial à função jurisdicional do Estado, incumbindo-lhe a ==assistência jurídica integral e gratuita== e a representação judicial em todas as esferas e instâncias daqueles que, na forma da lei, sejam considerados necessitados.\nArt. 268. Ninguém será discriminado ou de qualquer forma prejudicado pelo fato de ==litigar contra a Fazenda Pública Estadual ou Municipal==, no âmbito administrativo ou judicial."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Olhar de analista da PGE-MA",
+       "html": "O art. 268 da CE-MA interessa a quem trabalha na Procuradoria: o Estado não pode retaliar (em concurso, contrato ou benefício) quem o processa. E, no sigilo bancário, a Fazenda estadual só requisita direto do banco se tiver <b>regulamentado</b> o art. 6º da LC 105/2001, como o Decreto federal 3.724/2001 (RE 601.314)."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF decidiu",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 466.343, Plenário, Rel. Min. Cezar Peluso, 03/12/2008",
+       "tese": "Síntese do material EBEJI: tratados de direitos humanos não incorporados pelo rito do art. 5º, § 3º, têm status supralegal; é ilícita a prisão civil do depositário infiel (SV 25)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 601.314 (Tema 225), Plenário, Rel. Min. Edson Fachin, 24/02/2016",
+       "tese": "O art. 6º da LC 105/2001 não ofende o direito ao sigilo bancário: há transferência do sigilo da órbita bancária para a fiscal. Estados e Municípios precisam regulamentar a matéria. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 1.055.941 (Tema 990), Plenário",
+       "tese": "É constitucional o compartilhamento dos relatórios da UIF e da íntegra do procedimento fiscalizatório da Receita com os órgãos de persecução penal, sem prévia autorização judicial, resguardado o sigilo e por comunicação formal. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 603.616 (Tema 280)",
+       "tese": "A entrada forçada em domicílio sem mandado só é lícita, mesmo à noite, quando amparada em fundadas razões, justificadas a posteriori, que indiquem flagrante delito, sob pena de responsabilidade e nulidade. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADCs 43, 44 e 54, Plenário, Rel. Min. Marco Aurélio, 07/11/2019 (Info 958)",
+       "tese": "O art. 283 do CPP é constitucional: a pena só começa a ser cumprida após o trânsito em julgado; antes disso, só prisão cautelar fundamentada. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 611.874 (Tema 386), Plenário, 2020 (Info 1000)",
+       "tese": "É possível realizar etapa de concurso em data e horário distintos por escusa de consciência religiosa, se razoável, preservada a igualdade e sem ônus desproporcional à Administração. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 6.586, Plenário, Rel. Min. Ricardo Lewandowski, 17/12/2020 (Info 1003)",
+       "tese": "A vacinação compulsória não significa vacinação forçada; pode ser implementada por medidas indiretas previstas em lei, por União, Estados, DF e Municípios. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 612.043 (Tema 499), Plenário, Rel. Min. Marco Aurélio, 10/05/2017",
+       "tese": "A coisa julgada da ação coletiva de associação só alcança os filiados residentes na jurisdição do órgão julgador, que o fossem até a propositura e constem da lista da inicial. Fonte: material EBEJI."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Direitos fundamentais é o tema que mais cai em Constitucional. A FCC cobra a <b>letra do art. 5º</b> com uma palavra trocada (\"prévia\" no lugar de \"ulterior\", \"todos\" no lugar de \"pobres\", \"imprescritível\" para a tortura) e os casos do STF em uma linha. Seus erros do TEC estão todos aqui."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O que pode cair assim",
+       "html": "1) Casa com ordem judicial à noite? <b>Não</b>. 2) Flagrante à noite? <b>Sim</b>, com fundadas razões. 3) MP quebra sigilo bancário sem juiz? <b>Não</b> (salvo conta pública). 4) Fisco? <b>Sim</b>, e não é quebra. 5) CPI municipal? <b>Não</b>. 6) Tortura é imprescritível? <b>Não</b>. 7) Associação dissolvida por ato administrativo? <b>Não</b>: decisão judicial com trânsito. 8) Requisição: indenização <b>ulterior, se houver dano</b>. 9) Certidão de nascimento gratuita para todos <b>pela CF</b>? <b>Não</b>, para os reconhecidamente pobres. 10) HC e HD: gratuitos para <b>todos</b>. 11) Depositário infiel pode ser preso? <b>Não</b> (SV 25). 12) Tratado do § 3º é promulgado por <b>decreto presidencial</b>. 13) Execução provisória da pena? <b>Não</b>, salvo júri. 14) Teoria das esferas: <b>alemã</b>."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A casa pode ser penetrada, durante a noite, por determinação judicial.",
+         "v": false,
+         "porque": "Ordem judicial só durante o dia."
+        },
+        {
+         "texto": "O Ministério Público pode requisitar diretamente às instituições financeiras dados bancários de conta de titularidade de prefeitura.",
+         "v": true,
+         "porque": "Conta pública: STJ, HC 308.493."
+        },
+        {
+         "texto": "As CPIs municipais podem decretar a quebra de sigilo bancário.",
+         "v": false,
+         "porque": "Só as federais e as estaduais/distritais."
+        },
+        {
+         "texto": "A prática da tortura constitui crime inafiançável e imprescritível.",
+         "v": false,
+         "porque": "Inafiançável e insuscetível de graça ou anistia; imprescritíveis são o racismo e a ação de grupos armados."
+        },
+        {
+         "texto": "As associações só podem ter suas atividades suspensas por decisão judicial transitada em julgado.",
+         "v": false,
+         "porque": "Suspensão: decisão judicial. Trânsito em julgado só para a dissolução."
+        },
+        {
+         "texto": "Na requisição administrativa por iminente perigo público, é assegurada indenização ulterior, se houver dano.",
+         "v": true,
+         "porque": "Art. 5º, XXV."
+        },
+        {
+         "texto": "O ensino religioso nas escolas públicas não pode ter natureza confessional.",
+         "v": false,
+         "porque": "Pode (ADI 4.439)."
+        },
+        {
+         "texto": "O inadimplemento involuntário de pensão alimentícia autoriza a prisão civil do devedor.",
+         "v": false,
+         "porque": "Só o voluntário e inescusável."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "cf-004",
+    "cf-102",
+    "cf-103",
+    "cf-104",
+    "cf-105",
+    "cf-106",
+    "cf-134",
+    "ls-001",
+    "ls-002",
+    "ls-004",
+    "cf-df-01",
+    "cf-df-02",
+    "cf-df-03",
+    "cf-df-04",
+    "cf-df-05",
+    "cf-df-06",
+    "cf-df-07",
+    "cf-df-08",
+    "cf-df-09",
+    "cf-df-10",
+    "cf-dg-01",
+    "cf-dg-02",
+    "cf-dg-03",
+    "cf-dg-04",
+    "cf-dg-05",
+    "cf-dg-06",
+    "cf-dg-07",
+    "cf-dg-08",
+    "cf-dg-09",
+    "cf-dg-10",
+    "cf-dg-11",
+    "cf-dg-12",
+    "cf-dg-13",
+    "cf-dg-14"
+   ]
   },
   {
    "id": "B3-a07",
@@ -3055,6 +4044,30 @@
   [
    "Backlash",
    "Forte reação social ou política contra uma decisão judicial."
+  ],
+  [
+   "Dimensão objetiva",
+   "Face dos direitos fundamentais como valores da ordem jurídica, que impõem ao Estado deveres de proteção."
+  ],
+  [
+   "Eficácia horizontal",
+   "Aplicação dos direitos fundamentais nas relações entre particulares."
+  ],
+  [
+   "Supralegalidade",
+   "Posição dos tratados de direitos humanos não aprovados pelo rito do § 3º: abaixo da CF e acima das leis."
+  ],
+  [
+   "Requisição administrativa",
+   "Uso de propriedade particular em iminente perigo público, com indenização ulterior se houver dano."
+  ],
+  [
+   "Interceptação telefônica",
+   "Captação de conversa por terceiro sem o conhecimento dos interlocutores; exige ordem judicial e fins penais."
+  ],
+  [
+   "Escusa de consciência",
+   "Recusa de cumprir obrigação legal por crença ou convicção, com o dever de cumprir prestação alternativa."
   ]
  ]
 }
