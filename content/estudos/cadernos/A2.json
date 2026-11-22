@@ -1073,27 +1073,2634 @@
    "id": "A2-a05",
    "topico_id": "A2-05",
    "numero": 5,
-   "titulo": "Matemática básica",
-   "status": "a_montar"
+   "titulo": "Números, frações, MMC e MDC",
+   "status": "pronta",
+   "fonte": "Ceisc: Prof. Dudan, aulas 1 (operações básicas, múltiplos e divisores, potências) e 2 (frações); exercícios autorais",
+   "resumo": [
+    "Fração é um pedaço de um inteiro: o de baixo (denominador) diz em quantos pedaços iguais você corta; o de cima (numerador), quantos pega.",
+    "\"De\" em fração é multiplicação: 2/3 de 180 = 180 ÷ 3 × 2 = 120. Divida pelo de baixo, multiplique pelo de cima.",
+    "Somar ou subtrair: primeiro deixe os denominadores iguais (MMC), depois some só em cima. Multiplicar: em linha. Dividir: mantém a primeira e inverte a segunda.",
+    "\"Do que restou\": tire primeiro o que já foi usado e só então aplique a fração. Achar o total: descubra quanto vale 1 pedaço e multiplique.",
+    "MMC responde \"quando acontece junto de novo\" (encontros, ciclos). MDC responde \"dividir em grupos iguais do maior tamanho possível\".",
+    "−2² = −4, mas (−2)² = 4. Todo número (diferente de zero) elevado a zero dá 1. Expoente negativo inverte: 2⁻¹ = 1/2."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: a fração é um pedaço de uma barra",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Antes de qualquer regra, uma imagem: toda fração é uma <b>barra cortada em pedaços iguais</b>. Em 3/4, o <b>4</b> (denominador, embaixo) diz que a barra foi cortada em 4 pedaços; o <b>3</b> (numerador, em cima) diz que você pegou 3 deles. Quando a questão parecer confusa, desenhe a barra. Quase toda questão de fração da FCC se resolve com ela."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Nome",
+         "titulo": "Denominador (embaixo)",
+         "texto": "Em quantos pedaços iguais o inteiro foi cortado. Nunca pode ser zero: não existe cortar algo em zero pedaços."
+        },
+        {
+         "tag": "Nome",
+         "titulo": "Numerador (em cima)",
+         "texto": "Quantos pedaços você pegou. Se for maior que o de baixo (7/4), você pegou mais de uma barra inteira: é a fração imprópria."
+        },
+        {
+         "tag": "Ligação",
+         "titulo": "Fração é divisão",
+         "texto": "3/4 é o mesmo que 3 ÷ 4 = 0,75. Por isso dá para comparar frações virando decimal."
+        },
+        {
+         "tag": "Ligação",
+         "titulo": "Fração equivalente",
+         "texto": "1/2 = 2/4 = 3/6: o mesmo pedaço, cortado mais fino. Multiplicar ou dividir em cima e embaixo pelo mesmo número não muda o valor."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Agora o exercício da prévia, desenhado. Siga os passos e veja a barra sendo cortada."
+      },
+      {
+       "t": "cena",
+       "titulo": "As 240 páginas: cortando a barra",
+       "altura": 250,
+       "elementos": [
+        {
+         "id": "b1_0",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 30,
+         "w": 150,
+         "h": 46,
+         "texto": "60",
+         "sub": "1/4",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "b1_1",
+         "tipo": "caixa",
+         "x": 180,
+         "y": 30,
+         "w": 150,
+         "h": 46,
+         "texto": "60",
+         "sub": "1/4",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "b1_2",
+         "tipo": "caixa",
+         "x": 340,
+         "y": 30,
+         "w": 150,
+         "h": 46,
+         "texto": "60",
+         "sub": "1/4",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "b1_3",
+         "tipo": "caixa",
+         "x": 500,
+         "y": 30,
+         "w": 150,
+         "h": 46,
+         "texto": "60",
+         "sub": "1/4",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "t240",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 18,
+         "texto": "o processo inteiro: 240 páginas",
+         "fixo": true
+        },
+        {
+         "id": "lida1",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 30,
+         "w": 150,
+         "h": 46,
+         "texto": "60 lidas",
+         "sub": "1ª semana",
+         "cor": "ok"
+        },
+        {
+         "id": "resto",
+         "tipo": "rotulo",
+         "x": 420,
+         "y": 100,
+         "texto": "sobraram 180: agora é a nova barra",
+         "cor": "warn"
+        },
+        {
+         "id": "r0",
+         "tipo": "caixa",
+         "x": 180,
+         "y": 130,
+         "w": 155,
+         "h": 46,
+         "texto": "60",
+         "sub": "1/3 do resto",
+         "cor": "dim"
+        },
+        {
+         "id": "r1",
+         "tipo": "caixa",
+         "x": 345,
+         "y": 130,
+         "w": 155,
+         "h": 46,
+         "texto": "60",
+         "sub": "1/3 do resto",
+         "cor": "dim"
+        },
+        {
+         "id": "r2",
+         "tipo": "caixa",
+         "x": 510,
+         "y": 130,
+         "w": 155,
+         "h": 46,
+         "texto": "60",
+         "sub": "1/3 do resto",
+         "cor": "dim"
+        },
+        {
+         "id": "lida2a",
+         "tipo": "caixa",
+         "x": 180,
+         "y": 130,
+         "w": 155,
+         "h": 46,
+         "texto": "60 lidas",
+         "sub": "2ª semana",
+         "cor": "blue"
+        },
+        {
+         "id": "lida2b",
+         "tipo": "caixa",
+         "x": 345,
+         "y": 130,
+         "w": 155,
+         "h": 46,
+         "texto": "60 lidas",
+         "sub": "2ª semana",
+         "cor": "blue"
+        },
+        {
+         "id": "falta",
+         "tipo": "caixa",
+         "x": 510,
+         "y": 130,
+         "w": 155,
+         "h": 46,
+         "texto": "60 faltam",
+         "sub": "a resposta",
+         "cor": "accent"
+        },
+        {
+         "id": "fim",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 215,
+         "texto": "240 − 60 − 120 = 60 páginas faltam",
+         "cor": "ok"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "A barra é o processo inteiro: <b>240 páginas</b>. 1/4 quer dizer: corte em <b>4 pedaços iguais</b> e pegue 1. Cada pedaço tem 240 ÷ 4 = <b>60</b>."
+        },
+        {
+         "texto": "Na 1ª semana ela leu 1/4: pinte <b>um</b> pedaço. Foram <b>60 páginas lidas</b>.",
+         "mostra": [
+          "lida1"
+         ],
+         "anima": {
+          "lida1": "pulsa"
+         }
+        },
+        {
+         "texto": "Por que parar aqui e tirar as 60? Porque a 2ª semana fala de <b>2/3 do que restou</b>. A fração agora é de outra barra: a das <b>180</b> que sobraram.",
+         "mostra": [
+          "lida1",
+          "resto",
+          "r0",
+          "r1",
+          "r2"
+         ],
+         "anima": {
+          "resto": "pulsa"
+         }
+        },
+        {
+         "texto": "2/3 de 180: corte as 180 em <b>3</b> pedaços (180 ÷ 3 = 60 cada) e pinte <b>2</b>. Foram <b>120 páginas</b> na 2ª semana.",
+         "mostra": [
+          "lida1",
+          "resto",
+          "r0",
+          "r1",
+          "r2",
+          "lida2a",
+          "lida2b"
+         ],
+         "anima": {
+          "lida2a": "pulsa",
+          "lida2b": "pulsa"
+         }
+        },
+        {
+         "texto": "Sobrou <b>1 pedaço sem pintar</b>: são as páginas que faltam. <b>60</b>. Repare: a resposta não é o que ela leu, é o que <b>falta</b>.",
+         "mostra": [
+          "lida1",
+          "resto",
+          "r0",
+          "r1",
+          "r2",
+          "lida2a",
+          "lida2b",
+          "falta",
+          "fim"
+         ],
+         "anima": {
+          "falta": "bate"
+         }
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "\"De\" quer dizer \"vezes\"",
+       "html": "2/3 <b>de</b> 180 = 2/3 × 180. Na prática: <b>divida pelo de baixo e multiplique pelo de cima</b>. 180 ÷ 3 = 60; 60 × 2 = 120. Dividir primeiro deixa a conta pequena."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: as quatro operações com frações",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Simplificar é o primeiro hábito: divida em cima e embaixo pelo mesmo número até não dar mais. 84/126: os dois são pares (÷2 = 42/63); os dois somam múltiplo de 3 (÷3 = 14/21); os dois são da tabuada do 7 (÷7 = <b>2/3</b>). Chegou na <b>irredutível</b>."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Divisível por",
+        "Como saber sem fazer a conta",
+        "Exemplo"
+       ],
+       "linhas": [
+        [
+         "2",
+         "termina em número par (0, 2, 4, 6, 8)",
+         "126"
+        ],
+        [
+         "3",
+         "a soma dos algarismos é múltiplo de 3",
+         "84: 8 + 4 = 12"
+        ],
+        [
+         "4",
+         "os dois últimos algarismos formam múltiplo de 4",
+         "1.316: 16"
+        ],
+        [
+         "5",
+         "termina em 0 ou 5",
+         "135"
+        ],
+        [
+         "6",
+         "é divisível por 2 e por 3 ao mesmo tempo",
+         "84"
+        ],
+        [
+         "9",
+         "a soma dos algarismos é múltiplo de 9",
+         "729: 7 + 2 + 9 = 18"
+        ],
+        [
+         "10",
+         "termina em 0",
+         "250"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Somar frações é a operação que mais derruba. Veja por que não se soma \"em cima com em cima e embaixo com embaixo\"."
+      },
+      {
+       "t": "cena",
+       "titulo": "Por que somar frações pede o mesmo denominador",
+       "altura": 260,
+       "elementos": [
+        {
+         "id": "l1",
+         "tipo": "rotulo",
+         "x": 40,
+         "y": 22,
+         "texto": "1/4",
+         "fixo": true
+        },
+        {
+         "id": "f1",
+         "tipo": "caixa",
+         "x": 70,
+         "y": 5,
+         "w": 600,
+         "h": 36,
+         "texto": "",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "p1",
+         "tipo": "caixa",
+         "x": 70,
+         "y": 5,
+         "w": 150,
+         "h": 36,
+         "texto": "1/4",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "l2",
+         "tipo": "rotulo",
+         "x": 40,
+         "y": 72,
+         "texto": "2/3",
+         "fixo": true
+        },
+        {
+         "id": "f2",
+         "tipo": "caixa",
+         "x": 70,
+         "y": 55,
+         "w": 600,
+         "h": 36,
+         "texto": "",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "p2",
+         "tipo": "caixa",
+         "x": 70,
+         "y": 55,
+         "w": 400,
+         "h": 36,
+         "texto": "2/3",
+         "cor": "warn",
+         "fixo": true
+        },
+        {
+         "id": "aviso",
+         "tipo": "rotulo",
+         "x": 370,
+         "y": 120,
+         "texto": "pedaços de tamanhos diferentes: não dá para somar contando",
+         "cor": "bad"
+        },
+        {
+         "id": "l3",
+         "tipo": "rotulo",
+         "x": 40,
+         "y": 172,
+         "texto": "12"
+        },
+        {
+         "id": "f3",
+         "tipo": "caixa",
+         "x": 70,
+         "y": 155,
+         "w": 600,
+         "h": 36,
+         "texto": "12 pedacinhos iguais",
+         "cor": "dim"
+        },
+        {
+         "id": "p3",
+         "tipo": "caixa",
+         "x": 70,
+         "y": 155,
+         "w": 150,
+         "h": 36,
+         "texto": "3/12",
+         "cor": "blue"
+        },
+        {
+         "id": "p4",
+         "tipo": "caixa",
+         "x": 220,
+         "y": 155,
+         "w": 400,
+         "h": 36,
+         "texto": "8/12",
+         "cor": "warn"
+        },
+        {
+         "id": "res",
+         "tipo": "rotulo",
+         "x": 370,
+         "y": 225,
+         "texto": "3/12 + 8/12 = 11/12  (sobra 1/12)",
+         "cor": "ok"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Em cima, a barra cortada em <b>4</b>, com 1 pedaço pintado (1/4). Embaixo, a mesma barra cortada em <b>3</b>, com 2 pintados (2/3)."
+        },
+        {
+         "texto": "O erro mais comum é somar em cima e embaixo: 1 + 2 sobre 4 + 3 = 3/7. Não faz sentido: um pedaço de quarto e um de terço <b>não têm o mesmo tamanho</b>.",
+         "mostra": [
+          "aviso"
+         ],
+         "anima": {
+          "aviso": "treme"
+         }
+        },
+        {
+         "texto": "A saída: cortar as duas barras num tamanho que sirva para as duas. Que número dá para dividir por 4 <b>e</b> por 3? O menor é <b>12</b> (o MMC de 4 e 3).",
+         "mostra": [
+          "l3",
+          "f3"
+         ],
+         "anima": {
+          "f3": "pulsa"
+         }
+        },
+        {
+         "texto": "1/4 vira <b>3/12</b> (12 ÷ 4 = 3, e 3 × 1 = 3). 2/3 vira <b>8/12</b> (12 ÷ 3 = 4, e 4 × 2 = 8). Agora os pedaços são iguais: é só contar. 3 + 8 = <b>11/12</b>.",
+         "mostra": [
+          "l3",
+          "f3",
+          "p3",
+          "p4",
+          "res"
+         ],
+         "anima": {
+          "p3": "pulsa",
+          "p4": "pulsa"
+         }
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Mesma base?",
+         "sub": "denominadores"
+        },
+        {
+         "titulo": "MMC",
+         "sub": "novo denominador"
+        },
+        {
+         "titulo": "Converter",
+         "sub": "divide e multiplica"
+        },
+        {
+         "titulo": "Somar",
+         "sub": "só em cima"
+        },
+        {
+         "titulo": "Simplificar",
+         "sub": "se der"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Calcule <b>1/6 + 3/4</b>. Primeiro, olhe os de baixo: 6 e 4. São diferentes, então os pedaços não têm o mesmo tamanho. Ainda não dá para somar."
+        },
+        {
+         "no": 1,
+         "texto": "Ache o MMC de 6 e 4: múltiplos de 6 são 6, 12, 18...; de 4 são 4, 8, 12... O primeiro em comum é <b>12</b>. Ele vira o novo denominador."
+        },
+        {
+         "no": 2,
+         "texto": "Converta cada fração: <b>divide o 12 pelo de baixo e multiplica pelo de cima</b>. 1/6: 12 ÷ 6 = 2, 2 × 1 = 2 → 2/12. 3/4: 12 ÷ 4 = 3, 3 × 3 = 9 → 9/12."
+        },
+        {
+         "no": 3,
+         "texto": "Agora os pedaços são iguais. Some <b>só em cima</b> e repita o de baixo: 2/12 + 9/12 = <b>11/12</b>. O 12 não vira 24: o tamanho do pedaço não muda quando você junta pedaços."
+        },
+        {
+         "no": 4,
+         "texto": "Tente simplificar: 11 e 12 não têm divisor comum além de 1. Resposta: <b>11/12</b>. Subtrair é igual, trocando o + pelo −."
+        }
+       ]
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Multiplicar",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "2/3 × 4/5",
+           "sub": "em cima × em cima"
+          },
+          {
+           "titulo": "= 8/15",
+           "sub": "embaixo × embaixo"
+          }
+         ],
+         "texto": "<b>Em linha</b>, sem MMC: 2 × 4 = 8 em cima; 3 × 5 = 15 embaixo. Por quê funciona? Pegar 2/3 de 4/5 é cortar um pedaço que já era um pedaço: os cortes se multiplicam."
+        },
+        {
+         "rotulo": "Dividir",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "3/4 ÷ 1/8",
+           "sub": "mantém a primeira"
+          },
+          {
+           "titulo": "= 3/4 × 8/1 = 6",
+           "sub": "inverte a segunda"
+          }
+         ],
+         "texto": "<b>Mantém a primeira e multiplica pelo inverso da segunda.</b> Por quê? Dividir por 1/8 pergunta: <b>quantos oitavos cabem</b> em 3/4? Cada inteiro tem 8 oitavos; 3/4 de inteiro têm 6. Por isso dividir por uma fração pequena dá um número grande."
+        },
+        {
+         "rotulo": "Somar (armadilha)",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "1/4 + 2/3",
+           "sub": "≠ 3/7"
+          },
+          {
+           "titulo": "= 3/12 + 8/12 = 11/12",
+           "sub": "MMC primeiro"
+          }
+         ],
+         "texto": "<b>Nunca some os de baixo.</b> 3/7 é menos que 2/3 sozinho: somar não pode diminuir. Essa conferência rápida salva questões."
+        },
+        {
+         "rotulo": "Comparar",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "5/8 ou 2/3?",
+           "sub": "vire decimal"
+          },
+          {
+           "titulo": "0,625 < 0,666...",
+           "sub": "2/3 é maior"
+          }
+         ],
+         "texto": "Para saber qual fração é maior, <b>divida em cima por embaixo</b> e compare os decimais. Ou deixe os denominadores iguais: 15/24 e 16/24."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "\"Do que restou\" e \"do total\" são barras diferentes",
+       "html": "Quando a questão diz <b>do restante</b>, <b>do que sobrou</b> ou <b>do resto</b>, a fração é de uma barra nova, menor. Tire primeiro o que já foi usado. Quando diz <b>do total</b>, pode somar as frações direto (com MMC)."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: MMC, MDC e potências",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "MMC (mínimo múltiplo comum) e MDC (máximo divisor comum) assustam pelo nome, mas cada um responde a uma pergunta do dia a dia. Primeiro, o MMC: <b>quando acontece junto de novo?</b>"
+      },
+      {
+       "t": "cena",
+       "titulo": "MMC: quando os plantões se encontram de novo",
+       "altura": 220,
+       "elementos": [
+        {
+         "id": "eixo",
+         "tipo": "seta",
+         "x": 30,
+         "y": 175,
+         "w": 660,
+         "h": 175,
+         "fixo": true
+        },
+        {
+         "id": "ra",
+         "tipo": "rotulo",
+         "x": 110,
+         "y": 40,
+         "texto": "Ana: a cada 4 dias",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "rb",
+         "tipo": "rotulo",
+         "x": 110,
+         "y": 110,
+         "texto": "Bia: a cada 6 dias",
+         "cor": "warn",
+         "fixo": true
+        },
+        {
+         "id": "zero",
+         "tipo": "rotulo",
+         "x": 40,
+         "y": 200,
+         "texto": "hoje",
+         "fixo": true
+        },
+        {
+         "id": "d4",
+         "tipo": "rotulo",
+         "x": 220,
+         "y": 200,
+         "texto": "dia 4",
+         "fixo": true
+        },
+        {
+         "id": "d6",
+         "tipo": "rotulo",
+         "x": 310,
+         "y": 200,
+         "texto": "dia 6",
+         "fixo": true
+        },
+        {
+         "id": "d8",
+         "tipo": "rotulo",
+         "x": 400,
+         "y": 200,
+         "texto": "dia 8",
+         "fixo": true
+        },
+        {
+         "id": "d12",
+         "tipo": "rotulo",
+         "x": 580,
+         "y": 200,
+         "texto": "dia 12",
+         "fixo": true
+        },
+        {
+         "id": "a4",
+         "tipo": "gota",
+         "x": 220,
+         "y": 70,
+         "texto": "4",
+         "cor": "blue"
+        },
+        {
+         "id": "a8",
+         "tipo": "gota",
+         "x": 400,
+         "y": 70,
+         "texto": "8",
+         "cor": "blue"
+        },
+        {
+         "id": "a12",
+         "tipo": "gota",
+         "x": 580,
+         "y": 70,
+         "texto": "12",
+         "cor": "blue"
+        },
+        {
+         "id": "b6",
+         "tipo": "gota",
+         "x": 310,
+         "y": 140,
+         "texto": "6",
+         "cor": "warn"
+        },
+        {
+         "id": "b12",
+         "tipo": "gota",
+         "x": 580,
+         "y": 140,
+         "texto": "12",
+         "cor": "warn"
+        },
+        {
+         "id": "junto",
+         "tipo": "rotulo",
+         "x": 520,
+         "y": 20,
+         "texto": "juntas de novo: MMC(4, 6) = 12",
+         "cor": "ok"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Ana e Bia deram plantão juntas hoje. Ana volta a cada <b>4</b> dias; Bia, a cada <b>6</b>. Quando estarão juntas de novo?"
+        },
+        {
+         "texto": "Os dias de Ana são os <b>múltiplos de 4</b>: 4, 8, 12...",
+         "mostra": [
+          "a4",
+          "a8",
+          "a12"
+         ],
+         "anima": {
+          "a4": "cai",
+          "a8": "cai",
+          "a12": "cai"
+         }
+        },
+        {
+         "texto": "Os dias de Bia são os <b>múltiplos de 6</b>: 6, 12...",
+         "mostra": [
+          "a4",
+          "a8",
+          "a12",
+          "b6",
+          "b12"
+         ],
+         "anima": {
+          "b6": "cai",
+          "b12": "cai"
+         }
+        },
+        {
+         "texto": "O primeiro dia que aparece nas duas listas é o <b>12</b>: o menor múltiplo comum, o <b>MMC</b>. Pergunta de <b>encontro</b>, de <b>quando acontece junto de novo</b>, é MMC.",
+         "mostra": [
+          "a4",
+          "a8",
+          "a12",
+          "b6",
+          "b12",
+          "junto"
+         ],
+         "anima": {
+          "a12": "pulsa",
+          "b12": "pulsa"
+         }
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Agora o MDC: <b>dividir em grupos iguais, do maior tamanho possível, sem sobrar nada</b>."
+      },
+      {
+       "t": "cena",
+       "titulo": "MDC: pastas iguais, do maior tamanho possível",
+       "altura": 230,
+       "elementos": [
+        {
+         "id": "rc",
+         "tipo": "rotulo",
+         "x": 60,
+         "y": 25,
+         "texto": "60 de Civil",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "rp",
+         "tipo": "rotulo",
+         "x": 60,
+         "y": 115,
+         "texto": "84 de Processo",
+         "cor": "warn",
+         "fixo": true
+        },
+        {
+         "id": "bc",
+         "tipo": "caixa",
+         "x": 120,
+         "y": 5,
+         "w": 360,
+         "h": 40,
+         "texto": "60 processos",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "bp",
+         "tipo": "caixa",
+         "x": 120,
+         "y": 95,
+         "w": 504,
+         "h": 40,
+         "texto": "84 processos",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "c0",
+         "tipo": "caixa",
+         "x": 120,
+         "y": 50,
+         "w": 66,
+         "h": 34,
+         "texto": "12",
+         "cor": "blue"
+        },
+        {
+         "id": "c1",
+         "tipo": "caixa",
+         "x": 192,
+         "y": 50,
+         "w": 66,
+         "h": 34,
+         "texto": "12",
+         "cor": "blue"
+        },
+        {
+         "id": "c2",
+         "tipo": "caixa",
+         "x": 264,
+         "y": 50,
+         "w": 66,
+         "h": 34,
+         "texto": "12",
+         "cor": "blue"
+        },
+        {
+         "id": "c3",
+         "tipo": "caixa",
+         "x": 336,
+         "y": 50,
+         "w": 66,
+         "h": 34,
+         "texto": "12",
+         "cor": "blue"
+        },
+        {
+         "id": "c4",
+         "tipo": "caixa",
+         "x": 408,
+         "y": 50,
+         "w": 66,
+         "h": 34,
+         "texto": "12",
+         "cor": "blue"
+        },
+        {
+         "id": "p0",
+         "tipo": "caixa",
+         "x": 120,
+         "y": 140,
+         "w": 66,
+         "h": 34,
+         "texto": "12",
+         "cor": "warn"
+        },
+        {
+         "id": "p1",
+         "tipo": "caixa",
+         "x": 192,
+         "y": 140,
+         "w": 66,
+         "h": 34,
+         "texto": "12",
+         "cor": "warn"
+        },
+        {
+         "id": "p2",
+         "tipo": "caixa",
+         "x": 264,
+         "y": 140,
+         "w": 66,
+         "h": 34,
+         "texto": "12",
+         "cor": "warn"
+        },
+        {
+         "id": "p3",
+         "tipo": "caixa",
+         "x": 336,
+         "y": 140,
+         "w": 66,
+         "h": 34,
+         "texto": "12",
+         "cor": "warn"
+        },
+        {
+         "id": "p4",
+         "tipo": "caixa",
+         "x": 408,
+         "y": 140,
+         "w": 66,
+         "h": 34,
+         "texto": "12",
+         "cor": "warn"
+        },
+        {
+         "id": "p5",
+         "tipo": "caixa",
+         "x": 480,
+         "y": 140,
+         "w": 66,
+         "h": 34,
+         "texto": "12",
+         "cor": "warn"
+        },
+        {
+         "id": "p6",
+         "tipo": "caixa",
+         "x": 552,
+         "y": 140,
+         "w": 66,
+         "h": 34,
+         "texto": "12",
+         "cor": "warn"
+        },
+        {
+         "id": "res",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 205,
+         "texto": "pasta de 12 = MDC(60, 84); 5 + 7 = 12 pastas",
+         "cor": "ok"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "60 processos de Civil e 84 de Processo Civil vão para pastas com <b>o mesmo número</b> de processos, <b>sem misturar</b> as matérias, e com <b>o maior número possível</b> em cada pasta."
+        },
+        {
+         "texto": "O tamanho da pasta precisa <b>dividir 60 e dividir 84</b> sem sobrar nada. Os divisores comuns são 1, 2, 3, 4, 6 e 12. O maior é <b>12</b>: o MDC.",
+         "mostra": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+         ],
+         "anima": {
+          "c0": "cai",
+          "c1": "cai",
+          "c2": "cai",
+          "c3": "cai",
+          "c4": "cai"
+         }
+        },
+        {
+         "texto": "60 ÷ 12 = <b>5 pastas</b> de Civil. 84 ÷ 12 = <b>7 pastas</b> de Processo.",
+         "mostra": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "p0",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6"
+         ],
+         "anima": {
+          "p0": "cai",
+          "p1": "cai",
+          "p2": "cai",
+          "p3": "cai",
+          "p4": "cai",
+          "p5": "cai",
+          "p6": "cai"
+         }
+        },
+        {
+         "texto": "Total: <b>12 pastas</b>. Atenção: a banca pode perguntar o <b>tamanho</b> da pasta (12) ou o <b>número</b> de pastas (também 12 aqui, por coincidência; em outra questão, não será). Leia a pergunta.",
+         "mostra": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "p0",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "res"
+         ],
+         "anima": {
+          "res": "pulsa"
+         }
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Escrever",
+         "sub": "lado a lado"
+        },
+        {
+         "titulo": "Dividir",
+         "sub": "pelos primos"
+        },
+        {
+         "titulo": "MMC",
+         "sub": "multiplica todos"
+        },
+        {
+         "titulo": "MDC",
+         "sub": "só os que dividem os dois"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Para números maiores, use a <b>fatoração simultânea</b>. Escreva <b>60, 84</b> lado a lado e um traço vertical à direita."
+        },
+        {
+         "no": 1,
+         "texto": "Divida pelos primos, do menor para o maior (2, 3, 5, 7...). 60, 84 ÷ <b>2</b> = 30, 42 (os dois dividiram: marque o 2). 30, 42 ÷ <b>2</b> = 15, 21 (os dois: marque). 15, 21 ÷ <b>3</b> = 5, 7 (os dois: marque). 5, 7 ÷ <b>5</b> = 1, 7 (só o 60). 1, 7 ÷ <b>7</b> = 1, 1 (só o 84)."
+        },
+        {
+         "no": 2,
+         "texto": "<b>MMC</b> = multiplique <b>todos</b> os primos da coluna: 2 × 2 × 3 × 5 × 7 = <b>420</b>. Por quê todos? O MMC precisa \"caber\" nos dois números, então leva todos os pedaços de cada um."
+        },
+        {
+         "no": 3,
+         "texto": "<b>MDC</b> = multiplique <b>só os que dividiram os dois ao mesmo tempo</b> (os marcados): 2 × 2 × 3 = <b>12</b>. Por quê só esses? O MDC tem de dividir os dois, então só leva os pedaços que os dois têm."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Como saber qual usar",
+       "html": "Leu <b>a cada, de tanto em tanto tempo, novamente juntos, coincidir</b>? MMC (o resultado é <b>maior</b> que os números dados). Leu <b>dividir, repartir, maior tamanho possível, sem sobra, menor número de grupos</b>? MDC (o resultado é <b>menor</b> que os números dados)."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "aⁿ",
+         "sub": "o que é",
+         "texto": "Multiplicar a base por ela mesma n vezes. 2³ = 2 × 2 × 2 = <b>8</b> (não é 2 × 3 = 6)."
+        },
+        {
+         "titulo": "a⁰ = 1",
+         "sub": "expoente zero",
+         "texto": "Qualquer número diferente de zero elevado a zero dá <b>1</b>. Por quê? 2³ ÷ 2³ = 8 ÷ 8 = 1, e pela regra da divisão dá 2⁰."
+        },
+        {
+         "titulo": "a⁻ⁿ = 1/aⁿ",
+         "sub": "expoente negativo",
+         "texto": "Expoente negativo <b>inverte</b> a base, não deixa o número negativo. 2⁻¹ = 1/2; 2⁻³ = 1/8."
+        },
+        {
+         "titulo": "aᵐ · aⁿ = aᵐ⁺ⁿ",
+         "sub": "mesma base",
+         "texto": "Multiplicando com a mesma base, <b>some</b> os expoentes; dividindo, <b>subtraia</b>. 2³ · 2² = 2⁵ = 32."
+        },
+        {
+         "titulo": "−2² x (−2)²",
+         "sub": "o sinal",
+         "texto": "Sem parênteses, o expoente pega só o 2: −2² = −(2 × 2) = <b>−4</b>. Com parênteses, pega o sinal junto: (−2)² = (−2) × (−2) = <b>4</b>."
+        },
+        {
+         "titulo": "√",
+         "sub": "raiz",
+         "texto": "Raiz quadrada desfaz o quadrado: √49 = 7 porque 7² = 49. Raiz de fração: √(9/16) = 3/4 (raiz em cima e embaixo)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra: exercícios resolvidos e pegadinhas",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Quatro exercícios no estilo FCC, do mais simples ao mais difícil. Em cada passo, o porquê. Tente fazer antes de abrir o passo seguinte."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Pergunta",
+         "sub": "o que pede?"
+        },
+        {
+         "titulo": "Somar",
+         "sub": "frações do total"
+        },
+        {
+         "titulo": "Sobra",
+         "sub": "1 − gasto"
+        },
+        {
+         "titulo": "1 pedaço",
+         "sub": "divide"
+        },
+        {
+         "titulo": "Total",
+         "sub": "multiplica"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Exercício 1 (achar o total).</b> Uma servidora gasta 1/3 do salário com aluguel e 1/4 com alimentação. Sobram R$ 1.500,00. Qual é o salário? A pergunta é o <b>inteiro</b> (a barra toda), não o que sobrou."
+        },
+        {
+         "no": 1,
+         "texto": "As duas frações são <b>do salário</b> (do total), então posso somar direto. MMC de 3 e 4 = 12: 1/3 = 4/12 e 1/4 = 3/12. Gasto: <b>7/12</b>."
+        },
+        {
+         "no": 2,
+         "texto": "A barra inteira é 12/12. Sobra 12/12 − 7/12 = <b>5/12</b>. E a questão diz quanto vale essa sobra: R$ 1.500."
+        },
+        {
+         "no": 3,
+         "texto": "Se 5 pedaços valem 1.500, <b>1 pedaço</b> vale 1.500 ÷ 5 = <b>300</b>. Esse é sempre o passo-chave: achar quanto vale um pedaço."
+        },
+        {
+         "no": 4,
+         "texto": "O salário tem 12 pedaços: 12 × 300 = <b>R$ 3.600,00</b>. Confira: 1/3 de 3.600 = 1.200; 1/4 = 900; 3.600 − 1.200 − 900 = 1.500. Bateu."
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "1º filho",
+         "sub": "1/3 do total"
+        },
+        {
+         "titulo": "Resto",
+         "sub": "nova barra"
+        },
+        {
+         "titulo": "2º filho",
+         "sub": "3/8 do resto"
+        },
+        {
+         "titulo": "3º filho",
+         "sub": "o que sobra"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Exercício 2 (fração do resto).</b> Uma herança de R$ 72.000 foi dividida: o filho mais velho recebeu 1/3; o do meio, 3/8 do <b>restante</b>; o caçula, o que sobrou. Quanto recebeu o caçula? 1/3 de 72.000: 72.000 ÷ 3 = <b>24.000</b>."
+        },
+        {
+         "no": 1,
+         "texto": "A palavra <b>restante</b> manda trocar de barra. Restam 72.000 − 24.000 = <b>48.000</b>. Por que não usar 72.000? Porque os 3/8 não são do total."
+        },
+        {
+         "no": 2,
+         "texto": "3/8 de 48.000: 48.000 ÷ 8 = 6.000; 6.000 × 3 = <b>18.000</b> para o filho do meio."
+        },
+        {
+         "no": 3,
+         "texto": "Caçula: 48.000 − 18.000 = <b>R$ 30.000</b>. A alternativa-armadilha seria R$ 21.000: quem calcula 3/8 de 72.000 (27.000) e faz 72.000 − 24.000 − 27.000."
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Ler",
+         "sub": "MMC ou MDC?"
+        },
+        {
+         "titulo": "MMC",
+         "sub": "4 e 6"
+        },
+        {
+         "titulo": "Somar",
+         "sub": "ao dia de partida"
+        },
+        {
+         "titulo": "Semana",
+         "sub": "÷ 7"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Exercício 3 (MMC com calendário).</b> Ana dá plantão a cada 4 dias e Bia a cada 6. Fizeram juntas na segunda-feira, dia 2. Em que dia e dia da semana estarão juntas de novo? \"Juntas de novo\" = <b>MMC</b>."
+        },
+        {
+         "no": 1,
+         "texto": "MMC(4, 6) = <b>12</b>. Isso é um <b>intervalo</b> (12 dias depois), não a data."
+        },
+        {
+         "no": 2,
+         "texto": "Data: 2 + 12 = <b>dia 14</b>. Quem marca \"dia 12\" esqueceu de partir do dia 2."
+        },
+        {
+         "no": 3,
+         "texto": "Dia da semana: a cada 7 dias volta a ser segunda. 12 = 7 + 5: anda uma semana inteira (segunda de novo) e mais 5 dias: terça, quarta, quinta, sexta, <b>sábado</b>. Resposta: dia 14, sábado."
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Condição",
+         "sub": "sobra 2"
+        },
+        {
+         "titulo": "Tira a sobra",
+         "sub": "N − 2"
+        },
+        {
+         "titulo": "MMC",
+         "sub": "6 e 8"
+        },
+        {
+         "titulo": "Faixa",
+         "sub": "testar"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Exercício 4 (divisão com condições, como na PGE-AM).</b> Uma caixa tem entre 60 e 90 processos. Separando de 6 em 6, sobram 2; de 8 em 8, também sobram 2. Quantos processos há?"
+        },
+        {
+         "no": 1,
+         "texto": "Se sempre sobram 2, então <b>N − 2</b> se divide exatamente por 6 e por 8. Por que tirar o 2? Para transformar \"sobra\" em \"divisão exata\", que é o que o MMC sabe resolver."
+        },
+        {
+         "no": 2,
+         "texto": "N − 2 é múltiplo de 6 e de 8 ao mesmo tempo, ou seja, múltiplo do MMC(6, 8) = <b>24</b>: 24, 48, 72, 96..."
+        },
+        {
+         "no": 3,
+         "texto": "Devolva o 2: N pode ser 26, 50, <b>74</b>, 98... O único entre 60 e 90 é <b>74</b>. Confira: 74 ÷ 6 = 12, sobra 2; 74 ÷ 8 = 9, sobra 2. A armadilha é marcar 72 (esqueceu de devolver o 2)."
+        }
+       ]
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "1/4 + 2/3 = 3/7.",
+         "v": false,
+         "porque": "Não se somam os denominadores. MMC 12: 3/12 + 8/12 = 11/12. Conferência rápida: 3/7 é menor que 2/3 sozinho."
+        },
+        {
+         "texto": "Dividir por 1/2 é o mesmo que multiplicar por 2.",
+         "v": true,
+         "porque": "Mantém a primeira, inverte a segunda: x ÷ 1/2 = x × 2. Em 3 inteiros cabem 6 metades."
+        },
+        {
+         "texto": "Se ela leu 1/4 e depois 2/3 do restante, leu ao todo 1/4 + 2/3 do livro.",
+         "v": false,
+         "porque": "Os 2/3 são do restante (3/4), ou seja, 2/3 × 3/4 = 1/2 do livro. Ao todo: 1/4 + 1/2 = 3/4."
+        },
+        {
+         "texto": "O MMC de 4 e 6 é 24.",
+         "v": false,
+         "porque": "24 é um múltiplo comum, mas não o mínimo. O menor é 12. Multiplicar os números só dá o MMC quando eles não têm divisor comum (ex.: 4 e 9)."
+        },
+        {
+         "texto": "Repartir em grupos iguais do maior tamanho possível é problema de MDC.",
+         "v": true,
+         "porque": "O tamanho do grupo tem de dividir todos os números (divisor comum) e ser o maior (máximo)."
+        },
+        {
+         "texto": "−3² = 9.",
+         "v": false,
+         "porque": "Sem parênteses o expoente pega só o 3: −(3 × 3) = −9. (−3)² = 9."
+        },
+        {
+         "texto": "2⁻² = −4.",
+         "v": false,
+         "porque": "Expoente negativo inverte: 2⁻² = 1/2² = 1/4."
+        },
+        {
+         "texto": "5/8 é maior que 3/5.",
+         "v": true,
+         "porque": "5 ÷ 8 = 0,625 e 3 ÷ 5 = 0,6."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Roteiro para qualquer questão de fração",
+       "html": "1) Sublinhe a pergunta (o que lê, o que falta, o total?). 2) Desenhe a barra. 3) Cada \"do restante\" é uma barra nova. 4) Ache quanto vale 1 pedaço. 5) Confira voltando ao enunciado. Agora é com você: as questões desta aula estão logo abaixo, com a explicação de cada alternativa."
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "rl-fr-01",
+    "rl-fr-02",
+    "rl-fr-03",
+    "rl-fr-04",
+    "rl-fr-05",
+    "rl-fr-06",
+    "rl-fr-07",
+    "rl-fr-08",
+    "rl-fr-09",
+    "rl-fr-10",
+    "rl-fr-11",
+    "rl-fr-12"
+   ]
   },
   {
    "id": "A2-a06",
-   "topico_id": "A2-06",
+   "topico_id": "A2-05",
    "numero": 6,
-   "titulo": "Análise combinatória",
-   "status": "a_montar"
+   "titulo": "Razão, proporção, divisão proporcional e regra de três",
+   "status": "pronta",
+   "fonte": "Ceisc: Prof. Dudan, aulas 3 (razão e proporção) e 4 (regra de três), TAQ FCC; composta e inversamente proporcional pela aritmética básica",
+   "resumo": [
+    "Razão é comparação por divisão: \"para cada 3, 5\" vira blocos. Some os blocos, ache quanto vale 1 bloco e multiplique.",
+    "Proporção é igualdade de razões (a/b = c/d). Propriedade fundamental: produto dos meios = produto dos extremos (a · d = b · c). É daí que vem o cruz-credo.",
+    "Divisão diretamente proporcional: some os números, divida o total, multiplique. Inversamente: divida proporcionalmente aos inversos (quem tem mais recebe menos).",
+    "Regra de três: uma coluna por grandeza. Mesmo sentido (sobe, sobe) = direta, multiplica em cruz. Sentidos opostos = inversa, multiplica lado a lado.",
+    "Composta: compare a coluna do x com cada grandeza, uma de cada vez; vire as inversas; multiplique tudo.",
+    "Trabalho junto: some o que cada um faz em 1 hora (1/a + 1/b), nunca os tempos."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: razão é \"para cada\"",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Razão é só uma comparação por divisão. Quando a questão diz <b>para cada 3 deferidos há 5 indeferidos</b>, ela está dando a razão 3/5 (lê-se \"3 para 5\"). Ela <b>não</b> diz que há 3 deferidos: diz que eles vêm em <b>blocos</b> de 3 contra 5. O desenho mostra o caminho que serve para quase toda questão de razão."
+      },
+      {
+       "t": "cena",
+       "titulo": "Para cada 3, 5: transformar a razão em partes",
+       "altura": 250,
+       "elementos": [
+        {
+         "id": "rd",
+         "tipo": "rotulo",
+         "x": 60,
+         "y": 35,
+         "texto": "Deferidos",
+         "cor": "ok",
+         "fixo": true
+        },
+        {
+         "id": "ri",
+         "tipo": "rotulo",
+         "x": 60,
+         "y": 105,
+         "texto": "Indeferidos",
+         "cor": "bad",
+         "fixo": true
+        },
+        {
+         "id": "d0",
+         "tipo": "caixa",
+         "x": 130,
+         "y": 12,
+         "w": 72,
+         "h": 44,
+         "texto": "1 parte",
+         "cor": "ok",
+         "fixo": true
+        },
+        {
+         "id": "d1",
+         "tipo": "caixa",
+         "x": 210,
+         "y": 12,
+         "w": 72,
+         "h": 44,
+         "texto": "1 parte",
+         "cor": "ok",
+         "fixo": true
+        },
+        {
+         "id": "d2",
+         "tipo": "caixa",
+         "x": 290,
+         "y": 12,
+         "w": 72,
+         "h": 44,
+         "texto": "1 parte",
+         "cor": "ok",
+         "fixo": true
+        },
+        {
+         "id": "i0",
+         "tipo": "caixa",
+         "x": 130,
+         "y": 82,
+         "w": 72,
+         "h": 44,
+         "texto": "1 parte",
+         "cor": "bad",
+         "fixo": true
+        },
+        {
+         "id": "i1",
+         "tipo": "caixa",
+         "x": 210,
+         "y": 82,
+         "w": 72,
+         "h": 44,
+         "texto": "1 parte",
+         "cor": "bad",
+         "fixo": true
+        },
+        {
+         "id": "i2",
+         "tipo": "caixa",
+         "x": 290,
+         "y": 82,
+         "w": 72,
+         "h": 44,
+         "texto": "1 parte",
+         "cor": "bad",
+         "fixo": true
+        },
+        {
+         "id": "i3",
+         "tipo": "caixa",
+         "x": 370,
+         "y": 82,
+         "w": 72,
+         "h": 44,
+         "texto": "1 parte",
+         "cor": "bad",
+         "fixo": true
+        },
+        {
+         "id": "i4",
+         "tipo": "caixa",
+         "x": 450,
+         "y": 82,
+         "w": 72,
+         "h": 44,
+         "texto": "1 parte",
+         "cor": "bad",
+         "fixo": true
+        },
+        {
+         "id": "tot",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 160,
+         "texto": "3 + 5 = 8 partes = 64 pedidos",
+         "cor": "warn"
+        },
+        {
+         "id": "cada",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 190,
+         "texto": "1 parte = 64 ÷ 8 = 8 pedidos",
+         "cor": "accent"
+        },
+        {
+         "id": "res",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 225,
+         "texto": "deferidos 3 × 8 = 24; indeferidos 5 × 8 = 40",
+         "cor": "ok"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Razão é comparação por divisão: <b>para cada 3</b> pedidos deferidos, <b>5</b> são indeferidos. Desenhe isso como blocos do mesmo tamanho: 3 blocos de um lado, 5 do outro."
+        },
+        {
+         "texto": "Some os blocos: <b>3 + 5 = 8 partes</b>. Por que somar? Porque os 64 pedidos são o total, e o total é feito de todas as partes juntas.",
+         "mostra": [
+          "tot"
+         ],
+         "anima": {
+          "tot": "pulsa"
+         }
+        },
+        {
+         "texto": "Se 8 partes valem 64, <b>1 parte</b> vale 64 ÷ 8 = <b>8 pedidos</b>. Esse é o passo que destrava tudo: achar quanto vale um bloco.",
+         "mostra": [
+          "tot",
+          "cada"
+         ],
+         "anima": {
+          "cada": "bate"
+         }
+        },
+        {
+         "texto": "Agora é só multiplicar: deferidos = 3 blocos × 8 = <b>24</b>; indeferidos = 5 × 8 = <b>40</b>. Confira: 24 + 40 = 64.",
+         "mostra": [
+          "tot",
+          "cada",
+          "res"
+         ],
+         "anima": {
+          "res": "pulsa"
+         }
+        }
+       ]
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Nome",
+         "titulo": "Razão",
+         "texto": "a/b, comparação de duas grandezas por divisão. Escala de mapa (1 : 100.000) e velocidade (km por hora) são razões."
+        },
+        {
+         "tag": "Nome",
+         "titulo": "Proporção",
+         "texto": "Igualdade de duas razões: 2/3 = 8/12. Os de fora (2 e 12) são os extremos; os de dentro (3 e 8), os meios."
+        },
+        {
+         "tag": "Regra",
+         "titulo": "Propriedade fundamental",
+         "texto": "Produto dos meios = produto dos extremos: 3 × 8 = 2 × 12 = 24. É por isso que a regra de três multiplica em cruz."
+        },
+        {
+         "tag": "Regra",
+         "titulo": "Soma das partes",
+         "texto": "Se a/b = 3/5, então a parte de a no total é 3/(3 + 5) = 3/8. Útil quando a questão dá o total."
+        },
+        {
+         "tag": "Regra",
+         "titulo": "Diferença das partes",
+         "texto": "Se a questão dá a diferença (há 16 a mais de um lado), a diferença dos blocos (5 − 3 = 2) vale 16: 1 bloco = 8."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: divisão em partes proporcionais",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Somar",
+         "sub": "as proporções"
+        },
+        {
+         "titulo": "1 parte",
+         "sub": "total ÷ soma"
+        },
+        {
+         "titulo": "Multiplicar",
+         "sub": "cada um"
+        },
+        {
+         "titulo": "Conferir",
+         "sub": "soma = total"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Diretamente proporcional.</b> Um prêmio de R$ 1.800 será dividido entre três servidores em partes diretamente proporcionais aos anos de casa: 2, 3 e 4. Some as proporções: 2 + 3 + 4 = <b>9 partes</b>."
+        },
+        {
+         "no": 1,
+         "texto": "1 parte = 1.800 ÷ 9 = <b>200</b>. Por que dividir? Porque as 9 partes juntas formam o prêmio inteiro."
+        },
+        {
+         "no": 2,
+         "texto": "Cada um recebe suas partes: 2 × 200 = <b>400</b>; 3 × 200 = <b>600</b>; 4 × 200 = <b>800</b>. Quem tem mais anos recebe mais: é isso que \"diretamente\" quer dizer."
+        },
+        {
+         "no": 3,
+         "texto": "Conferência: 400 + 600 + 800 = 1.800. Se a soma não bater com o total, alguma conta está errada."
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Inverter",
+         "sub": "1/a, 1/b"
+        },
+        {
+         "titulo": "MMC",
+         "sub": "tirar a fração"
+        },
+        {
+         "titulo": "Novas partes",
+         "sub": "números inteiros"
+        },
+        {
+         "titulo": "Dividir",
+         "sub": "como na direta"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Inversamente proporcional.</b> Um bônus de R$ 2.200 será dividido entre dois servidores em partes inversamente proporcionais às faltas: 2 e 9. \"Inversamente\" = quem faltou <b>mais</b> recebe <b>menos</b>. Para isso, use os <b>inversos</b>: 1/2 e 1/9."
+        },
+        {
+         "no": 1,
+         "texto": "Frações atrapalham a conta. Multiplique as duas pelo MMC de 2 e 9, que é 18: 1/2 × 18 = <b>9</b>; 1/9 × 18 = <b>2</b>. Por que pode? Multiplicar todas as partes pelo mesmo número não muda a proporção entre elas."
+        },
+        {
+         "no": 2,
+         "texto": "Repare: os números trocaram de lugar. Quem tinha 2 faltas ficou com <b>9 partes</b>; quem tinha 9, com <b>2</b>. Com dois números, é sempre assim: basta trocar."
+        },
+        {
+         "no": 3,
+         "texto": "Agora é a divisão direta: 9 + 2 = 11 partes; 2.200 ÷ 11 = 200. Quem faltou 2 vezes: 9 × 200 = <b>R$ 1.800</b>; quem faltou 9: 2 × 200 = <b>R$ 400</b>."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: regra de três simples e composta",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Grandezas <b>diretamente proporcionais</b>: dobrou uma, a outra dobra (mais dias, mais questões). <b>Inversamente proporcionais</b>: dobrou uma, a outra cai pela metade (mais velocidade, menos tempo; mais servidores, menos dias). Saber qual é qual é <b>metade da questão</b>. O desenho mostra os dois métodos do Dudan."
+      },
+      {
+       "t": "cena",
+       "titulo": "Regra de três: cruz-credo (direta) e lá-lá (inversa)",
+       "altura": 270,
+       "elementos": [
+        {
+         "id": "tD",
+         "tipo": "rotulo",
+         "x": 170,
+         "y": 18,
+         "texto": "DIRETA",
+         "cor": "ok",
+         "fixo": true
+        },
+        {
+         "id": "hD1",
+         "tipo": "rotulo",
+         "x": 90,
+         "y": 50,
+         "texto": "Dias",
+         "fixo": true
+        },
+        {
+         "id": "hD2",
+         "tipo": "rotulo",
+         "x": 250,
+         "y": 50,
+         "texto": "Questões",
+         "fixo": true
+        },
+        {
+         "id": "a1",
+         "tipo": "caixa",
+         "x": 50,
+         "y": 65,
+         "w": 80,
+         "h": 40,
+         "texto": "3",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "a2",
+         "tipo": "caixa",
+         "x": 210,
+         "y": 65,
+         "w": 80,
+         "h": 40,
+         "texto": "11",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "a3",
+         "tipo": "caixa",
+         "x": 50,
+         "y": 135,
+         "w": 80,
+         "h": 40,
+         "texto": "18",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "a4",
+         "tipo": "caixa",
+         "x": 210,
+         "y": 135,
+         "w": 80,
+         "h": 40,
+         "texto": "x",
+         "cor": "accent",
+         "fixo": true
+        },
+        {
+         "id": "sD1",
+         "tipo": "seta",
+         "x": 20,
+         "y": 65,
+         "w": 20,
+         "h": 175,
+         "cor": "ok"
+        },
+        {
+         "id": "sD2",
+         "tipo": "seta",
+         "x": 310,
+         "y": 65,
+         "w": 310,
+         "h": 175,
+         "cor": "ok"
+        },
+        {
+         "id": "xD1",
+         "tipo": "seta",
+         "x": 130,
+         "y": 85,
+         "w": 210,
+         "h": 155,
+         "cor": "warn"
+        },
+        {
+         "id": "xD2",
+         "tipo": "seta",
+         "x": 130,
+         "y": 155,
+         "w": 210,
+         "h": 85,
+         "cor": "warn"
+        },
+        {
+         "id": "eD",
+         "tipo": "rotulo",
+         "x": 170,
+         "y": 215,
+         "texto": "3 · x = 11 · 18  →  x = 66",
+         "cor": "ok"
+        },
+        {
+         "id": "tI",
+         "tipo": "rotulo",
+         "x": 510,
+         "y": 18,
+         "texto": "INVERSA",
+         "cor": "bad",
+         "fixo": true
+        },
+        {
+         "id": "hI1",
+         "tipo": "rotulo",
+         "x": 430,
+         "y": 50,
+         "texto": "km/h",
+         "fixo": true
+        },
+        {
+         "id": "hI2",
+         "tipo": "rotulo",
+         "x": 590,
+         "y": 50,
+         "texto": "Horas",
+         "fixo": true
+        },
+        {
+         "id": "b1",
+         "tipo": "caixa",
+         "x": 390,
+         "y": 65,
+         "w": 80,
+         "h": 40,
+         "texto": "60",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "b2",
+         "tipo": "caixa",
+         "x": 550,
+         "y": 65,
+         "w": 80,
+         "h": 40,
+         "texto": "3",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "b3",
+         "tipo": "caixa",
+         "x": 390,
+         "y": 135,
+         "w": 80,
+         "h": 40,
+         "texto": "90",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "b4",
+         "tipo": "caixa",
+         "x": 550,
+         "y": 135,
+         "w": 80,
+         "h": 40,
+         "texto": "x",
+         "cor": "accent",
+         "fixo": true
+        },
+        {
+         "id": "sI1",
+         "tipo": "seta",
+         "x": 375,
+         "y": 65,
+         "w": 375,
+         "h": 175,
+         "cor": "ok"
+        },
+        {
+         "id": "sI2",
+         "tipo": "seta",
+         "x": 650,
+         "y": 175,
+         "w": 650,
+         "h": 65,
+         "cor": "bad"
+        },
+        {
+         "id": "lI1",
+         "tipo": "seta",
+         "x": 470,
+         "y": 85,
+         "w": 550,
+         "h": 85,
+         "cor": "warn"
+        },
+        {
+         "id": "lI2",
+         "tipo": "seta",
+         "x": 470,
+         "y": 155,
+         "w": 550,
+         "h": 155,
+         "cor": "warn"
+        },
+        {
+         "id": "eI",
+         "tipo": "rotulo",
+         "x": 510,
+         "y": 215,
+         "texto": "90 · x = 60 · 3  →  x = 2",
+         "cor": "ok"
+        },
+        {
+         "id": "dica",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 255,
+         "texto": "setas iguais: cruz-credo.  setas opostas: lá-lá.",
+         "cor": "accent"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Toda regra de três começa igual: <b>uma coluna para cada grandeza</b>, e a mesma unidade na mesma coluna. À esquerda, dias e questões resolvidas. À direita, velocidade e horas de viagem."
+        },
+        {
+         "texto": "A pergunta que decide tudo: <b>se uma aumenta, a outra aumenta ou diminui?</b> Mais dias de estudo, mais questões: as duas sobem. Setas no <b>mesmo sentido</b> = <b>direta</b>.",
+         "mostra": [
+          "sD1",
+          "sD2"
+         ],
+         "anima": {
+          "sD1": "pulsa",
+          "sD2": "pulsa"
+         }
+        },
+        {
+         "texto": "Na direta, multiplique <b>em cruz</b> (cruz-credo, como o Dudan ensina): 3 · x = 11 · 18. Então 3x = 198 e x = 198 ÷ 3 = <b>66 questões</b>.",
+         "mostra": [
+          "sD1",
+          "sD2",
+          "xD1",
+          "xD2",
+          "eD"
+         ],
+         "anima": {
+          "eD": "pulsa"
+         }
+        },
+        {
+         "texto": "À direita: mais velocidade, <b>menos</b> horas. Uma sobe, a outra desce. Setas em <b>sentidos opostos</b> = <b>inversa</b>.",
+         "mostra": [
+          "sD1",
+          "sD2",
+          "xD1",
+          "xD2",
+          "eD",
+          "sI1",
+          "sI2"
+         ],
+         "anima": {
+          "sI2": "treme"
+         }
+        },
+        {
+         "texto": "Na inversa, multiplique <b>lado a lado</b> (lá-lá): 90 · x = 60 · 3. Então 90x = 180 e x = <b>2 horas</b>. Faz sentido? Foi mais rápido, chegou antes. Sempre faça essa conferência.",
+         "mostra": [
+          "sD1",
+          "sD2",
+          "xD1",
+          "xD2",
+          "eD",
+          "sI1",
+          "sI2",
+          "lI1",
+          "lI2",
+          "eI",
+          "dica"
+         ],
+         "anima": {
+          "eI": "pulsa"
+         }
+        }
+       ]
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Direta",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Páginas × tempo",
+           "sub": "mais páginas, mais tempo"
+          },
+          {
+           "titulo": "Galões × área",
+           "sub": "mais parede, mais tinta"
+          }
+         ],
+         "texto": "As duas andam juntas. <b>Cruz-credo</b>: multiplique em X."
+        },
+        {
+         "rotulo": "Inversa",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Servidores × dias",
+           "sub": "mais gente, menos dias"
+          },
+          {
+           "titulo": "Velocidade × tempo",
+           "sub": "mais rápido, chega antes"
+          }
+         ],
+         "texto": "Uma sobe, a outra desce. <b>Lá-lá</b>: multiplique lado a lado."
+        },
+        {
+         "rotulo": "Nem uma nem outra",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Idade × altura",
+           "sub": "cresce, mas não na mesma razão"
+          },
+          {
+           "titulo": "Lado × área do quadrado",
+           "sub": "dobra o lado, área quadruplica"
+          }
+         ],
+         "texto": "Nem tudo que cresce junto é proporcional. Regra de três só vale se, dobrando uma, a outra <b>dobra</b> (ou cai pela metade). Nas questões de concurso, o enunciado avisa: \"mantido o mesmo ritmo\"."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Com três ou mais grandezas, é a <b>regra de três composta</b>. O segredo é nunca comparar tudo de uma vez: compare a coluna do x com <b>uma grandeza de cada vez</b>."
+      },
+      {
+       "t": "cena",
+       "titulo": "Regra de três composta: uma grandeza de cada vez",
+       "altura": 270,
+       "elementos": [
+        {
+         "id": "h1",
+         "tipo": "rotulo",
+         "x": 140,
+         "y": 25,
+         "texto": "Servidores",
+         "fixo": true
+        },
+        {
+         "id": "h2",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 25,
+         "texto": "Processos",
+         "fixo": true
+        },
+        {
+         "id": "h3",
+         "tipo": "rotulo",
+         "x": 540,
+         "y": 25,
+         "texto": "Dias",
+         "fixo": true
+        },
+        {
+         "id": "v1",
+         "tipo": "caixa",
+         "x": 100,
+         "y": 40,
+         "w": 80,
+         "h": 40,
+         "texto": "6",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "v2",
+         "tipo": "caixa",
+         "x": 300,
+         "y": 40,
+         "w": 80,
+         "h": 40,
+         "texto": "120",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "v3",
+         "tipo": "caixa",
+         "x": 500,
+         "y": 40,
+         "w": 80,
+         "h": 40,
+         "texto": "4",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "w1",
+         "tipo": "caixa",
+         "x": 100,
+         "y": 105,
+         "w": 80,
+         "h": 40,
+         "texto": "8",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "w2",
+         "tipo": "caixa",
+         "x": 300,
+         "y": 105,
+         "w": 80,
+         "h": 40,
+         "texto": "200",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "w3",
+         "tipo": "caixa",
+         "x": 500,
+         "y": 105,
+         "w": 80,
+         "h": 40,
+         "texto": "x",
+         "cor": "accent",
+         "fixo": true
+        },
+        {
+         "id": "sx",
+         "tipo": "seta",
+         "x": 600,
+         "y": 40,
+         "w": 600,
+         "h": 145,
+         "cor": "accent"
+        },
+        {
+         "id": "s1",
+         "tipo": "seta",
+         "x": 85,
+         "y": 145,
+         "w": 85,
+         "h": 40,
+         "cor": "bad"
+        },
+        {
+         "id": "s2",
+         "tipo": "seta",
+         "x": 285,
+         "y": 40,
+         "w": 285,
+         "h": 145,
+         "cor": "ok"
+        },
+        {
+         "id": "q1",
+         "tipo": "rotulo",
+         "x": 140,
+         "y": 175,
+         "texto": "mais servidores, menos dias: INVERSA",
+         "cor": "bad"
+        },
+        {
+         "id": "q2",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 200,
+         "texto": "mais processos, mais dias: DIRETA",
+         "cor": "ok"
+        },
+        {
+         "id": "inv",
+         "tipo": "rotulo",
+         "x": 110,
+         "y": 200,
+         "texto": "vira: 6/8 → 8/6",
+         "cor": "warn"
+        },
+        {
+         "id": "eq",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 240,
+         "texto": "4/x = (8/6) · (120/200) = 960/1200  →  x = 5 dias",
+         "cor": "ok"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "6 servidores analisam 120 processos em 4 dias. Em quantos dias <b>8 servidores</b> analisam <b>200 processos</b>? Três grandezas: três colunas."
+        },
+        {
+         "texto": "Passo 1: marque a coluna do <b>x</b> (dias). É com ela que você compara todas as outras, <b>uma de cada vez</b>, fingindo que o resto não mudou.",
+         "mostra": [
+          "sx"
+         ],
+         "anima": {
+          "sx": "pulsa"
+         }
+        },
+        {
+         "texto": "Passo 2: servidores × dias. Com <b>mais</b> servidores, o trabalho acaba em <b>menos</b> dias. Sentidos opostos: <b>inversa</b>.",
+         "mostra": [
+          "sx",
+          "s1",
+          "q1"
+         ],
+         "anima": {
+          "s1": "treme"
+         }
+        },
+        {
+         "texto": "Passo 3: processos × dias. Com <b>mais</b> processos, precisa de <b>mais</b> dias. Mesmo sentido: <b>direta</b>.",
+         "mostra": [
+          "sx",
+          "s1",
+          "q1",
+          "s2",
+          "q2"
+         ],
+         "anima": {
+          "s2": "pulsa"
+         }
+        },
+        {
+         "texto": "Passo 4: escreva as razões como estão na tabela, de cima para baixo: dias <b>4/x</b>, servidores <b>6/8</b>, processos <b>120/200</b>. A inversa é <b>virada de cabeça para baixo</b>: 6/8 vira <b>8/6</b>. A direta fica como está.",
+         "mostra": [
+          "sx",
+          "s1",
+          "q1",
+          "s2",
+          "q2",
+          "inv"
+         ],
+         "anima": {
+          "inv": "bate"
+         }
+        },
+        {
+         "texto": "Passo 5: a razão do x é igual ao produto das outras: 4/x = 8/6 × 120/200 = 960/1.200. Cruz-credo: 960 · x = 4 × 1.200 = 4.800, então x = 4.800 ÷ 960 = <b>5 dias</b>. Confere? Mais gente (encurta) e mais processos (alonga): 5 dias, um pouco mais que 4. Faz sentido.",
+         "mostra": [
+          "sx",
+          "s1",
+          "q1",
+          "s2",
+          "q2",
+          "inv",
+          "eq"
+         ],
+         "anima": {
+          "eq": "pulsa"
+         }
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Outro caminho para a composta: a \"unidade de trabalho\"",
+       "html": "6 servidores em 4 dias fazem 6 × 4 = 24 \"servidor-dias\" para 120 processos: cada servidor-dia rende 120 ÷ 24 = <b>5 processos</b>. 200 processos precisam de 200 ÷ 5 = 40 servidor-dias; com 8 servidores, 40 ÷ 8 = <b>5 dias</b>. Mesmo resultado. Use o caminho que parecer mais natural para você."
+      },
+      {
+       "t": "texto",
+       "html": "Por fim, um tipo que a FCC adora: duas pessoas (ou equipes, ou torneiras) trabalhando juntas."
+      },
+      {
+       "t": "cena",
+       "titulo": "Trabalho junto: some o que cada um faz em 1 hora",
+       "altura": 230,
+       "elementos": [
+        {
+         "id": "ta",
+         "tipo": "rotulo",
+         "x": 110,
+         "y": 22,
+         "texto": "Analista A: lote em 3 h",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "tb",
+         "tipo": "rotulo",
+         "x": 110,
+         "y": 102,
+         "texto": "Analista B: lote em 6 h",
+         "cor": "warn",
+         "fixo": true
+        },
+        {
+         "id": "la",
+         "tipo": "caixa",
+         "x": 230,
+         "y": 5,
+         "w": 420,
+         "h": 36,
+         "texto": "",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "pa",
+         "tipo": "caixa",
+         "x": 230,
+         "y": 5,
+         "w": 140,
+         "h": 36,
+         "texto": "1/3 por hora",
+         "cor": "blue"
+        },
+        {
+         "id": "lb",
+         "tipo": "caixa",
+         "x": 230,
+         "y": 85,
+         "w": 420,
+         "h": 36,
+         "texto": "",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "pb",
+         "tipo": "caixa",
+         "x": 230,
+         "y": 85,
+         "w": 70,
+         "h": 36,
+         "texto": "1/6",
+         "cor": "warn"
+        },
+        {
+         "id": "lj",
+         "tipo": "caixa",
+         "x": 230,
+         "y": 150,
+         "w": 420,
+         "h": 36,
+         "texto": "",
+         "cor": "dim"
+        },
+        {
+         "id": "pj1",
+         "tipo": "caixa",
+         "x": 230,
+         "y": 150,
+         "w": 140,
+         "h": 36,
+         "texto": "2/6",
+         "cor": "blue"
+        },
+        {
+         "id": "pj2",
+         "tipo": "caixa",
+         "x": 370,
+         "y": 150,
+         "w": 70,
+         "h": 36,
+         "texto": "1/6",
+         "cor": "warn"
+        },
+        {
+         "id": "res",
+         "tipo": "rotulo",
+         "x": 440,
+         "y": 212,
+         "texto": "juntas: 3/6 = 1/2 do lote por hora → 2 horas",
+         "cor": "ok"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Não some os tempos (3 + 6 = 9 h é absurdo: juntas, elas terminariam <b>depois</b> da mais rápida sozinha). Some o que cada uma faz <b>em 1 hora</b>."
+        },
+        {
+         "texto": "A termina em 3 h: em 1 hora faz <b>1/3</b> do lote.",
+         "mostra": [
+          "pa"
+         ],
+         "anima": {
+          "pa": "pulsa"
+         }
+        },
+        {
+         "texto": "B termina em 6 h: em 1 hora faz <b>1/6</b>.",
+         "mostra": [
+          "pa",
+          "pb"
+         ],
+         "anima": {
+          "pb": "pulsa"
+         }
+        },
+        {
+         "texto": "Juntas, em 1 hora: 1/3 + 1/6. Mesmo denominador: 2/6 + 1/6 = <b>3/6 = 1/2</b> do lote por hora.",
+         "mostra": [
+          "pa",
+          "pb",
+          "lj",
+          "pj1",
+          "pj2"
+         ],
+         "anima": {
+          "pj1": "cai",
+          "pj2": "cai"
+         }
+        },
+        {
+         "texto": "Se fazem metade por hora, o lote inteiro sai em <b>2 horas</b>. Atalho para duas pessoas: (3 × 6) ÷ (3 + 6) = 18 ÷ 9 = 2.",
+         "mostra": [
+          "pa",
+          "pb",
+          "lj",
+          "pj1",
+          "pj2",
+          "res"
+         ],
+         "anima": {
+          "res": "bate"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra: exercícios resolvidos e pegadinhas",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Diferença",
+         "sub": "dos blocos"
+        },
+        {
+         "titulo": "1 bloco",
+         "sub": "divide"
+        },
+        {
+         "titulo": "Cada lado",
+         "sub": "multiplica"
+        },
+        {
+         "titulo": "Pergunta",
+         "sub": "total?"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Exercício 1 (razão com diferença).</b> Num gabinete, para cada 5 processos de Tributário há 3 de Civil, e há 16 processos de Tributário a mais que de Civil. Quantos processos há ao todo? Blocos: Tributário 5, Civil 3. A diferença entre eles é <b>5 − 3 = 2 blocos</b>."
+        },
+        {
+         "no": 1,
+         "texto": "Esses 2 blocos de diferença valem os 16 processos a mais. Então 1 bloco = 16 ÷ 2 = <b>8</b>."
+        },
+        {
+         "no": 2,
+         "texto": "Tributário: 5 × 8 = <b>40</b>. Civil: 3 × 8 = <b>24</b>. Confira: 40 − 24 = 16."
+        },
+        {
+         "no": 3,
+         "texto": "A pergunta é o <b>total</b>: 40 + 24 = <b>64</b>. Quem para no 40 respondeu só o Tributário."
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Montar",
+         "sub": "colunas"
+        },
+        {
+         "titulo": "Sentido",
+         "sub": "direta ou inversa?"
+        },
+        {
+         "titulo": "Conta",
+         "sub": "lá-lá"
+        },
+        {
+         "titulo": "Conferir",
+         "sub": "faz sentido?"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Exercício 2 (inversa disfarçada).</b> 12 estagiários organizam o arquivo em 10 dias. Se 4 estagiários saírem antes do início, em quantos dias os restantes organizam o mesmo arquivo? Atenção: quem trabalha são <b>12 − 4 = 8</b>, não 4."
+        },
+        {
+         "no": 1,
+         "texto": "Colunas: estagiários e dias. Linha 1: 12 e 10. Linha 2: 8 e x. Menos estagiários, <b>mais</b> dias: sentidos opostos, <b>inversa</b>."
+        },
+        {
+         "no": 2,
+         "texto": "Lá-lá (lado a lado): 8 · x = 12 · 10. 8x = 120; x = 120 ÷ 8 = <b>15 dias</b>."
+        },
+        {
+         "no": 3,
+         "texto": "Faz sentido? Menos gente, mais demora: 15 é mais que 10. Se tivesse dado menos de 10, a montagem estaria errada (foi feita como direta)."
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Taxa",
+         "sub": "por servidor-hora"
+        },
+        {
+         "titulo": "Nova situação",
+         "sub": "o que muda"
+        },
+        {
+         "titulo": "Dividir",
+         "sub": "páginas ÷ ritmo"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Exercício 3 (composta, nível FCC).</b> 5 servidores, trabalhando 6 horas por dia, digitalizam 900 páginas em 3 dias. Em quantos dias 4 servidores, trabalhando 5 horas por dia, digitalizam 1.200 páginas? Primeiro, quanto rende <b>1 servidor em 1 hora</b>: total de servidor-horas = 5 × 6 × 3 = 90; 900 ÷ 90 = <b>10 páginas</b>."
+        },
+        {
+         "no": 1,
+         "texto": "Na nova situação, por dia trabalham 4 servidores × 5 horas = <b>20 servidor-horas</b>, que rendem 20 × 10 = <b>200 páginas por dia</b>."
+        },
+        {
+         "no": 2,
+         "texto": "1.200 ÷ 200 = <b>6 dias</b>. Pelo método das setas: x = 3 × (5/4) × (6/5) × (1.200/900) = 6. Servidores e horas são inversas (viram); páginas é direta."
+        }
+       ]
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "Se a razão entre A e B é 2/3, então A = 2 e B = 3.",
+         "v": false,
+         "porque": "A razão diz só a proporção dos blocos. A pode ser 12 e B 18 (blocos de 6)."
+        },
+        {
+         "texto": "Velocidade e tempo de viagem (mesmo trajeto) são inversamente proporcionais.",
+         "v": true,
+         "porque": "Dobrou a velocidade, o tempo cai pela metade."
+        },
+        {
+         "texto": "Na divisão inversamente proporcional a 2 e 9, quem tem 2 recebe menos.",
+         "v": false,
+         "porque": "Inversamente: quem tem o número menor recebe mais. As partes viram 9 e 2."
+        },
+        {
+         "texto": "Se uma equipe faz o serviço em 4 dias e outra em 6, juntas fazem em 10 dias.",
+         "v": false,
+         "porque": "Somar tempos é absurdo (demoraria mais que cada uma sozinha). 1/4 + 1/6 = 5/12 por dia: 12/5 = 2,4 dias."
+        },
+        {
+         "texto": "Na regra de três composta, cada grandeza é comparada com a coluna do x, uma de cada vez.",
+         "v": true,
+         "porque": "Fingindo que as outras ficaram paradas. Depois as inversas são viradas."
+        },
+        {
+         "texto": "Em 2/3 = 8/12, o produto dos meios é igual ao produto dos extremos.",
+         "v": true,
+         "porque": "3 × 8 = 24 e 2 × 12 = 24."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Roteiro para qualquer questão de proporção",
+       "html": "1) Uma coluna por grandeza, mesma unidade na mesma coluna. 2) Pergunte: se uma aumenta, a outra aumenta ou diminui? 3) Direta: cruz. Inversa: lado a lado. 4) Confira se a resposta faz sentido (mais gente, menos dias). Abaixo estão 9 questões reais da FCC e 6 autorais, todas com a conta explicada."
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "rl-012",
+    "rl-013",
+    "rl-rp-r01",
+    "rl-rp-r02",
+    "rl-rp-r03",
+    "rl-rp-r04",
+    "rl-rp-r05",
+    "rl-rp-r06",
+    "rl-rp-r07",
+    "rl-rp-r08",
+    "rl-rp-r09",
+    "rl-rp-01",
+    "rl-rp-02",
+    "rl-rp-03",
+    "rl-rp-04",
+    "rl-rp-05",
+    "rl-rp-06"
+   ]
   },
   {
    "id": "A2-a07",
-   "topico_id": "A2-07",
+   "topico_id": "A2-05",
    "numero": 7,
-   "titulo": "Probabilidade",
+   "titulo": "Porcentagem, aumentos e descontos",
    "status": "a_montar"
   },
   {
    "id": "A2-a08",
-   "topico_id": "A2-08",
+   "topico_id": "A2-06",
    "numero": 8,
+   "titulo": "Análise combinatória",
+   "status": "a_montar"
+  },
+  {
+   "id": "A2-a09",
+   "topico_id": "A2-07",
+   "numero": 9,
+   "titulo": "Probabilidade",
+   "status": "a_montar"
+  },
+  {
+   "id": "A2-a10",
+   "topico_id": "A2-08",
+   "numero": 10,
    "titulo": "Estatística básica (tendência central e dispersão)",
    "status": "a_montar"
   }
@@ -1154,6 +3761,42 @@
   [
    "Silogismo",
    "Argumento com duas premissas e uma conclusão."
+  ],
+  [
+   "Numerador",
+   "Número de cima da fração: quantos pedaços foram pegos."
+  ],
+  [
+   "Denominador",
+   "Número de baixo da fração: em quantos pedaços iguais o inteiro foi cortado."
+  ],
+  [
+   "Fração irredutível",
+   "Fração que não pode mais ser simplificada (em cima e embaixo só têm o 1 como divisor comum)."
+  ],
+  [
+   "MMC",
+   "Mínimo múltiplo comum: o menor número que é múltiplo de todos os dados. Responde \"quando acontece junto de novo\"."
+  ],
+  [
+   "MDC",
+   "Máximo divisor comum: o maior número que divide todos os dados. Responde \"grupos iguais do maior tamanho\"."
+  ],
+  [
+   "Razão",
+   "Comparação de duas grandezas por divisão (a/b)."
+  ],
+  [
+   "Proporção",
+   "Igualdade entre duas razões (a/b = c/d)."
+  ],
+  [
+   "Grandezas diretamente proporcionais",
+   "Quando uma dobra, a outra dobra."
+  ],
+  [
+   "Grandezas inversamente proporcionais",
+   "Quando uma dobra, a outra cai pela metade."
   ]
  ]
 }
