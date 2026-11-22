@@ -303,6 +303,10 @@ export interface ErroCaderno {
   notas: string[];
   subtema: string | null;
   pegadinhas: Pegadinha[];
+  /** motivos que ela marcou nas falhas, sem repetir, do mais recente ao mais antigo */
+  motivos: Classificacao[];
+  /** texto da alternativa correta */
+  certa: string;
 }
 /**
  * Caderno de erros de uma matéria: uma linha por questão errada (ou acertada sem firmeza).
@@ -332,6 +336,8 @@ export function cadernoDeErros(respostas: Resposta[], materiaId: string, questoe
       notas: rs.map((r) => r.nota).filter((n): n is string => !!n),
       subtema: q?.subtema && SUBTEMAS[q.subtema] ? q.subtema : null,
       pegadinhas: pegadinhasDe(falhas, questoes),
+      motivos: [...new Set(falhas.map((r) => r.classificacao).reverse())],
+      certa: q ? semTags(q.alts[q.c] ?? "").replace(/[.;:]+$/, "") : "",
     });
   }
   return out.sort((a, b) => Number(a.superado) - Number(b.superado) || b.vezes - a.vezes);
@@ -344,7 +350,6 @@ export interface GrupoCaderno {
   /** vezes que errou (ou acertou sem firmeza) no grupo */
   vezes: number;
   pendentes: number;
-  pegadinhas: Pegadinha[];
   itens: ErroCaderno[];
 }
 /** Caderno de erros agrupado por subtema (ou pelo tema, quando a questão não tem subtema). */
@@ -352,14 +357,13 @@ export function cadernoPorSubtema(erros: ErroCaderno[]): GrupoCaderno[] {
   const m = new Map<string, GrupoCaderno>();
   for (const e of erros) {
     const chave = e.subtema ?? "tema:" + e.tema;
-    const g = m.get(chave) ?? { chave, nome: e.subtema ? SUBTEMAS[e.subtema].nome : e.tema, tema: e.tema, vezes: 0, pendentes: 0, pegadinhas: [], itens: [] };
+    const g = m.get(chave) ?? { chave, nome: e.subtema ? SUBTEMAS[e.subtema].nome : e.tema, tema: e.tema, vezes: 0, pendentes: 0, itens: [] };
     g.vezes += e.vezes;
     if (!e.superado) g.pendentes++;
-    g.pegadinhas.push(...e.pegadinhas);
     g.itens.push(e);
     m.set(chave, g);
   }
   return [...m.values()]
-    .map((g) => ({ ...g, pegadinhas: g.pegadinhas.sort((a, b) => b.vezes - a.vezes) }))
+    .map((g) => ({ ...g, itens: g.itens.sort((a, b) => Number(a.superado) - Number(b.superado) || b.vezes - a.vezes) }))
     .sort((a, b) => Number(a.pendentes === 0) - Number(b.pendentes === 0) || b.vezes - a.vezes);
 }

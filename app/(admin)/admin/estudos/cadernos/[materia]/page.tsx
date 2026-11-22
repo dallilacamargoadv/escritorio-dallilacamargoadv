@@ -3,8 +3,9 @@ import { notFound, redirect } from "next/navigation";
 import { getRespostas, QUESTAO_POR_ID } from "@/lib/db-estudos";
 import { CADERNOS, getAulasEstudadas } from "@/lib/db-estudos-cadernos";
 import { ETAPA_LABEL } from "@/lib/estudos-cadernos";
-import { CLASSIFICACAO_LABEL, cadernoDeErros, cadernoPorSubtema } from "@/lib/estudos-desempenho";
+import { CLASSIFICACAO_LABEL, EH_ERRO, cadernoDeErros, cadernoPorSubtema } from "@/lib/estudos-desempenho";
 import { htmlSeguro } from "@/lib/estudos-html";
+import { SUBTEMAS } from "@/lib/estudos-subtemas";
 import { TOPICO_POR_ID } from "@/lib/estudos-utils";
 import { BlocoView } from "@/components/estudos/CadernoBlocos";
 import { MarcarAula } from "@/components/estudos/MarcarAula";
@@ -171,31 +172,46 @@ export default async function CadernoPage(props: PageProps<"/admin/estudos/cader
                     {g.pendentes === 0 ? "Superado" : `${g.vezes} ${g.vezes === 1 ? "erro" : "erros"}`}
                   </span>
                 </div>
-                {g.pegadinhas.length > 0 && (
-                  <div className="mt-2">
-                    <p className="text-[11px] text-e-dim">Você errou em relação a:</p>
-                    <ul className="mt-1 space-y-1.5">
-                      {g.pegadinhas.slice(0, 4).map((p) => (
-                        <li key={p.questao_id + p.alternativa} className="border-l-2 border-e-warn/60 pl-2 text-xs leading-relaxed text-e-ink">
-                          <span dangerouslySetInnerHTML={{ __html: htmlSeguro(p.texto) }} />
-                          {p.vezes > 1 && <span className="text-e-dim"> ({p.vezes} vezes)</span>}
-                        </li>
+                {g.itens.map((e) => (
+                  <div key={e.questao_id} className="mt-3 border-t border-e-line pt-2.5">
+                    <p className="text-[11px] text-e-dim">
+                      {e.superado && <span className="text-e-ok">Superado · </span>}
+                      {e.ref} · errou {e.vezes} {e.vezes === 1 ? "vez" : "vezes"}
+                    </p>
+                    <p className="mt-1.5 text-[10px] uppercase tracking-[0.12em] text-e-dim">Motivo</p>
+                    <div className="mt-0.5 flex flex-wrap gap-1">
+                      {e.motivos.map((m) => (
+                        <span key={m} className="rounded-md bg-e-warn-soft px-1.5 py-0.5 text-[11px] text-e-warn">{EH_ERRO.has(m) ? CLASSIFICACAO_LABEL[m] : `Acertou ${CLASSIFICACAO_LABEL[m].toLowerCase()}`}</span>
                       ))}
-                    </ul>
+                    </div>
+                    {e.pegadinhas.length > 0 && (
+                      <>
+                        <p className="mt-2 text-[10px] uppercase tracking-[0.12em] text-e-dim">Sua confusão</p>
+                        {e.pegadinhas.map((p) => (
+                          <p key={p.alternativa} className="mt-0.5 border-l-2 border-e-bad/60 pl-2 text-xs leading-relaxed text-e-ink">
+                            Você marcou: “{p.marcada}”{p.vezes > 1 ? ` (${p.vezes} vezes)` : ""}. <span dangerouslySetInnerHTML={{ __html: htmlSeguro(p.texto) }} />
+                          </p>
+                        ))}
+                      </>
+                    )}
+                    {e.certa && (
+                      <>
+                        <p className="mt-2 text-[10px] uppercase tracking-[0.12em] text-e-dim">O certo</p>
+                        <p className="mt-0.5 border-l-2 border-e-ok/60 pl-2 text-xs leading-relaxed text-e-ink">“{e.certa}” ({e.ref})</p>
+                      </>
+                    )}
+                    {e.notas.slice(-1).map((n) => (
+                      <p key={n} className="mt-1.5 text-xs italic text-e-dim">Sua nota: “{n.length > 200 ? n.slice(0, 200) + "…" : n}”</p>
+                    ))}
+                    <Link href={`/admin/estudos/questoes?materia=${caderno.materia_id}&id=${e.questao_id}`} className="mt-1.5 inline-block text-xs text-e-blue hover:underline">Refazer a questão</Link>
+                  </div>
+                ))}
+                {!g.chave.startsWith("tema:") && SUBTEMAS[g.chave] && (
+                  <div className="mt-3 rounded-xl bg-e-card-2 p-2.5 text-xs leading-relaxed text-e-ink">
+                    <span className="font-medium">Regra para revisar: </span>
+                    <span dangerouslySetInnerHTML={{ __html: htmlSeguro(SUBTEMAS[g.chave].revisao) }} />
                   </div>
                 )}
-                <ul className="mt-2 space-y-1 border-t border-e-line pt-2">
-                  {g.itens.map((e) => (
-                    <li key={e.questao_id} className="text-[11px] text-e-dim">
-                      <span className={e.superado ? "text-e-ok" : "text-e-bad"}>{e.superado ? "Superado" : CLASSIFICACAO_LABEL[e.ultimoTipo]}</span>
-                      {" · "}{e.ref} · {e.vezes} {e.vezes === 1 ? "vez" : "vezes"}
-                      {e.notas.slice(-1).map((n) => (
-                        <span key={n} className="mt-0.5 block italic">“{n.length > 120 ? n.slice(0, 120) + "…" : n}”</span>
-                      ))}
-                      {" "}<Link href={`/admin/estudos/questoes?materia=${caderno.materia_id}&id=${e.questao_id}`} className="text-e-blue hover:underline">Refazer</Link>
-                    </li>
-                  ))}
-                </ul>
                 {!g.chave.startsWith("tema:") && (
                   <Link href={`/admin/estudos/questoes?materia=${caderno.materia_id}&subtema=${encodeURIComponent(g.chave)}`} className="mt-2 inline-block text-xs text-e-blue hover:underline">Treinar só este subtema</Link>
                 )}
