@@ -519,6 +519,66 @@
       "nome": "Prescrição intercorrente (LEF, art. 40)",
       "tema": "Prescrição intercorrente",
       "revisao": "Lei 6.830/1980, art. 40: sem devedor ou bens, o juiz suspende a execução, e nesse período não corre a prescrição; após no máximo 1 ano, arquiva os autos (§ 2º). Se do arquivamento passar o prazo prescricional, o juiz, ouvida a Fazenda, reconhece de ofício a prescrição intercorrente (§ 4º). Súmula 314 do STJ: suspende-se por um ano, e então começa a prescrição quinquenal."
+    },
+    "trib-imun-reciproca": {
+      "nome": "Imunidade recíproca e sua extensão",
+      "tema": "Imunidades",
+      "revisao": "CF, art. 150, VI, a, e § 2º: um ente não cobra imposto sobre patrimônio, renda ou serviços do outro. Alcança autarquias e fundações públicas e, desde a EC 132/2023, a empresa pública prestadora de serviço postal (Correios, inclusive em atividade concorrencial). O § 3º afasta a imunidade da exploração econômica e não livra o promitente comprador (Súmula 583 do STF). A Constituição do Maranhão, art. 124, § 1º, não cita os Correios."
+    },
+    "trib-imun-entidades": {
+      "nome": "Templos, partidos, sindicatos, educação e assistência",
+      "tema": "Imunidades",
+      "revisao": "CF, art. 150, VI, b e c, e § 4º: a imunidade cobre o patrimônio, a renda e os serviços ligados às finalidades essenciais, inclusive o imóvel alugado a terceiro se a renda volta para a atividade. Superávit reinvestido não tira a imunidade: o requisito do CTN, art. 14, é não distribuir. Imunidade subjetiva não alcança o contribuinte de fato (Tema 342). O art. 195, § 7º chama de isenção, mas é imunidade."
+    },
+    "trib-imun-objetiva": {
+      "nome": "Livros, papel e fonogramas",
+      "tema": "Imunidades",
+      "revisao": "CF, art. 150, VI, d e e: imunidade objetiva, do bem. Alcança apostila, álbum de figurinhas, livro eletrônico e seus suportes (SV 57) e o papel fotográfico para publicação. Os fonogramas musicais brasileiros são imunes, mas não a importação de suporte produzido fora do país (Tema 1.083). Desde a EC 132/2023, as imunidades do art. 150, VI valem também para IBS e CBS (art. 149-B)."
+    },
+    "trib-rr-direta": {
+      "nome": "Repartição direta (arts. 157 e 158)",
+      "tema": "Repartição de receitas tributárias",
+      "revisao": "Estados e Municípios ficam com o IR retido na fonte sobre o que eles pagam, a qualquer título, inclusive a empresa contratada (Tema 1.130). Por isso o Estado é parte legítima na restituição (Súmula 447 do STJ). Municípios recebem 50% do ITR (ou 100% se fiscalizarem), 50% do IPVA dos veículos licenciados no seu território e 25% do ICMS. Estados recebem 20% do imposto residual."
+    },
+    "trib-rr-icms-municipios": {
+      "nome": "Critério da cota municipal do ICMS",
+      "tema": "Repartição de receitas tributárias",
+      "revisao": "CF, art. 158, § 1º (EC 108/2020): no mínimo 65% pelo valor adicionado no território do Município e até 35% conforme lei estadual, com pelo menos 10 pontos percentuais por indicadores de educação. A Constituição do Maranhão, art. 130, parágrafo único, ainda fala em 3/4 e 1/4: vale a CF."
+    },
+    "trib-rr-fundos": {
+      "nome": "Fundos e repartição indireta (arts. 159 e 161)",
+      "tema": "Repartição de receitas tributárias",
+      "revisao": "Art. 159, I: 50% do IR, IPI e Imposto Seletivo, sendo 21,5% FPE, 22,5% FPM, 3% para Norte, Nordeste e Centro-Oeste e as parcelas extras do FPM. IPI e IS exportação: 10%, nenhum Estado com mais de 20%, e 25% do que o Estado recebe vai aos Municípios. CIDE-combustíveis: 29% aos Estados, que repassam 25% disso aos Municípios (21,75% e 7,25%). Reparte-se o arrecadado: isenção da União não gera direito a compensação (RE 705.423). Rateio do FPE em lei complementar (art. 161)."
+    },
+    "trib-rr-retencao": {
+      "nome": "Proibição de retenção (art. 160)",
+      "tema": "Repartição de receitas tributárias",
+      "revisao": "É vedado reter ou restringir a entrega dos recursos repartidos. Exceção do § 1º: a entrega pode ser condicionada ao pagamento dos créditos do ente, inclusive de suas autarquias, e ao cumprimento dos mínimos de saúde."
+    },
+    "cf-he-metodos": {
+      "nome": "Métodos de interpretação constitucional",
+      "tema": "Hermenêutica constitucional",
+      "revisao": "Tópico-problemático: parte do problema para a norma, usando lugares comuns. Hermenêutico-concretizador: parte da Constituição para o problema, com a pré-compreensão do intérprete. Normativo-estruturante: norma não é o texto, é o resultado da concretização. Científico-espiritual: valores e realidade social. Jurídico ou clássico: Constituição interpretada como lei."
+    },
+    "cf-he-principios": {
+      "nome": "Princípios de interpretação",
+      "tema": "Hermenêutica constitucional",
+      "revisao": "Unidade: ler a Constituição como um todo, sem hierarquia entre normas originárias. Concordância prática: na colisão, reduzir proporcionalmente cada bem, sem sacrificar nenhum. Justeza ou conformidade funcional: o intérprete não pode alterar a repartição de funções. Máxima efetividade, efeito integrador, força normativa. Interpretação conforme: fixa o sentido compatível e afasta os outros, mantendo o texto."
+    },
+    "cf-he-proporcionalidade": {
+      "nome": "Proporcionalidade e seus subprincípios",
+      "tema": "Hermenêutica constitucional",
+      "revisao": "Três portões, nesta ordem: adequação (o meio atinge o fim?), necessidade (há meio igualmente eficaz e menos gravoso?) e proporcionalidade em sentido estrito (o ganho compensa a restrição?). Falhou em um, a medida é inválida e não se passa ao seguinte."
+    },
+    "cf-he-normas": {
+      "nome": "Regras, princípios e neoconstitucionalismo",
+      "tema": "Hermenêutica constitucional",
+      "revisao": "Regras: tudo ou nada (subsunção). Princípios: mandamentos de otimização, aplicados por ponderação (Dworkin, Alexy). Neoconstitucionalismo (Barroso): marco histórico no pós-guerra, filosófico no pós-positivismo e teórico na força normativa, na expansão da jurisdição constitucional e na nova interpretação. Preâmbulo não tem força normativa: a invocação de Deus não é obrigatória para os Estados (ADI 2.076)."
+    },
+    "cf-he-mutacao": {
+      "nome": "Mutação, reversão legislativa e poderes implícitos",
+      "tema": "Hermenêutica constitucional",
+      "revisao": "Mutação: muda o sentido sem mudar o texto. O efeito vinculante não prende o Legislativo ao legislar: a nova lei pode repetir a declarada inconstitucional, mas nasce com presunção relativa de inconstitucionalidade (ADI 5.105). Poderes implícitos: quem recebe o fim recebe os meios (poder de cautela do TCU, investigação pelo Ministério Público)."
     }
   },
   "questoes": {
@@ -726,6 +786,42 @@
     "ef-010": "lef-adjudicacao",
     "ef-011": "lef-prerrogativas",
     "ef-013": "lef-prerrogativas",
-    "ef-012": "lef-intercorrente"
+    "ef-012": "lef-intercorrente",
+    "trib-im-01": "trib-imun-reciproca",
+    "trib-im-04": "trib-imun-reciproca",
+    "trib-im-10": "trib-imun-reciproca",
+    "trib-im-12": "trib-imun-reciproca",
+    "trib-im-03": "trib-imun-entidades",
+    "trib-im-05": "trib-imun-entidades",
+    "trib-im-06": "trib-imun-entidades",
+    "trib-im-07": "trib-imun-entidades",
+    "trib-im-11": "trib-imun-entidades",
+    "trib-im-02": "trib-imun-objetiva",
+    "trib-im-08": "trib-imun-objetiva",
+    "trib-im-09": "trib-imun-objetiva",
+    "trib-rr-01": "trib-rr-direta",
+    "trib-rr-03": "trib-rr-direta",
+    "trib-rr-04": "trib-rr-direta",
+    "trib-rr-11": "trib-rr-direta",
+    "trib-rr-02": "trib-rr-icms-municipios",
+    "trib-rr-12": "trib-rr-icms-municipios",
+    "trib-rr-05": "trib-rr-fundos",
+    "trib-rr-06": "trib-rr-fundos",
+    "trib-rr-07": "trib-rr-fundos",
+    "trib-rr-09": "trib-rr-fundos",
+    "trib-rr-10": "trib-rr-fundos",
+    "trib-rr-08": "trib-rr-retencao",
+    "cf-he-03": "cf-he-metodos",
+    "cf-he-04": "cf-he-metodos",
+    "cf-he-05": "cf-he-principios",
+    "cf-he-06": "cf-he-principios",
+    "cf-he-08": "cf-he-principios",
+    "cf-he-07": "cf-he-proporcionalidade",
+    "cf-he-02": "cf-he-normas",
+    "cf-he-09": "cf-he-normas",
+    "cf-he-12": "cf-he-normas",
+    "cf-he-01": "cf-he-mutacao",
+    "cf-he-10": "cf-he-mutacao",
+    "cf-he-11": "cf-he-mutacao"
   }
 }
