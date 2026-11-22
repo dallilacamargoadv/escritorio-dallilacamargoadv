@@ -1,6 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { updateTopicoEstado, getTopicoEstados } from "@/lib/db-estudos";
 import type { Caderno } from "@/lib/estudos-cadernos";
+import cadernoA2 from "@/content/estudos/cadernos/A2.json";
 import cadernoA3 from "@/content/estudos/cadernos/A3.json";
 import cadernoA4 from "@/content/estudos/cadernos/A4.json";
 import cadernoA5 from "@/content/estudos/cadernos/A5.json";
@@ -9,9 +10,11 @@ import cadernoB2 from "@/content/estudos/cadernos/B2.json";
 import cadernoB3 from "@/content/estudos/cadernos/B3.json";
 import cadernoB5 from "@/content/estudos/cadernos/B5.json";
 import cadernoB6 from "@/content/estudos/cadernos/B6.json";
+import cadernoB7 from "@/content/estudos/cadernos/B7.json";
 
 /** Cadernos prontos, por matéria. Novo caderno = novo JSON importado aqui. */
 export const CADERNOS: Record<string, Caderno> = {
+  A2: cadernoA2 as Caderno,
   A3: cadernoA3 as Caderno,
   A4: cadernoA4 as Caderno,
   A5: cadernoA5 as Caderno,
@@ -20,6 +23,7 @@ export const CADERNOS: Record<string, Caderno> = {
   B3: cadernoB3 as Caderno,
   B5: cadernoB5 as Caderno,
   B6: cadernoB6 as Caderno,
+  B7: cadernoB7 as Caderno,
 };
 export const AULA_POR_ID = new Map(
   Object.values(CADERNOS).flatMap((c) => c.aulas.map((a) => [a.id, { aula: a, caderno: c }] as const)),

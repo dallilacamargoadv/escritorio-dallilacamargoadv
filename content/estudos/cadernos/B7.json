@@ -1,0 +1,775 @@
+{
+ "materia_id": "B7",
+ "titulo": "Tributário",
+ "subtitulo": "Do conceito de tributo à execução fiscal, com a reforma tributária e o olhar do Estado que cobra.",
+ "fontes": [
+  "Material EBEJI de Direito Tributário (2026)",
+  "CTN e CF (com a EC 132/2023), textos vigentes"
+ ],
+ "aulas": [
+  {
+   "id": "B7-a01",
+   "topico_id": "B7-01",
+   "numero": 1,
+   "titulo": "Tributo e espécies tributárias (com a reforma)",
+   "status": "pronta",
+   "fonte": "Material EBEJI: Teoria geral do tributo (2026), itens 1 a 5; CTN e CF (com a EC 132/2023), textos vigentes; prova FCC 2022 PGE-AM",
+   "resumo": [
+    "Tributo (CTN, art. 3º): prestação pecuniária, compulsória, que não é sanção de ato ilícito, instituída em lei e cobrada por atividade plenamente vinculada.",
+    "Multa não é tributo. Renda de atividade ilícita é tributável (pecunia non olet). Dação em pagamento só de imóveis (CTN, art. 156, XI); de móveis, inconstitucional (ADI 1.917).",
+    "CTN: 3 espécies (art. 5º). STF: 5 (impostos, taxas, contribuições de melhoria, empréstimos compulsórios e contribuições especiais).",
+    "Pelo CTN, a natureza vem do fato gerador; nome e destinação são irrelevantes (art. 4º). Taxa pode usar elemento da base de imposto, sem identidade integral (SV 29).",
+    "Empréstimo compulsório: só União, só lei complementar, arrecadação vinculada. Contribuições: em regra da União; RPPS de todos os entes e COSIP de Municípios e DF.",
+    "EC 132/2023: IBS (imposto de competência compartilhada, art. 156-A), CBS (contribuição da União, art. 195, V), Imposto Seletivo (art. 153, VIII); IBS e CBS com regras iguais (art. 149-B)."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: por que existe tributo e o que o CTN chama de tributo",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O Estado precisa de dinheiro para funcionar, e a maior parte vem da sociedade. O tributo é a forma de o Estado tirar esse dinheiro do particular <b>sem pedir licença</b>, pelo poder de império. Justamente por isso a lei amarra tudo: quem cobra, de quem, quanto e quando. O ponto de partida é a definição do art. 3º do CTN, que a FCC cobra quase palavra por palavra."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 3º",
+       "texto": "Art. 3º Tributo é toda ==prestação pecuniária compulsória==, em moeda ou cujo valor nela se possa exprimir, que ==não constitua sanção de ato ilícito==, ==instituída em lei== e cobrada mediante atividade administrativa ==plenamente vinculada==."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Pecuniária",
+         "sub": "em dinheiro"
+        },
+        {
+         "titulo": "Compulsória",
+         "sub": "não depende de vontade"
+        },
+        {
+         "titulo": "Não é sanção",
+         "sub": "multa não é tributo"
+        },
+        {
+         "titulo": "Em lei",
+         "sub": "nunca decreto"
+        },
+        {
+         "titulo": "Vinculada",
+         "sub": "sem discricionariedade"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Prestação pecuniária, em moeda ou cujo valor nela se possa exprimir.</b> Paga-se em dinheiro, não em sacas de arroz. O cujo valor nela se possa exprimir abre espaço para cheque e outras formas do art. 162. A exceção que cai: a <b>dação em pagamento de bens imóveis</b> (CTN, art. 156, XI), porque está em lei nacional."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Compulsória.</b> Ocorrido o fato previsto em lei, nasce a obrigação sozinha (CTN, art. 113, § 1º). A vontade do contribuinte não importa."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Que não constitua sanção de ato ilícito.</b> O tributo nasce de fato lícito descrito em lei; a <b>multa</b> é que é punição. Mas atenção: se o fato descrito (ter renda) acontecer por meio de atividade ilícita, o tributo é devido. É o <b>pecunia non olet</b>: o dinheiro não tem cheiro."
+        },
+        {
+         "no": 3,
+         "texto": "<b>Instituída em lei.</b> Em regra lei ordinária; lei complementar quando a CF exige (empréstimo compulsório, imposto e contribuição residuais, imposto sobre grandes fortunas). <b>Medida provisória pode</b> instituir tributo, dentro das regras do art. 62. Decreto e portaria <b>não</b>."
+        },
+        {
+         "no": 4,
+         "texto": "<b>Cobrada mediante atividade administrativa plenamente vinculada.</b> O fiscal não escolhe se cobra: ocorrido o fato, ele lança. Cobrança administrativa pelo auditor, judicial pela procuradoria."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 156, XI",
+       "texto": "XI – a dação em pagamento em ==bens imóveis==, na forma e condições estabelecidas em lei."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Dação de bem móvel",
+       "html": "A lei estadual que permite pagar tributo com <b>bem móvel</b> é inconstitucional (ADI 1.917): o STF disse que isso burla a <b>licitação</b> (CF, art. 37, XXI), pois o Estado estaria comprando bens sem licitar. Só a dação de <b>imóvel</b>, prevista no CTN, vale."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Tributo",
+        "Multa"
+       ],
+       "linhas": [
+        [
+         "Não é sanção de ato ilícito",
+         "É sanção de ato ilícito"
+        ],
+        [
+         "Nasce do fato gerador previsto em lei",
+         "Nasce do descumprimento da obrigação principal ou acessória"
+        ],
+        [
+         "Objetivo: arrecadar",
+         "Objetivo: punir e desestimular"
+        ],
+        [
+         "Limite de confisco rigoroso",
+         "Limite de confisco mais elevado"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: as cinco espécies e a regra matriz",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O CTN, de 1966, fala em três espécies. A CF de 1988 criou outras. Por isso existem teorias diferentes. Suba a escada da menor para a maior: a que vale na prova é a do STF."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Bipartida",
+         "sub": "2 espécies",
+         "texto": "Só impostos (não vinculados) e taxas (vinculados). Olha apenas se o fato gerador depende de atuação do Estado."
+        },
+        {
+         "titulo": "Tripartida",
+         "sub": "3 espécies, o CTN",
+         "texto": "Impostos, taxas e contribuições de melhoria. É a do <b>art. 5º do CTN</b>. Se a questão pedir \"nos termos do CTN\", é esta."
+        },
+        {
+         "titulo": "Quadripartida",
+         "sub": "4 espécies",
+         "texto": "Impostos, taxas, empréstimos compulsórios e contribuições (melhoria dentro de contribuições)."
+        },
+        {
+         "titulo": "Pentapartida",
+         "sub": "5 espécies, o STF",
+         "texto": "<b>Impostos, taxas, contribuições de melhoria, empréstimos compulsórios e contribuições especiais</b> (CF, arts. 145, 148, 149 e 149-A). É a adotada pelo STF e pela doutrina majoritária."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 5º",
+       "texto": "Art. 5º Os tributos são impostos, taxas e contribuições de melhoria.\n\n"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 145, caput e I a III",
+       "texto": "Art. 145. A União, os Estados, o Distrito Federal e os Municípios poderão instituir os seguintes tributos:\nI - ==impostos==;\nII - ==taxas==, em razão do exercício do poder de polícia ou pela utilização, efetiva ou potencial, de serviços públicos específicos e divisíveis, prestados ao contribuinte ou postos a sua disposição;\nIII - ==contribuição de melhoria==, decorrente de obras públicas."
+      },
+      {
+       "t": "texto",
+       "html": "Agora a tabela que resolve metade das questões. Toque em cada célula: ela diz se a característica vale para a espécie e por quê."
+      },
+      {
+       "t": "matriz",
+       "linhas": [
+        "Impostos",
+        "Taxas",
+        "Contribuição de melhoria",
+        "Empréstimo compulsório",
+        "Contribuições especiais"
+       ],
+       "colunas": [
+        "Fato gerador ligado a atuação do Estado",
+        "Arrecadação vinculada pela CF",
+        "Todos os entes instituem",
+        "Exige lei complementar"
+       ],
+       "celulas": [
+        [
+         [
+          false,
+          "Não vinculado: o fato é do contribuinte (ter renda, ser proprietário). CTN, art. 16."
+         ],
+         [
+          false,
+          "Regra: livre no orçamento."
+         ],
+         [
+          true,
+          "Cada ente, os impostos que a CF lhe deu."
+         ],
+         [
+          false,
+          "Lei ordinária; LC só no residual (art. 154, I) e nas grandes fortunas (art. 153, VII)."
+         ]
+        ],
+        [
+         [
+          true,
+          "Poder de polícia ou serviço público específico e divisível. CTN, art. 77."
+         ],
+         [
+          false,
+          "Depende da lei; custas e emolumentos são vinculados."
+         ],
+         [
+          true,
+          "Competência comum: quem presta o serviço ou exerce a polícia."
+         ],
+         [
+          false,
+          "Lei ordinária. Se vier por LC, vale como ordinária."
+         ]
+        ],
+        [
+         [
+          true,
+          "Obra pública com valorização do imóvel. CTN, art. 81."
+         ],
+         [
+          false,
+          "A CF não vincula; depende da lei."
+         ],
+         [
+          true,
+          "Competência comum, conforme quem fez a obra."
+         ],
+         [
+          false,
+          "Lei ordinária."
+         ]
+        ],
+        [
+         [
+          false,
+          "A CF não exige atuação estatal ligada ao contribuinte."
+         ],
+         [
+          true,
+          "CF, art. 148, parágrafo único: vinculada à despesa que o justificou."
+         ],
+         [
+          false,
+          "Só a União."
+         ],
+         [
+          true,
+          "Só lei complementar. Nem lei ordinária, nem MP (art. 62, § 1º, III)."
+         ]
+        ],
+        [
+         [
+          false,
+          "Pode ou não ser vinculado: o que marca a contribuição é a finalidade."
+         ],
+         [
+          true,
+          "A destinação é o que a define (seguridade, intervenção, categorias)."
+         ],
+         [
+          false,
+          "Regra: só a União (art. 149). Exceções: RPPS de todos os entes (§ 1º) e COSIP de Municípios e DF (art. 149-A)."
+         ],
+         [
+          false,
+          "Lei ordinária; LC só nas residuais da seguridade (art. 195, § 4º)."
+         ]
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 16",
+       "texto": "Art. 16. Imposto é o tributo cuja obrigação tem por fato gerador uma situação ==independente de qualquer atividade estatal específica==, relativa ao contribuinte."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 77",
+       "texto": "Art. 77. As taxas cobradas pela União, pelos Estados, pelo Distrito Federal ou pelos Municípios, no âmbito de suas respectivas atribuições, têm como fato gerador o exercício regular do ==poder de polícia==, ou a utilização, ==efetiva ou potencial==, de serviço público ==específico e divisível==, prestado ao contribuinte ou posto à sua disposição.\nParágrafo único. A taxa não pode ter base de cálculo ou fato gerador idênticos aos que correspondam a impôsto nem ser calculada em função do capital das emprêsas."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 81",
+       "texto": "Art. 81. A contribuição de melhoria cobrada pela União, pelos Estados, pelo Distrito Federal ou pelos Municípios, no âmbito de suas respectivas atribuições, é instituída para fazer face ao custo de obras públicas de que decorra ==valorização imobiliária==, tendo como ==limite total== a despesa realizada e como ==limite individual== o acréscimo de valor que da obra resultar para cada imóvel beneficiado."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 148",
+       "texto": "Art. 148. A União, ==mediante lei complementar==, poderá instituir empréstimos compulsórios:\nI - para atender a despesas extraordinárias, decorrentes de calamidade pública, de guerra externa ou sua iminência;\nII - no caso de investimento público de caráter urgente e de relevante interesse nacional, observado o disposto no art. 150, III, \"b\".\nParágrafo único. A aplicação dos recursos provenientes de empréstimo compulsório ==será vinculada== à despesa que fundamentou sua instituição."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 149, caput e § 1º",
+       "texto": "Art. 149. Compete ==exclusivamente à União== instituir contribuições sociais, de intervenção no domínio econômico e de interesse das categorias profissionais ou econômicas, como instrumento de sua atuação nas respectivas áreas, observado o disposto nos arts. 146, III, e 150, I e III, e sem prejuízo do previsto no art. 195, § 6º, relativamente às contribuições a que alude o dispositivo.\n§ 1º A União, os Estados, o Distrito Federal e os Municípios instituirão, por meio de lei, contribuições para custeio de regime próprio de previdência social, cobradas dos servidores ativos, dos aposentados e dos pensionistas, que poderão ter alíquotas progressivas de acordo com o valor da base de contribuição ou dos proventos de aposentadoria e de pensões. (Vigência"
+      },
+      {
+       "t": "texto",
+       "html": "Cada tributo tem a mesma estrutura, chamada <b>regra matriz de incidência</b> (Paulo de Barros Carvalho). Uma hipótese (o fato) e uma consequência (a dívida). Siga com o IPTU."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Material",
+         "sub": "o comportamento"
+        },
+        {
+         "titulo": "Temporal",
+         "sub": "quando nasce"
+        },
+        {
+         "titulo": "Espacial",
+         "sub": "onde"
+        },
+        {
+         "titulo": "Pessoal",
+         "sub": "quem cobra e quem paga"
+        },
+        {
+         "titulo": "Quantitativo",
+         "sub": "quanto"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Critério material</b> (verbo + complemento): ser proprietário de imóvel urbano."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Critério temporal</b>: o momento em que o fato se considera ocorrido, por exemplo 1º de janeiro. Não confunda com a <b>data de pagamento</b>, que pode vir em ato infralegal (RE 203.684)."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Critério espacial</b>: no perímetro urbano do Município. Esses três formam a <b>hipótese de incidência</b> (na lei) que, acontecendo no mundo, vira <b>fato gerador</b>."
+        },
+        {
+         "no": 3,
+         "texto": "<b>Critério pessoal</b>: sujeito ativo, a pessoa jurídica de direito público que cobra (CTN, art. 119), e sujeito passivo, quem paga (art. 121). A competência é indelegável, mas a capacidade de cobrar e fiscalizar pode ser delegada (art. 7º): por isso autarquia pode ser sujeito ativo."
+        },
+        {
+         "no": 4,
+         "texto": "<b>Critério quantitativo</b>: base de cálculo (valor venal) × alíquota (1%). A base de cálculo também confirma qual é o verdadeiro fato tributado."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e divergências: natureza jurídica, legalidade e a reforma tributária",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CTN, art. 4º",
+       "texto": "Art. 4º A natureza jurídica específica do tributo é determinada pelo ==fato gerador== da respectiva obrigação, sendo irrelevantes para qualificá-la:\nI - ==a denominação== e demais características formais adotadas pela lei;\nII - ==a destinação legal== do produto da sua arrecadação."
+      },
+      {
+       "t": "texto",
+       "html": "Pelo CTN, o nome e o destino do dinheiro não importam: o que define a espécie é o <b>fato gerador</b>. A doutrina critica: (1) o fato gerador precisa ser lido junto com a <b>base de cálculo</b>; (2) depois de 1988, a <b>destinação importa</b>, porque contribuições e empréstimos compulsórios só se distinguem dos impostos pelo destino da arrecadação. Na prova: se a questão disser \"nos termos do CTN\", marque o art. 4º literal."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 145, § 2º",
+       "texto": "§ 2º As taxas não poderão ter base de cálculo própria de impostos."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Taxa com elemento de imposto",
+       "html": "A taxa não pode ter base de cálculo <b>idêntica</b> à de imposto (CF, art. 145, § 2º; CTN, art. 77, parágrafo único). Mas pode usar <b>um ou mais elementos</b> da base de um imposto, desde que não haja identidade integral (Súmula Vinculante 29). Ex.: taxa de lixo que usa a metragem do imóvel."
+      },
+      {
+       "t": "texto",
+       "html": "A legalidade não tem exceção para <b>criar</b> tributo, mas tem várias para <b>alterar alíquota</b>: II, IE, IPI, IOF e CIDE-combustíveis por ato do Executivo, e ICMS monofásico sobre combustíveis por convênio. E nem tudo precisa de lei: prazo de pagamento pode vir em decreto."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Situação",
+        "Precisa de lei?",
+        "Fonte"
+       ],
+       "linhas": [
+        [
+         "Instituir tributo",
+         "Sim, sempre (lei ou MP)",
+         "CTN, art. 3º; CF, art. 62"
+        ],
+        [
+         "Mudar a data de pagamento",
+         "Não, e não se sujeita à anterioridade",
+         "RE 203.684; SV 50"
+        ],
+        [
+         "Atualizar IPTU pela correção monetária",
+         "Não, se até o índice oficial; acima disso, sim",
+         "Súmula 160 do STJ"
+        ],
+        [
+         "Lei fixa o teto e o ato infralegal fixa o valor da taxa",
+         "Válido, se proporcional aos custos",
+         "RE 838.284 (repercussão geral)"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Reforma tributária (EC 132/2023).</b> Ela não criou espécie nova: encaixou os novos tributos nas espécies que você acabou de ver. Vire as cartas."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "IBS",
+         "sub": "imposto",
+         "verso": "Imposto sobre bens e serviços de competência compartilhada entre Estados, DF e Municípios, instituído por lei complementar (CF, art. 156-A). Substituirá ICMS e ISS.",
+         "detalhe": "Espécie: imposto. Novidade: competência compartilhada."
+        },
+        {
+         "frente": "CBS",
+         "sub": "contribuição social",
+         "verso": "Contribuição sobre bens e serviços, da União, nos termos de lei complementar (CF, art. 195, V).",
+         "detalhe": "Espécie: contribuição especial (social). Substituirá PIS e Cofins."
+        },
+        {
+         "frente": "Imposto Seletivo",
+         "sub": "imposto extrafiscal",
+         "verso": "Imposto da União sobre produção, extração, comercialização ou importação de bens e serviços prejudiciais à saúde ou ao meio ambiente, nos termos de lei complementar (CF, art. 153, VIII).",
+         "detalhe": "Espécie: imposto. Função: extrafiscal."
+        },
+        {
+         "frente": "IBS e CBS: gêmeos",
+         "sub": "art. 149-B",
+         "verso": "Seguem as mesmas regras de fato gerador, base de cálculo, sujeitos passivos, imunidades, regimes específicos e não cumulatividade.",
+         "detalhe": "Cai como: IBS e CBS podem ter fatos geradores diferentes? Errado."
+        },
+        {
+         "frente": "COSIP ampliada",
+         "sub": "art. 149-A",
+         "verso": "Além da iluminação pública, agora custeia sistemas de monitoramento para segurança e preservação de logradouros públicos.",
+         "detalhe": "Redação da EC 132/2023."
+        },
+        {
+         "frente": "Novos princípios",
+         "sub": "art. 145, §§ 3º e 4º",
+         "verso": "Simplicidade, transparência, justiça tributária, cooperação e defesa do meio ambiente; as alterações devem buscar atenuar efeitos regressivos.",
+         "detalhe": "Novidade da EC 132/2023 muito provável em prova recente."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 156-A, caput",
+       "texto": "Art. 156-A. Lei complementar instituirá imposto sobre bens e serviços de ==competência compartilhada== entre Estados, Distrito Federal e Municípios."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 195, V",
+       "texto": "V - sobre bens e serviços, nos termos de lei complementar."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 153, VIII",
+       "texto": "VIII - produção, extração, comercialização ou importação de bens e serviços ==prejudiciais à saúde ou ao meio ambiente==, nos termos de lei complementar."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 149-B, caput e I a IV",
+       "texto": "Art. 149-B. Os tributos previstos nos arts. 156-A e 195, V, observarão as mesmas regras em relação a:\nI - fatos geradores, bases de cálculo, hipóteses de não incidência e sujeitos passivos;\nII - imunidades;\nIII - regimes específicos, diferenciados ou favorecidos de tributação;\nIV - regras de não cumulatividade e de creditamento."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 149-A",
+       "texto": "Art. 149-A. Os Municípios e o Distrito Federal poderão instituir contribuição, na forma das respectivas leis, para o custeio, a expansão e a melhoria do serviço de iluminação pública e de ==sistemas de monitoramento== para segurança e preservação de logradouros públicos, observado o disposto no art. 150, I e III.\nParágrafo único. É facultada a cobrança da contribuição a que se refere o caput, na fatura de consumo de energia elétrica."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 145, §§ 3º e 4º",
+       "texto": "§ 3º O Sistema Tributário Nacional deve observar os princípios da ==simplicidade==, da transparência, da justiça tributária, da cooperação e da defesa do meio ambiente.\n§ 4º As alterações na legislação tributária buscarão ==atenuar efeitos regressivos==."
+      },
+      {
+       "t": "texto",
+       "html": "Duas classificações fecham o tema. <b>Funções</b>: fiscal (arrecadar: IR, ICMS, IPVA), extrafiscal (induzir comportamento: II, IE, IPI, IOF, ITR, CIDE, Imposto Seletivo) e parafiscal (arrecadar para outra pessoa: contribuições corporativas e sociais). Todo tributo tem um pouco de cada. <b>Repercussão</b>: diretos (o contribuinte arca: IR, IPTU, ITR) e indiretos (o custo passa ao consumidor: ICMS, ISS, IPI)."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF e o STJ decidiram",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula Vinculante 29",
+       "tese": "É constitucional a adoção, no cálculo do valor de taxa, de um ou mais elementos da base de cálculo própria de determinado imposto, desde que não haja integral identidade entre uma base e outra."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula Vinculante 50",
+       "tese": "Norma legal que altera prazo de recolhimento de obrigação tributária não se sujeita ao princípio da anterioridade."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 160",
+       "tese": "É defeso, ao Município, atualizar o IPTU, mediante decreto, em percentual superior ao índice oficial de correção monetária."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 1.917, Plenário, 26/04/2007",
+       "tese": "Lei local que prevê a extinção de crédito tributário por dação em pagamento de bens móveis é inconstitucional, por ofensa à exigência de licitação (CF, art. 37, XXI). Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 838.284/SC, Plenário, 06/10/2016 (repercussão geral, Info 842)",
+       "tese": "Não viola a legalidade tributária a lei que, prescrevendo o teto, possibilita ao ato normativo infralegal fixar o valor de taxa em proporção razoável com os custos da atuação estatal. Fonte: material EBEJI."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Na prova da PGE-AM (FCC 2022), a questão 43 juntou duas coisas desta aula e da próxima: <b>pecunia non olet</b> (tributo sobre atividade ilícita é devido) e a responsabilidade dos pais pelos tributos do filho menor (CTN, art. 134, I), que só existe se o contribuinte não puder pagar e se houver ação ou omissão do responsável. É o padrão PGE-AM: caso curto + texto literal do CTN."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 118",
+       "texto": "Art. 118. A definição legal do fato gerador é interpretada abstraindo-se:\nI - da validade jurídica dos atos efetivamente praticados pelos contribuintes, responsáveis, ou terceiros, bem como da natureza do seu objeto ou dos seus efeitos;\nII - dos efeitos dos fatos efetivamente ocorridos.\n"
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O que pode cair assim",
+       "html": "1) Multa é tributo? <b>Não</b>, é sanção. 2) Decreto pode criar tributo? <b>Não</b>; MP pode. 3) Nos termos do CTN, são <b>três</b> espécies; para o STF, <b>cinco</b>. 4) Empréstimo compulsório por MP ou lei ordinária: <b>nunca</b>. 5) Natureza jurídica pelo CTN: <b>fato gerador</b>, sendo irrelevantes nome e destinação. 6) Taxa com <b>um elemento</b> da base de imposto: válida (SV 29). 7) IBS é de competência <b>compartilhada</b>; CBS é <b>contribuição</b> da União."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "Tributo pode ser pago por dação em pagamento de bens imóveis, na forma e nas condições da lei.",
+         "v": true,
+         "porque": "CTN, art. 156, XI."
+        },
+        {
+         "texto": "Lei estadual pode autorizar o pagamento de ICMS com entrega de veículos ao Estado.",
+         "v": false,
+         "porque": "ADI 1.917: dação de móveis burla a licitação."
+        },
+        {
+         "texto": "Renda de atividade ilícita não pode ser tributada, pois tributo não é sanção de ato ilícito.",
+         "v": false,
+         "porque": "Pecunia non olet: a lei não descreve o ilícito, mas o fato (ter renda) pode vir dele. CTN, art. 118."
+        },
+        {
+         "texto": "Pelo CTN, a destinação legal do produto da arrecadação é irrelevante para a natureza jurídica do tributo.",
+         "v": true,
+         "porque": "Art. 4º, II, literal."
+        },
+        {
+         "texto": "Os Estados podem instituir empréstimo compulsório em caso de calamidade pública.",
+         "v": false,
+         "porque": "Só a União, por lei complementar (CF, art. 148)."
+        },
+        {
+         "texto": "O IBS e a CBS observarão as mesmas regras de fatos geradores, bases de cálculo e imunidades.",
+         "v": true,
+         "porque": "CF, art. 149-B."
+        },
+        {
+         "texto": "A COSIP pode custear sistemas de monitoramento para segurança de logradouros públicos.",
+         "v": true,
+         "porque": "CF, art. 149-A, na redação da EC 132/2023."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "trib-001",
+    "trib-te-r01",
+    "trib-te-01",
+    "trib-te-02",
+    "trib-te-03",
+    "trib-te-04",
+    "trib-te-05",
+    "trib-te-06",
+    "trib-te-07",
+    "trib-te-08",
+    "trib-te-09",
+    "trib-te-10",
+    "trib-te-11",
+    "trib-te-12"
+   ]
+  },
+  {
+   "id": "B7-a02",
+   "topico_id": "B7-01",
+   "numero": 2,
+   "titulo": "Competência tributária",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a03",
+   "topico_id": "B7-01",
+   "numero": 3,
+   "titulo": "Princípios e limitações ao poder de tributar",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a04",
+   "topico_id": "B7-01",
+   "numero": 4,
+   "titulo": "Imunidades",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a05",
+   "topico_id": "B7-01",
+   "numero": 5,
+   "titulo": "Repartição de receitas tributárias",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a06",
+   "topico_id": "B7-02",
+   "numero": 6,
+   "titulo": "Legislação tributária",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a07",
+   "topico_id": "B7-03",
+   "numero": 7,
+   "titulo": "Obrigação tributária",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a08",
+   "topico_id": "B7-04",
+   "numero": 8,
+   "titulo": "Crédito tributário",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a09",
+   "topico_id": "B7-05",
+   "numero": 9,
+   "titulo": "Administração tributária",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a10",
+   "topico_id": "B7-06",
+   "numero": 10,
+   "titulo": "Tributos estaduais",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a11",
+   "topico_id": "B7-07",
+   "numero": 11,
+   "titulo": "Tributos municipais e federais",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a12",
+   "topico_id": "B7-08",
+   "numero": 12,
+   "titulo": "Reforma tributária: fundamentos (EC 132/2023)",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a13",
+   "topico_id": "B7-09",
+   "numero": 13,
+   "titulo": "IBS e CBS: estrutura (LC 214/2025)",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a14",
+   "topico_id": "B7-10",
+   "numero": 14,
+   "titulo": "IBS e CBS: regimes diferenciados e favorecidos",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a15",
+   "topico_id": "B7-11",
+   "numero": 15,
+   "titulo": "Imposto Seletivo",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a16",
+   "topico_id": "B7-12",
+   "numero": 16,
+   "titulo": "Comitê Gestor do IBS e contencioso (LC 227/2026)",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a17",
+   "topico_id": "B7-13",
+   "numero": 17,
+   "titulo": "Transição e fundos",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a18",
+   "topico_id": "B7-14",
+   "numero": 18,
+   "titulo": "Reforma tributária e outros tributos",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a19",
+   "topico_id": "B7-15",
+   "numero": 19,
+   "titulo": "Dívida ativa e execução fiscal",
+   "status": "a_montar"
+  },
+  {
+   "id": "B7-a20",
+   "topico_id": "B7-16",
+   "numero": 20,
+   "titulo": "Ações tributárias",
+   "status": "a_montar"
+  }
+ ],
+ "glossario": [
+  [
+   "Fato gerador",
+   "Situação prevista em lei que, ocorrida, faz nascer a obrigação tributária."
+  ],
+  [
+   "Hipótese de incidência",
+   "A descrição do fato na lei, antes de acontecer."
+  ],
+  [
+   "Tributo vinculado",
+   "O fato gerador é uma atuação do Estado ligada ao contribuinte (taxa, contribuição de melhoria)."
+  ],
+  [
+   "Arrecadação vinculada",
+   "O dinheiro arrecadado só pode ir para a despesa definida (empréstimo compulsório, contribuições)."
+  ],
+  [
+   "Pecunia non olet",
+   "O dinheiro não tem cheiro: tributa-se o fato mesmo que venha de atividade ilícita."
+  ],
+  [
+   "Extrafiscal",
+   "Tributo usado para induzir ou desestimular comportamento, não só para arrecadar."
+  ],
+  [
+   "Competência compartilhada",
+   "Novidade do IBS: Estados, DF e Municípios dividem o mesmo imposto, com lei complementar única."
+  ]
+ ]
+}

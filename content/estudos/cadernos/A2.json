@@ -1,0 +1,1159 @@
+{
+ "materia_id": "A2",
+ "titulo": "Raciocínio Lógico e Matemática",
+ "subtitulo": "Da proposição à probabilidade, um assunto por vez, com as questões que as bancas já cobraram.",
+ "fontes": [
+  "Ceisc, Prof. Gustavo Rodrigues: lógica (aulas 1 a 10 e TAQs FCC, Cebraspe e FGV)",
+  "Ceisc, Prof. Dudan: matemática básica, combinatória e probabilidade (aulas e TAQs)"
+ ],
+ "aulas": [
+  {
+   "id": "A2-a01",
+   "topico_id": "A2-01",
+   "numero": 1,
+   "titulo": "Estruturas lógicas",
+   "status": "pronta",
+   "fonte": "Ceisc: Prof. Gustavo Rodrigues (aulas 1 a 6 e TAQs FCC, Cebraspe e FGV, 2025 e 2026)",
+   "resumo": [
+    "Proposição é a sentença fechada: dá para dizer se é V ou F. Pergunta, ordem, exclamação, frase sem verbo e sentença com variável (ele, x) não são proposições.",
+    "Três princípios: identidade (V é sempre V), não contradição (nunca V e F ao mesmo tempo) e terceiro excluído (só existem V e F).",
+    "Cinco conectivos: E só é V se ambas V; OU só é F se ambas F; OU...OU é V se diferentes; SE...ENTÃO só é F em V → F (Vera Fischer); SE E SOMENTE SE é V se iguais.",
+    "Tabela-verdade tem 2ⁿ linhas (n = proposições simples). Negações: ~(p ∧ q) = ~p ∨ ~q; ~(p ∨ q) = ~p ∧ ~q; ~(p → q) = p ∧ ~q (regra do Mané).",
+    "Equivalências do se, então: p → q = ~q → ~p (contrapositiva: nega-nega, troca-troca) = ~p ∨ q. Nunca confunda equivalência com negação."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: sentença, proposição e os três princípios",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O raciocínio lógico estuda frases das quais se pode dizer <b>verdadeiro (V)</b> ou <b>falso (F)</b>. Dizer se a frase é V ou F é <b>determinar o valor lógico</b>. Antes de qualquer conta, a pergunta é sempre a mesma: essa frase tem valor lógico?<br><br>Siga a peneira, da frase solta até a proposição."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Frase",
+         "sub": "qualquer enunciado"
+        },
+        {
+         "titulo": "Sentença",
+         "sub": "tem sujeito e predicado"
+        },
+        {
+         "titulo": "Fechada?",
+         "sub": "dá para dizer V ou F"
+        },
+        {
+         "titulo": "Proposição",
+         "sub": "objeto do RLM"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Comece pela frase. Ficam fora logo de cara: <b>exclamação</b> (Que belo dia!), <b>pergunta</b> (O jogo terminou?), <b>ordem</b> (Escreva uma poesia) e <b>frase sem verbo</b> (Um excelente livro). Nenhuma delas pode ser V ou F."
+        },
+        {
+         "no": 1,
+         "texto": "Sobra a <b>sentença declarativa</b>: diz algo (predicado) sobre alguém ou algo (sujeito). Ex.: Jasão é elegante. Dois mais dois são 5."
+        },
+        {
+         "no": 2,
+         "texto": "A sentença é <b>aberta</b> quando o valor não pode ser determinado, porque falta saber quem é o sujeito: <b>Ele</b> foi o melhor jogador; <b>x + y</b> é inteiro. É <b>fechada</b> quando o valor pode ser determinado, mesmo que você não saiba qual é."
+        },
+        {
+         "no": 3,
+         "texto": "Sentença fechada = <b>proposição</b>. Dois mais dois são 5 é proposição (falsa). João da Silva foi Secretário da Fazenda em 2000 é proposição: dá para conferir, ainda que você não saiba a resposta."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Não saber ≠ não poder",
+       "html": "Sentença aberta é a que <b>não pode</b> ser determinada, não a que <b>você não sabe</b> determinar. O professor tem um felis catus é fechada: existe resposta (felis catus é o gato), só você que não sabe."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Princípio 1",
+         "titulo": "Identidade",
+         "texto": "Uma proposição verdadeira é sempre verdadeira; uma falsa é sempre falsa. Se p aparece de novo na questão, tem o mesmo valor."
+        },
+        {
+         "tag": "Princípio 2",
+         "titulo": "Não contradição",
+         "texto": "Nenhuma proposição é V e F ao mesmo tempo."
+        },
+        {
+         "tag": "Princípio 3",
+         "titulo": "Terceiro excluído",
+         "texto": "Só existem dois valores lógicos. Não há terceira opção. Por isso a frase A próxima é verdadeira / A anterior é falsa não fecha: as duas se contradizem (FCC)."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Proposição <b>simples</b> tem uma ideia só e nenhum conectivo (Gus é professor). Proposição <b>composta</b> junta duas ou mais simples por um <b>conectivo</b> (Gus é professor e o Ceisc está em festa). Cuidado com o verbo escondido: Gus joga futebol e vôlei são duas simples (joga futebol; joga vôlei) e, portanto, uma composta. O valor da composta depende só do valor das simples e do conectivo, como 8 e 2 dão 10, 6, 16 ou 4 conforme o sinal."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: os cinco conectivos e a tabela-verdade",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "tabela",
+       "cab": [
+        "Conectivo",
+        "Símbolo",
+        "Em português",
+        "Regra para decorar"
+       ],
+       "linhas": [
+        [
+         "Conjunção",
+         "∧ (ou ^)",
+         "e, mas",
+         "<b>Só é V quando ambas são V.</b>"
+        ],
+        [
+         "Disjunção inclusiva",
+         "∨ (ou v)",
+         "ou",
+         "<b>Só é F quando ambas são F.</b>"
+        ],
+        [
+         "Disjunção exclusiva",
+         "⊻ (ou ⊕)",
+         "ou..., ou...",
+         "<b>V quando diferentes; F quando iguais.</b>"
+        ],
+        [
+         "Condicional",
+         "→",
+         "se..., então...",
+         "<b>Só é F em V → F</b> (Se Vera Fischer, então Falso)."
+        ],
+        [
+         "Bicondicional",
+         "↔",
+         "... se, e somente se, ...",
+         "<b>V quando iguais; F quando diferentes.</b> Lembra o sinal de igual."
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Agora a tabela inteira de uma vez. As linhas são as 4 combinações de p e q; as colunas, os conectivos. Toque em cada célula: ela diz se a composta é V e por quê."
+      },
+      {
+       "t": "matriz",
+       "linhas": [
+        "p = V, q = V",
+        "p = V, q = F",
+        "p = F, q = V",
+        "p = F, q = F"
+       ],
+       "colunas": [
+        "p ∧ q",
+        "p ∨ q",
+        "p ⊻ q",
+        "p → q",
+        "p ↔ q"
+       ],
+       "celulas": [
+        [
+         [
+          true,
+          "Ambas V: o E é V."
+         ],
+         [
+          true,
+          "Pelo menos uma V."
+         ],
+         [
+          false,
+          "Iguais: o OU...OU é F."
+         ],
+         [
+          true,
+          "V → V é V."
+         ],
+         [
+          true,
+          "Iguais: V."
+         ]
+        ],
+        [
+         [
+          false,
+          "Uma F derruba o E."
+         ],
+         [
+          true,
+          "Basta uma V."
+         ],
+         [
+          true,
+          "Diferentes: V."
+         ],
+         [
+          false,
+          "A única linha falsa: V → F."
+         ],
+         [
+          false,
+          "Diferentes: F."
+         ]
+        ],
+        [
+         [
+          false,
+          "Uma F derruba o E."
+         ],
+         [
+          true,
+          "Basta uma V."
+         ],
+         [
+          true,
+          "Diferentes: V."
+         ],
+         [
+          true,
+          "F → V é V: antecedente falso não quebra a promessa."
+         ],
+         [
+          false,
+          "Diferentes: F."
+         ]
+        ],
+        [
+         [
+          false,
+          "Ambas F."
+         ],
+         [
+          false,
+          "A única linha falsa do OU: ambas F."
+         ],
+         [
+          false,
+          "Iguais: F."
+         ],
+         [
+          true,
+          "F → F é V."
+         ],
+         [
+          true,
+          "Iguais: V."
+         ]
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "O condicional é o conectivo mais cobrado. O que vem depois do <b>se</b> é o <b>antecedente</b>, a condição <b>suficiente</b>. O que vem depois do <b>então</b> é o <b>consequente</b>, a condição <b>necessária</b>. Para lembrar: Se <b>S</b>uficiente, e<b>N</b>tão <b>N</b>ecessária. A banca troca o se, então por outras palavras com a mesma ideia de condição. Vire as cartas."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Quando..., ...",
+         "sub": "disfarce",
+         "verso": "Quando eu parar de comer, emagrecerei = Se eu parar de comer, então emagrecerei."
+        },
+        {
+         "frente": "Toda vez que / Sempre que",
+         "sub": "disfarce",
+         "verso": "Sempre que joga bem, a equipe ganha = Se joga bem, então a equipe ganha."
+        },
+        {
+         "frente": "..., pois ...",
+         "sub": "disfarce invertido",
+         "verso": "Fui à praia, pois fez sol = Se fez sol, então fui à praia.",
+         "detalhe": "O que vem depois do pois é a causa: vira o antecedente."
+        },
+        {
+         "frente": "..., logo ...",
+         "sub": "disfarce",
+         "verso": "Antônio fuma, logo o risco é maior = Se Antônio fuma, então o risco é maior."
+        },
+        {
+         "frente": "A é consequência de B",
+         "sub": "cuidado com a ordem",
+         "verso": "Vira B → A. A causa (B) é o antecedente.",
+         "detalhe": "Caiu no Cebraspe 2025 (EMBRAPA): escrever P → (R ∧ Q) com P sendo a consequência está errado."
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Contar",
+         "sub": "n simples"
+        },
+        {
+         "titulo": "Linhas",
+         "sub": "2ⁿ"
+        },
+        {
+         "titulo": "Colunas simples",
+         "sub": "metade V, metade F"
+        },
+        {
+         "titulo": "Parênteses",
+         "sub": "de dentro para fora"
+        },
+        {
+         "titulo": "Final",
+         "sub": "conectivo principal"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Monte a tabela de <b>(p ∨ q) ⊻ (p ∧ q)</b>. Primeiro, conte as proposições simples: p e q, então <b>n = 2</b>."
+        },
+        {
+         "no": 1,
+         "texto": "Número de linhas: <b>2ⁿ</b>. Com 2 simples, 2² = <b>4</b> linhas. Com 3, 8 linhas; com 4, 16."
+        },
+        {
+         "no": 2,
+         "texto": "Na 1ª coluna, metade V e metade F: V, V, F, F. Na 2ª, metade da anterior, alternando: V, F, V, F."
+        },
+        {
+         "no": 3,
+         "texto": "Resolva cada parêntese com sua tabela. (p ∨ q): V, V, V, F. (p ∧ q): V, F, F, F."
+        },
+        {
+         "no": 4,
+         "texto": "O conectivo principal (⊻) liga as duas colunas: iguais dá F, diferentes dá V. Resultado: <b>F, V, V, F</b>."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Tautologia, contradição e contingência",
+       "html": "Olhe só a última coluna. Toda V: <b>tautologia</b> (ex.: p ∨ ~p). Toda F: <b>contradição</b> (ex.: p ∧ ~p). Com V e F: <b>contingência</b> (ex.: a tabela acima, F, V, V, F)."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e armadilhas: negação não é contrário, equivalência não é negação",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Negar</b> é inverter o valor lógico. A regra da simples é bota e tira o não: O celular é caro → O celular não é caro. A negação <b>não é o antônimo</b>: a negação de caro não é barato, porque o celular pode ser de graça. E negar duas vezes volta ao início: ~(~p) = p.<br><br>Nas compostas, cada conectivo tem sua negação. Suba a escada."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "~(p ∧ q)",
+         "sub": "De Morgan",
+         "texto": "<b>~p ∨ ~q</b>. A negação do E é o OU e nega todo mundo. O atleta treina e o torcedor sofre → O atleta não treina <b>ou</b> o torcedor não sofre."
+        },
+        {
+         "titulo": "~(p ∨ q)",
+         "sub": "De Morgan",
+         "texto": "<b>~p ∧ ~q</b>. A negação do OU é o E e nega todo mundo. É azul ou verde → Não é azul <b>e</b> não é verde (nem azul, nem verde)."
+        },
+        {
+         "titulo": "~(p ↔ q) e ~(p ⊻ q)",
+         "sub": "troca o conectivo",
+         "texto": "A negação do se e somente se é o ou...ou, e vice-versa: <b>~(p ↔ q) = p ⊻ q</b> e <b>~(p ⊻ q) = p ↔ q</b>."
+        },
+        {
+         "titulo": "~(p → q)",
+         "sub": "regra do Mané",
+         "texto": "<b>p ∧ ~q</b>. MAntém a primeira E NEga a segunda. Se faz sol, então passeio → Faz sol <b>e</b> não passeio. A negação do se, então nunca é outro se, então."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Equivalente</b> é diferente de negação: é a mesma ideia dita de outro jeito, com as mesmas simples e a mesma última coluna na tabela. O se, então tem duas equivalentes. Compare as três frases a partir de Se estudo, então sou nomeado."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Contrapositiva",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "p → q",
+           "sub": "Se estudo, então sou nomeado"
+          },
+          {
+           "titulo": "~q → ~p",
+           "sub": "Se não sou nomeado, então não estudo"
+          }
+         ],
+         "texto": "<b>Equivalente.</b> Nega-nega, troca-troca: nega as duas e inverte a ordem. Diz a mesma coisa."
+        },
+        {
+         "rotulo": "Disjunção",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "p → q",
+           "sub": "Se estudo, então sou nomeado"
+          },
+          {
+           "titulo": "~p ∨ q",
+           "sub": "Não estudo ou sou nomeado"
+          }
+         ],
+         "texto": "<b>Equivalente.</b> Nega a primeira, mantém a segunda e troca o se, então pelo ou (NeyMar: Nega e Mantém)."
+        },
+        {
+         "rotulo": "Recíproca (armadilha)",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "p → q",
+           "sub": "Se estudo, então sou nomeado"
+          },
+          {
+           "titulo": "q → p",
+           "sub": "Se sou nomeado, então estudo"
+          }
+         ],
+         "texto": "<b>Não é equivalente.</b> Só inverter a ordem muda o sentido. A FGV usa essa alternativa para pegar quem decora pela metade."
+        },
+        {
+         "rotulo": "Negação (outra coisa)",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "p → q",
+           "sub": "Se estudo, então sou nomeado"
+          },
+          {
+           "titulo": "p ∧ ~q",
+           "sub": "Estudo e não sou nomeado"
+          }
+         ],
+         "texto": "<b>É a negação</b>, não a equivalente: tem sempre o valor oposto."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Quantificadores (todo, algum, nenhum)",
+       "html": "A negação de <b>Todo</b> A é B é <b>Algum</b> A não é B (basta um que não seja). A negação de <b>Algum</b> A é B é <b>Nenhum</b> A é B. Não troque Todo por Nenhum: são contrários, não negação. A FGV juntou isso com De Morgan: a negação de Todos os crimes foram sustentados por evidência ou depoimento é Algum crime não foi sustentado por evidência nem por depoimento."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A negação de Se chove, então levo guarda-chuva é Se não chove, então não levo guarda-chuva.",
+         "v": false,
+         "porque": "Negação do condicional é a regra do Mané: Chove e não levo guarda-chuva."
+        },
+        {
+         "texto": "Se chove, então levo guarda-chuva equivale a Não chove ou levo guarda-chuva.",
+         "v": true,
+         "porque": "p → q = ~p ∨ q."
+        },
+        {
+         "texto": "Se a proposição O carro é azul ou verde é falsa, então o carro não é azul e não é verde.",
+         "v": true,
+         "porque": "O OU só é F quando as duas são F."
+        },
+        {
+         "texto": "Se p → q é falsa, então p é falsa.",
+         "v": false,
+         "porque": "O condicional só é F em V → F: p é verdadeira e q é falsa."
+        },
+        {
+         "texto": "A negação de O celular é caro é O celular é barato.",
+         "v": false,
+         "porque": "Negação não é antônimo: O celular não é caro."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como a banca cobra: dar um valor e pedir a conclusão",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "As questões do material seguem dois moldes. A <b>FCC</b> pergunta o que é sentença, proposição e sentença aberta (4 questões do bloco 01). <b>FGV</b> e <b>Cebraspe</b> dão o valor de uma composta e pedem o que se conclui, a negação ou a equivalente. Na prova da PGE-MA, a FCC pode usar qualquer dos dois. Treine o raciocínio: dada a composta, o que eu sei das simples?"
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "A banca diz que é...",
+        "Então você conclui"
+       ],
+       "linhas": [
+        [
+         "p ∧ q verdadeira",
+         "p é V e q é V."
+        ],
+        [
+         "p ∨ q falsa",
+         "p é F e q é F."
+        ],
+        [
+         "p → q falsa",
+         "p é V e q é F."
+        ],
+        [
+         "p ↔ q verdadeira",
+         "p e q têm o mesmo valor (não se sabe qual)."
+        ],
+        [
+         "p ⊻ q verdadeira",
+         "p e q têm valores diferentes."
+        ],
+        [
+         "(~r) → (p ∨ q) falsa",
+         "~r é V e p ∨ q é F: p, q e r são todas F (FGV 2025)."
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As armadilhas das alternativas",
+       "html": "1) Oferecer a <b>recíproca</b> (q → p) como equivalente. 2) Negar o se, então com outro se, então. 3) Negar o E com outro E (A camiseta não é branca <b>e</b> a bermuda não é preta). 4) Trocar <b>no máximo 3</b> por <b>pelo menos 3</b>: a negação de no máximo 3 é <b>pelo menos 4</b> (mais de 3). 5) Mudar o tempo da frase e esperar que você ajuste ontem e amanhã (FGV 2026)."
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "rl-001",
+    "rl-002",
+    "rl-003",
+    "rl-004",
+    "rl-005",
+    "rl-el-r01",
+    "rl-el-r02",
+    "rl-el-r03",
+    "rl-el-r04",
+    "rl-el-r05",
+    "rl-el-r06",
+    "rl-el-r07",
+    "rl-el-r08",
+    "rl-el-r09",
+    "rl-el-r10",
+    "rl-el-r11",
+    "rl-el-r12",
+    "rl-el-r13",
+    "rl-el-r14",
+    "rl-el-r15",
+    "rl-el-r16",
+    "rl-el-r17",
+    "rl-el-r18",
+    "rl-el-01",
+    "rl-el-02",
+    "rl-el-03",
+    "rl-el-04",
+    "rl-el-05",
+    "rl-el-06"
+   ]
+  },
+  {
+   "id": "A2-a02",
+   "topico_id": "A2-02",
+   "numero": 2,
+   "titulo": "Argumentação lógica",
+   "status": "pronta",
+   "fonte": "Ceisc: Prof. Gustavo Rodrigues (aula 9 e TAQ VUNESP das aulas 9 e 10); lógica clássica para formas válidas e falácias",
+   "resumo": [
+    "Argumento é um conjunto de proposições: as premissas e a conclusão. A conclusão tem que sair das premissas, não da sua opinião nem do mundo real.",
+    "Válido é o argumento em que é impossível ter todas as premissas V e a conclusão F. Validade é da forma; verdade é de cada proposição. Existe argumento válido com premissa falsa.",
+    "Na prova, considere as premissas verdadeiras e comece pela proposição simples (ou pela conjunção): ela dá um valor certo, que você propaga pelas outras premissas.",
+    "Formas válidas: modus ponens (p → q; p; logo q), modus tollens (p → q; ~q; logo ~p), silogismo hipotético (p → q; q → r; logo p → r) e silogismo disjuntivo (p ∨ q; ~p; logo q).",
+    "Falácias formais: afirmar o consequente (p → q; q; logo p) e negar o antecedente (p → q; ~p; logo ~q). Com todo, algum e nenhum, desenhe os conjuntos e procure um desenho que derrube a conclusão."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: o que é argumento, premissa e conclusão",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Na aula 1 você aprendeu a dar valor lógico a <b>uma</b> proposição. Argumentar é o passo seguinte: juntar várias proposições e tirar delas uma nova. Esse conjunto se chama <b>argumento</b>. As proposições de partida são as <b>premissas</b>; a que se tira delas é a <b>conclusão</b>. Pode haver quantas premissas a questão quiser, mas todas precisam estar ligadas à conclusão.<br><br>O argumento não é uma receita de passos a cumprir nem uma lista de ordens. É uma relação de dependência: as premissas levam à conclusão."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Premissas",
+         "sub": "o que a banca dá como V"
+        },
+        {
+         "titulo": "Conectivos",
+         "sub": "as regras da aula 1"
+        },
+        {
+         "titulo": "Conclusão",
+         "sub": "o que sai delas"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "A banca escreve <b>Considere verdadeiras as seguintes premissas</b>. Você não discute se elas são verdadeiras na vida real: aceita todas como V."
+        },
+        {
+         "no": 1,
+         "texto": "Com as tabelas dos conectivos (e, ou, se então...), descobre o valor de cada proposição simples. É aqui que a aula 1 trabalha por você."
+        },
+        {
+         "no": 2,
+         "texto": "A <b>conclusão</b> correta é a que fica obrigatoriamente V com esses valores. Alternativa que pode ser V, mas não precisa ser, está errada."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "A conclusão vem das premissas, não do mundo",
+       "html": "A banca coloca alternativas que parecem certas pelo bom senso, mas não decorrem das premissas. Se a premissa diz que todo gato voa, você trabalha com gatos que voam. Pergunte sempre: <b>isso sai do que foi dado?</b>"
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Tipo 1",
+         "titulo": "Argumento dedutivo",
+         "texto": "A conclusão sai <b>necessariamente</b> das premissas: se elas são V, a conclusão é V. É o tipo cobrado no edital e nas questões de concurso."
+        },
+        {
+         "tag": "Tipo 2",
+         "titulo": "Argumento indutivo",
+         "texto": "Parte de casos e generaliza: os 30 processos que li foram providos, logo todos serão. A conclusão é <b>provável</b>, não garantida. Generalizar a partir de poucos casos é falácia."
+        },
+        {
+         "tag": "Peça",
+         "titulo": "Silogismo",
+         "texto": "Argumento dedutivo com <b>duas premissas e uma conclusão</b>. Pode ser com conectivos (silogismo hipotético e disjuntivo) ou com todo, algum e nenhum (silogismo categórico)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: validade, verdade e o método da proposição simples",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Válido</b> não quer dizer verdadeiro. Um argumento é válido quando é <b>impossível</b> ter todas as premissas V e a conclusão F. A validade olha só a <b>forma</b>, o encaixe entre premissas e conclusão. Toque em cada célula e veja o que pode acontecer num argumento válido (V = pode acontecer; F = nunca acontece)."
+      },
+      {
+       "t": "matriz",
+       "linhas": [
+        "Premissas todas V",
+        "Alguma premissa F"
+       ],
+       "colunas": [
+        "Conclusão V",
+        "Conclusão F"
+       ],
+       "celulas": [
+        [
+         [
+          true,
+          "Pode. É o caso perfeito: argumento válido e conclusão verdadeira (argumento sólido)."
+         ],
+         [
+          false,
+          "Nunca. Se isso for possível, o argumento é inválido. Essa é a definição de validade."
+         ]
+        ],
+        [
+         [
+          true,
+          "Pode. Todo procurador é ministro do STF; todo ministro do STF é bacharel em Direito; logo, todo procurador é bacharel. Válido, premissa F, conclusão V."
+         ],
+         [
+          true,
+          "Pode. Todo procurador é jogador de futebol; todo jogador é maranhense; logo, todo procurador é maranhense. Válido, com premissas e conclusão F."
+         ]
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Teste de validade em uma linha",
+       "html": "Para saber se um argumento é válido, tente o cenário proibido: <b>conclusão F e todas as premissas V</b>. Se conseguir montar esse cenário, o argumento é <b>inválido</b>. Se der contradição, é <b>válido</b>."
+      },
+      {
+       "t": "texto",
+       "html": "Nas questões com 3 ou 4 premissas, o caminho é sempre o mesmo: <b>comece pela proposição simples</b> (ou por uma conjunção, que obriga as duas partes a serem V). Ela dá um valor certo. Depois propague. Veja com uma questão real da VUNESP (TAQ Ceisc)."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "IV",
+         "sub": "simples"
+        },
+        {
+         "titulo": "II",
+         "sub": "ou"
+        },
+        {
+         "titulo": "I",
+         "sub": "se, então"
+        },
+        {
+         "titulo": "III",
+         "sub": "nada sai"
+        },
+        {
+         "titulo": "Conclusão",
+         "sub": "o que é certo"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Premissas: I. Se Alice fez os exames no mês passado, então João não fez os exames no mês atual. II. João fez os exames no mês atual ou Valter fará os exames no próximo mês. III. Se João não fez os exames no mês atual, então Rita não marcou a consulta de retorno e Caio já passou em consulta. IV. <b>Valter não fará os exames no próximo mês</b>. A IV é simples: comece por ela. Valter fará = F."
+        },
+        {
+         "no": 1,
+         "texto": "II é um <b>ou</b>, e o ou só é F se as duas partes forem F. A parte do Valter é F, então a do João tem que ser V: <b>João fez os exames no mês atual</b>."
+        },
+        {
+         "no": 2,
+         "texto": "I é um <b>se, então</b> com consequente João não fez = F. Para o condicional continuar V, o antecedente tem que ser F (senão seria V → F): <b>Alice não fez os exames no mês passado</b>. Isso é o modus tollens."
+        },
+        {
+         "no": 3,
+         "texto": "III tem antecedente João não fez = F. Antecedente F deixa o condicional V qualquer que seja o consequente: <b>nada se conclui sobre Rita e Caio</b>. As alternativas sobre eles são a armadilha."
+        },
+        {
+         "no": 4,
+         "texto": "Conclusão certa: <b>Alice não fez os exames no mês passado</b> (gabarito A)."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Esse raciocínio usa sempre as mesmas formas de argumento válido. Vire as cartas: a da frente é o nome que a banca pode usar; atrás está a forma e um exemplo."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Modus ponens",
+         "sub": "afirma o antecedente",
+         "verso": "p → q; p; logo q. Se a Fazenda foi citada, o prazo corre. Foi citada. Logo, o prazo corre."
+        },
+        {
+         "frente": "Modus tollens",
+         "sub": "nega o consequente",
+         "verso": "p → q; ~q; logo ~p. Se foi citada, o prazo corre. O prazo não corre. Logo, não foi citada.",
+         "detalhe": "É o mais usado nas questões com várias premissas."
+        },
+        {
+         "frente": "Silogismo hipotético",
+         "sub": "corrente de condicionais",
+         "verso": "p → q; q → r; logo p → r. Se estudo, passo; se passo, sou nomeada; logo, se estudo, sou nomeada."
+        },
+        {
+         "frente": "Silogismo disjuntivo",
+         "sub": "elimina uma parte do ou",
+         "verso": "p ∨ q; ~p; logo q. O recurso é apelação ou agravo. Não é apelação. Logo, é agravo."
+        },
+        {
+         "frente": "Dilema construtivo",
+         "sub": "dois caminhos, mesmo fim",
+         "verso": "p → r; q → r; p ∨ q; logo r. Se chove, o prazo é prorrogado; se falta energia, também; choveu ou faltou energia; logo, o prazo é prorrogado."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e armadilhas: falácias e os quantificadores",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Falácia</b> é o argumento que parece válido, mas não é. As duas <b>falácias formais</b> são parentes do modus ponens e do modus tollens com o lado trocado. Compare."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Modus ponens",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "p → q e p",
+           "sub": "Se é servidor, tem matrícula. É servidor."
+          },
+          {
+           "titulo": "logo q",
+           "sub": "Tem matrícula."
+          }
+         ],
+         "texto": "<b>Válido.</b> Afirmou o antecedente: a conclusão é obrigatória."
+        },
+        {
+         "rotulo": "Afirmar o consequente",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "p → q e q",
+           "sub": "Se é servidor, tem matrícula. Tem matrícula."
+          },
+          {
+           "titulo": "logo p?",
+           "sub": "É servidor?"
+          }
+         ],
+         "texto": "<b>Falácia.</b> Ter matrícula não prova ser servidor: um estagiário também pode ter. Antecedente F e consequente V deixam o condicional V."
+        },
+        {
+         "rotulo": "Modus tollens",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "p → q e ~q",
+           "sub": "Se é servidor, tem matrícula. Não tem matrícula."
+          },
+          {
+           "titulo": "logo ~p",
+           "sub": "Não é servidor."
+          }
+         ],
+         "texto": "<b>Válido.</b> Negou o consequente: o antecedente cai junto."
+        },
+        {
+         "rotulo": "Negar o antecedente",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "p → q e ~p",
+           "sub": "Se é servidor, tem matrícula. Não é servidor."
+          },
+          {
+           "titulo": "logo ~q?",
+           "sub": "Não tem matrícula?"
+          }
+         ],
+         "texto": "<b>Falácia.</b> Quem não é servidor pode ter matrícula por outro motivo. Antecedente F não diz nada sobre o consequente."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "As <b>falácias informais</b> não erram na forma, erram no conteúdo: atacam a pessoa, apelam à emoção ou à maioria. A FCC costuma pedir o nome do erro num texto curto. Abra cada uma."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Contra a pessoa",
+         "titulo": "Ad hominem",
+         "texto": "Ataca quem fala, não o argumento. O parecer está errado porque o autor foi reprovado em dois concursos."
+        },
+        {
+         "tag": "Autoridade",
+         "titulo": "Apelo à autoridade",
+         "texto": "Aceita a tese só porque alguém famoso disse, sem razão própria. Usar a autoridade fora da área dela agrava o erro."
+        },
+        {
+         "tag": "Maioria",
+         "titulo": "Ad populum",
+         "texto": "É verdade porque todo mundo acredita. Quase todos os candidatos dizem que essa matéria não cai, logo não cai."
+        },
+        {
+         "tag": "Causa",
+         "titulo": "Falsa causa (post hoc)",
+         "texto": "Depois disso, logo por causa disso. O secretário assumiu e a arrecadação caiu; logo, ele causou a queda."
+        },
+        {
+         "tag": "Generalização",
+         "titulo": "Generalização apressada",
+         "texto": "Conclui sobre todos a partir de poucos casos. Dois servidores do órgão faltaram, logo o órgão inteiro é faltoso."
+        },
+        {
+         "tag": "Escolha",
+         "titulo": "Falso dilema",
+         "texto": "Apresenta só duas saídas quando existem outras. Ou aprovamos a lei hoje, ou o Estado quebra."
+        },
+        {
+         "tag": "Distorção",
+         "titulo": "Espantalho",
+         "texto": "Deforma a tese do outro para atacar a versão fraca. Ele quer rever o contrato, então quer acabar com todos os contratos do Estado."
+        },
+        {
+         "tag": "Círculo",
+         "titulo": "Petição de princípio",
+         "texto": "A conclusão já está escondida na premissa. A norma é válida porque não é inválida."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Quando as premissas usam <b>todo</b>, <b>algum</b> e <b>nenhum</b>, os conectivos não ajudam: desenhe conjuntos (diagramas de Euler e Venn). Suba a escada do quantificador mais forte para o mais fraco."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Todo A é B",
+         "sub": "A dentro de B",
+         "texto": "O círculo A fica <b>inteiro dentro</b> de B. Todo procurador é advogado: o círculo dos procuradores está dentro do dos advogados. Atenção: não diz que todo B é A."
+        },
+        {
+         "titulo": "Nenhum A é B",
+         "sub": "círculos separados",
+         "texto": "A e B <b>não se tocam</b>. Vale nos dois sentidos: nenhum B é A."
+        },
+        {
+         "titulo": "Algum A é B",
+         "sub": "círculos cruzados",
+         "texto": "Existe pelo menos um elemento na <b>interseção</b>. Vale nos dois sentidos: algum B é A. Não diz se há A fora de B."
+        },
+        {
+         "titulo": "Algum A não é B",
+         "sub": "parte de A fora",
+         "texto": "Existe pelo menos um A <b>fora</b> de B. Não vale ao contrário: algum B não é A pode ser falso."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Como achar a conclusão com diagramas",
+       "html": "1) Desenhe a premissa universal (todo, nenhum) primeiro. 2) Encaixe a particular (algum) <b>de todos os jeitos possíveis</b>. 3) A conclusão certa é a que vale em <b>todos</b> os desenhos. Se existe um desenho que a derruba, ela não é obrigatória. Ex.: Todo procurador é advogado e algum advogado é professor <b>não</b> garante que algum procurador é professor: o professor pode ser um advogado de fora do círculo dos procuradores."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "Um argumento válido pode ter premissas falsas.",
+         "v": true,
+         "porque": "Validade é da forma. Todo procurador é jogador; todo jogador é maranhense; logo, todo procurador é maranhense: válido, premissas F."
+        },
+        {
+         "texto": "Se o argumento é válido e as premissas são verdadeiras, a conclusão é verdadeira.",
+         "v": true,
+         "porque": "É a própria definição: num válido não existe premissas V com conclusão F."
+        },
+        {
+         "texto": "Se chove, o chão molha. O chão está molhado. Logo, choveu. Esse argumento é válido.",
+         "v": false,
+         "porque": "Afirmação do consequente: o chão pode ter molhado por outro motivo."
+        },
+        {
+         "texto": "Se chove, o chão molha. O chão não está molhado. Logo, não choveu. Esse argumento é válido.",
+         "v": true,
+         "porque": "Modus tollens: nega o consequente, nega o antecedente."
+        },
+        {
+         "texto": "Todo A é B e todo B é C permitem concluir que todo A é C.",
+         "v": true,
+         "porque": "Círculo A dentro de B, B dentro de C: A fica dentro de C."
+        },
+        {
+         "texto": "Algum A é B e algum B é C permitem concluir que algum A é C.",
+         "v": false,
+         "porque": "O B que é C pode ser outro, de fora de A. Duas particulares não dão conclusão obrigatória."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como a banca cobra: premissas verdadeiras e uma conclusão que decorre",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "As 3 questões de argumentação do material (VUNESP) seguem o mesmo molde: <b>Considere verdadeiras as seguintes premissas</b>, 3 ou 4 premissas com conectivos e a pergunta <b>uma conclusão verdadeira que decorre das premissas é</b>. A FCC usa o mesmo molde e também cobra silogismos com todo, algum e nenhum e a identificação de argumento válido ou de falácia. Na prova da PGE-AM (FCC 2022) não caiu argumentação: as 5 de RLM foram de matemática e problemas. Treine o molde para não perder a questão se ela vier."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Premissa V do tipo...",
+        "O que ela te dá"
+       ],
+       "linhas": [
+        [
+         "Simples (p)",
+         "O valor de p. Comece por ela."
+        ],
+        [
+         "Conjunção (p ∧ q)",
+         "p V e q V. Também é ponto de partida."
+        ],
+        [
+         "Disjunção (p ∨ q) com uma parte F",
+         "A outra parte é V (silogismo disjuntivo)."
+        ],
+        [
+         "Ou...ou (p ⊻ q) com uma parte conhecida",
+         "A outra tem o valor oposto."
+        ],
+        [
+         "Condicional (p → q) com p V",
+         "q é V (modus ponens)."
+        ],
+        [
+         "Condicional (p → q) com q F",
+         "p é F (modus tollens)."
+        ],
+        [
+         "Condicional (p → q) com p F ou q V",
+         "Nada sobre a outra parte. Não conclua."
+        ],
+        [
+         "Bicondicional (p ↔ q) com uma parte conhecida",
+         "A outra tem o mesmo valor."
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "As armadilhas das alternativas",
+       "html": "1) Alternativa sobre proposição que <b>ficou sem valor</b> (como Rita e Caio na questão acima). 2) Afirmar o consequente ou negar o antecedente disfarçados. 3) Quando nenhuma premissa é simples, <b>suponha</b> um valor e veja se dá contradição (questão do Ana, Ricardo e João: supor Ana V quebra a premissa do ou...ou). 4) Com quantificadores, alternativa que vale em um desenho, mas não em todos. 5) Usar o que você sabe do mundo real em vez das premissas."
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "rl-006",
+    "rl-ar-r01",
+    "rl-ar-r02",
+    "rl-ar-r03",
+    "rl-ar-01",
+    "rl-ar-02",
+    "rl-ar-03",
+    "rl-ar-04",
+    "rl-ar-05",
+    "rl-ar-06",
+    "rl-ar-07",
+    "rl-ar-08",
+    "rl-ar-09",
+    "rl-ar-10"
+   ]
+  },
+  {
+   "id": "A2-a03",
+   "topico_id": "A2-03",
+   "numero": 3,
+   "titulo": "Problemas de lógica",
+   "status": "a_montar"
+  },
+  {
+   "id": "A2-a04",
+   "topico_id": "A2-04",
+   "numero": 4,
+   "titulo": "Teoria dos conjuntos",
+   "status": "a_montar"
+  },
+  {
+   "id": "A2-a05",
+   "topico_id": "A2-05",
+   "numero": 5,
+   "titulo": "Matemática básica",
+   "status": "a_montar"
+  },
+  {
+   "id": "A2-a06",
+   "topico_id": "A2-06",
+   "numero": 6,
+   "titulo": "Análise combinatória",
+   "status": "a_montar"
+  },
+  {
+   "id": "A2-a07",
+   "topico_id": "A2-07",
+   "numero": 7,
+   "titulo": "Probabilidade",
+   "status": "a_montar"
+  },
+  {
+   "id": "A2-a08",
+   "topico_id": "A2-08",
+   "numero": 8,
+   "titulo": "Estatística básica (tendência central e dispersão)",
+   "status": "a_montar"
+  }
+ ],
+ "glossario": [
+  [
+   "Proposição",
+   "Sentença declarativa fechada, que pode ser V ou F."
+  ],
+  [
+   "Conectivo",
+   "Palavra que une proposições simples: e, ou, ou...ou, se...então, se e somente se."
+  ],
+  [
+   "Antecedente",
+   "O que vem depois do se no condicional; é a condição suficiente."
+  ],
+  [
+   "Consequente",
+   "O que vem depois do então; é a condição necessária."
+  ],
+  [
+   "Contrapositiva",
+   "~q → ~p, equivalente a p → q."
+  ],
+  [
+   "Tautologia",
+   "Proposição composta sempre verdadeira."
+  ],
+  [
+   "De Morgan",
+   "Regras de negação do e e do ou: troca o conectivo e nega as partes."
+  ],
+  [
+   "Argumento",
+   "Conjunto de premissas e uma conclusão que decorre delas."
+  ],
+  [
+   "Premissa",
+   "Proposição de partida do argumento; na questão, considerada verdadeira."
+  ],
+  [
+   "Argumento válido",
+   "Aquele em que é impossível ter todas as premissas V e a conclusão F."
+  ],
+  [
+   "Modus ponens",
+   "p → q; p; logo q."
+  ],
+  [
+   "Modus tollens",
+   "p → q; ~q; logo ~p."
+  ],
+  [
+   "Falácia",
+   "Argumento que parece válido, mas não é."
+  ],
+  [
+   "Silogismo",
+   "Argumento com duas premissas e uma conclusão."
+  ]
+ ]
+}
