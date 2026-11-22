@@ -329,5 +329,79 @@
    "v": false,
    "exp": "Errado. É fundamento da República (art. 1º, V). Não é assunto entre países."
   }
+ },
+ "Constitucional|Direitos fundamentais": {
+  "titulo": "Art. 5º: onde a FCC esconde a pegadinha",
+  "passos": [
+   {
+    "t": "Para quem vale?",
+    "r": "confira",
+    "d": "HC e HD: todos. Registro e certidão de óbito: reconhecidamente pobres. Ação popular: cidadão. Pessoa jurídica também é titular de direitos.",
+    "lei": "LXXVI - são gratuitos para os reconhecidamente pobres, na forma da lei: a) o registro civil de nascimento; b) a certidão de óbito;\nLXXVII - são gratuitas as ações de habeas corpus e habeas data, e, na forma da lei, os atos necessários ao exercício da cidadania.\nLXXIII - qualquer cidadão é parte legítima para propor ação popular que vise a anular ato lesivo ao patrimônio público ou de entidade de que o Estado participe, à moralidade administrativa, ao meio ambiente e ao patrimônio histórico e cultural, ficando o autor, salvo comprovada má-fé, isento de custas judiciais e do ônus da sucumbência;"
+   },
+   {
+    "t": "Quando ou em que condição?",
+    "r": "confira",
+    "d": "Ordem judicial na casa: durante o dia. Prisão civil: voluntário e inescusável. Pequena propriedade: trabalhada pela família.",
+    "lei": "XI - a casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial;\nLXVII - não haverá prisão civil por dívida, salvo a do responsável pelo inadimplemento voluntário e inescusável de obrigação alimentícia e a do depositário infiel;\nXXVI - a pequena propriedade rural, assim definida em lei, desde que trabalhada pela família, não será objeto de penhora para pagamento de débitos decorrentes de sua atividade produtiva, dispondo a lei sobre os meios de financiar o seu desenvolvimento;"
+   },
+   {
+    "t": "Paga o quê, e quando?",
+    "r": "confira",
+    "d": "Requisição: indenização ulterior, se houver dano. Sucessores: até o limite do patrimônio transferido.",
+    "lei": "XXV - no caso de iminente perigo público, a autoridade competente poderá usar de propriedade particular, assegurada ao proprietário indenização ulterior, se houver dano;\nXLV - nenhuma pena passará da pessoa do condenado, podendo a obrigação de reparar o dano e a decretação do perdimento de bens ser, nos termos da lei, estendidas aos sucessores e contra eles executadas, até o limite do valor do patrimônio transferido;"
+   },
+   {
+    "t": "Qual é a exceção?",
+    "r": "confira",
+    "d": "Naturalizado pode ser extraditado (crime comum antes ou tráfico). Lei pessoal do de cujus vale se for mais favorável. Escusa de consciência só tira direitos se recusar a prestação alternativa.",
+    "lei": "LI - nenhum brasileiro será extraditado, salvo o naturalizado, em caso de crime comum, praticado antes da naturalização, ou de comprovado envolvimento em tráfico ilícito de entorpecentes e drogas afins, na forma da lei;\nXXXI - a sucessão de bens de estrangeiros situados no País será regulada pela lei brasileira em benefício do cônjuge ou dos filhos brasileiros, sempre que não lhes seja mais favorável a lei pessoal do \"de cujus\";\nVIII - ninguém será privado de direitos por motivo de crença religiosa ou de convicção filosófica ou política, salvo se as invocar para eximir-se de obrigação legal a todos imposta e recusar-se a cumprir prestação alternativa, fixada em lei;"
+   },
+   {
+    "t": "Tratado de direitos humanos",
+    "d": "Rito do § 3º (dois turnos, 3/5): equivale a emenda e é promulgado por decreto presidencial. Sem o rito: supralegal.",
+    "lei": "§ 3º Os tratados e convenções internacionais sobre direitos humanos que forem aprovados, em cada Casa do Congresso Nacional, em dois turnos, por três quintos dos votos dos respectivos membros, serão equivalentes às emendas constitucionais."
+   }
+  ],
+  "teste": {
+   "p": "São gratuitos, independentemente da condição social, o registro civil de nascimento e a certidão de óbito.",
+   "v": false,
+   "exp": "Errado pelo texto da CF: só para os reconhecidamente pobres, na forma da lei (art. 5º, LXXVI)."
+  }
+ },
+ "Constitucional|Poder constituinte": {
+  "titulo": "Que poder ou fenômeno é esse?",
+  "passos": [
+   {
+    "t": "Cria uma Constituição nova?",
+    "r": "sim",
+    "d": "Poder originário: inicial, autônomo, ilimitado e incondicionado. Suas normas não sofrem controle (ADI 815)."
+   },
+   {
+    "t": "Muda o texto da CF pelas regras dela?",
+    "r": "sim",
+    "d": "Derivado reformador (emendas) ou revisor. Limites: iniciativa (1/3 da Câmara ou do Senado), circunstâncias e cláusulas pétreas. Implícitos: sistema de governo e república.",
+    "lei": "I - de um terço, no mínimo, dos membros da Câmara dos Deputados ou do Senado Federal;\n§ 4º Não será objeto de deliberação a proposta de emenda tendente a abolir: I - a forma federativa de Estado; II - o voto direto, secreto, universal e periódico; III - a separação dos Poderes; IV - os direitos e garantias individuais."
+   },
+   {
+    "t": "Estado-membro fazendo a sua Constituição?",
+    "r": "sim",
+    "d": "Derivado decorrente: auto-organização dos Estados, dentro dos limites da CF."
+   },
+   {
+    "t": "Muda o sentido sem mudar o texto?",
+    "r": "sim",
+    "d": "Mutação constitucional: admitida, até o limite dos sentidos possíveis do texto e dos princípios fundamentais."
+   },
+   {
+    "t": "Norma antiga diante da CF nova",
+    "d": "Lei anterior compatível: recepção. Norma da Constituição velha que vira lei: desconstitucionalização (só se expressa). Lei revogada que volta: repristinação (só se expressa)."
+   }
+  ],
+  "teste": {
+   "p": "O poder constituinte originário é limitado pelas normas expressas e implícitas do texto constitucional vigente.",
+   "v": false,
+   "exp": "Errado. Isso descreve o poder derivado. O originário é ilimitado e cria nova ordem."
+  }
  }
 }
