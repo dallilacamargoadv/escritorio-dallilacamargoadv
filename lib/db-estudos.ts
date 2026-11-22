@@ -273,6 +273,7 @@ export interface Pomodoro {
   data: string;
   minutos_efetivos: number;
   pausas: number;
+  atividade: string | null;
   criado_em: string;
 }
 
@@ -280,16 +281,16 @@ export async function getPomodoros(desde: string): Promise<Pomodoro[]> {
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("estudo_pomodoros")
-    .select("id,data,minutos_efetivos,pausas,criado_em")
+    .select("id,data,minutos_efetivos,pausas,atividade,criado_em")
     .gte("data", desde)
     .order("criado_em", { ascending: true });
   if (error) throw error;
   return (data ?? []) as Pomodoro[];
 }
 
-export async function createPomodoro(p: { data: string; minutos_efetivos: number; pausas: number }): Promise<Pomodoro> {
+export async function createPomodoro(p: { data: string; minutos_efetivos: number; pausas: number; atividade?: string | null }): Promise<Pomodoro> {
   const supabase = await createClient();
-  const { data, error } = await supabase.from("estudo_pomodoros").insert(p).select("id,data,minutos_efetivos,pausas,criado_em").single();
+  const { data, error } = await supabase.from("estudo_pomodoros").insert(p).select("id,data,minutos_efetivos,pausas,atividade,criado_em").single();
   if (error) throw error;
   return data as Pomodoro;
 }
