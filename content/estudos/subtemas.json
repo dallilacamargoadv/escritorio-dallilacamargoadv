@@ -414,6 +414,111 @@
       "nome": "Meio, anexo, mesmo, menos, é proibido",
       "tema": "Concordância nominal",
       "revisao": "Meio com sentido de um pouco é advérbio e não varia (meio cansados). Anexo e mesmo (= próprio) concordam: anexas as certidões; ela mesma. Menos é invariável (menas não existe). É proibido, é necessário: sem artigo, ficam no masculino (É proibido entrada; É necessário paciência); com artigo, concordam (É proibida a entrada)."
+    },
+    "trib-conceito": {
+      "nome": "Conceito de tributo (CTN, art. 3º)",
+      "tema": "Tributo e espécies tributárias",
+      "revisao": "CTN, art. 3º: tributo é prestação pecuniária compulsória, em moeda ou cujo valor nela se possa exprimir, que NÃO constitua sanção de ato ilícito, instituída em lei e cobrada por atividade administrativa plenamente vinculada. Medida provisória pode instituir tributo (art. 62); decreto nunca. Dação em pagamento só de imóveis (CTN, art. 156, XI); lei local que aceita bens móveis ofende a licitação (ADI 1.917)."
+    },
+    "trib-ilicito-responsabilidade": {
+      "nome": "Fato ilícito, incapaz e responsabilidade dos pais",
+      "tema": "Tributo e espécies tributárias",
+      "revisao": "Tributo não é sanção, mas o fato gerador pode vir de atividade ilícita: o tributo é devido (CTN, art. 118). O menor também é contribuinte. CTN, art. 134, I: se não for possível exigir do filho, os pais respondem solidariamente nos atos em que intervierem ou pelas omissões de que forem responsáveis."
+    },
+    "trib-especies": {
+      "nome": "Espécies tributárias e natureza pelo fato gerador",
+      "tema": "Tributo e espécies tributárias",
+      "revisao": "CTN, art. 4º: a natureza do tributo é dada pelo fato gerador; o nome e a destinação da receita são irrelevantes. Fato do contribuinte sem atuação estatal (ser proprietário) é imposto (art. 16). O CTN fala em 3 espécies; o STF adota 5: impostos, taxas, contribuições de melhoria, empréstimos compulsórios e contribuições especiais."
+    },
+    "trib-taxas": {
+      "nome": "Taxas: divisibilidade, base de cálculo e quem cobra",
+      "tema": "Tributo e espécies tributárias",
+      "revisao": "CF, art. 145, § 2º: taxa não pode ter base de cálculo própria de imposto. SV 29: pode usar um elemento da base do imposto, desde que não haja identidade integral. Segurança pública em eventos é serviço geral e indivisível: não cabe taxa (ADI 2.692); prevenção e combate a incêndio cabe (Tema 1.282). Fiscalizar o funcionamento de antenas é da União (Tema 919); taxa estadual de fiscalização da mineração é válida, se proporcional."
+    },
+    "trib-emprestimo-contribuicoes": {
+      "nome": "Empréstimo compulsório e contribuições especiais",
+      "tema": "Tributo e espécies tributárias",
+      "revisao": "CF, art. 148: empréstimo compulsório só a União, por lei complementar, para calamidade, guerra ou investimento público urgente e relevante. Art. 149: contribuições especiais são da União, salvo a contribuição dos Estados, DF e Municípios para o regime próprio de previdência dos seus servidores (§ 1º) e a COSIP dos Municípios e DF (art. 149-A)."
+    },
+    "trib-reforma": {
+      "nome": "Reforma tributária: IBS, CBS e Imposto Seletivo",
+      "tema": "Tributo e espécies tributárias",
+      "revisao": "EC 132/2023: o IBS é imposto de competência compartilhada entre Estados, DF e Municípios (art. 156-A); a CBS é contribuição social da União (art. 195, V). O Imposto Seletivo (art. 153, VIII) é da União, nos termos de lei complementar, e tem função extrafiscal: desestimula bens e serviços prejudiciais à saúde ou ao meio ambiente."
+    },
+    "trib-melhoria": {
+      "nome": "Contribuição de melhoria (duplo limite)",
+      "tema": "Tributo e espécies tributárias",
+      "revisao": "CTN, art. 81: a contribuição de melhoria custeia obra pública que valoriza imóveis. Limite total: a despesa realizada. Limite individual: o acréscimo de valor que a obra trouxe a cada imóvel."
+    },
+    "trib-capacidade": {
+      "nome": "Competência × capacidade tributária ativa",
+      "tema": "Competência tributária",
+      "revisao": "CTN, art. 7º: a competência é indelegável; o que se transfere a outra pessoa de direito público é a capacidade de arrecadar e fiscalizar, com as garantias e privilégios processuais (§ 1º), revogável a qualquer tempo por ato unilateral (§ 2º). Banco que recebe tributo não recebe delegação (§ 3º). Art. 8º: não exercer a competência não a transfere a outro ente."
+    },
+    "trib-residual": {
+      "nome": "Residual, extraordinária, bis in idem e bitributação",
+      "tema": "Competência tributária",
+      "revisao": "CF, art. 154, I: a União cria impostos novos por lei complementar, não cumulativos e sem fato gerador ou base de outro imposto (residual). Art. 154, II: na guerra externa ou sua iminência, a União cria impostos extraordinários, compreendidos ou não em sua competência, suprimidos depois. Bis in idem: o mesmo ente tributa duas vezes o mesmo fato. Bitributação: entes diferentes; o imposto de guerra é bitributação autorizada."
+    },
+    "trib-quem-cobra": {
+      "nome": "Quem cobra: DF, Territórios e ITR × IPTU",
+      "tema": "Competência tributária",
+      "revisao": "CF, art. 147: ao DF cabem os impostos estaduais e municipais; em Território Federal, a União cobra os estaduais e, se o Território não for dividido em Municípios, também os municipais. Imóvel em zona urbana comprovadamente usado em exploração rural (agrícola, pecuária) paga ITR, não IPTU (DL 57/1966, art. 15)."
+    },
+    "trib-normas-gerais": {
+      "nome": "Normas gerais: CTN como lei complementar",
+      "tema": "Competência tributária",
+      "revisao": "O CTN foi recepcionado com status de lei complementar e só muda por LC. CF, art. 146, III, b: cabe à lei complementar estabelecer normas gerais sobre obrigação, lançamento, crédito, prescrição e decadência. Na falta de lei federal de normas gerais, o Estado legisla plenamente; a lei federal posterior suspende (não revoga) a estadual no que for contrário (art. 24, §§ 3º e 4º)."
+    },
+    "trib-imunidades": {
+      "nome": "Imunidades do art. 150, VI",
+      "tema": "Imunidades",
+      "revisao": "CF, art. 150, VI: é vedado instituir impostos sobre patrimônio, renda ou serviços uns dos outros (a); entidades religiosas e templos de qualquer culto, inclusive suas organizações assistenciais e beneficentes (b, redação da EC 132/2023); partidos, sindicatos de trabalhadores e instituições de educação e assistência social sem fins lucrativos (c); livros, jornais, periódicos e o papel (d); fonogramas e videofonogramas musicais brasileiros (e). Imunidade alcança só impostos."
+    },
+    "trib-decadencia-prescricao": {
+      "nome": "Decadência (art. 173) × prescrição (art. 174)",
+      "tema": "Decadência e prescrição",
+      "revisao": "CTN, art. 173, I: o direito de LANÇAR decai em 5 anos contados do primeiro dia do exercício seguinte àquele em que o lançamento poderia ter sido feito. Art. 174: a ação de COBRANÇA prescreve em 5 anos da constituição definitiva. A prescrição se interrompe pelo despacho que ordena a citação na execução fiscal, pelo protesto da CDA, por ato que reconheça o débito e pelas hipóteses novas da LC 236/2026 (§ 1º)."
+    },
+    "trib-preferencia": {
+      "nome": "Preferência do crédito e fraude (arts. 185 e 186)",
+      "tema": "Garantias e privilégios",
+      "revisao": "CTN, art. 186: o crédito tributário prefere a qualquer outro, ressalvados os créditos trabalhistas e de acidente de trabalho. Art. 185: presume-se fraudulenta a alienação de bens por devedor com crédito tributário já INSCRITO em dívida ativa, mesmo sem execução ajuizada, salvo se reservou bens suficientes."
+    },
+    "lef-cda": {
+      "nome": "Dívida ativa e CDA",
+      "tema": "Dívida ativa e CDA",
+      "revisao": "Lei 6.830/1980, art. 3º: a dívida inscrita tem presunção RELATIVA de certeza e liquidez, afastável por prova inequívoca do executado ou de terceiro. Art. 2º, § 5º: o termo de inscrição traz o nome do devedor e dos corresponsáveis, a origem, a natureza e o fundamento da dívida, a data e o número da inscrição, entre outros. § 8º: a CDA pode ser emendada ou substituída até a decisão de primeira instância, devolvido o prazo de embargos. A suspensão da prescrição por 180 dias do § 3º, para o STJ, só vale para dívida não tributária."
+    },
+    "lef-anulatoria": {
+      "nome": "Ação anulatória e renúncia administrativa (art. 38)",
+      "tema": "Dívida ativa e CDA",
+      "revisao": "Lei 6.830/1980, art. 38: fora da execução, a dívida ativa se discute por mandado de segurança, repetição de indébito ou ação anulatória. A anulatória importa renúncia ao recurso administrativo e desistência do que estiver pendente (parágrafo único). O depósito prévio citado no artigo não pode ser exigido (SV 28)."
+    },
+    "lef-garantia": {
+      "nome": "Garantia, penhora e substituição",
+      "tema": "Garantia e penhora",
+      "revisao": "Lei 6.830/1980, art. 9º: o executado garante por depósito, fiança bancária ou seguro garantia, ou nomeando bens; só o DEPÓSITO em dinheiro faz cessar a atualização e os juros (§ 4º). Art. 11: a penhora começa pelo dinheiro. Art. 15: o executado só substitui a penhora por depósito, fiança ou seguro garantia; a Fazenda pode substituir por quaisquer bens, fora da ordem, e pedir reforço."
+    },
+    "lef-embargos": {
+      "nome": "Embargos à execução fiscal",
+      "tema": "Embargos à execução fiscal",
+      "revisao": "Lei 6.830/1980, art. 16: embargos em 30 dias, contados do depósito, da juntada da fiança ou do seguro, ou da intimação da penhora; não cabem antes de garantida a execução (§ 1º); até 3 testemunhas, ou o dobro a critério do juiz. Art. 17: a Fazenda impugna em 30 dias; sem audiência se a matéria for só de direito ou a prova só documental."
+    },
+    "lef-adjudicacao": {
+      "nome": "Leilão e adjudicação (art. 24)",
+      "tema": "Leilão e adjudicação",
+      "revisao": "Lei 6.830/1980, art. 24: a Fazenda adjudica antes do leilão, pela avaliação, se não houver embargos ou se rejeitados; depois do leilão, pela avaliação se não houver licitante, ou com preferência, em igualdade com a melhor oferta, em 30 dias, se houver."
+    },
+    "lef-prerrogativas": {
+      "nome": "Prerrogativas da Fazenda na execução fiscal",
+      "tema": "Prerrogativas da Fazenda",
+      "revisao": "Lei 6.830/1980, art. 25: a intimação do representante da Fazenda é sempre pessoal, podendo ser por vista dos autos. Art. 29: a cobrança da dívida ativa não se sujeita a concurso de credores nem a habilitação em falência, inventário ou arrolamento. A ordem de preferência entre União, Estados e Municípios do parágrafo único não foi recepcionada (ADPF 357)."
+    },
+    "lef-intercorrente": {
+      "nome": "Prescrição intercorrente (LEF, art. 40)",
+      "tema": "Prescrição intercorrente",
+      "revisao": "Lei 6.830/1980, art. 40: sem devedor ou bens, o juiz suspende a execução, e nesse período não corre a prescrição; após no máximo 1 ano, arquiva os autos (§ 2º). Se do arquivamento passar o prazo prescricional, o juiz, ouvida a Fazenda, reconhece de ofício a prescrição intercorrente (§ 4º). Súmula 314 do STJ: suspende-se por um ano, e então começa a prescrição quinquenal."
     }
   },
   "questoes": {
@@ -577,6 +682,50 @@
     "trib-007": "trib-itcmd",
     "trib-008": "trib-icms",
     "pt-003": "pt-concordancia-nominal",
-    "pt-055": "pt-concordancia-nominal"
+    "pt-055": "pt-concordancia-nominal",
+    "trib-001": "trib-conceito",
+    "trib-te-01": "trib-conceito",
+    "trib-te-02": "trib-conceito",
+    "trib-te-r01": "trib-ilicito-responsabilidade",
+    "trib-te-03": "trib-especies",
+    "trib-te-12": "trib-especies",
+    "trib-te-05": "trib-taxas",
+    "trib-ct-08": "trib-taxas",
+    "trib-ct-09": "trib-taxas",
+    "trib-ct-10": "trib-taxas",
+    "trib-te-04": "trib-emprestimo-contribuicoes",
+    "trib-te-08": "trib-emprestimo-contribuicoes",
+    "trib-te-09": "trib-reforma",
+    "trib-te-10": "trib-reforma",
+    "trib-te-11": "trib-melhoria",
+    "trib-te-06": "trib-legalidade",
+    "trib-te-07": "trib-legalidade",
+    "trib-ct-01": "trib-capacidade",
+    "trib-ct-02": "trib-capacidade",
+    "trib-ct-03": "trib-capacidade",
+    "trib-ct-05": "trib-residual",
+    "trib-ct-11": "trib-residual",
+    "trib-ct-06": "trib-quem-cobra",
+    "trib-ct-07": "trib-quem-cobra",
+    "trib-ct-04": "trib-normas-gerais",
+    "trib-ct-12": "trib-normas-gerais",
+    "trib-005": "trib-imunidades",
+    "trib-013": "trib-decadencia-prescricao",
+    "trib-014": "trib-decadencia-prescricao",
+    "trib-015": "trib-preferencia",
+    "trib-016": "trib-preferencia",
+    "ef-001": "lef-cda",
+    "ef-002": "lef-cda",
+    "ef-015": "lef-cda",
+    "ef-014": "lef-anulatoria",
+    "ef-005": "lef-garantia",
+    "ef-006": "lef-garantia",
+    "ef-007": "lef-garantia",
+    "ef-008": "lef-embargos",
+    "ef-009": "lef-embargos",
+    "ef-010": "lef-adjudicacao",
+    "ef-011": "lef-prerrogativas",
+    "ef-013": "lef-prerrogativas",
+    "ef-012": "lef-intercorrente"
   }
 }
