@@ -134,6 +134,8 @@ export interface Cartao {
   fcc?: string;
   /** nível: 1 fácil, 2 médio, 3 difícil */
   nv?: 1 | 2 | 3;
+  /** assunto do edital (mesmo nome do tema das questões), para revisar por tema */
+  tema?: string;
 }
 
 /** Estado gravado em `estudo_cartoes.estado`. Os cartões migrados usam ms em `due` e `int` (dias). */

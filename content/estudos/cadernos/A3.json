@@ -807,7 +807,716 @@
    "topico_id": "A3-04",
    "numero": 4,
    "titulo": "Planilhas (Excel e Google Planilhas)",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Ceisc: Prof. César Vianna (aula 4, Excel) e Prof. Deodato Neto (TAQ Excel FCC, 8 questões reais de 2022 a 2025); prova FCC PGE-AM 2022",
+   "resumo": [
+    "Arquivo do Excel = pasta de trabalho (.xlsx); cada aba = planilha; cada célula = coluna + linha (B2, nunca 2B). Grade desde 2007: 1.048.576 linhas por 16.384 colunas.",
+    "Toda fórmula começa com =. Operadores de referência: dois-pontos = até (intervalo), ponto e vírgula = e (união), espaço = interseção.",
+    "Ao copiar, a referência anda junto; o $ prende a parte que vem depois dele ($A$1 absoluta, $A1 e A$1 mistas). Recortar e colar não altera nenhuma referência.",
+    "SE lê-se SE … ENTÃO … SENÃO. SOMASE e CONT.SE: critério com símbolo ou texto vai entre aspas (\">=5\", \"Deferido\").",
+    "PROCV procura na 1ª coluna da matriz e devolve a coluna pedida pelo índice (contado dentro da matriz). FALSO = exato; omitido ou VERDADEIRO = aproximado, exige ordem crescente."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: pasta de trabalho, planilha e célula",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Uma planilha eletrônica é uma tabela que <b>calcula sozinha</b>. Você guarda os dados em células e escreve fórmulas que se refazem quando um dado muda. É por isso que a Procuradoria usa planilha para controle de prazos, de precatórios e de dívida ativa: mudou um valor, o total se atualiza.<br><br>O vocabulário do Excel tem três níveis. Siga do maior para o menor."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Pasta de trabalho",
+         "sub": "o arquivo"
+        },
+        {
+         "titulo": "Planilha",
+         "sub": "a aba"
+        },
+        {
+         "titulo": "Célula",
+         "sub": "coluna + linha"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "O <b>arquivo</b> do Excel se chama <b>pasta de trabalho</b>. Por isso um arquivo novo abre com o nome Pasta1. A extensão padrão é <b>.xlsx</b>."
+        },
+        {
+         "no": 1,
+         "texto": "Dentro da pasta de trabalho ficam as <b>planilhas</b>, as abas no rodapé da janela. Cada planilha é uma grade de células. Desde a versão 2007, a grade tem <b>1.048.576 linhas</b> por <b>16.384 colunas</b>."
+        },
+        {
+         "no": 2,
+         "texto": "A <b>célula</b> é o encontro de uma coluna (letra) com uma linha (número). O nome é sempre <b>coluna e depois linha</b>: B2. Não existe a célula 2B."
+        }
+       ]
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Tipo de arquivo",
+        "Extensão",
+        "Detalhe"
+       ],
+       "linhas": [
+        [
+         "Pasta de trabalho",
+         ".xlsx",
+         "O padrão. Não guarda macro."
+        ],
+        [
+         "Pasta de trabalho habilitada para macro",
+         ".xlsm",
+         "O m final indica macro."
+        ],
+        [
+         "Modelo",
+         ".xltx",
+         "O t do meio indica modelo (template)."
+        ],
+        [
+         "Modelo habilitado para macro",
+         ".xltm",
+         "Modelo + macro."
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Leia a extensão de trás para frente",
+       "html": "xls + <b>x</b> = arquivo comum; xls + <b>m</b> = tem macro; xl<b>t</b> = modelo. A FCC troca as letras para ver se você decorou: .xlsm não é modelo, é macro."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: operadores, referências e funções",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Toda fórmula começa com <b>=</b>. Depois vêm valores, referências a células, funções e <b>operadores</b>. São quatro famílias de operadores, e cada uma devolve um tipo de resultado."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Família",
+        "Símbolos",
+        "Devolve",
+        "Exemplo"
+       ],
+       "linhas": [
+        [
+         "Aritméticos",
+         "+ - * / % ^",
+         "Número",
+         "=3^2 é 9 (3 ao quadrado); =10%*1000 é 100"
+        ],
+        [
+         "Comparação",
+         "= > < >= <= <>",
+         "VERDADEIRO ou FALSO",
+         "=A1=5 pergunta se A1 vale 5"
+        ],
+        [
+         "Texto",
+         "&",
+         "Texto",
+         "=\"Do\"&\"mingo\" é Domingo"
+        ],
+        [
+         "Referência",
+         ": ; (espaço)",
+         "Um conjunto de células",
+         "A1:B2, A1;B2, A1:B2 B2:C3"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "x não multiplica e o diferente é <>",
+       "html": "Multiplicação é <b>*</b>. =3x2 não é conta: o Excel lê como texto e dá erro. O diferente é <b><></b>, não ≠. E a ordem das contas é a da matemática: =5+2*3 dá <b>11</b>, porque a multiplicação vem antes. Para somar primeiro, use parênteses: =(5+2)*3 dá 21."
+      },
+      {
+       "t": "texto",
+       "html": "Os operadores de referência são os mais cobrados. Imagine A1=1, A2=2, B1=3, B2=4, B3=7, C2=5 e C3=6. Abra cada carta e confira a conta."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": ": dois-pontos",
+         "titulo": "Lê-se ATÉ",
+         "texto": "=SOMA(A1:B2) soma o retângulo de A1 até B2: A1, A2, B1 e B2. Resultado: 1+2+3+4 = <b>10</b>. Um intervalo contínuo sempre forma um retângulo: colunas × linhas dá o número de células (B5:C8 tem 2 × 4 = 8)."
+        },
+        {
+         "tag": "; ponto e vírgula",
+         "titulo": "Lê-se E",
+         "texto": "=SOMA(A1;B2) soma só A1 e B2. Resultado: 1+4 = <b>5</b>. A1;A2;A3 equivale a A1:A3."
+        },
+        {
+         "tag": "(espaço)",
+         "titulo": "Interseção",
+         "texto": "=SOMA(A1:B2 B2:C3) soma só o que os dois retângulos têm em comum: a célula B2. Resultado: <b>4</b>."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Agora, a regra que decide metade das questões de planilha: o que acontece com a fórmula quando você a <b>copia</b>. A referência comum é <b>relativa</b>: ela anda junto com a fórmula, no mesmo tanto de colunas e linhas. O <b>$</b> prende a parte que vem logo depois dele. Suba a escada, da referência mais solta para a mais presa."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "A1",
+         "sub": "relativa",
+         "texto": "Coluna e linha andam. Copiar =A1 de B2 para B3 (uma linha abaixo) gera <b>=A2</b>. É o padrão de toda fórmula nova."
+        },
+        {
+         "titulo": "A$1",
+         "sub": "mista: linha presa",
+         "texto": "A coluna anda e a linha fica. Copiar =A$1 de A2 para B3 (uma coluna à direita, uma linha abaixo) gera <b>=B$1</b>."
+        },
+        {
+         "titulo": "$A1",
+         "sub": "mista: coluna presa",
+         "texto": "A coluna fica e a linha anda. Copiar =$A1 de B2 para C4 (duas linhas abaixo) gera <b>=$A3</b>."
+        },
+        {
+         "titulo": "$A$1",
+         "sub": "absoluta",
+         "texto": "Nada anda. Copiada para qualquer lugar, continua <b>=$A$1</b>. Serve para uma taxa ou um índice fixo que todas as linhas usam."
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Origem",
+         "sub": "C3"
+        },
+        {
+         "titulo": "Deslocamento",
+         "sub": "+2 col, +2 lin"
+        },
+        {
+         "titulo": "Ajuste",
+         "sub": "só o que está solto"
+        },
+        {
+         "titulo": "Resultado",
+         "sub": "E5"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Em C3 está a fórmula <b>=$A1*B$2</b>. Você a copia para E5."
+        },
+        {
+         "no": 1,
+         "texto": "Conte o deslocamento: de C para E são <b>+2 colunas</b>; de 3 para 5 são <b>+2 linhas</b>."
+        },
+        {
+         "no": 2,
+         "texto": "Em $A1, a coluna está presa e a linha anda: $A1 vira <b>$A3</b>. Em B$2, a linha está presa e a coluna anda: B$2 vira <b>D$2</b>."
+        },
+        {
+         "no": 3,
+         "texto": "Em E5 fica <b>=$A3*D$2</b>. Se você tivesse <b>recortado</b> e colado, a fórmula não mudaria nada: recortar move a fórmula sem ajustar referências."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Outra planilha e outra pasta",
+       "html": "Para usar dado de outra aba, escreva o nome da planilha e um <b>ponto de exclamação</b>: =MÉDIA(Marketing!B1:B10) calcula a média de B1:B10 da planilha Marketing, na mesma pasta de trabalho."
+      },
+      {
+       "t": "texto",
+       "html": "Funções são fórmulas prontas: <b>=NOME(argumentos)</b>. O nome tem de estar escrito do jeito do Excel em português, com acento e ponto (MÉDIA, CONT.SE, CONT.NÚM), e os argumentos são separados por <b>ponto e vírgula</b>. Toque nas cartas das funções que a FCC mais cobra."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "SOMA, MÉDIA",
+         "sub": "básicas",
+         "verso": "=SOMA(A1:A5) soma; =MÉDIA(A1:A20) soma e divide pela quantidade de números.",
+         "detalhe": "Média = aritmética simples, sem peso. Até 255 argumentos."
+        },
+        {
+         "frente": "MÍNIMO, MÁXIMO",
+         "sub": "MENOR, MAIOR",
+         "verso": "MÍNIMO e MÁXIMO dão o menor e o maior valor. =MENOR(A2:A7;2) dá o 2º menor; =MAIOR(A2:A7;3) dá o 3º maior.",
+         "detalhe": "Um número escrito como argumento também entra na disputa: =MÍNIMO(B8:B12;0) considera o 0."
+        },
+        {
+         "frente": "CONT.NÚM",
+         "sub": "contar números",
+         "verso": "Conta quantas células do intervalo contêm <b>números</b>. Texto e célula vazia não entram.",
+         "detalhe": "Caiu na PGE-AM (Técnico em Gestão Procuratorial, Informática)."
+        },
+        {
+         "frente": "CONT.SE",
+         "sub": "contar com critério",
+         "verso": "=CONT.SE(intervalo; critério). =CONT.SE(C2:C40;\"Deferido\") conta as células com Deferido.",
+         "detalhe": "Critério de texto não diferencia maiúscula de minúscula."
+        },
+        {
+         "frente": "SOMASE, MÉDIASE",
+         "sub": "somar ou tirar média com critério",
+         "verso": "=SOMASE(intervalo; critério; [intervalo_soma]). =SOMASE(B2:B5;\"João\";C2:C5) soma em C só as linhas em que B é João.",
+         "detalhe": "Sem o 3º argumento, soma o próprio intervalo testado. MÉDIASE segue a mesma ordem."
+        },
+        {
+         "frente": "HOJE, AGORA",
+         "sub": "sem argumentos",
+         "verso": "=HOJE() dá a data atual; =AGORA() dá data e hora atuais. Os parênteses ficam vazios.",
+         "detalhe": "=HOJE()+10 soma 10 dias. AGORA só se atualiza quando a planilha recalcula (F9), não a cada segundo."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "A função <b>SE</b> é a campeã de prova. Ela faz uma pergunta e devolve uma de duas respostas. Leia o primeiro ponto e vírgula como <b>ENTÃO</b> e o segundo como <b>SENÃO</b>."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "SE",
+         "sub": "teste lógico"
+        },
+        {
+         "titulo": "ENTÃO",
+         "sub": "valor se verdadeiro"
+        },
+        {
+         "titulo": "SENÃO",
+         "sub": "valor se falso"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Fórmula: <b>=SE(E2>7;\"APROVADO\";\"REPROVADO\")</b>. O teste é E2>7: a nota em E2 é maior que 7?"
+        },
+        {
+         "no": 1,
+         "texto": "Se a resposta for VERDADEIRO, a célula mostra <b>APROVADO</b>. Texto dentro de fórmula vai sempre entre aspas duplas."
+        },
+        {
+         "no": 2,
+         "texto": "Se for FALSO, mostra <b>REPROVADO</b>. Atenção: nota 7 exata dá REPROVADO, porque 7 não é maior que 7. Para incluir o 7, o teste seria E2>=7."
+        }
+       ]
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "=E(5>2;3<6) devolve VERDADEIRO.",
+         "v": true,
+         "porque": "E só é verdadeiro se todas as condições forem verdadeiras. 5>2 e 3<6 são verdadeiras."
+        },
+        {
+         "texto": "=OU(5<2;3<6) devolve FALSO, porque a primeira condição é falsa.",
+         "v": false,
+         "porque": "OU basta uma verdadeira. Como 3<6 é verdadeira, o resultado é VERDADEIRO."
+        },
+        {
+         "texto": "=E(10>5;2>3) devolve FALSO.",
+         "v": true,
+         "porque": "Uma condição falsa (2>3) derruba o E inteiro."
+        },
+        {
+         "texto": "Cabem até 64 funções SE aninhadas umas dentro das outras.",
+         "v": true,
+         "porque": "É o limite informado no material, usado para testes com várias faixas."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Por fim, <b>PROCV</b>, que caiu na PGE-AM. Ela procura um valor na <b>primeira coluna</b> de uma tabela e devolve o que estiver na mesma linha, na coluna que você pedir. O V é de vertical; para tabela deitada (valores numa linha) existe a <b>PROCH</b>, horizontal."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "valor_procurado",
+         "sub": "o que buscar"
+        },
+        {
+         "titulo": "matriz",
+         "sub": "onde buscar"
+        },
+        {
+         "titulo": "índice",
+         "sub": "qual coluna devolver"
+        },
+        {
+         "titulo": "procurar_intervalo",
+         "sub": "exato ou aproximado"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>=PROCV(38;A2:C10;3;FALSO)</b>. O primeiro argumento é o que você procura: a matrícula 38."
+        },
+        {
+         "no": 1,
+         "texto": "O segundo é a tabela, A2:C10. A busca acontece <b>só na primeira coluna dela</b> (coluna A)."
+        },
+        {
+         "no": 2,
+         "texto": "O terceiro é o número da coluna a devolver, <b>contado dentro da matriz</b>: 1 é A, 2 é B, 3 é C. Se a matriz fosse B2:D10, o índice 3 seria a coluna D."
+        },
+        {
+         "no": 3,
+         "texto": "O quarto decide o tipo de busca. <b>FALSO</b>: só serve o valor exato; se não achar, dá <b>#N/D</b>. <b>VERDADEIRO ou omitido</b>: aceita o valor aproximado (o maior que não passa do procurado), e a primeira coluna precisa estar em <b>ordem crescente</b>."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e detalhes: o que muda o resultado",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "tabela",
+       "cab": [
+        "Situação",
+        "Resultado",
+        "Por quê"
+       ],
+       "linhas": [
+        [
+         "PROCV com índice menor que 1",
+         "#VALOR!",
+         "Não existe coluna zero."
+        ],
+        [
+         "PROCV com índice maior que o número de colunas da matriz",
+         "#REF!",
+         "A coluna pedida está fora da tabela."
+        ],
+        [
+         "PROCV com FALSO e valor inexistente",
+         "#N/D",
+         "Busca exata sem correspondência."
+        ],
+        [
+         "PROCV aproximado com valor menor que o menor da 1ª coluna",
+         "#N/D",
+         "Não há valor menor ou igual para devolver."
+        ],
+        [
+         "SE com teste verdadeiro e valor_se_verdadeiro em branco",
+         "0",
+         "Há o ponto e vírgula, mas nada depois dele."
+        ],
+        [
+         "SE com teste falso e sem o 3º argumento",
+         "FALSO",
+         "Não há valor para o senão."
+        ]
+       ]
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "DATA",
+         "titulo": "=DATA(ano; mês; dia)",
+         "texto": "A ordem é <b>ano, mês, dia</b>. Mês ou dia que passa do limite vira soma: =DATA(2008;14;2) é 2/2/2009; =DATA(2008;1;35) é 4/2/2008. Use ano com 4 dígitos: 07 vira 1907."
+        },
+        {
+         "tag": "ARRED",
+         "titulo": "=ARRED(número; dígitos)",
+         "texto": "Arredonda pela regra comum: =ARRED(23,7825;2) dá 23,78."
+        },
+        {
+         "tag": "TRUNCAR × INT",
+         "titulo": "Iguais só no positivo",
+         "texto": "TRUNCAR corta a parte decimal; INT arredonda para baixo. Em -4,3: TRUNCAR dá <b>-4</b>, INT dá <b>-5</b> (o inteiro menor)."
+        },
+        {
+         "tag": "Formatos",
+         "titulo": "Valor 10,46 em A1",
+         "texto": "Contábil: R$ 10,46. Porcentagem (Ctrl+Shift+%): <b>1046%</b>, sem casas decimais. Separador de milhares: 10,46 (334000 vira 334.000,00). O formato muda a aparência, não o valor guardado."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Alça de preenchimento",
+       "html": "Arraste o quadradinho do canto da seleção. <b>Um número</b> sozinho se repete. <b>Dois números</b> selecionados (2 e 4) seguem a progressão (6, 8…). Dias da semana e meses continuam a sequência. Letras soltas são repetidas, não viram a letra seguinte. Referências relativas se ajustam ao arrastar, como na cópia."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra: guias, recursos e o detalhe errado",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A FCC pergunta onde fica o recurso e o que ele faz. Os comandos ficam organizados em <b>guias</b>, <b>grupos</b> e <b>botões</b> (padrão Office Fluent). Toque nas células: em qual guia está cada recurso?"
+      },
+      {
+       "t": "matriz",
+       "linhas": [
+        "Tabela dinâmica",
+        "Gráfico de pizza",
+        "Remover duplicadas",
+        "Validação de dados",
+        "Congelar painéis",
+        "Rastrear precedentes"
+       ],
+       "colunas": [
+        "Inserir",
+        "Dados",
+        "Exibir",
+        "Fórmulas"
+       ],
+       "celulas": [
+        [
+         [
+          true,
+          "Inserir > Tabela Dinâmica. Caiu no TRT-5 (2022)."
+         ],
+         [
+          false,
+          "Dados tem ferramentas de dados, não a criação da dinâmica."
+         ],
+         [
+          false,
+          "Exibir cuida da janela."
+         ],
+         [
+          false,
+          "Fórmulas cuida de funções e auditoria."
+         ]
+        ],
+        [
+         [
+          true,
+          "Inserir > grupo Gráficos."
+         ],
+         [
+          false,
+          "Não."
+         ],
+         [
+          false,
+          "Não."
+         ],
+         [
+          false,
+          "Não."
+         ]
+        ],
+        [
+         [
+          false,
+          "Não."
+         ],
+         [
+          true,
+          "Dados > Ferramentas de Dados."
+         ],
+         [
+          false,
+          "Não."
+         ],
+         [
+          false,
+          "Não."
+         ]
+        ],
+        [
+         [
+          false,
+          "Não."
+         ],
+         [
+          true,
+          "Dados > Ferramentas de Dados: restringe o que se digita (lista, datas, inteiros)."
+         ],
+         [
+          false,
+          "Não."
+         ],
+         [
+          false,
+          "Não."
+         ]
+        ],
+        [
+         [
+          false,
+          "Não."
+         ],
+         [
+          false,
+          "Não."
+         ],
+         [
+          true,
+          "Exibir > Janela: linhas ou colunas fixas na rolagem."
+         ],
+         [
+          false,
+          "Não."
+         ]
+        ],
+        [
+         [
+          false,
+          "Não."
+         ],
+         [
+          false,
+          "Não."
+         ],
+         [
+          false,
+          "Não."
+         ],
+         [
+          true,
+          "Fórmulas > Auditoria de Fórmulas."
+         ]
+        ]
+       ]
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Recurso",
+        "O que faz"
+       ],
+       "linhas": [
+        [
+         "Filtro",
+         "Exibe só as linhas que atendem ao critério e oculta as outras. Não apaga nada. Caiu na PGE-AM (Assistente Procuratorial)."
+        ],
+        [
+         "Classificar",
+         "Reordena as linhas (A a Z, maior para menor, por cor)."
+        ],
+        [
+         "Texto para colunas",
+         "Separa o conteúdo de uma célula em várias colunas (nome e sobrenome)."
+        ],
+        [
+         "Consolidar",
+         "Resume dados de várias planilhas numa planilha principal."
+        ],
+        [
+         "Formatação condicional",
+         "Muda a aparência da célula quando a condição é verdadeira."
+        ],
+        [
+         "Precedentes e dependentes",
+         "Se D10 contém =B5, B5 é precedente de D10 e D10 é dependente de B5."
+        ],
+        [
+         "Janela de Inspeção",
+         "Acompanha fórmulas e resultados de células fora da tela."
+        ],
+        [
+         "AutoSoma (Alt+=)",
+         "Insere =SOMA() com o intervalo ao lado da célula ativa."
+        ],
+        [
+         "F9",
+         "Recalcula as fórmulas alteradas em todas as pastas abertas. Shift+F9: só a pasta ativa. Ctrl+Alt+F9: recalcula tudo."
+        ]
+       ]
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Gráfico",
+        "Melhor para"
+       ],
+       "linhas": [
+        [
+         "Colunas",
+         "Comparar itens ou mostrar mudança no tempo (categorias no eixo horizontal)"
+        ],
+        [
+         "Barras",
+         "Comparar itens individuais (barras deitadas)"
+        ],
+        [
+         "Linhas",
+         "Tendência ao longo do tempo, em intervalos iguais"
+        ],
+        [
+         "Pizza",
+         "Parte do todo: uma única série de dados, cada fatia como percentual"
+        ],
+        [
+         "Área",
+         "Magnitude da mudança no tempo, destacando o total"
+        ],
+        [
+         "Dispersão",
+         "Relação entre dois conjuntos numéricos (coordenadas XY)"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O padrão das alternativas FCC",
+       "html": "Nas 8 questões reais deste tema e na PGE-AM, quatro alternativas trazem <b>um detalhe errado</b>: função com nome que não existe (SOMASO, AVEREGE), função que existe mas faz outra coisa (MED dá a mediana, não a média), critério sem aspas (=SOMASE(A1:A7;>=5)), argumentos fora de ordem (=MÉDIASE(C2:C7=\"Feminino\";B2:B7)) ou VERDADEIRO no lugar de FALSO na PROCV. Antes de calcular, confira nome, aspas, ponto e vírgula e ordem."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Google Planilhas",
+       "html": "A FCC de 2025 já perguntou sobre Google Planilhas em português (TRT-15 e SEDU-ES). As funções cobradas tinham o mesmo nome e a mesma sintaxe do Excel: MÉDIA e SOMASE. Estude pelo Excel e, quando a questão disser Google, aplique a mesma regra."
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "inf-001",
+    "inf-002",
+    "inf-003",
+    "inf-004",
+    "inf-xls-r01",
+    "inf-xls-r02",
+    "inf-xls-r03",
+    "inf-xls-r04",
+    "inf-xls-r05",
+    "inf-xls-r06",
+    "inf-xls-r07",
+    "inf-xls-r08",
+    "inf-xls-01",
+    "inf-xls-02",
+    "inf-xls-03",
+    "inf-xls-04",
+    "inf-xls-05",
+    "inf-xls-06",
+    "inf-xls-07"
+   ]
   },
   {
    "id": "A3-a05",
@@ -939,6 +1648,34 @@
   [
    "Compactação",
    "Reduzir e agrupar arquivos num só (.zip, .rar, .7z)."
+  ],
+  [
+   "Pasta de trabalho",
+   "O arquivo do Excel (.xlsx), formado por uma ou mais planilhas."
+  ],
+  [
+   "Intervalo",
+   "Conjunto de células. A1:B2 = de A1 até B2; A1;B2 = A1 e B2."
+  ],
+  [
+   "Referência absoluta",
+   "Referência com $ na coluna e na linha ($A$1): não muda ao copiar."
+  ],
+  [
+   "Referência mista",
+   "Só a coluna ($A1) ou só a linha (A$1) presa pelo $."
+  ],
+  [
+   "Alça de preenchimento",
+   "Quadradinho no canto da seleção que, arrastado, repete valores ou continua sequências."
+  ],
+  [
+   "PROCV",
+   "Procura um valor na 1ª coluna de uma matriz e devolve a coluna indicada, na mesma linha."
+  ],
+  [
+   "Tabela dinâmica",
+   "Resumo interativo de dados, criado pela guia Inserir."
   ]
  ]
 }
