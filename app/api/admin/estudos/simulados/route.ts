@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { criarSimulado, registrarExterno } from "@/lib/db-estudos-simulados";
 import { MATERIA_POR_ID } from "@/lib/estudos-utils";
+import { PROVA_TOTAL, type ModoProva } from "@/lib/estudos-simulados";
 
 /** acao "criar" (simulado no site) ou "externo" (nota de simulado feito fora, ex.: TEC). */
 export async function POST(request: NextRequest) {
@@ -8,8 +9,8 @@ export async function POST(request: NextRequest) {
   const materia = typeof b?.materia_id === "string" && MATERIA_POR_ID.has(b.materia_id) ? (b.materia_id as string) : null;
   try {
     if (b?.acao === "criar") {
-      const tipo = b.tipo === "lei_seca" || b.tipo === "simuladao" || b.tipo === "semana" ? (b.tipo as "lei_seca" | "simuladao" | "semana") : null;
-      const total = Number(b.total);
+      const tipo = ["lei_seca", "completo", "direito", "semana"].includes(b.tipo) ? (b.tipo as "lei_seca" | ModoProva | "semana") : null;
+      const total = tipo === "completo" || tipo === "direito" ? PROVA_TOTAL[tipo] : Number(b.total);
       if (!tipo || !Number.isInteger(total) || total < 5 || total > 120) return NextResponse.json({ error: "Escolha o tipo e o tamanho" }, { status: 400 });
       if (tipo === "lei_seca" && !materia) return NextResponse.json({ error: "Escolha a matéria" }, { status: 400 });
       const simulado = await criarSimulado(tipo, total, materia);

@@ -1,4 +1,4 @@
-// Simulados: montagem (lei seca de uma matéria ou simuladão proporcional ao edital), aviso de repetição e evolução semanal.
+// Simulados: montagem (lei seca de uma matéria, temas da semana ou prova no formato PGE-MA), aviso de repetição e evolução semanal.
 // Arquivo puro (Server e Client).
 import type { Classificacao, Questao, Resposta } from "@/lib/estudos-desempenho";
 import { addDaysToDateString } from "@/lib/atividades-utils";
@@ -14,7 +14,6 @@ export const TIPO_LABEL: Record<TipoSimulado, string> = {
 /** tempo de referência por questão (FCC: cerca de 3 minutos) */
 export const SEG_POR_QUESTAO = 180;
 export const TAMANHOS_LEI_SECA = [10, 20, 30];
-export const TAMANHOS_SIMULADAO = [30, 50, 80];
 
 export interface ItemSimulado {
   questao_id: string;
@@ -70,18 +69,55 @@ export function poolLeiSeca(questoes: Questao[], materiaId: string): Questao[] {
   return lei.length >= 10 ? lei : da;
 }
 
-/** Distribuição do simuladão proporcional ao número de tópicos do edital, só entre matérias com questões no banco. */
-export function distribuicaoSimuladao(questoes: Questao[], total: number): { materia_id: string; nome: string; n: number; disponiveis: number }[] {
-  const disp = new Map<string, number>();
-  for (const q of questoes) disp.set(q.materia_id, (disp.get(q.materia_id) ?? 0) + 1);
-  const mats = [...disp.keys()].map((id) => ({ id, peso: MATERIA_POR_ID.get(id)?.topicos.length ?? 1, disp: disp.get(id)! }));
-  const soma = mats.reduce((s, m) => s + m.peso, 0);
-  const alvo = Math.min(total, questoes.length);
-  const linhas = mats.map((m) => {
-    const exato = (alvo * m.peso) / soma;
-    return { ...m, n: Math.min(m.disp, Math.floor(exato)), resto: exato - Math.floor(exato) };
+/**
+ * Formato da prova (aprovado por ela em 22/11/2026). O edital previsto só fixa 30 específicas + 20 gerais;
+ * o peso de cada matéria vem da prova real FCC PGE-AM 2022 (Analista Procuratorial), com História e
+ * Geografia do MA nas gerais (2 saem de Português, 1 de RLM e 1 de Informática).
+ * Bloco sem questão no banco: as vagas vão para os outros do mesmo grupo, na proporção dos pesos.
+ */
+export type ModoProva = "completo" | "direito";
+export const PROVA_TOTAL: Record<ModoProva, number> = { completo: 50, direito: 30 };
+export const MODO_LABEL: Record<ModoProva, string> = { completo: "Simulado completo", direito: "Só Direito" };
+
+interface BlocoProva {
+  id: string;
+  nome: string;
+  grupo: "direito" | "gerais";
+  materias: string[];
+  peso: number;
+}
+export const BLOCOS_PROVA: BlocoProva[] = [
+  { id: "B3", nome: "Direito Constitucional", grupo: "direito", materias: ["B3"], peso: 5 },
+  { id: "B2", nome: "Direito Administrativo", grupo: "direito", materias: ["B2"], peso: 5 },
+  { id: "B5", nome: "Direito Processual Civil", grupo: "direito", materias: ["B5"], peso: 5 },
+  { id: "B7", nome: "Direito Tributário", grupo: "direito", materias: ["B7"], peso: 5 },
+  { id: "B10", nome: "Direito do Trabalho", grupo: "direito", materias: ["B10"], peso: 4 },
+  { id: "B6", nome: "Direito Civil", grupo: "direito", materias: ["B6"], peso: 3 },
+  { id: "B8", nome: "Direito Financeiro", grupo: "direito", materias: ["B8"], peso: 3 },
+  { id: "A1", nome: "Língua Portuguesa", grupo: "gerais", materias: ["A1"], peso: 8 },
+  { id: "A2", nome: "Matemática e RLM", grupo: "gerais", materias: ["A2"], peso: 4 },
+  { id: "A3", nome: "Informática", grupo: "gerais", materias: ["A3"], peso: 4 },
+  { id: "MA", nome: "História e Geografia do MA", grupo: "gerais", materias: ["A4", "A5", "A6", "A7"], peso: 4 },
+];
+export const GRUPO_TOTAL = { direito: 30, gerais: 20 } as const;
+
+export interface LinhaProva {
+  bloco: string;
+  nome: string;
+  grupo: "direito" | "gerais";
+  materias: string[];
+  n: number;
+  disponiveis: number;
+}
+
+function repartir(blocos: (BlocoProva & { disp: number })[], alvo: number) {
+  const ativos = blocos.filter((b) => b.disp > 0);
+  const soma = ativos.reduce((s, b) => s + b.peso, 0);
+  if (!soma) return [];
+  const linhas = ativos.map((b) => {
+    const exato = (alvo * b.peso) / soma;
+    return { ...b, n: Math.min(b.disp, Math.floor(exato)), resto: exato - Math.floor(exato) };
   });
-  // maior resto primeiro; o que sobrar por falta de questão vai para quem ainda tem
   let falta = alvo - linhas.reduce((s, l) => s + l.n, 0);
   const ordem = [...linhas].sort((a, b) => b.resto - a.resto || b.peso - a.peso);
   while (falta > 0) {
@@ -91,10 +127,25 @@ export function distribuicaoSimuladao(questoes: Questao[], total: number): { mat
     falta--;
     ordem.push(ordem.splice(ordem.indexOf(l), 1)[0]);
   }
-  return linhas
-    .filter((l) => l.n > 0)
-    .sort((a, b) => b.n - a.n)
-    .map((l) => ({ materia_id: l.id, nome: MATERIA_POR_ID.get(l.id)?.nome ?? l.id, n: l.n, disponiveis: l.disp }));
+  return linhas.filter((l) => l.n > 0);
+}
+
+/** Quantas questões de cada bloco entram na prova (Direito primeiro, depois as gerais). */
+export function distribuicaoProva(questoes: Questao[], modo: ModoProva): LinhaProva[] {
+  const disp = new Map<string, number>();
+  for (const q of questoes) disp.set(q.materia_id, (disp.get(q.materia_id) ?? 0) + 1);
+  const comDisp = BLOCOS_PROVA.map((b) => ({ ...b, disp: b.materias.reduce((s, m) => s + (disp.get(m) ?? 0), 0) }));
+  const grupos: ("direito" | "gerais")[] = modo === "completo" ? ["direito", "gerais"] : ["direito"];
+  return grupos.flatMap((g) =>
+    repartir(comDisp.filter((b) => b.grupo === g), GRUPO_TOTAL[g]).map((l) => ({
+      bloco: l.id,
+      nome: l.nome,
+      grupo: l.grupo,
+      materias: l.materias,
+      n: l.n,
+      disponiveis: l.disp,
+    })),
+  );
 }
 
 function embaralhar<T>(arr: T[]): T[] {

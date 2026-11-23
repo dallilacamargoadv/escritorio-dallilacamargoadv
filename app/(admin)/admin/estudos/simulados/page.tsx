@@ -2,13 +2,12 @@ import { redirect } from "next/navigation";
 import { getRespostas, QUESTAO_POR_ID, QUESTOES } from "@/lib/db-estudos";
 import { getSimulado, getSimulados } from "@/lib/db-estudos-simulados";
 import {
-  distribuicaoSimuladao,
+  distribuicaoProva,
   evolucaoSemanal,
   poolLeiSeca,
   poolSemana,
   temasDaSemana,
   semGabarito,
-  TAMANHOS_SIMULADAO,
   TIPO_LABEL,
 } from "@/lib/estudos-simulados";
 import { MATERIA_POR_ID } from "@/lib/estudos-utils";
@@ -70,15 +69,12 @@ export default async function SimuladosPage(props: PageProps<"/admin/estudos/sim
       return { id: mid, nome: MATERIA_POR_ID.get(mid)?.nome ?? mid, total: pool.length, ineditas: pool.filter((q) => !vistas.has(q.id)).length };
     })
     .sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"));
-  const distribuicoes = Object.fromEntries(
-    TAMANHOS_SIMULADAO.map((n) => [
-      n,
-      distribuicaoSimuladao(QUESTOES, n).map((d) => ({
-        ...d,
-        ineditas: QUESTOES.filter((q) => q.materia_id === d.materia_id && !vistas.has(q.id)).length,
-      })),
-    ]),
-  );
+  const comIneditas = (modo: "completo" | "direito") =>
+    distribuicaoProva(QUESTOES, modo).map((d) => ({
+      ...d,
+      ineditas: QUESTOES.filter((q) => d.materias.includes(q.materia_id) && !vistas.has(q.id)).length,
+    }));
+  const distribuicoes = { completo: comIneditas("completo"), direito: comIneditas("direito") };
 
   const temas = temasDaSemana(respostas, QUESTAO_POR_ID, addDaysToDateString(todayBelemDateString(), -6));
   const poolSem = poolSemana(QUESTOES, temas);

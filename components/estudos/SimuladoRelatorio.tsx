@@ -33,6 +33,14 @@ export function SimuladoRelatorio({ simulado, questoes }: { simulado: Simulado; 
     l.tempo += i.tempo_seg;
     porMateria.set(m, l);
   }
+  const porGrupo = { direito: { n: 0, ok: 0 }, gerais: { n: 0, ok: 0 } };
+  for (const i of itens) {
+    const q = qPorId.get(i.questao_id);
+    if (!q) continue;
+    const g = q.materia_id.startsWith("B") ? porGrupo.direito : porGrupo.gerais;
+    g.n++;
+    if (i.correta) g.ok++;
+  }
   const motivos = new Map<Classificacao, number>();
   for (const i of itens) if (!i.correta) motivos.set(i.classificacao, (motivos.get(i.classificacao) ?? 0) + 1);
 
@@ -64,6 +72,18 @@ export function SimuladoRelatorio({ simulado, questoes }: { simulado: Simulado; 
       <div className="grid gap-4 lg:grid-cols-2">
         <Card>
           <CardTitulo>Por matéria</CardTitulo>
+          {porGrupo.direito.n > 0 && porGrupo.gerais.n > 0 && (
+            <div className="mb-3 grid grid-cols-2 gap-2 text-sm">
+              {(["direito", "gerais"] as const).map((g) => (
+                <div key={g} className="rounded-xl border border-e-line px-3 py-2">
+                  <span className="text-e-dim">{g === "direito" ? "Direito" : "Gerais"}</span>{" "}
+                  <span className="tabular-nums text-e-ink">
+                    {porGrupo[g].ok}/{porGrupo[g].n} · {Math.round((porGrupo[g].ok / porGrupo[g].n) * 100)}%
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
           <ul className="space-y-2.5">
             {[...porMateria.entries()].map(([m, l]) => {
               const p = Math.round((l.ok / l.n) * 100);
