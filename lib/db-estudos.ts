@@ -237,7 +237,9 @@ export async function getEstadosCartoes(): Promise<Map<string, EstadoCartao>> {
 }
 
 export async function revisarCartao(id: string, ok: boolean, hoje: string): Promise<void> {
-  if (!CARTAO_POR_ID.has(id)) throw new Error("cartão inexistente");
+  // "erro:<questão>" é o cartão gerado de um erro dela (lib/estudos-erros-cartoes.ts)
+  const doErro = id.startsWith("erro:") && QUESTAO_POR_ID.has(id.slice(5));
+  if (!CARTAO_POR_ID.has(id) && !doErro) throw new Error("cartão inexistente");
   const supabase = await createClient();
   const { data: atual } = await supabase.from("estudo_cartoes").select("estado").eq("cartao_id", id).maybeSingle();
   const estado = (atual?.estado ?? {}) as EstadoCartao;

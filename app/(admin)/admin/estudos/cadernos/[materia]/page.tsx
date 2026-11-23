@@ -157,6 +157,12 @@ export default async function CadernoPage(props: PageProps<"/admin/estudos/cader
 
       <aside className="space-y-3 lg:sticky lg:top-6 lg:self-start">
         <p className="text-[11px] uppercase tracking-[0.14em] text-e-dim">Caderno de erros · {caderno.titulo}</p>
+        {erros.length > 0 && (
+          <p className="flex flex-wrap gap-3 text-xs">
+            <Link href={`/admin/estudos/mapa-erros?materia=${caderno.materia_id}`} className="text-e-blue hover:underline">Ver no mapa dos erros</Link>
+            <Link href="/admin/estudos/flashcards?baralho=Dos%20meus%20erros" className="text-e-blue hover:underline">Cartões dos meus erros</Link>
+          </p>
+        )}
         {erros.length === 0 ? (
           <p className="rounded-2xl border border-e-line bg-e-card p-4 text-sm text-e-dim">Nenhum erro nesta matéria ainda. Quando você errar uma questão e disser o motivo, ela aparece aqui.</p>
         ) : (
