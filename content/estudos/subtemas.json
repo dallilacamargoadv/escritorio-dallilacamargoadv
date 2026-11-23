@@ -646,9 +646,9 @@
       "revisao": "−2² = −4 (o expoente não pega o sinal); (−2)² = 4. Todo número diferente de zero elevado a zero dá 1. Expoente negativo inverte a base: 2⁻¹ = 1/2. Mesma base: na multiplicação soma os expoentes, na divisão subtrai."
     },
     "rl-razao-partes": {
-      "nome": "Razão: transformar em blocos",
+      "nome": "Razão: transformar em pacotes",
       "tema": "Razão, proporção e regra de três",
-      "revisao": "\"Para cada a, b\" vira blocos. Com o total: some os blocos e divida o total. Com a diferença: subtraia os blocos e divida a diferença. Ache quanto vale 1 bloco e multiplique. Monte a razão na ordem pedida (\"A em relação a B\" = A ÷ B). Frações de grupos diferentes: escolha números que deem conta exata."
+      "revisao": "\"Para cada a, b\" vira pacotes. Com o total: some os pacotes e divida o total. Com a diferença: subtraia os pacotes e divida a diferença. Ache quanto vale 1 pacote e multiplique. Monte a razão na ordem pedida (\"A em relação a B\" = A ÷ B). Frações de grupos diferentes: escolha números que deem conta exata."
     },
     "rl-divisao-proporcional": {
       "nome": "Divisão em partes proporcionais",
@@ -669,6 +669,41 @@
       "nome": "Trabalho conjunto",
       "tema": "Razão, proporção e regra de três",
       "revisao": "Some o que cada um faz em uma unidade de tempo: 1/a + 1/b. O tempo juntos é o inverso dessa soma (para dois: a × b ÷ (a + b)). Juntos sempre terminam antes do mais rápido sozinho: somar ou fazer a média dos tempos é armadilha."
+    },
+    "rl-pacote-total": {
+      "nome": "Pacotes: pista do total",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "Razão = receita; k = quantos pacotes. Com o total: k = total ÷ (soma da receita). Depois multiplique o k pela parte pedida. A soma da receita é o tamanho do pacote, não um dos lados; o k é pacote, não gente. Releia a pergunta: um lado, o total ou a diferença?"
+    },
+    "rl-pacote-lado": {
+      "nome": "Pacotes: pista de um lado",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "Quando a prova dá o valor de um lado: k = valor ÷ (número daquele lado na receita), e não ÷ soma. Depois multiplique o k pelo lado pedido ou pelo tamanho do pacote (se pedir o total). Resposta com vírgula para gente: sinal de que dividiu ao contrário."
+    },
+    "rl-pacote-diferenca": {
+      "nome": "Pacotes: pista da diferença",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "Quando a prova dá quanto um lado tem a mais: k = diferença ÷ (diferença dos números da receita). Ex.: 5 : 8 com 450 a mais → k = 450 ÷ 3 = 150. Depois multiplique pela parte pedida e confira a diferença."
+    },
+    "rl-pacote-razao-total": {
+      "nome": "Pacotes: razão com o total",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "\"A para o total é 2/3\": o pacote é o total (3), A tem 2 e o outro lado tem a diferença (3 − 2 = 1). Para montar \"A para o total\" a partir dos dois lados, some os lados antes de dividir e simplifique em cima e embaixo."
+    },
+    "rl-pacote-fora": {
+      "nome": "Pacotes: gente de fora da razão",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "Quem não está na receita não entra no pacote: tire essas pessoas do total antes de calcular o k (total que sobra ÷ soma da receita)."
+    },
+    "rl-pacote-muda": {
+      "nome": "Pacotes: razão que muda",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "Entram ou saem pessoas de um lado só: ache quem NÃO muda e escreva as duas receitas com o mesmo número para ele. A diferença por pacote (quanto cresceu ou diminuiu) dá o k: k = quantos entraram ou saíram ÷ variação por pacote."
+    },
+    "rl-pacote-encadeada": {
+      "nome": "Pacotes: razões encadeadas",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "A : B e B : C: o B tem números diferentes nas duas receitas. Iguale o B com o MMC (multiplicando a receita inteira), junte em A : B : C e só então use a pista (total, lado ou diferença)."
     }
   },
   "questoes": {
@@ -955,6 +990,20 @@
     "rl-rp-r09": "rl-regra-tres-composta",
     "rl-rp-02": "rl-regra-tres-composta",
     "rl-rp-r05": "rl-trabalho-conjunto",
-    "rl-rp-05": "rl-trabalho-conjunto"
+    "rl-rp-05": "rl-trabalho-conjunto",
+    "rl-pk-01": "rl-pacote-total",
+    "rl-pk-02": "rl-pacote-total",
+    "rl-pk-13": "rl-pacote-total",
+    "rl-pk-03": "rl-pacote-lado",
+    "rl-pk-04": "rl-pacote-lado",
+    "rl-pk-05": "rl-pacote-diferenca",
+    "rl-pk-06": "rl-pacote-diferenca",
+    "rl-pk-07": "rl-pacote-razao-total",
+    "rl-pk-14": "rl-pacote-razao-total",
+    "rl-pk-08": "rl-pacote-fora",
+    "rl-pk-09": "rl-pacote-muda",
+    "rl-pk-10": "rl-pacote-muda",
+    "rl-pk-11": "rl-pacote-encadeada",
+    "rl-pk-12": "rl-pacote-encadeada"
   }
 }

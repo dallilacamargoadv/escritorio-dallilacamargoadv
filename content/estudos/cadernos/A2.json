@@ -2437,7 +2437,8 @@
    "status": "pronta",
    "fonte": "Ceisc: Prof. Dudan, aulas 3 (razão e proporção) e 4 (regra de três), TAQ FCC; composta e inversamente proporcional pela aritmética básica",
    "resumo": [
-    "Razão é comparação por divisão: \"para cada 3, 5\" vira blocos. Some os blocos, ache quanto vale 1 bloco e multiplique.",
+    "Razão é receita: \"para cada 3, 5\" quer dizer pacotes com 3 de um lado e 5 do outro. O k é quantos pacotes existem.",
+    "Três pistas para o k: total ÷ soma da receita; valor de um lado ÷ número do lado; diferença ÷ diferença da receita. Depois, multiplique pela parte pedida e releia a pergunta.",
     "Proporção é igualdade de razões (a/b = c/d). Propriedade fundamental: produto dos meios = produto dos extremos (a · d = b · c). É daí que vem o cruz-credo.",
     "Divisão diretamente proporcional: some os números, divida o total, multiplique. Inversamente: divida proporcionalmente aos inversos (quem tem mais recebe menos).",
     "Regra de três: uma coluna por grandeza. Mesmo sentido (sobe, sobe) = direta, multiplica em cruz. Sentidos opostos = inversa, multiplica lado a lado.",
@@ -2451,7 +2452,7 @@
      "blocos": [
       {
        "t": "texto",
-       "html": "Razão é só uma comparação por divisão. Quando a questão diz <b>para cada 3 deferidos há 5 indeferidos</b>, ela está dando a razão 3/5 (lê-se \"3 para 5\"). Ela <b>não</b> diz que há 3 deferidos: diz que eles vêm em <b>blocos</b> de 3 contra 5. O desenho mostra o caminho que serve para quase toda questão de razão."
+       "html": "Razão é só uma comparação por divisão. Quando a questão diz <b>para cada 3 deferidos há 5 indeferidos</b>, ela está dando a razão 3/5 (lê-se \"3 para 5\"). Ela <b>não</b> diz que há 3 deferidos: diz que eles vêm em <b>pacotes</b> de 3 contra 5. O desenho mostra o caminho que serve para quase toda questão de razão."
       },
       {
        "t": "cena",
@@ -2591,10 +2592,10 @@
        ],
        "passos": [
         {
-         "texto": "Razão é comparação por divisão: <b>para cada 3</b> pedidos deferidos, <b>5</b> são indeferidos. Desenhe isso como blocos do mesmo tamanho: 3 blocos de um lado, 5 do outro."
+         "texto": "Razão é comparação por divisão: <b>para cada 3</b> pedidos deferidos, <b>5</b> são indeferidos. Desenhe isso como pacotes do mesmo tamanho: 3 pacotes de um lado, 5 do outro."
         },
         {
-         "texto": "Some os blocos: <b>3 + 5 = 8 partes</b>. Por que somar? Porque os 64 pedidos são o total, e o total é feito de todas as partes juntas.",
+         "texto": "Some os pacotes: <b>3 + 5 = 8 partes</b>. Por que somar? Porque os 64 pedidos são o total, e o total é feito de todas as partes juntas.",
          "mostra": [
           "tot"
          ],
@@ -2603,7 +2604,7 @@
          }
         },
         {
-         "texto": "Se 8 partes valem 64, <b>1 parte</b> vale 64 ÷ 8 = <b>8 pedidos</b>. Esse é o passo que destrava tudo: achar quanto vale um bloco.",
+         "texto": "Se 8 partes valem 64, <b>1 parte</b> vale 64 ÷ 8 = <b>8 pedidos</b>. Esse é o passo que destrava tudo: achar quanto vale um pacote.",
          "mostra": [
           "tot",
           "cada"
@@ -2613,7 +2614,7 @@
          }
         },
         {
-         "texto": "Agora é só multiplicar: deferidos = 3 blocos × 8 = <b>24</b>; indeferidos = 5 × 8 = <b>40</b>. Confira: 24 + 40 = 64.",
+         "texto": "Agora é só multiplicar: deferidos = 3 pacotes × 8 = <b>24</b>; indeferidos = 5 × 8 = <b>40</b>. Confira: 24 + 40 = 64.",
          "mostra": [
           "tot",
           "cada",
@@ -2651,7 +2652,250 @@
         {
          "tag": "Regra",
          "titulo": "Diferença das partes",
-         "texto": "Se a questão dá a diferença (há 16 a mais de um lado), a diferença dos blocos (5 − 3 = 2) vale 16: 1 bloco = 8."
+         "texto": "Se a questão dá a diferença (há 16 a mais de um lado), a diferença dos pacotes (5 − 3 = 2) vale 16: 1 pacote = 8."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "O método dos pacotes: achar o k pela pista",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Uma razão é uma <b>receita</b>. Razão de 2 para 3 entre homens e mulheres quer dizer: <b>cada pacote tem 2 homens e 3 mulheres</b>. O <b>k</b> é quantos pacotes existem. Os valores reais são 2 × k homens e 3 × k mulheres. A conta é fácil; o trabalho é descobrir o k. E a prova <b>sempre</b> dá uma pista para isso."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "A prova deu...",
+        "Conta do k",
+        "Exemplo (receita 2 homens : 3 mulheres)"
+       ],
+       "linhas": [
+        [
+         "o <b>total</b>",
+         "k = total ÷ (soma da receita)",
+         "50 pessoas: k = 50 ÷ 5 = 10 → 20 homens e 30 mulheres"
+        ],
+        [
+         "o valor de <b>um lado</b>",
+         "k = valor ÷ (número daquele lado)",
+         "18 homens: k = 18 ÷ 2 = 9 → 27 mulheres"
+        ],
+        [
+         "a <b>diferença</b>",
+         "k = diferença ÷ (diferença da receita)",
+         "há 7 mulheres a mais: k = 7 ÷ (3 − 2) = 7 → 14 homens e 21 mulheres"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Isso é pacote ou é gente?",
+       "html": "Antes de escrever qualquer número, pergunte: <b>isso é pacote ou é gente?</b> O 5 da receita (2 + 3) é o <b>tamanho do pacote</b>, não é um dos lados. O k é <b>quantos pacotes</b>, não é a resposta. Depois de achar o k, <b>releia a pergunta</b>: ela quer um lado, o total ou a diferença?"
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Razão com o total",
+         "sub": "o pacote é o total",
+         "texto": "\"Mulheres para o total é 2/3\": o pacote tem <b>3 pessoas</b>, das quais 2 são mulheres. O outro lado é a diferença: 3 − 2 = <b>1 homem</b> por pacote."
+        },
+        {
+         "titulo": "Gente de fora da razão",
+         "sub": "tire antes",
+         "texto": "Se 26 mil não são nem argentinos nem alemães, <b>tire esses 26 mil do total</b> antes de montar os pacotes. Só quem está na receita entra no pacote."
+        },
+        {
+         "titulo": "Razão que muda",
+         "sub": "quem não muda?",
+         "texto": "Entram motos, saem pessoas: ache quem <b>não muda</b> e compare as duas receitas. O quanto cada pacote cresceu (ou diminuiu) dá o k."
+        },
+        {
+         "titulo": "Razões encadeadas",
+         "sub": "A:B e B:C",
+         "texto": "O termo que se repete (B) tem números diferentes nas duas receitas. <b>Iguale o B com o MMC</b> e junte numa receita só, A:B:C."
+        }
+       ]
+      },
+      {
+       "t": "cena",
+       "titulo": "A razão que muda: olhe quem NÃO muda",
+       "altura": 260,
+       "elementos": [
+        {
+         "id": "ra",
+         "tipo": "rotulo",
+         "x": 60,
+         "y": 40,
+         "texto": "antes",
+         "fixo": true
+        },
+        {
+         "id": "pa",
+         "tipo": "caixa",
+         "x": 110,
+         "y": 15,
+         "w": 420,
+         "h": 46,
+         "texto": "1 pacote: 5 carros + 2 motos",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "rd",
+         "tipo": "rotulo",
+         "x": 60,
+         "y": 115,
+         "texto": "depois"
+        },
+        {
+         "id": "pd",
+         "tipo": "caixa",
+         "x": 110,
+         "y": 90,
+         "w": 420,
+         "h": 46,
+         "texto": "1 pacote: 5 carros + 4 motos",
+         "cor": "blue"
+        },
+        {
+         "id": "cresce",
+         "tipo": "caixa",
+         "x": 545,
+         "y": 90,
+         "w": 125,
+         "h": 46,
+         "texto": "+2 motos",
+         "sub": "por pacote",
+         "cor": "warn"
+        },
+        {
+         "id": "k",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 170,
+         "texto": "12 motos novas ÷ 2 por pacote = 6 pacotes (k = 6)",
+         "cor": "accent"
+        },
+        {
+         "id": "res",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 205,
+         "texto": "carros = 5 × 6 = 30",
+         "cor": "ok"
+        },
+        {
+         "id": "conf",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 240,
+         "texto": "confere: 30 carros, 12 motos → 24 motos; 30 : 24 = 5 : 4",
+         "cor": "ok"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Num estacionamento, a razão entre carros e motos é 5 para 2. Entram 12 motos e a razão vira 5 para 4. Quantos carros há? Receita de antes: cada pacote tem <b>5 carros e 2 motos</b>."
+        },
+        {
+         "texto": "Primeira pergunta: quem <b>não muda</b>? Os carros (só entraram motos). Então os 5 carros de cada pacote continuam lá, e o número de pacotes também. A receita nova é <b>5 carros e 4 motos</b>.",
+         "mostra": [
+          "rd",
+          "pd"
+         ],
+         "anima": {
+          "pd": "pulsa"
+         }
+        },
+        {
+         "texto": "Compare as receitas: cada pacote ganhou <b>2 motos</b> (de 2 para 4).",
+         "mostra": [
+          "rd",
+          "pd",
+          "cresce"
+         ],
+         "anima": {
+          "cresce": "bate"
+         }
+        },
+        {
+         "texto": "As 12 motos novas se espalharam de 2 em 2 pelos pacotes. Quantos pacotes? 12 ÷ 2 = <b>6</b>. Esse é o k. Atenção: 6 é <b>pacote</b>, não é gente.",
+         "mostra": [
+          "rd",
+          "pd",
+          "cresce",
+          "k"
+         ],
+         "anima": {
+          "k": "pulsa"
+         }
+        },
+        {
+         "texto": "Agora releia a pergunta: ela quer os <b>carros</b>. 5 por pacote × 6 pacotes = <b>30 carros</b>. Volte à história para conferir: 30 carros e 12 + 12 = 24 motos; 30 para 24 é 5 para 4. Pista usada: <b>quanto cresce por pacote</b>.",
+         "mostra": [
+          "rd",
+          "pd",
+          "cresce",
+          "k",
+          "res",
+          "conf"
+         ],
+         "anima": {
+          "res": "pulsa"
+         }
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Receitas",
+         "sub": "A:B e B:C"
+        },
+        {
+         "titulo": "Igualar B",
+         "sub": "MMC"
+        },
+        {
+         "titulo": "Receita única",
+         "sub": "A:B:C"
+        },
+        {
+         "titulo": "k",
+         "sub": "pista do total"
+        },
+        {
+         "titulo": "Pergunta",
+         "sub": "reler"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Razões encadeadas.</b> Na procuradoria, Fiscal : Contencioso = 3 : 4 e Contencioso : Consultivo = 2 : 5. São 85 servidores nos três setores. Quantos estão no Consultivo? Duas receitas, e o Contencioso aparece nas duas com números diferentes (4 e 2)."
+        },
+        {
+         "no": 1,
+         "texto": "Iguale o Contencioso: MMC de 4 e 2 = <b>4</b>. A primeira receita já tem 4. A segunda, multiplique tudo por 2: 2 : 5 vira <b>4 : 10</b>. Pode? Pode: multiplicar os dois lados da receita pelo mesmo número não muda a razão."
+        },
+        {
+         "no": 2,
+         "texto": "Agora o Contencioso é 4 nas duas: a receita única é <b>3 : 4 : 10</b>. Cada pacote tem 3 + 4 + 10 = <b>17 servidores</b> (tamanho do pacote, não é um setor)."
+        },
+        {
+         "no": 3,
+         "texto": "A pista é o <b>total</b>: k = 85 ÷ 17 = <b>5 pacotes</b>."
+        },
+        {
+         "no": 4,
+         "texto": "Releia: a pergunta é o <b>Consultivo</b>. 10 por pacote × 5 = <b>50</b>. Confere: Fiscal 15, Contencioso 20, Consultivo 50; 15 + 20 + 50 = 85. Pista usada: <b>total</b>, depois de igualar o termo repetido."
         }
        ]
       }
@@ -3508,10 +3752,10 @@
        "nos": [
         {
          "titulo": "Diferença",
-         "sub": "dos blocos"
+         "sub": "dos pacotes"
         },
         {
-         "titulo": "1 bloco",
+         "titulo": "1 pacote",
          "sub": "divide"
         },
         {
@@ -3526,11 +3770,11 @@
        "passos": [
         {
          "no": 0,
-         "texto": "<b>Exercício 1 (razão com diferença).</b> Num gabinete, para cada 5 processos de Tributário há 3 de Civil, e há 16 processos de Tributário a mais que de Civil. Quantos processos há ao todo? Blocos: Tributário 5, Civil 3. A diferença entre eles é <b>5 − 3 = 2 blocos</b>."
+         "texto": "<b>Exercício 1 (razão com diferença).</b> Num gabinete, para cada 5 processos de Tributário há 3 de Civil, e há 16 processos de Tributário a mais que de Civil. Quantos processos há ao todo? Pacotes: Tributário 5, Civil 3. A diferença entre eles é <b>5 − 3 = 2 pacotes</b>."
         },
         {
          "no": 1,
-         "texto": "Esses 2 blocos de diferença valem os 16 processos a mais. Então 1 bloco = 16 ÷ 2 = <b>8</b>."
+         "texto": "Esses 2 pacotes de diferença valem os 16 processos a mais. Então 1 pacote = 16 ÷ 2 = <b>8</b>."
         },
         {
          "no": 2,
@@ -3618,7 +3862,7 @@
         {
          "texto": "Se a razão entre A e B é 2/3, então A = 2 e B = 3.",
          "v": false,
-         "porque": "A razão diz só a proporção dos blocos. A pode ser 12 e B 18 (blocos de 6)."
+         "porque": "A razão diz só a proporção dos pacotes. A pode ser 12 e B 18 (pacotes de 6)."
         },
         {
          "texto": "Velocidade e tempo de viagem (mesmo trajeto) são inversamente proporcionais.",
@@ -3651,7 +3895,7 @@
        "t": "nota",
        "tom": "atencao",
        "titulo": "Roteiro para qualquer questão de proporção",
-       "html": "1) Uma coluna por grandeza, mesma unidade na mesma coluna. 2) Pergunte: se uma aumenta, a outra aumenta ou diminui? 3) Direta: cruz. Inversa: lado a lado. 4) Confira se a resposta faz sentido (mais gente, menos dias). Abaixo estão 9 questões reais da FCC e 6 autorais, todas com a conta explicada."
+       "html": "1) Uma coluna por grandeza, mesma unidade na mesma coluna. 2) Pergunte: se uma aumenta, a outra aumenta ou diminui? 3) Direta: cruz. Inversa: lado a lado. 4) Confira se a resposta faz sentido (mais gente, menos dias). Abaixo estão 9 questões reais da FCC e 20 autorais (14 só no método dos pacotes), todas com a conta explicada e a pista usada."
       }
      ]
     }
@@ -3673,7 +3917,21 @@
     "rl-rp-03",
     "rl-rp-04",
     "rl-rp-05",
-    "rl-rp-06"
+    "rl-rp-06",
+    "rl-pk-01",
+    "rl-pk-02",
+    "rl-pk-03",
+    "rl-pk-04",
+    "rl-pk-05",
+    "rl-pk-06",
+    "rl-pk-07",
+    "rl-pk-08",
+    "rl-pk-09",
+    "rl-pk-10",
+    "rl-pk-11",
+    "rl-pk-12",
+    "rl-pk-13",
+    "rl-pk-14"
    ]
   },
   {
