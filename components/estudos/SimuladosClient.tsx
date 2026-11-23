@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Trash2 } from "lucide-react";
 import { formatarData } from "@/lib/estudos-utils";
-import { TAMANHOS_LEI_SECA, formatarDuracao, TAMANHOS_SEMANA, TAMANHOS_SIMULADAO, TIPO_LABEL, type SemanaSimulados, type Simulado } from "@/lib/estudos-simulados";
+import { TAMANHOS_LEI_SECA, formatarDuracao, MODO_LABEL, PROVA_TOTAL, TAMANHOS_SEMANA, TIPO_LABEL, type ModoProva, type SemanaSimulados, type Simulado } from "@/lib/estudos-simulados";
 import { Sparkle } from "@/components/estudos/Sparkle";
 import { Barra, BOTAO_PRIMARIO, BOTAO_SECUNDARIO, CAMPO, Card, CardTitulo, Kpi, tomPorPct } from "@/components/estudos/ui";
 
@@ -16,8 +16,9 @@ interface MateriaPool {
   ineditas: number;
 }
 interface LinhaDistribuicao {
-  materia_id: string;
+  bloco: string;
   nome: string;
+  grupo: "direito" | "gerais";
   n: number;
   disponiveis: number;
   ineditas: number;
@@ -41,7 +42,7 @@ export function SimuladosClient(p: {
   totalBanco: number;
   ineditas: number;
   materias: MateriaPool[];
-  distribuicoes: Record<number, LinhaDistribuicao[]>;
+  distribuicoes: Record<ModoProva, LinhaDistribuicao[]>;
   semana: { total: number; ineditas: number; temas: string[] };
   simulados: Simulado[];
   evolucao: SemanaSimulados[];
@@ -49,11 +50,10 @@ export function SimuladosClient(p: {
 }) {
   const router = useRouter();
   const diaSemana = new Date(`${p.hoje}T12:00:00Z`).getUTCDay();
-  const [tipo, setTipo] = useState<"lei_seca" | "simuladao" | "semana">(diaSemana === 0 ? "semana" : "lei_seca");
+  const [tipo, setTipo] = useState<"lei_seca" | ModoProva | "semana">(diaSemana === 0 ? "semana" : "lei_seca");
   const [nSem, setNSem] = useState(30);
   const [materia, setMateria] = useState(p.materias[0]?.id ?? "");
   const [nLei, setNLei] = useState(20);
-  const [nMisto, setNMisto] = useState(50);
   const [criando, setCriando] = useState(false);
   const [erro, setErro] = useState("");
 
@@ -63,7 +63,7 @@ export function SimuladosClient(p: {
   const pctDe = (s: Simulado) => (s.total && s.acertos !== null ? Math.round((s.acertos / s.total) * 100) : 0);
 
   const pool = p.materias.find((m) => m.id === materia);
-  const dist = p.distribuicoes[nMisto] ?? [];
+  const dist = tipo === "completo" || tipo === "direito" ? p.distribuicoes[tipo] : [];
   const tamSem = Math.min(nSem, p.semana.total);
   const repetidas =
     tipo === "lei_seca"
@@ -79,7 +79,7 @@ export function SimuladosClient(p: {
     const res = await fetch("/api/admin/estudos/simulados", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ acao: "criar", tipo, total: tipo === "lei_seca" ? nLei : tipo === "semana" ? tamSem : nMisto, materia_id: tipo === "lei_seca" ? materia : null }),
+      body: JSON.stringify({ acao: "criar", tipo, total: tipo === "lei_seca" ? nLei : tipo === "semana" ? tamSem : PROVA_TOTAL[tipo], materia_id: tipo === "lei_seca" ? materia : null }),
     });
     const j = await res.json().catch(() => null);
     if (!res.ok || !j?.id) {
@@ -149,8 +149,11 @@ export function SimuladosClient(p: {
           <Opcao ativo={tipo === "semana"} onClick={() => setTipo("semana")}>
             Temas da semana (domingo)
           </Opcao>
-          <Opcao ativo={tipo === "simuladao"} onClick={() => setTipo("simuladao")}>
-            Simuladão misto do edital
+          <Opcao ativo={tipo === "completo"} onClick={() => setTipo("completo")}>
+            {MODO_LABEL.completo} · 50
+          </Opcao>
+          <Opcao ativo={tipo === "direito"} onClick={() => setTipo("direito")}>
+            {MODO_LABEL.direito} · 30
           </Opcao>
         </div>
 
@@ -207,25 +210,32 @@ export function SimuladosClient(p: {
           </div>
         ) : (
           <div className="mt-4 space-y-3">
-            <div className="flex gap-2">
-              {TAMANHOS_SIMULADAO.map((n) => (
-                <Opcao key={n} ativo={nMisto === n} onClick={() => setNMisto(n)}>
-                  {n} questões
-                </Opcao>
-              ))}
+            <div className={`grid gap-4 ${tipo === "completo" ? "sm:grid-cols-2" : ""}`}>
+              {(["direito", "gerais"] as const)
+                .filter((g) => dist.some((d) => d.grupo === g))
+                .map((g) => {
+                  const linhas = dist.filter((d) => d.grupo === g);
+                  return (
+                    <div key={g}>
+                      <p className="mb-1 text-xs font-medium text-e-ink">
+                        {g === "direito" ? "Direito" : "Conhecimentos gerais"} · {linhas.reduce((s, d) => s + d.n, 0)}
+                      </p>
+                      <ul className="space-y-1 text-sm">
+                        {linhas.map((d) => (
+                          <li key={d.bloco} className="flex justify-between gap-2">
+                            <span className="text-e-ink">{d.nome}</span>
+                            <span className={`tabular-nums ${d.n > d.ineditas ? "text-e-warn" : "text-e-dim"}`}>
+                              {d.n} {d.n > d.ineditas ? `(${d.n - d.ineditas} repetidas)` : ""}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })}
             </div>
-            <ul className="grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
-              {dist.map((d) => (
-                <li key={d.materia_id} className="flex justify-between gap-2">
-                  <span className="text-e-ink">{d.nome}</span>
-                  <span className={`tabular-nums ${d.n > d.ineditas ? "text-e-warn" : "text-e-dim"}`}>
-                    {d.n} {d.n > d.ineditas ? `(${d.n - d.ineditas} repetidas)` : ""}
-                  </span>
-                </li>
-              ))}
-            </ul>
             <p className="text-xs text-e-dim">
-              Proporção pelo número de tópicos de cada matéria no edital. Matérias sem questões no banco ainda (História, Geografia e Cultura do MA, Atualidades, Direitos Humanos, Financeiro, Ambiental, Trabalho e Previdenciário) ficam de fora.
+              Formato da prova prevista: 30 de Direito{tipo === "completo" ? " e depois 20 de conhecimentos gerais" : ""}. O peso de cada matéria segue a prova real da FCC para a PGE-AM (2022). Matérias ainda sem questões no banco (Trabalho, Financeiro) cedem as vagas para as outras até ganharem questões.
             </p>
           </div>
         )}

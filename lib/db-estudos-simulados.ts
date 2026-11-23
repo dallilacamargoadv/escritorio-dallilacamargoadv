@@ -6,7 +6,8 @@ import {
   poolSemana,
   temasDaSemana,
   classificacaoPadrao,
-  distribuicaoSimuladao,
+  distribuicaoProva,
+  type ModoProva,
   escolher,
   poolLeiSeca,
   SEG_POR_QUESTAO,
@@ -33,21 +34,21 @@ export async function getSimulado(id: string): Promise<Simulado | null> {
   return (data as Simulado) ?? null;
 }
 
-export async function criarSimulado(modo: "lei_seca" | "simuladao" | "semana", total: number, materiaId: string | null): Promise<Simulado> {
+export async function criarSimulado(modo: "lei_seca" | ModoProva | "semana", total: number, materiaId: string | null): Promise<Simulado> {
   const respostas = await getRespostas();
   const ultima = ultimaVezPorQuestao(respostas);
-  // "semana" fica gravado como simuladão (sem migration): misto, mas só dos temas da semana.
+  // "semana", "completo" e "direito" ficam gravados como simuladão (sem migration).
   const tipo = modo === "lei_seca" ? "lei_seca" : "simuladao";
   let ids: string[];
   if (modo === "semana") {
     const temas = temasDaSemana(respostas, QUESTAO_POR_ID, addDaysToDateString(todayBelemDateString(), -6));
     ids = escolher(poolSemana(QUESTOES, temas), total, ultima).map((q) => q.id);
-  } else if (tipo === "lei_seca") {
+  } else if (modo === "lei_seca") {
     if (!materiaId) throw new Error("matéria obrigatória");
     ids = escolher(poolLeiSeca(QUESTOES, materiaId), total, ultima).map((q) => q.id);
   } else {
-    ids = distribuicaoSimuladao(QUESTOES, total).flatMap((d) =>
-      escolher(QUESTOES.filter((q) => q.materia_id === d.materia_id), d.n, ultima).map((q) => q.id),
+    ids = distribuicaoProva(QUESTOES, modo).flatMap((d) =>
+      escolher(QUESTOES.filter((q) => d.materias.includes(q.materia_id)), d.n, ultima).map((q) => q.id),
     );
   }
   if (!ids.length) throw new Error("sem questões");
