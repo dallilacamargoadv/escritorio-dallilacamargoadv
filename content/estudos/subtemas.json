@@ -614,6 +614,96 @@
       "nome": "Direitos fundamentais na Constituição do Maranhão",
       "tema": "Direitos fundamentais",
       "revisao": "CE-MA, art. 4º: assegura, no território e nos limites da competência do Estado, os direitos e garantias fundamentais nos termos da CF (não repete o art. 5º). Art. 5º: veda a Estado e Municípios subvencionar cultos e criar distinções entre brasileiros (como o art. 19 da CF). Art. 109: Defensoria presta assistência aos necessitados. Art. 268: ninguém é prejudicado por litigar contra a Fazenda estadual ou municipal."
+    },
+    "rl-fr-operacoes": {
+      "nome": "Operações com frações",
+      "tema": "Frações, MMC e MDC",
+      "revisao": "Somar ou subtrair: deixe os denominadores iguais com o MMC (divide o MMC pelo de baixo e multiplica pelo de cima) e some só em cima; nunca some os de baixo. Multiplicar: em linha. Dividir: mantém a primeira e multiplica pelo inverso da segunda. Simplificar: divida em cima e embaixo pelo mesmo número até não dar mais. Comparar: divida em cima por embaixo e compare os decimais."
+    },
+    "rl-fr-restante": {
+      "nome": "Fração do restante",
+      "tema": "Frações, MMC e MDC",
+      "revisao": "\"Do restante\", \"do que sobrou\": a fração é de uma barra nova. Tire primeiro o que já foi usado e só então aplique a fração. \"De\" é multiplicação: divida pelo de baixo e multiplique pelo de cima. Depois responda exatamente o que foi pedido (o que leu, o que falta, a parte de quem)."
+    },
+    "rl-fr-total": {
+      "nome": "Achar o total a partir da sobra",
+      "tema": "Frações, MMC e MDC",
+      "revisao": "Some as frações gastas (do total, com MMC), calcule a sobra (1 menos o gasto) e iguale ao valor dado. Ache quanto vale 1 pedaço (valor ÷ numerador da sobra) e multiplique pelo denominador. Confira voltando ao enunciado."
+    },
+    "rl-mmc": {
+      "nome": "MMC: encontros, ciclos e sobras iguais",
+      "tema": "Frações, MMC e MDC",
+      "revisao": "\"A cada\", \"juntos de novo\", \"coincidir\": MMC, o menor múltiplo comum (fatoração simultânea, multiplica todos os primos). O MMC é um intervalo: some ao dia de partida; para o dia da semana, divida por 7 e ande o resto. Mesma sobra em várias divisões: tire a sobra, use múltiplos do MMC e devolva a sobra."
+    },
+    "rl-mdc": {
+      "nome": "MDC: grupos iguais do maior tamanho",
+      "tema": "Frações, MMC e MDC",
+      "revisao": "Dividir em grupos iguais, sem sobra e do maior tamanho possível (ou no menor número de grupos): MDC, o maior divisor comum (na fatoração simultânea, só os primos que dividiram todos ao mesmo tempo). O MDC é o tamanho do grupo; o número de grupos é cada quantidade ÷ MDC, somados."
+    },
+    "rl-potencias": {
+      "nome": "Potências: sinal, zero e expoente negativo",
+      "tema": "Frações, MMC e MDC",
+      "revisao": "−2² = −4 (o expoente não pega o sinal); (−2)² = 4. Todo número diferente de zero elevado a zero dá 1. Expoente negativo inverte a base: 2⁻¹ = 1/2. Mesma base: na multiplicação soma os expoentes, na divisão subtrai."
+    },
+    "rl-razao-partes": {
+      "nome": "Razão: transformar em pacotes",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "\"Para cada a, b\" vira pacotes. Com o total: some os pacotes e divida o total. Com a diferença: subtraia os pacotes e divida a diferença. Ache quanto vale 1 pacote e multiplique. Monte a razão na ordem pedida (\"A em relação a B\" = A ÷ B). Frações de grupos diferentes: escolha números que deem conta exata."
+    },
+    "rl-divisao-proporcional": {
+      "nome": "Divisão em partes proporcionais",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "Diretamente: some as proporções, divida o total e multiplique cada uma (quem tem mais recebe mais). Inversamente: use os inversos (1/a, 1/b), multiplique pelo MMC para tirar as frações e divida como na direta (quem tem mais recebe menos; com dois números, basta trocar). Confira se a soma das partes dá o total."
+    },
+    "rl-regra-tres-simples": {
+      "nome": "Regra de três simples",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "Uma coluna por grandeza. Se uma aumenta e a outra também: direta, multiplica em cruz (cruz-credo). Se uma aumenta e a outra diminui: inversa, multiplica lado a lado (lá-lá). Use os valores que realmente valem (quem ficou, os dias que sobraram, as duas demãos). Confira se o resultado faz sentido."
+    },
+    "rl-regra-tres-composta": {
+      "nome": "Regra de três composta",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "Marque a coluna do x e compare com cada grandeza, uma de cada vez. Inversas viram de cabeça para baixo. x = valor conhecido × as razões. Caminho alternativo: calcule a unidade de trabalho (1 servidor em 1 hora rende quanto) e divida o trabalho novo pelo rendimento novo."
+    },
+    "rl-trabalho-conjunto": {
+      "nome": "Trabalho conjunto",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "Some o que cada um faz em uma unidade de tempo: 1/a + 1/b. O tempo juntos é o inverso dessa soma (para dois: a × b ÷ (a + b)). Juntos sempre terminam antes do mais rápido sozinho: somar ou fazer a média dos tempos é armadilha."
+    },
+    "rl-pacote-total": {
+      "nome": "Pacotes: pista do total",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "Razão = receita; k = quantos pacotes. Com o total: k = total ÷ (soma da receita). Depois multiplique o k pela parte pedida. A soma da receita é o tamanho do pacote, não um dos lados; o k é pacote, não gente. Releia a pergunta: um lado, o total ou a diferença?"
+    },
+    "rl-pacote-lado": {
+      "nome": "Pacotes: pista de um lado",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "Quando a prova dá o valor de um lado: k = valor ÷ (número daquele lado na receita), e não ÷ soma. Depois multiplique o k pelo lado pedido ou pelo tamanho do pacote (se pedir o total). Resposta com vírgula para gente: sinal de que dividiu ao contrário."
+    },
+    "rl-pacote-diferenca": {
+      "nome": "Pacotes: pista da diferença",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "Quando a prova dá quanto um lado tem a mais: k = diferença ÷ (diferença dos números da receita). Ex.: 5 : 8 com 450 a mais → k = 450 ÷ 3 = 150. Depois multiplique pela parte pedida e confira a diferença."
+    },
+    "rl-pacote-razao-total": {
+      "nome": "Pacotes: razão com o total",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "\"A para o total é 2/3\": o pacote é o total (3), A tem 2 e o outro lado tem a diferença (3 − 2 = 1). Para montar \"A para o total\" a partir dos dois lados, some os lados antes de dividir e simplifique em cima e embaixo."
+    },
+    "rl-pacote-fora": {
+      "nome": "Pacotes: gente de fora da razão",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "Quem não está na receita não entra no pacote: tire essas pessoas do total antes de calcular o k (total que sobra ÷ soma da receita)."
+    },
+    "rl-pacote-muda": {
+      "nome": "Pacotes: razão que muda",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "Entram ou saem pessoas de um lado só: ache quem NÃO muda e escreva as duas receitas com o mesmo número para ele. A diferença por pacote (quanto cresceu ou diminuiu) dá o k: k = quantos entraram ou saíram ÷ variação por pacote."
+    },
+    "rl-pacote-encadeada": {
+      "nome": "Pacotes: razões encadeadas",
+      "tema": "Razão, proporção e regra de três",
+      "revisao": "A : B e B : C: o B tem números diferentes nas duas receitas. Iguale o B com o MMC (multiplicando a receita inteira), junte em A : B : C e só então use a pista (total, lado ou diferença)."
     }
   },
   "questoes": {
@@ -871,6 +961,49 @@
     "cf-dg-11": "cf-extradicao",
     "cf-dg-12": "cf-dg-seguranca-juridica",
     "cf-dg-13": "cf-dg-comunicacoes",
-    "cf-dg-14": "cf-dg-ce-ma"
+    "cf-dg-14": "cf-dg-ce-ma",
+    "rl-fr-01": "rl-fr-operacoes",
+    "rl-fr-02": "rl-fr-operacoes",
+    "rl-fr-06": "rl-fr-operacoes",
+    "rl-fr-07": "rl-fr-operacoes",
+    "rl-fr-03": "rl-fr-restante",
+    "rl-fr-05": "rl-fr-restante",
+    "rl-fr-04": "rl-fr-total",
+    "rl-fr-08": "rl-mmc",
+    "rl-fr-10": "rl-mmc",
+    "rl-fr-12": "rl-mmc",
+    "rl-fr-09": "rl-mdc",
+    "rl-fr-11": "rl-potencias",
+    "rl-rp-r01": "rl-razao-partes",
+    "rl-rp-r02": "rl-razao-partes",
+    "rl-rp-r03": "rl-razao-partes",
+    "rl-rp-r04": "rl-razao-partes",
+    "rl-rp-03": "rl-razao-partes",
+    "rl-rp-06": "rl-razao-partes",
+    "rl-rp-01": "rl-divisao-proporcional",
+    "rl-013": "rl-divisao-proporcional",
+    "rl-rp-r06": "rl-regra-tres-simples",
+    "rl-rp-r07": "rl-regra-tres-simples",
+    "rl-rp-r08": "rl-regra-tres-simples",
+    "rl-rp-04": "rl-regra-tres-simples",
+    "rl-012": "rl-regra-tres-simples",
+    "rl-rp-r09": "rl-regra-tres-composta",
+    "rl-rp-02": "rl-regra-tres-composta",
+    "rl-rp-r05": "rl-trabalho-conjunto",
+    "rl-rp-05": "rl-trabalho-conjunto",
+    "rl-pk-01": "rl-pacote-total",
+    "rl-pk-02": "rl-pacote-total",
+    "rl-pk-13": "rl-pacote-total",
+    "rl-pk-03": "rl-pacote-lado",
+    "rl-pk-04": "rl-pacote-lado",
+    "rl-pk-05": "rl-pacote-diferenca",
+    "rl-pk-06": "rl-pacote-diferenca",
+    "rl-pk-07": "rl-pacote-razao-total",
+    "rl-pk-14": "rl-pacote-razao-total",
+    "rl-pk-08": "rl-pacote-fora",
+    "rl-pk-09": "rl-pacote-muda",
+    "rl-pk-10": "rl-pacote-muda",
+    "rl-pk-11": "rl-pacote-encadeada",
+    "rl-pk-12": "rl-pacote-encadeada"
   }
 }
