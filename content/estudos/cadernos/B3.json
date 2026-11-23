@@ -3909,7 +3909,715 @@
    "topico_id": "B3-03",
    "numero": 7,
    "titulo": "Remédios constitucionais",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Material EBEJI: Direitos e garantias fundamentais, remédios constitucionais (2026), itens 48 a 53; Leis 12.016/2009, 13.300/2016, 9.507/1997 e 4.717/1965; súmulas do STF e do STJ; CF e Constituição do Maranhão, textos vigentes",
+   "resumo": [
+    "Escolha do remédio: locomoção (HC), dado próprio (HD), falta de norma (MI), patrimônio público por cidadão (ação popular); o resto, com direito líquido e certo, é MS (residual, criado em 1934 após a reforma de 1926).",
+    "HC: qualquer pessoa, sem advogado, gratuito, de ofício pelo juiz; preventivo (salvo-conduto) ou liberatório; coletivo (HC 143.641); punição militar só na legalidade; não tranca impeachment.",
+    "MS: natureza civil, prova pré-constituída, 120 dias decadenciais, sem honorários; não cabe contra lei em tese, decisão com recurso suspensivo ou transitada. Coletivo: partido (1 parlamentar), sindicato, entidade de classe, associação com 1 ano; sem autorização (Súm. 629).",
+    "MI: omissão total ou parcial de norma de eficácia limitada; Lei 13.300: concretista intermediária, efeito em regra inter partes; coletivo inclui MP e Defensoria; greve dos servidores (MIs 670, 708, 712).",
+    "HD: conhecer, retificar e anotar dados próprios; exige recusa administrativa (Súm. 2 STJ); certidão e dado de terceiro é MS. Ação popular: só cidadão com título, PJ não (Súm. 365), primeiro grau, coisa julgada secundum eventum probationis.",
+    "CE-MA, art. 81: TJMA julga MS e HD contra Governador, Mesa, TCE, Procuradores-Gerais e Secretários, e MI contra omissão estadual."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: garantias para fazer o direito valer",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Na aula 6 você viu os <b>direitos</b> do art. 5º. Agora vêm as <b>garantias instrumentais</b>: ações que fazem o direito valer quando alguém o viola. A CF tem seis: habeas corpus, mandado de segurança (individual e coletivo), mandado de injunção, habeas data e ação popular (art. 5º, LXVIII a LXXIII)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>A história explica a lógica.</b> O habeas corpus é o mais antigo: Magna Carta (1215) e Habeas Corpus Act (1679). No Brasil, surgiu em 1821 e ganhou o nome em 1830. Na República, Rui Barbosa defendia a <b>teoria brasileira do habeas corpus</b>: usá-lo para qualquer direito ligado à locomoção. A reforma de 1926 restringiu o HC à liberdade de ir e vir, e ficou uma lacuna. Para preenchê-la, a Constituição de 1934 criou o <b>mandado de segurança</b>, criação brasileira. Por isso o MS é <b>residual</b>: cobre o que o HC (e depois o HD) não cobre."
+      },
+      {
+       "t": "cena",
+       "titulo": "Qual remédio? Siga as perguntas",
+       "altura": 250,
+       "elementos": [
+        {
+         "id": "p",
+         "tipo": "caixa",
+         "x": 255,
+         "y": 10,
+         "w": 170,
+         "h": 50,
+         "texto": "O que foi violado?",
+         "sub": "comece aqui",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "hc",
+         "tipo": "caixa",
+         "x": 10,
+         "y": 110,
+         "w": 125,
+         "h": 56,
+         "texto": "Habeas corpus",
+         "sub": "ir, vir e ficar",
+         "cor": "blue"
+        },
+        {
+         "id": "hd",
+         "tipo": "caixa",
+         "x": 145,
+         "y": 110,
+         "w": 125,
+         "h": 56,
+         "texto": "Habeas data",
+         "sub": "dado sobre mim",
+         "cor": "blue"
+        },
+        {
+         "id": "mi",
+         "tipo": "caixa",
+         "x": 280,
+         "y": 110,
+         "w": 125,
+         "h": 56,
+         "texto": "Mandado de injunção",
+         "sub": "falta a norma",
+         "cor": "blue"
+        },
+        {
+         "id": "ap",
+         "tipo": "caixa",
+         "x": 415,
+         "y": 110,
+         "w": 125,
+         "h": 56,
+         "texto": "Ação popular",
+         "sub": "patrimônio público",
+         "cor": "blue"
+        },
+        {
+         "id": "ms",
+         "tipo": "caixa",
+         "x": 550,
+         "y": 110,
+         "w": 125,
+         "h": 56,
+         "texto": "Mandado de segurança",
+         "sub": "o que sobrar",
+         "cor": "ok"
+        },
+        {
+         "id": "res",
+         "tipo": "rotulo",
+         "x": 612,
+         "y": 200,
+         "texto": "residual: líquido e certo",
+         "cor": "ok"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Diante de um caso, não decore a lista: faça perguntas, nesta ordem."
+        },
+        {
+         "texto": "A <b>liberdade de locomoção</b> foi violada ou ameaçada? Habeas corpus.",
+         "mostra": [
+          "hc"
+         ],
+         "anima": {
+          "hc": "pulsa"
+         }
+        },
+        {
+         "texto": "Quer <b>conhecer ou corrigir dados sobre você mesmo</b> em banco governamental ou de caráter público? Habeas data. Dado de terceiro ou certidão: não é HD.",
+         "mostra": [
+          "hc",
+          "hd"
+         ],
+         "anima": {
+          "hd": "pulsa"
+         }
+        },
+        {
+         "texto": "O direito existe na CF, mas <b>falta a norma regulamentadora</b> e por isso não dá para exercê-lo? Mandado de injunção.",
+         "mostra": [
+          "hc",
+          "hd",
+          "mi"
+         ],
+         "anima": {
+          "mi": "pulsa"
+         }
+        },
+        {
+         "texto": "Um <b>cidadão</b> quer anular ato lesivo ao patrimônio público, à moralidade, ao meio ambiente ou ao patrimônio histórico? Ação popular.",
+         "mostra": [
+          "hc",
+          "hd",
+          "mi",
+          "ap"
+         ],
+         "anima": {
+          "ap": "pulsa"
+         }
+        },
+        {
+         "texto": "Não é nenhum desses e há <b>direito líquido e certo</b> (provado com documentos) violado por autoridade? Mandado de segurança, o remédio <b>residual</b>.",
+         "mostra": [
+          "hc",
+          "hd",
+          "mi",
+          "ap",
+          "ms",
+          "res"
+         ],
+         "anima": {
+          "ms": "pulsa"
+         }
+        }
+       ]
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Remédio",
+        "Protege",
+        "Quem propõe",
+        "Gratuito?"
+       ],
+       "linhas": [
+        [
+         "Habeas corpus",
+         "Liberdade de locomoção",
+         "Qualquer pessoa, sem advogado",
+         "Sim, para todos (LXXVII)"
+        ],
+        [
+         "Mandado de segurança",
+         "Direito líquido e certo, residual",
+         "Titular do direito, com advogado",
+         "Não"
+        ],
+        [
+         "Mandado de injunção",
+         "Direito inviável por falta de norma",
+         "Titular do direito; coletivo: legitimados da lei",
+         "Não"
+        ],
+        [
+         "Habeas data",
+         "Informação sobre o próprio impetrante",
+         "Pessoa física ou jurídica, sobre si",
+         "Sim, para todos (LXXVII)"
+        ],
+        [
+         "Ação popular",
+         "Patrimônio público, moralidade, meio ambiente, patrimônio histórico",
+         "Só o cidadão",
+         "Isento de custas e sucumbência, salvo má-fé"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, LXVIII e LXIX",
+       "texto": "LXVIII - conceder-se-á habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua ==liberdade de locomoção==, por ilegalidade ou abuso de poder;\nLXIX - conceder-se-á mandado de segurança para proteger ==direito líquido e certo==, ==não amparado por habeas corpus ou habeas data==, quando o responsável pela ilegalidade ou abuso de poder for autoridade pública ou agente de pessoa jurídica no exercício de atribuições do Poder Público;"
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: habeas corpus",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Partes.</b> <b>Impetrante</b>: quem pede (qualquer pessoa, nacional ou estrangeira, por si ou por outro; também o MP e a pessoa jurídica, mas sempre em favor de pessoa física). <b>Paciente</b>: quem sofre a coação (pode ser o próprio impetrante). <b>Autoridade coatora</b>: quem pratica a ilegalidade. O HC dispensa advogado e formalidade, e é gratuito."
+      },
+      {
+       "t": "texto",
+       "html": "<b>De ofício.</b> O juiz e o tribunal, no exercício da jurisdição, podem conceder HC de ofício, uma exceção à inércia. Fora da função (como pessoa comum), o juiz <b>impetra</b>, não concede."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Preventivo",
+         "sub": "ameaça",
+         "verso": "A restrição à locomoção ainda não aconteceu: o juiz expede <b>salvo-conduto</b>.",
+         "detalhe": "\"se achar ameaçado\""
+        },
+        {
+         "frente": "Liberatório",
+         "sub": "repressivo",
+         "verso": "A restrição já aconteceu: o juiz manda cessar a coação (alvará de soltura).",
+         "detalhe": "\"sofrer violência ou coação\""
+        },
+        {
+         "frente": "Coletivo",
+         "sub": "HC 143.641",
+         "verso": "O STF admitiu HC coletivo: preventiva vira domiciliar para gestantes, puérperas e mães de crianças ou de pessoas com deficiência.",
+         "detalhe": "Salvo violência, grave ameaça ou crime contra descendente."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Competência.</b> Segue a autoridade coatora e, em alguns casos, o paciente. Exemplos: STF, quando o paciente é o Presidente, parlamentar federal, ministro do STF ou o PGR, ou o coator é Tribunal Superior (art. 102, I, d e i); STJ, quando o coator é tribunal sujeito à sua jurisdição, Ministro de Estado ou Comandante militar (art. 105, I, c); TRF, quando o coator é juiz federal (art. 108, I, d). Recurso ordinário: ao STF contra HC denegado em única instância por Tribunal Superior; ao STJ contra HC denegado em única ou última instância por TRF ou TJ."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 142, § 2º",
+       "texto": "§ 2º ==Não caberá habeas corpus== em relação a punições disciplinares militares."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Punição disciplinar militar: cabe HC para a legalidade",
+       "html": "O art. 142, § 2º, veda o HC contra punição disciplinar militar (vale também para militares dos Estados, art. 42, § 1º). Mas o STF entende que a vedação alcança só o <b>mérito</b>. Cabe HC para examinar os <b>pressupostos de legalidade</b>: hierarquia, poder disciplinar, ato ligado à função e pena cabível (HC 70.648). E HC não tranca processo de <b>impeachment</b>, que não ameaça a locomoção."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: mandado de segurança individual e coletivo",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Natureza.</b> Ação constitucional de natureza <b>civil</b>, qualquer que seja o ato atacado (administrativo, judicial, criminal, eleitoral, trabalhista). Hoje regida pela Lei 12.016/2009."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Direito líquido e certo</b> é o que se prova <b>de plano</b>, com prova pré-constituída, sem dilação probatória. A doutrina corrige o texto: líquidos e certos são os <b>fatos</b>; todo direito que existe já é certo. Por isso, controvérsia só sobre matéria de direito não impede o MS (Súmula 625 do STF)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Partes.</b> Impetrante: o titular do direito. Impetrado: a <b>autoridade coatora</b> (pública ou agente de pessoa jurídica no exercício de atribuições do Poder Público, como o dirigente de universidade privada ao negar matrícula). Contra ato de gestão comercial de estatal não cabe MS."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Não cabe MS contra",
+        "Base"
+       ],
+       "linhas": [
+        [
+         "Lei em tese",
+         "Súmula 266 do STF"
+        ],
+        [
+         "Ato de que caiba recurso administrativo com efeito suspensivo, sem caução",
+         "Lei 12.016/2009, art. 5º, I"
+        ],
+        [
+         "Decisão judicial de que caiba recurso com efeito suspensivo",
+         "Art. 5º, II; Súmula 267"
+        ],
+        [
+         "Decisão judicial transitada em julgado",
+         "Art. 5º, III; Súmula 268"
+        ],
+        [
+         "Cobrança de valores passados (MS não substitui ação de cobrança)",
+         "Súmulas 269 e 271"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Prazo e honorários",
+       "html": "O prazo para impetrar é de <b>120 dias</b> da ciência do ato (art. 23 da Lei 12.016/2009), prazo <b>decadencial</b> que o STF considera constitucional (Súmula 632). No MS <b>não há honorários</b> de sucumbência (art. 25; Súmula 512). Na ADI 4.296, o STF derrubou a proibição de liminar para compensar tributos, liberar mercadoria e pagar servidor (art. 7º, § 2º) e a exigência de ouvir antes a Fazenda para dar liminar no coletivo (art. 22, § 2º)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, LXX",
+       "texto": "LXX - o mandado de segurança coletivo pode ser impetrado por:\na) partido político ==com representação no Congresso Nacional==;\nb) organização sindical, entidade de classe ou associação legalmente constituída e ==em funcionamento há pelo menos um ano==, em defesa dos interesses de seus membros ou associados;"
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Partido",
+         "sub": "1 parlamentar basta"
+        },
+        {
+         "titulo": "Sindicato e entidade",
+         "sub": "legalmente constituídos"
+        },
+        {
+         "titulo": "Associação",
+         "sub": "+ 1 ano"
+        },
+        {
+         "titulo": "Sem autorização",
+         "sub": "Súmula 629"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Partido político</b> com representação no Congresso: basta <b>um</b> parlamentar, deputado ou senador. A doutrina (Lenza) admite defender qualquer interesse social; o STJ já limitou aos filiados e a questões políticas."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Organização sindical e entidade de classe</b>: legalmente constituídas e na defesa de seus membros. Não precisam de 1 ano."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Associação</b>: legalmente constituída e <b>em funcionamento há pelo menos 1 ano</b>. O requisito do ano é <b>só da associação</b>."
+        },
+        {
+         "no": 3,
+         "texto": "No MS coletivo há <b>substituição processual</b>: a entidade <b>não precisa de autorização</b> dos associados (Súmula 629) e pode defender interesse de só <b>parte</b> da categoria (Súmula 630). Diferente da ação ordinária da associação (art. 5º, XXI, aula 6), que exige autorização expressa."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Objeto do coletivo</b> (Lei 12.016/2009, art. 21, parágrafo único): direitos <b>coletivos</b> (indivisíveis, de grupo ligado por relação jurídica básica) e <b>individuais homogêneos</b> (de origem comum). A lei não menciona os difusos."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: mandado de injunção e habeas data",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, LXXI e LXXII",
+       "texto": "LXXI - conceder-se-á mandado de injunção sempre que a ==falta de norma regulamentadora== torne inviável o exercício dos direitos e liberdades constitucionais e das prerrogativas inerentes à nacionalidade, à soberania e à cidadania;\nLXXII - conceder-se-á habeas data:\na) para assegurar o conhecimento de informações ==relativas à pessoa do impetrante==, constantes de registros ou bancos de dados de entidades governamentais ou de caráter público;\nb) para a retificação de dados, quando não se prefira fazê-lo por processo sigiloso, judicial ou administrativo;"
+      },
+      {
+       "t": "texto",
+       "html": "<b>Mandado de injunção.</b> Serve para curar a <b>síndrome de inefetividade</b>: norma constitucional de <b>eficácia limitada</b> (aula 4) sem a lei que a regulamente. Cabe contra omissão <b>total</b> e também <b>parcial</b>, quando a norma editada é insuficiente (Lei 13.300/2016, art. 2º). Primo do MI é a ADO, do controle concentrado: a ADO é abstrata e tem legitimados do art. 103; o MI protege o direito de quem impetra."
+      },
+      {
+       "t": "texto",
+       "html": "<b>MI coletivo</b> (Lei 13.300/2016, art. 12): Ministério Público, partido com representação no Congresso, organização sindical, entidade de classe ou associação com 1 ano (sem autorização especial) e <b>Defensoria Pública</b>. O coletivo não induz litispendência com o individual, mas quem não desistir da ação individual em 30 dias não se beneficia do coletivo (art. 13, parágrafo único)."
+      },
+      {
+       "t": "cena",
+       "titulo": "Mandado de injunção: o que o juiz faz com a omissão",
+       "altura": 230,
+       "elementos": [
+        {
+         "id": "nc",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 40,
+         "w": 180,
+         "h": 60,
+         "texto": "Não concretista",
+         "sub": "só declara a mora",
+         "cor": "dim"
+        },
+        {
+         "id": "ci",
+         "tipo": "caixa",
+         "x": 250,
+         "y": 40,
+         "w": 180,
+         "h": 60,
+         "texto": "Concretista intermediária",
+         "sub": "prazo, depois as condições",
+         "cor": "ok"
+        },
+        {
+         "id": "cd",
+         "tipo": "caixa",
+         "x": 480,
+         "y": 40,
+         "w": 180,
+         "h": 60,
+         "texto": "Concretista direta",
+         "sub": "concretiza já",
+         "cor": "warn"
+        },
+        {
+         "id": "lei",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 140,
+         "texto": "regra da Lei 13.300/2016 (art. 8º)",
+         "cor": "ok"
+        },
+        {
+         "id": "greve",
+         "tipo": "rotulo",
+         "x": 570,
+         "y": 140,
+         "texto": "greve dos servidores: MIs 670, 708 e 712",
+         "cor": "warn"
+        },
+        {
+         "id": "efe",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 195,
+         "texto": "eficácia em regra só para as partes (art. 9º)",
+         "cor": "blue"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Por muito tempo o STF adotou a posição <b>não concretista</b>: só avisava ao Congresso que ele estava em mora (MI 107).",
+         "mostra": [
+          "nc"
+         ],
+         "anima": {
+          "nc": "treme"
+         }
+        },
+        {
+         "texto": "Depois passou a <b>concretizar</b>. Nos MIs 670, 708 e 712 mandou aplicar a lei de greve do setor privado aos servidores públicos, com efeito <b>geral</b>.",
+         "mostra": [
+          "nc",
+          "cd",
+          "greve"
+         ],
+         "anima": {
+          "cd": "pulsa"
+         }
+        },
+        {
+         "texto": "A <b>Lei 13.300/2016</b> escolheu, como regra, a <b>concretista intermediária</b>: o juiz dá prazo ao omisso e, se a mora continuar, fixa as condições de exercício do direito. O prazo é dispensado se o impetrado já descumpriu prazo em MI anterior.",
+         "mostra": [
+          "nc",
+          "cd",
+          "greve",
+          "ci",
+          "lei"
+         ],
+         "anima": {
+          "ci": "pulsa"
+         }
+        },
+        {
+         "texto": "A decisão vale, em regra, só para as partes, até a norma sair. Pode ganhar eficácia <b>ultra partes ou erga omnes</b> quando isso for inerente ou indispensável ao exercício do direito.",
+         "mostra": [
+          "nc",
+          "cd",
+          "greve",
+          "ci",
+          "lei",
+          "efe"
+         ]
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Competência do MI.</b> STF, quando a norma é atribuição do Presidente, do Congresso, de suas Casas ou Mesas, do TCU, de Tribunal Superior ou do próprio STF (art. 102, I, q). STJ, quando é de órgão ou autoridade federal fora desses casos (art. 105, I, h). Nos Estados, a Constituição estadual define (art. 125, § 1º)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Habeas data.</b> Lei 9.507/1997. Serve para <b>conhecer</b> e <b>retificar</b> (e, pela lei, anotar justificação) <b>dados da própria pessoa</b> em banco governamental ou de caráter público, como o SPC. Pessoa física ou jurídica pode impetrar."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Situação",
+        "Remédio"
+       ],
+       "linhas": [
+        [
+         "Conhecer ou corrigir informação sobre mim",
+         "Habeas data"
+        ],
+        [
+         "Certidão negada pela repartição (art. 5º, XXXIV, b)",
+         "Mandado de segurança"
+        ],
+        [
+         "Informação de interesse coletivo ou de terceiro (art. 5º, XXXIII)",
+         "Mandado de segurança"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "HD exige recusa administrativa antes",
+       "html": "Sem prova da <b>recusa</b> da informação na via administrativa, falta interesse de agir (Súmula 2 do STJ; Lei 9.507/1997, art. 8º). É uma exceção aceita à inafastabilidade. O procedimento administrativo e a ação são <b>gratuitos</b>."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: ação popular",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CF, art. 5º, LXXIII",
+       "texto": "LXXIII - ==qualquer cidadão== é parte legítima para propor ação popular que vise a anular ato lesivo ao patrimônio público ou de entidade de que o Estado participe, à moralidade administrativa, ao meio ambiente e ao patrimônio histórico e cultural, ficando o autor, ==salvo comprovada má-fé==, isento de custas judiciais e do ônus da sucumbência;"
+      },
+      {
+       "t": "texto",
+       "html": "<b>Quem propõe: só o cidadão</b>, brasileiro nato ou naturalizado no gozo dos direitos políticos, provado pelo <b>título de eleitor</b> (Lei 4.717/1965, art. 1º, § 3º). Ficam fora estrangeiros, apátridas, quem está com direitos políticos suspensos ou perdidos e a <b>pessoa jurídica</b> (Súmula 365 do STF). O eleitor de 16 a 18 anos pode propor sem assistência, mas sempre com advogado."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Contra quem.</b> O agente que praticou o ato, a entidade lesada e os beneficiários. A pessoa jurídica lesada pode não contestar ou até passar para o lado do autor. O <b>Ministério Público</b> é fiscal da ordem jurídica e, se o autor desistir, pode assumir a ação (art. 9º)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Requisito: lesividade</b>, que inclui a ilegalidade. Pode ser preventiva ou repressiva, com liminar."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Competência.</b> Em regra, o <b>juiz de primeiro grau</b>, mesmo contra o Presidente da República (AO 859-QO). Não há foro por prerrogativa na ação popular. Só vai ao STF nas hipóteses do art. 102, I, f (conflito federativo) e n (interesse de toda a magistratura)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Coisa julgada secundum eventum probationis.</b> Procedente ou improcedente por ser infundada: coisa julgada <b>erga omnes</b>. Improcedente por <b>falta de provas</b>: qualquer cidadão pode propor de novo, com prova nova (art. 18). Sentença de <b>improcedência</b> passa pelo <b>duplo grau obrigatório</b> (art. 19)."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e CF x Constituição do Maranhão",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>O que a Constituição do Maranhão faz.</b> Pelo art. 125, § 1º, da CF, cada Estado define a competência do seu Tribunal de Justiça. A CE-MA, no art. 81, dá ao <b>TJMA</b> o julgamento originário de: HC quando o paciente tem foro no TJ; <b>MS e HD contra atos do Governador, da Mesa da Assembleia, do TCE, dos Procuradores-Gerais e dos Secretários de Estado</b> e do próprio TJ; e <b>MI</b> quando a norma faltante é de órgão, entidade ou autoridade estadual."
+      },
+      {
+       "t": "lei",
+       "ref": "Constituição do Maranhão, art. 81, V a VII",
+       "texto": "Art. 81. Compete ao Tribunal de Justiça processar e julgar, originariamente:\nV - os “habeas-corpus”, sendo pacientes quaisquer das pessoas referidas nos incisos anteriores;\nVI - o “habeas-data” e o mandado de segurança contra atos do Governador do Estado, da Mesa da Assembleia Legislativa, do Tribunal de Contas do Estado, ==dos Procuradores-Gerais== e dos Secretários de Estado, e do próprio Tribunal de Justiça;\nVII - o mandado de injunção, quando a elaboração da norma reguladora for atribuição do órgão, entidade ou ==autoridade estadual==, da administração direta e indireta, ou do próprio Tribunal;"
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Olhar de analista da PGE-MA",
+       "html": "MS contra ato do <b>Procurador-Geral do Estado</b> ou de Secretário vai direto ao <b>TJMA</b> (art. 81, VI). Já MS contra ato de servidor de escalão inferior vai à vara da Fazenda Pública. É a PGE que defende o Estado nesses MS, e a primeira pergunta da defesa é sempre <b>quem é a autoridade coatora</b>, porque ela define o juízo competente. E a ação popular contra o Governador corre no <b>primeiro grau</b>: a CE não pode criar foro para ela."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Pegadinhas de comparação.</b> O MS é o único remédio aqui que exige <b>direito líquido e certo</b> como requisito expresso. A ação popular é o único que só o <b>cidadão</b> propõe. HC e HD são os únicos <b>gratuitos para todos</b>. O HD é o único que exige <b>recusa administrativa prévia</b>. O MI é o único voltado à <b>omissão normativa</b>."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência do tema: o que o STF decidiu",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "HC 143.641, 2ª Turma, Rel. Min. Ricardo Lewandowski, 20/02/2018",
+       "tese": "Cabível o habeas corpus coletivo; preventiva substituída pela domiciliar para mulheres presas gestantes, puérperas ou mães de crianças e de pessoas com deficiência, salvo crimes com violência ou grave ameaça, contra descendentes ou situações excepcionalíssimas fundamentadas. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "HC 70.648, 1ª Turma, Rel. Min. Moreira Alves, 09/11/1993",
+       "tese": "A vedação do art. 142, § 2º, não impede o exame dos pressupostos de legalidade da punição disciplinar militar (hierarquia, poder disciplinar, ato ligado à função e pena suscetível de aplicação disciplinar). Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "MIs 670, 708 e 712, Plenário, 25/10/2007",
+       "tese": "Declarada a omissão legislativa, determinou-se a aplicação, no que couber, da lei de greve do setor privado (Lei 7.783/1989) aos servidores públicos civis: posição concretista geral. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 693.456 (Tema 531), Plenário, Rel. Min. Dias Toffoli, 27/10/2016",
+       "tese": "A Administração deve descontar os dias de greve dos servidores, permitida a compensação em acordo; o desconto é incabível se a greve foi provocada por conduta ilícita do Poder Público. Fonte: material EBEJI."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 4.296, Plenário, red. p/ acórdão Min. Alexandre de Moraes, 09/06/2021",
+       "tese": "Declarados inconstitucionais os arts. 7º, § 2º (vedação de liminar em certas matérias) e 22, § 2º (oitiva prévia do poder público para liminar no MS coletivo), da Lei 12.016/2009. Fonte: material EBEJI (resultado) e ementa do julgado (conteúdo dos dispositivos)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "AO 859-QO, Rel. Min. Ellen Gracie, DJ 01/08/2003",
+       "tese": "A competência para julgar ação popular contra ato de qualquer autoridade, até mesmo do Presidente da República, é, em regra, do juízo competente de primeiro grau. Fonte: material EBEJI."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A FCC cobra remédios de dois jeitos: <b>caso concreto</b> (\"qual o remédio cabível?\") e <b>letra da CF</b> com um requisito trocado (1 ano para partido, cidadão trocado por qualquer pessoa, HD para certidão). Use a cena da escolha: locomoção, dado próprio, falta de norma, patrimônio público, e o que sobrar é MS."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O que pode cair assim",
+       "html": "1) HC precisa de advogado? <b>Não</b>. 2) Pessoa jurídica impetra HC? <b>Sim</b>, em favor de pessoa física. 3) Cabe HC contra punição disciplinar militar? Não no <b>mérito</b>; sim na <b>legalidade</b>. 4) Partido precisa de 1 ano para MS coletivo? <b>Não</b>, só a associação. 5) MS coletivo exige autorização dos associados? <b>Não</b> (Súmula 629). 6) Certidão negada: HD? <b>Não</b>, MS. 7) HD sem recusa prévia? Falta interesse de agir. 8) Pessoa jurídica propõe ação popular? <b>Não</b> (Súmula 365). 9) Ação popular contra o Presidente vai ao STF? <b>Não</b>, primeiro grau. 10) Prazo do MS? <b>120 dias</b>, decadencial. 11) MS contra lei em tese? <b>Não</b> (Súmula 266). 12) Posição da Lei 13.300 para o MI? <b>Concretista intermediária</b>. 13) MS contra ato do PGE-MA? <b>TJMA</b>."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "O habeas corpus pode ser impetrado por pessoa jurídica em favor de pessoa física.",
+         "v": true,
+         "porque": "Qualquer pessoa pode impetrar."
+        },
+        {
+         "texto": "O mandado de segurança coletivo pode ser impetrado por partido político com representação no Congresso Nacional e em funcionamento há pelo menos um ano.",
+         "v": false,
+         "porque": "O requisito de 1 ano é só da associação."
+        },
+        {
+         "texto": "A recusa de repartição pública em fornecer certidão para defesa de direitos se combate por habeas data.",
+         "v": false,
+         "porque": "Mandado de segurança."
+        },
+        {
+         "texto": "A ação popular pode ser proposta por qualquer pessoa, física ou jurídica.",
+         "v": false,
+         "porque": "Só o cidadão (Súmula 365: PJ não)."
+        },
+        {
+         "texto": "Pela Lei 13.300/2016, reconhecida a mora, o juiz em regra fixa prazo para a edição da norma e, persistindo a omissão, estabelece as condições de exercício do direito.",
+         "v": true,
+         "porque": "Concretista intermediária (art. 8º)."
+        },
+        {
+         "texto": "A sentença que julga improcedente a ação popular por deficiência de provas faz coisa julgada erga omnes.",
+         "v": false,
+         "porque": "Qualquer cidadão pode propor de novo com prova nova."
+        },
+        {
+         "texto": "Cabe mandado de segurança contra lei em tese.",
+         "v": false,
+         "porque": "Súmula 266 do STF."
+        },
+        {
+         "texto": "Compete ao Tribunal de Justiça do Maranhão julgar originariamente mandado de segurança contra ato do Procurador-Geral do Estado.",
+         "v": true,
+         "porque": "CE-MA, art. 81, VI."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "cf-001",
+    "cf-002",
+    "cf-003",
+    "ls-003",
+    "cf-rc-01",
+    "cf-rc-02",
+    "cf-rc-03",
+    "cf-rc-04",
+    "cf-rc-05",
+    "cf-rc-06",
+    "cf-rc-07",
+    "cf-rc-08",
+    "cf-rc-09",
+    "cf-rc-10",
+    "cf-rc-11",
+    "cf-rc-12"
+   ]
   },
   {
    "id": "B3-a08",
@@ -4068,6 +4776,30 @@
   [
    "Escusa de consciência",
    "Recusa de cumprir obrigação legal por crença ou convicção, com o dever de cumprir prestação alternativa."
+  ],
+  [
+   "Impetrante",
+   "Quem propõe o remédio constitucional (HC, MS, MI, HD)."
+  ],
+  [
+   "Paciente",
+   "No habeas corpus, a pessoa que sofre ou está ameaçada de sofrer a coação na locomoção."
+  ],
+  [
+   "Salvo-conduto",
+   "Ordem do HC preventivo que garante o livre trânsito de quem está ameaçado de prisão ilegal."
+  ],
+  [
+   "Direito líquido e certo",
+   "Direito cujos fatos se provam de plano, com documentos, sem necessidade de outras provas."
+  ],
+  [
+   "Substituição processual",
+   "Atuação em nome próprio na defesa de direito alheio, sem autorização do titular (MS coletivo)."
+  ],
+  [
+   "Secundum eventum probationis",
+   "Coisa julgada que depende da prova: improcedência por falta de provas permite nova ação."
   ]
  ]
 }

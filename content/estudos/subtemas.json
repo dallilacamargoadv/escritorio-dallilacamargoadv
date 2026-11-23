@@ -704,6 +704,36 @@
       "nome": "Pacotes: razões encadeadas",
       "tema": "Razão, proporção e regra de três",
       "revisao": "A : B e B : C: o B tem números diferentes nas duas receitas. Iguale o B com o MMC (multiplicando a receita inteira), junte em A : B : C e só então use a pista (total, lado ou diferença)."
+    },
+    "cf-rc-escolha": {
+      "nome": "Qual remédio cabe no caso",
+      "tema": "Remédios constitucionais",
+      "revisao": "Pergunte nesta ordem: locomoção? habeas corpus (art. 5º, LXVIII). Conhecer ou corrigir dado sobre si em banco governamental ou de caráter público? habeas data (LXXII). Direito inviável por falta de norma regulamentadora? mandado de injunção (LXXI). Cidadão contra ato lesivo ao patrimônio público, moralidade, meio ambiente ou patrimônio histórico? ação popular (LXXIII). O resto, com direito líquido e certo: mandado de segurança, residual (LXIX)."
+    },
+    "cf-rc-habeas-corpus": {
+      "nome": "Habeas corpus: partes, espécies e limites",
+      "tema": "Remédios constitucionais",
+      "revisao": "Qualquer pessoa impetra (inclusive PJ e MP, sempre a favor de pessoa física), sem advogado e de graça (art. 5º, LXXVII); o juiz concede de ofício. Preventivo (salvo-conduto) ou liberatório. HC coletivo admitido (HC 143.641). Punição disciplinar militar (art. 142, § 2º): não se discute o mérito, mas a legalidade sim (HC 70.648). Não tranca impeachment."
+    },
+    "cf-rc-ms-cabimento": {
+      "nome": "Mandado de segurança: cabimento e prazo",
+      "tema": "Remédios constitucionais",
+      "revisao": "Direito líquido e certo = fatos provados de plano (Súmula 625: controvérsia de direito não impede). Prazo decadencial de 120 dias da ciência (Lei 12.016/2009, art. 23; Súmula 632). Sem honorários (art. 25; Súmula 512). Não cabe contra lei em tese (Súm. 266), recurso administrativo com efeito suspensivo sem caução, decisão judicial com recurso suspensivo (Súm. 267), decisão transitada (Súm. 268), nem como ação de cobrança (Súm. 269 e 271)."
+    },
+    "cf-rc-injuncao": {
+      "nome": "Mandado de injunção: efeitos e legitimados",
+      "tema": "Remédios constitucionais",
+      "revisao": "Falta total ou parcial de norma regulamentadora (Lei 13.300/2016, art. 2º). Regra: concretista intermediária, prazo para editar a norma e, persistindo a mora, condições de exercício (art. 8º); eficácia em regra inter partes, podendo ser ultra partes ou erga omnes (art. 9º). Coletivo: MP, partido, sindicato, entidade de classe, associação com 1 ano e Defensoria (art. 12); não induz litispendência (art. 13)."
+    },
+    "cf-rc-habeas-data": {
+      "nome": "Habeas data x mandado de segurança",
+      "tema": "Remédios constitucionais",
+      "revisao": "HD (art. 5º, LXXII; Lei 9.507/1997): conhecer, retificar e anotar dados da própria pessoa em banco governamental ou de caráter público; exige recusa administrativa prévia (Súmula 2 do STJ); gratuito. Certidão negada (art. 5º, XXXIV, b) e informação de terceiro ou de interesse coletivo (XXXIII): mandado de segurança."
+    },
+    "cf-rc-ce-ma": {
+      "nome": "Remédios na Constituição do Maranhão",
+      "tema": "Remédios constitucionais",
+      "revisao": "CE-MA, art. 81 (com base no art. 125, § 1º, da CF): o TJMA julga originariamente HC quando o paciente tem foro no TJ (V); HD e MS contra atos do Governador, da Mesa da Assembleia, do TCE, dos Procuradores-Gerais, dos Secretários e do próprio TJ (VI); MI quando a norma é atribuição de autoridade estadual (VII). Ação popular não tem foro: primeiro grau."
     }
   },
   "questoes": {
@@ -1004,6 +1034,18 @@
     "rl-pk-09": "rl-pacote-muda",
     "rl-pk-10": "rl-pacote-muda",
     "rl-pk-11": "rl-pacote-encadeada",
-    "rl-pk-12": "rl-pacote-encadeada"
+    "rl-pk-12": "rl-pacote-encadeada",
+    "cf-rc-01": "cf-rc-escolha",
+    "cf-rc-02": "cf-rc-habeas-data",
+    "cf-rc-03": "cf-mi-ms",
+    "cf-rc-04": "cf-acao-popular",
+    "cf-rc-05": "cf-rc-habeas-corpus",
+    "cf-rc-06": "cf-rc-ms-cabimento",
+    "cf-rc-07": "cf-rc-ms-cabimento",
+    "cf-rc-08": "cf-rc-injuncao",
+    "cf-rc-09": "cf-rc-habeas-corpus",
+    "cf-rc-10": "cf-rc-injuncao",
+    "cf-rc-11": "cf-rc-ce-ma",
+    "cf-rc-12": "cf-acao-popular"
   }
 }
