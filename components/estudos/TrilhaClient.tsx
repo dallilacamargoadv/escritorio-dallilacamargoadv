@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { BookOpenText, Brain, CheckCircle2, Landmark } from "lucide-react";
 import type { CorrecaoTrilha, ItemAberto, TemaConcluido } from "@/lib/estudos-trilhas";
 import { Sparkle } from "@/components/estudos/Sparkle";
-import { Barra, BOTAO_PRIMARIO, BOTAO_SECUNDARIO, CAMPO, Card, CardTitulo, Kpi } from "@/components/estudos/ui";
+import { Barra, BOTAO_PRIMARIO, BOTAO_SECUNDARIO, botaoResposta, CAMPO, Card, CardTitulo, Kpi } from "@/components/estudos/ui";
 
 interface Props {
   tema: string;
@@ -78,10 +78,10 @@ export function TrilhaClient(p: Props) {
   }
 
   const cor = (v: "certo" | "errado") => {
-    if (!correcao) return `${BOTAO_SECUNDARIO} text-sm`;
+    if (!correcao) return botaoResposta("neutro");
     const certa = correcao.ok ? v === escolha : v !== escolha;
-    if (certa) return `${BOTAO_SECUNDARIO} text-sm border-e-ok text-e-ok`;
-    return `${BOTAO_SECUNDARIO} text-sm ${v === escolha ? "border-e-bad text-e-bad" : "opacity-60"}`;
+    if (certa) return botaoResposta("certa");
+    return botaoResposta(v === escolha ? "marcada-errada" : "apagada");
   };
 
   if (p.concluido) {
@@ -167,8 +167,8 @@ export function TrilhaClient(p: Props) {
             atual && (
               <>
                 <p className="mb-2 text-xs text-e-dim">{atual.ref}</p>
-                {atual.contexto && <p className="mb-2 text-xs italic text-e-dim">{atual.contexto}</p>}
-                <p className="font-serif text-[15px] leading-relaxed text-e-ink">{atual.texto}</p>
+                {atual.contexto && <p className="mb-2 whitespace-pre-line border-l-2 border-e-line pl-2 font-serif text-sm text-e-dim">{atual.contexto}</p>}
+                <p className="whitespace-pre-line font-serif text-[15px] leading-relaxed text-e-ink">{atual.texto}</p>
                 <div className="mt-4 flex gap-2">
                   {(["certo", "errado"] as const).map((v) => (
                     <button key={v} type="button" disabled={!!correcao || salvando} onClick={() => responder(v)} className={cor(v)}>
@@ -181,8 +181,11 @@ export function TrilhaClient(p: Props) {
                     <p className={`text-sm font-medium ${correcao.ok ? "text-e-ok" : "text-e-bad"}`}>
                       {correcao.ok ? "Acertou." : "Errou."} {correcao.explicacao}
                     </p>
+                    <p className="mt-1 text-xs text-e-dim">
+                      Você marcou: <strong className="text-e-ink">{escolha === "certo" ? "Certo" : "Errado"}</strong> · resposta: <strong className="text-e-ink">{correcao.ok === (escolha === "certo") ? "Certo" : "Errado"}</strong>
+                    </p>
                     <p className="mt-2 text-[11px] uppercase tracking-[0.12em] text-e-dim">Texto literal</p>
-                    <p className="mt-1 font-serif text-sm leading-relaxed text-e-ink">{correcao.literal}</p>
+                    <p className="mt-1 whitespace-pre-line font-serif text-sm leading-relaxed text-e-ink">{correcao.literal}</p>
                     {correcao.nota && (
                       <p className="mt-2 text-sm text-e-ink">
                         <span className="font-medium">Na prova e na procuradoria:</span> {correcao.nota}

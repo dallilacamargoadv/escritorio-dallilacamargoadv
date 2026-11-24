@@ -19,7 +19,7 @@ type Atividade = (typeof ATIVIDADES)[number]["id"];
 
 const CHAVE = "estudos-cronometro-v1";
 const LIMITE_SEG = 4 * 3600; // trecho esquecido rodando: para em 4 h
-const SALVAR_A_CADA_SEG = 5 * 60;
+const SALVAR_A_CADA_SEG = 60; // grava a cada minuto (pedido dela, 24/11: não perder tempo ao sair)
 
 interface Estado {
   data: string;
@@ -104,7 +104,7 @@ export function CronometroEstudo() {
   }, []);
 
   /** Manda ao servidor os minutos inteiros pendentes; o resto em segundos fica guardado. */
-  const enviar = useCallback(async () => {
+  const enviar = useCallback(async (saindo = false) => {
     const e = ler();
     for (const [atv, seg] of Object.entries(e.pendente)) {
       const min = Math.floor((seg ?? 0) / 60);
@@ -112,6 +112,7 @@ export function CronometroEstudo() {
       const res = await fetch("/api/admin/estudos/pomodoros", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        keepalive: saindo,
         body: JSON.stringify({
           minutos_efetivos: min,
           pausas: 0,
@@ -179,6 +180,24 @@ export function CronometroEstudo() {
     }
   }, [aplicar, enviar]);
 
+  // ao sair da página ou trocar de aba: fecha o trecho e grava (o cronômetro continua rodando)
+  useEffect(() => {
+    const aoSair = () => {
+      const e = ler();
+      if (!e.rodando) return;
+      const { estado: fechado } = fecharTrecho(e, Date.now());
+      gravar(fechado);
+      void enviar(true);
+    };
+    const aoEsconder = () => document.visibilityState === "hidden" && aoSair();
+    window.addEventListener("pagehide", aoSair);
+    document.addEventListener("visibilitychange", aoEsconder);
+    return () => {
+      window.removeEventListener("pagehide", aoSair);
+      document.removeEventListener("visibilitychange", aoEsconder);
+    };
+  }, [enviar]);
+
   // relógio da tela + gravação a cada 5 min enquanto roda
   useEffect(() => {
     if (!estado?.rodando) return;
@@ -244,79 +263,67 @@ export function CronometroEstudo() {
     ATIVIDADES.find((a) => a.id === estado.atividade)?.rotulo ?? "";
 
   return (
-    <div className="fixed bottom-20 right-4 z-[55] w-[min(18rem,calc(100vw-2rem))] print:hidden sm:right-6">
-      <div className="rounded-2xl border border-e-line bg-e-card/95 shadow-xl backdrop-blur">
-        <div className="flex items-center gap-2 p-2.5">
-          <button
-            type="button"
-            onClick={playPausa}
-            aria-label={
-              estado.rodando ? "Pausar cronômetro" : "Iniciar cronômetro"
-            }
-            className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm ${estado.rodando ? "bg-e-accent text-white" : "border border-e-line text-e-ink hover:border-e-accent"}`}
-          >
-            {estado.rodando ? "❚❚" : "▶"}
-          </button>
-          <button
-            type="button"
-            onClick={() => setAberto((a) => !a)}
-            className="min-w-0 flex-1 text-left"
-            aria-expanded={aberto}
-          >
-            <span className="block font-mono text-lg leading-tight text-e-ink tabular-nums">
-              {fmt(totalDe(estado.atividade))}
-            </span>
-            <span className="block truncate text-[11px] text-e-dim">
-              {rotulo} · hoje {fmt(totalDia)}
-            </span>
-          </button>
-          <span className="text-xs text-e-dim" aria-hidden>
-            {aberto ? "▾" : "▴"}
-          </span>
-        </div>
-        {aberto && (
-          <div className="border-t border-e-line p-2.5">
-            <p className="text-[11px] text-e-dim">
-              Trocar atividade (o cronômetro não para):
-            </p>
-            <div className="mt-1.5 flex flex-wrap gap-1.5">
-              {ATIVIDADES.map((a) => (
-                <button
-                  key={a.id}
-                  type="button"
-                  onClick={() => trocar(a.id)}
-                  aria-pressed={a.id === estado.atividade}
-                  className={`rounded-full border px-2.5 py-1 text-[11px] ${a.id === estado.atividade ? "border-e-accent bg-e-accent-soft text-e-ink" : "border-e-line text-e-dim hover:text-e-ink"}`}
-                >
-                  {a.rotulo}
-                </button>
-              ))}
-            </div>
-            <ul className="mt-3 space-y-1 text-[12px]">
-              {[...chaves]
-                .filter((k) => totalDe(k) > 0)
-                .map((k) => (
-                  <li key={k} className="flex justify-between text-e-dim">
-                    <span>
-                      {ATIVIDADES.find((a) => a.id === k)?.rotulo ??
-                        "Foco (pomodoro)"}
-                    </span>
-                    <span className="font-mono tabular-nums text-e-ink">
-                      {fmt(totalDe(k))}
-                    </span>
-                  </li>
-                ))}
-              <li className="flex justify-between border-t border-e-line pt-1 text-e-ink">
-                <span>Total de hoje</span>
-                <span className="font-mono tabular-nums">{fmt(totalDia)}</span>
-              </li>
-            </ul>
-          </div>
-        )}
-        {aviso && (
-          <p className="px-2.5 pb-2.5 text-[11px] text-e-warn">{aviso}</p>
-        )}
+    <div className="fixed right-3 top-2 z-[55] flex flex-col items-end print:hidden sm:right-5 sm:top-3">
+      <div className="flex items-center gap-1 rounded-full border border-e-line bg-e-card/95 py-1 pl-1 pr-1 shadow-lg backdrop-blur">
+        <button
+          type="button"
+          onClick={playPausa}
+          aria-label={estado.rodando ? "Pausar cronômetro" : "Iniciar cronômetro"}
+          className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[11px] ${estado.rodando ? "bg-e-accent text-white" : "border border-e-line text-e-ink hover:border-e-accent"}`}
+        >
+          {estado.rodando ? "❚❚" : "▶"}
+        </button>
+        <button
+          type="button"
+          onClick={() => setAberto((a) => !a)}
+          aria-expanded={aberto}
+          aria-label={aberto ? "Fechar detalhes do cronômetro" : "Abrir detalhes do cronômetro"}
+          className="flex items-center gap-1.5 rounded-full px-2 py-0.5 text-left hover:bg-e-card-2"
+        >
+          <span className="font-mono text-sm leading-none text-e-ink tabular-nums">{fmt(totalDe(estado.atividade))}</span>
+          <span className="hidden max-w-[7rem] truncate text-[11px] text-e-dim sm:inline">{rotulo}</span>
+          <span className="text-[10px] text-e-dim" aria-hidden>{aberto ? "▴" : "▾"}</span>
+        </button>
       </div>
+      {aberto && (
+        <div className="mt-2 w-[min(17rem,calc(100vw-1.5rem))] rounded-2xl border border-e-line bg-e-card/95 p-2.5 shadow-xl backdrop-blur">
+          <p className="text-[11px] text-e-dim">Trocar atividade (o cronômetro não para):</p>
+          <div className="mt-1.5 flex flex-wrap gap-1.5">
+            {ATIVIDADES.map((a) => (
+              <button
+                key={a.id}
+                type="button"
+                onClick={() => trocar(a.id)}
+                aria-pressed={a.id === estado.atividade}
+                className={`rounded-full border px-2.5 py-1 text-[11px] ${a.id === estado.atividade ? "border-e-accent bg-e-accent-soft text-e-ink" : "border-e-line text-e-dim hover:text-e-ink"}`}
+              >
+                {a.rotulo}
+              </button>
+            ))}
+          </div>
+          <ul className="mt-3 space-y-1 text-[12px]">
+            {[...chaves]
+              .filter((k) => totalDe(k) > 0)
+              .map((k) => (
+                <li key={k} className="flex justify-between text-e-dim">
+                  <span>{ATIVIDADES.find((a) => a.id === k)?.rotulo ?? "Foco (pomodoro)"}</span>
+                  <span className="font-mono tabular-nums text-e-ink">{fmt(totalDe(k))}</span>
+                </li>
+              ))}
+            <li className="flex justify-between border-t border-e-line pt-1 text-e-ink">
+              <span>Total de hoje</span>
+              <span className="font-mono tabular-nums">{fmt(totalDia)}</span>
+            </li>
+          </ul>
+          <p className="mt-2 text-[11px] text-e-dim">O tempo é salvo sozinho a cada minuto e quando você sai da página.</p>
+          <button type="button" onClick={() => setAberto(false)} className="mt-2 w-full rounded-full border border-e-line py-1 text-[11px] text-e-dim hover:text-e-ink">
+            Fechar
+          </button>
+        </div>
+      )}
+      {aviso && (
+        <p className="mt-2 max-w-[17rem] rounded-xl border border-e-line bg-e-card/95 px-2.5 py-1.5 text-[11px] text-e-warn">{aviso}</p>
+      )}
     </div>
   );
 }
