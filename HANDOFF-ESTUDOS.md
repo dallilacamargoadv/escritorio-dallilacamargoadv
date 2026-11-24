@@ -111,8 +111,8 @@ Migrations: `estudos_onda1_edital_cronograma`, `estudos_onda2_respostas_eventos_
 
 ## 7f. Redação, trilhas e desafio semanal (15/11/2026, branch `feat/estudos-redacao`, sem commit)
 
-- Rotas: `/admin/estudos/redacao` (banco + discursivas), `/redacao/[tema]` (`livre` = recortador de tema próprio), `/redacao/discursiva/[caso]`, `/desafios/trilha` e `/desafios/trilha/[id]?dia=`.
-- Conteúdo (só servidor): `content/estudos/redacao.json` (12 temas), `discursivas.json` (7 casos), `trilhas.json` (10 trilhas, 1.371 C/E, `CONCURSO PGE-MA/geradores/gerar_trilhas.py`).
+- Rotas: `/admin/estudos/redacao` (banco + discursivas), `/redacao/[tema]` (`livre` = recortador de tema próprio), `/redacao/discursiva/[caso]`, `/desafios/trilha` e `/desafios/trilha/[id]` (id = tema, ex. `pc-t1`).
+- Conteúdo (só servidor): `content/estudos/redacao.json` (12 temas), `discursivas.json` (7 casos), `trilhas.json` (**lei seca por tema** desde 15/11, noite: uma trilha por matéria, temas na ordem do edital, todos os dispositivos de cada tema em C/E, com `fcc`, `procuradoria` por tema e `nota` por dispositivo; 7 temas da semana 1, 281 itens; gerador `CONCURSO PGE-MA/geradores/gerar_trilhas.py`, lista `TEMAS`. A versão antiga por faixas de artigos foi descartada a pedido dela).
 - Lógica: `lib/estudos-trilhas.ts` (trilha, agenda semanal, métodos de revisão ativa), `lib/estudos-redacao.ts` (tangenciamento, linhas ~75 car., grade). Servidor: `lib/db-estudos-trilhas.ts`, `lib/db-estudos-redacao.ts`. APIs `api/admin/estudos/{trilhas,redacao}`.
 - Estado em `estudo_config`, chaves `trilhas` (`resp`, `concluidos`) e `redacao` (`temas`, `casos`, `feitos`). Sem migration.
 - Componentes: `HojeDesafios` (trilha da matéria do cronograma de hoje + desafio da semana), `AlertaRevisao` (Início e Desafios), `TrilhaClient`, `RedacaoClient`, `DiscursivaClient`, `MarcarSemanal`.

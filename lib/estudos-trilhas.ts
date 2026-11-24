@@ -1,5 +1,6 @@
-// Trilha de lei seca (leitura por dia + bloco de Certo/Errado) e agenda semanal de desafios.
-// Lógica pura (cliente e servidor). Texto em content/estudos/trilhas.json, gerado por
+// Lei seca por tema (regra dela, 15/11): teoria -> lei seca SÓ do tema -> questões do tema.
+// Cada tema traz todos os dispositivos dos artigos do tema em certo ou errado, com o olhar da
+// procuradoria. Lógica pura (cliente e servidor). Texto em content/estudos/trilhas.json, gerado por
 // CONCURSO PGE-MA/geradores/gerar_trilhas.py.
 
 import { addDaysToDateString } from "@/lib/atividades-utils";
@@ -13,19 +14,30 @@ export interface ItemTrilha {
   certo: boolean;
   original: string;
   troca: string;
+  nota: string;
 }
-export interface DiaTrilha {
-  dia: number;
+export interface TrechoTema {
+  lei: string;
+  doc: string;
   de: string;
   ate: string;
-  artigos: number;
+  dispositivos: number;
+}
+export interface TemaTrilha {
+  id: string;
+  ordem: number;
+  nome: string;
+  tema_questoes: string;
+  trechos: TrechoTema[];
+  fcc: string;
+  procuradoria: string;
   itens: ItemTrilha[];
 }
+/** Uma trilha por matéria; os temas seguem a ordem do edital. */
 export interface Trilha {
   id: string;
-  nome: string;
   materia_id: string;
-  dias: DiaTrilha[];
+  temas: TemaTrilha[];
 }
 
 /** Sem gabarito: o que vai ao navegador antes de responder. */
@@ -41,9 +53,10 @@ export interface CorrecaoTrilha {
   ok: boolean;
   literal: string;
   explicacao: string;
+  nota: string;
 }
 
-export interface DiaConcluido {
+export interface TemaConcluido {
   data: string;
   acertos: number;
   total: number;
@@ -51,14 +64,8 @@ export interface DiaConcluido {
 }
 export interface EstadoTrilhas {
   resp: Record<string, boolean>;
-  concluidos: Record<string, DiaConcluido>;
+  concluidos: Record<string, TemaConcluido>;
 }
-
-/** Documento da Biblioteca onde ela lê o trecho do dia. */
-export const DOC_BIBLIOTECA: Record<string, string> = {
-  cc: "cc", lindb: "lindb", cpc: "cpc", cf: "cf88", cema: "ce-ma",
-  l9784: "l9784", l8429: "l8429", l14133: "l14133", ctn: "ctn", l6830: "l6830",
-};
 
 export function normalizarTrilhas(v: unknown): EstadoTrilhas {
   const o = (v && typeof v === "object" ? v : {}) as Partial<EstadoTrilhas>;
@@ -68,10 +75,11 @@ export function normalizarTrilhas(v: unknown): EstadoTrilhas {
   };
 }
 
-export const chaveDia = (trilha: string, dia: number) => `${trilha}:${dia}`;
-
-export function rotuloTrecho(d: DiaTrilha): string {
-  return d.de === d.ate ? `art. ${d.de}` : `arts. ${d.de} a ${d.ate}`;
+export function rotuloTrecho(t: TrechoTema): string {
+  return `${t.lei}, ${t.de === t.ate ? `art. ${t.de}` : `arts. ${t.de} a ${t.ate}`}`;
+}
+export function rotuloTema(t: TemaTrilha): string {
+  return t.trechos.map(rotuloTrecho).join(" + ");
 }
 
 export function abrirItem(i: ItemTrilha): ItemAberto {
@@ -81,21 +89,16 @@ export function abrirItem(i: ItemTrilha): ItemAberto {
 export function corrigirItem(i: ItemTrilha, resposta: string): CorrecaoTrilha {
   const ok = (resposta === "certo") === i.certo;
   const explicacao = i.certo ? "Texto literal. Estava certo." : `Trocaram "${i.original}" por "${i.troca}".`;
-  return { id: i.id, ok, literal: i.literal, explicacao };
+  return { id: i.id, ok, literal: i.literal, explicacao, nota: i.nota };
 }
 
-/** Primeiro dia ainda não concluído (ou null se a trilha acabou). */
-export function diaAtual(t: Trilha, e: EstadoTrilhas): DiaTrilha | null {
-  return t.dias.find((d) => !e.concluidos[chaveDia(t.id, d.dia)]) ?? null;
+/** Tema em curso da matéria: o primeiro, na ordem do edital, ainda não concluído. */
+export function temaAtual(t: Trilha, e: EstadoTrilhas): TemaTrilha | null {
+  return t.temas.find((x) => !e.concluidos[x.id]) ?? null;
 }
 
-export function diasFeitos(t: Trilha, e: EstadoTrilhas): number {
-  return t.dias.filter((d) => e.concluidos[chaveDia(t.id, d.dia)]).length;
-}
-
-/** A trilha em curso de cada matéria: a primeira, na ordem, que ainda não acabou. */
-export function trilhaDaMateria(trilhas: Trilha[], e: EstadoTrilhas, materia: string): Trilha | null {
-  return trilhas.filter((t) => t.materia_id === materia).find((t) => diaAtual(t, e)) ?? null;
+export function temasFeitos(t: Trilha, e: EstadoTrilhas): number {
+  return t.temas.filter((x) => e.concluidos[x.id]).length;
 }
 
 // ---------- Agenda semanal: RLM, Redação e Discursiva, duas vezes cada ----------
