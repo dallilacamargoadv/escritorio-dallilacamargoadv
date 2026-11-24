@@ -403,5 +403,44 @@
    "v": false,
    "exp": "Errado. Isso descreve o poder derivado. O originário é ilimitado e cria nova ordem."
   }
+ },
+ "Português|Acentuação gráfica": {
+  "titulo": "Acentuação gráfica em 6 passos",
+  "passos": [
+   {
+    "t": "Onde está a sílaba tônica?",
+    "r": "é a antepenúltima?",
+    "d": "Separe as sílabas e ache a mais forte. Tudo começa aqui."
+   },
+   {
+    "t": "Proparoxítona: acento sempre",
+    "r": "e se for a última?",
+    "d": "lâmpada, álibi, ínterim, dúvida."
+   },
+   {
+    "t": "Oxítona e monossílabo tônico: A, E, O (com ou sem S) e EM/ENS",
+    "r": "e se for a penúltima?",
+    "d": "sofá, café, alguém, conténs; pá, gás, fé, dó. O EM/ENS vale só para a oxítona."
+   },
+   {
+    "t": "Paroxítona: o contrário da oxítona, e também a terminada em ditongo",
+    "r": "e os casos especiais?",
+    "d": "cáqui, ônix, ímã, bônus, irresponsável; órfão, história, distância."
+   },
+   {
+    "t": "Ditongo aberto e hiato",
+    "r": "e o que o Novo Acordo tirou?",
+    "d": "ÉI, ÉU, ÓI só em oxítona e monossílabo (herói, troféu, céu). Hiato com I/U tônico leva acento (saída, saúde, baú), salvo NH ou outra letra que não S na mesma sílaba (rainha, juiz). Sem acento: ideia, heroico, voo, leem, veem."
+   },
+   {
+    "t": "Diferenciais que ficaram",
+    "d": "têm e vêm (eles), retêm, intervêm; pôr (verbo) × por; pôde (passado) × pode (presente)."
+   }
+  ],
+  "teste": {
+   "p": "Pelo Novo Acordo, heroico e ideia continuam com acento, assim como herói.",
+   "v": false,
+   "exp": "Errado. O ditongo aberto só leva acento em oxítona e monossílabo (herói, troféu). Na paroxítona perdeu o acento: heroico, ideia, assembleia."
+  }
  }
 }
