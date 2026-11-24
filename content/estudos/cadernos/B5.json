@@ -411,7 +411,1489 @@
    "topico_id": "B5-02",
    "numero": 2,
    "titulo": "Jurisdição, ação e competência",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "CPC (arts. 16 a 25 e 42 a 69, art. 63 com a Lei 14.879/2024), CF, Lei 6.830/1980 e Constituição do Maranhão, textos vigentes; súmulas do STJ (PDF oficial), SV 27 e ADI 5.737 (portal do STF), conferidas em 24/11/2026",
+   "resumo": [
+    "Jurisdição é una (função do Estado: substitutiva, inerte, definitiva, inafastável); competência é a medida da jurisdição. Arbitragem permitida: o juiz não conhece de ofício da convenção, e o silêncio do réu é renúncia (art. 337, §§ 5º e 6º).",
+    "Condições da ação: só interesse (necessidade e adequação) e legitimidade (art. 17). Legitimação extraordinária só autorizada pelo ordenamento jurídico; substituído entra como assistente litisconsorcial (art. 18). Declaratória cabe mesmo após a violação (art. 20).",
+    "Limites da jurisdição nacional: concorrente (arts. 21 e 22) x exclusiva (art. 23: imóveis no Brasil, inventário, partilha). Ação no exterior não induz litispendência (art. 24).",
+    "Competência fixada no registro ou distribuição (art. 43), salvo supressão de órgão ou alteração da absoluta. Absoluta: matéria, pessoa, função (inderrogável, de ofício, a qualquer tempo). Relativa: território e valor (só o réu na contestação ou o MP; Súmula 33; prorroga se não alegada).",
+    "Fazenda: art. 45 e Súmulas 150, 224 e 254; Estado réu (art. 52, parágrafo único) só no domicílio do autor dentro do Estado (ADI 5.737); execução fiscal (art. 46, § 5º; Súmula 58; LEF, art. 5º); MS contra Governador ou Secretário no TJMA (CE-MA, art. 81, VI).",
+    "Modificação: conexão, continência (art. 57), prevenção pelo registro ou distribuição (art. 59), foro de eleição com pertinência e juízo aleatório (art. 63, Lei 14.879/2024). Incompetência remete os autos e conserva as decisões (art. 64, §§ 3º e 4º)."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: a jurisdição como função do Estado",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A aula 1 mostrou o processo lido a partir da Constituição. Agora a pergunta é anterior: <b>quem</b> diz o direito e <b>com que poder</b>. Jurisdição é a função do Estado de resolver conflitos aplicando o direito ao caso concreto, em substituição às partes e de forma definitiva. Ela é <b>una</b>: todo juiz tem jurisdição. O que se reparte entre os juízes é a <b>competência</b>, que por isso a doutrina chama de medida (ou limite) da jurisdição."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 16 e 42",
+       "texto": "Art. 16. A jurisdição civil é exercida pelos juízes e pelos tribunais ==em todo o território nacional==, conforme as disposições deste Código.\nArt. 42. As causas cíveis serão processadas e decididas pelo juiz ==nos limites de sua competência==, ressalvado às partes o direito de instituir ==juízo arbitral==, na forma da lei."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 3º, caput e § 1º",
+       "texto": "Art. 3º Não se excluirá da apreciação jurisdicional ==ameaça ou lesão== a direito.\n§ 1º É permitida a arbitragem, na forma da lei."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Substitutividade",
+         "sub": "o juiz decide no lugar das partes",
+         "verso": "O Estado-juiz substitui a vontade dos litigantes pela vontade da lei.",
+         "detalhe": "Por isso o juiz é terceiro imparcial: não decide causa própria (impedimento e suspeição, aula 3)."
+        },
+        {
+         "frente": "Inércia",
+         "sub": "art. 2º",
+         "verso": "A jurisdição só se move quando provocada.",
+         "detalhe": "O processo começa por iniciativa da parte e se desenvolve por impulso oficial, salvo exceções legais (art. 2º, visto na aula 1)."
+        },
+        {
+         "frente": "Definitividade",
+         "sub": "coisa julgada",
+         "verso": "Só a decisão jurisdicional fica imutável pela coisa julgada material.",
+         "detalhe": "A decisão administrativa pode ser revista pelo Judiciário; a judicial transitada, só por rescisória (aula 8)."
+        },
+        {
+         "frente": "Inafastabilidade",
+         "sub": "CF, art. 5º, XXXV; CPC, art. 3º",
+         "verso": "Nem a lei pode excluir da apreciação do Judiciário ameaça ou lesão a direito.",
+         "detalhe": "Não há exigência de esgotar a via administrativa, salvo exceções constitucionais (como a Justiça Desportiva)."
+        },
+        {
+         "frente": "Territorialidade e indelegabilidade",
+         "sub": "art. 16",
+         "verso": "O juiz exerce jurisdição nos limites do seu território e não delega o poder de julgar.",
+         "detalhe": "Por isso existem as cartas precatória e rogatória e a cooperação nacional (arts. 67 a 69)."
+        },
+        {
+         "frente": "Juiz natural",
+         "sub": "CF, art. 5º, XXXVII e LIII",
+         "verso": "Juízo competente pré-constituído, sem tribunal de exceção.",
+         "detalhe": "É a razão constitucional de existirem regras de competência fixadas antes do conflito."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Arbitragem: jurisdição privada autorizada",
+       "html": "O CPC <b>permite</b> a arbitragem (art. 3º, § 1º; art. 42). Se houver convenção de arbitragem e o réu alegar, o processo é extinto sem mérito (art. 485, VII). Mas o juiz <b>não</b> conhece de ofício da convenção (art. 337, § 5º), e o silêncio do réu na contestação é renúncia ao juízo arbitral (art. 337, § 6º)."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 337, §§ 5º e 6º",
+       "texto": "§ 5º ==Excetuadas a convenção de arbitragem e a incompetência relativa==, o juiz conhecerá de ofício das matérias enumeradas neste artigo.\n§ 6º A ausência de alegação da existência de convenção de arbitragem, na forma prevista neste Capítulo, implica aceitação da jurisdição estatal e renúncia ao juízo arbitral."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: a ação, suas condições e seus elementos",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Ação é o direito de provocar a jurisdição. O CPC de 2015 exige apenas <b>duas</b> condições para postular: interesse e legitimidade (art. 17). A antiga \"possibilidade jurídica do pedido\" saiu da lista: pedido juridicamente impossível hoje leva à <b>improcedência</b> (mérito), não à carência de ação."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 17 e 18",
+       "texto": "Art. 17. Para postular em juízo é necessário ter ==interesse e legitimidade==.\nArt. 18. Ninguém poderá pleitear direito alheio em nome próprio, salvo quando ==autorizado pelo ordenamento jurídico==.\nParágrafo único. Havendo substituição processual, o substituído poderá intervir como ==assistente litisconsorcial==."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Legitimação ordinária",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Quem pede",
+           "sub": "o titular do direito"
+          },
+          {
+           "titulo": "O que pede",
+           "sub": "direito próprio"
+          }
+         ],
+         "texto": "<b>Regra.</b> A parte vai a juízo em nome próprio defender direito próprio. Ex.: o contribuinte que discute o próprio ICMS."
+        },
+        {
+         "rotulo": "Legitimação extraordinária",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Quem pede",
+           "sub": "o substituto"
+          },
+          {
+           "titulo": "O que pede",
+           "sub": "direito alheio"
+          }
+         ],
+         "texto": "<b>Exceção.</b> Em nome próprio, defende direito <b>alheio</b>: é a substituição processual. Só quando autorizada pelo <b>ordenamento jurídico</b> (o CPC/1973 dizia \"lei\"). O substituído pode entrar como <b>assistente litisconsorcial</b> (art. 18, parágrafo único). Ex.: o MP na ação civil pública em defesa do patrimônio público."
+        },
+        {
+         "rotulo": "Representação",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Quem é parte",
+           "sub": "o representado"
+          },
+          {
+           "titulo": "Quem atua",
+           "sub": "o representante"
+          }
+         ],
+         "texto": "<b>Não é legitimação extraordinária.</b> O representante age em nome <b>alheio</b> (o pai pelo filho incapaz; o Procurador do Estado pelo Estado). A parte continua sendo o representado."
+        }
+       ]
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Condição",
+        "O que se pergunta",
+        "Se faltar"
+       ],
+       "linhas": [
+        [
+         "<b>Interesse</b>",
+         "<b>necessidade</b> (sem o juiz, não obtenho o bem) e <b>adequação</b> (a via escolhida serve ao fim)",
+         "extinção sem mérito (art. 485, VI)"
+        ],
+        [
+         "<b>Legitimidade</b>",
+         "o autor é quem pode pedir e o réu é quem deve suportar o pedido, segundo a relação afirmada",
+         "extinção sem mérito (art. 485, VI); o réu pode indicar quem é o legitimado (arts. 338 e 339)"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Teoria da asserção",
+       "html": "A corrente que a FCC costuma cobrar diz que as condições da ação se verificam <b>pelo que o autor afirma</b> na inicial. Se, para saber se há legitimidade, o juiz precisa examinar provas, a questão já virou <b>mérito</b> (improcedência, com coisa julgada material)."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 19 e 20",
+       "texto": "Art. 19. O interesse do autor pode limitar-se à declaração:\nI - da existência, da inexistência ou do modo de ser de uma relação jurídica;\nII - da autenticidade ou da falsidade de documento.\nArt. 20. É admissível a ação meramente declaratória, ==ainda que tenha ocorrido a violação do direito==."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Elementos da ação</b> (o que identifica uma ação): <b>partes</b>, <b>causa de pedir</b> e <b>pedido</b>. Eles servem para três coisas que caem juntas: identificar litispendência e coisa julgada (tríplice identidade), reconhecer conexão (pedido ou causa de pedir comum) e continência (mesmas partes e causa de pedir, pedido mais amplo)."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 337, §§ 1º a 4º",
+       "texto": "§ 1º Verifica-se a litispendência ou a coisa julgada quando se reproduz ação anteriormente ajuizada.\n§ 2º Uma ação é idêntica a outra quando possui ==as mesmas partes, a mesma causa de pedir e o mesmo pedido==.\n§ 3º Há litispendência quando se repete ação que está em curso.\n§ 4º Há coisa julgada quando se repete ação que já foi decidida por decisão transitada em julgado."
+      },
+      {
+       "t": "matriz",
+       "linhas": [
+        "Locatário pede ao Município a repetição do IPTU pago",
+        "Autor pede declaração de inexistência de débito já cobrado e protestado",
+        "Ente público intervém em possessória entre particulares alegando domínio",
+        "MP propõe ACP em defesa do patrimônio público",
+        "Mesmas partes, causa de pedir e pedido de ação já transitada"
+       ],
+       "colunas": [
+        "Falta condição da ação",
+        "Ação admissível",
+        "Pressuposto negativo"
+       ],
+       "celulas": [
+        [
+         [
+          true,
+          "Ilegitimidade ativa: Súmula 614 do STJ."
+         ],
+         [
+          false,
+          "Não: o locatário não discute a relação tributária."
+         ],
+         [
+          false,
+          "Não é caso de litispendência ou coisa julgada."
+         ]
+        ],
+        [
+         [
+          false,
+          "Há interesse."
+         ],
+         [
+          true,
+          "Declaratória cabe mesmo depois da violação (art. 20)."
+         ],
+         [
+          false,
+          "Não."
+         ]
+        ],
+        [
+         [
+          false,
+          "O ente tem legitimidade e interesse."
+         ],
+         [
+          true,
+          "Súmula 637 do STJ: pode deduzir até o domínio."
+         ],
+         [
+          false,
+          "Não."
+         ]
+        ],
+        [
+         [
+          false,
+          "Legitimação extraordinária autorizada."
+         ],
+         [
+          true,
+          "Substituição processual pelo ordenamento (art. 18)."
+         ],
+         [
+          false,
+          "Não."
+         ]
+        ],
+        [
+         [
+          false,
+          "As condições existem."
+         ],
+         [
+          false,
+          "Não pode ser julgada de novo."
+         ],
+         [
+          true,
+          "Coisa julgada (art. 337, § 4º): extinção sem mérito (art. 485, V)."
+         ]
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Extinguiu sem mérito por ilegitimidade? Pode repetir, mas corrigido",
+       "html": "A sentença terminativa não impede nova ação (art. 486), mas, se a extinção foi por litispendência, inépcia, falta de pressuposto, <b>ilegitimidade ou falta de interesse</b> ou convenção de arbitragem, a nova ação só se admite com a <b>correção do vício</b> (art. 486, § 1º). Legitimidade e interesse são conhecidos de ofício, em qualquer tempo e grau, até o trânsito (art. 485, § 3º)."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 485, VI, e § 3º; art. 486, § 1º",
+       "texto": "VI - verificar ausência de legitimidade ou de interesse processual;\n§ 3º O juiz conhecerá de ofício da matéria constante dos incisos IV, V, VI e IX, ==em qualquer tempo e grau de jurisdição==, enquanto não ocorrer o trânsito em julgado.\n§ 1º No caso de extinção em razão de litispendência e nos casos dos incisos I, IV, VI e VII do art. 485, a propositura da nova ação ==depende da correção do vício== que levou à sentença sem resolução do mérito."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: os limites da jurisdição nacional (arts. 21 a 25)",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Antes da competência interna, o CPC diz quando o juiz <b>brasileiro</b> pode julgar. São dois grupos: competência <b>concorrente</b> (o Brasil julga, mas a sentença estrangeira também pode valer aqui, depois de homologada) e <b>exclusiva</b> (só o Brasil julga)."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Concorrente (arts. 21 e 22)",
+        "Exclusiva (art. 23)"
+       ],
+       "linhas": [
+        [
+         "réu domiciliado no Brasil, qualquer que seja a nacionalidade (PJ estrangeira com agência, filial ou sucursal aqui)",
+         "ações relativas a <b>imóveis situados no Brasil</b>"
+        ],
+        [
+         "obrigação a ser cumprida no Brasil; fato ou ato ocorrido no Brasil",
+         "confirmação de testamento particular, inventário e partilha de bens situados no Brasil"
+        ],
+        [
+         "alimentos (credor aqui ou réu com vínculos aqui); consumo (consumidor aqui); submissão expressa ou tácita",
+         "partilha de bens situados no Brasil em divórcio, separação ou dissolução de união estável"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 24 e 25",
+       "texto": "Art. 24. A ação proposta perante tribunal estrangeiro ==não induz litispendência== e não obsta a que a autoridade judiciária brasileira conheça da mesma causa e das que lhe são conexas, ressalvadas as disposições em contrário de tratados internacionais e acordos bilaterais em vigor no Brasil.\nArt. 25. Não compete à autoridade judiciária brasileira o processamento e o julgamento da ação quando houver cláusula de eleição de foro exclusivo estrangeiro em contrato internacional, ==arguida pelo réu na contestação==.\n§ 1º Não se aplica o disposto no caput às hipóteses de ==competência internacional exclusiva== previstas neste Capítulo."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Duas trocas clássicas",
+       "html": "\"A ação proposta no exterior induz litispendência\": <b>errado</b> (art. 24). \"O foro exclusivo estrangeiro afasta a jurisdição brasileira mesmo em ação sobre imóvel situado no Brasil\": <b>errado</b> (art. 25, § 1º). E o foro estrangeiro precisa ser <b>arguido pelo réu na contestação</b>: o juiz não o reconhece sozinho."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: critérios de competência, absoluta e relativa",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "cena",
+       "titulo": "Quatro perguntas, na ordem, para achar o juízo competente",
+       "altura": 290,
+       "elementos": [
+        {
+         "id": "j",
+         "tipo": "caixa",
+         "x": 10,
+         "y": 30,
+         "w": 150,
+         "h": 56,
+         "texto": "1. Jurisdição brasileira?",
+         "sub": "arts. 21 a 25",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "ju",
+         "tipo": "caixa",
+         "x": 180,
+         "y": 30,
+         "w": 150,
+         "h": 56,
+         "texto": "2. Qual Justiça?",
+         "sub": "CF, arts. 109 e 125",
+         "cor": "blue"
+        },
+        {
+         "id": "fo",
+         "tipo": "caixa",
+         "x": 350,
+         "y": 30,
+         "w": 150,
+         "h": 56,
+         "texto": "3. Qual foro?",
+         "sub": "comarca: arts. 46 a 53",
+         "cor": "blue"
+        },
+        {
+         "id": "jz",
+         "tipo": "caixa",
+         "x": 520,
+         "y": 30,
+         "w": 150,
+         "h": 56,
+         "texto": "4. Qual juízo?",
+         "sub": "vara: organização judiciária",
+         "cor": "ok"
+        },
+        {
+         "id": "s1",
+         "tipo": "seta",
+         "x": 162,
+         "y": 58,
+         "w": 178,
+         "h": 58,
+         "cor": "dim"
+        },
+        {
+         "id": "s2",
+         "tipo": "seta",
+         "x": 332,
+         "y": 58,
+         "w": 348,
+         "h": 58,
+         "cor": "dim"
+        },
+        {
+         "id": "s3",
+         "tipo": "seta",
+         "x": 502,
+         "y": 58,
+         "w": 518,
+         "h": 58,
+         "cor": "dim"
+        },
+        {
+         "id": "abs",
+         "tipo": "rotulo",
+         "x": 140,
+         "y": 120,
+         "texto": "Justiça, matéria, pessoa e função: ABSOLUTA (art. 62)",
+         "cor": "bad"
+        },
+        {
+         "id": "rel",
+         "tipo": "rotulo",
+         "x": 330,
+         "y": 160,
+         "texto": "Território e valor: RELATIVA, em regra (art. 63)",
+         "cor": "warn"
+        },
+        {
+         "id": "vara",
+         "tipo": "gota",
+         "x": 560,
+         "y": 205,
+         "texto": "vara privativa não muda a comarca (Súm. 206)",
+         "cor": "ok"
+        },
+        {
+         "id": "fim",
+         "tipo": "gota",
+         "x": 120,
+         "y": 230,
+         "texto": "momento: registro ou distribuição (art. 43)",
+         "cor": "blue"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Antes de qualquer artigo de foro, pergunte se o <b>Brasil</b> tem jurisdição sobre a causa. Réu domiciliado aqui, obrigação a cumprir aqui ou fato ocorrido aqui: sim (art. 21). Imóvel situado no Brasil: só o Brasil (art. 23)."
+        },
+        {
+         "texto": "Depois, <b>qual Justiça</b>: Federal (CF, art. 109: União, autarquia ou empresa pública federal interessadas) ou Estadual, que é residual (CF, art. 125). Essa escolha é sempre <b>absoluta</b>.",
+         "mostra": [
+          "s1",
+          "ju",
+          "abs"
+         ],
+         "anima": {
+          "ju": "pulsa"
+         }
+        },
+        {
+         "texto": "Dentro da Justiça certa, <b>qual foro</b> (comarca ou seção judiciária). Aqui entram as regras do CPC: domicílio do réu (art. 46), situação da coisa (art. 47), foros da Fazenda (arts. 51 e 52) e os especiais (art. 53). Em regra, competência <b>territorial e relativa</b>.",
+         "mostra": [
+          "s1",
+          "ju",
+          "abs",
+          "s2",
+          "fo",
+          "rel"
+         ],
+         "anima": {
+          "fo": "pulsa"
+         }
+        },
+        {
+         "texto": "Por fim, <b>qual juízo</b> (vara) dentro do foro: quem diz é a lei de organização judiciária (art. 44). Uma vara privativa da Fazenda na capital não puxa para lá as causas de outras comarcas (Súmula 206 do STJ).",
+         "mostra": [
+          "s1",
+          "ju",
+          "abs",
+          "s2",
+          "fo",
+          "rel",
+          "s3",
+          "jz",
+          "vara"
+         ],
+         "anima": {
+          "jz": "pulsa",
+          "vara": "cai"
+         }
+        },
+        {
+         "texto": "A competência se fixa no <b>registro ou na distribuição</b> da inicial e não muda por fatos posteriores (perpetuatio jurisdictionis), salvo supressão de órgão ou alteração de competência absoluta (art. 43).",
+         "mostra": [
+          "s1",
+          "ju",
+          "abs",
+          "s2",
+          "fo",
+          "rel",
+          "s3",
+          "jz",
+          "vara",
+          "fim"
+         ],
+         "anima": {
+          "fim": "pulsa"
+         }
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 43 e 44",
+       "texto": "Art. 43. Determina-se a competência ==no momento do registro ou da distribuição da petição inicial==, sendo irrelevantes as modificações do estado de fato ou de direito ocorridas posteriormente, ==salvo quando suprimirem órgão judiciário ou alterarem a competência absoluta==.\nArt. 44. Obedecidos os limites estabelecidos pela Constituição Federal, a competência é determinada pelas normas previstas neste Código ou em legislação especial, pelas normas de organização judiciária e, ainda, no que couber, ==pelas constituições dos Estados==."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Matéria, pessoa e função",
+         "sub": "art. 62: inderrogável",
+         "texto": "Competência <b>absoluta</b>, fixada no interesse público. Matéria (vara de família, Justiça do Trabalho), pessoa (Justiça Federal pela presença da União; vara da Fazenda Pública), função (competência originária do tribunal, recursal). Não se altera por vontade das partes nem por conexão."
+        },
+        {
+         "titulo": "Território e valor",
+         "sub": "art. 63: derrogável",
+         "texto": "Competência <b>relativa</b>, fixada no interesse das partes. Pode ser modificada por foro de eleição, conexão, continência e pela falta de alegação do réu (prorrogação, art. 65)."
+        },
+        {
+         "titulo": "Territorial, mas absoluta",
+         "sub": "art. 47, §§ 1º e 2º",
+         "texto": "Exceção que a FCC adora: ações sobre <b>propriedade, vizinhança, servidão, divisão, demarcação e nunciação de obra nova</b> e a <b>possessória imobiliária</b> correm, obrigatoriamente, no foro da situação da coisa. É território, mas absoluta."
+        }
+       ]
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Absoluta",
+        "Relativa"
+       ],
+       "linhas": [
+        [
+         "Quem alega",
+         "qualquer parte, o MP e o juiz <b>de ofício</b> (art. 64, § 1º)",
+         "o réu, em preliminar de contestação; o MP nas causas em que atua (art. 65, parágrafo único). O juiz <b>não</b> declara de ofício (Súmula 33 do STJ), salvo cláusula de eleição abusiva antes da citação e juízo aleatório (art. 63, §§ 3º e 5º)"
+        ],
+        [
+         "Quando",
+         "em qualquer tempo e grau de jurisdição",
+         "na contestação, sob pena de prorrogação (art. 65)"
+        ],
+        [
+         "Modificação por conexão ou eleição",
+         "não",
+         "sim (arts. 54 e 63)"
+        ],
+        [
+         "Depois do trânsito",
+         "cabe rescisória (art. 966, II)",
+         "não há o que rescindir"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 62 e 63, caput",
+       "texto": "Art. 62. A competência determinada em razão da matéria, da pessoa ou da função é ==inderrogável== por convenção das partes.\nArt. 63. As partes podem modificar a competência ==em razão do valor e do território==, elegendo foro onde será proposta ação oriunda de direitos e obrigações."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Os foros do CPC</b>, do geral ao especial. A regra é o domicílio do réu; as exceções protegem quem a lei considera mais frágil (alimentando, guardião de incapaz, idoso, vítima de violência doméstica) ou seguem a lógica do objeto (imóvel, herança)."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Ação",
+        "Foro",
+        "Base"
+       ],
+       "linhas": [
+        [
+         "direito pessoal ou real sobre <b>móveis</b>",
+         "domicílio do réu (mais de um: qualquer deles; incerto: onde for encontrado ou domicílio do autor)",
+         "art. 46"
+        ],
+        [
+         "direito real sobre <b>imóveis</b>",
+         "situação da coisa (opção pelo domicílio do réu ou eleição, salvo propriedade, vizinhança, servidão, divisão, demarcação, nunciação; possessória: absoluta)",
+         "art. 47"
+        ],
+        [
+         "inventário, partilha e ações contra o espólio",
+         "último domicílio do autor da herança no Brasil",
+         "art. 48"
+        ],
+        [
+         "réu incapaz",
+         "domicílio do representante ou assistente",
+         "art. 50"
+        ],
+        [
+         "divórcio e dissolução de união estável",
+         "guardião de filho incapaz; último domicílio do casal; domicílio do réu; vítima de violência doméstica",
+         "art. 53, I"
+        ],
+        [
+         "alimentos",
+         "domicílio ou residência do alimentando",
+         "art. 53, II; Súmula 1 do STJ"
+        ],
+        [
+         "reparação de dano",
+         "lugar do ato ou fato; por delito ou acidente de veículo, também domicílio do autor",
+         "art. 53, IV, a, e V"
+        ],
+        [
+         "<b>União</b> autora / ré",
+         "domicílio do réu / domicílio do autor, local do ato ou fato, situação da coisa ou DF",
+         "art. 51; CF, art. 109, §§ 1º e 2º"
+        ],
+        [
+         "<b>Estado</b> autor / réu",
+         "domicílio do réu / domicílio do autor (no território do Estado: ADI 5.737), local do ato ou fato, situação da coisa ou capital",
+         "art. 52"
+        ],
+        [
+         "execução fiscal",
+         "domicílio do réu, residência ou onde for encontrado (nos limites do ente ou no local do fato gerador: ADI 5.737)",
+         "art. 46, § 5º"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Fazenda Pública e competência: Justiça Federal, foros do Estado e execução fiscal",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Aqui está o coração da aula para quem vai trabalhar na Procuradoria. A Justiça Federal tem competência <b>em razão da pessoa</b>: basta a União, autarquia ou empresa pública federal intervir (como parte ou terceiro) para a causa sair da Justiça Estadual. O Estado-membro, as sociedades de economia mista e as concessionárias não têm esse efeito."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 109, I, §§ 1º e 2º",
+       "texto": "I - as causas em que a ==União, entidade autárquica ou empresa pública federal== forem interessadas na condição de autoras, rés, assistentes ou oponentes, ==exceto as de falência, as de acidentes de trabalho== e as sujeitas à Justiça Eleitoral e à Justiça do Trabalho;\n§ 1º As causas em que a União for autora serão aforadas na seção judiciária onde tiver domicílio a outra parte.\n§ 2º As causas intentadas contra a União poderão ser aforadas na seção judiciária em que for domiciliado o autor, naquela onde houver ocorrido o ato ou fato que deu origem à demanda ou onde esteja situada a coisa, ou, ainda, no Distrito Federal."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 45, caput, I e II, e § 3º",
+       "texto": "Art. 45. Tramitando o processo perante outro juízo, os autos serão remetidos ao juízo federal competente se nele intervier a União, suas empresas públicas, entidades autárquicas e fundações, ou conselho de fiscalização de atividade profissional, ==na qualidade de parte ou de terceiro interveniente==, exceto as ações:\nI - de recuperação judicial, falência, insolvência civil e acidente de trabalho;\nII - sujeitas à justiça eleitoral e à justiça do trabalho.\n§ 3º O juízo federal restituirá os autos ao juízo estadual ==sem suscitar conflito== se o ente federal cuja presença ensejou a remessa for excluído do processo."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "União pede ingresso",
+         "sub": "na vara estadual"
+        },
+        {
+         "titulo": "Remessa",
+         "sub": "art. 45"
+        },
+        {
+         "titulo": "JF decide",
+         "sub": "Súmula 150"
+        },
+        {
+         "titulo": "Exclui a União",
+         "sub": "§ 3º; Súm. 224"
+        },
+        {
+         "titulo": "Estadual acata",
+         "sub": "Súmula 254"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Numa ação de particular contra o Estado do Maranhão, na vara estadual, a União requer o ingresso como assistente."
+        },
+        {
+         "no": 1,
+         "texto": "O juiz estadual <b>não</b> decide se o interesse da União existe: remete os autos ao juízo federal (art. 45)."
+        },
+        {
+         "no": 2,
+         "texto": "Quem decide sobre o interesse jurídico da União, de suas autarquias ou empresas públicas é a <b>Justiça Federal</b> (Súmula 150 do STJ)."
+        },
+        {
+         "no": 3,
+         "texto": "Se o juiz federal exclui o ente federal, <b>restitui os autos</b> ao juízo estadual, <b>sem suscitar conflito</b> (art. 45, § 3º; Súmula 224 do STJ)."
+        },
+        {
+         "no": 4,
+         "texto": "O juiz estadual não pode reexaminar essa exclusão (Súmula 254 do STJ). E um mero protesto de preferência de crédito do ente federal na execução estadual não desloca a competência (Súmula 270 do STJ)."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 51 e 52",
+       "texto": "Art. 51. É competente o foro de domicílio do réu para as causas em que seja autora a União.\nParágrafo único. Se a União for a demandada, a ação poderá ser proposta no foro de domicílio do autor, no de ocorrência do ato ou fato que originou a demanda, no de situação da coisa ou no Distrito Federal.\nArt. 52. É competente o foro de domicílio do réu para as causas em que seja ==autor Estado ou o Distrito Federal==.\nParágrafo único. Se Estado ou o Distrito Federal for o demandado, a ação poderá ser proposta no foro de domicílio do autor, no de ocorrência do ato ou fato que originou a demanda, no de situação da coisa ou ==na capital do respectivo ente federado==."
+      },
+      {
+       "t": "cena",
+       "titulo": "O Estado do Maranhão como réu: onde a ação pode nascer (art. 52 e ADI 5.737)",
+       "altura": 300,
+       "elementos": [
+        {
+         "id": "ma",
+         "tipo": "caixa",
+         "x": 250,
+         "y": 20,
+         "w": 180,
+         "h": 56,
+         "texto": "Estado do Maranhão é réu",
+         "sub": "art. 52, parágrafo único",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "dom",
+         "tipo": "caixa",
+         "x": 10,
+         "y": 170,
+         "w": 150,
+         "h": 56,
+         "texto": "Domicílio do autor",
+         "sub": "só comarca do Maranhão",
+         "cor": "warn"
+        },
+        {
+         "id": "fato",
+         "tipo": "caixa",
+         "x": 180,
+         "y": 170,
+         "w": 150,
+         "h": 56,
+         "texto": "Local do ato ou fato",
+         "sub": "que originou a demanda",
+         "cor": "ok"
+        },
+        {
+         "id": "coisa",
+         "tipo": "caixa",
+         "x": 350,
+         "y": 170,
+         "w": 150,
+         "h": 56,
+         "texto": "Situação da coisa",
+         "sub": "",
+         "cor": "ok"
+        },
+        {
+         "id": "cap",
+         "tipo": "caixa",
+         "x": 520,
+         "y": 170,
+         "w": 150,
+         "h": 56,
+         "texto": "Capital: São Luís",
+         "sub": "do ente demandado",
+         "cor": "ok"
+        },
+        {
+         "id": "a1",
+         "tipo": "seta",
+         "x": 290,
+         "y": 78,
+         "w": 85,
+         "h": 168,
+         "cor": "warn"
+        },
+        {
+         "id": "a2",
+         "tipo": "seta",
+         "x": 320,
+         "y": 78,
+         "w": 255,
+         "h": 168,
+         "cor": "ok"
+        },
+        {
+         "id": "a3",
+         "tipo": "seta",
+         "x": 360,
+         "y": 78,
+         "w": 425,
+         "h": 168,
+         "cor": "ok"
+        },
+        {
+         "id": "a4",
+         "tipo": "seta",
+         "x": 390,
+         "y": 78,
+         "w": 595,
+         "h": 168,
+         "cor": "ok"
+        },
+        {
+         "id": "sp",
+         "tipo": "gota",
+         "x": 40,
+         "y": 262,
+         "texto": "autor em São Paulo? lá não (ADI 5.737)",
+         "cor": "bad"
+        },
+        {
+         "id": "autor",
+         "tipo": "rotulo",
+         "x": 360,
+         "y": 262,
+         "texto": "Estado AUTOR: foro do domicílio do réu (art. 52, caput)",
+         "cor": "dim"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Quando o <b>Estado é demandado</b>, o CPC dá ao autor quatro foros à escolha (art. 52, parágrafo único). É competência territorial: relativa, e o autor escolhe."
+        },
+        {
+         "texto": "<b>Domicílio do autor.</b> Pela letra do CPC, qualquer domicílio. Mas o STF, na ADI 5.737 (julgada com a ADI 5.492), deu interpretação conforme: o foro do domicílio do autor fica <b>restrito às comarcas do território do Estado réu</b>.",
+         "mostra": [
+          "a1",
+          "dom"
+         ],
+         "anima": {
+          "dom": "pulsa"
+         }
+        },
+        {
+         "texto": "Os outros três seguem como estão: <b>local do ato ou fato</b> que originou a demanda, <b>situação da coisa</b> e a <b>capital</b> do ente.",
+         "mostra": [
+          "a1",
+          "dom",
+          "a2",
+          "fato",
+          "a3",
+          "coisa",
+          "a4",
+          "cap"
+         ],
+         "anima": {
+          "cap": "pulsa"
+         }
+        },
+        {
+         "texto": "Resultado prático para a PGE-MA: o autor domiciliado em São Paulo, por fato ocorrido em São Luís, <b>não</b> pode processar o Maranhão em São Paulo. Se o fizer, o Estado alega a incompetência relativa <b>na contestação</b>, sob pena de prorrogação (art. 65).",
+         "mostra": [
+          "a1",
+          "dom",
+          "a2",
+          "fato",
+          "a3",
+          "coisa",
+          "a4",
+          "cap",
+          "sp"
+         ],
+         "anima": {
+          "sp": "treme"
+         }
+        },
+        {
+         "texto": "E quando o Estado é <b>autor</b>, a regra inverte: foro do domicílio do réu (art. 52, caput). Na execução fiscal, o art. 46, § 5º, também ganhou interpretação conforme: limites do território do ente ou local do fato gerador.",
+         "mostra": [
+          "a1",
+          "dom",
+          "a2",
+          "fato",
+          "a3",
+          "coisa",
+          "a4",
+          "cap",
+          "sp",
+          "autor"
+         ],
+         "anima": {
+          "autor": "pulsa"
+         }
+        }
+       ]
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Plenário, ADI 5.737 (julgada em conjunto com a ADI 5.492), Redator para o acórdão Min. Roberto Barroso, Sessão Virtual de 14.4.2023 a 24.4.2023 (decisão de julgamento de 27/04/2023)",
+       "tese": "O Tribunal, por maioria, julgou parcialmente procedente o pedido, para atribuir interpretação conforme a Constituição: (i) ao art. 46, § 5º, do CPC, para restringir sua aplicação aos limites do território de cada ente subnacional ou ao local de ocorrência do fato gerador; e (ii) ao art. 52, parágrafo único, do CPC, para restringir a competência do foro de domicílio do autor às comarcas inseridas nos limites territoriais do Estado-membro ou do Distrito Federal que figure como réu."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 46, § 5º",
+       "texto": "§ 5º A execução fiscal será proposta no foro de domicílio do réu, no de sua residência ou no do lugar onde for encontrado."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 6.830/1980, art. 5º",
+       "texto": "Art. 5º - A competência para processar e julgar a execução da Dívida Ativa da Fazenda Pública ==exclui a de qualquer outro Juízo==, inclusive o da falência, da concordata, da liquidação, da insolvência ou do inventário."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Execução fiscal: três regras que se somam",
+       "html": "(1) Foro: domicílio, residência ou onde o executado for encontrado (art. 46, § 5º), lido pelo STF nos limites do território do ente ou no local do fato gerador (ADI 5.737). (2) Proposta a execução, a mudança de domicílio do executado <b>não desloca</b> a competência (Súmula 58 do STJ), reflexo do art. 43. (3) O juízo da execução fiscal não cede ao da falência ou do inventário (LEF, art. 5º)."
+      },
+      {
+       "t": "lei",
+       "ref": "Constituição do Maranhão, art. 81, VI",
+       "texto": "Art. 81. Compete ao Tribunal de Justiça processar e julgar, ==originariamente==:\nVI - o “habeas-data” e o mandado de segurança contra atos do Governador do Estado, da Mesa da Assembleia Legislativa, do Tribunal de Contas do Estado, ==dos Procuradores-Gerais e dos Secretários de Estado==, e do próprio Tribunal de Justiça;"
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "CF x Constituição do Maranhão",
+       "html": "O art. 125, § 1º, da CF manda a Constituição do Estado definir a competência do Tribunal de Justiça, e o art. 44 do CPC reconhece essas normas. Por isso o MS contra ato do Governador ou de Secretário de Estado nasce <b>no TJMA</b> (competência funcional, absoluta), e não na vara da Fazenda. Contra ato de autoridade que não está no rol (um chefe de posto fiscal, por exemplo), o MS vai ao juízo de primeiro grau."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: modificação da competência (arts. 54 a 63)",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Só a competência <b>relativa</b> se modifica (art. 54). As causas: conexão, continência, foro de eleição e a falta de alegação do réu. A reunião serve à economia e, sobretudo, a evitar decisões contraditórias."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 54 a 59",
+       "texto": "Art. 54. A competência relativa poderá modificar-se pela conexão ou pela continência, observado o disposto nesta Seção.\nArt. 55. Reputam-se conexas 2 (duas) ou mais ações quando lhes for comum ==o pedido ou a causa de pedir==.\n§ 1º Os processos de ações conexas serão reunidos para decisão conjunta, ==salvo se um deles já houver sido sentenciado==.\nI - à execução de título extrajudicial e à ação de conhecimento relativa ao mesmo ato jurídico;\nII - às execuções fundadas no mesmo título executivo.\n§ 3º Serão reunidos para julgamento conjunto os processos que possam gerar risco de prolação de decisões conflitantes ou contraditórias caso decididos separadamente, ==mesmo sem conexão entre eles==.\nArt. 56. Dá-se a continência entre 2 (duas) ou mais ações quando houver identidade quanto às partes e à causa de pedir, mas o pedido de uma, por ser mais amplo, abrange o das demais.\nArt. 57. Quando houver continência e a ação continente tiver sido ==proposta anteriormente==, no processo relativo à ação contida será proferida ==sentença sem resolução de mérito==, caso contrário, as ações serão necessariamente reunidas.\nArt. 58. A reunião das ações propostas em separado far-se-á no juízo prevento, onde serão decididas simultaneamente.\nArt. 59. ==O registro ou a distribuição== da petição inicial torna prevento o juízo."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Continente veio primeiro",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Ação 1 (2025)",
+           "sub": "anula o contrato inteiro"
+          },
+          {
+           "titulo": "Ação 2 (2026)",
+           "sub": "anula uma cláusula"
+          }
+         ],
+         "texto": "A ação 2 é <b>contida</b> e veio depois: o pedido dela já está dentro da ação 1. Na ação contida, <b>sentença sem resolução de mérito</b> (art. 57)."
+        },
+        {
+         "rotulo": "Contida veio primeiro",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Ação 1 (2025)",
+           "sub": "anula uma cláusula"
+          },
+          {
+           "titulo": "Ação 2 (2026)",
+           "sub": "anula o contrato inteiro"
+          }
+         ],
+         "texto": "A ação mais ampla veio depois e não pode ser extinta, porque pede mais. As ações são <b>necessariamente reunidas</b> no juízo prevento (arts. 57 e 58)."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Conexão com processo já sentenciado",
+       "html": "\"Reconhecida a conexão, os processos serão sempre reunidos.\" <b>Errado</b>: não se reúne se um deles já foi sentenciado (art. 55, § 1º; Súmula 235 do STJ). E o § 3º do art. 55 manda reunir <b>mesmo sem conexão</b> quando houver risco de decisões conflitantes."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Foro de eleição.</b> A Lei 14.879/2024 mudou o art. 63: a cláusula só produz efeito se estiver em instrumento escrito, aludir a negócio determinado <b>e guardar pertinência</b> com o domicílio ou residência de uma das partes ou com o local da obrigação (ressalvada a pactuação favorável ao consumidor). E criou o § 5º, contra o \"juízo aleatório\"."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 63, §§ 1º a 5º (redação da Lei 14.879/2024)",
+       "texto": "§ 1º A eleição de foro somente produz efeito quando constar de instrumento escrito, aludir expressamente a determinado negócio jurídico e ==guardar pertinência== com o domicílio ou a residência de uma das partes ou com o local da obrigação, ressalvada a pactuação consumerista, quando favorável ao consumidor.\n§ 2º O foro contratual obriga os herdeiros e sucessores das partes.\n§ 3º ==Antes da citação==, a cláusula de eleição de foro, se abusiva, pode ser reputada ineficaz de ofício pelo juiz, que determinará a remessa dos autos ao juízo do foro de domicílio do réu.\n§ 4º Citado, incumbe ao réu alegar a abusividade da cláusula de eleição de foro na contestação, ==sob pena de preclusão==.\n§ 5º O ajuizamento de ação em ==juízo aleatório==, entendido como aquele sem vinculação com o domicílio ou a residência das partes ou com o negócio jurídico discutido na demanda, constitui prática abusiva que justifica a ==declinação de competência de ofício==."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Cláusula",
+         "sub": "escrita e pertinente"
+        },
+        {
+         "titulo": "Antes da citação",
+         "sub": "§ 3º"
+        },
+        {
+         "titulo": "Citado o réu",
+         "sub": "§ 4º"
+        },
+        {
+         "titulo": "Juízo aleatório",
+         "sub": "§ 5º"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Sem instrumento escrito, sem negócio determinado ou <b>sem pertinência</b> com domicílio, residência ou local da obrigação, a cláusula não produz efeito (§ 1º)."
+        },
+        {
+         "no": 1,
+         "texto": "Abusiva? O juiz pode reputá-la ineficaz <b>de ofício</b>, mas só <b>antes da citação</b>, e remete os autos ao foro do domicílio do réu (§ 3º)."
+        },
+        {
+         "no": 2,
+         "texto": "Depois de citado, cabe ao réu alegar a abusividade <b>na contestação</b>, sob pena de <b>preclusão</b> (§ 4º). O juiz já não age sozinho."
+        },
+        {
+         "no": 3,
+         "texto": "Ação ajuizada em foro sem vínculo com as partes ou com o negócio (\"juízo aleatório\") é prática abusiva e justifica a declinação <b>de ofício</b> (§ 5º). É mais uma ressalva à Súmula 33 do STJ."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 60 e 61",
+       "texto": "Art. 60. Se o imóvel se achar situado em mais de um Estado, comarca, seção ou subseção judiciária, a competência territorial do juízo prevento estender-se-á sobre a totalidade do imóvel.\nArt. 61. A ação acessória será proposta no juízo competente para a ação principal."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e detalhes: incompetência, conflito e cooperação nacional",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 64 e 65",
+       "texto": "Art. 64. A incompetência, absoluta ou relativa, será alegada como ==questão preliminar de contestação==.\n§ 1º A incompetência absoluta pode ser alegada em qualquer tempo e grau de jurisdição e ==deve ser declarada de ofício==.\n§ 2º Após manifestação da parte contrária, o juiz decidirá imediatamente a alegação de incompetência.\n§ 3º Caso a alegação de incompetência seja acolhida, os autos serão remetidos ao juízo competente.\n§ 4º Salvo decisão judicial em sentido contrário, ==conservar-se-ão os efeitos== de decisão proferida pelo juízo incompetente até que outra seja proferida, se for o caso, pelo juízo competente.\nArt. 65. ==Prorrogar-se-á== a competência relativa se o réu não alegar a incompetência em preliminar de contestação.\nParágrafo único. A incompetência relativa pode ser alegada pelo Ministério Público nas causas em que atuar."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Translatio iudicii",
+       "html": "No CPC de 2015, incompetência <b>não extingue</b> o processo: os autos são remetidos ao juízo competente (art. 64, § 3º) e as decisões do incompetente valem até serem substituídas (§ 4º). Acabou a \"exceção de incompetência\" em peça separada: tudo vai na contestação, que pode ser protocolada no foro do domicílio do réu (art. 340)."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 340, caput e §§ 2º e 3º",
+       "texto": "Art. 340. Havendo alegação de incompetência relativa ou absoluta, a contestação poderá ser protocolada no ==foro de domicílio do réu==, fato que será imediatamente comunicado ao juiz da causa, preferencialmente por meio eletrônico.\n§ 2º Reconhecida a competência do foro indicado pelo réu, o juízo para o qual for distribuída a contestação ou a carta precatória será considerado prevento.\n§ 3º Alegada a incompetência nos termos do caput , ==será suspensa a realização da audiência== de conciliação ou de mediação, se tiver sido designada."
+      },
+      {
+       "t": "matriz",
+       "linhas": [
+        "Dois juízes se declaram competentes",
+        "Dois juízes se dão por incompetentes, um apontando o outro",
+        "Controvérsia sobre reunir ou separar processos",
+        "Um dos juízos já tem sentença transitada",
+        "A parte arguiu incompetência relativa e perdeu"
+       ],
+       "colunas": [
+        "Há conflito",
+        "Não há conflito ou não pode suscitar"
+       ],
+       "celulas": [
+        [
+         [
+          true,
+          "Conflito positivo (art. 66, I)."
+         ],
+         [
+          false,
+          ""
+         ]
+        ],
+        [
+         [
+          true,
+          "Conflito negativo (art. 66, II)."
+         ],
+         [
+          false,
+          ""
+         ]
+        ],
+        [
+         [
+          true,
+          "Art. 66, III."
+         ],
+         [
+          false,
+          ""
+         ]
+        ],
+        [
+         [
+          false,
+          ""
+         ],
+         [
+          true,
+          "Súmula 59 do STJ."
+         ]
+        ],
+        [
+         [
+          false,
+          ""
+         ],
+         [
+          true,
+          "Não pode suscitar conflito (art. 952)."
+         ]
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 66, 951 e 952",
+       "texto": "Art. 66. Há conflito de competência quando:\nI - 2 (dois) ou mais juízes se declaram competentes;\nII - 2 (dois) ou mais juízes se consideram incompetentes, atribuindo um ao outro a competência;\nIII - entre 2 (dois) ou mais juízes surge controvérsia acerca da reunião ou separação de processos.\nParágrafo único. O juiz que não acolher a competência declinada deverá suscitar o conflito, salvo se a atribuir a outro juízo.\nArt. 951. O conflito de competência pode ser suscitado por qualquer das partes, pelo Ministério Público ou pelo juiz.\nArt. 952. ==Não pode suscitar conflito a parte que, no processo, arguiu incompetência relativa==."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Quem julga o conflito</b> segue a CF: entre juiz federal e juiz estadual <b>investido de jurisdição federal</b>, o TRF da região (Súmula 3 do STJ); entre juizado especial federal e juízo federal da mesma seção, o TRF (Súmula 428 do STJ)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Cooperação nacional</b> (arts. 67 a 69): todos os órgãos do Judiciário têm dever de cooperação recíproca. O pedido prescinde de forma específica e pode ser executado como auxílio direto, reunião ou apensamento de processos, prestação de informações e atos concertados entre juízes, inclusive de ramos diferentes do Judiciário (art. 69, § 3º)."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 69, caput",
+       "texto": "Art. 69. O pedido de cooperação jurisdicional deve ser prontamente atendido, ==prescinde de forma específica== e pode ser executado como:\nI - auxílio direto;\nII - reunião ou apensamento de processos;\nIII - prestação de informações;\nIV - atos concertados entre os juízes cooperantes."
+      }
+     ]
+    },
+    {
+     "titulo": "O olhar da Procuradoria do Estado: checklist de competência",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Pense como o analista que prepara a contestação do Estado. Antes do mérito, a competência pode encerrar a discussão no foro certo ou anular o que se fez no errado. A ordem abaixo segue o funil da cena da seção 4."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Justiça",
+         "sub": "CF, 109"
+        },
+        {
+         "titulo": "Foro",
+         "sub": "art. 52"
+        },
+        {
+         "titulo": "Juízo",
+         "sub": "TJ ou vara"
+        },
+        {
+         "titulo": "Alegar",
+         "sub": "arts. 64 e 340"
+        },
+        {
+         "titulo": "Prazo",
+         "sub": "art. 183"
+        },
+        {
+         "titulo": "Execução",
+         "sub": "art. 535, V"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Justiça:</b> há União, autarquia ou empresa pública federal interessada? Então a causa é federal (CF, art. 109, I; CPC, art. 45), e quem decide o interesse é o juízo federal (Súmula 150). Sociedade de economia mista não desloca (Súmula 42)."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Foro:</b> Estado réu só pode ser demandado no domicílio do autor <b>dentro do Maranhão</b>, no local do fato, na situação da coisa ou em São Luís (art. 52, parágrafo único; ADI 5.737)."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Juízo:</b> MS contra Governador ou Secretário é originário do TJMA (Constituição do Maranhão, art. 81, VI). Vara privativa da capital não atrai causa de outra comarca (Súmula 206)."
+        },
+        {
+         "no": 3,
+         "texto": "<b>Como alegar:</b> preliminar de contestação (art. 64), com a possibilidade de protocolar no foro do domicílio do réu (art. 340). Incompetência relativa não alegada <b>prorroga</b> (art. 65); a absoluta pode ser alegada a qualquer tempo e cabe rescisória (art. 966, II)."
+        },
+        {
+         "no": 4,
+         "texto": "<b>Prazo:</b> o Estado tem prazo em <b>dobro</b> para todas as manifestações, contado da intimação pessoal (art. 183), o que inclui a contestação em que vai a preliminar."
+        },
+        {
+         "no": 5,
+         "texto": "<b>Cumprimento de sentença:</b> na impugnação da Fazenda (30 dias), uma das matérias é a incompetência absoluta ou relativa <b>do juízo da execução</b> (art. 535, V)."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 183, caput",
+       "texto": "Art. 183. A União, os Estados, o Distrito Federal, os Municípios e suas respectivas autarquias e fundações de direito público gozarão de ==prazo em dobro para todas as suas manifestações processuais==, cuja contagem terá início a partir da intimação pessoal."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 535, caput e V",
+       "texto": "Art. 535. A Fazenda Pública será intimada na pessoa de seu representante judicial, por carga, remessa ou meio eletrônico, para, querendo, no prazo de ==30 (trinta) dias== e nos próprios autos, impugnar a execução, podendo arguir:\nV - ==incompetência absoluta ou relativa do juízo da execução==;"
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência que a FCC cobra",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Só o que foi conferido no site oficial em 24/11/2026: súmulas do STJ no PDF oficial de enunciados, a SV 27 no portal do STF e a ADI 5.737 no andamento oficial do processo."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula Vinculante 27",
+       "tese": "Compete à Justiça Estadual julgar causas entre consumidor e concessionária de serviço público de telefonia, quando a ANATEL não seja litisconsorte passiva necessária, assistente, nem opoente."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 5.737 e ADI 5.492 (CPC, arts. 46, § 5º, e 52, parágrafo único)",
+       "tese": "O Tribunal, por maioria, julgou parcialmente procedente o pedido, para atribuir interpretação conforme a Constituição: (i) ao art. 46, § 5º, do CPC, para restringir sua aplicação aos limites do território de cada ente subnacional ou ao local de ocorrência do fato gerador; e (ii) ao art. 52, parágrafo único, do CPC, para restringir a competência do foro de domicílio do autor às comarcas inseridas nos limites territoriais do Estado-membro ou do Distrito Federal que figure como réu."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 33",
+       "tese": "A incompetência relativa não pode ser declarada de ofício."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 58",
+       "tese": "Proposta a execução fiscal, a posterior mudança de domicílio do executado não desloca a competência já fixada."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 150",
+       "tese": "Compete à Justiça Federal decidir sobre a existência de interesse jurídico que justifique a presença, no processo, da União, suas autarquias ou empresas públicas."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 224",
+       "tese": "Excluído do feito o ente federal, cuja presença levara o Juiz Estadual a declinar da competência, deve o Juiz Federal restituir os autos e não suscitar conflito."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 254",
+       "tese": "A decisão do Juízo Federal que exclui da relação processual ente federal não pode ser reexaminada no Juízo Estadual."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 206",
+       "tese": "A existência de vara privativa, instituída por lei estadual, não altera a competência territorial resultante das leis de processo."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 42",
+       "tese": "Compete à Justiça Comum Estadual processar e julgar as causas cíveis em que é parte sociedade de economia mista e os crimes praticados em seu detrimento."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 270",
+       "tese": "O protesto pela preferência de crédito, apresentado por ente federal em execução que tramita na Justiça Estadual, não desloca a competência para a Justiça Federal."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 66",
+       "tese": "Compete à Justiça Federal processar e julgar execução fiscal promovida por Conselho de Fiscalização Profissional."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 235",
+       "tese": "A conexão não determina a reunião dos processos, se um deles já foi julgado."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 489",
+       "tese": "Reconhecida a continência, devem ser reunidas na Justiça Federal as ações civis públicas propostas nesta e na Justiça estadual."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 59",
+       "tese": "Não há conflito de competência se já existe sentença com trânsito em julgado, proferida por um dos juízos conflitantes."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 3",
+       "tese": "Compete ao Tribunal Regional Federal dirimir conflito de competência verificado, na respectiva região, entre juiz federal e juiz estadual investido de jurisdição federal."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 428",
+       "tese": "Compete ao Tribunal Regional Federal decidir os conflitos de competência entre juizado especial federal e juízo federal da mesma seção judiciária."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 1",
+       "tese": "O foro do domicílio ou da residência do alimentando é o competente para a ação de investigação de paternidade, quando cumulada com a de alimentos."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 383",
+       "tese": "A competência para processar e julgar as ações conexas de interesse de menor é, em princípio, do foro do domicílio do detentor de sua guarda."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 11",
+       "tese": "A presença da União ou de qualquer de seus entes, na ação de usucapião especial, não afasta a competência do foro da situação do imóvel."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 181",
+       "tese": "É admissível ação declaratória, visando a obter certeza quanto a exata interpretação de cláusula contratual."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 614",
+       "tese": "O locatário não possui legitimidade ativa para discutir a relação jurídico-tributária de IPTU e de taxas referentes ao imóvel alugado nem para repetir indébito desses tributos."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 637",
+       "tese": "O ente público detém legitimidade e interesse para intervir, incidentalmente, na ação possessória entre particulares, podendo deduzir qualquer matéria defensiva, inclusive, se for o caso, o domínio."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A Justiça Estadual julga a causa entre consumidor e concessionária de telefonia, ainda que a ANATEL figure como litisconsorte passiva necessária.",
+         "v": false,
+         "porque": "SV 27: só quando a ANATEL não é litisconsorte necessária, assistente nem opoente."
+        },
+        {
+         "texto": "O juiz estadual pode reexaminar a decisão do juiz federal que excluiu a União do processo.",
+         "v": false,
+         "porque": "Súmula 254 do STJ."
+        },
+        {
+         "texto": "O protesto por preferência de crédito do ente federal na execução estadual desloca a competência para a Justiça Federal.",
+         "v": false,
+         "porque": "Súmula 270 do STJ."
+        },
+        {
+         "texto": "Proposta a execução fiscal, a mudança de domicílio do executado não altera a competência.",
+         "v": true,
+         "porque": "Súmula 58 do STJ e art. 43 do CPC."
+        },
+        {
+         "texto": "Reconhecida a continência entre ACP federal e ACP estadual, as ações são reunidas na Justiça Estadual.",
+         "v": false,
+         "porque": "Súmula 489 do STJ: reunião na Justiça Federal."
+        },
+        {
+         "texto": "O ente público pode intervir em possessória entre particulares e alegar o domínio.",
+         "v": true,
+         "porque": "Súmula 637 do STJ."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O que pode cair assim",
+       "html": "Os campeões do tema: (1) absoluta x relativa e quem pode alegar (arts. 62 a 65; Súmula 33); (2) a exceção do art. 43 (supressão de órgão ou alteração da competência absoluta); (3) conexão, continência e o art. 57; (4) art. 63 novo (pertinência e juízo aleatório); (5) foros da União e do Estado (arts. 51 e 52), agora com a ADI 5.737; (6) art. 45 com as Súmulas 150, 224 e 254; (7) condições da ação só interesse e legitimidade, e a legitimação extraordinária autorizada pelo \"ordenamento jurídico\"."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Trocas de palavra que a banca faz",
+       "html": "\"Registro <b>e</b> distribuição\" no lugar de \"registro <b>ou</b> distribuição\" (art. 43). \"Autorizado por <b>lei</b>\" no lugar de \"pelo <b>ordenamento jurídico</b>\" (art. 18). \"Assistente <b>simples</b>\" no lugar de \"<b>litisconsorcial</b>\" (art. 18, parágrafo único). \"Capital <b>do autor</b>\" no lugar de \"capital do respectivo ente\" (art. 52)."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A incompetência relativa pode ser alegada pelo Ministério Público nas causas em que atuar.",
+         "v": true,
+         "porque": "Art. 65, parágrafo único."
+        },
+        {
+         "texto": "A competência em razão do território é sempre relativa.",
+         "v": false,
+         "porque": "Art. 47, §§ 1º e 2º: imóveis (propriedade, vizinhança, servidão etc.) e possessória imobiliária são absolutas."
+        },
+        {
+         "texto": "Acolhida a incompetência absoluta, o processo é extinto sem resolução do mérito.",
+         "v": false,
+         "porque": "Os autos são remetidos ao juízo competente (art. 64, § 3º)."
+        },
+        {
+         "texto": "Depois da citação, o juiz pode reconhecer de ofício a abusividade da cláusula de eleição de foro.",
+         "v": false,
+         "porque": "Só antes da citação (art. 63, § 3º); depois, o réu alega na contestação (§ 4º)."
+        },
+        {
+         "texto": "A ação proposta perante tribunal estrangeiro induz litispendência no Brasil.",
+         "v": false,
+         "porque": "Art. 24."
+        },
+        {
+         "texto": "Para postular em juízo, exige-se interesse, legitimidade e possibilidade jurídica do pedido.",
+         "v": false,
+         "porque": "Art. 17: só interesse e legitimidade."
+        },
+        {
+         "texto": "O Estado autor deve propor a ação no foro de domicílio do réu.",
+         "v": true,
+         "porque": "Art. 52, caput."
+        },
+        {
+         "texto": "A ação acessória será proposta no juízo competente para a ação principal.",
+         "v": true,
+         "porque": "Art. 61."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "cpc-004",
+    "cpc-005",
+    "cpc-006",
+    "cpc-007",
+    "cpc-008",
+    "pc-comp-01",
+    "pc-comp-02",
+    "pc-comp-03",
+    "pc-comp-04",
+    "pc-comp-05",
+    "pc-comp-06",
+    "pc-comp-07",
+    "pc-comp-08",
+    "pc-comp-09",
+    "pc-comp-10",
+    "pc-comp-11",
+    "pc-comp-12",
+    "pc-comp-13",
+    "pc-comp-14",
+    "pc-comp-15",
+    "pc-comp-16",
+    "pc-comp-17",
+    "pc-comp-18",
+    "pc-comp-19",
+    "pc-comp-20",
+    "pc-comp-21",
+    "pc-comp-22",
+    "pc-comp-23",
+    "pc-comp-24"
+   ]
   },
   {
    "id": "B5-a03",
@@ -503,6 +1985,34 @@
   [
    "Per relationem",
    "Fundamentação por referência a decisão anterior, documento ou parecer."
+  ],
+  [
+   "Jurisdição",
+   "Função do Estado de resolver conflitos aplicando o direito ao caso concreto, em substituição às partes e de forma definitiva (CPC, art. 16)."
+  ],
+  [
+   "Competência",
+   "Medida da jurisdição: a parcela de causas que cada juízo pode julgar (CPC, art. 42)."
+  ],
+  [
+   "Perpetuatio jurisdictionis",
+   "Fixação da competência no registro ou distribuição da inicial, sem alteração por fatos posteriores, salvo as ressalvas do art. 43 do CPC."
+  ],
+  [
+   "Legitimação extraordinária",
+   "Autorização do ordenamento jurídico para pleitear, em nome próprio, direito alheio (substituição processual, CPC, art. 18)."
+  ],
+  [
+   "Translatio iudicii",
+   "Aproveitamento do processo quando reconhecida a incompetência: remessa ao juízo competente e conservação das decisões (CPC, art. 64, §§ 3º e 4º)."
+  ],
+  [
+   "Juízo aleatório",
+   "Foro sem vinculação com o domicílio ou residência das partes ou com o negócio discutido; justifica declinação de ofício (CPC, art. 63, § 5º)."
+  ],
+  [
+   "Continência",
+   "Relação entre ações com as mesmas partes e causa de pedir, em que o pedido de uma, mais amplo, abrange o das demais (CPC, art. 56)."
   ]
  ]
 }

@@ -1042,5 +1042,53 @@
       "B7|Crédito tributário",
       "B7|Decadência e prescrição"
     ]
+  },
+  {
+    "id": "pc-competencia-estado-reu",
+    "materia_id": "B5",
+    "titulo": "Estado do Maranhão réu fora do seu território e o ingresso da União",
+    "enunciado": "Ana, domiciliada em Fortaleza (CE), ajuizou na Justiça Estadual de Fortaleza ação indenizatória contra o Estado do Maranhão, por danos sofridos em hospital estadual de Imperatriz (MA). O juízo concedeu tutela de urgência determinando o custeio de tratamento. Citado, o Estado do Maranhão apresentou contestação. Depois, a União requereu o ingresso no feito como assistente do Estado, alegando que o hospital recebia recursos federais. Na qualidade de analista jurídico da Procuradoria-Geral do Estado, responda, de forma fundamentada:",
+    "perguntas": [
+      "O foro de Fortaleza é competente? Indique os foros em que a ação poderia ser proposta, considerando o CPC e o entendimento do STF.",
+      "Qual a natureza dessa incompetência, como e quando o Estado deve alegá-la, e o que ocorre se não o fizer?",
+      "Diante do pedido de ingresso da União, qual juízo decide sobre o interesse dela e o que acontece se a União for excluída?",
+      "Reconhecida a incompetência, qual o destino do processo e da tutela de urgência já concedida?"
+    ],
+    "linhas_min": 20,
+    "linhas": 30,
+    "espelho": [
+      {
+        "ponto": "Não é competente. Estado réu pode ser demandado no foro de domicílio do autor, no local do ato ou fato, no de situação da coisa ou na capital do ente; o STF, na ADI 5.737 (com a ADI 5.492), restringiu o domicílio do autor às comarcas do território do Estado réu. Foros possíveis: Imperatriz (local do fato) ou São Luís (capital).",
+        "fundamento": "CPC, art. 52, parágrafo único; STF, ADI 5.737",
+        "peso": 25
+      },
+      {
+        "ponto": "Competência territorial, relativa: deve ser alegada em preliminar de contestação (que pode ser protocolada no foro do domicílio do réu); não alegada, prorroga-se, e o juiz não pode declará-la de ofício. O prazo do Estado é em dobro.",
+        "fundamento": "CPC, arts. 63, 64, 65, 183 e 340; Súmula 33 do STJ",
+        "peso": 25
+      },
+      {
+        "ponto": "Intervindo a União como terceira, os autos vão à Justiça Federal, que decide sobre a existência de interesse jurídico; se a excluir, restitui os autos ao juízo estadual sem suscitar conflito, e a exclusão não pode ser reexaminada pelo juízo estadual.",
+        "fundamento": "CF, art. 109, I; CPC, art. 45, caput e § 3º; Súmulas 150, 224 e 254 do STJ",
+        "peso": 20
+      },
+      {
+        "ponto": "A incompetência não extingue o processo: os autos são remetidos ao juízo competente, e os efeitos da tutela concedida pelo juízo incompetente se conservam até que outra decisão seja proferida pelo competente, salvo decisão judicial em sentido contrário.",
+        "fundamento": "CPC, art. 64, §§ 3º e 4º",
+        "peso": 20
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado (sem tópicos soltos), cada item respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
+      }
+    ],
+    "dica": "Siga o funil: Justiça (a União desloca?), foro (art. 52 e ADI 5.737), natureza (relativa, só na contestação) e efeitos (remessa e conservação).",
+    "tangencia": "Tangenciar é discutir a responsabilidade civil do Estado (art. 37, § 6º, da CF) ou o mérito da indenização em vez das regras de competência.",
+    "topico_id": "B5-02",
+    "temas": [
+      "B5|Competência",
+      "B5|Fazenda Pública em juízo"
+    ]
   }
 ]
