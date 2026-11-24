@@ -3944,7 +3944,1820 @@
    "topico_id": "B7-04",
    "numero": 8,
    "titulo": "Crédito tributário",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "CTN (arts. 139 a 182, com as LCs 227 e 236/2026), Lei 6.830/1980 e CF, textos vigentes; súmulas do STJ (PDF oficial), Temas repetitivos (portal do STJ) e súmulas vinculantes (portal do STF), conferidos em 24/11/2026",
+   "resumo": [
+    "Obrigação nasce com o fato gerador; crédito nasce com o lançamento (natureza mista: declara a obrigação, constitui o crédito). Mesma natureza da obrigação (139), autonomia (140), indisponibilidade (141). Normas gerais por lei complementar (CF, 146, III, b; SV 8).",
+    "Lançamento: privativo da autoridade, vinculado e obrigatório; propõe a penalidade. Lei do fato gerador, salvo fiscalização, investigação e garantias (não responsabilidade de terceiros). Mudança de critério jurídico só para fatos futuros. Modalidades: ofício (149), declaração (147), homologação (150). Arbitramento (148) é técnica.",
+    "Suspensão (151): moratória, depósito integral em dinheiro (Súm. 112; Tema 271), impugnações, liminar em MS, liminar ou tutela, parcelamento, arbitragem, transação aceita, mediação, seguro ou fiança aceitos. Sem depósito para recorrer (SV 21) ou ir a juízo (SV 28).",
+    "Extinção (156): 13 incisos; dação só em imóveis; imputação 163; restituição 5 anos (168), anulatória 2 anos (169); 166 no ICMS; compensação exige lei e trânsito (170-A; Súm. 212, 213, 460, 461); transação, mediação e arbitragem não são renúncia de receita.",
+    "Decadência: 173, I (regra; Súm. 555; dolo, 150, § 5º); 150, § 4º e § 6º (pagou, mesmo parcial: do fato gerador); 173, II (vício formal); declaração constitui o crédito (Súm. 436). Prescrição: 5 anos da constituição definitiva (174; Súm. 622; Tema 383), § 1º com nove causas (despacho, protesto da CDA, confissão, parcelamento: Súm. 653).",
+    "Exclusão (175): isenção (sempre lei, não alcança taxas, contribuição de melhoria e tributos posteriores; onerosa não se revoga) e anistia (só infrações anteriores; não para dolo, crime ou conluio). LEF: inscrição, CDA, art. 38 (SV 28), art. 40 e Temas 566 a 570 (prescrição intercorrente)."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: da obrigação ao crédito",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Na aula 7 (Obrigação tributária) o fato gerador faz nascer a <b>obrigação</b>. Só que a obrigação, sozinha, ainda não permite à Fazenda cobrar: ninguém sabe ainda, de forma oficial, <b>quanto</b>, de <b>quem</b> e <b>por quê</b>. O CTN separa os dois momentos. A obrigação é o vínculo abstrato; o <b>crédito</b> é esse mesmo vínculo depois de verificado, calculado e formalizado. A ponte entre os dois é o <b>lançamento</b>."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, arts. 139 a 141",
+       "texto": "Art. 139. O crédito tributário decorre da obrigação principal e ==tem a mesma natureza desta==."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 140",
+       "texto": "Art. 140. As circunstâncias que modificam o crédito tributário, sua extensão ou seus efeitos, ou as garantias ou os privilégios a êle atribuídos, ou que excluem sua exigibilidade ==não afetam a obrigação tributária que lhe deu origem==."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 141",
+       "texto": "Art. 141. O crédito tributário regularmente constituído sòmente se modifica ou extingue, ou tem sua exigibilidade suspensa ou excluída, ==nos casos previstos nesta lei==, fora dos quais não podem ser dispensadas, ==sob pena de responsabilidade funcional== na forma da lei, a sua efetivação ou as respectivas garantias."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Mesma natureza",
+         "sub": "art. 139",
+         "verso": "O crédito vem da obrigação principal e herda a natureza dela.",
+         "detalhe": "Crédito de ICMS é tributário porque a obrigação de pagar ICMS é tributária."
+        },
+        {
+         "frente": "Autonomia",
+         "sub": "art. 140",
+         "verso": "Anular o lançamento não apaga a obrigação.",
+         "detalhe": "Se o auto de infração cai por vício formal, a obrigação continua lá: a Fazenda pode lançar de novo, com prazo próprio (art. 173, II)."
+        },
+        {
+         "frente": "Indisponibilidade",
+         "sub": "art. 141",
+         "verso": "Só a lei modifica, extingue, suspende ou exclui o crédito.",
+         "detalhe": "O servidor que dispensa cobrança fora das hipóteses legais responde funcionalmente. Por isso parcelamento, transação e remissão exigem lei."
+        },
+        {
+         "frente": "Reserva de lei complementar",
+         "sub": "CF, art. 146, III, b",
+         "verso": "Lançamento, crédito, prescrição e decadência são normas gerais.",
+         "detalhe": "Lei ordinária não pode mudar prazo de decadência ou prescrição: é a Súmula Vinculante 8."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 146, III, b",
+       "texto": "Art. 146. Cabe à lei complementar:\nIII - estabelecer normas gerais em matéria de legislação tributária, especialmente sobre:\nb) ==obrigação, lançamento, crédito, prescrição e decadência tributários==;"
+      },
+      {
+       "t": "texto",
+       "html": "<b>O lançamento declara ou constitui?</b> A posição mais aceita na doutrina, e a que serve para a prova, é a <b>mista</b>: o lançamento <b>declara</b> a obrigação (que já existia desde o fato gerador, por isso a lei aplicada é a da data do fato gerador, art. 144) e <b>constitui</b> o crédito (antes dele não há crédito exigível, por isso o art. 142 diz \"constituir o crédito tributário pelo lançamento\")."
+      },
+      {
+       "t": "cena",
+       "titulo": "Os três destinos do crédito: pausar, acabar ou nem nascer",
+       "altura": 280,
+       "elementos": [
+        {
+         "id": "cred",
+         "tipo": "caixa",
+         "x": 265,
+         "y": 20,
+         "w": 150,
+         "h": 52,
+         "texto": "Crédito tributário",
+         "sub": "arts. 139 a 141",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "susp",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 175,
+         "w": 190,
+         "h": 60,
+         "texto": "SUSPENSÃO (art. 151)",
+         "sub": "o crédito existe, mas não pode ser cobrado",
+         "cor": "warn"
+        },
+        {
+         "id": "ext",
+         "tipo": "caixa",
+         "x": 245,
+         "y": 175,
+         "w": 190,
+         "h": 60,
+         "texto": "EXTINÇÃO (art. 156)",
+         "sub": "o crédito existiu e acabou",
+         "cor": "ok"
+        },
+        {
+         "id": "exc",
+         "tipo": "caixa",
+         "x": 470,
+         "y": 175,
+         "w": 190,
+         "h": 60,
+         "texto": "EXCLUSÃO (art. 175)",
+         "sub": "o crédito nem chega a ser constituído",
+         "cor": "bad"
+        },
+        {
+         "id": "a1",
+         "tipo": "seta",
+         "x": 300,
+         "y": 74,
+         "w": 120,
+         "h": 172,
+         "cor": "warn"
+        },
+        {
+         "id": "a2",
+         "tipo": "seta",
+         "x": 340,
+         "y": 74,
+         "w": 340,
+         "h": 172,
+         "cor": "ok"
+        },
+        {
+         "id": "a3",
+         "tipo": "seta",
+         "x": 380,
+         "y": 74,
+         "w": 560,
+         "h": 172,
+         "cor": "bad"
+        },
+        {
+         "id": "ac",
+         "tipo": "rotulo",
+         "x": 250,
+         "y": 255,
+         "texto": "Nos três: as obrigações acessórias continuam (arts. 151, p. ú., e 175, p. ú.)",
+         "cor": "dim"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "O CTN dá ao crédito três destinos possíveis, e cada um tem a sua <b>lista fechada</b>. Só a lei complementar cria hipótese nova (art. 141 e CF, art. 146, III, b)."
+        },
+        {
+         "texto": "<b>Suspensão:</b> o crédito continua existindo, mas a Fazenda <b>não pode cobrá-lo</b> enquanto durar a causa. Moratória, depósito integral, impugnação, liminar, tutela, parcelamento e as hipóteses novas de arbitragem, transação, mediação e seguro garantia aceito.",
+         "mostra": [
+          "a1",
+          "susp"
+         ],
+         "anima": {
+          "susp": "pulsa"
+         }
+        },
+        {
+         "texto": "<b>Extinção:</b> o crédito existiu e <b>desapareceu</b>. Pagamento, compensação, transação, remissão, decadência, prescrição e mais sete hipóteses do art. 156.",
+         "mostra": [
+          "a1",
+          "susp",
+          "a2",
+          "ext"
+         ],
+         "anima": {
+          "ext": "pulsa"
+         }
+        },
+        {
+         "texto": "<b>Exclusão:</b> a obrigação nasce, mas a lei impede que o crédito seja <b>constituído</b>. Só duas: <b>isenção</b> (atinge o tributo) e <b>anistia</b> (atinge a penalidade).",
+         "mostra": [
+          "a1",
+          "susp",
+          "a2",
+          "ext",
+          "a3",
+          "exc"
+         ],
+         "anima": {
+          "exc": "pulsa"
+         }
+        },
+        {
+         "texto": "A pegadinha que une os três: nenhum deles <b>dispensa as obrigações acessórias</b>. Isento continua emitindo nota e entregando declaração.",
+         "mostra": [
+          "a1",
+          "susp",
+          "a2",
+          "ext",
+          "a3",
+          "exc",
+          "ac"
+         ],
+         "anima": {
+          "ac": "treme"
+         }
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "A frase que resolve a primeira leitura",
+       "html": "<b>Obrigação</b> nasce com o fato gerador. <b>Crédito</b> nasce com o lançamento. <b>Suspensão</b> pausa, <b>extinção</b> acaba e <b>exclusão</b> impede que nasça. Toda questão do tema começa perguntando em qual dessas caixas está o caso."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: o lançamento e as suas modalidades",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>O conceito do art. 142, palavra por palavra.</b> A FCC adora trocar os verbos. Lançamento é <b>procedimento administrativo</b> (não ato do contribuinte), <b>privativo</b> da autoridade administrativa, que serve para cinco coisas: verificar o fato gerador, determinar a matéria tributável, calcular o montante, identificar o sujeito passivo e, se for o caso, <b>propor</b> a penalidade."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 142, caput e §§ 1º a 3º",
+       "texto": "Art. 142. ==Compete privativamente à autoridade administrativa== constituir o crédito tributário pelo lançamento, assim entendido o procedimento administrativo tendente a verificar a ocorrência do fato gerador da obrigação correspondente, determinar a matéria tributável, calcular o montante do tributo devido, identificar o sujeito passivo e, sendo caso, ==propor a aplicação da penalidade cabível==.\n§ 1º A atividade administrativa de lançamento é ==vinculada e obrigatória==, sob pena de responsabilidade funcional.\n§ 2º No lançamento destinado a prevenir a decadência de crédito tributário cuja exigibilidade houver sido suspensa na forma dos incisos II, IV e V do caput do art. 151 desta Lei, ==não será cominada multa de ofício ou multa de mora== a ele relativo.\n§ 3º O disposto no § 2º deste artigo aplica-se, exclusivamente, aos casos em que a suspensão da exigibilidade do crédito tenha ocorrido antes do início de qualquer procedimento de ofício a ele relativo."
+      },
+      {
+       "t": "texto",
+       "html": "Os §§ 2º e 3º resolvem um problema prático da Procuradoria. Quando o contribuinte deposita o valor ou consegue liminar ou tutela antes de qualquer fiscalização, a Fazenda ainda precisa <b>lançar</b>, porque a suspensão da exigibilidade não suspende a decadência. É o <b>lançamento para prevenir a decadência</b>: ele é feito, mas <b>sem multa de ofício nem de mora</b>. Se a suspensão veio depois de iniciada a fiscalização, a multa continua possível."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Redução das multas (art. 142, §§ 5º a 10, redação vigente).</b> O CTN passou a trazer uma escala nacional de redução da penalidade do lançamento de ofício, aplicada \"na forma das legislações locais\". Quanto mais cedo o contribuinte paga, maior o desconto na multa (nunca no tributo):"
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Quando o contribuinte regulariza",
+        "Pagamento integral",
+        "Parcelamento"
+       ],
+       "linhas": [
+        [
+         "No prazo da impugnação administrativa",
+         "50% da penalidade (§ 5º, I)",
+         "40% (§ 5º, II)"
+        ],
+        [
+         "Depois desse prazo e antes da inscrição em dívida ativa",
+         "30% (§ 5º, III)",
+         "20% (§ 5º, IV)"
+        ],
+        [
+         "Participante de programa de conformidade, no prazo da impugnação",
+         "60% (§ 10, II, a)",
+         "50% (§ 10, II, b)"
+        ],
+        [
+         "Participante de programa de conformidade, depois do prazo e antes da inscrição",
+         "40% (§ 10, II, c)",
+         "30% (§ 10, II, d)"
+        ],
+        [
+         "Devedor contumaz",
+         "Nenhuma redução (§ 6º)",
+         "Nenhuma redução (§ 6º)"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 142, §§ 5º a 9º",
+       "texto": "§ 5º As penalidades cominadas em razão do descumprimento de obrigações tributárias, mediante lançamento de ofício, poderão ser pagas com as seguintes reduções, ==na forma das legislações locais==:\nI – 50% (cinquenta por cento) da penalidade aplicada, se efetuado o pagamento integral do crédito tributário no prazo previsto para apresentação de impugnação administrativa;\nII – 40% (quarenta por cento) da penalidade aplicada, se efetuado o parcelamento do crédito tributário no prazo previsto para apresentação de impugnação administrativa;\nIII – 30% (trinta por cento) da penalidade aplicada, se efetuado o pagamento integral do crédito tributário após o prazo referido no inciso I deste parágrafo e antes da sua inscrição em dívida ativa;\nIV – 20% (vinte por cento) da penalidade aplicada, se efetuado o parcelamento do crédito tributário após o prazo referido no inciso II deste parágrafo e antes da sua inscrição em dívida ativa.\n§ 6º Não haverá graduação, redução ou afastamento da penalidade em relação ao ==devedor contumaz==, assim definido em lei específica.\n§ 7º A graduação das penalidades, na forma do § 5º deste artigo, ==não excluirá o dever de pagamento da obrigação tributária principal==, com os devidos acréscimos legais, quando for o caso.\n§ 8º A aplicação de penalidade será acompanhada de demonstração da conduta infratora ==de forma individualizada por sujeito passivo==.\n§ 9º São consideradas circunstâncias agravantes a prática dolosa de fraude, sonegação ou conluio ou a ocorrência de reincidência, podendo ser majorada a penalidade, observados os limites previstos no § 1º do art. 113-A desta Lei."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Qual lei o lançamento aplica? (arts. 143 e 144).</b> A regra é olhar para trás: o lançamento \"reporta-se à data da ocorrência do fato gerador\" e aplica a lei daquela data, mesmo revogada. Mas há leis que se aplicam a fatos passados porque não mexem no <b>quanto</b> se deve, só no <b>como</b> se fiscaliza:"
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, arts. 143 e 144",
+       "texto": "Art. 143. Salvo disposição de lei em contrário, quando o valor tributário esteja expresso em moeda estrangeira, no lançamento far-se-á sua conversão em moeda nacional ==ao câmbio do dia da ocorrência do fato gerador== da obrigação."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 144",
+       "texto": "Art. 144. O lançamento reporta-se à data da ocorrência do fato gerador da obrigação e ==rege-se pela lei então vigente, ainda que posteriormente modificada ou revogada==.\n§ 1º Aplica-se ao lançamento a legislação que, posteriormente à ocorrência do fato gerador da obrigação, tenha instituído novos critérios de apuração ou processos de fiscalização, ampliado os podêres de investigação das autoridades administrativas, ou outorgado ao crédito maiores garantias ou privilégios, ==exceto, neste último caso, para o efeito de atribuir responsabilidade tributária a terceiros==.\n§ 2º O disposto neste artigo não se aplica aos impostos lançados por períodos certos de tempo, desde que a respectiva lei fixe expressamente a data em que o fato gerador se considera ocorrido."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Lei nova aumenta a alíquota",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Fato gerador em 2025",
+           "sub": "alíquota de 17%"
+          },
+          {
+           "titulo": "Lei de 2026",
+           "sub": "alíquota de 20%"
+          }
+         ],
+         "texto": "<b>Não se aplica.</b> Alíquota é o conteúdo da obrigação: vale a lei do fato gerador (art. 144, caput). Lançar com 20% seria retroatividade proibida (CF, art. 150, III, a)."
+        },
+        {
+         "rotulo": "Lei nova amplia poderes de fiscalização",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Fato gerador em 2025",
+           "sub": "fiscalização em 2026"
+          },
+          {
+           "titulo": "Lei de 2026",
+           "sub": "novo meio de investigação"
+          }
+         ],
+         "texto": "<b>Aplica-se.</b> Novos critérios de apuração, processos de fiscalização e poderes de investigação valem para fatos geradores passados (art. 144, § 1º)."
+        },
+        {
+         "rotulo": "Lei nova dá mais garantias ao crédito",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Crédito antigo",
+           "sub": "sem garantia"
+          },
+          {
+           "titulo": "Lei nova",
+           "sub": "garantia ou privilégio"
+          }
+         ],
+         "texto": "<b>Aplica-se,</b> também pelo § 1º. Mais garantias ou privilégios ao crédito valem para o passado."
+        },
+        {
+         "rotulo": "Lei nova cria responsável tributário",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Terceiro",
+           "sub": "não respondia antes"
+          },
+          {
+           "titulo": "Lei nova",
+           "sub": "atribui responsabilidade"
+          }
+         ],
+         "texto": "<b>Não se aplica.</b> É a exceção expressa do § 1º: a lei nova não pode atribuir responsabilidade tributária a terceiros por fatos passados."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Depois de notificado, o lançamento pode mudar? (arts. 145 e 146).</b> Só em três casos: impugnação do sujeito passivo, recurso de ofício e revisão de ofício nas hipóteses do art. 149. E há um limite importante: se a Fazenda <b>muda de critério jurídico</b> (passa a interpretar a lei de outro modo), o novo critério só vale para fatos geradores <b>posteriores</b>, em relação ao mesmo contribuinte. Erro de <b>fato</b> autoriza revisão; mudança de <b>interpretação</b>, não."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 145",
+       "texto": "Art. 145. O lançamento ==regularmente notificado== ao sujeito passivo só pode ser alterado em virtude de:\nI - impugnação do sujeito passivo;\nII - recurso de ofício;\nIII - iniciativa de ofício da autoridade administrativa, nos casos previstos no artigo 149."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 146",
+       "texto": "Art. 146. A modificação introduzida, de ofício ou em consequência de decisão administrativa ou judicial ou sentença arbitral proferida no âmbito da arbitragem especial tributária e aduaneira, nos critérios jurídicos adotados pela autoridade administrativa no exercício do lançamento, somente pode ser efetivada, em relação a um mesmo sujeito passivo, ==quanto a fato gerador ocorrido posteriormente à sua introdução==."
+      },
+      {
+       "t": "texto",
+       "html": "<b>As três modalidades.</b> O critério é o grau de participação do contribuinte:"
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "De ofício (art. 149)",
+         "sub": "o Fisco faz tudo",
+         "texto": "A autoridade lança com os dados que já tem. Exemplos: <b>IPTU</b> e <b>IPVA</b>. A notificação do IPTU pode ser o envio do carnê (Súmula 397 do STJ). É também a modalidade <b>supletiva</b>: corrige as outras quando o contribuinte falha (incisos II a IX)."
+        },
+        {
+         "titulo": "Por declaração (art. 147)",
+         "sub": "o contribuinte informa, o Fisco calcula",
+         "texto": "O sujeito passivo ou terceiro presta informações de <b>fato</b>, e a autoridade lança. Retificar a declaração para <b>reduzir ou excluir</b> tributo só com prova do erro e <b>antes</b> de notificado o lançamento (§ 1º)."
+        },
+        {
+         "titulo": "Por homologação (art. 150)",
+         "sub": "o contribuinte faz tudo e paga antes",
+         "texto": "O sujeito passivo apura e <b>antecipa o pagamento</b> sem exame prévio; a autoridade depois homologa, expressa ou tacitamente. Exemplos: <b>ICMS</b>, IR, IPI, PIS e Cofins. É a regra nos tributos de massa."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 147",
+       "texto": "Art. 147. O lançamento é efetuado com base na declaração do sujeito passivo ou de terceiro, quando um ou outro, na forma da legislação tributária, presta à autoridade administrativa informações sôbre matéria de fato, indispensáveis à sua efetivação.\n§ 1º A retificação da declaração por iniciativa do próprio declarante, quando vise a reduzir ou a excluir tributo, só é admissível mediante comprovação do êrro em que se funde, e ==antes de notificado o lançamento==.\n§ 2º Os erros contidos na declaração e apuráveis pelo seu exame serão ==retificados de ofício== pela autoridade administrativa a que competir a revisão daquela."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 148",
+       "texto": "Art. 148. Quando o cálculo do tributo tenha por base, ou tome em consideração, o valor ou o preço de bens, direitos, serviços ou atos jurídicos, a autoridade lançadora, mediante processo regular, ==arbitrará aquele valor ou preço==, sempre que sejam omissos ou não mereçam fé as declarações ou os esclarecimentos prestados, ou os documentos expedidos pelo sujeito passivo ou pelo terceiro legalmente obrigado, ressalvada, em caso de contestação, ==avaliação contraditória==, administrativa ou judicial."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Arbitramento não é modalidade",
+       "html": "O art. 148 é uma <b>técnica</b> de apuração da base de cálculo, usada dentro de um lançamento (normalmente de ofício) quando as declarações ou documentos \"não mereçam fé\". Sempre com processo regular e direito de contestar. A FCC já colocou \"lançamento por arbitramento\" como quarta modalidade: está errado."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 149",
+       "texto": "Art. 149. O lançamento é efetuado e revisto de ofício pela autoridade administrativa nos seguintes casos:\nI - ==quando a lei assim o determine==;\nII - quando a declaração não seja prestada, por quem de direito, no prazo e na forma da legislação tributária;\nIII - quando a pessoa legalmente obrigada, embora tenha prestado declaração nos têrmos do inciso anterior, deixe de atender, no prazo e na forma da legislação tributária, a pedido de esclarecimento formulado pela autoridade administrativa, recuse-se a prestá-lo ou não o preste satisfatòriamente, a juízo daquela autoridade;\nIV - quando se comprove falsidade, êrro ou omissão quanto a qualquer elemento definido na legislação tributária como sendo de declaração obrigatória;\nV - quando se comprove omissão ou inexatidão, por parte da pessoa legalmente obrigada, no exercício da atividade a que se refere o artigo seguinte;\nVI - quando se comprove ação ou omissão do sujeito passivo, ou de terceiro legalmente obrigado, que dê lugar à aplicação de penalidade pecuniária;\nVII - quando se comprove que o sujeito passivo, ou terceiro em benefício daquele, ==agiu com dolo, fraude ou simulação==;\nVIII - quando deva ser apreciado fato não conhecido ou não provado por ocasião do lançamento anterior;\nIX - quando se comprove que, no lançamento anterior, ocorreu fraude ou falta funcional da autoridade que o efetuou, ou omissão, pela mesma autoridade, de ato ou formalidade essencial.\nParágrafo único. A revisão do lançamento só pode ser iniciada ==enquanto não extinto o direito da Fazenda Pública==."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Lançamento por homologação: o artigo mais cobrado do tema.</b> O pagamento antecipado já extingue o crédito, mas <b>sob condição resolutória</b>: se a Fazenda encontrar diferença, cobra o saldo. Se a lei não fixar prazo, a Fazenda tem <b>5 anos do fato gerador</b> para homologar; passado o prazo em silêncio, a homologação é <b>tácita</b> e o crédito se extingue de vez, salvo dolo, fraude ou simulação."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 150",
+       "texto": "Art. 150. O lançamento por homologação, que ocorre quanto aos tributos cuja legislação atribua ao sujeito passivo o dever de antecipar o pagamento sem prévio exame da autoridade administrativa, opera-se pelo ato em que a referida autoridade, tomando conhecimento da atividade assim exercida pelo obrigado, expressamente a homologa.\n§ 1º O pagamento antecipado pelo obrigado nos têrmos dêste artigo extingue o crédito, ==sob condição resolutória da ulterior homologação do lançamento==.\n§ 2º Não influem sôbre a obrigação tributária quaisquer atos anteriores à homologação, praticados pelo sujeito passivo ou por terceiro, visando à extinção total ou parcial do crédito.\n§ 3º Os atos a que se refere o parágrafo anterior serão, porém, considerados na apuração do saldo porventura devido e, sendo o caso, na imposição de penalidade, ou sua graduação.\n§ 4º Se a lei não fixar prazo a homologação, será êle de ==cinco anos, a contar da ocorrência do fato gerador==; expirado êsse prazo sem que a Fazenda Pública se tenha pronunciado, ==considera-se homologado o lançamento== e definitivamente extinto o crédito, salvo se comprovada a ocorrência de dolo, fraude ou simulação.\n§ 5º No caso de dolo, fraude ou simulação, o prazo previsto no § 4º deste artigo ==é contado na forma do inciso I do caput do art. 173== desta Lei.\n§ 6º ==No caso de pagamento parcial== do tributo sujeito a lançamento por homologação, o prazo decadencial é contado da ocorrência do fato gerador."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Os §§ 5º e 6º do art. 150 viraram lei",
+       "html": "O que era só jurisprudência agora está no texto: (1) com <b>dolo, fraude ou simulação</b>, o prazo não conta do fato gerador, conta do <b>primeiro dia do exercício seguinte</b> (art. 173, I), § 5º; (2) com <b>pagamento parcial</b>, o prazo decadencial conta do <b>fato gerador</b>, § 6º. E sem pagamento nenhum e sem declaração? Aí vale o art. 173, I (Súmula 555 do STJ)."
+      },
+      {
+       "t": "matriz",
+       "linhas": [
+        "IPTU com carnê enviado ao endereço",
+        "ICMS apurado e pago pela empresa",
+        "ITCMD em que o herdeiro informa os bens e o Fisco calcula",
+        "Multa por descumprir obrigação acessória",
+        "ICMS declarado em GIA e não pago",
+        "IPVA cobrado pelo Estado"
+       ],
+       "colunas": [
+        "Lançamento de ofício",
+        "Homologação",
+        "Por declaração"
+       ],
+       "celulas": [
+        [
+         [
+          true,
+          "Sim (art. 149, I). Notificação pelo carnê: Súmula 397 do STJ."
+         ],
+         [
+          false,
+          "Não há pagamento antecipado."
+         ],
+         [
+          false,
+          "O Fisco já tem os dados do cadastro."
+         ]
+        ],
+        [
+         [
+          false,
+          "Só se a empresa errar ou omitir (art. 149, V)."
+         ],
+         [
+          true,
+          "Sim (art. 150): apura e antecipa o pagamento."
+         ],
+         [
+          false,
+          "Não."
+         ]
+        ],
+        [
+         [
+          false,
+          "Não, em regra."
+         ],
+         [
+          false,
+          "Não há pagamento antecipado nesse modelo."
+         ],
+         [
+          true,
+          "Sim (art. 147), quando a lei estadual adotar esse modelo."
+         ]
+        ],
+        [
+         [
+          true,
+          "Sim (art. 149, VI): penalidade sempre exige lançamento de ofício."
+         ],
+         [
+          false,
+          "Ninguém \"autolança\" multa."
+         ],
+         [
+          false,
+          "Não."
+         ]
+        ],
+        [
+         [
+          false,
+          "Não é preciso: a declaração já constitui o crédito (Súmula 436 do STJ)."
+         ],
+         [
+          true,
+          "Sim, é tributo por homologação, só que declarado e não pago."
+         ],
+         [
+          false,
+          "Não é a modalidade do art. 147."
+         ]
+        ],
+        [
+         [
+          true,
+          "Sim, com os dados do cadastro do veículo."
+         ],
+         [
+          false,
+          "Não."
+         ],
+         [
+          false,
+          "Não."
+         ]
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: suspensão da exigibilidade (arts. 151 a 155-A)",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Lógica:</b> suspender é apertar o botão de pausa. O crédito continua existindo, mas a Fazenda não pode <b>exigir</b>: não inscreve, não executa, e o contribuinte tem direito a certidão positiva com efeito de negativa (art. 206, que você verá em Administração tributária). A lista é <b>taxativa</b> (art. 141) e cresceu: hoje são dez incisos."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 151",
+       "texto": "Art. 151. Suspendem a exigibilidade do crédito tributário:\nI - moratória;\nII - ==o depósito do seu montante integral==;\nIII – as impugnações, os recursos e a manifestação de inconformidade, nos termos das leis reguladoras do processo tributário administrativo;\nIV - ==a concessão de medida liminar em mandado de segurança==.\nV – a concessão de medida liminar ou de tutela provisória, em outras espécies de ação judicial;\nVI – ==o parcelamento==.\nVII – a instituição da arbitragem especial tributária e aduaneira, nos termos da legislação específica;\nVIII – ==a proposta de transação aceita pela administração==, nos termos da legislação específica;\nIX – o acordo decorrente de mediação, até a sua eventual dissolução, nos termos da legislação específica;\nX – a aceitação, pelo credor, nos termos da regulamentação estabelecida pelos órgãos de cobrança judicial dos créditos tributários, ==de apólice de seguro garantia ou de carta de fiança bancária oferecidas em execução fiscal==, inclusive quando convencionadas por meio de negócio jurídico processual, enquanto estiverem em conformidade com as normas que regem sua aceitação e enquanto não caracterizada hipótese de sinistro.\n§ 1º O disposto neste artigo ==não dispensa o cumprimento das obrigações assessórios== dependentes da obrigação principal cujo crédito seja suspenso, ou dela conseqüentes.\n§ 2º ==É vedada a exigência de caução ou garantia de depósito== para apresentação de impugnações, recursos ou pedidos, nos termos do inciso III do caput deste artigo.\n§ 3º Estando em curso a execução fiscal do crédito tributário, a suspensão de sua exigibilidade, nos termos do inciso VII do caput deste artigo, estará condicionada:\nI – à prévia suspensão da exigibilidade do crédito tributário na execução fiscal por outra das hipóteses previstas no caput deste artigo; ou II – ao oferecimento, pelo sujeito passivo, na arbitragem especial tributária e aduaneira, de garantia integral."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "MO-DE-RE-LI-PA (e os novos)",
+       "html": "<b>MO</b>ratória, <b>DE</b>pósito integral, <b>RE</b>clamações e recursos administrativos, <b>LI</b>minar em MS e liminar ou tutela em outras ações, <b>PA</b>rcelamento. Depois vêm os novos: <b>arbitragem</b> instituída, <b>transação</b> com proposta aceita, <b>acordo de mediação</b> (até ser dissolvido) e <b>seguro garantia ou fiança</b> aceitos na execução fiscal."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Depósito: só se for integral e em dinheiro</b> (Súmula 112 do STJ). É direito do contribuinte, não depende de autorização do juiz. Se feito numa ação anterior à execução, impede o auto de infração, a inscrição em dívida ativa e a própria execução, que, se ajuizada, deve ser extinta (Tema 271 do STJ). Ao final, se o contribuinte perde, o depósito é <b>convertido em renda</b> (art. 156, VI) e o crédito se extingue."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Impugnação e recurso administrativo.</b> Suspendem por si sós. E a Administração não pode exigir depósito ou arrolamento para o contribuinte recorrer (§ 2º e Súmula Vinculante 21). Para ir a juízo também não (Súmula Vinculante 28)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Seguro garantia e fiança (inciso X).</b> Novidade importante para a Procuradoria: o seguro ou a fiança só suspendem a exigibilidade depois de <b>aceitos pelo credor</b>, nos termos da regulamentação dos órgãos de cobrança, e só enquanto continuarem regulares e sem sinistro. Antes, a jurisprudência dizia que garantir a execução não suspendia o crédito; agora, com a aceitação, suspende."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Depósito de 80% do valor cobrado",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Contribuinte",
+           "sub": "deposita parte"
+          },
+          {
+           "titulo": "Fazenda",
+           "sub": "cobra o resto"
+          }
+         ],
+         "texto": "<b>Não suspende.</b> Só o depósito <b>integral e em dinheiro</b> (art. 151, II; Súmula 112 do STJ)."
+        },
+        {
+         "rotulo": "Recurso administrativo contra o auto de infração",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Impugnação",
+           "sub": "no prazo"
+          },
+          {
+           "titulo": "Processo administrativo",
+           "sub": "em curso"
+          }
+         ],
+         "texto": "<b>Suspende</b> (art. 151, III), sem exigência de depósito (§ 2º; SV 21)."
+        },
+        {
+         "rotulo": "Ação anulatória sem liminar e sem depósito",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Ação",
+           "sub": "só ajuizada"
+          },
+          {
+           "titulo": "Sem tutela",
+           "sub": "sem depósito"
+          }
+         ],
+         "texto": "<b>Não suspende.</b> Ajuizar ação não está na lista. Só a liminar ou a tutela provisória (inciso V) ou o depósito integral."
+        },
+        {
+         "rotulo": "Seguro garantia aceito pela Procuradoria na execução",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Apólice",
+           "sub": "regular, sem sinistro"
+          },
+          {
+           "titulo": "Credor",
+           "sub": "aceitou"
+          }
+         ],
+         "texto": "<b>Suspende</b> (art. 151, X), enquanto a apólice estiver em conformidade e sem sinistro."
+        },
+        {
+         "rotulo": "Pedido de parcelamento ainda não deferido",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Pedido",
+           "sub": "em análise"
+          },
+          {
+           "titulo": "Lei",
+           "sub": "exige concessão"
+          }
+         ],
+         "texto": "<b>Não suspende</b> enquanto não concedido (art. 155-A: \"na forma e condição estabelecidas em lei\"). Mas o pedido, mesmo indeferido, <b>interrompe a prescrição</b> (Súmula 653 do STJ), porque é confissão do débito."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Moratória (arts. 152 a 155).</b> É a prorrogação do prazo de pagamento, sempre por <b>lei</b>. Em caráter geral, concede o próprio ente competente; excepcionalmente, a <b>União</b> pode conceder moratória de tributos estaduais e municipais, desde que ao mesmo tempo conceda para os federais e para as obrigações de direito privado (moratória heterônoma). Em caráter individual, por despacho da autoridade, autorizado por lei."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 152",
+       "texto": "Art. 152. A moratória somente pode ser concedida:\nI - em caráter geral:\na) pela pessoa jurídica de direito público competente para instituir o tributo a que se refira;\nb) pela União, quanto a tributos de competência dos Estados, do Distrito Federal ou dos Municípios, ==quando simultâneamente concedida quanto aos tributos de competência federal e às obrigações de direito privado==;\nII - em caráter individual, por despacho da autoridade administrativa, ==desde que autorizada por lei== nas condições do inciso anterior.\nParágrafo único. A lei concessiva de moratória pode circunscrever expressamente a sua aplicabilidade à determinada região do território da pessoa jurídica de direito público que a expedir, ou a determinada classe ou categoria de sujeitos passivos."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 154",
+       "texto": "Art. 154. Salvo disposição de lei em contrária, a moratória sòmente abrange os créditos ==definitivamente constituídos à data da lei ou do despacho== que a conceder, ou cujo lançamento já tenha sido iniciado àquela data por ato regularmente notificado ao sujeito passivo.\nParágrafo único. A moratória ==não aproveita aos casos de dolo, fraude ou simulação== do sujeito passivo ou do terceiro em benefício daquele."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 155",
+       "texto": "Art. 155. A concessão da moratória em caráter individual ==não gera direito adquirido== e será revogado de ofício, sempre que se apure que o beneficiado não satisfazia ou deixou de satisfazer as condições ou não cumprira ou deixou de cumprir os requisitos para a concessão do favor, cobrando-se o crédito acrescido de juros de mora:\nI - com imposição da penalidade cabível, nos casos de dolo ou simulação do beneficiado, ou de terceiro em benefício daquele;\nII - sem imposição de penalidade, nos demais casos.\nParágrafo único. No caso do inciso I dêste artigo, o tempo decorrido entre a concessão da moratória e sua revogação ==não se computa para efeito da prescrição== do direito à cobrança do crédito; no caso do inciso II dêste artigo, ==a revogação só pode ocorrer antes de prescrito o referido direito==."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Concedida",
+         "sub": "caráter individual"
+        },
+        {
+         "titulo": "Descobre-se",
+         "sub": "falta requisito"
+        },
+        {
+         "titulo": "Com dolo",
+         "sub": "inciso I"
+        },
+        {
+         "titulo": "Sem dolo",
+         "sub": "inciso II"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "A autoridade concede a moratória (ou o parcelamento, a isenção ou a anistia individuais, que remetem ao art. 155) a quem parecia cumprir os requisitos."
+        },
+        {
+         "no": 1,
+         "texto": "Depois se apura que ele não cumpria ou deixou de cumprir. A concessão <b>não gera direito adquirido</b>: é revogada de ofício, e o crédito volta com <b>juros de mora</b>."
+        },
+        {
+         "no": 2,
+         "texto": "Se houve <b>dolo ou simulação</b>: além dos juros, vem a <b>penalidade</b>, e o tempo entre a concessão e a revogação <b>não conta</b> para a prescrição."
+        },
+        {
+         "no": 3,
+         "texto": "Se <b>não houve</b> dolo: só juros, sem penalidade, e a revogação só pode acontecer <b>antes</b> de prescrito o direito de cobrar."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 155-A",
+       "texto": "Art. 155-A. O parcelamento será concedido ==na forma e condição estabelecidas em lei específica==.\n§ 1º Salvo disposição de lei em contrário, o parcelamento do crédito tributário ==não exclui a incidência de juros e multas==.\n§ 2º Aplicam-se, subsidiariamente, ao parcelamento as disposições desta Lei, relativas à moratória.\n§ 3º Lei específica disporá sobre as condições de parcelamento dos créditos tributários do devedor em recuperação judicial.\n§ 4º A inexistência da lei específica a que se refere o § 3º deste artigo importa na aplicação das leis gerais de parcelamento do ente da Federação ao devedor em recuperação judicial, ==não podendo, neste caso, ser o prazo de parcelamento inferior ao concedido pela lei federal específica==."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Olhar do procurador: parcelamento e penhora",
+       "html": "Parcelamento concedido <b>depois</b> do bloqueio online mantém o bloqueio; concedido <b>antes</b>, o bloqueio é levantado (Tema 1.012 do STJ). Na prática, a PGE pede o bloqueio logo no início da execução, e o parcelamento posterior não a obriga a devolver o dinheiro. E parcelamento <b>suspende</b> a execução, não a extingue: se o devedor deixa de pagar, a execução retoma."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: extinção do crédito (arts. 156 a 172)",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Lógica:</b> extinguir é acabar. A lista do art. 156 tem treze incisos, e a FCC costuma pedir o intruso: <b>isenção e anistia não extinguem, excluem</b>; <b>moratória e parcelamento não extinguem, suspendem</b>."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 156",
+       "texto": "Art. 156. Extinguem o crédito tributário:\nI - o pagamento;\nII - a compensação;\nIII - ==a transação==;\nIV - ==remissão==;\nV - ==a prescrição e a decadência==;\nVI - ==a conversão de depósito em renda==;\nVII - o pagamento antecipado e a homologação do lançamento nos termos do disposto no artigo 150 e seus §§ 1º e 4º;\nVIII - a consignação em pagamento, nos termos do disposto no § 2º do artigo 164;\nIX - ==a decisão administrativa irreformável==, assim entendida a definitiva na órbita administrativa, que não mais possa ser objeto de ação anulatória;\nX - a decisão judicial passada em julgado.\nXI – ==a dação em pagamento em bens imóveis==, na forma e condições estabelecidas em lei.\nXII – a sentença arbitral, proferida no âmbito da arbitragem especial tributária e aduaneira, favorável ao sujeito passivo transitada em julgado;\nXIII – o cumprimento do acordo de mediação.\nParágrafo único. A lei disporá quanto aos efeitos da extinção total ou parcial do crédito sôbre a ulterior verificação da irregularidade da sua constituição, observado o disposto nos artigos 144 e 149."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Hipótese",
+        "Exige lei?",
+        "Detalhe que cai"
+       ],
+       "linhas": [
+        [
+         "Pagamento (arts. 157 a 164)",
+         "Não",
+         "Multa não substitui o tributo (art. 157); pagar uma parcela não presume as outras (art. 158)"
+        ],
+        [
+         "Compensação (arts. 170 e 170-A)",
+         "Sim, lei do ente",
+         "Crédito líquido e certo, vencido ou vincendo; tributo discutido em juízo, só depois do trânsito"
+        ],
+        [
+         "Transação (art. 171)",
+         "Sim",
+         "Concessões mútuas para terminar litígio; a lei indica a autoridade"
+        ],
+        [
+         "Remissão (art. 172)",
+         "Sim",
+         "Perdão do crédito (tributo e multa) por despacho fundamentado; não gera direito adquirido"
+        ],
+        [
+         "Dação em pagamento (inciso XI)",
+         "Sim",
+         "Só de <b>bens imóveis</b>"
+        ],
+        [
+         "Decisão administrativa irreformável (inciso IX)",
+         "Não",
+         "Favorável ao contribuinte e que não possa mais ser objeto de ação anulatória"
+        ],
+        [
+         "Sentença arbitral (inciso XII) e acordo de mediação (inciso XIII)",
+         "Sim, lei especial",
+         "Arbitral só se favorável ao sujeito passivo e transitada em julgado"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Pagamento: vencimento, juros e meios.</b> Se a lei não fixar data, vence em <b>30 dias</b> da notificação do lançamento (art. 160). Juros de mora correm \"seja qual fôr o motivo\" da falta; se a lei não dispuser de outro modo, <b>1% ao mês</b> (art. 161, § 1º). Ação com liminar ou tutela <b>interrompe a multa de mora</b> até 30 dias depois da decisão que considerar o tributo devido (art. 161, § 3º)."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 161",
+       "texto": "Art. 161. O crédito não integralmente pago no vencimento é acrescido de juros de mora, ==seja qual fôr o motivo determinante da falta==, sem prejuízo da imposição das penalidades cabíveis e da aplicação de quaisquer medidas de garantia previstas nesta Lei ou em lei tributária.\n§ 1º Se a lei não dispuser de modo diverso, os juros de mora são calculados ==à taxa de um por cento ao mês==.\n§ 2º O disposto neste artigo não se aplica na pendência de consulta formulada pelo devedor dentro do prazo legal para pagamento do crédito.\n§ 3º A propositura de ação judicial na qual foi concedida medida liminar ou tutela provisória ==interrompe a incidência da multa de mora==, desde a concessão da medida judicial, até 30 (trinta) dias após a data de publicação da decisão judicial que considerar devido o tributo."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Imputação do pagamento (art. 163).</b> Quando o contribuinte deve vários débitos vencidos ao mesmo ente e paga só uma parte, quem escolhe onde o dinheiro entra é a <b>autoridade</b>, na ordem fixa da lei. Decore a sequência:"
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "1º",
+         "sub": "própria x responsável"
+        },
+        {
+         "titulo": "2º",
+         "sub": "espécie"
+        },
+        {
+         "titulo": "3º",
+         "sub": "prescrição"
+        },
+        {
+         "titulo": "4º",
+         "sub": "valor"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Primeiro os débitos por <b>obrigação própria</b>, depois os de <b>responsabilidade</b> tributária."
+        },
+        {
+         "no": 1,
+         "texto": "Depois a espécie: <b>contribuição de melhoria, taxas e por fim impostos</b> (a ordem é a do mais vinculado para o menos vinculado: CTI)."
+        },
+        {
+         "no": 2,
+         "texto": "Depois, na ordem <b>crescente</b> dos prazos de prescrição: paga primeiro o que vai prescrever antes."
+        },
+        {
+         "no": 3,
+         "texto": "Por fim, na ordem <b>decrescente</b> dos montantes: o maior primeiro. Na compensação tributária, não se aplica a imputação do art. 354 do Código Civil (Súmula 464 do STJ)."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 163",
+       "texto": "Art. 163. Existindo simultaneamente dois ou mais débitos vencidos do mesmo sujeito passivo para com a mesma pessoa jurídica de direito público, relativos ao mesmo ou a diferentes tributos ou provenientes de penalidade pecuniária ou juros de mora, a autoridade administrativa competente para receber o pagamento determinará a respectiva imputação, obedecidas as seguintes regras, na ordem em que enumeradas:\nI - ==em primeiro lugar, aos débitos por obrigação própria==, e em segundo lugar aos decorrentes de responsabilidade tributária;\nII - primeiramente, ==às contribuições de melhoria, depois às taxas e por fim aos impostos==;\nIII - ==na ordem crescente dos prazos de prescrição==;\nIV - ==na ordem decrescente dos montantes==."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 164",
+       "texto": "Art. 164. A importância de crédito tributário pode ser consignada judicialmente pelo sujeito passivo, nos casos:\nI - de recusa de recebimento, ou subordinação dêste ao pagamento de outro tributo ou de penalidade, ou ao cumprimento de obrigação acessória;\nII - de subordinação do recebimento ao cumprimento de exigências administrativas sem fundamento legal;\nIII - ==de exigência, por mais de uma pessoa jurídica de direito público, de tributo idêntico sôbre um mesmo fato gerador==.\n§ 1º A consignação só pode versar sobre o crédito que o consignante se propõe pagar.\n§ 2º Julgada procedente a consignação, o pagamento se reputa efetuado e ==a importância consignada é convertida em renda==; julgada improcedente a consignação no todo ou em parte, cobra-se o crédito acrescido de juros de mora, sem prejuízo das penalidades cabíveis."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Consignação: a hipótese do Estado contra o Estado",
+       "html": "O inciso III do art. 164 aparece em provas de procuradoria estadual: dois entes cobram <b>tributo idêntico</b> sobre o mesmo fato (por exemplo, dois Estados exigindo ICMS da mesma operação, ou Estado e Município disputando ICMS x ISS, quando a lei os trata como idênticos no caso). O contribuinte consigna, e os entes discutem quem tem razão."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Pagamento indevido e restituição (arts. 165 a 169).</b> O contribuinte tem direito à restituição <b>sem precisar protestar antes</b>, qualquer que seja a modalidade do pagamento. O prazo é de <b>5 anos</b>, contados da extinção do crédito (pagamento indevido ou erro) ou da decisão definitiva que reformou a condenação. Contra a decisão administrativa que nega a restituição cabe anulatória em <b>2 anos</b>."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 165",
+       "texto": "Art. 165. O sujeito passivo tem direito, ==independentemente de prévio protesto==, à restituição total ou parcial do tributo, seja qual fôr a modalidade do seu pagamento, ressalvado o disposto no § 4º do art. 162, nos seguintes casos:\nI - cobrança ou pagamento espontâneo de tributo indevido ou maior que o devido em face da legislação tributária aplicável, ou da natureza ou circunstâncias materiais do fato gerador efetivamente ocorrido;\nII - êrro na edificação do sujeito passivo, na determinação da alíquota aplicável, no cálculo do montante do débito ou na elaboração ou conferência de qualquer documento relativo ao pagamento;\nIII - reforma, anulação, revogação ou rescisão de decisão condenatória."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 166",
+       "texto": "Art. 166. A restituição de tributos que comportem, por sua natureza, transferência do respectivo encargo financeiro ==sòmente será feita a quem prove haver assumido o referido encargo==, ou, no caso de tê-lo transferido a terceiro, ==estar por êste expressamente autorizado a recebê-la==."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 167",
+       "texto": "Art. 167. A restituição total ou parcial do tributo dá lugar à restituição, na mesma proporção, dos juros de mora e das penalidades pecuniárias, salvo as referentes a infrações de caráter formal não prejudicadas pela causa da restituição.\nParágrafo único. A restituição vence juros não capitalizáveis, ==a partir do trânsito em julgado da decisão definitiva== que a determinar."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 168",
+       "texto": "Art. 168. O direito de pleitear a restituição extingue-se com o decurso do prazo de ==5 (cinco) anos==, contados:\nI - nas hipótese dos incisos I e II do art. 165, ==da data da extinção do crédito tributário==;\nII - na hipótese do inciso III do art. 165, da data em que se tornar definitiva a decisão administrativa ou passar em julgado a decisão judicial que tenha reformado, anulado, revogado ou rescindido a decisão condenatória."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 169",
+       "texto": "Art. 169. ==Prescreve em dois anos== a ação anulatória da decisão administrativa que denegar a restituição.\nParágrafo único. O prazo de prescrição é interrompido pelo início da ação judicial, ==recomeçando o seu curso, por metade==, a partir da data da intimação validamente feita ao representante judicial da Fazenda Pública interessada."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Olhar do procurador: ICMS e o art. 166",
+       "html": "ICMS é tributo indireto: o encargo vai para o preço. Quando o comerciante pede de volta ICMS pago a mais, a PGE contesta com o art. 166: ele precisa <b>provar que não repassou</b> o encargo ao consumidor, ou estar autorizado por quem o suportou. Correção monetária desde o pagamento indevido (Súmula 162), juros de mora desde o trânsito (Súmula 188 e art. 167, parágrafo único) e, em tributo estadual, a mesma taxa usada para cobrar o tributo em atraso, inclusive Selic, se a lei local prever, sem cumular com outro índice (Súmula 523)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Compensação (arts. 170 e 170-A).</b> Encontro de contas entre o que o contribuinte deve à Fazenda e o que a Fazenda deve a ele. Depende de <b>lei do ente</b> (não é direito automático como no Código Civil) e o crédito do contribuinte tem de ser <b>líquido e certo</b>. Se o tributo está sendo discutido em juízo, só depois do <b>trânsito em julgado</b> (art. 170-A), mesmo que o STF já tenha declarado o tributo inconstitucional (Tema 346)."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 170",
+       "texto": "Art. 170. A lei pode, nas condições e sob as garantias que estipular, ou cuja estipulação em cada caso atribuir à autoridade administrativa, autorizar a compensação de créditos tributários com ==créditos líquidos e certos, vencidos ou vincendos==, do sujeito passivo contra a Fazenda Pública.\nParágrafo único. Sendo vincendo o crédito do sujeito passivo, a lei determinará, para os efeitos dêste artigo, a apuração do seu montante, não podendo, porém, cominar redução maior que a correspondente ao juro de 1% (um por cento) ao mês pelo tempo a decorrer entre a data da compensação e a do vencimento."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 170-A",
+       "texto": "Art. 170-A. É vedada a compensação mediante o aproveitamento de tributo, objeto de contestação judicial pelo sujeito passivo, ==antes do trânsito em julgado da respectiva decisão judicial==."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "MS para declarar o direito",
+         "sub": "Súmula 213",
+         "verso": "Cabe.",
+         "detalhe": "O mandado de segurança é ação adequada para <b>declarar</b> o direito à compensação."
+        },
+        {
+         "frente": "MS para convalidar compensação já feita",
+         "sub": "Súmula 460",
+         "verso": "Não cabe.",
+         "detalhe": "Confirmar valores já compensados exige prova, o que o MS não comporta."
+        },
+        {
+         "frente": "Liminar para compensar",
+         "sub": "Súmula 212 e art. 170-A",
+         "verso": "Não pode.",
+         "detalhe": "A compensação não pode ser deferida por medida liminar cautelar ou antecipatória."
+        },
+        {
+         "frente": "Sentença transitada: precatório ou compensação?",
+         "sub": "Súmula 461",
+         "verso": "O contribuinte escolhe.",
+         "detalhe": "Pode receber o indébito por precatório ou compensar."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Transação, mediação e arbitragem (arts. 171 a 171-C).</b> A transação exige <b>lei</b>, concessões <b>mútuas</b> e serve para terminar um <b>litígio</b>; a lei indica a autoridade competente. As recentes LCs de 2026 trouxeram a <b>arbitragem especial tributária e aduaneira</b> (sentença vinculante, com os mesmos efeitos da judicial) e a <b>mediação</b> (terceiro sem poder de decidir). E deixaram expresso que nenhuma das três é renúncia de receita para a LRF."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 171",
+       "texto": "Art. 171. A lei pode facultar, nas condições que estabeleça, aos sujeitos ativo e passivo da obrigação tributária celebrar transação que, ==mediante concessões mútuas==, importe em ==determinação de litígio== e conseqüente extinção de crédito tributário.\nParágrafo único. A lei indicará a autoridade competente para autorizar a transação em cada caso."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 171-A",
+       "texto": "Art. 171-A. Lei especial autorizará a arbitragem especial tributária e aduaneira, com vistas a promover a solução de controvérsias e a resolução do contencioso tributário e aduaneiro administrativo e judicial.\nParágrafo único. ==A sentença arbitral será vinculante== e produzirá os mesmos efeitos que a decisão judicial."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 171-C",
+       "texto": "Art. 171-C. A transação, a mediação e a arbitragem especial tributária e aduaneira ==não caracterizam renúncia de receita== para fins do disposto no art. 14 da Lei Complementar nº 101, de 4 de maio de 2000 (Lei de Responsabilidade Fiscal)."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 172",
+       "texto": "Art. 172. A lei pode autorizar a autoridade administrativa a conceder, ==por despacho fundamentado==, remissão total ou parcial do crédito tributário, atendendo:\nI - à situação econômica do sujeito passivo;\nII - ao êrro ou ignorância excusáveis do sujeito passivo, quanto a matéria de fato;\nIII - ==à diminuta importância do crédito tributário==;\nIV - a considerações de eqüidade, em relação com as características pessoais ou materiais do caso;\nV - a condições peculiares a determinada região do território da entidade tributante.\nParágrafo único. O despacho referido neste artigo ==não gera direito adquirido==, aplicando-se, quando cabível, o disposto no artigo 155."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Remissão x anistia",
+       "html": "<b>Remissão</b> perdoa o <b>crédito já constituído</b> (tributo e penalidade) e <b>extingue</b> (art. 156, IV). <b>Anistia</b> perdoa a <b>infração</b> antes de constituído o crédito da multa e <b>exclui</b> (art. 175, II). Remissão olha para a dívida; anistia olha para a punição."
+      }
+     ]
+    },
+    {
+     "titulo": "Decadência e prescrição: os dois relógios (arts. 150, § 4º, 173 e 174)",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Aqui a FCC separa quem estudou de quem decorou. Os dois prazos são de <b>5 anos</b> e os dois extinguem o crédito. A diferença está no <b>objeto</b> e no <b>marco inicial</b>: decadência é o prazo para <b>lançar</b> (constituir); prescrição é o prazo para <b>cobrar</b> em juízo (executar). Lançou, a decadência deixa de importar; a partir da constituição definitiva, só conta a prescrição."
+      },
+      {
+       "t": "cena",
+       "titulo": "A linha do tempo do crédito: dois relógios de 5 anos",
+       "altura": 300,
+       "elementos": [
+        {
+         "id": "fg",
+         "tipo": "caixa",
+         "x": 10,
+         "y": 30,
+         "w": 120,
+         "h": 50,
+         "texto": "Fato gerador",
+         "sub": "nasce a obrigação",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "lanc",
+         "tipo": "caixa",
+         "x": 200,
+         "y": 30,
+         "w": 130,
+         "h": 50,
+         "texto": "Lançamento",
+         "sub": "nasce o crédito",
+         "cor": "blue"
+        },
+        {
+         "id": "def",
+         "tipo": "caixa",
+         "x": 380,
+         "y": 30,
+         "w": 140,
+         "h": 50,
+         "texto": "Constituição definitiva",
+         "sub": "sem mais impugnação",
+         "cor": "blue"
+        },
+        {
+         "id": "exec",
+         "tipo": "caixa",
+         "x": 560,
+         "y": 30,
+         "w": 115,
+         "h": 50,
+         "texto": "Execução fiscal",
+         "sub": "cobrança judicial",
+         "cor": "ok"
+        },
+        {
+         "id": "s1",
+         "tipo": "seta",
+         "x": 132,
+         "y": 55,
+         "w": 198,
+         "h": 55,
+         "cor": "warn"
+        },
+        {
+         "id": "s2",
+         "tipo": "seta",
+         "x": 332,
+         "y": 55,
+         "w": 378,
+         "h": 55,
+         "cor": "dim"
+        },
+        {
+         "id": "s3",
+         "tipo": "seta",
+         "x": 522,
+         "y": 55,
+         "w": 558,
+         "h": 55,
+         "cor": "ok"
+        },
+        {
+         "id": "dec",
+         "tipo": "rotulo",
+         "x": 130,
+         "y": 110,
+         "texto": "DECADÊNCIA: 5 anos para lançar (art. 173 ou 150, § 4º)",
+         "cor": "warn"
+        },
+        {
+         "id": "susp",
+         "tipo": "rotulo",
+         "x": 330,
+         "y": 150,
+         "texto": "impugnação: suspende, e nenhum relógio corre (Súmula 622)",
+         "cor": "dim"
+        },
+        {
+         "id": "presc",
+         "tipo": "rotulo",
+         "x": 420,
+         "y": 190,
+         "texto": "PRESCRIÇÃO: 5 anos para cobrar (art. 174)",
+         "cor": "ok"
+        },
+        {
+         "id": "desp",
+         "tipo": "gota",
+         "x": 600,
+         "y": 230,
+         "texto": "despacho do juiz interrompe",
+         "cor": "ok"
+        },
+        {
+         "id": "perde",
+         "tipo": "gota",
+         "x": 200,
+         "y": 240,
+         "texto": "perdeu o prazo? o crédito morre",
+         "cor": "bad"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Ocorre o <b>fato gerador</b>: nasce a obrigação tributária. Mas a Fazenda ainda não tem um crédito <b>exigível</b>: falta o lançamento, que dá certeza e liquidez ao que é devido."
+        },
+        {
+         "texto": "Começa o <b>primeiro relógio</b>, o da <b>decadência</b>: a Fazenda tem 5 anos para <b>constituir</b> o crédito pelo lançamento (art. 173, I, ou art. 150, § 4º, no lançamento por homologação com pagamento).",
+         "mostra": [
+          "s1",
+          "lanc",
+          "dec"
+         ],
+         "anima": {
+          "lanc": "pulsa"
+         }
+        },
+        {
+         "texto": "Notificado o auto de infração, a decadência <b>para</b>. Se o contribuinte impugna, a exigibilidade fica suspensa (art. 151, III) e ainda não corre a prescrição: o crédito só fica <b>definitivo</b> quando acaba o processo administrativo.",
+         "mostra": [
+          "s1",
+          "lanc",
+          "dec",
+          "s2",
+          "def",
+          "susp"
+         ],
+         "anima": {
+          "def": "pulsa"
+         }
+        },
+        {
+         "texto": "Começa o <b>segundo relógio</b>, o da <b>prescrição</b>: 5 anos, contados da constituição definitiva, para <b>cobrar</b> em juízo (art. 174). O despacho que ordena a citação na execução fiscal interrompe (art. 174, § 1º, I).",
+         "mostra": [
+          "s1",
+          "lanc",
+          "dec",
+          "s2",
+          "def",
+          "susp",
+          "s3",
+          "exec",
+          "presc",
+          "desp"
+         ],
+         "anima": {
+          "exec": "pulsa",
+          "desp": "cai"
+         }
+        },
+        {
+         "texto": "Os dois relógios <b>extinguem</b> o crédito (art. 156, V). Por isso o tributo pago depois da prescrição pode ser pedido de volta: não existe mais dívida, nem \"obrigação natural\" no Direito Tributário.",
+         "mostra": [
+          "s1",
+          "lanc",
+          "dec",
+          "s2",
+          "def",
+          "s3",
+          "exec",
+          "presc",
+          "perde"
+         ],
+         "anima": {
+          "perde": "treme"
+         }
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 173",
+       "texto": "Art. 173. O direito de a Fazenda Pública constituir o crédito tributário extingue-se após 5 (cinco) anos, contados:\nI - ==do primeiro dia do exercício seguinte àquele em que o lançamento poderia ter sido efetuado==;\nII - da data em que se tornar definitiva a decisão que houver ==anulado, por vício formal==, o lançamento anteriormente efetuado.\nParágrafo único. O direito a que se refere êste artigo extingue-se definitivamente com o decurso do prazo nêle previsto, contado ==da data em que tenha sido iniciada a constituição do crédito tributário pela notificação==, ao sujeito passivo, de qualquer medida preparatória indispensável ao lançamento."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Regra geral (art. 173, I)",
+         "sub": "1º de janeiro do ano seguinte",
+         "texto": "Tributo lançado de ofício ou por declaração, ou homologação <b>sem pagamento e sem declaração</b> (Súmula 555 e Tema 163 do STJ), ou com dolo, fraude ou simulação (art. 150, § 5º). Fato gerador em 10/03/2021: prazo de 01/01/2022 a 31/12/2026."
+        },
+        {
+         "titulo": "Homologação com pagamento (art. 150, §§ 4º e 6º)",
+         "sub": "do fato gerador",
+         "texto": "Houve pagamento, mesmo <b>parcial</b>: o prazo conta do <b>fato gerador</b>. Fato gerador em 10/03/2021: a Fazenda pode lançar a diferença até 10/03/2026."
+        },
+        {
+         "titulo": "Medida preparatória (art. 173, parágrafo único)",
+         "sub": "antecipa o início",
+         "texto": "Se a Fazenda notifica o contribuinte de medida preparatória indispensável ao lançamento <b>antes</b> de 1º de janeiro do ano seguinte, o prazo começa nessa notificação. Só antecipa; nunca adia."
+        },
+        {
+         "titulo": "Vício formal (art. 173, II)",
+         "sub": "prazo novo",
+         "texto": "Lançamento anulado por vício <b>formal</b>: novo prazo de 5 anos, contado da decisão definitiva que o anulou. Vício <b>material</b> não reabre prazo."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>E o tributo declarado e não pago?</b> Aqui não há decadência a discutir: a declaração do contribuinte (GIA, DCTF, declaração do Simples) <b>já constitui o crédito</b>, e o Fisco pode inscrever em dívida ativa sem lançar nada (Súmula 436 do STJ). Corre direto a prescrição, desde o <b>vencimento</b> ou da entrega da declaração, o que vier depois (Tema 383). E a Fazenda pode negar a certidão negativa (Súmula 446)."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 174",
+       "texto": "Art. 174. A ação para a cobrança do crédito tributário prescreve em cinco anos, ==contados da data da sua constituição definitiva==.\n§ 1º A prescrição se interrompe:\nI – ==pelo despacho do juiz que ordenar a citação em execução fiscal==;\nII – ==pelo protesto extrajudicial da certidão de dívida ativa== ou pelo protesto judicial;\nIII - por qualquer ato judicial que constitua em mora o devedor;\nIV - por qualquer ato inequívoco ainda que extrajudicial, ==que importe em reconhecimento do débito pelo devedor==.\nV – pela instauração do procedimento de mediação, nos termos da legislação específica;\nVI – pela instituição da arbitragem especial tributária e aduaneira, retroagindo à data do requerimento de submissão da controvérsia à arbitragem;\nVII – pela sentença de extinção da execução fiscal nos casos de não localização do executado ou de bens passíveis de constrição, desde que a prescrição intercorrente ainda não se tenha iniciado;\nVIII – ==pela informação do crédito na falência== ou liquidação extrajudicial do sujeito passivo, e ficará o prazo suspenso até o encerramento do processo, nos termos da legislação específica;\nIX – pelo ato inicial da execução fiscal extrajudicial, nos termos da legislação específica.\n§ 2º (VETADO).\n§ 3º A prescrição interrompida ==recomeça a correr da data do ato que a interrompeu==, ou do último ato do processo judicial ou extrajudicial para a interromper.\n§ 4º (VETADO)."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Quando o crédito fica \"definitivamente constituído\"?</b> No lançamento de ofício, depois de notificado o auto de infração: se não há impugnação, quando acaba o prazo para impugnar; se há, quando o contribuinte é notificado do julgamento final. E ainda é preciso esgotar o prazo dado para o pagamento voluntário (Súmula 622 do STJ). Enquanto a impugnação corre, a exigibilidade está suspensa e nenhum dos dois relógios anda."
+      },
+      {
+       "t": "matriz",
+       "linhas": [
+        "Despacho do juiz que ordena a citação na execução",
+        "Protesto extrajudicial da CDA",
+        "Pedido de parcelamento, ainda que indeferido",
+        "Ajuizamento de execução sem despacho, por demora do Judiciário",
+        "Instauração de mediação",
+        "Notificação extrajudicial da Fazenda cobrando o débito"
+       ],
+       "colunas": [
+        "Interrompe a prescrição?"
+       ],
+       "celulas": [
+        [
+         [
+          true,
+          "Sim (art. 174, § 1º, I). Se a demora da citação é culpa do mecanismo da Justiça, não prejudica a Fazenda (Súmula 106)."
+         ]
+        ],
+        [
+         [
+          true,
+          "Sim (art. 174, § 1º, II), incluído na redação vigente."
+         ]
+        ],
+        [
+         [
+          true,
+          "Sim. Reconhecimento do débito (art. 174, § 1º, IV; Súmula 653 do STJ)."
+         ]
+        ],
+        [
+         [
+          true,
+          "Proposta a ação no prazo, a demora por motivos inerentes à Justiça não justifica acolher a prescrição (Súmula 106 do STJ)."
+         ]
+        ],
+        [
+         [
+          true,
+          "Sim (art. 174, § 1º, V)."
+         ]
+        ],
+        [
+         [
+          false,
+          "Não. Ato da Fazenda não está na lista; só os atos do inciso IV são do devedor, e protesto só o da CDA ou o judicial."
+         ]
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Prescrição intercorrente (Lei 6.830, art. 40).</b> É a prescrição que corre <b>dentro</b> da execução fiscal parada por falta de devedor ou de bens. A sequência foi fixada pelo STJ no REsp 1.340.553 (Temas 566 a 571):"
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 6.830/1980, art. 40",
+       "texto": "Art. 40 - O Juiz suspenderá o curso da execução, enquanto não for localizado o devedor ou encontrados bens sobre os quais possa recair a penhora, e, nesses casos, ==não correrá o prazo de prescrição==.\n§ 1º - Suspenso o curso da execução, será aberta vista dos autos ao representante judicial da Fazenda Pública.\n§ 2º - ==Decorrido o prazo máximo de 1 (um) ano==, sem que seja localizado o devedor ou encontrados bens penhoráveis, o Juiz ordenará o arquivamento dos autos.\n§ 3º - Encontrados que sejam, a qualquer tempo, o devedor ou os bens, serão desarquivados os autos para prosseguimento da execução.\n§ 4º Se da decisão que ordenar o arquivamento tiver decorrido o prazo prescricional, o juiz, ==depois de ouvida a Fazenda Pública==, ==poderá, de ofício, reconhecer a prescrição intercorrente== e decretá-la de imediato.\n§ 5º A manifestação prévia da Fazenda Pública prevista no § 4º deste artigo será dispensada no caso de cobranças judiciais cujo valor seja inferior ao mínimo fixado por ato do Ministro de Estado da Fazenda."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Ciência",
+         "sub": "Fazenda sabe"
+        },
+        {
+         "titulo": "1 ano",
+         "sub": "suspensão"
+        },
+        {
+         "titulo": "5 anos",
+         "sub": "prescrição corre"
+        },
+        {
+         "titulo": "Oitiva",
+         "sub": "e decisão"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "O prazo de 1 ano de suspensão começa <b>automaticamente</b> na data em que a Fazenda toma ciência de que o devedor ou os bens não foram encontrados, mesmo que o juiz não declare a suspensão (Tema 566)."
+        },
+        {
+         "no": 1,
+         "texto": "Acabado o ano, <b>começa sozinho</b> o prazo prescricional, com ou sem pedido da Fazenda e com ou sem decisão do juiz (Tema 567). O arquivamento é só consequência."
+        },
+        {
+         "no": 2,
+         "texto": "Só interrompem a intercorrente a <b>efetiva constrição</b> de bens ou a <b>efetiva citação</b> (ainda que por edital). Pedir penhora ou BacenJud não basta (Tema 568). Súmula 314: o prazo quinquenal começa depois do ano de suspensão."
+        },
+        {
+         "no": 3,
+         "texto": "Passados os 5 anos, o juiz ouve a Fazenda e pode decretar de ofício (art. 40, § 4º). Se a Fazenda alegar nulidade por falta de intimação, precisa mostrar o <b>prejuízo</b>, por exemplo uma causa interruptiva (Tema 570)."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Reforma e LCs de 2026: o § 1º do art. 174",
+       "html": "O antigo parágrafo único virou <b>§ 1º</b> (renumerado pela LC 236/2026) e ganhou incisos: protesto extrajudicial da CDA, mediação, arbitragem (retroage ao requerimento), sentença de extinção da execução sem devedor ou bens (se a intercorrente ainda não começou), habilitação na falência (com o prazo suspenso até o fim do processo) e o ato inicial da execução fiscal extrajudicial. A FCC tende a cobrar exatamente esses incisos novos. E lembre: prazo de prescrição e decadência é matéria de <b>lei complementar</b> (Súmula Vinculante 8); lei ordinária estadual não pode mudar."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: exclusão do crédito (arts. 175 a 182)",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Lógica:</b> na exclusão, o fato gerador ocorre e a obrigação nasce, mas a lei <b>impede o lançamento</b>. São só duas hipóteses e as duas exigem lei: <b>isenção</b> (dispensa do tributo) e <b>anistia</b> (perdão da infração). Nenhuma dispensa as obrigações acessórias."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 175",
+       "texto": "Art. 175. Excluem o crédito tributário:\nI - a isenção;\nII - a anistia.\nParágrafo único. a exclusão do crédito tributário ==não dispensa o cumprimento das obrigações acessórias== dependentes da obrigação principal cujo crédito seja excluído, ou dela conseqüentes."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 176",
+       "texto": "Art. 176. A isenção, ==ainda quando prevista em contrato, é sempre decorrente de lei== que especifique as condições e requisitos exigidos para a sua concessão, os tributos a que se aplica e, sendo caso, o prazo de sua duração.\nParágrafo único. a isenção pode ser restrita a determinada região do território da entidade tributante, em função de condições a ela peculiares."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 177",
+       "texto": "Art. 177. Salvo disposição de lei em contrário, a isenção não é extensiva:\nI - ==às taxas e às contribuições de melhoria==;\nII - ==aos tributos instituídos posteriormente à sua concessão==."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 178",
+       "texto": "Art. 178 - A isenção, ==salvo se concedida por prazo certo e em função de determinadas condições==, pode ser revogada ou modificada por lei, a qualquer tempo, observado o disposto no inciso III do art. 104."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 179",
+       "texto": "Art. 179. A isenção, quando não concedida em caráter geral, é efetivada, em cada caso, por despacho da autoridade administrativa, em requerimento com o qual o interessado faça prova do preenchimento das condições e do cumprimento dos requisitos previstos em lei ou contrato para sua concessão.\n§ 1º Tratando-se de tributo lançado por período certo de tempo, o despacho referido neste artigo será renovado antes da expiração de cada período, cessando automàticamente os seus efeitos a partir do primeiro dia do período para o qual o interessado deixar de promover a continuidade do reconhecimento da isenção.\n§ 2º O despacho referido neste artigo ==não gera direito adquirido==, aplicando-se, quando cabível, o disposto no art. 155."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Olhar do procurador: isenção onerosa",
+       "html": "A isenção dada <b>por prazo certo e sob condição</b> (por exemplo, instalar fábrica no interior do Maranhão e gerar empregos por 10 anos) não pode ser revogada antes do prazo para quem cumpriu a condição (art. 178). Mas a isenção comum, revogada, faz o tributo voltar a ser exigido: como ela se liga ao art. 104, III, e à anterioridade, a revogação de isenção de imposto sobre patrimônio ou renda respeita o exercício seguinte. Quem não cumpre a condição perde o benefício com juros (arts. 179, § 2º, e 155)."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Instituto",
+        "O que acontece",
+        "Fonte"
+       ],
+       "linhas": [
+        [
+         "Imunidade",
+         "A CF tira a competência: o tributo nem pode ser criado para aquela situação",
+         "CF (aula 4)"
+        ],
+        [
+         "Isenção",
+         "Há competência e fato gerador, mas a lei dispensa o pagamento: exclusão do crédito",
+         "Lei (art. 176)"
+        ],
+        [
+         "Não incidência",
+         "O fato está fora da hipótese de incidência",
+         "Ausência de previsão"
+        ],
+        [
+         "Alíquota zero",
+         "Há incidência e lançamento possível, mas o valor é zero",
+         "Lei ou ato que fixa a alíquota"
+        ],
+        [
+         "Remissão",
+         "Perdão do crédito já constituído: extinção",
+         "Lei (art. 172)"
+        ],
+        [
+         "Anistia",
+         "Perdão da infração anterior à lei: exclusão da multa",
+         "Lei (art. 180)"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 180",
+       "texto": "Art. 180. A anistia abrange ==exclusivamente as infrações cometidas anteriormente à vigência da lei== que a concede, não se aplicando:\nI - aos atos qualificados em lei como crimes ou contravenções e aos que, mesmo sem essa qualificação, sejam ==praticados com dolo, fraude ou simulação== pelo sujeito passivo ou por terceiro em benefício daquele;\nII - salvo disposição em contrário, às infrações resultantes de ==conluio entre duas ou mais pessoas== naturais ou jurídicas."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 181",
+       "texto": "Art. 181. A anistia pode ser concedida:\nI - em caráter geral;\nII - limitadamente:\na) às infrações da legislação relativa a determinado tributo;\nb) às infrações punidas com penalidades pecuniárias até determinado montante, conjugadas ou não com penalidades de outra natureza;\nc) a determinada região do território da entidade tributante, em função de condições a ela peculiares;\nd) ==sob condição do pagamento de tributo no prazo fixado pela lei== que a conceder, ou cuja fixação seja atribuída pela mesma lei à autoridade administrativa."
+      },
+      {
+       "t": "lei",
+       "ref": "CTN, art. 182",
+       "texto": "Art. 182. A anistia, quando não concedida em caráter geral, é efetivada, em cada caso, por despacho da autoridade administrativa, em requerimento com o qual o interessado faça prova do preenchimento das condições e do cumprimento dos requisitos previstos em lei para sua concessão.\nParágrafo único. O despacho referido neste artigo ==não gera direito adquirido==, aplicando-se, quando cabível, o disposto no art. 155."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A isenção concedida por lei estadual abrange, salvo disposição em contrário, as taxas cobradas pelo Estado.",
+         "v": false,
+         "porque": "Salvo disposição em contrário, não abrange taxas e contribuições de melhoria (art. 177, I)."
+        },
+        {
+         "texto": "A anistia pode abranger infrações cometidas depois da lei que a concede, se a lei assim previr.",
+         "v": false,
+         "porque": "Abrange exclusivamente infrações anteriores à lei (art. 180)."
+        },
+        {
+         "texto": "A anistia não se aplica, salvo disposição em contrário, às infrações resultantes de conluio.",
+         "v": true,
+         "porque": "Art. 180, II."
+        },
+        {
+         "texto": "Isenção prevista em contrato dispensa lei.",
+         "v": false,
+         "porque": "\"Ainda quando prevista em contrato, é sempre decorrente de lei\" (art. 176)."
+        },
+        {
+         "texto": "A exclusão do crédito dispensa o cumprimento das obrigações acessórias dependentes da obrigação principal.",
+         "v": false,
+         "porque": "Não dispensa (art. 175, parágrafo único)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Ligação com a execução fiscal e o olhar da Procuradoria estadual",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Para o analista da PGE-MA, o crédito tributário é a matéria-prima do trabalho: tudo o que você estudou acima vira uma <b>lista de checagem</b> antes de inscrever, protestar ou ajuizar, e vira <b>defesa</b> quando o contribuinte embarga. A ponte entre o crédito constituído e a cobrança é a <b>inscrição em dívida ativa</b>, que gera a CDA, título executivo da execução fiscal."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 6.830/1980, art. 2º, § 3º",
+       "texto": "§ 3º - A inscrição, que se constitui no ==ato de controle administrativo da legalidade==, será feita pelo órgão competente para apurar a liquidez e certeza do crédito e suspenderá a prescrição, para todos os efeitos de direito, por 180 dias, ou até a distribuição da execução fiscal, se esta ocorrer antes de findo aquele prazo."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 6.830/1980, art. 3º",
+       "texto": "Art. 3º - A Dívida Ativa regularmente inscrita ==goza da presunção de certeza e liquidez==.\nParágrafo Único - A presunção a que se refere este artigo é relativa e pode ser ilidida por prova inequívoca, a cargo do executado ou de terceiro, a quem aproveite."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 6.830/1980, art. 9º, caput, incisos e §§ 3º e 7º",
+       "texto": "Art. 9º - Em garantia da execução, pelo valor da dívida, juros e multa de mora e encargos indicados na Certidão de Dívida Ativa, o executado poderá:\nI - efetuar depósito em dinheiro, à ordem do Juízo em estabelecimento oficial de crédito, que assegure atualização monetária;\nII - ==oferecer fiança bancária ou seguro garantia==;\nIII - nomear bens à penhora, observada a ordem do artigo 11; ou IV - indicar à penhora bens oferecidos por terceiros e aceitos pela Fazenda Pública."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 6.830/1980, art. 38",
+       "texto": "Art. 38 - A discussão judicial da Dívida Ativa da Fazenda Pública só é admissível em execução, na forma desta Lei, ==salvo as hipóteses de mandado de segurança, ação de repetição do indébito ou ação anulatória== do ato declarativo da dívida, esta precedida do depósito preparatório do valor do débito, monetariamente corrigido e acrescido dos juros e multa de mora e demais encargos.\nParágrafo Único - A propositura, pelo contribuinte, da ação prevista neste artigo ==importa em renúncia ao poder de recorrer na esfera administrativa== e desistência do recurso acaso interposto."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "O art. 38 da LEF e a Súmula Vinculante 28",
+       "html": "O art. 38 fala em anulatória \"precedida do depósito preparatório\". Mas exigir depósito prévio para discutir crédito tributário em juízo é inconstitucional (Súmula Vinculante 28). Sem depósito, a anulatória é admitida; ela só <b>não suspende</b> a exigibilidade. Com depósito integral, suspende (art. 151, II). E ajuizar a ação faz o contribuinte <b>renunciar</b> ao recurso administrativo (parágrafo único)."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "1",
+         "sub": "decadência"
+        },
+        {
+         "titulo": "2",
+         "sub": "definitividade"
+        },
+        {
+         "titulo": "3",
+         "sub": "suspensão"
+        },
+        {
+         "titulo": "4",
+         "sub": "prescrição"
+        },
+        {
+         "titulo": "5",
+         "sub": "cobrança"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>O lançamento foi feito a tempo?</b> Conferir a modalidade e o marco: art. 150, § 4º (pagou algo), art. 173, I (não pagou nem declarou, ou dolo), ou declaração que já constitui o crédito (Súmula 436)."
+        },
+        {
+         "no": 1,
+         "texto": "<b>O crédito está definitivo?</b> Sem impugnação pendente e com o prazo de pagamento voluntário esgotado (Súmula 622). Inscrever crédito ainda em discussão administrativa é inscrever crédito com exigibilidade suspensa."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Há causa de suspensão?</b> Depósito integral (Tema 271: impede inscrição e execução), liminar ou tutela, parcelamento ativo, transação, seguro aceito. Se houver, não se executa."
+        },
+        {
+         "no": 3,
+         "texto": "<b>A prescrição corre desde quando e foi interrompida?</b> Parcelamento ou pedido de parcelamento (Súmula 653), protesto da CDA, confissão. Ajuizar dentro do prazo protege a Fazenda da demora do Judiciário (Súmula 106); prescrição anterior ao ajuizamento pode ser decretada de ofício (Súmula 409)."
+        },
+        {
+         "no": 4,
+         "texto": "<b>Cobrar.</b> Protesto da CDA ou execução fiscal; pedir bloqueio online no início (Tema 1.012); se não houver bens, acompanhar o art. 40 e provocar diligências úteis, porque só a constrição efetiva ou a citação efetiva interrompem a intercorrente (Tema 568). A CDA pode ser substituída até a sentença dos embargos para corrigir erro material ou formal, mas não para trocar o sujeito passivo (Súmula 392)."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Olhar do procurador: na contestação e na impugnação aos embargos",
+       "html": "Teses de defesa da Fazenda que saem direto desta aula: (1) tributo declarado e não pago dispensa lançamento e processo administrativo (Súmula 436); (2) não houve decadência porque houve dolo ou não houve pagamento (art. 150, § 5º; art. 173, I; Súmula 555); (3) a prescrição foi interrompida pelo parcelamento (Súmula 653) e só recomeça do ato interruptivo (art. 174, § 3º); (4) não há denúncia espontânea em tributo declarado e pago com atraso (Súmula 360; Tema 61, ligado ao art. 138, que fica na aula 7); (5) compensação não cabe por liminar (Súmula 212) nem antes do trânsito (art. 170-A); (6) restituição de ICMS exige prova do não repasse (art. 166). E a exceção de pré-executividade só cabe em matéria de ofício sem dilação probatória (Súmula 393)."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Reforma tributária: onde ela toca este tema",
+       "html": "A EC 132/2023 e a LC 214/2025 não substituíram os arts. 139 a 182: as normas gerais de lançamento, crédito, prescrição e decadência continuam sob reserva de lei complementar (CF, art. 146, III, b), o que vale também para IBS e CBS. As mudanças que já estão no texto do CTN vieram com as LCs 227 e 236 de 2026 (arts. 150, 151, 156 e 174: arbitragem, mediação, transação aceita, seguro garantia, novas causas de interrupção). O contencioso do IBS e o Comitê Gestor ficam para a aula 16."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência que a FCC cobra",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Só o tema da aula. Súmulas do STJ conferidas no PDF oficial \"Enunciados das Súmulas do STJ\"; Temas repetitivos no portal de precedentes do STJ; súmulas vinculantes no portal do STF (24/11/2026)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula Vinculante 8",
+       "tese": "São inconstitucionais o parágrafo único do artigo 5º do Decreto-Lei 1.569/1977 e os artigos 45 e 46 da Lei 8.212/1991, que tratam da prescrição e decadência do crédito tributário."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula Vinculante 21",
+       "tese": "É inconstitucional a exigência de depósito ou arrolamento prévios de dinheiro ou bens para admissibilidade de recurso administrativo."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula Vinculante 24",
+       "tese": "Não se tipifica crime material contra a ordem tributária, previsto no art. 1º, incisos I a IV, da Lei 8.137/1990, antes do lançamento definitivo do tributo."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "Súmula Vinculante 28",
+       "tese": "É inconstitucional a exigência de depósito prévio como requisito de admissibilidade de ação judicial na qual se pretenda discutir a exigibilidade de crédito tributário."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 436",
+       "tese": "A entrega de declaração pelo contribuinte reconhecendo débito fiscal constitui o crédito tributário, dispensada qualquer outra providência por parte do fisco."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 446",
+       "tese": "Declarado e não pago o débito tributário pelo contribuinte, é legítima a recusa de expedição de certidão negativa ou positiva com efeito de negativa."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 397",
+       "tese": "O contribuinte do IPTU é notificado do lançamento pelo envio do carnê ao seu endereço."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 555",
+       "tese": "Quando não houver declaração do débito, o prazo decadencial quinquenal para o Fisco constituir o crédito tributário conta-se exclusivamente na forma do art. 173, I, do CTN, nos casos em que a legislação atribui ao sujeito passivo o dever de antecipar o pagamento sem prévio exame da autoridade administrativa."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Tema repetitivo 163 (REsp 973.733/SC, Primeira Seção, 12/08/2009)",
+       "tese": "O prazo decadencial quinquenal para o Fisco constituir o crédito tributário (lançamento de ofício) conta-se do primeiro dia do exercício seguinte àquele em que o lançamento poderia ter sido efetuado, nos casos em que a lei não prevê o pagamento antecipado da exação ou quando, a despeito da previsão legal, o mesmo inocorre, sem a constatação de dolo, fraude ou simulação do contribuinte, inexistindo declaração prévia do débito."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 622",
+       "tese": "A notificação do auto de infração faz cessar a contagem da decadência para a constituição do crédito tributário; exaurida a instância administrativa com o decurso do prazo para a impugnação ou com a notificação de seu julgamento definitivo e esgotado o prazo concedido pela Administração para o pagamento voluntário, inicia-se o prazo prescricional para a cobrança judicial."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Tema repetitivo 383 (REsp 1.120.295/SP, Primeira Seção, 12/05/2010)",
+       "tese": "O prazo prescricional quinquenal para o Fisco exercer a pretensão de cobrança judicial do crédito tributário conta-se da data estipulada como vencimento para o pagamento da obrigação tributária declarada (mediante DCTF, GIA, entre outros), nos casos de tributos sujeitos a lançamento por homologação, em que, não obstante cumprido o dever instrumental de declaração da exação devida, não restou adimplida a obrigação principal (pagamento antecipado), nem sobreveio quaisquer das causas suspensivas da exigibilidade do crédito ou interruptivas do prazo prescricional."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 112",
+       "tese": "O depósito somente suspende a exigibilidade do crédito tributário se for integral e em dinheiro."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Tema repetitivo 271 (REsp 1.140.956/SP, Primeira Seção, 24/11/2010)",
+       "tese": "Os efeitos da suspensão da exigibilidade pela realização do depósito integral do crédito exequendo, quer no bojo de ação anulatória, quer no de ação declaratória de inexistência de relação jurídico-tributária, ou mesmo no de mandado de segurança, desde que ajuizados anteriormente à execução fiscal, têm o condão de impedir a lavratura do auto de infração, assim como de coibir o ato de inscrição em dívida ativa e o ajuizamento da execução fiscal, a qual, acaso proposta, deverá ser extinta."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Tema repetitivo 1.012 (REsp 1.756.406/PA, Primeira Seção, 08/06/2022)",
+       "tese": "O bloqueio de ativos financeiros do executado via sistema BACENJUD, em caso de concessão de parcelamento fiscal, seguirá a seguinte orientação: (i) será levantado o bloqueio se a concessão é anterior à constrição; e (ii) fica mantido o bloqueio se a concessão ocorre em momento posterior à constrição, ressalvada, nessa hipótese, a possibilidade excepcional de substituição da penhora online por fiança bancária ou seguro garantia, diante das peculiaridades do caso concreto, mediante comprovação irrefutável, a cargo do executado, da necessidade de aplicação do princípio da menor onerosidade."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 653",
+       "tese": "O pedido de parcelamento fiscal, ainda que indeferido, interrompe o prazo prescricional, pois caracteriza confissão extrajudicial do débito."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 106",
+       "tese": "Proposta a ação no prazo fixado para o seu exercício, a demora na citação, por motivos inerentes ao mecanismo da Justiça, não justifica o acolhimento da arguição de prescrição ou decadência."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 409",
+       "tese": "Em execução fiscal, a prescrição ocorrida antes da propositura da ação pode ser decretada de ofício (art. 219, § 5º, do CPC). Observação: o dispositivo citado é do CPC/1973."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 314",
+       "tese": "Em execução fiscal, não localizados bens penhoráveis, suspende-se o processo por um ano, findo o qual se inicia o prazo da prescrição qüinqüenal intercorrente."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Temas repetitivos 566 e 567 (REsp 1.340.553/RS, Primeira Seção, 12/09/2018)",
+       "tese": "O prazo de 1 (um) ano de suspensão do processo e do respectivo prazo prescricional previsto no art. 40, §§ 1º e 2º da Lei n. 6.830/80 - LEF tem início automaticamente na data da ciência da Fazenda Pública a respeito da não localização do devedor ou da inexistência de bens penhoráveis no endereço fornecido, havendo, sem prejuízo dessa contagem automática, o dever de o magistrado declarar ter ocorrido a suspensão da execução. Havendo ou não petição da Fazenda Pública e havendo ou não pronunciamento judicial nesse sentido, findo o prazo de 1 (um) ano de suspensão inicia-se automaticamente o prazo prescricional aplicável."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Tema repetitivo 568 (REsp 1.340.553/RS)",
+       "tese": "A efetiva constrição patrimonial e a efetiva citação (ainda que por edital) são aptas a interromper o curso da prescrição intercorrente, não bastando para tal o mero peticionamento em juízo, requerendo, v.g., a feitura da penhora sobre ativos financeiros ou sobre outros bens."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Tema repetitivo 570 (REsp 1.340.553/RS)",
+       "tese": "A Fazenda Pública, em sua primeira oportunidade de falar nos autos (art. 245 do CPC/73, correspondente ao art. 278 do CPC/2015), ao alegar nulidade pela falta de qualquer intimação dentro do procedimento do art. 40 da LEF, deverá demonstrar o prejuízo que sofreu (exceto a falta da intimação que constitui o termo inicial - 4.1., onde o prejuízo é presumido), por exemplo, deverá demonstrar a ocorrência de qualquer causa interruptiva ou suspensiva da prescrição."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 213",
+       "tese": "O mandado de segurança constitui ação adequada para a declaração do direito à compensação tributária."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 212",
+       "tese": "A compensação de créditos tributários não pode ser deferida em ação cautelar ou por medida liminar cautelar ou antecipatória."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 460",
+       "tese": "É incabível o mandado de segurança para convalidar a compensação tributária realizada pelo contribuinte."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 461",
+       "tese": "O contribuinte pode optar por receber, por meio de precatório ou por compensação, o indébito tributário certificado por sentença declaratória transitada em julgado."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Tema repetitivo 346 (REsp 1.167.039/DF, Primeira Seção, 25/08/2010)",
+       "tese": "Nos termos do art. 170-A do CTN, 'é vedada a compensação mediante o aproveitamento de tributo, objeto de contestação judicial pelo sujeito passivo, antes do trânsito em julgado da respectiva decisão judicial', vedação que se aplica inclusive às hipóteses de reconhecida inconstitucionalidade do tributo indevidamente recolhido."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 625",
+       "tese": "O pedido administrativo de compensação ou de restituição não interrompe o prazo prescricional para a ação de repetição de indébito tributário de que trata o art. 168 do CTN nem o da execução de título judicial contra a Fazenda Pública."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmulas 162 e 188",
+       "tese": "Na repetição de indébito tributário, a correção monetária incide a partir do pagamento indevido. Os juros moratórios, na repetição do indébito tributário, são devidos a partir do trânsito em julgado da sentença."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 360 e Tema repetitivo 61 (REsp 886.462/RS, 22/10/2008)",
+       "tese": "O benefício da denúncia espontânea não se aplica aos tributos sujeitos a lançamento por homologação regularmente declarados, mas pagos a destempo. (Tema 61: não resta caracterizada a denúncia espontânea, com a consequente exclusão da multa moratória, nos casos de tributos declarados, porém pagos a destempo pelo contribuinte, ainda que o pagamento seja integral.)"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmulas 392 e 393",
+       "tese": "A Fazenda Pública pode substituir a certidão de dívida ativa (CDA) até a prolação da sentença de embargos, quando se tratar de correção de erro material ou formal, vedada a modificação do sujeito passivo da execução. A exceção de pré-executividade é admissível na execução fiscal relativamente às matérias conhecíveis de ofício que não demandem dilação probatória."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A FCC cobra este tema de dois jeitos. No primeiro, <b>lista seca</b>: \"suspende a exigibilidade, EXCETO\", \"extingue, EXCETO\", trocando suspensão por extinção ou exclusão. No segundo, <b>caso curto com datas</b>: fato gerador num ano, lançamento noutro, e a pergunta é se houve decadência ou prescrição. Para o segundo, faça sempre a linha do tempo no rascunho: modalidade, houve pagamento?, houve declaração?, houve dolo?, quando ficou definitivo?, o que interrompeu?"
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O que pode cair assim",
+       "html": "1) Lançamento é <b>privativo</b> da autoridade e atividade <b>vinculada e obrigatória</b>; ele <b>propõe</b> a penalidade. 2) Lei nova de fiscalização ou garantia aplica-se ao passado; a que cria <b>responsável</b>, não. 3) Mudança de <b>critério jurídico</b> só para fato gerador posterior. 4) Arbitramento não é modalidade. 5) Retificar declaração para reduzir: com prova do erro e <b>antes</b> da notificação. 6) Homologação tácita: <b>5 anos do fato gerador</b>, salvo dolo, fraude ou simulação (aí, art. 173, I). 7) Pagamento parcial: decadência do fato gerador (art. 150, § 6º). 8) Sem pagamento e sem declaração: art. 173, I (Súmula 555). 9) Declarou e não pagou: crédito constituído, só prescrição (Súmula 436; Tema 383). 10) Depósito: <b>integral e em dinheiro</b>. 11) Parcelamento <b>suspende</b>; o pedido <b>interrompe</b> a prescrição. 12) Isenção e anistia <b>excluem</b>; remissão <b>extingue</b>. 13) Dação em pagamento: só <b>imóveis</b>. 14) Imputação: própria antes de responsabilidade; CM, taxa, imposto; prescrição crescente; valor decrescente. 15) Restituição: 5 anos; anulatória da negativa: 2 anos, recomeçando por metade. 16) Prescrição: interrompida pelo <b>despacho</b> que ordena a citação e pelo <b>protesto da CDA</b>."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "O lançamento é atividade administrativa vinculada e obrigatória, sob pena de responsabilidade funcional.",
+         "v": true,
+         "porque": "Art. 142, § 1º."
+        },
+        {
+         "texto": "Compete à autoridade administrativa, no lançamento, aplicar a penalidade cabível.",
+         "v": false,
+         "porque": "O art. 142 diz \"propor a aplicação da penalidade cabível\"."
+        },
+        {
+         "texto": "Aplica-se ao lançamento a lei posterior ao fato gerador que atribua responsabilidade tributária a terceiros.",
+         "v": false,
+         "porque": "É a exceção expressa do art. 144, § 1º."
+        },
+        {
+         "texto": "No lançamento por homologação, havendo pagamento parcial, o prazo decadencial é contado da ocorrência do fato gerador.",
+         "v": true,
+         "porque": "Art. 150, § 6º."
+        },
+        {
+         "texto": "O parcelamento extingue o crédito tributário.",
+         "v": false,
+         "porque": "Suspende (art. 151, VI)."
+        },
+        {
+         "texto": "A dação em pagamento em bens móveis extingue o crédito tributário, na forma da lei.",
+         "v": false,
+         "porque": "Só em bens imóveis (art. 156, XI)."
+        },
+        {
+         "texto": "A prescrição se interrompe pela citação pessoal feita ao devedor.",
+         "v": false,
+         "porque": "Interrompe-se pelo despacho do juiz que ordenar a citação (art. 174, § 1º, I)."
+        },
+        {
+         "texto": "O protesto extrajudicial da certidão de dívida ativa interrompe a prescrição.",
+         "v": true,
+         "porque": "Art. 174, § 1º, II."
+        },
+        {
+         "texto": "A entrega de declaração reconhecendo débito constitui o crédito tributário, dispensada outra providência do Fisco.",
+         "v": true,
+         "porque": "Súmula 436 do STJ."
+        },
+        {
+         "texto": "Na imputação de pagamento, os impostos têm preferência sobre as taxas.",
+         "v": false,
+         "porque": "Ordem: contribuições de melhoria, taxas e por fim impostos (art. 163, II)."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "trib-009",
+    "trib-010",
+    "trib-011",
+    "trib-012",
+    "trib-013",
+    "trib-014",
+    "trib-cred-01",
+    "trib-cred-02",
+    "trib-cred-03",
+    "trib-cred-04",
+    "trib-cred-05",
+    "trib-cred-06",
+    "trib-cred-07",
+    "trib-cred-08",
+    "trib-cred-09",
+    "trib-cred-10",
+    "trib-cred-11",
+    "trib-cred-12",
+    "trib-cred-13",
+    "trib-cred-14",
+    "trib-cred-15",
+    "trib-cred-16",
+    "trib-cred-17",
+    "trib-cred-18",
+    "trib-cred-19",
+    "trib-cred-20"
+   ]
   },
   {
    "id": "B7-a09",
@@ -4167,6 +5980,30 @@
   [
    "Não afetação",
    "Proibição de vincular receita de imposto a órgão, fundo ou despesa (art. 167, IV)."
+  ],
+  [
+   "Lançamento",
+   "Procedimento administrativo privativo da autoridade que constitui o crédito tributário (CTN, art. 142)."
+  ],
+  [
+   "Constituição definitiva",
+   "Momento em que o crédito não pode mais ser discutido na via administrativa; marco inicial da prescrição (art. 174; Súmula 622 do STJ)."
+  ],
+  [
+   "Homologação tácita",
+   "Extinção definitiva do crédito pelo silêncio da Fazenda por 5 anos contados do fato gerador (art. 150, § 4º)."
+  ],
+  [
+   "Prescrição intercorrente",
+   "Prescrição que corre dentro da execução fiscal parada por falta de devedor ou de bens (Lei 6.830, art. 40)."
+  ],
+  [
+   "Moratória heterônoma",
+   "Moratória de tributo estadual ou municipal concedida pela União, nas condições do art. 152, I, b, do CTN."
+  ],
+  [
+   "Imputação do pagamento",
+   "Escolha, pela autoridade e na ordem do art. 163 do CTN, de quais débitos um pagamento insuficiente quita."
   ]
  ]
 }
