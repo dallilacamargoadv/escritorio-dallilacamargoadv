@@ -556,5 +556,343 @@
       "B2|Responsabilidade civil do Estado",
       "B5|Tutela provisória"
     ]
+  },
+  {
+    "id": "adm-acumulacao-professor",
+    "materia_id": "B2",
+    "titulo": "Professor que vira analista (acumulação e estabilidade)",
+    "enunciado": "Paulo é professor efetivo da rede estadual do Maranhão há cinco anos, com jornada de 20 horas semanais no turno da manhã. Aprovado em concurso, tomou posse no cargo efetivo de Analista Administrativo da Secretaria de Fazenda, com 30 horas semanais à tarde. Seis meses depois, foi aprovado em processo seletivo para emprego de assistente numa sociedade de economia mista estadual, com jornada noturna, e pediu para acumular os três vínculos. A chefia também cogita nomeá-lo para um cargo em comissão. Neste contexto, responda justificadamente ao que se pede:",
+    "perguntas": [
+      "A acumulação do cargo de professor com o de Analista Administrativo é lícita? Qual a condição?",
+      "Paulo pode acumular também o emprego na sociedade de economia mista?",
+      "Quando e como Paulo adquire estabilidade no cargo de Analista Administrativo?",
+      "O que acontece com os cargos efetivos se ele for nomeado para o cargo em comissão?"
+    ],
+    "linhas_min": 20,
+    "linhas": 30,
+    "espelho": [
+      {
+        "ponto": "Sim. Desde a EC 138/2025, a CF admite um cargo de professor com outro \"de qualquer natureza\" (antes, só \"técnico ou científico\"). A condição é a compatibilidade de horários, que aqui existe (manhã e tarde), observado o teto do inciso XI.",
+        "fundamento": "CF/88, art. 37, XVI, b; Lei MA 6.107/1994, art. 212, § 2º",
+        "peso": 25
+      },
+      {
+        "ponto": "Não. A exceção constitucional admite só dois vínculos, e a proibição de acumular se estende a empregos em sociedades de economia mista. Um terceiro vínculo é vedado, ainda que os horários sejam compatíveis.",
+        "fundamento": "CF/88, art. 37, XVI e XVII; Lei MA 6.107/1994, art. 212, § 1º",
+        "peso": 20
+      },
+      {
+        "ponto": "Só após três anos de efetivo exercício no novo cargo, e com avaliação especial de desempenho por comissão instituída para isso. A estabilidade no cargo de professor não se transfere: cada cargo efetivo tem seu próprio estágio.",
+        "fundamento": "CF/88, art. 41, caput e § 4º",
+        "peso": 25
+      },
+      {
+        "ponto": "O servidor que acumula licitamente dois cargos efetivos e é investido em cargo em comissão fica afastado dos dois efetivos. E ele não pode exercer mais de um cargo em comissão.",
+        "fundamento": "Lei MA 6.107/1994, art. 213, caput e § 1º",
+        "peso": 20
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado, cada quesito respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
+      }
+    ],
+    "dica": "Pistas do enunciado: \"professor\" (EC 138/2025, alínea b), \"manhã\" e \"tarde\" (compatibilidade), \"três vínculos\" e \"sociedade de economia mista\" (inciso XVII), \"seis meses\" (ainda em estágio), \"cargo em comissão\" (art. 213 da Lei 6.107).",
+    "tangencia": "Tangenciar é explicar a regra geral da vedação de acumular sem dizer se os vínculos de Paulo são lícitos, quando ele fica estável e o que muda com o cargo em comissão.",
+    "topico_id": "B2-08",
+    "temas": [
+      "B2|Agentes públicos",
+      "B2|Servidores públicos",
+      "B3|Administração pública"
+    ]
+  },
+  {
+    "id": "adm-poder-policia-delegacao",
+    "materia_id": "B2",
+    "titulo": "Multa de trânsito por estatal e por empresa privada",
+    "enunciado": "Lei do Estado do Maranhão autorizou uma sociedade de economia mista estadual, de capital majoritariamente público, que presta exclusivamente o serviço de fiscalização das rodovias estaduais, sem concorrência, a fiscalizar o trânsito e aplicar multas. A mesma lei permitiu que a estatal editasse, por resolução própria, os limites de velocidade das rodovias. Depois, a estatal contratou uma empresa privada para operar radares e lavrar ela mesma os autos de infração. Um motorista multado não pagou, e a estatal anunciou que vai bloquear os valores da conta dele por ato próprio. Neste contexto, responda justificadamente ao que se pede:",
+    "perguntas": [
+      "É válida a delegação do poder de polícia de trânsito à sociedade de economia mista?",
+      "A estatal pode fixar, por resolução própria, os limites de velocidade?",
+      "A empresa privada contratada pode lavrar os autos de infração?",
+      "A estatal pode cobrar a multa bloqueando a conta do motorista por ato próprio?"
+    ],
+    "linhas_min": 20,
+    "linhas": 30,
+    "espelho": [
+      {
+        "ponto": "Sim. O STF admite delegar o poder de polícia, por lei, a pessoa jurídica de direito privado da Administração indireta, de capital majoritariamente público, que preste exclusivamente serviço público próprio do Estado em regime não concorrencial. Todos os requisitos estão no caso.",
+        "fundamento": "STF, RE 633.782/MG, Tema 532 da repercussão geral (Info 996)",
+        "peso": 25
+      },
+      {
+        "ponto": "Não. Do ciclo de polícia (ordem, consentimento, fiscalização e sanção), o Tema 532 admitiu delegar consentimento, fiscalização e sanção. A ordem é indelegável, porque é a própria lei que limita a liberdade.",
+        "fundamento": "STF, Tema 532; CTN, art. 78",
+        "peso": 20
+      },
+      {
+        "ponto": "Não. Particular fora da Administração não recebe poder de polícia (doutrina majoritária; a Lei das PPPs veda delegar a polícia). A empresa pode prestar só apoio material, como operar o radar, e a lavratura do auto fica com a estatal.",
+        "fundamento": "Lei 11.079/2004, art. 4º, III; doutrina citada no caderno B2-a10",
+        "peso": 20
+      },
+      {
+        "ponto": "Não. A multa é imposta pela própria Administração, mas não é autoexecutória na cobrança: a cobrança forçada depende de ação judicial. E o exercício regular da polícia exige órgão competente, limites da lei e devido processo legal.",
+        "fundamento": "CTN, art. 78, parágrafo único; atributo da autoexecutoriedade (caderno B2-a10)",
+        "peso": 25
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado, cada quesito respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
+      }
+    ],
+    "dica": "Leia cada requisito do Tema 532 no enunciado: \"lei\", \"capital majoritariamente público\", \"exclusivamente\" e \"sem concorrência\". Depois separe as fases do ciclo: resolução de velocidade é ordem; auto de infração é sanção.",
+    "tangencia": "Tangenciar é definir poder de polícia e listar seus atributos sem dizer, fase por fase, o que a estatal, a empresa privada e a cobrança podem ou não fazer no caso.",
+    "topico_id": "B2-03",
+    "temas": [
+      "B2|Poderes administrativos",
+      "B2|Organização administrativa"
+    ]
+  },
+  {
+    "id": "adm-contrato-alteracao-unilateral",
+    "materia_id": "B2",
+    "titulo": "Obra de escola: acréscimo, supressão e atraso no pagamento",
+    "enunciado": "O Estado do Maranhão contratou, pela Lei 14.133/2021, a construção de uma escola por R$ 10 milhões. Durante a obra, decidiu acrescentar uma quadra, o que aumentaria o valor em 30%, e determinou o aditivo sem ajustar o preço unitário dos demais itens, alegando que a cláusula de preço é prerrogativa da Administração. Em outra frente, suprimiu 40% de um contrato de reforma de hospital. Por fim, o Estado está há três meses sem pagar as medições já faturadas da escola, e a contratada quer encerrar o contrato. Neste contexto, responda justificadamente ao que se pede:",
+    "perguntas": [
+      "O acréscimo de 30% na obra da escola pode ser imposto unilateralmente?",
+      "O Estado pode alterar o contrato sem recompor o equilíbrio econômico-financeiro?",
+      "A supressão de 40% no contrato de reforma do hospital é válida?",
+      "A contratada pode pedir a extinção do contrato da escola pelo atraso no pagamento?"
+    ],
+    "linhas_min": 20,
+    "linhas": 30,
+    "espelho": [
+      {
+        "ponto": "Não. Na alteração unilateral, o contratado só é obrigado a aceitar acréscimos ou supressões de até 25% do valor inicial atualizado; o limite de 50% vale só para acréscimos em reforma de edifício ou equipamento. Construção nova fica nos 25%, e a alteração não pode transfigurar o objeto.",
+        "fundamento": "Lei 14.133/2021, arts. 124, I, b, 125 e 126",
+        "peso": 25
+      },
+      {
+        "ponto": "Não. A prerrogativa de modificar o contrato respeita os direitos do contratado: as cláusulas econômico-financeiras não mudam sem concordância dele, e toda alteração unilateral que mexa nos encargos exige restabelecer o equilíbrio no mesmo termo aditivo.",
+        "fundamento": "Lei 14.133/2021, arts. 104, I e §§ 1º e 2º, e 130",
+        "peso": 20
+      },
+      {
+        "ponto": "Não como imposição unilateral: na reforma, os 50% valem só para acréscimos; a supressão continua limitada a 25%. Supressão acima do limite dá ao contratado direito à extinção do contrato.",
+        "fundamento": "Lei 14.133/2021, arts. 125 e 137, § 2º, I",
+        "peso": 20
+      },
+      {
+        "ponto": "Sim. Atraso superior a 2 meses nos pagamentos devidos, contado da emissão da nota fiscal, dá ao contratado direito à extinção. Ele pode, em vez disso, suspender o cumprimento das obrigações até a normalização. A Administração só afasta isso em calamidade, grave perturbação da ordem ou guerra, ou se o contratado deu causa.",
+        "fundamento": "Lei 14.133/2021, art. 137, § 2º, IV, e § 3º, I e II",
+        "peso": 25
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado, cada quesito respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
+      }
+    ],
+    "dica": "A FCC adora a troca 25% × 50%: o 50% é só para ACRÉSCIMO em REFORMA. Em toda alteração unilateral, lembre do par prerrogativa (art. 104, I) e contrapartida (equilíbrio, art. 130).",
+    "tangencia": "Tangenciar é listar as cláusulas exorbitantes em abstrato sem aplicar os percentuais aos dois contratos e sem dizer se a contratada pode sair do contrato.",
+    "topico_id": "B2-06",
+    "temas": [
+      "B2|Contratos administrativos",
+      "B2|Licitações"
+    ]
+  },
+  {
+    "id": "adm-concessao-encampacao-caducidade",
+    "materia_id": "B2",
+    "titulo": "Travessia de ferry: retomar, punir ou intervir",
+    "enunciado": "O Estado do Maranhão concedeu, por 20 anos, o serviço de travessia por ferry-boat. No 8º ano, o Governador anunciou, por decreto, a retomada imediata do serviço para que uma autarquia o preste, por considerar a medida mais conveniente, e disse que a indenização será discutida depois. Ao mesmo tempo, a concessionária vinha descumprindo horários e normas de segurança. Ela também suspendeu a travessia dos usuários inadimplentes numa sexta-feira, sem aviso. Por fim, alegando atraso nos repasses do Estado, a concessionária anunciou que vai paralisar o serviço até receber. Neste contexto, responda justificadamente ao que se pede:",
+    "perguntas": [
+      "A retomada por decreto, com indenização posterior, é válida? Que figura é essa?",
+      "Diante das falhas da concessionária, qual a medida adequada e qual o procedimento?",
+      "A suspensão do serviço aos usuários inadimplentes foi regular?",
+      "A concessionária pode paralisar o serviço por falta de pagamento do Estado?"
+    ],
+    "linhas_min": 20,
+    "linhas": 30,
+    "espelho": [
+      {
+        "ponto": "Não. É encampação: retomada durante o prazo por interesse público, que exige lei autorizativa específica e prévio pagamento da indenização. Decreto e indenização posterior não bastam.",
+        "fundamento": "Lei 8.987/1995, arts. 35, II, e 37",
+        "peso": 25
+      },
+      {
+        "ponto": "Caducidade, que é a extinção por inexecução. Antes do processo, o Estado comunica as falhas em detalhe e dá prazo para corrigir; depois, com ampla defesa e inadimplência comprovada, declara por decreto, sem indenização prévia. Cabe também a intervenção por decreto, com processo em 30 dias e conclusão em até 180.",
+        "fundamento": "Lei 8.987/1995, arts. 38, §§ 3º e 4º, 32 e 33",
+        "peso": 25
+      },
+      {
+        "ponto": "Não. A interrupção por inadimplemento do usuário não é descontinuidade, mas depende de prévio aviso, considerado o interesse da coletividade, e não pode começar na sexta, no sábado, no domingo, em feriado ou na véspera de feriado.",
+        "fundamento": "Lei 8.987/1995, art. 6º, §§ 1º, 3º, II, e 4º",
+        "peso": 20
+      },
+      {
+        "ponto": "Não. A concessionária só rescinde por descumprimento do poder concedente mediante ação judicial própria, e o serviço não pode ser interrompido nem paralisado até o trânsito em julgado (continuidade).",
+        "fundamento": "Lei 8.987/1995, art. 39, caput e parágrafo único",
+        "peso": 20
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado, cada quesito respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
+      }
+    ],
+    "dica": "Quatro formas de mexer na concessão, uma por quesito: encampação (interesse público, lei e indenização prévia), caducidade (culpa da concessionária), corte do usuário (aviso e dia da semana) e rescisão pela concessionária (só judicial, sem parar o serviço).",
+    "tangencia": "Tangenciar é recitar as seis formas de extinção do art. 35 sem dizer qual se aplica ao caso, qual o procedimento e o que a concessionária e o Estado podem fazer.",
+    "topico_id": "B2-07",
+    "temas": [
+      "B2|Serviços públicos",
+      "B2|Contratos administrativos"
+    ]
+  },
+  {
+    "id": "adm-consorcio-publico-os",
+    "materia_id": "B2",
+    "titulo": "Consórcio de saúde e organização social",
+    "enunciado": "O Estado do Maranhão e dez Municípios querem criar um consórcio público, como associação pública, para gerir um hospital regional. O protocolo de intenções foi assinado, mas dois Municípios ainda não aprovaram a lei de ratificação. Um Prefeito sugere que o Estado repasse recursos ao consórcio por simples convênio, sem contrato de rateio, e que os empregados sejam estatutários. Para outro hospital, o Estado pretende qualificar uma entidade privada sem fins lucrativos como organização social e celebrar contrato de gestão, cedendo a ela o prédio sem licitação. Neste contexto, responda justificadamente ao que se pede:",
+    "perguntas": [
+      "Quando o consórcio adquire personalidade e qual a sua natureza na Administração?",
+      "O repasse sem contrato de rateio e o pessoal estatutário são possíveis?",
+      "A qualificação da entidade como organização social e o contrato de gestão sem licitação são válidos?",
+      "O prédio pode ser cedido à organização social sem licitação? Como?"
+    ],
+    "linhas_min": 20,
+    "linhas": 30,
+    "espelho": [
+      {
+        "ponto": "O consórcio de direito público nasce com a vigência das leis de ratificação do protocolo de intenções e integra a Administração indireta de todos os consorciados. Os Municípios que não ratificaram ficam de fora até ratificar, salvo se já tinham lei própria antes de subscrever.",
+        "fundamento": "Lei 11.107/2005, arts. 1º, § 1º, 3º, 5º, caput e § 4º, e 6º, I e § 1º; CF/88, art. 241",
+        "peso": 25
+      },
+      {
+        "ponto": "Não. Os entes só entregam recursos ao consórcio por contrato de rateio, formalizado a cada exercício, e o ente que não consignar dotação pode ser excluído. Mesmo de direito público, o consórcio admite pessoal pela CLT.",
+        "fundamento": "Lei 11.107/2005, arts. 6º, § 2º, e 8º, caput, §§ 1º e 5º",
+        "peso": 25
+      },
+      {
+        "ponto": "Sim. A saúde está entre as áreas de OS, a qualificação é discricionária (conveniência e oportunidade) e o contrato de gestão é parceria de fomento. O STF validou o modelo, exigindo procedimento público, objetivo e impessoal na qualificação e na escolha.",
+        "fundamento": "Lei 9.637/1998, arts. 1º, 2º, II, e 5º; STF, ADI 1.923/DF (Info 781)",
+        "peso": 20
+      },
+      {
+        "ponto": "Sim. Os bens podem ser destinados à OS com dispensa de licitação, por permissão de uso, desde que haja cláusula expressa no contrato de gestão. Se descumprir o contrato, a OS pode ser desqualificada após processo com ampla defesa.",
+        "fundamento": "Lei 9.637/1998, arts. 12, § 3º, e 16, § 1º",
+        "peso": 20
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado, cada quesito respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
+      }
+    ],
+    "dica": "Consórcio tem um caminho fixo: protocolo, lei de ratificação, contrato; dinheiro só por rateio; pessoal sempre CLT. OS: qualificação discricionária, contrato de gestão, bem por permissão de uso com cláusula expressa.",
+    "tangencia": "Tangenciar é comparar OS, OSCIP e OSC em abstrato sem responder quando o consórcio nasce, como entra o dinheiro e se a cessão do prédio é válida.",
+    "topico_id": "B2-02",
+    "temas": [
+      "B2|Organização administrativa"
+    ]
+  },
+  {
+    "id": "const-mandado-seguranca-servidor",
+    "materia_id": "B3",
+    "titulo": "Mandado de segurança contra o Secretário de Estado",
+    "enunciado": "Em março, o Secretário de Estado da Administração do Maranhão cancelou uma gratificação de Ana, servidora estadual. Cinco meses depois da ciência do ato, Ana impetrou mandado de segurança na Vara da Fazenda Pública de São Luís, pedindo a anulação do ato, liminar para voltar a receber a gratificação, o pagamento das parcelas desde março e honorários de sucumbência. O juiz negou a liminar dizendo que a Lei do Mandado de Segurança proíbe liminar para pagamento de vantagem a servidor. Você atua pela PGE. Neste contexto, responda justificadamente ao que se pede:",
+    "perguntas": [
+      "O juízo escolhido é competente?",
+      "Qual a principal defesa do Estado quanto ao prazo?",
+      "Os pedidos de parcelas desde março e de honorários são cabíveis?",
+      "O fundamento usado pelo juiz para negar a liminar está correto?"
+    ],
+    "linhas_min": 20,
+    "linhas": 30,
+    "espelho": [
+      {
+        "ponto": "Não. A autoridade coatora é Secretário de Estado, e a Constituição do Maranhão dá ao Tribunal de Justiça a competência originária para o MS contra seus atos, como permite a CF ao deixar a cada Estado a competência do seu TJ.",
+        "fundamento": "Constituição do Maranhão, art. 81, VI; CF/88, art. 125, § 1º",
+        "peso": 25
+      },
+      {
+        "ponto": "Decadência. O prazo para impetrar é de 120 dias da ciência do ato; cinco meses passam disso. O prazo é decadencial, e o STF o considera constitucional.",
+        "fundamento": "Lei 12.016/2009, art. 23; Súmula 632 do STF",
+        "peso": 25
+      },
+      {
+        "ponto": "Não. O MS não substitui ação de cobrança e não produz efeitos patrimoniais quanto a período anterior à impetração, que se cobra administrativamente ou por ação própria. Também não há honorários de sucumbência no MS.",
+        "fundamento": "Súmulas 269 e 271 do STF; Lei 12.016/2009, art. 25; Súmula 512 do STF",
+        "peso": 25
+      },
+      {
+        "ponto": "Não. O STF declarou inconstitucional a vedação de liminar para pagamento a servidor (art. 7º, § 2º). A liminar pode ser negada, mas por falta de requisito no caso, não por proibição legal.",
+        "fundamento": "STF, ADI 4.296",
+        "peso": 15
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado, cada quesito respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
+      }
+    ],
+    "dica": "Quatro filtros do MS, na ordem: quem é a autoridade (competência), quando foi a ciência (120 dias), o que se pede (nada de cobrar o passado nem honorários) e se a liminar tem vedação válida (ADI 4.296).",
+    "tangencia": "Tangenciar é explicar o que é direito líquido e certo sem aplicar ao caso de Ana a competência, o prazo, os pedidos e a liminar.",
+    "topico_id": "B3-03",
+    "temas": [
+      "B3|Remédios constitucionais",
+      "B3|Direitos fundamentais"
+    ]
+  },
+  {
+    "id": "trib-itcmd-anterioridade-ec132",
+    "materia_id": "B7",
+    "titulo": "Lei nova do ITCMD publicada em dezembro",
+    "enunciado": "Em 15 de dezembro de 2026, o Maranhão publicou lei que: (i) eleva as alíquotas do ITCMD a partir de 1º de janeiro de 2027; (ii) adota alíquota única de 4% para qualquer valor de herança ou doação; (iii) cobra o imposto sobre a doação de um imóvel situado no Piauí, feita por doador domiciliado em São Luís; e (iv) tributa as doações feitas a uma instituição sem fins lucrativos de relevância pública e social. Um contribuinte consulta a PGE para saber se a lei é válida. Neste contexto, responda justificadamente ao que se pede:",
+    "perguntas": [
+      "A majoração pode ser cobrada desde 1º de janeiro de 2027?",
+      "A alíquota única é compatível com a Constituição após a EC 132/2023?",
+      "O Maranhão é competente para cobrar o ITCMD da doação do imóvel no Piauí?",
+      "As doações à instituição sem fins lucrativos podem ser tributadas?"
+    ],
+    "linhas_min": 20,
+    "linhas": 30,
+    "espelho": [
+      {
+        "ponto": "Não. O ITCMD não é exceção a nenhuma das duas anterioridades, que se somam: não se cobra no mesmo exercício da publicação nem antes de 90 dias dela. Publicada em 15/12/2026, a majoração só vale depois de 90 dias, em meados de março de 2027.",
+        "fundamento": "CF/88, art. 150, III, b e c, e § 1º",
+        "peso": 25
+      },
+      {
+        "ponto": "Não. A EC 132/2023 tornou obrigatório: o ITCMD \"será progressivo\" em razão do valor do quinhão, do legado ou da doação. Antes, o STF só admitia a progressividade (RE 562.045); hoje a alíquota única viola a CF.",
+        "fundamento": "CF/88, art. 155, § 1º, VI; STF, RE 562.045",
+        "peso": 25
+      },
+      {
+        "ponto": "Não. Para bens imóveis, o ITCMD compete ao Estado da situação do bem, o Piauí. O domicílio do doador só define a competência para bens móveis, títulos e créditos.",
+        "fundamento": "CF/88, art. 155, § 1º, I e II",
+        "peso": 20
+      },
+      {
+        "ponto": "Não. Desde a EC 132/2023, o ITCMD não incide sobre transmissões e doações para instituições sem fins lucrativos com finalidade de relevância pública e social, nem sobre as feitas por elas nos seus objetivos sociais, observadas as condições de lei complementar.",
+        "fundamento": "CF/88, art. 155, § 1º, VII",
+        "peso": 20
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado, cada quesito respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
+      }
+    ],
+    "dica": "Data de publicação no enunciado é sempre pista de anterioridade: dezembro puxa as duas, anual e noventena. Depois vá ao art. 155, § 1º, inciso por inciso: I e II (competência), VI (progressivo) e VII (não incidência).",
+    "tangencia": "Tangenciar é explicar os princípios tributários em geral sem dar a data em que a majoração vale e sem dizer se cada ponto da lei é válido.",
+    "topico_id": "B7-01",
+    "temas": [
+      "B7|Limitações ao poder de tributar",
+      "B7|Competência tributária",
+      "B7|Impostos estaduais",
+      "B7|Imunidades"
+    ]
   }
 ]
