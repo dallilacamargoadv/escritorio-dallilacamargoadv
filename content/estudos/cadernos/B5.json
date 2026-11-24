@@ -1900,7 +1900,1346 @@
    "topico_id": "B5-03",
    "numero": 3,
    "titulo": "Sujeitos do processo",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "CPC (arts. 70 a 187), texto vigente; súmulas do STJ conferidas no PDF oficial de enunciados em 24/11/2026",
+   "resumo": [
+    "Três capacidades: ser parte, estar em juízo (art. 70) e postulatória (art. 103). Incapaz representado ou assistido (art. 71); curador especial ao incapaz sem representante e ao revel preso ou citado por edital ou hora certa, exercido pela Defensoria (art. 72). Consentimento do cônjuge em ação real imobiliária (arts. 73 e 74).",
+    "Representação (art. 75): Estado por seus procuradores, sem procuração; convênio entre procuradorias (§ 4º). Vício de capacidade ou representação: suspende e dá prazo; não sanado, extinção, revelia, não conhecimento ou desentranhamento conforme o polo e o grau (art. 76). Procuração: 15 dias para atos urgentes (art. 104) e poderes especiais (art. 105).",
+    "Deveres e sanções: ato atentatório até 20% do valor da causa, sem aplicação a advogados, MP e Defensoria (art. 77, §§ 2º e 6º); má-fé de ofício, mais de 1% e menos de 10% (arts. 80 e 81).",
+    "Despesas e honorários: antecipação pela parte (art. 82); 10% a 20% (art. 85, § 2º); Fazenda parte, faixas escalonadas do § 3º e § 5º; sem honorários no cumprimento por precatório não impugnado (§ 7º); vedada a compensação (§ 14); ação autônoma para honorários omitidos (§ 18); Fazenda paga ao final e perícia do art. 91.",
+    "Gratuidade: pessoa natural ou jurídica (art. 98); presunção só da pessoa natural (art. 99, § 3º; Súmula 481); sucumbência sob condição suspensiva por 5 anos e multas pagas (art. 98, §§ 3º e 4º); impugnação no art. 100; agravo contra indeferimento ou revogação (art. 101).",
+    "Litisconsórcio: necessário (lei ou relação incindível) x facultativo; unitário x simples; sentença nula ou ineficaz sem o necessário (art. 115); limitação do facultativo interrompe o prazo (art. 113, § 2º).",
+    "Intervenção: assistência (interesse jurídico), denunciação (autor ou réu; regresso por ação autônoma), chamamento (só o réu), IDPJ (a pedido, em todas as fases, suspende) e amicus curiae (decisão irrecorrível, só ED e IRDR).",
+    "Juiz (impedimento x suspeição, 15 dias), MP (art. 178, parágrafo único; Súmula 189), Advocacia Pública e Defensoria (prazo em dobro com intimação pessoal; responsabilidade por dolo ou fraude; honorários do advogado público, art. 85, § 19)."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: quem são os sujeitos do processo",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Na aula 2 vimos <b>onde</b> a causa corre. Agora a pergunta é <b>quem</b> está nela. O processo tem sujeitos <b>parciais</b> (as partes e os terceiros que entram para defender interesse próprio) e sujeitos <b>imparciais</b> (o juiz e, como fiscal da ordem jurídica, o Ministério Público). Em volta deles atuam os advogados, públicos e privados, e a Defensoria."
+      },
+      {
+       "t": "cena",
+       "titulo": "Três capacidades, três perguntas diferentes",
+       "altura": 280,
+       "elementos": [
+        {
+         "id": "ser",
+         "tipo": "caixa",
+         "x": 10,
+         "y": 30,
+         "w": 200,
+         "h": 60,
+         "texto": "1. Capacidade de ser parte",
+         "sub": "quem tem personalidade (e alguns entes sem ela)",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "estar",
+         "tipo": "caixa",
+         "x": 240,
+         "y": 30,
+         "w": 200,
+         "h": 60,
+         "texto": "2. Capacidade de estar em juízo",
+         "sub": "art. 70: quem está no exercício dos direitos",
+         "cor": "blue"
+        },
+        {
+         "id": "post",
+         "tipo": "caixa",
+         "x": 470,
+         "y": 30,
+         "w": 200,
+         "h": 60,
+         "texto": "3. Capacidade postulatória",
+         "sub": "art. 103: advogado inscrito na OAB",
+         "cor": "ok"
+        },
+        {
+         "id": "s1",
+         "tipo": "seta",
+         "x": 212,
+         "y": 60,
+         "w": 238,
+         "h": 60,
+         "cor": "dim"
+        },
+        {
+         "id": "s2",
+         "tipo": "seta",
+         "x": 442,
+         "y": 60,
+         "w": 468,
+         "h": 60,
+         "cor": "dim"
+        },
+        {
+         "id": "inc",
+         "tipo": "rotulo",
+         "x": 240,
+         "y": 120,
+         "texto": "Incapaz: representado ou assistido (art. 71); sem representante, curador especial (art. 72)",
+         "cor": "warn"
+        },
+        {
+         "id": "ent",
+         "tipo": "gota",
+         "x": 40,
+         "y": 170,
+         "texto": "espólio, massa falida, condomínio: partes sem personalidade (art. 75)",
+         "cor": "blue"
+        },
+        {
+         "id": "proc",
+         "tipo": "gota",
+         "x": 470,
+         "y": 170,
+         "texto": "Procurador do Estado: capacidade postulatória pelo cargo, sem procuração",
+         "cor": "ok"
+        },
+        {
+         "id": "vicio",
+         "tipo": "rotulo",
+         "x": 180,
+         "y": 240,
+         "texto": "Faltou alguma? O juiz suspende e manda sanar (art. 76)",
+         "cor": "bad"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Primeira pergunta: esse sujeito <b>pode ser parte</b>? Em regra, quem tem personalidade jurídica. Mas o CPC dá capacidade de ser parte a entes sem personalidade, como o espólio, a massa falida e o condomínio (art. 75)."
+        },
+        {
+         "texto": "Segunda: ele pode <b>estar em juízo sozinho</b>? Toda pessoa no exercício dos seus direitos pode (art. 70). O incapaz é representado ou assistido (art. 71).",
+         "mostra": [
+          "s1",
+          "estar",
+          "inc",
+          "ent"
+         ],
+         "anima": {
+          "estar": "pulsa"
+         }
+        },
+        {
+         "texto": "Terceira: quem <b>fala tecnicamente</b> no processo? O advogado inscrito na OAB (art. 103). O Procurador do Estado representa o Estado pelo cargo (art. 75, II), sem precisar de procuração.",
+         "mostra": [
+          "s1",
+          "estar",
+          "inc",
+          "ent",
+          "s2",
+          "post",
+          "proc"
+         ],
+         "anima": {
+          "post": "pulsa"
+         }
+        },
+        {
+         "texto": "Se faltar capacidade processual ou a representação estiver irregular, o processo <b>não é extinto de cara</b>: o juiz suspende e dá prazo para sanar (art. 76). A consequência do descumprimento depende de quem devia agir.",
+         "mostra": [
+          "s1",
+          "estar",
+          "inc",
+          "ent",
+          "s2",
+          "post",
+          "proc",
+          "vicio"
+         ],
+         "anima": {
+          "vicio": "treme"
+         }
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 70, 71 e 72",
+       "texto": "Art. 70. Toda pessoa que se encontre no exercício de seus direitos tem capacidade para estar em juízo.\nArt. 71. O incapaz será representado ou assistido por seus pais, por tutor ou por curador, na forma da lei.\nArt. 72. O juiz nomeará curador especial ao:\nI - incapaz, se não tiver representante legal ou se os interesses deste colidirem com os daquele, enquanto durar a incapacidade;\nII - ==réu preso revel==, bem como ao réu revel ==citado por edital ou com hora certa==, enquanto não for constituído advogado.\nParágrafo único. A curatela especial será exercida pela ==Defensoria Pública==, nos termos da lei."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Curador especial não é para todo revel",
+       "html": "Só o revel <b>preso</b> e o revel citado <b>por edital ou com hora certa</b> (citação ficta). O revel citado pessoalmente, que simplesmente não contestou, não ganha curador especial. E a curatela especial é função da <b>Defensoria Pública</b>."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 73, caput e §§ 1º a 3º",
+       "texto": "Art. 73. O cônjuge necessitará do consentimento do outro para propor ação que verse sobre ==direito real imobiliário==, salvo quando casados sob o regime de ==separação absoluta de bens==.\n§ 2º Nas ações possessórias, a participação do cônjuge do autor ou do réu somente é indispensável nas hipóteses de ==composse ou de ato por ambos praticado==.\n§ 3º Aplica-se o disposto neste artigo à ==união estável comprovada nos autos==."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 74",
+       "texto": "Art. 74. O consentimento previsto no art. 73 pode ser ==suprido judicialmente== quando for negado por um dos cônjuges sem justo motivo, ou quando lhe seja impossível concedê-lo.\nParágrafo único. A falta de consentimento, quando necessário e não suprido pelo juiz, ==invalida o processo==."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: representação, vícios, sucessão e procuradores",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O art. 75 diz quem fala por cada ente. É o artigo da carteira funcional de quem vai para a PGE: <b>o Estado é representado por seus procuradores</b>. A representação decorre da lei e do cargo, por isso o Procurador do Estado não junta procuração."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 75, I, II, VII, VIII e XI, e § 4º",
+       "texto": "Art. 75. Serão representados em juízo, ativa e passivamente:\nI - a União, pela Advocacia-Geral da União, diretamente ou mediante órgão vinculado;\nII - o Estado e o Distrito Federal, ==por seus procuradores==;\nIV - a autarquia e a fundação de direito público, ==por quem a lei do ente federado designar==;\nVII - o espólio, pelo inventariante;\nVIII - a pessoa jurídica, por quem os respectivos atos constitutivos designarem ou, não havendo essa designação, por seus diretores;\nXI - o condomínio, pelo administrador ou síndico.\n§ 4º Os Estados e o Distrito Federal poderão ajustar compromisso recíproco para prática de ato processual por seus procuradores em favor de outro ente federado, ==mediante convênio firmado pelas respectivas procuradorias==."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Município: a redação nova do inciso III",
+       "html": "O arquivo do CPC traz o inciso III nas duas redações. A vigente diz: Município representado \"por seu prefeito, procurador ou Associação de Representação de Municípios, quando expressamente autorizada\", e o § 5º limita essa associação a questões de interesse comum, com autorização do chefe do Executivo municipal."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 75, III (redação vigente) e § 2º",
+       "texto": "III - o Município, por seu prefeito, procurador ou Associação de Representação de Municípios, quando expressamente autorizada;\n§ 2º A sociedade ou associação sem personalidade jurídica não poderá opor a irregularidade de sua constituição quando demandada."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 76",
+       "texto": "Art. 76. Verificada a incapacidade processual ou a irregularidade da representação da parte, o juiz ==suspenderá o processo e designará prazo razoável== para que seja sanado o vício."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Primeiro grau: autor",
+         "sub": "art. 76, § 1º, I",
+         "texto": "Se a providência cabia ao <b>autor</b> e ele não sanou: o processo é <b>extinto</b>."
+        },
+        {
+         "titulo": "Primeiro grau: réu e terceiro",
+         "sub": "art. 76, § 1º, II e III",
+         "texto": "Se cabia ao <b>réu</b>: ele é considerado <b>revel</b>. Ao <b>terceiro</b>: revel ou excluído, conforme o polo em que estiver."
+        },
+        {
+         "titulo": "No tribunal",
+         "sub": "art. 76, § 2º",
+         "texto": "Se cabia ao <b>recorrente</b>: o relator <b>não conhece</b> do recurso. Se cabia ao <b>recorrido</b>: o relator manda <b>desentranhar as contrarrazões</b>."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 103, 104 e 105, caput",
+       "texto": "Art. 103. A parte será representada em juízo por advogado regularmente inscrito na Ordem dos Advogados do Brasil.\nArt. 104. O advogado não será admitido a postular em juízo sem procuração, salvo para ==evitar preclusão, decadência ou prescrição==, ou para praticar ato considerado urgente.\n§ 1º Nas hipóteses previstas no caput , o advogado deverá, independentemente de caução, exibir a procuração no prazo de ==15 (quinze) dias, prorrogável por igual período== por despacho do juiz.\n§ 2º O ato não ratificado será considerado ==ineficaz== relativamente àquele em cujo nome foi praticado, respondendo o advogado pelas despesas e por perdas e danos."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Poderes especiais (art. 105)",
+       "html": "A procuração geral para o foro <b>não</b> habilita a receber citação, confessar, reconhecer a procedência do pedido, transigir, desistir, renunciar ao direito, receber, dar quitação, firmar compromisso e assinar declaração de hipossuficiência econômica: tudo isso precisa de <b>cláusula específica</b>. E, salvo disposição em contrário, a procuração da fase de conhecimento vale para o cumprimento de sentença (§ 4º)."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 108, 109 e 110",
+       "texto": "Art. 108. No curso do processo, somente é lícita a sucessão voluntária das partes nos casos expressos em lei.\nArt. 109. A alienação da coisa ou do direito litigioso por ato entre vivos, a título particular, ==não altera a legitimidade das partes==.\n§ 1º O adquirente ou cessionário não poderá ingressar em juízo, sucedendo o alienante ou cedente, ==sem que o consinta a parte contrária==.\n§ 2º O adquirente ou cessionário poderá intervir no processo como ==assistente litisconsorcial== do alienante ou cedente.\n§ 3º ==Estendem-se os efeitos== da sentença proferida entre as partes originárias ao adquirente ou cessionário.\nArt. 110. Ocorrendo a morte de qualquer das partes, dar-se-á a sucessão pelo seu espólio ou pelos seus sucessores, observado o disposto no art. 313, §§ 1º e 2º."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Revogar",
+         "sub": "art. 111"
+        },
+        {
+         "titulo": "15 dias",
+         "sub": "sem novo advogado"
+        },
+        {
+         "titulo": "Renunciar",
+         "sub": "art. 112"
+        },
+        {
+         "titulo": "10 dias",
+         "sub": "§ 1º"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "A parte que <b>revoga</b> o mandato deve constituir, no mesmo ato, outro advogado (art. 111)."
+        },
+        {
+         "no": 1,
+         "texto": "Sem novo procurador em <b>15 dias</b>, aplica-se o art. 76: suspensão e prazo para sanar, com as consequências da escada acima (art. 111, parágrafo único)."
+        },
+        {
+         "no": 2,
+         "texto": "O advogado pode <b>renunciar</b> a qualquer tempo, provando que comunicou o mandante (art. 112)."
+        },
+        {
+         "no": 3,
+         "texto": "Nos <b>10 dias</b> seguintes, continua representando o mandante, se necessário para evitar prejuízo. A comunicação é dispensada se outro advogado constituído continua na causa (art. 112, §§ 1º e 2º)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: deveres das partes e litigância de má-fé",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Todos os que participam do processo têm deveres de lealdade (art. 77), reflexo da boa-fé da aula 1 (art. 5º). Há duas sanções diferentes que a banca mistura: a multa por <b>ato atentatório à dignidade da justiça</b> (art. 77, § 2º), que é sanção ao Estado-juiz e vai para fundo público, e a multa por <b>litigância de má-fé</b> (art. 81), que vai para a parte contrária."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 77, IV e VI, e §§ 2º, 6º e 8º",
+       "texto": "IV - cumprir com exatidão as decisões jurisdicionais, de natureza provisória ou final, e não criar embaraços à sua efetivação;\nVI - não praticar inovação ilegal no estado de fato de bem ou direito litigioso.\n§ 2º A violação ao disposto nos incisos IV e VI constitui ato atentatório à dignidade da justiça, devendo o juiz, sem prejuízo das sanções criminais, civis e processuais cabíveis, aplicar ao responsável multa de ==até vinte por cento do valor da causa==, de acordo com a gravidade da conduta.\n§ 6º Aos ==advogados públicos ou privados== e aos membros da Defensoria Pública e do Ministério Público não se aplica o disposto nos §§ 2º a 5º, devendo eventual responsabilidade disciplinar ser apurada pelo respectivo ==órgão de classe ou corregedoria==, ao qual o juiz oficiará.\n§ 8º O representante judicial da parte ==não pode ser compelido a cumprir decisão em seu lugar==."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Procurador do Estado e a ordem descumprida",
+       "html": "Se a decisão contra o Estado não é cumprida, a multa do § 2º recai sobre a parte (o ente) ou sobre o agente responsável pelo cumprimento, mas <b>nunca sobre o Procurador</b> como advogado: a eventual falta dele é apurada na corregedoria, a quem o juiz oficia (§ 6º). E o Procurador não pode ser obrigado a cumprir a decisão no lugar do Estado (§ 8º)."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 79, 80 e 81, caput e § 2º",
+       "texto": "Art. 79. Responde por perdas e danos aquele que litigar de má-fé como autor, réu ou interveniente.\nArt. 80. Considera-se litigante de má-fé aquele que:\nI - deduzir pretensão ou defesa contra texto expresso de lei ou fato incontroverso;\nII - alterar a verdade dos fatos;\nIII - usar do processo para conseguir objetivo ilegal;\nIV - opuser resistência injustificada ao andamento do processo;\nV - proceder de modo temerário em qualquer incidente ou ato do processo;\nVI - provocar incidente manifestamente infundado;\nVII - interpuser recurso com intuito manifestamente protelatório.\nArt. 81. ==De ofício ou a requerimento==, o juiz condenará o litigante de má-fé a pagar multa, que deverá ser ==superior a um por cento e inferior a dez por cento== do valor corrigido da causa, a indenizar a parte contrária pelos prejuízos que esta sofreu e a arcar com os honorários advocatícios e com todas as despesas que efetuou.\n§ 2º Quando o valor da causa for irrisório ou inestimável, a multa poderá ser fixada em ==até 10 (dez) vezes o valor do salário-mínimo==."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Ato atentatório (art. 77, § 2º)",
+        "Má-fé (art. 81)"
+       ],
+       "linhas": [
+        [
+         "Conduta",
+         "descumprir decisão ou criar embaraço (IV); inovação ilegal no estado de fato (VI)",
+         "as sete hipóteses do art. 80"
+        ],
+        [
+         "Valor",
+         "<b>até 20%</b> do valor da causa (irrisório ou inestimável: até 10 salários-mínimos)",
+         "<b>mais de 1% e menos de 10%</b> do valor corrigido da causa (irrisório ou inestimável: até 10 salários-mínimos)"
+        ],
+        [
+         "Destino",
+         "inscrita em dívida ativa da União ou do Estado e revertida aos fundos do art. 97",
+         "a parte contrária, com perdas e danos, honorários e despesas"
+        ],
+        [
+         "Advogados, MP e Defensoria",
+         "não se aplica: o juiz oficia ao órgão de classe ou corregedoria (§ 6º)",
+         "a sanção é da parte que litiga de má-fé"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: despesas e honorários, com a Fazenda Pública no centro",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "A lógica do sistema é a <b>causalidade</b>: quem dá causa ao processo paga por ele. Durante o processo, cada parte <b>antecipa</b> as despesas dos atos que pede (art. 82); no fim, o vencido reembolsa o vencedor e paga os honorários do advogado dele (arts. 82, § 2º, e 85)."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 82, caput e §§ 1º e 2º, e 84",
+       "texto": "Art. 82. Salvo as disposições concernentes à gratuidade da justiça, incumbe às partes prover as despesas dos atos que realizarem ou requererem no processo, ==antecipando-lhes o pagamento==, desde o início até a sentença final ou, na execução, até a plena satisfação do direito reconhecido no título.\n§ 1º ==Incumbe ao autor adiantar== as despesas relativas a ato cuja realização o juiz determinar de ofício ou a requerimento do Ministério Público, quando sua intervenção ocorrer como fiscal da ordem jurídica.\n§ 2º A sentença condenará o vencido a pagar ao vencedor as despesas que antecipou.\nArt. 84. As despesas abrangem as custas dos atos do processo, a indenização de viagem, a remuneração do assistente técnico e a diária de testemunha."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 85, caput, §§ 1º e 2º",
+       "texto": "Art. 85. A sentença condenará o vencido a pagar honorários ao advogado do vencedor.\n§ 1º São devidos honorários advocatícios na reconvenção, no cumprimento de sentença, provisório ou definitivo, na execução, resistida ou não, e nos recursos interpostos, ==cumulativamente==.\n§ 2º Os honorários serão fixados ==entre o mínimo de dez e o máximo de vinte por cento== sobre o valor da condenação, do proveito econômico obtido ou, não sendo possível mensurá-lo, sobre o valor atualizado da causa, atendidos:"
+      },
+      {
+       "t": "texto",
+       "html": "<b>Fazenda Pública parte.</b> Quando a Fazenda é parte (vencedora ou vencida), os percentuais caem por faixas de salários-mínimos, e a fixação é escalonada: aplica-se a faixa inicial e, no que exceder, a seguinte (§ 5º)."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 85, §§ 3º, 4º e 5º",
+       "texto": "§ 3º Nas causas em que a Fazenda Pública ==for parte==, a fixação dos honorários observará os critérios estabelecidos nos incisos I a IV do § 2º e os seguintes percentuais:\nI - mínimo de dez e máximo de vinte por cento sobre o valor da condenação ou do proveito econômico obtido até 200 (duzentos) salários-mínimos;\nII - mínimo de oito e máximo de dez por cento sobre o valor da condenação ou do proveito econômico obtido acima de 200 (duzentos) salários-mínimos até 2.000 (dois mil) salários-mínimos;\nIII - mínimo de cinco e máximo de oito por cento sobre o valor da condenação ou do proveito econômico obtido acima de 2.000 (dois mil) salários-mínimos até 20.000 (vinte mil) salários-mínimos;\nIV - mínimo de três e máximo de cinco por cento sobre o valor da condenação ou do proveito econômico obtido acima de 20.000 (vinte mil) salários-mínimos até 100.000 (cem mil) salários-mínimos;\nV - mínimo de um e máximo de três por cento sobre o valor da condenação ou do proveito econômico obtido acima de 100.000 (cem mil) salários-mínimos.\nII - não sendo líquida a sentença, a definição do percentual, nos termos previstos nos incisos I a V, ==somente ocorrerá quando liquidado o julgado==;\n§ 5º Quando, conforme o caso, a condenação contra a Fazenda Pública ou o benefício econômico obtido pelo vencedor ou o valor da causa for superior ao valor previsto no inciso I do § 3º, a fixação do percentual de honorários deve observar ==a faixa inicial e, naquilo que a exceder, a faixa subsequente==, e assim sucessivamente."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "Até 200 SM",
+         "sub": "§ 3º, I",
+         "texto": "<b>10% a 20%</b>. Igual à regra geral do § 2º."
+        },
+        {
+         "titulo": "200 a 2.000 SM",
+         "sub": "§ 3º, II",
+         "texto": "<b>8% a 10%</b> sobre a parte que passa de 200."
+        },
+        {
+         "titulo": "2.000 a 20.000 SM",
+         "sub": "§ 3º, III",
+         "texto": "<b>5% a 8%</b> sobre a parte que passa de 2.000."
+        },
+        {
+         "titulo": "20.000 a 100.000 SM",
+         "sub": "§ 3º, IV",
+         "texto": "<b>3% a 5%</b>."
+        },
+        {
+         "titulo": "Acima de 100.000 SM",
+         "sub": "§ 3º, V",
+         "texto": "<b>1% a 3%</b>. Exemplo de escalonamento: condenação de 500 SM paga 10% a 20% sobre os primeiros 200 e 8% a 10% sobre os 300 restantes (§ 5º)."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 85, §§ 6º-A, 7º, 8º, 11, 14, 18 e 19",
+       "texto": "§ 6º-A. Quando o valor da condenação ou do proveito econômico obtido ou o valor atualizado da causa for líquido ou liquidável, para fins de fixação dos honorários advocatícios, nos termos dos §§ 2º e 3º, ==é proibida a apreciação equitativa==, salvo nas hipóteses expressamente previstas no § 8º deste artigo.\n§ 7º Não serão devidos honorários no cumprimento de sentença contra a Fazenda Pública ==que enseje expedição de precatório, desde que não tenha sido impugnada==.\n§ 8º Nas causas em que for inestimável ou irrisório o proveito econômico ou, ainda, quando o valor da causa for muito baixo, o juiz fixará o valor dos honorários por apreciação equitativa, observando o disposto nos incisos do § 2º.\n§ 11. O tribunal, ao julgar recurso, majorará os honorários fixados anteriormente levando em conta o trabalho adicional realizado em grau recursal, observando, conforme o caso, o disposto nos §§ 2º a 6º, sendo vedado ao tribunal, no cômputo geral da fixação de honorários devidos ao advogado do vencedor, ==ultrapassar os respectivos limites== estabelecidos nos §§ 2º e 3º para a fase de conhecimento.\n§ 14. Os honorários constituem direito do advogado e têm natureza alimentar, com os mesmos privilégios dos créditos oriundos da legislação do trabalho, sendo ==vedada a compensação== em caso de sucumbência parcial.\n§ 18. Caso a decisão transitada em julgado seja omissa quanto ao direito aos honorários ou ao seu valor, ==é cabível ação autônoma== para sua definição e cobrança.\n§ 19. ==Os advogados públicos perceberão honorários== de sucumbência, nos termos da lei."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Lei nova x súmula antiga",
+       "html": "Duas súmulas do STJ continuam no PDF oficial, mas o CPC de 2015 trouxe regra expressa em outro sentido: a Súmula 453 (honorários omitidos não se cobram em ação própria) diante do art. 85, § 18 (cabe ação autônoma), e a ideia de compensar honorários na sucumbência recíproca diante do § 14 (vedada a compensação). Em questão de lei seca, a FCC cobra a <b>letra do CPC</b>."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 90, § 4º, e 91",
+       "texto": "§ 4º Se o réu reconhecer a procedência do pedido e, simultaneamente, cumprir integralmente a prestação reconhecida, os honorários serão ==reduzidos pela metade==.\nArt. 91. As despesas dos atos processuais praticados a requerimento da Fazenda Pública, do Ministério Público ou da Defensoria Pública ==serão pagas ao final pelo vencido==.\n§ 1º As perícias requeridas pela Fazenda Pública, pelo Ministério Público ou pela Defensoria Pública poderão ser realizadas por entidade pública ou, ==havendo previsão orçamentária==, ter os valores adiantados por aquele que requerer a prova.\n§ 2º Não havendo previsão orçamentária no exercício financeiro para adiantamento dos honorários periciais, eles serão pagos ==no exercício seguinte ou ao final==, pelo vencido, caso o processo se encerre antes do adiantamento a ser feito pelo ente público."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Perícia pedida pelo Estado",
+       "html": "A regra é o Estado <b>não antecipar</b> despesas (art. 91). Para a perícia, o CPC deu solução própria: entidade pública faz a perícia ou, havendo previsão orçamentária, o ente adianta os honorários do perito; sem previsão, paga no exercício seguinte ou ao final, pelo vencido (§§ 1º e 2º). A Súmula 232 do STJ, anterior ao CPC, dizia que a Fazenda se sujeita ao depósito prévio dos honorários do perito; leia-a junto com o art. 91."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: gratuidade da justiça (arts. 98 a 102)",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CPC, art. 98, caput e §§ 2º a 5º",
+       "texto": "Art. 98. A pessoa ==natural ou jurídica, brasileira ou estrangeira==, com insuficiência de recursos para pagar as custas, as despesas processuais e os honorários advocatícios tem direito à gratuidade da justiça, na forma da lei.\n§ 2º A concessão de gratuidade ==não afasta a responsabilidade== do beneficiário pelas despesas processuais e pelos honorários advocatícios decorrentes de sua sucumbência.\n§ 3º Vencido o beneficiário, as obrigações decorrentes de sua sucumbência ficarão sob ==condição suspensiva de exigibilidade== e somente poderão ser executadas se, nos ==5 (cinco) anos== subsequentes ao trânsito em julgado da decisão que as certificou, o credor demonstrar que deixou de existir a situação de insuficiência de recursos que justificou a concessão de gratuidade, extinguindo-se, passado esse prazo, tais obrigações do beneficiário.\n§ 4º A concessão de gratuidade não afasta o dever de o beneficiário pagar, ao final, ==as multas processuais== que lhe sejam impostas.\n§ 5º A gratuidade poderá ser concedida em relação a algum ou a todos os atos processuais, ou consistir na redução percentual de despesas processuais que o beneficiário tiver de adiantar no curso do procedimento."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Pessoa natural",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "Alegação",
+           "sub": "presume-se verdadeira"
+          },
+          {
+           "titulo": "Juiz",
+           "sub": "só indefere com elementos nos autos"
+          }
+         ],
+         "texto": "Basta <b>alegar</b> a insuficiência: presume-se verdadeira (art. 99, § 3º). O juiz só indefere se houver nos autos elementos que mostrem a falta dos pressupostos e, antes, deve mandar a parte comprovar (§ 2º). Ter advogado particular não impede (§ 4º)."
+        },
+        {
+         "rotulo": "Pessoa jurídica",
+         "modo": "fora",
+         "caixas": [
+          {
+           "titulo": "Alegação",
+           "sub": "não basta"
+          },
+          {
+           "titulo": "Prova",
+           "sub": "precisa demonstrar"
+          }
+         ],
+         "texto": "A presunção é só da pessoa natural. A pessoa jurídica, com ou sem fins lucrativos, tem direito, mas precisa <b>demonstrar</b> a impossibilidade de arcar com os encargos (Súmula 481 do STJ)."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 99, caput e §§ 2º, 3º, 4º, 6º e 7º",
+       "texto": "Art. 99. O pedido de gratuidade da justiça pode ser formulado na petição inicial, na contestação, na petição para ingresso de terceiro no processo ou em recurso.\n§ 2º O juiz somente poderá indeferir o pedido se houver nos autos elementos que evidenciem a falta dos pressupostos legais para a concessão de gratuidade, devendo, antes de indeferir o pedido, determinar à parte a comprovação do preenchimento dos referidos pressupostos.\n§ 3º Presume-se verdadeira a alegação de insuficiência deduzida ==exclusivamente por pessoa natural==.\n§ 4º A assistência do requerente por advogado particular ==não impede== a concessão de gratuidade da justiça.\n§ 6º O direito à gratuidade da justiça ==é pessoal==, não se estendendo a litisconsorte ou a sucessor do beneficiário, salvo requerimento e deferimento expressos.\n§ 7º Requerida a concessão de gratuidade da justiça em recurso, o recorrente estará ==dispensado de comprovar o recolhimento do preparo==, incumbindo ao relator, neste caso, apreciar o requerimento e, se indeferi-lo, fixar prazo para realização do recolhimento."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Pedido",
+         "sub": "art. 99"
+        },
+        {
+         "titulo": "Impugnação",
+         "sub": "art. 100"
+        },
+        {
+         "titulo": "Recurso",
+         "sub": "art. 101"
+        },
+        {
+         "titulo": "Revogação",
+         "sub": "arts. 100 e 102"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Pede-se na inicial, na contestação, no ingresso de terceiro ou no recurso. Depois da primeira manifestação, por petição simples, sem suspender o processo (art. 99, § 1º)."
+        },
+        {
+         "no": 1,
+         "texto": "Deferido, a parte contrária impugna <b>na contestação, na réplica, nas contrarrazões</b> ou, no pedido superveniente ou de terceiro, por petição simples em <b>15 dias</b>, sem suspensão (art. 100). É aqui que o Estado, réu, contesta a gratuidade do autor."
+        },
+        {
+         "no": 2,
+         "texto": "Contra a decisão que <b>indefere</b> ou que <b>revoga</b>: agravo de instrumento; se a questão for resolvida na sentença, apelação. O recorrente não recolhe custas até o relator decidir (art. 101, § 1º)."
+        },
+        {
+         "no": 3,
+         "texto": "Revogado o benefício, a parte paga o que deixou de adiantar e, se houve má-fé, multa de até o <b>décuplo</b>, revertida à Fazenda estadual ou federal e inscritível em dívida ativa (art. 100, parágrafo único)."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 100 e 101, caput",
+       "texto": "Art. 100. Deferido o pedido, a parte contrária poderá oferecer impugnação na contestação, na réplica, nas contrarrazões de recurso ou, nos casos de pedido superveniente ou formulado por terceiro, por meio de petição simples, a ser apresentada no prazo de 15 (quinze) dias, nos autos do próprio processo, sem suspensão de seu curso.\nParágrafo único. Revogado o benefício, a parte arcará com as despesas processuais que tiver deixado de adiantar e pagará, em caso de má-fé, ==até o décuplo== de seu valor a título de multa, que será revertida em benefício da ==Fazenda Pública estadual ou federal== e poderá ser inscrita em dívida ativa.\nArt. 101. Contra a decisão que indeferir a gratuidade ou a que acolher pedido de sua revogação caberá ==agravo de instrumento==, exceto quando a questão for resolvida na sentença, contra a qual caberá apelação."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O deferimento não tem agravo no art. 101",
+       "html": "O art. 101 só prevê agravo contra o <b>indeferimento</b> e contra o acolhimento da <b>revogação</b>. Quem quer combater a gratuidade <b>concedida</b> usa a impugnação do art. 100, não o agravo."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: litisconsórcio (arts. 113 a 118)",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Litisconsórcio é a pluralidade de partes num mesmo polo. Duas classificações se cruzam e a FCC cobra as duas juntas: quanto à <b>obrigatoriedade</b> (facultativo ou necessário) e quanto ao <b>resultado</b> (simples ou unitário)."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 113, caput e §§ 1º e 2º",
+       "texto": "Art. 113. Duas ou mais pessoas podem litigar, no mesmo processo, em conjunto, ativa ou passivamente, quando:\nI - entre elas houver comunhão de direitos ou de obrigações relativamente à lide;\nII - entre as causas houver conexão pelo pedido ou pela causa de pedir;\nIII - ocorrer afinidade de questões por ponto comum de fato ou de direito.\n§ 1º O juiz poderá ==limitar o litisconsórcio facultativo== quanto ao número de litigantes na fase de conhecimento, na liquidação de sentença ou na execução, quando este comprometer a rápida solução do litígio ou dificultar a defesa ou o cumprimento da sentença.\n§ 2º O requerimento de limitação ==interrompe o prazo== para manifestação ou resposta, que recomeçará da intimação da decisão que o solucionar."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 114, 115 e 116",
+       "texto": "Art. 114. O litisconsórcio será necessário ==por disposição de lei ou quando, pela natureza da relação jurídica== controvertida, a eficácia da sentença depender da citação de todos que devam ser litisconsortes.\nArt. 115. A sentença de mérito, quando proferida sem a integração do contraditório, será:\nI - ==nula==, se a decisão deveria ser uniforme em relação a todos que deveriam ter integrado o processo;\nII - ==ineficaz==, nos outros casos, ==apenas para os que não foram citados==.\nParágrafo único. Nos casos de litisconsórcio passivo necessário, o juiz determinará ao autor que requeira a citação de todos que devam ser litisconsortes, dentro do prazo que assinar, ==sob pena de extinção do processo==.\nArt. 116. O litisconsórcio será unitário quando, pela natureza da relação jurídica, o juiz tiver de decidir o mérito ==de modo uniforme== para todos os litisconsortes."
+      },
+      {
+       "t": "matriz",
+       "linhas": [
+        "Ação de anulação de casamento proposta pelo MP contra os cônjuges",
+        "Vários servidores pedem juntos o mesmo reajuste contra o Estado",
+        "Credor cobra só um dos devedores solidários",
+        "Usucapião: citação dos confrontantes exigida por lei",
+        "Anulação de contrato com três contratantes"
+       ],
+       "colunas": [
+        "Necessário",
+        "Unitário"
+       ],
+       "celulas": [
+        [
+         [
+          true,
+          "A sentença só é eficaz com os dois cônjuges citados."
+         ],
+         [
+          true,
+          "O casamento não pode ser anulado para um e válido para o outro."
+         ]
+        ],
+        [
+         [
+          false,
+          "Facultativo: cada um poderia ir sozinho (art. 113, III)."
+         ],
+         [
+          false,
+          "Simples: o juiz pode decidir de forma diferente para cada servidor."
+         ]
+        ],
+        [
+         [
+          false,
+          "Facultativo: o credor escolhe (o réu pode chamar os outros, art. 130, III)."
+         ],
+         [
+          false,
+          "Simples."
+         ]
+        ],
+        [
+         [
+          true,
+          "Necessário por disposição de lei."
+         ],
+         [
+          false,
+          "Simples: a situação de cada confrontante pode ser diferente."
+         ]
+        ],
+        [
+         [
+          true,
+          "Relação incindível: todos precisam estar."
+         ],
+         [
+          true,
+          "O contrato não pode ser nulo para um e válido para os outros."
+         ]
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 117 e 118",
+       "texto": "Art. 117. Os litisconsortes serão considerados, em suas relações com a parte adversa, como ==litigantes distintos==, exceto no litisconsórcio unitário, caso em que os atos e as omissões de um ==não prejudicarão os outros, mas os poderão beneficiar==.\nArt. 118. Cada litisconsorte tem o direito de promover o andamento do processo, e todos devem ser intimados dos respectivos atos."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Necessário não é sinônimo de unitário",
+       "html": "A pergunta do necessário é \"<b>todos precisam estar?</b>\". A do unitário é \"<b>a decisão tem de ser igual para todos?</b>\". Há necessário e simples (confrontantes na usucapião, exigidos por lei) e há unitário e facultativo (condôminos que reivindicam a coisa comum: qualquer um pode ir sozinho, mas a decisão sobre a coisa é uma só)."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: intervenção de terceiros",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "cena",
+       "titulo": "Qual intervenção de terceiro? Comece pelo que o terceiro quer",
+       "altura": 300,
+       "elementos": [
+        {
+         "id": "t",
+         "tipo": "caixa",
+         "x": 250,
+         "y": 10,
+         "w": 180,
+         "h": 50,
+         "texto": "Um terceiro no processo",
+         "sub": "o que ele busca?",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "as",
+         "tipo": "caixa",
+         "x": 10,
+         "y": 120,
+         "w": 125,
+         "h": 60,
+         "texto": "Assistência",
+         "sub": "ajudar uma parte (arts. 119 a 124)",
+         "cor": "ok"
+        },
+        {
+         "id": "de",
+         "tipo": "caixa",
+         "x": 145,
+         "y": 120,
+         "w": 125,
+         "h": 60,
+         "texto": "Denunciação",
+         "sub": "regresso em garantia (art. 125)",
+         "cor": "warn"
+        },
+        {
+         "id": "ch",
+         "tipo": "caixa",
+         "x": 280,
+         "y": 120,
+         "w": 125,
+         "h": 60,
+         "texto": "Chamamento",
+         "sub": "trazer codevedores (art. 130)",
+         "cor": "warn"
+        },
+        {
+         "id": "id",
+         "tipo": "caixa",
+         "x": 415,
+         "y": 120,
+         "w": 125,
+         "h": 60,
+         "texto": "IDPJ",
+         "sub": "atingir sócio ou PJ (art. 133)",
+         "cor": "bad"
+        },
+        {
+         "id": "am",
+         "tipo": "caixa",
+         "x": 550,
+         "y": 120,
+         "w": 125,
+         "h": 60,
+         "texto": "Amicus curiae",
+         "sub": "qualificar o debate (art. 138)",
+         "cor": "dim"
+        },
+        {
+         "id": "a1",
+         "tipo": "seta",
+         "x": 300,
+         "y": 62,
+         "w": 72,
+         "h": 118,
+         "cor": "dim"
+        },
+        {
+         "id": "a2",
+         "tipo": "seta",
+         "x": 320,
+         "y": 62,
+         "w": 207,
+         "h": 118,
+         "cor": "dim"
+        },
+        {
+         "id": "a3",
+         "tipo": "seta",
+         "x": 340,
+         "y": 62,
+         "w": 342,
+         "h": 118,
+         "cor": "dim"
+        },
+        {
+         "id": "a4",
+         "tipo": "seta",
+         "x": 360,
+         "y": 62,
+         "w": 477,
+         "h": 118,
+         "cor": "dim"
+        },
+        {
+         "id": "a5",
+         "tipo": "seta",
+         "x": 380,
+         "y": 62,
+         "w": 612,
+         "h": 118,
+         "cor": "dim"
+        },
+        {
+         "id": "x1",
+         "tipo": "gota",
+         "x": 20,
+         "y": 220,
+         "texto": "interesse JURÍDICO, não econômico",
+         "cor": "ok"
+        },
+        {
+         "id": "x2",
+         "tipo": "gota",
+         "x": 220,
+         "y": 220,
+         "texto": "só o RÉU chama; denunciar: autor ou réu",
+         "cor": "warn"
+        },
+        {
+         "id": "x3",
+         "tipo": "gota",
+         "x": 470,
+         "y": 220,
+         "texto": "amicus: decisão irrecorrível; só ED e IRDR",
+         "cor": "dim"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "A pergunta certa não é \"quem é o terceiro\", mas <b>o que ele quer</b> no processo. Cada resposta leva a uma modalidade diferente."
+        },
+        {
+         "texto": "<b>Assistência:</b> o terceiro tem interesse <b>jurídico</b> em que uma das partes vença e entra para ajudá-la. Cabe em qualquer procedimento e grau, e ele recebe o processo no estado em que está (art. 119).",
+         "mostra": [
+          "a1",
+          "as",
+          "x1"
+         ],
+         "anima": {
+          "as": "pulsa"
+         }
+        },
+        {
+         "texto": "<b>Denunciação da lide:</b> a parte traz quem deve <b>indenizá-la em regresso</b> se perder (art. 125). Pode ser feita pelo autor ou pelo réu. <b>Chamamento:</b> só o réu, para trazer o afiançado, os outros fiadores ou os codevedores solidários (art. 130).",
+         "mostra": [
+          "a1",
+          "as",
+          "x1",
+          "a2",
+          "de",
+          "a3",
+          "ch",
+          "x2"
+         ],
+         "anima": {
+          "de": "pulsa",
+          "ch": "pulsa"
+         }
+        },
+        {
+         "texto": "<b>IDPJ:</b> o credor quer alcançar o patrimônio do sócio (ou, na inversa, da pessoa jurídica). É incidente com contraditório prévio: citação para manifestação em 15 dias (art. 135).",
+         "mostra": [
+          "a1",
+          "as",
+          "x1",
+          "a2",
+          "de",
+          "a3",
+          "ch",
+          "x2",
+          "a4",
+          "id"
+         ],
+         "anima": {
+          "id": "pulsa"
+         }
+        },
+        {
+         "texto": "<b>Amicus curiae:</b> não defende uma parte; leva conhecimento técnico a uma causa relevante. A decisão que o admite é irrecorrível, ele não muda a competência e só recorre por embargos de declaração ou da decisão do IRDR (art. 138).",
+         "mostra": [
+          "a1",
+          "as",
+          "x1",
+          "a2",
+          "de",
+          "a3",
+          "ch",
+          "x2",
+          "a4",
+          "id",
+          "a5",
+          "am",
+          "x3"
+         ],
+         "anima": {
+          "am": "pulsa"
+         }
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 119 a 124",
+       "texto": "Art. 119. Pendendo causa entre 2 (duas) ou mais pessoas, o terceiro ==juridicamente interessado== em que a sentença seja favorável a uma delas poderá intervir no processo para assisti-la.\nParágrafo único. A assistência será admitida em qualquer procedimento e ==em todos os graus de jurisdição==, recebendo o assistente o processo no estado em que se encontre.\nArt. 120. Não havendo impugnação no prazo de 15 (quinze) dias, o pedido do assistente será deferido, salvo se for caso de rejeição liminar.\nParágrafo único. Se qualquer parte alegar que falta ao requerente interesse jurídico para intervir, o juiz decidirá o incidente, ==sem suspensão do processo==.\nArt. 121. O assistente simples atuará como auxiliar da parte principal, exercerá os mesmos poderes e sujeitar-se-á aos mesmos ônus processuais que o assistido.\nParágrafo único. Sendo revel ou, de qualquer outro modo, omisso o assistido, o assistente será considerado seu ==substituto processual==.\nArt. 122. A assistência simples ==não obsta== a que a parte principal reconheça a procedência do pedido, desista da ação, renuncie ao direito sobre o que se funda a ação ou transija sobre direitos controvertidos.\nArt. 124. Considera-se litisconsorte da parte principal o assistente sempre que a sentença ==influir na relação jurídica entre ele e o adversário do assistido==."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Justiça da decisão (art. 123)",
+       "html": "Transitada a sentença, o assistente <b>não pode discutir a justiça da decisão</b> em processo posterior, salvo se provar que foi impedido de produzir provas pelo estado em que recebeu o processo ou pelos atos do assistido, ou que desconhecia alegações ou provas de que o assistido, por dolo ou culpa, não se valeu. É um efeito diferente da coisa julgada, que só atinge as partes."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 125, caput e §§ 1º e 2º",
+       "texto": "Art. 125. É admissível a denunciação da lide, promovida ==por qualquer das partes==:\nI - ao ==alienante imediato==, no processo relativo à coisa cujo domínio foi transferido ao denunciante, a fim de que possa exercer os direitos que da evicção lhe resultam;\nII - àquele que estiver obrigado, ==por lei ou pelo contrato==, a indenizar, em ação regressiva, o prejuízo de quem for vencido no processo.\n§ 1º O direito regressivo será exercido por ==ação autônoma== quando a denunciação da lide for indeferida, deixar de ser promovida ou não for permitida.\n§ 2º Admite-se ==uma única denunciação sucessiva==, promovida pelo denunciado, contra seu antecessor imediato na cadeia dominial ou quem seja responsável por indenizá-lo, não podendo o denunciado sucessivo promover nova denunciação, hipótese em que eventual direito de regresso será exercido por ação autônoma."
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "Denunciação deixou de ser obrigatória",
+       "html": "No CPC/1973 a denunciação era \"obrigatória\" e a doutrina discutia a perda do direito de regresso. O CPC/2015 resolveu: se não denunciar (ou se o juiz indeferir), o regresso vai por <b>ação autônoma</b> (§ 1º). Para o Estado réu, isso significa que não denunciar o servidor não faz perder o regresso do art. 37, § 6º, da CF."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 128, parágrafo único, e 129",
+       "texto": "Parágrafo único. Procedente o pedido da ação principal, pode o autor, se for o caso, requerer o cumprimento da sentença ==também contra o denunciado==, nos limites da condenação deste na ação regressiva.\nArt. 129. Se o denunciante for vencido na ação principal, o juiz passará ao julgamento da denunciação da lide.\nParágrafo único. Se o denunciante for vencedor, a ação de denunciação ==não terá o seu pedido examinado==, sem prejuízo da ==condenação do denunciante== ao pagamento das verbas de sucumbência em favor do denunciado."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 130 e 131",
+       "texto": "Art. 130. É admissível o chamamento ao processo, ==requerido pelo réu==:\nI - ==do afiançado==, na ação em que o fiador for réu;\nII - dos demais fiadores, na ação proposta contra um ou alguns deles;\nIII - dos demais devedores solidários, quando o credor exigir de um ou de alguns o pagamento da dívida comum.\nArt. 131. A citação daqueles que devam figurar em litisconsórcio passivo será requerida pelo réu na contestação e deve ser promovida no prazo de ==30 (trinta) dias==, sob pena de ficar sem efeito o chamamento.\nParágrafo único. Se o chamado residir em outra comarca, seção ou subseção judiciárias, ou em lugar incerto, o prazo será de ==2 (dois) meses==."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Denunciação da lide",
+        "Chamamento ao processo"
+       ],
+       "linhas": [
+        [
+         "Quem provoca",
+         "autor ou réu (art. 125)",
+         "só o réu (art. 130)"
+        ],
+        [
+         "Relação com o terceiro",
+         "garantia ou regresso: o terceiro não deve ao adversário, deve ao denunciante",
+         "o terceiro também deve ao autor: fiador, afiançado, codevedor solidário"
+        ],
+        [
+         "Resultado",
+         "duas demandas no mesmo processo; a regressiva só é julgada se o denunciante perde (art. 129)",
+         "litisconsórcio passivo; a sentença vale como título para quem pagar cobrar dos outros (art. 132)"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 133, caput e § 2º, 134, caput e §§ 2º e 3º, 135 e 136",
+       "texto": "Art. 133. O incidente de desconsideração da personalidade jurídica será instaurado ==a pedido da parte ou do Ministério Público==, quando lhe couber intervir no processo.\n§ 2º Aplica-se o disposto neste Capítulo à hipótese de ==desconsideração inversa== da personalidade jurídica.\nArt. 134. O incidente de desconsideração é cabível ==em todas as fases== do processo de conhecimento, no cumprimento de sentença e na execução fundada em título executivo extrajudicial.\n§ 2º ==Dispensa-se a instauração do incidente== se a desconsideração da personalidade jurídica for requerida na petição inicial, hipótese em que será citado o sócio ou a pessoa jurídica.\nArt. 135. Instaurado o incidente, o sócio ou a pessoa jurídica será citado para manifestar-se e requerer as provas cabíveis no prazo de ==15 (quinze) dias==.\nArt. 136. Concluída a instrução, se necessária, o incidente será resolvido por ==decisão interlocutória==.\nParágrafo único. Se a decisão for proferida pelo relator, cabe ==agravo interno==."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "IDPJ: não é de ofício e suspende",
+       "html": "O incidente se instaura <b>a pedido</b> da parte ou do MP, não de ofício. A instauração <b>suspende o processo</b>, salvo quando o pedido vem na própria inicial (art. 134, § 3º). E, acolhido, a alienação ou oneração de bens em fraude de execução é ineficaz em relação ao requerente (art. 137)."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, art. 138",
+       "texto": "Art. 138. O juiz ou o relator, considerando a relevância da matéria, a especificidade do tema objeto da demanda ou a repercussão social da controvérsia, poderá, ==por decisão irrecorrível==, ==de ofício== ou a requerimento das partes ou de quem pretenda manifestar-se, solicitar ou admitir a participação de ==pessoa natural ou jurídica==, órgão ou entidade especializada, com ==representatividade adequada==, no prazo de 15 (quinze) dias de sua intimação.\n§ 2º Caberá ao juiz ou ao relator, na decisão que solicitar ou admitir a intervenção, definir os poderes do amicus curiae .\n§ 3º O amicus curiae pode recorrer da decisão que julgar o ==incidente de resolução de demandas repetitivas==."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e detalhes: juiz, Ministério Público, Advocacia Pública e Defensoria",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CPC, art. 139, IV, VI e parágrafo único",
+       "texto": "IV - determinar todas as medidas indutivas, coercitivas, mandamentais ou sub-rogatórias necessárias para assegurar o cumprimento de ordem judicial, ==inclusive nas ações que tenham por objeto prestação pecuniária==;\nVI - dilatar os prazos processuais e alterar a ordem de produção dos meios de prova, adequando-os às necessidades do conflito de modo a conferir maior efetividade à tutela do direito;\nParágrafo único. A dilação de prazos prevista no inciso VI somente pode ser determinada ==antes de encerrado o prazo regular==."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Impedimento (art. 144)",
+        "Suspeição (art. 145)"
+       ],
+       "linhas": [
+        [
+         "Natureza",
+         "objetiva: fatos que a lei presume incompatíveis",
+         "subjetiva: amizade íntima, inimizade, presentes, aconselhamento, crédito ou débito, interesse"
+        ],
+        [
+         "Exemplos",
+         "atuou como advogado, perito, MP ou testemunha; decidiu em outro grau; é parte ou parente da parte ou do advogado até o 3º grau; cliente do escritório do cônjuge ou parente",
+         "amigo íntimo ou inimigo da parte ou do advogado; recebeu presentes; credor ou devedor da parte; foro íntimo, sem declarar razões (§ 1º)"
+        ],
+        [
+         "Alegação",
+         "petição específica em 15 dias do conhecimento do fato (art. 146)",
+         "a mesma; é ilegítima se provocada por quem alega ou se houve aceitação do arguido (§ 2º)"
+        ],
+        [
+         "Depois do trânsito",
+         "cabe rescisória (art. 966, II)",
+         "não cabe rescisória"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 143 e 146, caput",
+       "texto": "Art. 143. O juiz responderá, ==civil e regressivamente==, por perdas e danos quando:\nI - no exercício de suas funções, proceder com dolo ou fraude;\nII - recusar, omitir ou retardar, sem justo motivo, providência que deva ordenar de ofício ou a requerimento da parte.\nArt. 146. No prazo de ==15 (quinze) dias, a contar do conhecimento do fato==, a parte alegará o impedimento ou a suspeição, em ==petição específica== dirigida ao juiz do processo, na qual indicará o fundamento da recusa, podendo instruí-la com documentos em que se fundar a alegação e com rol de testemunhas."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 178 a 180",
+       "texto": "Art. 178. O Ministério Público será intimado para, no prazo de ==30 (trinta) dias==, intervir como fiscal da ordem jurídica nas hipóteses previstas em lei ou na Constituição Federal e nos processos que envolvam:\nI - interesse público ou social;\nII - interesse de incapaz;\nIII - litígios coletivos pela posse de terra rural ou urbana.\nParágrafo único. A participação da Fazenda Pública ==não configura, por si só==, hipótese de intervenção do Ministério Público.\nArt. 179. Nos casos de intervenção como fiscal da ordem jurídica, o Ministério Público:\nI - terá vista dos autos ==depois das partes==, sendo intimado de todos os atos do processo;\nII - poderá produzir provas, requerer as medidas processuais pertinentes e ==recorrer==.\nArt. 180. O Ministério Público gozará de ==prazo em dobro== para manifestar-se nos autos, que terá início a partir de sua intimação pessoal, nos termos do art. 183, § 1º."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Fazenda no processo não chama o MP",
+       "html": "Ação de cobrança contra o Estado, execução fiscal, mandado de segurança por questão patrimonial: a presença do ente <b>sozinha</b> não exige o MP (art. 178, parágrafo único). Na execução fiscal o STJ é expresso: é desnecessária a intervenção do MP (Súmula 189). Já se houver incapaz, interesse público ou social, ou litígio coletivo pela posse de terra, o MP intervém."
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 182, 183 e 184",
+       "texto": "Art. 182. Incumbe à Advocacia Pública, na forma da lei, defender e promover os interesses públicos da União, dos Estados, do Distrito Federal e dos Municípios, por meio da representação judicial, em todos os âmbitos federativos, das ==pessoas jurídicas de direito público== que integram a administração direta e indireta.\nArt. 183. A União, os Estados, o Distrito Federal, os Municípios e suas respectivas autarquias e fundações de direito público gozarão de ==prazo em dobro para todas as suas manifestações processuais==, cuja contagem terá início a partir da ==intimação pessoal==.\n§ 1º A intimação pessoal far-se-á por carga, remessa ou meio eletrônico.\n§ 2º Não se aplica o benefício da contagem em dobro quando a lei estabelecer, de forma expressa, ==prazo próprio== para o ente público.\nArt. 184. O membro da Advocacia Pública será civil e regressivamente responsável quando agir com ==dolo ou fraude== no exercício de suas funções"
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Quem tem prazo em dobro?",
+         "sub": "arts. 180, 183 e 186",
+         "verso": "Fazenda (União, Estados, DF, Municípios, autarquias e fundações de direito público), MP e Defensoria.",
+         "detalhe": "Empresa pública e sociedade de economia mista não têm. Escritórios de prática jurídica das faculdades e entidades conveniadas com a Defensoria também têm (art. 186, § 3º)."
+        },
+        {
+         "frente": "Quando o dobro não vale?",
+         "sub": "§ 2º dos arts. 180 e 183; § 4º do 186",
+         "verso": "Quando a lei fixa, de forma expressa, prazo próprio para o ente.",
+         "detalhe": "Exemplo da aula 2: os 30 dias da impugnação da Fazenda no cumprimento de sentença (art. 535)."
+        },
+        {
+         "frente": "Responsabilidade pessoal",
+         "sub": "arts. 143, 181, 184 e 187",
+         "verso": "Juiz, MP, Advocacia Pública e Defensoria respondem civil e regressivamente.",
+         "detalhe": "MP, advogado público e defensor: por dolo ou fraude. O juiz também quando recusa, omite ou retarda providência sem justo motivo (art. 143, II)."
+        },
+        {
+         "frente": "Honorários do advogado público",
+         "sub": "art. 85, § 19",
+         "verso": "Os advogados públicos recebem honorários de sucumbência, nos termos da lei.",
+         "detalhe": "A titularidade é do advogado, não do ente, e a lei do ente regula a forma (art. 85, §§ 14 e 19)."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CPC, arts. 185 e 186, caput e § 2º",
+       "texto": "Art. 185. A Defensoria Pública exercerá a orientação jurídica, a promoção dos direitos humanos e a defesa dos direitos individuais e coletivos dos necessitados, em todos os graus, de forma integral e gratuita.\nArt. 186. A Defensoria Pública gozará de ==prazo em dobro== para todas as suas manifestações processuais.\n§ 2º A requerimento da Defensoria Pública, o juiz determinará a ==intimação pessoal da parte patrocinada== quando o ato processual depender de providência ou informação que somente por ela possa ser realizada ou prestada."
+      }
+     ]
+    },
+    {
+     "titulo": "O olhar da Procuradoria do Estado: checklist dos sujeitos",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Pense como o analista que monta a defesa do Estado. Os sujeitos do processo aparecem em todas as peças: quem representa, quem paga, quem pode entrar e quem precisa estar."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Representação",
+         "sub": "art. 75, II"
+        },
+        {
+         "titulo": "Prazo",
+         "sub": "art. 183"
+        },
+        {
+         "titulo": "Partes",
+         "sub": "arts. 114 a 116"
+        },
+        {
+         "titulo": "Terceiros",
+         "sub": "arts. 125 e 138"
+        },
+        {
+         "titulo": "Gratuidade",
+         "sub": "art. 100"
+        },
+        {
+         "titulo": "Honorários",
+         "sub": "art. 85, §§ 3º e 7º"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Representação:</b> o Estado é representado por seus procuradores, sem procuração (art. 75, II). Ato em comarca de outro Estado pode ser praticado por procurador de lá, havendo convênio entre as procuradorias (§ 4º). Autarquia estadual: por quem a lei estadual designar (IV)."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Prazo:</b> dobro para todas as manifestações, a partir da intimação pessoal por carga, remessa ou meio eletrônico, salvo prazo próprio expresso (art. 183)."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Partes:</b> falta litisconsorte necessário? Se a decisão deveria ser uniforme, a sentença é nula; nos outros casos, ineficaz para quem não foi citado (art. 115). Vale em preliminar e em recurso."
+        },
+        {
+         "no": 3,
+         "texto": "<b>Terceiros:</b> denunciar o servidor ou a seguradora é opção, não dever: o regresso fica garantido por ação autônoma (art. 125, § 1º). Em tema de repercussão no Estado, a PGE pode ser amicus curiae (art. 138)."
+        },
+        {
+         "no": 4,
+         "texto": "<b>Gratuidade do autor:</b> impugnar na contestação, mostrando os elementos que afastam a insuficiência. Pessoa jurídica precisa provar (Súmula 481)."
+        },
+        {
+         "no": 5,
+         "texto": "<b>Honorários:</b> faixas do § 3º, escalonadas (§ 5º); sentença ilíquida, percentual só na liquidação (§ 4º, II); cumprimento por precatório não impugnado, sem honorários (§ 7º); e a remessa necessária devolve ao tribunal também os honorários (Súmula 325)."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "MP e Fazenda",
+       "html": "Na resposta do Estado, não alegue nulidade por falta de intimação do MP só porque o Estado é parte: a lei afasta isso expressamente (art. 178, parágrafo único). O que pesa é haver incapaz, interesse público ou social, ou litígio coletivo pela posse de terra."
+      }
+     ]
+    },
+    {
+     "titulo": "Jurisprudência que a FCC cobra",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Só súmulas conferidas no PDF oficial de enunciados do STJ em 24/11/2026. A Súmula 421 do STJ (honorários da Defensoria contra o próprio ente) consta no PDF como <b>cancelada</b>: não use em prova."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 481",
+       "tese": "Faz jus ao benefício da justiça gratuita a pessoa jurídica com ou sem fins lucrativos que demonstrar sua impossibilidade de arcar com os encargos processuais."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 189",
+       "tese": "É desnecessária a intervenção do Ministério Público nas execuções fiscais."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 99",
+       "tese": "O Ministério Público tem legitimidade para recorrer no processo em que oficiou como fiscal da lei, ainda que não haja recurso da parte."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 226",
+       "tese": "O Ministério Público tem legitimidade para recorrer na ação de acidente do trabalho, ainda que o segurado esteja assistido por advogado."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 601",
+       "tese": "O Ministério Público tem legitimidade ativa para atuar na defesa de direitos difusos, coletivos e individuais homogêneos dos consumidores, ainda que decorrentes da prestação de serviço público."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 232",
+       "tese": "A Fazenda Pública, quando parte no processo, fica sujeita à exigência do depósito prévio dos honorários do perito."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 190",
+       "tese": "Na execução fiscal, processada perante a Justiça Estadual, cumpre à Fazenda Pública antecipar o numerário destinado ao custeio das despesas com o transporte dos oficiais de justiça."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 325",
+       "tese": "A remessa oficial devolve ao Tribunal o reexame de todas as parcelas da condenação suportadas pela Fazenda Pública, inclusive dos honorários de advogado."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 345",
+       "tese": "São devidos honorários advocatícios pela Fazenda Pública nas execuções individuais de sentença proferida em ações coletivas, ainda que não embargadas."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 517",
+       "tese": "São devidos honorários advocatícios no cumprimento de sentença, haja ou não impugnação, depois de escoado o prazo para pagamento voluntário, que se inicia após a intimação do advogado da parte executada."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 519",
+       "tese": "Na hipótese de rejeição da impugnação ao cumprimento de sentença, não são cabíveis honorários advocatícios."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 105",
+       "tese": "Na ação de mandado de segurança não se admite condenação em honorários advocatícios."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 201",
+       "tese": "Os honorários advocatícios não podem ser fixados em salários-mínimos."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 453",
+       "tese": "Os honorários sucumbenciais, quando omitidos em decisão transitada em julgado, não podem ser cobrados em execução ou em ação própria."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STJ",
+       "ref": "Súmula 642",
+       "tese": "O direito à indenização por danos morais transmite-se com o falecimento do titular, possuindo os herdeiros da vítima legitimidade ativa para ajuizar ou prosseguir a ação indenizatória."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A pessoa jurídica sem fins lucrativos tem presunção de insuficiência de recursos para a gratuidade.",
+         "v": false,
+         "porque": "Súmula 481 do STJ e art. 99, § 3º: precisa demonstrar; a presunção é só da pessoa natural."
+        },
+        {
+         "texto": "É desnecessária a intervenção do Ministério Público nas execuções fiscais.",
+         "v": true,
+         "porque": "Súmula 189 do STJ."
+        },
+        {
+         "texto": "O MP que oficiou como fiscal da lei só pode recorrer se a parte também recorrer.",
+         "v": false,
+         "porque": "Súmula 99 do STJ."
+        },
+        {
+         "texto": "A remessa necessária devolve ao tribunal o reexame dos honorários fixados contra a Fazenda.",
+         "v": true,
+         "porque": "Súmula 325 do STJ."
+        },
+        {
+         "texto": "Rejeitada a impugnação ao cumprimento de sentença, são devidos novos honorários pela impugnação.",
+         "v": false,
+         "porque": "Súmula 519 do STJ."
+        },
+        {
+         "texto": "Na execução individual de sentença coletiva contra a Fazenda, os honorários são devidos ainda que não embargada.",
+         "v": true,
+         "porque": "Súmula 345 do STJ."
+        },
+        {
+         "texto": "Os herdeiros têm legitimidade para prosseguir na ação de danos morais ajuizada pela vítima falecida.",
+         "v": true,
+         "porque": "Súmula 642 do STJ."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O que pode cair assim",
+       "html": "Os campeões do tema: (1) curador especial só para revel preso ou citado fictamente (art. 72); (2) consequências do art. 76 por polo e grau; (3) faixas do art. 85, § 3º, e o § 7º; (4) gratuidade: presunção só da pessoa natural, efeitos da sucumbência do beneficiário (art. 98, §§ 2º a 4º) e recurso contra o indeferimento; (5) nulo x ineficaz no art. 115; (6) quem pode denunciar e quem pode chamar; (7) amicus curiae: decisão irrecorrível e recursos permitidos; (8) MP e Fazenda (art. 178, parágrafo único)."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Trocas de palavra que a banca faz",
+       "html": "\"Superior a um e inferior a <b>vinte</b> por cento\" na má-fé (o certo é <b>dez</b>; vinte é o teto do ato atentatório). \"Interesse <b>econômico</b>\" na assistência (é <b>jurídico</b>). \"Suspende\" o prazo no pedido de limitação do litisconsórcio (<b>interrompe</b>). \"Ineficaz\" e \"nula\" trocadas no art. 115. \"Requerido pelo autor\" no chamamento (só o <b>réu</b>)."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "O juiz nomeará curador especial a todo réu revel.",
+         "v": false,
+         "porque": "Art. 72, II: só ao revel preso e ao revel citado por edital ou com hora certa."
+        },
+        {
+         "texto": "A multa por litigância de má-fé pode ser aplicada de ofício.",
+         "v": true,
+         "porque": "Art. 81, caput."
+        },
+        {
+         "texto": "Ao Procurador do Estado aplica-se a multa por ato atentatório à dignidade da justiça.",
+         "v": false,
+         "porque": "Art. 77, § 6º: o juiz oficia ao órgão de classe ou à corregedoria."
+        },
+        {
+         "texto": "O requerimento de limitação do litisconsórcio facultativo suspende o prazo para resposta.",
+         "v": false,
+         "porque": "Art. 113, § 2º: interrompe."
+        },
+        {
+         "texto": "O assistente simples pode impedir que o assistido desista da ação.",
+         "v": false,
+         "porque": "Art. 122."
+        },
+        {
+         "texto": "A denunciação da lide pode ser promovida pelo autor.",
+         "v": true,
+         "porque": "Art. 125, caput: por qualquer das partes; art. 126."
+        },
+        {
+         "texto": "A decisão que admite o amicus curiae é irrecorrível.",
+         "v": true,
+         "porque": "Art. 138, caput."
+        },
+        {
+         "texto": "A participação da Fazenda Pública configura, por si só, hipótese de intervenção do MP.",
+         "v": false,
+         "porque": "Art. 178, parágrafo único."
+        },
+        {
+         "texto": "A gratuidade concedida a um litisconsorte estende-se automaticamente aos demais.",
+         "v": false,
+         "porque": "Art. 99, § 6º: é pessoal, salvo requerimento e deferimento expressos."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "cpc-001",
+    "cpc-009",
+    "cpc-010",
+    "cpc-011",
+    "cpc-012",
+    "cpc-013",
+    "cpc-014",
+    "cpc-015",
+    "cpc-016",
+    "cpc-017",
+    "cpc-018",
+    "cpc-019",
+    "cpc-020",
+    "cpc-021",
+    "cpc-022",
+    "cpc-023",
+    "cpc-024",
+    "cpc-025",
+    "cpc-026",
+    "pc-suj-01",
+    "pc-suj-02",
+    "pc-suj-03",
+    "pc-suj-04",
+    "pc-suj-05",
+    "pc-suj-06",
+    "pc-suj-07",
+    "pc-suj-08",
+    "pc-suj-09",
+    "pc-suj-10",
+    "pc-suj-11",
+    "pc-suj-12",
+    "pc-suj-13",
+    "pc-suj-14",
+    "pc-suj-15",
+    "pc-suj-16",
+    "pc-suj-17",
+    "pc-suj-18",
+    "pc-suj-19",
+    "pc-suj-20",
+    "pc-suj-21",
+    "pc-suj-22",
+    "pc-suj-23",
+    "pc-suj-24",
+    "pc-suj-25"
+   ]
   },
   {
    "id": "B5-a04",
@@ -2013,6 +3352,38 @@
   [
    "Continência",
    "Relação entre ações com as mesmas partes e causa de pedir, em que o pedido de uma, mais amplo, abrange o das demais (CPC, art. 56)."
+  ],
+  [
+   "Capacidade postulatória",
+   "Aptidão para praticar atos técnicos no processo, em regra do advogado inscrito na OAB (CPC, art. 103)."
+  ],
+  [
+   "Curador especial",
+   "Representante nomeado ao incapaz sem representante ou em conflito com ele e ao revel preso ou citado fictamente; função da Defensoria Pública (CPC, art. 72)."
+  ],
+  [
+   "Litisconsórcio unitário",
+   "Litisconsórcio em que o mérito tem de ser decidido de modo uniforme para todos (CPC, art. 116)."
+  ],
+  [
+   "Litisconsórcio necessário",
+   "Litisconsórcio exigido por lei ou pela natureza da relação jurídica, cuja sentença depende da citação de todos (CPC, art. 114)."
+  ],
+  [
+   "Denunciação da lide",
+   "Intervenção provocada por qualquer das partes contra quem deve garanti-la em regresso (CPC, art. 125)."
+  ],
+  [
+   "Chamamento ao processo",
+   "Intervenção provocada pelo réu para trazer afiançado, cofiadores ou codevedores solidários (CPC, art. 130)."
+  ],
+  [
+   "Amicus curiae",
+   "Terceiro admitido por decisão irrecorrível para contribuir com a solução de causa relevante, sem defender uma das partes (CPC, art. 138)."
+  ],
+  [
+   "Justiça da decisão",
+   "Efeito que impede o assistente de rediscutir, em processo posterior, os fundamentos da sentença (CPC, art. 123)."
   ]
  ]
 }

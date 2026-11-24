@@ -1090,5 +1090,54 @@
       "B5|Competência",
       "B5|Fazenda Pública em juízo"
     ]
+  },
+  {
+    "id": "pc-sujeitos-estado-reu",
+    "materia_id": "B5",
+    "titulo": "Estado réu: denunciação do servidor, gratuidade, MP e honorários",
+    "enunciado": "João, servidor estadual, conduzia viatura do Estado do Maranhão quando colidiu com o carro de Carla, em São Luís. Carla ajuizou ação indenizatória contra o Estado, pediu gratuidade da justiça (deferida com base apenas na declaração de insuficiência, embora ela seja empresária com renda declarada elevada) e atribuiu à causa valor equivalente a 600 salários-mínimos. Na contestação, o Estado pretende denunciar a lide a João e questionar a gratuidade. O juízo indeferiu a denunciação e, ao final, julgou procedente o pedido. O Estado alega ainda que o processo é nulo porque o Ministério Público não foi intimado.",
+    "perguntas": [
+      "O indeferimento da denunciação da lide a João prejudica o direito de regresso do Estado? Fundamente.",
+      "Como e em que momento o Estado deve questionar a gratuidade deferida a Carla, e quais os efeitos se o benefício for revogado?",
+      "Procede a alegação de nulidade pela falta de intimação do Ministério Público?",
+      "Como devem ser fixados os honorários advocatícios contra o Estado, considerando a condenação equivalente a 600 salários-mínimos?"
+    ],
+    "linhas_min": 20,
+    "linhas": 30,
+    "espelho": [
+      {
+        "ponto": "Não prejudica. A denunciação a quem está obrigado, por lei ou contrato, a indenizar em regresso é admissível, mas, indeferida, não promovida ou não permitida, o direito regressivo é exercido por ação autônoma (no caso, o regresso contra o servidor que agiu com dolo ou culpa).",
+        "fundamento": "CPC, art. 125, II e § 1º; CF, art. 37, § 6º",
+        "peso": 25
+      },
+      {
+        "ponto": "Impugnação na contestação, nos próprios autos, sem suspensão do processo, demonstrando os elementos que afastam a insuficiência (a presunção de veracidade da declaração da pessoa natural é relativa e o juiz pode indeferir diante de elementos nos autos). Revogado o benefício, Carla arca com as despesas que deixou de adiantar e, se houver má-fé, multa de até o décuplo revertida à Fazenda estadual, inscritível em dívida ativa.",
+        "fundamento": "CPC, arts. 99, §§ 2º e 3º, e 100, caput e parágrafo único",
+        "peso": 25
+      },
+      {
+        "ponto": "Não procede. A participação da Fazenda Pública não configura, por si só, hipótese de intervenção do Ministério Público; a ação indenizatória entre particular e Estado, sem incapaz, interesse público ou social ou litígio coletivo pela posse de terra, não exige o MP.",
+        "fundamento": "CPC, art. 178, caput e parágrafo único",
+        "peso": 20
+      },
+      {
+        "ponto": "Aplicam-se as faixas do art. 85, § 3º, de forma escalonada: entre dez e vinte por cento sobre os primeiros 200 salários-mínimos e entre oito e dez por cento sobre os 400 excedentes, observados os critérios do § 2º (zelo, lugar, natureza e importância da causa, trabalho e tempo). Sendo líquido o valor, é vedada a apreciação equitativa; se ilíquida a sentença, o percentual só se define na liquidação. Em apelação desprovida, os honorários podem ser majorados até o limite da fase de conhecimento.",
+        "fundamento": "CPC, art. 85, §§ 2º, 3º, I e II, 4º, II, 5º, 6º-A e 11",
+        "peso": 20
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado (sem tópicos soltos), cada item respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
+      }
+    ],
+    "dica": "Responda pelos sujeitos: o terceiro (denunciação e regresso), a parte beneficiária (gratuidade), o fiscal (MP) e o advogado (honorários contra a Fazenda).",
+    "tangencia": "Tangenciar é discutir a responsabilidade objetiva do Estado e o mérito da indenização em vez das regras processuais sobre os sujeitos.",
+    "topico_id": "B5-03",
+    "temas": [
+      "B5|Sujeitos do processo",
+      "B5|Intervenção de terceiros",
+      "B5|Honorários e despesas"
+    ]
   }
 ]
