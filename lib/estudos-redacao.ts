@@ -182,8 +182,12 @@ export function casoDaSemana(c: CasoDiscursiva, topicos: Set<string>, temas: Set
   return topicos.has(c.topico_id) || c.temas.some((t) => temas.has(t));
 }
 
-/** Discursiva do dia: a primeira, na ordem, dos temas da semana que ela ainda não fez. */
+/**
+ * Discursiva do dia (todo dia, pedido dela em 23/11): primeiro um caso ainda não feito dos temas da
+ * semana; se não houver, qualquer caso ainda não feito; por fim, refazer um da semana.
+ */
 export function escolherDiscursiva(casos: CasoDiscursiva[], topicos: Set<string>, temas: Set<string>, feitos: Record<string, TextoDiscursiva>): CasoDiscursiva | null {
+  const pendente = (c: CasoDiscursiva) => !Object.keys(feitos[c.id]?.pontos ?? {}).length;
   const daSemana = casos.filter((c) => casoDaSemana(c, topicos, temas));
-  return daSemana.find((c) => !Object.keys(feitos[c.id]?.pontos ?? {}).length) ?? daSemana[0] ?? null;
+  return daSemana.find(pendente) ?? casos.find(pendente) ?? daSemana[0] ?? casos[0] ?? null;
 }

@@ -1,0 +1,128 @@
+{
+  "exercicios": [
+    {
+      "id": "ex-const",
+      "mat": "Constitucional",
+      "tema": "Direitos fundamentais",
+      "caso": "Às 23h, policiais civis entram na casa de João para cumprir um mandado de busca e apreensão expedido pelo juiz. João não autorizou a entrada e não há flagrante. Encontram documentos que são usados na ação penal.",
+      "q": "A entrada foi válida? E as provas obtidas podem ser usadas?",
+      "dicas": [
+        "Comando duplo: são duas perguntas, então são duas teses (a entrada e as provas).",
+        "A ordem judicial só autoriza a entrada em um período do dia. Qual?",
+        "Prova obtida por meio ilícito: o inciso LVI do art. 5º resolve a segunda parte."
+      ],
+      "lei": [
+        [
+          "CF, art. 5º, XI",
+          "a casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial;"
+        ],
+        [
+          "CF, art. 5º, LVI",
+          "são inadmissíveis, no processo, as provas obtidas por meios ilícitos;"
+        ]
+      ],
+      "modelo": "Não, a entrada foi inválida. A casa é asilo inviolável e a determinação judicial só autoriza o ingresso durante o dia (CF, art. 5º, XI). À noite, só se entra com consentimento do morador ou em flagrante, desastre ou para prestar socorro. No caso, a entrada ocorreu às 23h, sem consentimento e sem flagrante, apenas com o mandado. Logo, as provas obtidas são ilícitas e inadmissíveis no processo (CF, art. 5º, LVI).",
+      "check": [
+        "Disse na primeira frase que a entrada foi inválida",
+        "Citou o art. 5º, XI, com a regra do \"durante o dia\"",
+        "Usou o fato do caso: 23h, sem consentimento, sem flagrante",
+        "Respondeu a segunda pergunta: provas ilícitas (art. 5º, LVI)",
+        "Fechou com uma conclusão (Logo, ...)"
+      ],
+      "pega": "A FCC troca \"durante o dia\" por \"a qualquer hora\" ou põe a ordem judicial na lista das exceções que valem de noite. Ordem judicial é a única que depende do horário."
+    },
+    {
+      "id": "ex-trib",
+      "mat": "Tributário",
+      "tema": "Imunidades",
+      "caso": "O Município de Caxias (MA) lançou IPTU sobre o imóvel onde funciona a sede de uma autarquia estadual, instituída e mantida pelo Estado do Maranhão. O imóvel é usado só nas atividades da autarquia.",
+      "q": "A cobrança é válida?",
+      "dicas": [
+        "Comando: \"é válida?\". Primeira frase: sim ou não.",
+        "Entes federados não cobram impostos uns dos outros. Isso vale também para quem?",
+        "O § 2º do art. 150 tem uma condição: o imóvel precisa estar ligado a quê?"
+      ],
+      "lei": [
+        [
+          "CF, art. 150, VI, a",
+          "Sem prejuízo de outras garantias asseguradas ao contribuinte, é vedado à União, aos Estados, ao Distrito Federal e aos Municípios: (...) VI - instituir impostos sobre: a) patrimônio, renda ou serviços, uns dos outros;"
+        ],
+        [
+          "CF, art. 150, § 2º",
+          "A vedação do inciso VI, \"a\", é extensiva às autarquias e às fundações instituídas e mantidas pelo poder público e à empresa pública prestadora de serviço postal, no que se refere ao patrimônio, à renda e aos serviços vinculados a suas finalidades essenciais ou às delas decorrentes."
+        ]
+      ],
+      "modelo": "Não, a cobrança é inválida. Aplica-se a imunidade recíproca, que impede os entes federados de instituir impostos sobre o patrimônio uns dos outros (CF, art. 150, VI, a) e se estende às autarquias quanto ao patrimônio vinculado às suas finalidades essenciais (CF, art. 150, § 2º). No caso, o imóvel pertence a autarquia estadual e é usado apenas nas suas atividades. Logo, o Município não pode cobrar o IPTU.",
+      "check": [
+        "Disse na primeira frase que a cobrança é inválida",
+        "Nomeou o instituto: imunidade recíproca",
+        "Citou o art. 150, VI, a, e o § 2º (extensão às autarquias)",
+        "Usou a condição do caso: imóvel ligado às finalidades da autarquia",
+        "Fechou com uma conclusão"
+      ],
+      "pega": "A imunidade recíproca vale só para impostos. Se a FCC trocar IPTU por taxa de coleta de lixo, a resposta muda: taxa pode ser cobrada."
+    },
+    {
+      "id": "ex-adm",
+      "mat": "Administrativo",
+      "tema": "Organização administrativa",
+      "caso": "O Governador do Maranhão editou um decreto criando uma autarquia para fiscalizar o transporte intermunicipal, com patrimônio e servidores próprios. Não há lei sobre o assunto.",
+      "q": "A criação da autarquia é válida?",
+      "dicas": [
+        "Comando: \"é válida?\". A resposta depende do instrumento usado (decreto).",
+        "Autarquia é criada por lei ou a lei só autoriza a criação? Compare com empresa pública.",
+        "O inciso XIX do art. 37 da CF responde."
+      ],
+      "lei": [
+        [
+          "CF, art. 37, XIX",
+          "somente por lei específica poderá ser criada autarquia e autorizada a instituição de empresa pública, de sociedade de economia mista e de fundação, cabendo à lei complementar, neste último caso, definir as áreas de sua atuação;"
+        ]
+      ],
+      "modelo": "Não, a criação é inválida. A autarquia só pode ser criada por lei específica (CF, art. 37, XIX). Para as empresas públicas, sociedades de economia mista e fundações, a lei apenas autoriza a instituição. No caso, a autarquia foi criada por decreto do Governador, sem lei. Logo, o decreto é inconstitucional e a autarquia não existe validamente.",
+      "check": [
+        "Disse na primeira frase que a criação é inválida",
+        "Citou o art. 37, XIX: autarquia só por lei específica",
+        "Diferenciou: a lei cria a autarquia, mas só autoriza empresa pública, SEM e fundação",
+        "Usou o fato: decreto, sem lei",
+        "Fechou com uma conclusão"
+      ],
+      "pega": "A FCC inverte: \"a lei autoriza a criação de autarquia\" (errado) ou \"a lei cria empresa pública\" (errado). Autarquia é criada; as outras são autorizadas."
+    },
+    {
+      "id": "ex-pc",
+      "mat": "Processo Civil",
+      "tema": "Normas fundamentais",
+      "caso": "Na execução fiscal movida pelo Estado do Maranhão, o juiz, de ofício, reconheceu a prescrição e extinguiu o processo por sentença, sem antes ouvir o Estado. A Fazenda tinha um documento que mostrava a interrupção do prazo.",
+      "q": "Qual vício a Procuradoria deve alegar e qual o recurso cabível?",
+      "dicas": [
+        "Comando duplo: o vício e o recurso.",
+        "O juiz pode reconhecer prescrição de ofício, mas precisa fazer algo antes. O quê?",
+        "Decisão que extingue o processo é sentença. Qual recurso cabe contra sentença?"
+      ],
+      "lei": [
+        [
+          "CPC, art. 10",
+          "O juiz não pode decidir, em grau algum de jurisdição, com base em fundamento a respeito do qual não se tenha dado às partes oportunidade de se manifestar, ainda que se trate de matéria sobre a qual deva decidir de ofício."
+        ],
+        [
+          "CPC, art. 487, parágrafo único",
+          "Ressalvada a hipótese do § 1º do art. 332, a prescrição e a decadência não serão reconhecidas sem que antes seja dada às partes oportunidade de manifestar-se."
+        ],
+        [
+          "CPC, art. 1.009",
+          "Da sentença cabe apelação."
+        ]
+      ],
+      "modelo": "A Procuradoria deve alegar a nulidade da sentença por decisão surpresa. Mesmo nas matérias que decide de ofício, o juiz precisa ouvir as partes antes (CPC, art. 10), e a prescrição não pode ser reconhecida sem essa oportunidade (CPC, art. 487, parágrafo único). No caso, o juiz extinguiu a execução sem ouvir o Estado, que tinha prova da interrupção do prazo. Logo, cabe apelação (CPC, art. 1.009), pedindo a anulação da sentença e o prosseguimento da execução.",
+      "check": [
+        "Nomeou o vício: decisão surpresa (violação do contraditório)",
+        "Citou o art. 10 do CPC",
+        "Citou o art. 487, parágrafo único (prescrição exige oitiva)",
+        "Usou o fato: sem ouvir o Estado, que tinha prova da interrupção",
+        "Indicou o recurso certo: apelação (art. 1.009)"
+      ],
+      "pega": "A FCC diz que, por ser matéria de ofício, o juiz pode decidir sem ouvir as partes. É o contrário: o art. 10 diz \"ainda que se trate de matéria sobre a qual deva decidir de ofício\"."
+    }
+  ]
+}
