@@ -353,12 +353,12 @@
     "rl-pct-sucessiva": {
       "nome": "Aumentos e descontos sucessivos",
       "tema": "Porcentagem",
-      "revisao": "Porcentagens sucessivas se MULTIPLICAM, não se somam: aumento de 20% = × 1,20; desconto de 20% = × 0,80. 1,20 × 0,80 = 0,96, ou seja, 4% a menos que o preço inicial."
+      "revisao": "Mudanças seguidas se MULTIPLICAM (fatores), não se somam: +20% e −20% → 1,20 × 0,80 = 0,96, 4% abaixo. +10% e +20% → 1,32, 32%. Fator final menor que 1 é queda (queda = 1 − fator). Desfazer um desconto de 20% pede 25% (a base de volta é menor). Dobrar é +100% (fator 2)."
     },
     "rl-pct-de-pct": {
       "nome": "Porcentagem de porcentagem",
       "tema": "Porcentagem",
-      "revisao": "Use um total fácil (100 ou 1.000) e monte a tabela por grupo. Ex.: 1.000 candidatos, 40% mulheres = 400; 25% delas aprovadas = 100; homens 600, 10% aprovados = 60. Entre os aprovados (160), as mulheres são 100 ÷ 160 = 62,5%. Atenção à base: a pergunta é sobre os aprovados, não sobre o total."
+      "revisao": "\"x% dos y%\": multiplique as taxas (15% dos 40% = 6% do total). Com grupos e subgrupos, invente 1.000 e monte por grupo. Releia a base da pergunta: \"entre os aprovados\" troca o total (100 mulheres em 160 aprovados = 62,5%)."
     },
     "adm-principios-37": {
       "nome": "Princípios do art. 37: alcance e controle",
@@ -734,6 +734,46 @@
       "nome": "Remédios na Constituição do Maranhão",
       "tema": "Remédios constitucionais",
       "revisao": "CE-MA, art. 81 (com base no art. 125, § 1º, da CF): o TJMA julga originariamente HC quando o paciente tem foro no TJ (V); HD e MS contra atos do Governador, da Mesa da Assembleia, do TCE, dos Procuradores-Gerais, dos Secretários e do próprio TJ (VI); MI quando a norma é atribuição de autoridade estadual (VII). Ação popular não tem foro: primeiro grau."
+    },
+    "rl-pct-calculo": {
+      "nome": "Calcular x% de um valor",
+      "tema": "Porcentagem",
+      "revisao": "\"De\" é vezes: x% de N = N × taxa. De cabeça: 10% anda a vírgula uma casa, 1% anda duas, 5% é metade de 10%, 25% é dividir por 4. Complemento: os que não são = 100% − x%. Cada porcentagem tem a sua base: \"25% a mais do que Ana\" é sobre Ana, não sobre o total."
+    },
+    "rl-pct-qual": {
+      "nome": "Que porcentagem é (parte ÷ todo)",
+      "tema": "Porcentagem",
+      "revisao": "Divida a parte pelo todo e multiplique por 100. O todo é o que vem depois de \"de\" ou \"em relação a\". O número de pessoas só coincide com a porcentagem quando o total é 100."
+    },
+    "rl-pct-variacao": {
+      "nome": "Variação percentual e pontos percentuais",
+      "tema": "Porcentagem",
+      "revisao": "Variação = (depois − antes) ÷ antes; a base é sempre o valor de antes, no aumento e na queda. Diferença em unidades não é diferença em porcentagem. O fator (depois ÷ antes) não é a taxa: taxa = fator − 1. De 20% para 25%: 5 pontos percentuais, que são 25% a mais. Em gráfico ou tabela, calcule cada par de anos."
+    },
+    "rl-pct-total": {
+      "nome": "Achar o total ou o valor de antes",
+      "tema": "Porcentagem",
+      "revisao": "Dão a parte e a porcentagem dela: 1% = parte ÷ porcentagem; 100% = 1% × 100 (ou parte ÷ taxa). Valor depois de aumento ou desconto: divida pelo fator (1.344 ÷ 1,12). Nunca tire a porcentagem do valor novo: ela foi calculada sobre o antigo."
+    },
+    "rl-pct-fator": {
+      "nome": "Aumento e desconto com fator",
+      "tema": "Porcentagem",
+      "revisao": "Aumento de x%: multiplique por (1 + taxa), +12% → × 1,12. Desconto de x%: por (1 − taxa), −8% → × 0,92. Cuidado com o zero: 5% = 0,05, fator 1,05. O desconto em reais não é o preço final."
+    },
+    "rl-pct-mistura": {
+      "nome": "Taxa de grupos misturados",
+      "tema": "Porcentagem",
+      "revisao": "Invente 100 (ou 1.000), corte nos grupos e aplique cada taxa no seu grupo; some e divida pelo total. É média ponderada: a média simples das taxas só vale com grupos do mesmo tamanho. Não troque os pesos."
+    },
+    "rl-pct-quem-nao-muda": {
+      "nome": "Nova porcentagem quando entra ou sai gente",
+      "tema": "Porcentagem",
+      "revisao": "Quem entra muda o total. Trave o grupo que não muda: ele passa a ser 100% − a porcentagem pedida. Ache 1% e o novo total por ele; depois subtraia quem já estava. Confira dividindo."
+    },
+    "rl-pct-lucro": {
+      "nome": "Lucro sobre o custo × sobre a venda",
+      "tema": "Porcentagem",
+      "revisao": "Sobre o custo: venda = custo × (1 + taxa), então custo = venda ÷ (1 + taxa). Sobre a venda: custo = venda × (1 − taxa). Invente venda 100 para converter: lucro 20% da venda = 20 ÷ 80 = 25% do custo."
     }
   },
   "questoes": {
@@ -1046,6 +1086,26 @@
     "cf-rc-09": "cf-rc-habeas-corpus",
     "cf-rc-10": "cf-rc-injuncao",
     "cf-rc-11": "cf-rc-ce-ma",
-    "cf-rc-12": "cf-acao-popular"
+    "cf-rc-12": "cf-acao-popular",
+    "rl-pc-01": "rl-pct-calculo",
+    "rl-pc-17": "rl-pct-calculo",
+    "rl-pc-02": "rl-pct-qual",
+    "rl-pc-03": "rl-pct-variacao",
+    "rl-pc-04": "rl-pct-variacao",
+    "rl-pc-16": "rl-pct-variacao",
+    "rl-pc-18": "rl-pct-variacao",
+    "rl-pc-r01": "rl-pct-variacao",
+    "rl-pc-05": "rl-pct-total",
+    "rl-pc-06": "rl-pct-total",
+    "rl-pc-07": "rl-pct-fator",
+    "rl-pc-08": "rl-pct-sucessiva",
+    "rl-pc-09": "rl-pct-sucessiva",
+    "rl-pc-10": "rl-pct-sucessiva",
+    "rl-pc-r02": "rl-pct-sucessiva",
+    "rl-pc-11": "rl-pct-de-pct",
+    "rl-pc-12": "rl-pct-mistura",
+    "rl-pc-13": "rl-pct-quem-nao-muda",
+    "rl-pc-14": "rl-pct-lucro",
+    "rl-pc-15": "rl-pct-lucro"
   }
 }

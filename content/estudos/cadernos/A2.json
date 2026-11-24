@@ -3939,7 +3939,1465 @@
    "topico_id": "A2-05",
    "numero": 7,
    "titulo": "Porcentagem, aumentos e descontos",
-   "status": "a_montar"
+   "status": "pronta",
+   "fonte": "Ceisc: Prof. Dudan, aula 5 (porcentagem: taxa unitária, cálculos rápidos, fatores de capitalização e descapitalização, aumentos e descontos sucessivos); questões reais FCC do TJCE 2026 (q. 14 e 15); exercícios autorais no formato da PGE-AM 2022",
+   "resumo": [
+    "x% é x/100: uma razão com base 100. 20% = 20/100 = 0,20. Porcentagem é sempre \"de\" alguma coisa: ache primeiro quem é o 100%.",
+    "De cabeça: 10% anda a vírgula uma casa; 1% anda duas; 5% é metade de 10%; 25% é dividir por 4.",
+    "Três perguntas: quanto é x% de N (N × taxa); que % A é de B (A ÷ B); qual o total se x% valem P (P ÷ taxa).",
+    "Variação = (depois − antes) ÷ antes. A base é sempre o valor de antes.",
+    "Aumento de x%: multiplica por (1 + taxa). Desconto: por (1 − taxa). Seguidos: multiplique os fatores, nunca some as taxas. Para voltar ao valor de antes: divida pelo fator.",
+    "Porcentagem de porcentagem: multiplique as taxas ou invente 1.000 pessoas. Pontos percentuais são a diferença entre taxas, não a variação."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: por cento quer dizer a cada 100",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "\"Por cento\" vem do latim <i>per centum</i>: <b>a cada cem</b>. Porcentagem é a razão da aula 6 com uma receita fixa: o pacote tem sempre <b>100</b>. Dizer que 35% dos processos são de execução fiscal é dizer: <b>a cada 100 processos, 35</b> são de execução fiscal. Por isso tudo o que você já sabe de fração e de razão vale aqui."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Nome",
+         "titulo": "Taxa unitária",
+         "texto": "A porcentagem dividida por 100: 20% = 0,20; 5% = 0,05; 150% = 1,5. É com ela que se fazem as contas."
+        },
+        {
+         "tag": "Ligação",
+         "titulo": "Porcentagem é fração",
+         "texto": "20% = 20/100 = 1/5. Toda porcentagem é uma fração de denominador 100, e toda fração pode virar porcentagem (divida e multiplique por 100)."
+        },
+        {
+         "tag": "Regra",
+         "titulo": "\"De\" é vezes",
+         "texto": "20% de 300 = 0,20 × 300 = 60. A porcentagem vem sempre ligada a um valor: sozinha, \"20%\" não diz quanto é."
+        },
+        {
+         "tag": "Cuidado",
+         "titulo": "Quem é o 100%?",
+         "texto": "É a primeira pergunta de toda questão. O 100% é o valor de antes, o grupo inteiro, o preço de custo... Errar a base é o erro número 1 da FCC em porcentagem."
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Antes das regras, o que mais ajuda na prova: calcular porcentagem <b>de cabeça</b>, montando com peças de 10%, 5% e 1%."
+      },
+      {
+       "t": "cena",
+       "titulo": "A barra de 100%: 10%, 5% e 1% de cabeça",
+       "altura": 260,
+       "elementos": [
+        {
+         "id": "t",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 18,
+         "texto": "a conta inteira: R$ 240 = 100%",
+         "fixo": true
+        },
+        {
+         "id": "b0",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 30,
+         "w": 60,
+         "h": 46,
+         "texto": "24",
+         "sub": "10%",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "b1",
+         "tipo": "caixa",
+         "x": 84,
+         "y": 30,
+         "w": 60,
+         "h": 46,
+         "texto": "24",
+         "sub": "10%",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "b2",
+         "tipo": "caixa",
+         "x": 148,
+         "y": 30,
+         "w": 60,
+         "h": 46,
+         "texto": "24",
+         "sub": "10%",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "b3",
+         "tipo": "caixa",
+         "x": 212,
+         "y": 30,
+         "w": 60,
+         "h": 46,
+         "texto": "24",
+         "sub": "10%",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "b4",
+         "tipo": "caixa",
+         "x": 276,
+         "y": 30,
+         "w": 60,
+         "h": 46,
+         "texto": "24",
+         "sub": "10%",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "b5",
+         "tipo": "caixa",
+         "x": 340,
+         "y": 30,
+         "w": 60,
+         "h": 46,
+         "texto": "24",
+         "sub": "10%",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "b6",
+         "tipo": "caixa",
+         "x": 404,
+         "y": 30,
+         "w": 60,
+         "h": 46,
+         "texto": "24",
+         "sub": "10%",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "b7",
+         "tipo": "caixa",
+         "x": 468,
+         "y": 30,
+         "w": 60,
+         "h": 46,
+         "texto": "24",
+         "sub": "10%",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "b8",
+         "tipo": "caixa",
+         "x": 532,
+         "y": 30,
+         "w": 60,
+         "h": 46,
+         "texto": "24",
+         "sub": "10%",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "b9",
+         "tipo": "caixa",
+         "x": 596,
+         "y": 30,
+         "w": 60,
+         "h": 46,
+         "texto": "24",
+         "sub": "10%",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "p10",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 30,
+         "w": 60,
+         "h": 46,
+         "texto": "24",
+         "sub": "10%",
+         "cor": "blue"
+        },
+        {
+         "id": "um",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 110,
+         "texto": "1% = 2,40 (a vírgula anda duas casas)",
+         "cor": "blue"
+        },
+        {
+         "id": "p5",
+         "tipo": "caixa",
+         "x": 84,
+         "y": 30,
+         "w": 30,
+         "h": 46,
+         "texto": "12",
+         "sub": "5%",
+         "cor": "warn"
+        },
+        {
+         "id": "res",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 140,
+         "w": 94,
+         "h": 46,
+         "texto": "36",
+         "sub": "15%",
+         "cor": "ok"
+        },
+        {
+         "id": "fim",
+         "tipo": "rotulo",
+         "x": 400,
+         "y": 168,
+         "texto": "15% de 240 = 24 + 12 = 36",
+         "cor": "ok"
+        },
+        {
+         "id": "frac",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 230,
+         "texto": "25% = 1/4 → 240 ÷ 4 = 60",
+         "cor": "accent"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Porcentagem é uma <b>barra cortada em 100</b> pedacinhos. Aqui a barra é uma conta de <b>R$ 240</b>, desenhada em 10 blocos de 10 pedacinhos cada. Cada bloco é <b>10%</b>: 240 ÷ 10 = <b>24</b>."
+        },
+        {
+         "texto": "<b>10%</b>: ande a vírgula <b>uma casa</b> para a esquerda. 240,0 vira <b>24,0</b>. Por quê? Dividir por 10 tira um zero (ou anda uma casa).",
+         "mostra": [
+          "p10"
+         ],
+         "anima": {
+          "p10": "pulsa"
+         }
+        },
+        {
+         "texto": "<b>1%</b>: ande <b>duas casas</b>. 240 vira <b>2,40</b>. É dividir por 100: a barra cortada nos 100 pedacinhos.",
+         "mostra": [
+          "p10",
+          "um"
+         ],
+         "anima": {
+          "um": "pulsa"
+         }
+        },
+        {
+         "texto": "<b>5%</b> é a <b>metade de 10%</b>: 24 ÷ 2 = <b>12</b>. Meio bloco.",
+         "mostra": [
+          "p10",
+          "um",
+          "p5"
+         ],
+         "anima": {
+          "p5": "pulsa"
+         }
+        },
+        {
+         "texto": "Agora monte qualquer porcentagem com essas peças. <b>15% = 10% + 5% = 24 + 12 = 36</b>. 35% seria 3 blocos e meio: 72 + 12 = 84. 2% seria 2 × 2,40 = 4,80.",
+         "mostra": [
+          "p10",
+          "um",
+          "p5",
+          "res",
+          "fim"
+         ],
+         "anima": {
+          "res": "bate"
+         }
+        },
+        {
+         "texto": "Algumas porcentagens são frações conhecidas e poupam conta: <b>25% = 1/4</b>, então 25% de 240 = 240 ÷ 4 = <b>60</b>. 50% = metade; 20% = 1/5.",
+         "mostra": [
+          "p10",
+          "um",
+          "p5",
+          "res",
+          "fim",
+          "frac"
+         ],
+         "anima": {
+          "frac": "pulsa"
+         }
+        }
+       ]
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Porcentagem",
+        "Fração",
+        "Atalho"
+       ],
+       "linhas": [
+        [
+         "50%",
+         "1/2",
+         "metade"
+        ],
+        [
+         "25%",
+         "1/4",
+         "divide por 4"
+        ],
+        [
+         "75%",
+         "3/4",
+         "divide por 4 e multiplica por 3"
+        ],
+        [
+         "20%",
+         "1/5",
+         "divide por 5 (ou 10% × 2)"
+        ],
+        [
+         "12,5%",
+         "1/8",
+         "divide por 8"
+        ],
+        [
+         "10%",
+         "1/10",
+         "vírgula uma casa"
+        ],
+        [
+         "33,3%",
+         "1/3 (aprox.)",
+         "divide por 3"
+        ],
+        [
+         "100%",
+         "1",
+         "o valor inteiro"
+        ],
+        [
+         "150%",
+         "3/2",
+         "o valor e mais a metade"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "x% de y = y% de x",
+       "html": "8% de 50 é difícil? Troque: <b>50% de 8 = 4</b>. Dá sempre o mesmo, porque é a mesma multiplicação (8 × 50 ÷ 100)."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: três perguntas, a base e o fator",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Quase toda questão de porcentagem é uma destas <b>três perguntas</b>. Descobrir qual é a pergunta é metade da resolução: o resto é uma conta só."
+      },
+      {
+       "t": "alternar",
+       "opcoes": [
+        {
+         "rotulo": "Quanto é?",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "35% de 240",
+           "sub": "valor × taxa"
+          },
+          {
+           "titulo": "240 × 0,35 = 84",
+           "sub": "ou 3 blocos e meio de 24"
+          }
+         ],
+         "texto": "Dão a porcentagem e o todo; pedem a parte. <b>Multiplique o todo pela taxa.</b> \"De\" é vezes."
+        },
+        {
+         "rotulo": "Que porcentagem?",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "28 de 80",
+           "sub": "parte ÷ todo"
+          },
+          {
+           "titulo": "28 ÷ 80 = 0,35 = 35%",
+           "sub": "× 100 no fim"
+          }
+         ],
+         "texto": "Dão a parte e o todo; pedem a porcentagem. <b>Divida a parte pelo todo</b> e multiplique por 100. O todo é o que vem depois de \"de\" ou \"em relação a\"."
+        },
+        {
+         "rotulo": "Qual o total?",
+         "modo": "dentro",
+         "caixas": [
+          {
+           "titulo": "15% valem 18",
+           "sub": "1% = 18 ÷ 15 = 1,2"
+          },
+          {
+           "titulo": "100% = 120",
+           "sub": "1,2 × 100"
+          }
+         ],
+         "texto": "Dão a parte e a porcentagem dela; pedem o todo. <b>Ache quanto vale 1%</b> (parte ÷ porcentagem) e multiplique por 100. Atalho: 18 ÷ 0,15 = 120. É o \"achar quanto vale 1 pedaço\" da aula 5."
+        }
+       ]
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "A prova diz...",
+        "Você faz...",
+        "Exemplo"
+       ],
+       "linhas": [
+        [
+         "x% de N",
+         "N × taxa",
+         "15% de 240 = 36"
+        ],
+        [
+         "A é que % de B? / A em relação a B",
+         "A ÷ B",
+         "28 de 80 = 35%"
+        ],
+        [
+         "x% valem P; qual o total?",
+         "P ÷ taxa",
+         "18 ÷ 0,15 = 120"
+        ],
+        [
+         "aumentou x% / x% a mais",
+         "× (1 + taxa)",
+         "+12% → × 1,12"
+        ],
+        [
+         "diminuiu x% / desconto de x%",
+         "× (1 − taxa)",
+         "−8% → × 0,92"
+        ],
+        [
+         "depois do aumento ficou V; quanto era?",
+         "V ÷ fator",
+         "1.344 ÷ 1,12 = 1.200"
+        ],
+        [
+         "de quanto foi o aumento (ou a queda)?",
+         "(depois − antes) ÷ antes",
+         "40 ÷ 250 = 16%"
+        ],
+        [
+         "x% dos y%",
+         "taxa × taxa",
+         "15% dos 40% = 6%"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "A pergunta mais cobrada é a da <b>variação</b>: de quanto por cento algo subiu ou caiu. Tudo depende de escolher a base certa."
+      },
+      {
+       "t": "cena",
+       "titulo": "Variação percentual: a base é o valor de ANTES",
+       "altura": 235,
+       "elementos": [
+        {
+         "id": "antes",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 40,
+         "w": 300,
+         "h": 46,
+         "texto": "R$ 7.200",
+         "sub": "antes = 100%",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "depois",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 110,
+         "w": 360,
+         "h": 46,
+         "texto": "R$ 8.640",
+         "sub": "depois",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "dif",
+         "tipo": "caixa",
+         "x": 320,
+         "y": 110,
+         "w": 60,
+         "h": 46,
+         "texto": "1.440",
+         "sub": "a mais",
+         "cor": "warn"
+        },
+        {
+         "id": "conta",
+         "tipo": "rotulo",
+         "x": 530,
+         "y": 68,
+         "texto": "1.440 ÷ 7.200 = 0,20 = 20%",
+         "cor": "ok"
+        },
+        {
+         "id": "erro",
+         "tipo": "rotulo",
+         "x": 530,
+         "y": 133,
+         "texto": "1.440 ÷ 8.640 ≈ 16,7%",
+         "sub": "dividiu pelo depois: errado",
+         "cor": "bad"
+        },
+        {
+         "id": "regra",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 210,
+         "texto": "variação = (depois − antes) ÷ antes",
+         "cor": "accent"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "O salário era <b>R$ 7.200</b> e passou a <b>R$ 8.640</b>. De quanto por cento foi o aumento? A barra de cima é o salário antigo: ela é o <b>100%</b>."
+        },
+        {
+         "texto": "Primeiro, <b>quanto entrou</b>: 8.640 − 7.200 = <b>1.440</b>. É o pedaço amarelo que passou da barra antiga.",
+         "mostra": [
+          "dif"
+         ],
+         "anima": {
+          "dif": "pulsa"
+         }
+        },
+        {
+         "texto": "Agora compare o pedaço com a barra de <b>antes</b>: 1.440 ÷ 7.200 = <b>0,20 = 20%</b>. Por que a de antes? Porque \"aumentou 20%\" quer dizer 20% <b>do que era</b>.",
+         "mostra": [
+          "dif",
+          "conta"
+         ],
+         "anima": {
+          "conta": "pulsa"
+         }
+        },
+        {
+         "texto": "A armadilha: dividir pelo valor <b>novo</b>. 1.440 ÷ 8.640 dá uns 16,7%, e a FCC costuma pôr esse número nas alternativas.",
+         "mostra": [
+          "dif",
+          "conta",
+          "erro"
+         ],
+         "anima": {
+          "erro": "treme"
+         }
+        },
+        {
+         "texto": "Regra para qualquer variação, de aumento ou de queda: <b>(depois − antes) ÷ antes</b>. A base é sempre quem veio <b>primeiro</b>.",
+         "mostra": [
+          "dif",
+          "conta",
+          "erro",
+          "regra"
+         ],
+         "anima": {
+          "regra": "bate"
+         }
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "Agora o instrumento que resolve aumento, desconto e tudo o que vem em sequência: o <b>fator</b>. O Prof. Dudan chama de fator de capitalização (aumento) e de descapitalização (desconto)."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "+20% → × 1,20",
+         "sub": "aumento",
+         "texto": "O valor novo é 100% + 20% = 120% do antigo. Multiplicar por 1,20 já entrega o preço com o aumento dentro."
+        },
+        {
+         "titulo": "+5% → × 1,05",
+         "sub": "aumento pequeno",
+         "texto": "Cuidado com o zero: 5% é 0,05, então o fator é 1,05, não 1,5 (isso seria +50%)."
+        },
+        {
+         "titulo": "+100% → × 2",
+         "sub": "dobrar",
+         "texto": "Aumentar 100% é dobrar. Triplicar é aumentar 200% (fator 3). A FCC usa isso em crescimento que dobra todo dia."
+        },
+        {
+         "titulo": "−20% → × 0,80",
+         "sub": "desconto",
+         "texto": "Sobram 100% − 20% = 80%. Multiplicar por 0,80 já entrega o preço com o desconto tirado."
+        },
+        {
+         "titulo": "−8% → × 0,92",
+         "sub": "desconto pequeno",
+         "texto": "100 − 8 = 92. O fator é 0,92, não 0,08 (0,08 é o desconto em si)."
+        },
+        {
+         "titulo": "−100% → × 0",
+         "sub": "zerou",
+         "texto": "Desconto de 100% zera o valor. Por isso nada pode cair mais de 100%, mas pode subir mais de 100%."
+        }
+       ]
+      },
+      {
+       "t": "cena",
+       "titulo": "Aumento e desconto viram multiplicação",
+       "altura": 240,
+       "elementos": [
+        {
+         "id": "b100",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 30,
+         "w": 250,
+         "h": 44,
+         "texto": "100",
+         "sub": "preço inicial",
+         "cor": "blue",
+         "fixo": true
+        },
+        {
+         "id": "inc",
+         "tipo": "caixa",
+         "x": 270,
+         "y": 30,
+         "w": 50,
+         "h": 44,
+         "texto": "+20",
+         "sub": "20% de 100",
+         "cor": "warn"
+        },
+        {
+         "id": "f1",
+         "tipo": "rotulo",
+         "x": 500,
+         "y": 58,
+         "texto": "100 × 1,20 = 120",
+         "cor": "warn"
+        },
+        {
+         "id": "b120",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 100,
+         "w": 300,
+         "h": 44,
+         "texto": "120",
+         "sub": "depois do aumento",
+         "cor": "dim"
+        },
+        {
+         "id": "dec",
+         "tipo": "caixa",
+         "x": 260,
+         "y": 100,
+         "w": 60,
+         "h": 44,
+         "texto": "−24",
+         "sub": "20% de 120",
+         "cor": "bad"
+        },
+        {
+         "id": "f2",
+         "tipo": "rotulo",
+         "x": 500,
+         "y": 128,
+         "texto": "120 × 0,80 = 96",
+         "cor": "bad"
+        },
+        {
+         "id": "b96",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 170,
+         "w": 240,
+         "h": 44,
+         "texto": "96",
+         "sub": "preço final",
+         "cor": "accent"
+        },
+        {
+         "id": "falta",
+         "tipo": "rotulo",
+         "x": 300,
+         "y": 197,
+         "texto": "faltam 4",
+         "cor": "bad"
+        },
+        {
+         "id": "fim",
+         "tipo": "rotulo",
+         "x": 490,
+         "y": 197,
+         "texto": "1,20 × 0,80 = 0,96 → 4% abaixo",
+         "cor": "ok"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Um curso custa <b>100</b>. Vai ter um aumento de 20% e, depois, um desconto de 20%. Volta a custar 100? Vamos ver."
+        },
+        {
+         "texto": "Aumento de 20%: entram 20. O preço fica <b>100% + 20% = 120%</b> do que era. Em vez de calcular 20% e somar, multiplique de uma vez por <b>1,20</b> (o fator de aumento).",
+         "mostra": [
+          "inc",
+          "f1"
+         ],
+         "anima": {
+          "inc": "pulsa"
+         }
+        },
+        {
+         "texto": "Agora o desconto de 20%. Mas 20% <b>de quê</b>? Do preço de agora, <b>120</b>. Saem 24, mais do que os 20 que entraram. O fator do desconto é <b>100% − 20% = 0,80</b>.",
+         "mostra": [
+          "inc",
+          "f1",
+          "b120",
+          "dec",
+          "f2"
+         ],
+         "anima": {
+          "dec": "treme"
+         }
+        },
+        {
+         "texto": "Final: <b>96</b>. Não voltou a 100. Por isso a regra de ouro: aumentos e descontos seguidos <b>se multiplicam</b> (1,20 × 0,80 = 0,96), nunca se somam (+20 − 20 = 0 é errado).",
+         "mostra": [
+          "inc",
+          "f1",
+          "b120",
+          "dec",
+          "f2",
+          "b96",
+          "falta",
+          "fim"
+         ],
+         "anima": {
+          "b96": "bate"
+         }
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Fatores",
+         "sub": "um por mudança"
+        },
+        {
+         "titulo": "Multiplicar",
+         "sub": "em sequência"
+        },
+        {
+         "titulo": "Ler",
+         "sub": "fator − 1"
+        },
+        {
+         "titulo": "Conferir",
+         "sub": "com 100"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "Um curso teve aumento de <b>30%</b> e, depois, outro de <b>20%</b>. Qual foi o aumento total? Primeiro, troque cada porcentagem pelo seu fator: +30% → <b>1,3</b>; +20% → <b>1,2</b>."
+        },
+        {
+         "no": 1,
+         "texto": "Multiplique os fatores: 1,3 × 1,2 = <b>1,56</b>. Por que multiplicar? Porque o segundo aumento incide sobre o preço que <b>já subiu</b>, não sobre o original."
+        },
+        {
+         "no": 2,
+         "texto": "Leia o resultado: 1,56 é 156% do preço inicial, ou seja, <b>56% de aumento</b> (1,56 − 1 = 0,56). Se o fator final desse menor que 1, seria queda: 0,96 é 4% a menos."
+        },
+        {
+         "no": 3,
+         "texto": "Confira com 100: 100 → +30% → 130 → +20% (de 130 = 26) → <b>156</b>. A alternativa-armadilha é 50% (30 + 20). <b>Pista usada: mudanças seguidas = fatores multiplicados.</b>"
+        }
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "E o caminho de volta: quando a prova dá o valor <b>depois</b> da mudança e pede o de antes."
+      },
+      {
+       "t": "cena",
+       "titulo": "Desfazer um aumento: divida pelo fator",
+       "altura": 245,
+       "elementos": [
+        {
+         "id": "dep",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 30,
+         "w": 354,
+         "h": 46,
+         "texto": "R$ 1.416",
+         "sub": "depois do aumento = 118%",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "orig",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 30,
+         "w": 300,
+         "h": 46,
+         "texto": "R$ 1.200",
+         "sub": "o salário antigo = 100%",
+         "cor": "blue"
+        },
+        {
+         "id": "aum",
+         "tipo": "caixa",
+         "x": 320,
+         "y": 30,
+         "w": 54,
+         "h": 46,
+         "texto": "216",
+         "sub": "18%",
+         "cor": "warn"
+        },
+        {
+         "id": "conta",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 115,
+         "texto": "1% = 1.416 ÷ 118 = 12 → 100% = 1.200",
+         "cor": "ok"
+        },
+        {
+         "id": "atalho",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 145,
+         "texto": "atalho: 1.416 ÷ 1,18 = 1.200",
+         "cor": "accent"
+        },
+        {
+         "id": "erro",
+         "tipo": "caixa",
+         "x": 20,
+         "y": 180,
+         "w": 290,
+         "h": 46,
+         "texto": "R$ 1.161,12",
+         "sub": "1.416 × 0,82: errado",
+         "cor": "bad"
+        },
+        {
+         "id": "porque",
+         "tipo": "rotulo",
+         "x": 500,
+         "y": 207,
+         "texto": "os 18% eram de 1.200, não de 1.416",
+         "cor": "bad"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Depois de um aumento de <b>18%</b>, o salário chegou a <b>R$ 1.416</b>. Quanto era antes? O ponto de partida: esse 1.416 <b>já tem o aumento dentro</b>. Ele é 100% + 18% = <b>118%</b> do salário antigo."
+        },
+        {
+         "texto": "A tentação é tirar 18% de 1.416 (1.416 × 0,82 = 1.161,12). Errado: os 18% foram calculados sobre o salário <b>antigo</b>, que é menor. Tirar 18% do novo tira demais.",
+         "mostra": [
+          "erro",
+          "porque"
+         ],
+         "anima": {
+          "erro": "treme"
+         }
+        },
+        {
+         "texto": "Desenhe o certo: a barra de 1.416 tem <b>118 pedacinhos</b>. 100 são o salário antigo e 18 são o aumento.",
+         "mostra": [
+          "orig",
+          "aum"
+         ],
+         "anima": {
+          "orig": "pulsa"
+         }
+        },
+        {
+         "texto": "Quanto vale 1 pedacinho? 1.416 ÷ 118 = <b>12</b>. O salário antigo tem 100: <b>12 × 100 = 1.200</b>. Confira: 18% de 1.200 = 216, e 1.200 + 216 = 1.416.",
+         "mostra": [
+          "orig",
+          "aum",
+          "conta"
+         ],
+         "anima": {
+          "conta": "pulsa"
+         }
+        },
+        {
+         "texto": "O atalho é a mesma coisa: se para ir de antes para depois eu <b>multiplico</b> por 1,18, para voltar eu <b>divido</b> por 1,18. 1.416 ÷ 1,18 = <b>1.200</b>.",
+         "mostra": [
+          "orig",
+          "aum",
+          "conta",
+          "atalho"
+         ],
+         "anima": {
+          "atalho": "bate"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e pegadinhas: quando a base muda",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "As pegadinhas de porcentagem têm uma raiz só: <b>a base muda e a pessoa não percebe</b>. Cada carta abaixo é uma forma disso acontecer."
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Pegadinha",
+         "titulo": "O desconto que desfaz o aumento",
+         "texto": "Um preço caiu 20% (100 → 80). Para voltar a 100, precisa subir 20 sobre 80: <b>25%</b>, não 20%. A volta é sempre maior, porque a base de volta é menor."
+        },
+        {
+         "tag": "Pegadinha",
+         "titulo": "Pontos percentuais",
+         "texto": "A taxa de acordos passou de 20% para 25%: subiu <b>5 pontos percentuais</b>, mas isso é <b>25% a mais</b> (5 ÷ 20). Ponto percentual é a diferença entre duas taxas; \"por cento\" é a variação."
+        },
+        {
+         "tag": "Pegadinha",
+         "titulo": "Lucro sobre o custo × sobre a venda",
+         "texto": "Lucro de 25% <b>sobre o custo</b>: venda = custo × 1,25. Lucro de 25% <b>sobre a venda</b>: custo = venda × 0,75. São contas diferentes; a prova diz qual é a base."
+        },
+        {
+         "tag": "Pegadinha",
+         "titulo": "Porcentagem de porcentagem",
+         "texto": "15% <b>dos</b> 40% não é 55% nem 25%: é 0,15 × 0,40 = <b>6%</b> do total. Quando houver grupos dentro de grupos, invente 1.000 pessoas."
+        },
+        {
+         "tag": "Pegadinha",
+         "titulo": "Taxas de grupos diferentes",
+         "texto": "Acordo em 30% de um grupo e 20% de outro não dá 25% no geral, a não ser que os grupos tenham o mesmo tamanho. É <b>média ponderada</b>: cada taxa vezes o peso do seu grupo."
+        },
+        {
+         "tag": "Pegadinha",
+         "titulo": "Entrou gente, mudou o total",
+         "texto": "Para os procuradores virarem 52% da sala, não basta calcular 52% de quem já está lá: quem entra aumenta o total. Olhe <b>quem não muda</b> (como na cena da aula 6)."
+        }
+       ]
+      },
+      {
+       "t": "cena",
+       "titulo": "Porcentagem de porcentagem: invente 1.000 pessoas",
+       "altura": 305,
+       "elementos": [
+        {
+         "id": "tot",
+         "tipo": "caixa",
+         "x": 240,
+         "y": 10,
+         "w": 200,
+         "h": 40,
+         "texto": "1.000 candidatos",
+         "cor": "dim",
+         "fixo": true
+        },
+        {
+         "id": "s1",
+         "tipo": "seta",
+         "x": 300,
+         "y": 52,
+         "w": 180,
+         "h": 78,
+         "cor": "blue"
+        },
+        {
+         "id": "s2",
+         "tipo": "seta",
+         "x": 380,
+         "y": 52,
+         "w": 500,
+         "h": 78,
+         "cor": "warn"
+        },
+        {
+         "id": "mul",
+         "tipo": "caixa",
+         "x": 60,
+         "y": 80,
+         "w": 200,
+         "h": 44,
+         "texto": "400 mulheres",
+         "sub": "40% de 1.000",
+         "cor": "blue"
+        },
+        {
+         "id": "hom",
+         "tipo": "caixa",
+         "x": 420,
+         "y": 80,
+         "w": 200,
+         "h": 44,
+         "texto": "600 homens",
+         "sub": "60% de 1.000",
+         "cor": "warn"
+        },
+        {
+         "id": "am",
+         "tipo": "caixa",
+         "x": 60,
+         "y": 150,
+         "w": 200,
+         "h": 44,
+         "texto": "100 aprovadas",
+         "sub": "25% de 400",
+         "cor": "blue"
+        },
+        {
+         "id": "ah",
+         "tipo": "caixa",
+         "x": 420,
+         "y": 150,
+         "w": 200,
+         "h": 44,
+         "texto": "60 aprovados",
+         "sub": "10% de 600",
+         "cor": "warn"
+        },
+        {
+         "id": "ta",
+         "tipo": "caixa",
+         "x": 240,
+         "y": 220,
+         "w": 200,
+         "h": 44,
+         "texto": "160 aprovados",
+         "sub": "a nova base",
+         "cor": "accent"
+        },
+        {
+         "id": "res",
+         "tipo": "rotulo",
+         "x": 340,
+         "y": 292,
+         "texto": "mulheres entre os aprovados: 100 ÷ 160 = 62,5%",
+         "cor": "ok"
+        }
+       ],
+       "passos": [
+        {
+         "texto": "Em um concurso, <b>40%</b> dos candidatos eram mulheres. Foram aprovadas <b>25% das mulheres</b> e <b>10% dos homens</b>. Entre os aprovados, quantos por cento são mulheres? Quando há porcentagem de porcentagem, <b>invente um total redondo</b>: 1.000."
+        },
+        {
+         "texto": "Corte o total em grupos: 40% de 1.000 = <b>400 mulheres</b>; o resto, <b>600 homens</b>.",
+         "mostra": [
+          "s1",
+          "s2",
+          "mul",
+          "hom"
+         ],
+         "anima": {
+          "mul": "cai",
+          "hom": "cai"
+         }
+        },
+        {
+         "texto": "Agora cada taxa <b>sobre o seu grupo</b>: 25% de 400 = <b>100</b> aprovadas; 10% de 600 = <b>60</b> aprovados. Repare: os 25% não são de 1.000, são das mulheres.",
+         "mostra": [
+          "s1",
+          "s2",
+          "mul",
+          "hom",
+          "am",
+          "ah"
+         ],
+         "anima": {
+          "am": "pulsa",
+          "ah": "pulsa"
+         }
+        },
+        {
+         "texto": "Releia a pergunta: \"<b>entre os aprovados</b>\". A base mudou: não é mais 1.000, são os <b>160</b> aprovados (100 + 60).",
+         "mostra": [
+          "s1",
+          "s2",
+          "mul",
+          "hom",
+          "am",
+          "ah",
+          "ta"
+         ],
+         "anima": {
+          "ta": "bate"
+         }
+        },
+        {
+         "texto": "Mulheres entre os aprovados: 100 ÷ 160 = <b>0,625 = 62,5%</b>. As armadilhas: 25% (a taxa delas, não a fatia) e 40% (a fatia entre os candidatos, não entre os aprovados).",
+         "mostra": [
+          "s1",
+          "s2",
+          "mul",
+          "hom",
+          "am",
+          "ah",
+          "ta",
+          "res"
+         ],
+         "anima": {
+          "res": "pulsa"
+         }
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "100 processos",
+         "sub": "invente"
+        },
+        {
+         "titulo": "Grupos",
+         "sub": "70 e 30"
+        },
+        {
+         "titulo": "Taxas",
+         "sub": "cada uma no seu"
+        },
+        {
+         "titulo": "Juntar",
+         "sub": "sobre 100"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Mistura de grupos.</b> Em um mutirão, 70% dos processos eram de execução fiscal e 30% de outros assuntos. Houve acordo em 10% das execuções e em 40% dos outros. Em quantos por cento do total houve acordo? Invente <b>100 processos</b>."
+        },
+        {
+         "no": 1,
+         "texto": "Corte em grupos: <b>70</b> execuções e <b>30</b> outros."
+        },
+        {
+         "no": 2,
+         "texto": "Cada taxa no seu grupo: 10% de 70 = <b>7</b>; 40% de 30 = <b>12</b>. Os 40% são dos 30, e não de 100: é a mesma ideia da cena acima."
+        },
+        {
+         "no": 3,
+         "texto": "Acordos: 7 + 12 = <b>19</b> em 100 = <b>19%</b>. A média simples, (10 + 40) ÷ 2 = 25%, está errada porque os grupos têm tamanhos diferentes. <b>Pista usada: total redondo + cada taxa no seu grupo.</b>"
+        }
+       ]
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Custo",
+        "Venda",
+        "Lucro",
+        "% sobre o custo",
+        "% sobre a venda"
+       ],
+       "linhas": [
+        [
+         "80",
+         "100",
+         "20",
+         "20 ÷ 80 = 25%",
+         "20 ÷ 100 = 20%"
+        ],
+        [
+         "120",
+         "150",
+         "30",
+         "30 ÷ 120 = 25%",
+         "30 ÷ 150 = 20%"
+        ]
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O mesmo lucro, duas porcentagens",
+       "html": "Na tabela, o lucro é o mesmo, mas a porcentagem muda conforme a base. Se a questão diz \"sobre o preço de custo\", divida pelo custo; \"sobre o preço de venda\", pela venda. Sem dizer nada, a convenção é <b>sobre o custo</b>, mas a FCC costuma escrever."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra: o formato da PGE-AM",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Na PGE-AM 2022 vieram 5 questões de Raciocínio Lógico: contagem de algarismos, sentenças com números, divisão com condições, média com frações e gráfico com média e mediana. Nenhuma de lógica proposicional. O formato é sempre o mesmo: <b>historinha curta, números pequenos, condições encadeadas, às vezes um gráfico</b>, e alternativas fora de ordem. Porcentagem cai assim também: no TJCE 2026, a FCC pediu o maior aumento percentual a partir de um gráfico (é o exercício 1). Tente cada exercício antes de abrir o passo seguinte."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Pergunta",
+         "sub": "o que pede?"
+        },
+        {
+         "titulo": "Anos seguidos",
+         "sub": "um par por vez"
+        },
+        {
+         "titulo": "Variação",
+         "sub": "÷ o de antes"
+        },
+        {
+         "titulo": "Comparar",
+         "sub": "a maior"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Exercício 1 (FCC 2026, TJCE, gráfico).</b> O piso salarial dos professores foi: 2021, R$ 2.886,24; 2022, R$ 3.845,63; 2023, R$ 4.420,55; 2024, R$ 4.580,57; 2025, R$ 4.867,77; 2026, R$ 5.130,63. Qual foi o maior aumento percentual? A pergunta é de <b>variação</b>, de um ano para o seguinte."
+        },
+        {
+         "no": 1,
+         "texto": "Olhe o gráfico antes de fazer conta: o maior salto em reais é de 2021 para 2022 (quase 960 reais), e a base desse ano é a menor de todas. Salto grande sobre base pequena: forte candidata."
+        },
+        {
+         "no": 2,
+         "texto": "Variação = depois ÷ antes − 1. 2021→2022: 3.845,63 ÷ 2.886,24 ≈ 1,3324 → <b>33,24%</b>. Os outros pares: 2022→2023 ≈ 14,95%; 2023→2024 ≈ 3,62%; 2024→2025 ≈ 6,27%; 2025→2026 ≈ 5,40%."
+        },
+        {
+         "no": 3,
+         "texto": "O maior é <b>33,24%</b> (gabarito C). As alternativas 14,95%, 6,27% e 5,40% são as variações de outros anos, postas para quem para no primeiro par que calcula. <b>Pista usada: variação = (depois − antes) ÷ antes, um par de anos por vez.</b>"
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Ana",
+         "sub": "% do total"
+        },
+        {
+         "titulo": "Bia",
+         "sub": "% de Ana"
+        },
+        {
+         "titulo": "Caio",
+         "sub": "o resto"
+        },
+        {
+         "titulo": "Conferir",
+         "sub": "soma 300"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Exercício 2 (condições encadeadas).</b> Três analistas dividiram 300 processos. Ana ficou com 40% do total; Bia ficou com 25% <b>menos do que Ana</b>; Caio, com o restante. Com quantos ficou Caio? Ana: 40% de 300 = <b>120</b>."
+        },
+        {
+         "no": 1,
+         "texto": "\"25% menos do que Ana\": a base é <b>Ana</b>, não o total. Bia = 120 × 0,75 = <b>90</b>. A armadilha é fazer 40% − 25% = 15% do total (45 processos)."
+        },
+        {
+         "no": 2,
+         "texto": "Caio fica com o resto: 300 − 120 − 90 = <b>90</b>."
+        },
+        {
+         "no": 3,
+         "texto": "Confira: 120 + 90 + 90 = 300. <b>Pista usada: \"menos do que Ana\" põe Ana como o 100%.</b>"
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "O que é o valor dado?",
+         "sub": "antes ou depois"
+        },
+        {
+         "titulo": "Fator",
+         "sub": "0,85"
+        },
+        {
+         "titulo": "Dividir",
+         "sub": "voltar"
+        },
+        {
+         "titulo": "Conferir",
+         "sub": "aplicar o desconto"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Exercício 3 (o valor de antes).</b> Com desconto de 15%, uma servidora pagou R$ 1.785,00 por um curso. Qual era o preço sem desconto? O valor dado é o de <b>depois</b>: já tem o desconto dentro."
+        },
+        {
+         "no": 1,
+         "texto": "Desconto de 15%: sobram <b>85%</b>. Então 1.785 é 85% do preço original (fator 0,85)."
+        },
+        {
+         "no": 2,
+         "texto": "Para voltar, <b>divida pelo fator</b>: 1.785 ÷ 0,85 = <b>2.100</b>. Ou: 1% = 1.785 ÷ 85 = 21, e 100% = 2.100."
+        },
+        {
+         "no": 3,
+         "texto": "Confira: 15% de 2.100 = 315; 2.100 − 315 = 1.785. A armadilha é somar 15% ao 1.785 (1.785 × 1,15 = 2.052,75). <b>Pista usada: valor depois da mudança ÷ fator = valor antes.</b>"
+        }
+       ]
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Quem não muda?",
+         "sub": "os servidores"
+        },
+        {
+         "titulo": "Que % eles viram?",
+         "sub": "100 − 60"
+        },
+        {
+         "titulo": "1% e 100%",
+         "sub": "novo total"
+        },
+        {
+         "titulo": "Quantos entram",
+         "sub": "diferença"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Exercício 4 (entrou gente).</b> Numa reunião há 8 procuradores e 12 servidores. Quantos procuradores precisam chegar para que eles sejam 60% dos presentes? Quem <b>não muda</b>? Os 12 servidores: ninguém disse que entram servidores."
+        },
+        {
+         "no": 1,
+         "texto": "Se os procuradores vão ser 60%, os servidores vão ser <b>40%</b> do novo total. Então 40% = 12."
+        },
+        {
+         "no": 2,
+         "texto": "1% = 12 ÷ 40 = 0,3; o novo total (100%) = 0,3 × 100 = <b>30</b> pessoas. Dessas, 30 − 12 = <b>18</b> são procuradores."
+        },
+        {
+         "no": 3,
+         "texto": "Já havia 8: precisam chegar 18 − 8 = <b>10</b>. Confira: 18 ÷ 30 = 60%. A armadilha: 60% de 20 = 12, \"entram 4\", esquecendo que o total cresce. <b>Pista usada: trave quem não muda e ache o novo total por ele.</b>"
+        }
+       ]
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "Dois aumentos seguidos de 10% equivalem a um aumento de 20%.",
+         "v": false,
+         "porque": "1,1 × 1,1 = 1,21: são 21%. O segundo aumento incide sobre o valor que já subiu."
+        },
+        {
+         "texto": "Se o preço caiu 20%, um aumento de 25% faz voltar ao preço original.",
+         "v": true,
+         "porque": "100 → 80; 25% de 80 = 20; 80 + 20 = 100."
+        },
+        {
+         "texto": "De 7.200 para 8.640, o aumento foi de 1.440 ÷ 8.640.",
+         "v": false,
+         "porque": "A base é o valor de antes: 1.440 ÷ 7.200 = 20%."
+        },
+        {
+         "texto": "Para achar o salário antes de um aumento de 18%, divide-se o salário novo por 1,18.",
+         "v": true,
+         "porque": "O novo é 118% do antigo; dividir pelo fator desfaz a multiplicação."
+        },
+        {
+         "texto": "Uma taxa que passa de 20% para 25% aumentou 5%.",
+         "v": false,
+         "porque": "Aumentou 5 pontos percentuais, que correspondem a 25% a mais (5 ÷ 20)."
+        },
+        {
+         "texto": "8% de 50 é igual a 50% de 8.",
+         "v": true,
+         "porque": "As duas são 8 × 50 ÷ 100 = 4."
+        },
+        {
+         "texto": "Se 30% dos processos de um grupo e 20% dos de outro tiveram acordo, no total houve acordo em 25%.",
+         "v": false,
+         "porque": "Só se os grupos tiverem o mesmo tamanho. Em geral é média ponderada."
+        },
+        {
+         "texto": "Um desconto de 5% corresponde a multiplicar o preço por 0,95.",
+         "v": true,
+         "porque": "Sobram 100% − 5% = 95% = 0,95."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Roteiro para qualquer questão de porcentagem",
+       "html": "1) Sublinhe a pergunta: é \"quanto é\", \"que porcentagem\" ou \"qual o total\"? 2) Ache o 100%: o de antes, o grupo, o custo. 3) Mudanças viram fatores; seguidas, multiplique. 4) Valor dado depois da mudança: divida pelo fator. 5) Grupos dentro de grupos: invente 100 ou 1.000. 6) Confira voltando ao enunciado. As questões desta aula estão logo abaixo, com a explicação de cada alternativa e a pista usada."
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "rl-pc-r01",
+    "rl-pc-r02",
+    "rl-pc-01",
+    "rl-pc-02",
+    "rl-pc-03",
+    "rl-pc-04",
+    "rl-pc-05",
+    "rl-pc-06",
+    "rl-pc-07",
+    "rl-pc-08",
+    "rl-pc-09",
+    "rl-pc-10",
+    "rl-pc-11",
+    "rl-pc-12",
+    "rl-pc-13",
+    "rl-pc-14",
+    "rl-pc-15",
+    "rl-pc-16",
+    "rl-pc-17",
+    "rl-pc-18",
+    "rl-010",
+    "rl-011"
+   ]
   },
   {
    "id": "A2-a08",
@@ -4055,6 +5513,26 @@
   [
    "Grandezas inversamente proporcionais",
    "Quando uma dobra, a outra cai pela metade."
+  ],
+  [
+   "Porcentagem",
+   "Razão com base 100: x% = x/100. Sempre de alguma coisa (a base, o 100%)."
+  ],
+  [
+   "Taxa unitária",
+   "A porcentagem dividida por 100: 20% = 0,20. É a forma usada nas contas."
+  ],
+  [
+   "Fator de aumento",
+   "Número pelo qual se multiplica o valor para aplicar um aumento: 1 + taxa (+20% → 1,20). Também chamado fator de capitalização."
+  ],
+  [
+   "Fator de desconto",
+   "Número pelo qual se multiplica o valor para aplicar um desconto: 1 − taxa (−20% → 0,80). Também chamado fator de descapitalização."
+  ],
+  [
+   "Ponto percentual",
+   "Diferença entre duas taxas: de 20% para 25% são 5 pontos percentuais (que correspondem a 25% a mais)."
   ]
  ]
 }
