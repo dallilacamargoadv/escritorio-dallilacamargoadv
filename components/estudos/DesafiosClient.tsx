@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Flame } from "lucide-react";
 import { DESAFIOS_POR_DIA, type Correcao, type DesafioAberto } from "@/lib/estudos-desafios";
 import { Sparkle } from "@/components/estudos/Sparkle";
-import { Barra, BOTAO_PRIMARIO, BOTAO_SECUNDARIO, Card, CardTitulo, Kpi } from "@/components/estudos/ui";
+import { Barra, BOTAO_PRIMARIO, BOTAO_SECUNDARIO, botaoResposta, Card, CardTitulo, Kpi } from "@/components/estudos/ui";
 
 interface Props {
   desafios: DesafioAberto[];
@@ -24,7 +24,7 @@ interface Props {
 function TextoLei({ texto }: { texto: string }) {
   const partes = texto.split("_____");
   return (
-    <p className="font-serif text-[15px] leading-relaxed text-e-ink">
+    <p className="whitespace-pre-line font-serif text-[15px] leading-relaxed text-e-ink">
       {partes.map((p, i) => (
         <span key={i}>
           {p}
@@ -86,11 +86,11 @@ export function DesafiosClient(p: Props) {
   }
 
   const corBotao = (valor: string) => {
-    if (!correcao) return BOTAO_SECUNDARIO + " text-sm";
+    if (!correcao) return botaoResposta("neutro");
     const certo = correcao.resposta === valor || correcao.resposta.toLowerCase() === valor;
-    if (certo) return BOTAO_SECUNDARIO + " text-sm border-e-ok text-e-ok";
-    if (valor === escolha) return BOTAO_SECUNDARIO + " text-sm border-e-bad text-e-bad";
-    return BOTAO_SECUNDARIO + " text-sm opacity-60";
+    if (certo) return botaoResposta("certa");
+    if (valor === escolha) return botaoResposta("marcada-errada");
+    return botaoResposta("apagada");
   };
 
   return (
@@ -168,8 +168,11 @@ export function DesafiosClient(p: Props) {
               <p className={`text-sm font-medium ${correcao.ok ? "text-e-ok" : "text-e-bad"}`}>
                 {correcao.ok ? "Acertou." : "Errou."} {correcao.explicacao}
               </p>
+              <p className="mt-1 text-xs text-e-dim">
+                Você marcou: <strong className="text-e-ink">{escolha === "certo" ? "Certo" : escolha === "errado" ? "Errado" : escolha}</strong> · resposta: <strong className="text-e-ink">{correcao.resposta}</strong>
+              </p>
               <p className="mt-2 text-[11px] uppercase tracking-[0.12em] text-e-dim">Texto literal</p>
-              <p className="mt-1 font-serif text-sm leading-relaxed text-e-ink">{correcao.literal}</p>
+              <p className="mt-1 whitespace-pre-line font-serif text-sm leading-relaxed text-e-ink">{correcao.literal}</p>
               {correcao.juris.length > 0 && (
                 <>
                   <p className="mt-3 text-[11px] uppercase tracking-[0.12em] text-e-dim">Jurisprudência ligada</p>

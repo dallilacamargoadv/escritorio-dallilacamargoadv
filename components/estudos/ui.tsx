@@ -44,6 +44,19 @@ export const BOTAO_PRIMARIO =
   "inline-flex items-center gap-2 rounded-full bg-e-glow px-4 py-2 text-sm font-medium text-e-bg transition-opacity duration-150 hover:opacity-90 disabled:opacity-60";
 export const BOTAO_SECUNDARIO =
   "inline-flex items-center gap-2 rounded-full border border-e-line px-3 py-1.5 text-xs text-e-dim transition-colors duration-150 hover:text-e-ink";
+
+/**
+ * Botão de resposta depois da correção. Sem border-e-line/text-e-dim na base: com as duas
+ * cores na mesma classe, o Tailwind deixa o vermelho perder para o cinza e a escolha errada
+ * some da tela (24/11, CPC art. 2º).
+ */
+export function botaoResposta(tom: "neutro" | "certa" | "marcada-errada" | "apagada"): string {
+  const base = "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm transition-colors duration-150";
+  if (tom === "certa") return `${base} border-e-ok bg-e-ok-soft text-e-ok`;
+  if (tom === "marcada-errada") return `${base} border-e-bad bg-e-bad-soft text-e-bad`;
+  if (tom === "apagada") return `${base} border-e-line text-e-dim opacity-60`;
+  return `${base} border-e-line text-e-dim hover:text-e-ink`;
+}
 export const CAMPO =
   "mt-1 w-full rounded-lg border border-e-line bg-e-card-2 px-2.5 py-1.5 text-sm text-e-ink outline-none focus:border-e-accent";
 

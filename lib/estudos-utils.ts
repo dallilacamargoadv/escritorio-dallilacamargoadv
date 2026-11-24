@@ -127,6 +127,13 @@ export function normalizarConfig(valor: unknown): EstudoConfig {
   return { dataProva: data, minutosPorDia: minutos, incluirCondicionais: cond, ...(excecoes.length ? { excecoes } : {}) };
 }
 
+/**
+ * Mapa estratégico dela (24/11/2026, pré-edital): estas matérias não entram no cronograma gerado
+ * até o edital sair. Ambiental, Trabalho, Direitos Humanos, Previdenciário, legislação e
+ * conhecimentos do Maranhão. Arquivo: CONCURSO PGE-MA/05 Edital/mapa-estrategico-prioridades.md.
+ */
+export const FORA_ATE_O_EDITAL = new Set(["B1", "B4", "B9", "B10", "B11", "A4", "A5", "A6", "A7"]);
+
 export function materiaAtiva(m: Materia, config: EstudoConfig): boolean {
   return !m.condicional || config.incluirCondicionais.includes(m.id);
 }
@@ -208,7 +215,7 @@ export function gerarCronograma(
   config: EstudoConfig,
   estados: Map<string, TopicoEstado>,
 ): NovoItem[] {
-  const ativas = MATERIAS.filter((m) => materiaAtiva(m, config));
+  const ativas = MATERIAS.filter((m) => materiaAtiva(m, config) && !FORA_ATE_O_EDITAL.has(m.id));
   const pendente = (t: Topico) => {
     const e = estados.get(t.id);
     return !e?.fora_do_edital && e?.status !== "dominado";
