@@ -20,6 +20,19 @@ export function proximaEtapa(etapa: number, ok: boolean, hoje: string): { etapa:
   return { etapa: nova, vence_em: addDaysToDateString(hoje, INTERVALOS[Math.min(nova, ETAPA_FINAL - 1)]) };
 }
 
+/** "Quase": lembrou em parte. Fica na mesma etapa e repete o mesmo intervalo (nunca novo: vai para a etapa 1). */
+export function proximaEtapaQuase(etapa: number, hoje: string): { etapa: number; vence_em: string } {
+  const e = Math.min(Math.max(etapa, 0), ETAPA_FINAL - 1);
+  return { etapa: e, vence_em: addDaysToDateString(hoje, INTERVALOS[e]) };
+}
+
+/** Dias até a próxima revisão para cada botão (Errei, Quase, Acertei), a partir da etapa atual (-1 = nunca visto). */
+export function diasDosBotoes(etapa: number): { errei: number; quase: number; acertei: number | null } {
+  const e = Math.max(etapa, -1);
+  const sobe = Math.min(e + 1, ETAPA_FINAL);
+  return { errei: INTERVALOS[0], quase: INTERVALOS[Math.min(Math.max(e, 0), ETAPA_FINAL - 1)], acertei: sobe >= ETAPA_FINAL ? null : INTERVALOS[sobe] };
+}
+
 /** Falha = errou, chutou ou acertou com dúvida. Mesmo critério do filtro "Só as que errei ou chutei". */
 export function ehFalha(r: Resposta): boolean {
   return !r.correta || r.classificacao === "chute" || r.classificacao === "duvida";
@@ -143,7 +156,9 @@ export interface EstadoCartao {
   due?: number;
   int?: number;
   etapa?: number;
-  hist?: { t: number; ok: boolean }[];
+  hist?: { t: number; ok: boolean; quase?: boolean }[];
+  /** última resposta escrita por ela no modo "Escrever antes" */
+  resp?: string;
   [k: string]: unknown;
 }
 

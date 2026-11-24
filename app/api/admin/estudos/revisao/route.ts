@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { revisarArtigo, revisarCartao } from "@/lib/db-estudos";
 import { todayBelemDateString } from "@/lib/atividades-utils";
 
-/** Grava a revisão de um cartão ou de um artigo: { tipo, id, ok, etapa? }. */
+/** Grava a revisão de um cartão ou de um artigo: { tipo, id, ok, etapa?, quase?, resp? }. */
 export async function POST(request: NextRequest) {
   const b = await request.json().catch(() => null);
   const id = typeof b?.id === "string" ? b.id.slice(0, 300) : "";
@@ -12,7 +12,8 @@ export async function POST(request: NextRequest) {
   }
   const hoje = todayBelemDateString();
   try {
-    if (b.tipo === "cartao") await revisarCartao(id, ok, hoje);
+    if (b.tipo === "cartao")
+      await revisarCartao(id, ok, hoje, { quase: b?.quase === true, resp: typeof b?.resp === "string" ? b.resp : undefined });
     else await revisarArtigo(id, Number.isInteger(b.etapa) ? b.etapa : 0, ok, hoje);
     return NextResponse.json({ ok: true });
   } catch (error) {
