@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { concluirDia, reabrirDia, responderItem } from "@/lib/db-estudos-trilhas";
+import { concluirTema, reabrirTema, responderItem } from "@/lib/db-estudos-trilhas";
 import { todayBelemDateString } from "@/lib/atividades-utils";
 
 export async function POST(request: NextRequest) {
@@ -14,15 +14,14 @@ export async function POST(request: NextRequest) {
       if (!correcao) return NextResponse.json({ error: "Item não encontrado" }, { status: 404 });
       return NextResponse.json({ correcao });
     }
-    const trilha = typeof body?.trilha === "string" ? body.trilha : "";
-    const dia = Number(body?.dia);
-    if (!trilha || !Number.isInteger(dia)) return NextResponse.json({ error: "Dados inválidos" }, { status: 400 });
+    const tema = typeof body?.tema === "string" ? body.tema : "";
+    if (!tema) return NextResponse.json({ error: "Dados inválidos" }, { status: 400 });
     if (acao === "concluir") {
-      const ok = await concluirDia(trilha, dia, typeof body.blurt === "string" ? body.blurt : "", todayBelemDateString());
-      return ok ? NextResponse.json({ ok }) : NextResponse.json({ error: "Dia não encontrado" }, { status: 404 });
+      const ok = await concluirTema(tema, typeof body.blurt === "string" ? body.blurt : "", todayBelemDateString());
+      return ok ? NextResponse.json({ ok }) : NextResponse.json({ error: "Tema não encontrado" }, { status: 404 });
     }
     if (acao === "reabrir") {
-      await reabrirDia(trilha, dia);
+      await reabrirTema(tema);
       return NextResponse.json({ ok: true });
     }
     return NextResponse.json({ error: "Ação inválida" }, { status: 400 });

@@ -1,12 +1,16 @@
 import trilhasJson from "@/content/estudos/trilhas.json";
-import { chaveDia, corrigirItem, normalizarTrilhas, type CorrecaoTrilha, type EstadoTrilhas, type ItemTrilha, type Trilha } from "@/lib/estudos-trilhas";
+import { corrigirItem, normalizarTrilhas, type CorrecaoTrilha, type EstadoTrilhas, type ItemTrilha, type TemaTrilha, type Trilha } from "@/lib/estudos-trilhas";
 import { createClient } from "@/lib/supabase/server";
 
 /** Texto e gabarito só no servidor. Estado em estudo_config, chave "trilhas". */
 export const TRILHAS = trilhasJson as Trilha[];
-export const TRILHA_POR_ID = new Map(TRILHAS.map((t) => [t.id, t]));
+export const TEMA_POR_ID = new Map<string, { trilha: Trilha; tema: TemaTrilha }>();
 const ITEM_POR_ID = new Map<string, ItemTrilha>();
-for (const t of TRILHAS) for (const d of t.dias) for (const i of d.itens) ITEM_POR_ID.set(i.id, i);
+for (const t of TRILHAS)
+  for (const x of t.temas) {
+    TEMA_POR_ID.set(x.id, { trilha: t, tema: x });
+    for (const i of x.itens) ITEM_POR_ID.set(i.id, i);
+  }
 
 export async function getEstadoTrilhas(): Promise<EstadoTrilhas> {
   const supabase = await createClient();
@@ -31,14 +35,13 @@ export async function responderItem(id: string, resposta: string): Promise<Corre
   return c;
 }
 
-/** Fecha o dia da trilha: guarda acertos do bloco e o texto do blurting. */
-export async function concluirDia(trilhaId: string, dia: number, blurt: string, hoje: string): Promise<boolean> {
-  const t = TRILHA_POR_ID.get(trilhaId);
-  const d = t?.dias.find((x) => x.dia === dia);
-  if (!t || !d) return false;
+/** Fecha o tema: guarda acertos do bloco e o texto do blurting. */
+export async function concluirTema(temaId: string, blurt: string, hoje: string): Promise<boolean> {
+  const x = TEMA_POR_ID.get(temaId)?.tema;
+  if (!x) return false;
   const estado = await getEstadoTrilhas();
-  const respondidos = d.itens.filter((i) => i.id in estado.resp);
-  estado.concluidos[chaveDia(t.id, dia)] = {
+  const respondidos = x.itens.filter((i) => i.id in estado.resp);
+  estado.concluidos[x.id] = {
     data: hoje,
     acertos: respondidos.filter((i) => estado.resp[i.id]).length,
     total: respondidos.length,
@@ -48,11 +51,10 @@ export async function concluirDia(trilhaId: string, dia: number, blurt: string, 
   return true;
 }
 
-/** Desfaz a conclusão (para refazer o dia). */
-export async function reabrirDia(trilhaId: string, dia: number): Promise<void> {
+/** Desfaz a conclusão (para refazer o tema). */
+export async function reabrirTema(temaId: string): Promise<void> {
   const estado = await getEstadoTrilhas();
-  delete estado.concluidos[chaveDia(trilhaId, dia)];
-  const t = TRILHA_POR_ID.get(trilhaId);
-  for (const i of t?.dias.find((x) => x.dia === dia)?.itens ?? []) delete estado.resp[i.id];
+  delete estado.concluidos[temaId];
+  for (const i of TEMA_POR_ID.get(temaId)?.tema.itens ?? []) delete estado.resp[i.id];
   await salvar(estado);
 }

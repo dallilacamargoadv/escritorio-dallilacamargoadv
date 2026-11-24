@@ -11,14 +11,13 @@ import { addDaysToDateString } from "@/lib/atividades-utils";
 import {
   AGENDA_SEMANA,
   DIAS_SEMANA,
-  diaAtual,
   diaDaSemana,
-  diasFeitos,
   rodizioSemanal,
   ROTULO_SEMANAL,
-  rotuloTrecho,
+  rotuloTema,
   semanaDe,
-  trilhaDaMateria,
+  temaAtual,
+  temasFeitos,
   type TipoSemanal,
 } from "@/lib/estudos-trilhas";
 import { MATERIA_POR_ID } from "@/lib/estudos-utils";
@@ -27,14 +26,14 @@ import { MarcarSemanal } from "@/components/estudos/MarcarSemanal";
 
 const ICONE: Record<TipoSemanal, typeof Calculator> = { rlm: Calculator, redacao: PenLine, discursiva: Scale };
 
-/** Bloco "Hoje" dos Desafios: trilha de lei seca das matérias do cronograma e desafio da semana. */
+/** Bloco "Hoje" dos Desafios: lei seca do tema em curso das matérias do cronograma e desafio da semana. */
 export async function HojeDesafios({ hoje }: { hoje: string }) {
   const [blocos, estado, redacao, respostas, aulas] = await Promise.all([getCronograma(hoje, hoje), getEstadoTrilhas(), getEstadoRedacao(), getRespostas(), getAulasEstudadas()]);
   const materiasHoje = [...new Set(blocos.map((b) => b.materia_id))];
   const comTrilha = [...new Set(TRILHAS.map((t) => t.materia_id))];
   let doDia = materiasHoje.filter((m) => comTrilha.includes(m));
   const semCronograma = doDia.length === 0;
-  if (semCronograma) doDia = comTrilha.filter((m) => trilhaDaMateria(TRILHAS, estado, m)).slice(0, 1);
+  if (semCronograma) doDia = comTrilha.filter((m) => TRILHAS.some((t) => t.materia_id === m && temaAtual(t, estado))).slice(0, 1);
 
   const dow = diaDaSemana(hoje);
   const tipos = AGENDA_SEMANA[dow] ?? [];
@@ -56,23 +55,23 @@ export async function HojeDesafios({ hoje }: { hoje: string }) {
     <div className="mb-6 grid gap-4 lg:grid-cols-2">
       <Card destaque>
         <CardTitulo acao={<BookOpenText size={16} aria-hidden="true" />}>Leitura de lei seca de hoje</CardTitulo>
-        {semCronograma && <p className="mb-2 text-xs text-e-dim">Sem matéria com trilha no cronograma de hoje. Sugestão:</p>}
+        {semCronograma && <p className="mb-2 text-xs text-e-dim">Nenhuma matéria do cronograma de hoje tem lei seca por tema ainda. Sugestão:</p>}
         <div className="flex flex-col gap-3">
           {doDia.map((m) => {
-            const t = trilhaDaMateria(TRILHAS, estado, m);
-            if (!t) return <p key={m} className="text-sm text-e-ok">{MATERIA_POR_ID.get(m)?.nome}: todas as trilhas concluídas.</p>;
-            const d = diaAtual(t, estado)!;
+            const t = TRILHAS.find((x) => x.materia_id === m)!;
+            const x = temaAtual(t, estado);
+            if (!x) return <p key={m} className="text-sm text-e-ok">{MATERIA_POR_ID.get(m)?.nome}: todos os temas prontos foram concluídos.</p>;
             return (
               <div key={m}>
                 <p className="text-sm text-e-ink">
-                  <span className="text-e-dim">{MATERIA_POR_ID.get(m)?.nome}:</span> {t.nome}, dia {d.dia} de {t.dias.length}
+                  <span className="text-e-dim">{MATERIA_POR_ID.get(m)?.nome}:</span> tema {x.ordem} de {t.temas.length}
                 </p>
-                <p className="font-serif text-lg text-e-ink">Leia {rotuloTrecho(d)}</p>
-                <p className="text-xs text-e-dim">{d.artigos} artigos e depois {d.itens.length} de certo ou errado.</p>
+                <p className="font-serif text-lg text-e-ink">{x.nome}</p>
+                <p className="text-xs text-e-dim">Leia {rotuloTema(x)} e depois {x.itens.length} de certo ou errado.</p>
                 <div className="my-2">
-                  <Barra pct={(diasFeitos(t, estado) / t.dias.length) * 100} tom="accent" />
+                  <Barra pct={(temasFeitos(t, estado) / t.temas.length) * 100} tom="accent" />
                 </div>
-                <Link href={`/admin/estudos/desafios/trilha/${t.id}`} className={BOTAO_PRIMARIO}>
+                <Link href={`/admin/estudos/desafios/trilha/${x.id}`} className={BOTAO_PRIMARIO}>
                   Começar
                 </Link>
               </div>
@@ -80,7 +79,7 @@ export async function HojeDesafios({ hoje }: { hoje: string }) {
           })}
         </div>
         <Link href="/admin/estudos/desafios/trilha" className="mt-3 inline-block text-xs text-e-dim underline">
-          Ver todas as trilhas
+          Ver todos os temas
         </Link>
       </Card>
 

@@ -3,19 +3,19 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { BookOpenText, Brain, CheckCircle2 } from "lucide-react";
-import type { CorrecaoTrilha, DiaConcluido, ItemAberto } from "@/lib/estudos-trilhas";
+import { BookOpenText, Brain, CheckCircle2, Landmark } from "lucide-react";
+import type { CorrecaoTrilha, ItemAberto, TemaConcluido } from "@/lib/estudos-trilhas";
 import { Sparkle } from "@/components/estudos/Sparkle";
 import { Barra, BOTAO_PRIMARIO, BOTAO_SECUNDARIO, CAMPO, Card, CardTitulo, Kpi } from "@/components/estudos/ui";
 
 interface Props {
-  trilha: string;
-  dia: number;
-  trecho: string;
-  linkLeitura: string;
+  tema: string;
+  leituras: { rotulo: string; href: string }[];
+  fcc: string;
+  procuradoria: string;
   itens: ItemAberto[];
   respondidos: Record<string, boolean>;
-  concluido: DiaConcluido | null;
+  concluido: TemaConcluido | null;
   metodo: { nome: string; como: string };
   linkQuestoes: string;
   linkProximo: string;
@@ -67,7 +67,7 @@ export function TrilhaClient(p: Props) {
     setSalvando(true);
     setErro("");
     try {
-      await post({ acao: nome, trilha: p.trilha, dia: p.dia, blurt });
+      await post({ acao: nome, tema: p.tema, blurt });
       router.refresh();
       if (nome === "reabrir") window.location.reload();
     } catch (e) {
@@ -88,7 +88,7 @@ export function TrilhaClient(p: Props) {
     return (
       <Card destaque>
         <p className="flex items-center gap-2 text-sm text-e-ink">
-          <Sparkle size={16} variante="brilhante" /> Dia concluído em {p.concluido.data.split("-").reverse().join("/")}: {p.concluido.acertos} de {p.concluido.total} no certo ou errado.
+          <Sparkle size={16} variante="brilhante" /> Tema concluído em {p.concluido.data.split("-").reverse().join("/")}: {p.concluido.acertos} de {p.concluido.total} no certo ou errado.
         </p>
         {p.concluido.blurt && (
           <>
@@ -97,13 +97,16 @@ export function TrilhaClient(p: Props) {
           </>
         )}
         <div className="mt-4 flex flex-wrap gap-2">
+          <Link href={p.linkQuestoes} className={BOTAO_PRIMARIO}>
+            Questões deste tema
+          </Link>
           {p.linkProximo && (
-            <Link href={p.linkProximo} className={BOTAO_PRIMARIO}>
-              Próximo dia
+            <Link href={p.linkProximo} className={BOTAO_SECUNDARIO}>
+              Próximo tema
             </Link>
           )}
           <button type="button" onClick={() => acao("reabrir")} disabled={salvando} className={BOTAO_SECUNDARIO}>
-            Refazer este dia
+            Refazer este tema
           </button>
         </div>
       </Card>
@@ -119,14 +122,26 @@ export function TrilhaClient(p: Props) {
       </div>
 
       <Card>
-        <CardTitulo acao={<BookOpenText size={16} aria-hidden="true" />}>1. Leia {p.trecho}</CardTitulo>
+        <CardTitulo acao={<Landmark size={16} aria-hidden="true" />}>Antes de ler: como cobram e o olhar da procuradoria</CardTitulo>
+        <p className="text-sm text-e-ink">
+          <span className="font-medium">Como a FCC cobra:</span> {p.fcc}
+        </p>
+        <p className="mt-2 rounded-xl border border-e-accent bg-e-card-2 p-3 text-sm text-e-ink">
+          <span className="font-medium">Pensando como analista da procuradoria:</span> {p.procuradoria}
+        </p>
+      </Card>
+
+      <Card>
+        <CardTitulo acao={<BookOpenText size={16} aria-hidden="true" />}>1. Leia só a lei deste tema</CardTitulo>
         <p className="text-sm text-e-dim">
-          Leia o texto seco na Biblioteca (abre no primeiro artigo do dia). Grife o que for prazo, competência e exceção: é isso que a FCC troca.
+          Leia o texto seco na Biblioteca (abre no primeiro artigo). Grife prazo, competência, quórum e exceção: é isso que a FCC troca.
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
-          <Link href={p.linkLeitura} target="_blank" className={BOTAO_SECUNDARIO}>
-            Abrir a lei na Biblioteca
-          </Link>
+          {p.leituras.map((l) => (
+            <Link key={l.href} href={l.href} target="_blank" className={BOTAO_SECUNDARIO}>
+              {l.rotulo}
+            </Link>
+          ))}
           <button type="button" onClick={() => setLeu(true)} className={`${BOTAO_SECUNDARIO} ${leu ? "border-e-ok text-e-ok" : ""}`}>
             <CheckCircle2 size={13} aria-hidden="true" /> Já li
           </button>
@@ -144,11 +159,9 @@ export function TrilhaClient(p: Props) {
           {fimBloco ? (
             <p className="text-sm text-e-ink">
               Bloco fechado: {acertos} de {feitos}.{" "}
-              {p.linkQuestoes && (
-                <Link href={p.linkQuestoes} className="underline">
-                  Quer mais? Questões FCC da matéria no banco.
-                </Link>
-              )}
+              <Link href={p.linkQuestoes} className="underline">
+                Agora, as questões deste tema.
+              </Link>
             </p>
           ) : (
             atual && (
@@ -170,6 +183,11 @@ export function TrilhaClient(p: Props) {
                     </p>
                     <p className="mt-2 text-[11px] uppercase tracking-[0.12em] text-e-dim">Texto literal</p>
                     <p className="mt-1 font-serif text-sm leading-relaxed text-e-ink">{correcao.literal}</p>
+                    {correcao.nota && (
+                      <p className="mt-2 text-sm text-e-ink">
+                        <span className="font-medium">Na prova e na procuradoria:</span> {correcao.nota}
+                      </p>
+                    )}
                     <button
                       type="button"
                       onClick={() => {
@@ -193,16 +211,16 @@ export function TrilhaClient(p: Props) {
         <Card>
           <CardTitulo acao={<Brain size={16} aria-hidden="true" />}>3. Revisão ativa: blurting</CardTitulo>
           <p className="text-sm text-e-dim">
-            Sem olhar a lei, escreva tudo o que lembra do trecho de hoje: prazos, quem é competente, exceções. Depois confira na Biblioteca e complete com outra cor de caneta (no papel) ou aqui embaixo.
+            Sem olhar a lei, escreva tudo o que lembra deste tema: prazos, quem é competente, exceções. Depois confira na Biblioteca e complete com outra cor de caneta (no papel) ou aqui embaixo.
           </p>
           <p className="mt-2 text-xs text-e-dim">
             <span className="font-medium text-e-ink">Extra de hoje, {p.metodo.nome}:</span> {p.metodo.como}
           </p>
           <textarea value={blurt} onChange={(e) => setBlurt(e.target.value)} rows={7} className={CAMPO} placeholder="O que eu lembro..." />
           <button type="button" onClick={() => acao("concluir")} disabled={salvando || !blurt.trim()} className={`mt-3 ${BOTAO_PRIMARIO}`}>
-            Concluir o dia
+            Concluir o tema
           </button>
-          <p className="mt-2 text-[11px] text-e-dim">Para treinar de novo os que errou, use &ldquo;Refazer este dia&rdquo; depois de concluir.</p>
+          <p className="mt-2 text-[11px] text-e-dim">Para treinar de novo os que errou, use &ldquo;Refazer este tema&rdquo; depois de concluir.</p>
         </Card>
       )}
       {erro && <p className="text-xs text-e-bad">{erro}</p>}
