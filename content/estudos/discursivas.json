@@ -894,5 +894,105 @@
       "B7|Impostos estaduais",
       "B7|Imunidades"
     ]
+  },
+  {
+    "id": "adm-rc-viatura-culpa-concorrente",
+    "materia_id": "B2",
+    "titulo": "Viatura, culpa concorrente e pensão provisória (defesa do Estado)",
+    "enunciado": "Em 12 de junho de 2021, uma viatura da Polícia Militar do Estado do Maranhão, em perseguição a suspeitos e com a sirene ligada, avançou o sinal vermelho num cruzamento de São Luís e atingiu a motocicleta de João, que ficou paraplégico. O laudo pericial registrou que João trafegava sem capacete e que isso agravou as lesões na cabeça, mas não causou a colisão. Em 5 de agosto de 2025, João ajuizou ação de indenização contra o Estado e contra o soldado Pedro, motorista da viatura, e obteve tutela de urgência que fixou pensão provisória de R$ 3.000,00 por mês. O Estado foi intimado pessoalmente, por meio eletrônico. Na contestação, a Procuradoria pretende alegar prescrição trienal (art. 206, § 3º, V, do Código Civil), culpa exclusiva da vítima e ilegitimidade de Pedro. Neste contexto, responda justificadamente ao que se pede:",
+    "perguntas": [
+      "Pedro pode figurar como réu nessa ação?",
+      "A prescrição trienal pretendida pelo Estado procede?",
+      "A falta de capacete exclui a responsabilidade do Estado?",
+      "Qual a medida cabível contra a pensão provisória, em que prazo e com qual pedido urgente?"
+    ],
+    "linhas_min": 20,
+    "linhas": 30,
+    "espelho": [
+      {
+        "ponto": "Não. Pela dupla garantia, a vítima demanda a pessoa jurídica e o agente responde só perante ela, em regresso, se agiu com dolo ou culpa. O STF fixou que o autor do ato é parte ilegítima. Pedro dirigia a viatura em serviço, \"nessa qualidade\", e deve ser excluído da ação.",
+        "fundamento": "CF/88, art. 37, § 6º; STF, RE 1.027.633, Tema 940",
+        "peso": 25
+      },
+      {
+        "ponto": "Não. Contra a Fazenda vale o prazo de 5 anos, contado do fato, do Decreto 20.910/1932, norma especial que afasta os 3 anos do Código Civil. Entre 12/06/2021 e 05/08/2025 passaram pouco mais de 4 anos: não há prescrição. A Procuradoria não deve sustentar tese contrária a repetitivo.",
+        "fundamento": "Decreto 20.910/1932, art. 1º; STJ, Tema 553",
+        "peso": 20
+      },
+      {
+        "ponto": "Não. A CF adota o risco administrativo: basta conduta, dano e nexo, e o Estado só se exime provando excludente, como a culpa exclusiva da vítima. Aqui a colisão foi causada pela viatura que avançou o sinal; a falta de capacete só agravou as lesões. Há culpa concorrente, que não exclui, mas reduz a indenização na proporção da culpa da vítima.",
+        "fundamento": "CF/88, art. 37, § 6º; Código Civil, art. 945",
+        "peso": 25
+      },
+      {
+        "ponto": "Agravo de instrumento, porque a decisão concedeu tutela provisória. Prazo de 15 dias úteis, em dobro para o Estado, contado da intimação pessoal: 30 dias úteis. Pedido de efeito suspensivo ao relator, com a probabilidade de provimento (culpa concorrente) e o risco de pagamento irreversível. A suspensão de liminar ao presidente do tribunal (Lei 8.437, art. 4º) exige grave lesão à economia pública, difícil numa pensão individual.",
+        "fundamento": "CPC, arts. 1.015, I, 1.003, § 5º, 183, 219 e 1.019, I; Lei 8.437/1992, art. 4º",
+        "peso": 20
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado, cada quesito respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
+      }
+    ],
+    "dica": "Pistas do enunciado: \"soldado Pedro\" como réu (Tema 940), as duas datas (conte os 5 anos), \"agravou as lesões, mas não causou a colisão\" (concorrente, e não exclusiva), \"tutela de urgência\" e \"intimado pessoalmente\" (agravo e prazo em dobro).",
+    "tangencia": "Tangenciar é explicar as teorias da responsabilidade civil sem dizer se Pedro sai do processo, se houve prescrição, quanto a falta de capacete pesa e qual recurso o Estado usa.",
+    "topico_id": "B2-09",
+    "temas": [
+      "B2|Responsabilidade civil do Estado",
+      "B5|Fazenda Pública em juízo",
+      "B5|Recursos",
+      "B5|Tutela provisória"
+    ]
+  },
+  {
+    "id": "const-saude-medicamento-nao-incorporado",
+    "materia_id": "B3",
+    "titulo": "Medicamento registrado na Anvisa, mas fora do SUS",
+    "enunciado": "Maria, moradora de Imperatriz e sem condições de pagar o tratamento, ajuizou ação contra o Estado do Maranhão pedindo o medicamento X para uma doença autoimune. O medicamento tem registro na Anvisa, mas não está nas listas de dispensação do SUS, e não há decisão da Conitec sobre ele. O SUS oferece outro remédio para a mesma doença, que Maria nunca usou. A inicial traz só o laudo do médico particular dela, e Maria não pediu o medicamento à Secretaria de Saúde antes de ir à Justiça. O juiz da Vara da Fazenda Pública, sem ouvir o Estado e sem consultar o NATJUS, deferiu tutela de urgência para entrega em 48 horas, sob multa diária, com base apenas no laudo e no art. 196 da Constituição. Neste contexto, responda justificadamente ao que se pede:",
+    "perguntas": [
+      "O Estado do Maranhão pode ser o único réu? Qual a regra de responsabilidade entre os entes?",
+      "Estão presentes os requisitos para conceder judicialmente medicamento registrado na Anvisa e não incorporado ao SUS?",
+      "A decisão do juiz tem vício? Qual?",
+      "Que medidas o Estado pode usar contra a tutela de urgência? E se o medicamento não tivesse registro na Anvisa?"
+    ],
+    "linhas_min": 20,
+    "linhas": 30,
+    "espelho": [
+      {
+        "ponto": "Sim. A saúde é competência comum e o STF fixou a responsabilidade solidária dos entes nas demandas de saúde. Mas, pela descentralização e hierarquização do SUS, o juiz deve direcionar o cumprimento ao ente competente e determinar o ressarcimento a quem pagou, seguindo os acordos do Tema 1.234. A defesa do Estado é o direcionamento e o ressarcimento, não a ilegitimidade.",
+        "fundamento": "CF/88, arts. 23, II, e 198, I; STF, Tema 793; Súmula Vinculante 60",
+        "peso": 20
+      },
+      {
+        "ponto": "Não. Medicamento fora das listas do SUS, em regra, não é concedido por decisão judicial, independentemente do custo. A exceção exige requisitos cumulativos, provados pelo autor: negativa administrativa, ilegalidade ou mora da Conitec (ou falta de pedido de incorporação), impossibilidade de substituição por remédio do SUS, eficácia por evidência científica de alto nível, laudo fundamentado com o tratamento já feito e incapacidade financeira. Maria não pediu à Secretaria, nunca usou o remédio do SUS e juntou só o laudo do seu médico.",
+        "fundamento": "Súmula Vinculante 61; STF, RE 566.471, Tema 6, itens 1 e 2; Lei 8.080/1990, art. 19-Q",
+        "peso": 25
+      },
+      {
+        "ponto": "Sim, nulidade. O juiz deve, sob pena de nulidade, analisar o ato de não incorporação ou a negativa administrativa, consultar previamente o NATJUS e não decidir só com base no laudo juntado pelo autor. A tutela foi dada apenas com o laudo particular e a menção genérica ao art. 196, o que também é fundamentação deficiente.",
+        "fundamento": "STF, Tema 6, item 3; CPC, art. 489, § 1º, V e VI",
+        "peso": 20
+      },
+      {
+        "ponto": "Agravo de instrumento contra a tutela provisória, em 30 dias úteis (prazo em dobro), com pedido de efeito suspensivo ao relator; e, ao mesmo tempo, pedido de suspensão de liminar ao presidente do TJMA, se houver grave lesão à saúde ou à economia públicas (um não prejudica o outro). Sem registro na Anvisa, o fornecimento é vedado em regra, só cabe na mora irrazoável da Anvisa com os requisitos do Tema 500, e a ação tem de ser proposta contra a União.",
+        "fundamento": "CPC, arts. 1.015, I, 183 e 1.019, I; Lei 8.437/1992, art. 4º, § 6º; Lei 8.080/1990, art. 19-T, II; STF, RE 657.718, Tema 500",
+        "peso": 25
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado, cada quesito respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
+      }
+    ],
+    "dica": "Separe os três temas do STF: com registro e fora do SUS é o Tema 6 (SV 61); sem registro na Anvisa é o Tema 500 (União no polo); quem paga e como o caso tramita é o Tema 793 com o Tema 1.234 (SV 60). Depois cace no enunciado cada requisito que falta.",
+    "tangencia": "Tangenciar é falar do direito à saúde (art. 196) em geral sem dizer se o Estado pode ser réu sozinho, quais requisitos do Tema 6 faltam, por que a decisão é nula e quais medidas o Estado usa.",
+    "topico_id": "B3-03",
+    "temas": [
+      "B3|Direitos fundamentais",
+      "B5|Fazenda Pública em juízo",
+      "B5|Tutela provisória",
+      "B5|Recursos"
+    ]
   }
 ]
