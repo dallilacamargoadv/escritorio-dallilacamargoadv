@@ -8,7 +8,7 @@ import {
   etapaDoCartao,
   INTERVALOS,
   msDaData,
-  proximaEtapa,
+  proximaEtapa, proximaEtapaQuase,
   type Cartao,
   type EstadoCartao,
   type EstadoRevisao,
@@ -236,7 +236,8 @@ export async function getEstadosCartoes(): Promise<Map<string, EstadoCartao>> {
   return new Map((data ?? []).map((c) => [c.cartao_id as string, (c.estado ?? {}) as EstadoCartao]));
 }
 
-export async function revisarCartao(id: string, ok: boolean, hoje: string): Promise<void> {
+/** quase: lembrou em parte; o cartão repete o mesmo intervalo, sem subir nem voltar ao começo. resp: o que ela escreveu antes de virar. */
+export async function revisarCartao(id: string, ok: boolean, hoje: string, opcoes: { quase?: boolean; resp?: string } = {}): Promise<void> {
   // "erro:<questão>" é o cartão gerado de um erro dela (lib/estudos-erros-cartoes.ts)
   const doErro = id.startsWith("erro:") && QUESTAO_POR_ID.has(id.slice(5));
   if (!CARTAO_POR_ID.has(id) && !doErro) throw new Error("cartão inexistente");
@@ -244,9 +245,11 @@ export async function revisarCartao(id: string, ok: boolean, hoje: string): Prom
   const { data: atual } = await supabase.from("estudo_cartoes").select("estado").eq("cartao_id", id).maybeSingle();
   const estado = (atual?.estado ?? {}) as EstadoCartao;
   const agora = Date.now();
-  const prox = proximaEtapa(atual ? etapaDoCartao(estado) : -1, ok, hoje);
-  const hist = [...(estado.hist ?? []), { t: agora, ok }].slice(-50);
-  const novo: EstadoCartao = { ...estado, etapa: prox.etapa, due: msDaData(prox.vence_em), int: INTERVALOS[Math.min(prox.etapa, INTERVALOS.length - 1)], hist, last: agora, first: estado.first ?? agora };
+  const etapaAtual = atual ? etapaDoCartao(estado) : -1;
+  const prox = opcoes.quase ? proximaEtapaQuase(etapaAtual, hoje) : proximaEtapa(etapaAtual, ok, hoje);
+  const hist = [...(estado.hist ?? []), opcoes.quase ? { t: agora, ok: true, quase: true } : { t: agora, ok }].slice(-50);
+  const resp = opcoes.resp?.trim() ? { resp: opcoes.resp.trim().slice(0, 2000), respEm: agora } : {};
+  const novo: EstadoCartao = { ...estado, ...resp, etapa: prox.etapa, due: msDaData(prox.vence_em), int: INTERVALOS[Math.min(prox.etapa, INTERVALOS.length - 1)], hist, last: agora, first: estado.first ?? agora };
   const { error } = await supabase.from("estudo_cartoes").upsert({ cartao_id: id, estado: novo, atualizado_em: new Date().toISOString() });
   if (error) throw error;
 }

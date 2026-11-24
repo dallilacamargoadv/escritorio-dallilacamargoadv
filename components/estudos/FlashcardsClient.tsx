@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Shuffle } from "lucide-react";
-import { rotuloEtapa } from "@/lib/estudos-revisao";
+import { diasDosBotoes, rotuloEtapa } from "@/lib/estudos-revisao";
 import { Sparkle } from "@/components/estudos/Sparkle";
 import { BOTAO_PRIMARIO, BOTAO_SECUNDARIO, Card, CardTitulo } from "@/components/estudos/ui";
 
@@ -30,8 +30,19 @@ export interface CartaoFlash {
   etapa: number;
   /** cartão de erro: link para refazer a questão */
   questaoHref?: string;
+  /** "assunto · subtópico" */
+  lugar?: string;
+  /** o que ela escreveu na última vez */
+  respAnterior?: string;
 }
-type Filtros = { baralho: string; nivel: number; modo: "todos" | "vencidos" | "novos" | "esquecidos"; subtema: string };
+export interface Assunto {
+  nome: string;
+  total: number;
+  vencidos: number;
+  novos: number;
+  subs: { id: string; nome: string; total: number; vencidos: number }[];
+}
+type Filtros = { baralho: string; nivel: number; modo: "todos" | "vencidos" | "novos" | "esquecidos"; subtema: string; assunto: string; sub: string };
 
 const NIVEIS = ["", "Fácil", "Médio", "Difícil"];
 const MODOS: { k: Filtros["modo"]; t: string }[] = [
@@ -50,11 +61,15 @@ function url(f: Filtros) {
   if (f.nivel) p.set("nivel", String(f.nivel));
   if (f.modo !== "todos") p.set("modo", f.modo);
   if (f.subtema) p.set("subtema", f.subtema);
+  if (f.assunto) p.set("assunto", f.assunto);
+  if (f.sub) p.set("sub", f.sub);
   const q = p.toString();
   return `/admin/estudos/flashcards${q ? `?${q}` : ""}`;
 }
 
-export function FlashcardsClient({ baralhos, filtros, subtemaNome = "", cartoes }: { baralhos: Baralho[]; filtros: Filtros; subtemaNome?: string; cartoes: CartaoFlash[] }) {
+const dias = (n: number | null) => (n === null ? "sai da fila" : n === 1 ? "amanhã" : `${n} dias`);
+
+export function FlashcardsClient({ baralhos, assuntos = [], filtros, subtemaNome = "", cartoes }: { baralhos: Baralho[]; assuntos?: Assunto[]; filtros: Filtros; subtemaNome?: string; cartoes: CartaoFlash[] }) {
   const router = useRouter();
   const [fila, setFila] = useState(cartoes);
   const [virado, setVirado] = useState(false);
@@ -62,17 +77,32 @@ export function FlashcardsClient({ baralhos, filtros, subtemaNome = "", cartoes 
   const [esqueci, setEsqueci] = useState(0);
   const [erro, setErro] = useState<string | null>(null);
   const [salvando, setSalvando] = useState(false);
+  const [quase, setQuase] = useState(0);
+  const [texto, setTexto] = useState("");
+  // escrever antes de virar é opcional e começa desligado (pedido dela, 23/11); a escolha fica neste aparelho
+  const [escrever, setEscrever] = useState(false);
+  useEffect(() => {
+    try {
+      if (localStorage.getItem("flash-escrever") === "1") setEscrever(true);
+    } catch {}
+  }, []);
+  function trocarEscrever(v: boolean) {
+    setEscrever(v);
+    try {
+      localStorage.setItem("flash-escrever", v ? "1" : "0");
+    } catch {}
+  }
   const atual = fila[0];
   const ir = (novo: Partial<Filtros>) => router.push(url({ ...filtros, ...novo }));
   const doErro = baralhos.find((b) => b.nome === filtros.baralho)?.doErro ?? false;
 
-  async function responder(ok: boolean) {
+  async function responder(ok: boolean, eQuase = false) {
     if (!atual || salvando) return;
     setSalvando(true);
     const res = await fetch("/api/admin/estudos/revisao", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ tipo: "cartao", id: atual.id, ok }),
+      body: JSON.stringify({ tipo: "cartao", id: atual.id, ok, quase: eQuase, resp: escrever ? texto : undefined }),
     }).catch(() => null);
     setSalvando(false);
     if (!res?.ok) {
@@ -81,9 +111,11 @@ export function FlashcardsClient({ baralhos, filtros, subtemaNome = "", cartoes 
     }
     setErro(null);
     setVirado(false);
-    if (ok) setLembrei((n) => n + 1);
+    setTexto("");
+    if (eQuase) setQuase((n) => n + 1);
+    else if (ok) setLembrei((n) => n + 1);
     else setEsqueci((n) => n + 1);
-    // esqueceu: volta para o fim desta sessão, para tentar de novo antes de sair
+    // errou: volta para o fim desta sessão, para tentar de novo antes de sair
     setFila((f) => (ok ? f.slice(1) : [...f.slice(1), f[0]]));
   }
 
@@ -99,8 +131,9 @@ export function FlashcardsClient({ baralhos, filtros, subtemaNome = "", cartoes 
       if (e.key === " ") {
         e.preventDefault();
         setVirado(true);
-      } else if (virado && e.key === "1") void responder(true);
-      else if (virado && e.key === "2") void responder(false);
+      } else if (virado && e.key === "1") void responder(false);
+      else if (virado && e.key === "2") void responder(true, true);
+      else if (virado && e.key === "3") void responder(true);
     }
     window.addEventListener("keydown", tecla);
     return () => window.removeEventListener("keydown", tecla);
@@ -115,7 +148,7 @@ export function FlashcardsClient({ baralhos, filtros, subtemaNome = "", cartoes 
             <button
               key={b.nome}
               type="button"
-              onClick={() => ir({ baralho: b.nome, nivel: 0, subtema: "" })}
+              onClick={() => ir({ baralho: b.nome, nivel: 0, subtema: "", assunto: "", sub: "" })}
               className={`rounded-xl border p-3 text-left transition-colors duration-150 ${filtros.baralho === b.nome ? "border-e-accent bg-e-accent-soft" : b.doErro ? "border-e-bad/50 bg-e-card-2 hover:border-e-accent/60" : "border-e-line bg-e-card-2 hover:border-e-accent/60"}`}
             >
               <span className="block text-sm text-e-ink">{b.nome}</span>
@@ -131,6 +164,40 @@ export function FlashcardsClient({ baralhos, filtros, subtemaNome = "", cartoes 
           ))}
         </div>
       </Card>
+
+      {filtros.baralho && assuntos.length > 0 && (
+        <Card>
+          <CardTitulo>Assuntos de {filtros.baralho}</CardTitulo>
+          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            <button type="button" onClick={() => ir({ assunto: "", sub: "" })} className={`rounded-xl border p-3 text-left text-sm ${!filtros.assunto ? "border-e-accent bg-e-accent-soft" : "border-e-line bg-e-card-2 hover:border-e-accent/60"}`}>
+              Todos os assuntos
+            </button>
+            {assuntos.map((a) => (
+              <button key={a.nome} type="button" onClick={() => ir({ assunto: a.nome, sub: "" })} className={`rounded-xl border p-3 text-left transition-colors duration-150 ${filtros.assunto === a.nome ? "border-e-accent bg-e-accent-soft" : "border-e-line bg-e-card-2 hover:border-e-accent/60"}`}>
+                <span className="block text-sm text-e-ink">{a.nome}</span>
+                <span className="mt-1 block text-[11px] tabular-nums text-e-dim">
+                  {a.total} cartões · {a.vencidos} para hoje · {a.novos} nunca vistos
+                </span>
+              </button>
+            ))}
+          </div>
+          {filtros.assunto && (
+            <div className="mt-3 flex flex-wrap items-center gap-1.5">
+              <span className="mr-1 text-[11px] text-e-dim">Subtópicos</span>
+              <button type="button" onClick={() => ir({ sub: "" })} className={chip(!filtros.sub)}>
+                Todos
+              </button>
+              {assuntos
+                .find((a) => a.nome === filtros.assunto)
+                ?.subs.map((x) => (
+                  <button key={x.id} type="button" onClick={() => ir({ sub: x.id })} className={chip(filtros.sub === x.id)}>
+                    {x.nome} <span className="tabular-nums opacity-70">{x.vencidos ? `${x.vencidos} hoje · ` : ""}{x.total}</span>
+                  </button>
+                ))}
+            </div>
+          )}
+        </Card>
+      )}
 
       {filtros.baralho && (
         <Card>
@@ -169,7 +236,10 @@ export function FlashcardsClient({ baralhos, filtros, subtemaNome = "", cartoes 
           <CardTitulo
             acao={
               <span className="flex items-center gap-3 text-xs tabular-nums text-e-dim">
-                {fila.length} na sessão · {lembrei} lembrei · {esqueci} esqueci
+                {fila.length} na sessão · {lembrei} acertei · {quase} quase · {esqueci} errei
+                <label className="inline-flex items-center gap-1 hover:text-e-ink">
+                  <input type="checkbox" checked={escrever} onChange={(e) => trocarEscrever(e.target.checked)} /> Escrever antes (opcional)
+                </label>
                 {fila.length > 1 && (
                   <button type="button" onClick={embaralhar} className="inline-flex items-center gap-1 hover:text-e-ink">
                     <Shuffle size={12} aria-hidden="true" /> Embaralhar
@@ -188,13 +258,33 @@ export function FlashcardsClient({ baralhos, filtros, subtemaNome = "", cartoes 
           ) : (
             <div>
               <p className="text-[11px] text-e-dim">
+                {atual.lugar ? `${atual.lugar} · ` : ""}
                 {atual.nivel ? `${NIVEIS[atual.nivel]} · ` : ""}
                 {atual.etapa < 0 ? "nunca visto" : rotuloEtapa(atual.etapa)}
               </p>
               <div className="mt-2 rounded-xl border border-e-line bg-e-card-2 p-4 text-base leading-relaxed text-e-ink" dangerouslySetInnerHTML={{ __html: atual.frente }} />
+              {escrever && !virado && (
+                <textarea
+                  value={texto}
+                  onChange={(e) => setTexto(e.target.value)}
+                  rows={4}
+                  placeholder="Escreva a resposta de cabeça: a regra, a exceção e o artigo, se lembrar."
+                  className="mt-2 w-full rounded-xl border border-e-line bg-e-card-2 p-3 text-[15px] leading-relaxed text-e-ink placeholder:text-e-dim focus:border-e-accent focus:outline-none"
+                />
+              )}
               {virado ? (
                 <>
-                  <div className="mt-2 rounded-xl border border-e-accent/40 p-4 text-base leading-relaxed text-e-ink" dangerouslySetInnerHTML={{ __html: atual.verso }} />
+                  {escrever && (
+                    <div className="mt-2 rounded-xl border border-e-line px-4 py-3">
+                      <p className="text-[11px] uppercase tracking-[0.14em] text-e-dim">Sua resposta</p>
+                      <p className="mt-1 whitespace-pre-wrap text-[15px] italic leading-relaxed text-e-ink">{texto.trim() || "Você não escreveu nada desta vez."}</p>
+                      {atual.respAnterior && atual.respAnterior !== texto.trim() && (
+                        <p className="mt-2 whitespace-pre-wrap text-xs text-e-dim">Da última vez: “{atual.respAnterior}”</p>
+                      )}
+                    </div>
+                  )}
+                  <p className="mt-2 text-[11px] uppercase tracking-[0.14em] text-e-dim">A resposta certa</p>
+                  <div className="mt-1 rounded-xl border border-e-accent/40 p-4 text-base leading-relaxed text-e-ink" dangerouslySetInnerHTML={{ __html: atual.verso }} />
                   {atual.lei && (
                     <div className="mt-2 rounded-xl border border-e-line px-4 py-3">
                       <p className="text-[11px] uppercase tracking-[0.14em] text-e-dim">{doErro ? "Lei seca da questão" : "Fundamento literal"}</p>
@@ -216,20 +306,30 @@ export function FlashcardsClient({ baralhos, filtros, subtemaNome = "", cartoes 
                     </Link>
                   )}
                   <div className="mt-3 flex flex-wrap gap-2">
-                    <button type="button" disabled={salvando} onClick={() => responder(true)} className={BOTAO_PRIMARIO}>
-                      Lembrei
-                    </button>
-                    <button type="button" disabled={salvando} onClick={() => responder(false)} className={BOTAO_SECUNDARIO}>
-                      Esqueci
-                    </button>
+                    {(() => {
+                      const d = diasDosBotoes(atual.etapa);
+                      return (
+                        <>
+                          <button type="button" disabled={salvando} onClick={() => responder(false)} className={`${BOTAO_SECUNDARIO} border-e-bad/60 text-e-bad`}>
+                            Errei · {dias(d.errei)}
+                          </button>
+                          <button type="button" disabled={salvando} onClick={() => responder(true, true)} className={`${BOTAO_SECUNDARIO} border-e-warn/60 text-e-warn`}>
+                            Quase · {dias(d.quase)}
+                          </button>
+                          <button type="button" disabled={salvando} onClick={() => responder(true)} className={BOTAO_PRIMARIO}>
+                            Acertei · {dias(d.acertei)}
+                          </button>
+                        </>
+                      );
+                    })()}
                   </div>
                 </>
               ) : (
                 <button type="button" onClick={() => setVirado(true)} className={`mt-3 ${BOTAO_PRIMARIO}`}>
-                  Mostrar o verso
+                  {escrever ? "Conferir com a resposta certa" : "Mostrar o verso"}
                 </button>
               )}
-              <p className="mt-3 text-[11px] text-e-dim">Atalhos: espaço vira o cartão, 1 lembrei, 2 esqueci.</p>
+              <p className="mt-3 text-[11px] text-e-dim">Atalhos: espaço vira o cartão (fora da caixa de texto), 1 errei, 2 quase, 3 acertei.</p>
             </div>
           )}
           {erro && (

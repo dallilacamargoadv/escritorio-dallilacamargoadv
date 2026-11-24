@@ -4,8 +4,9 @@ import { todayBelemDateString } from "@/lib/atividades-utils";
 import { ETAPA_FINAL, etapaDoCartao, venceCartao } from "@/lib/estudos-revisao";
 import { fonteHtml, htmlSeguro } from "@/lib/estudos-html";
 import { BARALHO_ERROS, cartoesDosErros, rotuloMotivo, type CartaoErro } from "@/lib/estudos-erros-cartoes";
+import { lugarComCache, SEM_ASSUNTO, SEM_SUB } from "@/lib/estudos-cartoes-assunto";
 import { Cabecalho } from "@/components/estudos/ui";
-import { FlashcardsClient, type Baralho, type CartaoFlash } from "@/components/estudos/FlashcardsClient";
+import { FlashcardsClient, type Assunto, type Baralho, type CartaoFlash } from "@/components/estudos/FlashcardsClient";
 
 type Modo = "todos" | "vencidos" | "novos" | "esquecidos";
 
@@ -65,6 +66,29 @@ export default async function FlashcardsPage(props: PageProps<"/admin/estudos/fl
   const baralhos = erros.length ? [baralhoErros, ...baralhosFixos] : baralhosFixos;
   const baralho = nomes.includes(s("baralho")) || (s("baralho") === BARALHO_ERROS && erros.length) ? s("baralho") : "";
   const subtema = baralho === BARALHO_ERROS && erros.some((c) => c.grupo === s("subtema")) ? s("subtema") : "";
+  // assunto (tema do edital) e subtópico (subtema) dos cartões do baralho escolhido
+  const doBaralho = baralho && baralho !== BARALHO_ERROS ? CARTOES.filter((c) => c.b === baralho) : [];
+  const assuntosMap = new Map<string, Assunto>();
+  for (const c of doBaralho) {
+    const l = lugarComCache(c);
+    const st = situacao(c.id);
+    const a = assuntosMap.get(l.assunto) ?? { nome: l.assunto, total: 0, vencidos: 0, novos: 0, subs: [] };
+    a.total++;
+    if (st.vencido) a.vencidos++;
+    if (st.novo) a.novos++;
+    const subId = l.sub || "-";
+    let sb = a.subs.find((x) => x.id === subId);
+    if (!sb) a.subs.push((sb = { id: subId, nome: l.sub ? l.subNome : SEM_SUB, total: 0, vencidos: 0 }));
+    sb.total++;
+    if (st.vencido) sb.vencidos++;
+    assuntosMap.set(l.assunto, a);
+  }
+  const assuntos = [...assuntosMap.values()]
+    .map((a) => ({ ...a, subs: a.subs.sort((x, y) => Number(x.id === "-") - Number(y.id === "-") || y.total - x.total) }))
+    .sort((x, y) => Number(x.nome === SEM_ASSUNTO) - Number(y.nome === SEM_ASSUNTO) || y.total - x.total);
+  const assunto = assuntosMap.has(s("assunto")) ? s("assunto") : "";
+  const sub = assunto && assuntosMap.get(assunto)!.subs.some((x) => x.id === s("sub")) ? s("sub") : "";
+
   const nivel = ["1", "2", "3"].includes(s("nivel")) ? Number(s("nivel")) : 0;
   const modo: Modo = ["vencidos", "novos", "esquecidos"].includes(s("modo")) ? (s("modo") as Modo) : "todos";
 
@@ -80,7 +104,9 @@ export default async function FlashcardsPage(props: PageProps<"/admin/estudos/fl
         .sort((a, b) => Number(b.st.vencido) - Number(a.st.vencido))
         .map(({ c, st }) => cartaoDoErro(c, st.etapa))
     : baralho
-    ? CARTOES.filter((c) => c.b === baralho)
+    ? doBaralho
+        .filter((c) => !assunto || lugarComCache(c).assunto === assunto)
+        .filter((c) => !sub || (lugarComCache(c).sub || "-") === sub)
         .filter((c) => !nivel || (c.nv ?? 2) === nivel)
         .map((c) => ({ c, st: situacao(c.id) }))
         .filter(({ st }) => filtraModo(st))
@@ -96,6 +122,11 @@ export default async function FlashcardsPage(props: PageProps<"/admin/estudos/fl
           fcc: c.fcc ? htmlSeguro(c.fcc) : "",
           nivel: c.nv ?? 0,
           etapa: st.etapa,
+          lugar: (() => {
+            const l = lugarComCache(c);
+            return l.sub ? `${l.assunto} · ${l.subNome}` : l.assunto;
+          })(),
+          respAnterior: typeof estados.get(c.id)?.resp === "string" ? (estados.get(c.id)!.resp as string) : "",
         }))
     : [];
   const subtemaNome = subtema ? erros.find((c) => c.grupo === subtema)?.grupoNome ?? "" : "";
@@ -104,9 +135,9 @@ export default async function FlashcardsPage(props: PageProps<"/admin/estudos/fl
     <>
       <Cabecalho
         titulo="Flashcards"
-        sub="Todos os cartões, por matéria e por nível, sem limite diário. Lembrei e Esqueci contam na mesma revisão espaçada da aba Revisão. O baralho Dos meus erros é montado das questões que você errou."
+        sub="Escolha a matéria, o assunto e o subtópico. Pense na resposta, vire o cartão e diga como foi: Errei, Quase ou Acertei. Tudo conta na mesma revisão espaçada (1, 3, 7, 15 e 30 dias)."
       />
-      <FlashcardsClient key={`${baralho}|${nivel}|${modo}|${subtema}`} baralhos={baralhos} filtros={{ baralho, nivel, modo, subtema }} subtemaNome={subtemaNome} cartoes={cartoes} />
+      <FlashcardsClient key={`${baralho}|${nivel}|${modo}|${subtema}|${assunto}|${sub}`} baralhos={baralhos} assuntos={assuntos} filtros={{ baralho, nivel, modo, subtema, assunto, sub }} subtemaNome={subtemaNome} cartoes={cartoes} />
     </>
   );
 }
