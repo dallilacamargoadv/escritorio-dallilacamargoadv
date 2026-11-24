@@ -501,5 +501,60 @@
     "temas": [
       "B2|Improbidade administrativa"
     ]
+  },
+  {
+    "id": "adm-bem-publico-food-truck",
+    "materia_id": "B2",
+    "titulo": "Food truck no parque estadual (PGE-AM 2022)",
+    "enunciado": "O Estado outorgou, depois de licitação, permissão de uso qualificada (24 meses) e remunerada para um food truck num Parque Estadual, que é a única opção de alimentação no local. Uma tempestade derrubou uma árvore íntegra e sadia sobre o veículo. A empresa ajuizou ação de indenização por danos materiais, e o juiz concedeu tutela antecipada que esgota o objeto da ação. Neste contexto, responda justificadamente ao que se pede:",
+    "perguntas": [
+      "A permissão de uso qualificada e remunerada é o instrumento adequado?",
+      "A licitação era indispensável?",
+      "Qual o mérito da contestação do Estado?",
+      "Qual o recurso contra a tutela antecipada e com quais fundamentos?"
+    ],
+    "linhas_min": 20,
+    "linhas": 30,
+    "espelho": [
+      {
+        "ponto": "Sim: é uso privativo de bem de uso comum do povo; o interesse público predominante (única opção de alimentação) e o investimento do particular justificam prazo determinado e remuneração, em vez de simples autorização.",
+        "fundamento": "Espelho FCC 2022 PGE-AM (quesito a)",
+        "peso": 20
+      },
+      {
+        "ponto": "Sim: a permissão qualificada, com prazo, se aproxima da concessão de uso e dá exclusividade na exploração do espaço público, o que exige licitação (isonomia e proposta mais vantajosa).",
+        "fundamento": "CF/88, art. 37, XXI",
+        "peso": 20
+      },
+      {
+        "ponto": "Não há responsabilidade do Estado: na omissão (queda de árvore) exige-se falha do serviço; árvore sadia derrubada por tempestade é caso fortuito ou força maior, que rompe o nexo causal.",
+        "fundamento": "CF/88, art. 37, § 6º (excludente do nexo)",
+        "peso": 20
+      },
+      {
+        "ponto": "Cabe agravo de instrumento, pois a tutela provisória é decidida por interlocutória.",
+        "fundamento": "CPC, art. 1.015, I",
+        "peso": 10
+      },
+      {
+        "ponto": "Fundamentos do agravo: vedação de tutela contra a Fazenda que esgote o objeto da ação, perigo de irreversibilidade, regime de precatórios e falta de probabilidade do direito (força maior).",
+        "fundamento": "Lei 8.437/1992, art. 1º, § 3º; CPC, art. 300, § 3º; CF/88, art. 100",
+        "peso": 20
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado, cada quesito respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
+      }
+    ],
+    "dica": "Cada detalhe do enunciado é pista: \"única opção de alimentação\" (quesito a), \"24 meses\" (b), \"árvore íntegra e sadia\" e \"tempestade\" (c), \"esgota o objeto\" (d).",
+    "tangencia": "Tangenciar é explicar a classificação dos bens públicos ou a teoria do risco sem responder se o instrumento, a licitação, a defesa e o recurso estão certos neste caso.",
+    "topico_id": "B2-12",
+    "temas": [
+      "B2|Bens públicos",
+      "B2|Licitações",
+      "B2|Responsabilidade civil do Estado",
+      "B5|Tutela provisória"
+    ]
   }
 ]

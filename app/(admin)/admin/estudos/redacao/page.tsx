@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { PenLine, Scale, Scissors } from "lucide-react";
+import { GraduationCap, PenLine, Scale, Scissors } from "lucide-react";
 import { CASOS, getEstadoRedacao, TEMAS } from "@/lib/db-estudos-redacao";
 import { casoDaSemana, notaDiscursiva, notaGrade } from "@/lib/estudos-redacao";
 import { AULA_POR_ID, getAulasEstudadas } from "@/lib/db-estudos-cadernos";
@@ -31,7 +31,7 @@ export default async function RedacaoPage() {
     <>
       <Cabecalho
         titulo="Redação e discursivas"
-        sub="Antes da primeira linha: ler o tema e achar os limites. Recorte (eixo, assunto, tema), palavra de comando, checagem de tangenciamento e autocorreção. Redação às quintas e sábados (o mesmo tema na semana). Discursiva às quartas e sábados, sempre de um tema que você estudou na semana."
+        sub="Antes da primeira linha: ler o tema e achar os limites. Recorte (eixo, assunto, tema), palavra de comando, checagem de tangenciamento e autocorreção. Redação às quintas e sábados (o mesmo tema na semana). Estudo de caso com 4 quesitos todo dia, de preferência de um tema que você estudou na semana."
       />
 
       <Card destaque className="mb-4">
@@ -41,6 +41,16 @@ export default async function RedacaoPage() {
         </p>
         <Link href="/admin/estudos/redacao/livre" className={`mt-3 ${BOTAO_PRIMARIO}`}>
           Recortar um tema meu
+        </Link>
+      </Card>
+
+      <Card className="mb-6">
+        <CardTitulo acao={<GraduationCap size={16} aria-hidden="true" />}>Treino guiado de discursiva</CardTitulo>
+        <p className="text-sm text-e-dim">
+          Ainda não sabe montar a resposta? Método em 4 passos (comando, tese, fundamento, aplicação), exemplo fraco × bom e 4 quesitos isolados com dicas e espelho.
+        </p>
+        <Link href="/admin/estudos/redacao/treino" className={`mt-3 ${BOTAO_PRIMARIO}`}>
+          Começar o treino
         </Link>
       </Card>
 

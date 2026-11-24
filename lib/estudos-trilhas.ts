@@ -108,7 +108,16 @@ export type TipoSemanal = "rlm" | "redacao" | "discursiva";
  * 0 = domingo. Regra dela (15/11): revisão + no máximo 2 matérias por dia. RLM e Redação ocupam
  * uma das 2; a discursiva entra dentro da matéria jurídica do dia.
  */
-export const AGENDA_SEMANA: Record<number, TipoSemanal[]> = { 2: ["rlm"], 3: ["discursiva"], 4: ["redacao"], 5: ["rlm"], 6: ["discursiva", "redacao"] };
+// Pedido dela (23/11): estudo de caso com 4 quesitos todo dia.
+export const AGENDA_SEMANA: Record<number, TipoSemanal[]> = {
+  0: ["discursiva"],
+  1: ["discursiva"],
+  2: ["discursiva", "rlm"],
+  3: ["discursiva"],
+  4: ["discursiva", "redacao"],
+  5: ["discursiva", "rlm"],
+  6: ["discursiva", "redacao"],
+};
 export const ROTULO_SEMANAL: Record<TipoSemanal, string> = { rlm: "Raciocínio lógico", redacao: "Redação", discursiva: "Discursiva de caso concreto" };
 export const DIAS_SEMANA = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
 
