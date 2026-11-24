@@ -994,5 +994,53 @@
       "B5|Tutela provisória",
       "B5|Recursos"
     ]
+  },
+  {
+    "id": "trib-credito-liminar-decadencia",
+    "materia_id": "B7",
+    "titulo": "Liminar, lançamento e prescrição do ICMS",
+    "enunciado": "Em fevereiro de 2020, antes de qualquer fiscalização, a empresa Epsilon obteve liminar em mandado de segurança que suspendeu a exigibilidade do ICMS sobre determinada operação, não recolhendo o imposto dos fatos geradores de março a outubro de 2020 (todos com vencimento ainda em 2020), sem declarar os valores. Em 2026, a liminar foi cassada na sentença, que denegou a segurança. O Estado do Maranhão lavrou então auto de infração, com multa de ofício, cobrando o ICMS de 2020. A empresa não impugnou e alega, em consulta à Procuradoria, decadência e ilegalidade da multa. Neste contexto, responda justificadamente ao que se pede:",
+    "perguntas": [
+      "A liminar suspendeu o prazo para a Fazenda constituir o crédito? Qual providência o Fisco deveria ter adotado?",
+      "Qual o termo inicial e o termo final do prazo decadencial para os fatos geradores de 2020, considerando que não houve pagamento nem declaração?",
+      "É válida a multa de ofício no lançamento? Explique a regra aplicável.",
+      "Constituído o crédito, a partir de quando corre a prescrição e quais atos podem interrompê-la antes do ajuizamento da execução fiscal?"
+    ],
+    "linhas_min": 20,
+    "linhas": 30,
+    "espelho": [
+      {
+        "ponto": "A liminar suspende a exigibilidade do crédito, não o prazo decadencial: o Fisco deveria lançar para prevenir a decadência, ficando a cobrança suspensa.",
+        "fundamento": "CTN, arts. 151, IV, e 142, § 2º",
+        "peso": 20
+      },
+      {
+        "ponto": "Sem pagamento e sem declaração, a decadência conta do primeiro dia do exercício seguinte àquele em que o lançamento poderia ter sido efetuado (2020, pois os vencimentos foram em 2020): de 1º/01/2021 a 31/12/2025; o lançamento de 2026 é extemporâneo e o crédito está extinto.",
+        "fundamento": "CTN, arts. 173, I, e 156, V; Súmula 555 do STJ",
+        "peso": 25
+      },
+      {
+        "ponto": "No lançamento destinado a prevenir a decadência de crédito com exigibilidade suspensa por liminar em MS, antes de qualquer procedimento de ofício, não se comina multa de ofício nem de mora.",
+        "fundamento": "CTN, art. 142, §§ 2º e 3º",
+        "peso": 20
+      },
+      {
+        "ponto": "A prescrição de cinco anos corre da constituição definitiva (fim do prazo de impugnação e do prazo de pagamento voluntário) e se interrompe, entre outros, pelo protesto extrajudicial da CDA e por ato do devedor que reconheça o débito, como o pedido de parcelamento.",
+        "fundamento": "CTN, art. 174, caput e § 1º, II e IV; Súmulas 622 e 653 do STJ",
+        "peso": 25
+      },
+      {
+        "ponto": "Língua portuguesa e estrutura: texto corrido e articulado (sem tópicos soltos), cada item respondido na ordem, com clareza, concisão e norma culta.",
+        "fundamento": "Critério do edital FCC (PGE-AM 2022, itens 9.3 e 9.10.2)",
+        "peso": 10
+      }
+    ],
+    "dica": "Separe os dois relógios: decadência (lançar) e prescrição (cobrar). A liminar pausa a cobrança, não o relógio de lançar.",
+    "tangencia": "Tangenciar é discutir o mérito do ICMS ou a prescrição intercorrente da LEF em vez da decadência do art. 173, I, e do lançamento para prevenir a decadência.",
+    "topico_id": "B7-04",
+    "temas": [
+      "B7|Crédito tributário",
+      "B7|Decadência e prescrição"
+    ]
   }
 ]
