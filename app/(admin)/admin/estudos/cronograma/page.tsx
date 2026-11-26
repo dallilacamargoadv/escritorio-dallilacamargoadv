@@ -58,16 +58,13 @@ export default async function CronogramaPage(props: PageProps<"/admin/estudos/cr
       </details>
 
       {atrasados.length > 0 && (
-        <section className="rounded-2xl border border-e-bad bg-e-card p-4">
-          <h2 className="text-[11px] uppercase tracking-[0.14em] text-e-bad">{atrasados.length} blocos ficaram para trás</h2>
-          <p className="mt-1 text-sm text-e-dim">
-            Marque o que você fez mesmo atrasado. O resto não precisa ser recuperado: use &quot;replanejar&quot; acima e o plano se
-            ajusta a partir de hoje.
-          </p>
+        <details className="rounded-2xl border border-e-line bg-e-card p-4">
+          <summary className="cursor-pointer text-sm text-e-dim">{atrasados.length} blocos de dias anteriores sem marcação</summary>
+          <p className="mt-2 text-sm text-e-dim">Se fez, marque. Se não fez, deixe: não acumula e não precisa recuperar.</p>
           <div className="mt-3 max-h-72 overflow-y-auto">
             <BlocosDoDia itens={atrasados} links={linksDosBlocos(atrasados)} vazio="" />
           </div>
-        </section>
+        </details>
       )}
 
       <section>
