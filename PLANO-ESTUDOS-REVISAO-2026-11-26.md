@@ -15,3 +15,13 @@ Feito nesta sessão:
 7. **Mapas mentais rápidos por tema** (já existe `content/estudos/mapas.json`): um por subtema, para revisão de 2 minutos.
 
 Regra para todo o conteúdo novo: lei conferida com texto vigente, jurisprudência só com fonte e data, nada inventado.
+
+## Segunda rodada (26/11/2026)
+
+Feito:
+- Gerador do cronograma (`gerarCronograma` em `lib/estudos-utils.ts`): revisão espaçada todo dia, inclusive fim de semana; Português todo dia (teoria seg/qua/sex, 25 a 35 min); Matemática ou Informática todo dia, alternando, 25 min; sábado = simuladão; domingo = caderno de erros da semana + lei seca dos erros + discursiva com análise. Vale depois de publicar e clicar em replanejar.
+- Seção "Na prova: como reconhecer e resolver" (tabela: o que o enunciado diz, ferramenta, como resolver, exemplos resolvidos e onde a FCC pega) nas aulas prontas A2-a01, a05, a06, a07 e A3-a01, a04.
+
+Diagnóstico pelos dados (acerto firme, 15 a 26/11): RLM/Matemática 40%, Civil 40% (só 5 tentativas), Tributário 51%, Administrativo 60%, Português 65%, Processo Civil 65%, Constitucional 68%, Informática sem nenhuma questão respondida. Temas mais fracos: concordância nominal e verbal, crase, conectivos; remessa necessária, intervenção de terceiros, honorários, Fazenda em juízo; limitações ao poder de tributar, crédito tributário; licitações; estruturas lógicas, frações, razão/proporção, porcentagem.
+
+Próximo: mesma seção "como reconhecer e resolver" nas aulas a montar de A2 e A3; montar cronograma a partir do simulado de nivelamento.

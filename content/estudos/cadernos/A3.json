@@ -478,6 +478,65 @@
        ]
       }
      ]
+    },
+    {
+     "titulo": "Na prova: como reconhecer e resolver",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Questão de unidade de medida tem três perguntas: <b>está em bit ou em byte?</b> <b>Qual prefixo (K, M, G, T)?</b> <b>A conta é de tamanho ou de velocidade?</b> Identifique as três antes de calcular."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Quando o enunciado diz…",
+        "Pense em…",
+        "Como resolver"
+       ],
+       "linhas": [
+        [
+         "Letra <b>b</b> minúscula (Mbps, kbps)",
+         "bit, usado em velocidade de rede",
+         "1 byte = 8 bits. Para saber quantos MB por segundo, divida os Mbps por 8."
+        ],
+        [
+         "Letra <b>B</b> maiúscula (KB, MB, GB)",
+         "byte, usado em tamanho de arquivo e memória",
+         "Use a escada: KB → MB → GB → TB, cada degrau × 1.024 (convenção usual em prova)."
+        ],
+        [
+         "“Quantos arquivos cabem…”",
+         "Divisão de tamanhos",
+         "Coloque tudo na mesma unidade e divida o espaço total pelo tamanho do arquivo."
+        ],
+        [
+         "“Quanto tempo para baixar…”",
+         "Tamanho ÷ velocidade",
+         "Converta o tamanho para bits (× 8) ou a velocidade para bytes (÷ 8), depois divida."
+        ],
+        [
+         "“Memória que perde dados ao desligar”",
+         "RAM (volátil)",
+         "ROM, HD e SSD guardam dados sem energia; RAM e cache não."
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Exemplo</b><br>Internet de 80 Mbps baixa um arquivo de 100 MB em quanto tempo (aprox.)? 80 Mbps ÷ 8 = 10 MB por segundo. 100 ÷ 10 = <b>10 segundos</b>."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Exemplo</b><br>Um pendrive de 2 GB guarda quantos arquivos de 512 MB? 2 GB = 2.048 MB. 2.048 ÷ 512 = <b>4 arquivos</b>."
+      },
+      {
+       "t": "nota",
+       "html": "A pegadinha clássica é confundir Mb (megabit) com MB (megabyte). Olhe sempre o tamanho da letra b antes de fazer conta.",
+       "tom": "pegadinha",
+       "titulo": "Onde a FCC pega"
+      }
+     ]
     }
    ],
    "questoes": [
@@ -1492,6 +1551,65 @@
        "tom": "atencao",
        "titulo": "Google Planilhas",
        "html": "A FCC de 2025 já perguntou sobre Google Planilhas em português (TRT-15 e SEDU-ES). As funções cobradas tinham o mesmo nome e a mesma sintaxe do Excel: MÉDIA e SOMASE. Estude pelo Excel e, quando a questão disser Google, aplique a mesma regra."
+      }
+     ]
+    },
+    {
+     "titulo": "Na prova: como reconhecer e resolver",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Questão de planilha quase sempre pede o <b>resultado de uma fórmula</b> ou <b>o que acontece ao copiar</b>. Leia a fórmula de dentro para fora e faça a conta numa folha, como se você fosse o Excel."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Quando o enunciado diz…",
+        "Pense em…",
+        "Como resolver"
+       ],
+       "linhas": [
+        [
+         "Fórmula copiada/arrastada para outra célula",
+         "Referência relativa × absoluta",
+         "O que tem $ fica parado. =A1 arrastada uma linha abaixo vira =A2; =$A$1 continua =$A$1; =A$1 trava só a linha."
+        ],
+        [
+         "=SE(teste; valor_se_verdadeiro; valor_se_falso)",
+         "Função SE",
+         "Faça o teste com os números da planilha. Se V, o resultado é o 2º argumento; se F, o 3º."
+        ],
+        [
+         "=SOMA(A1:A4), =MÉDIA(…), =CONT.SE(…)",
+         "Intervalo com dois-pontos",
+         "Dois-pontos (:) é “de… até…”; ponto e vírgula (;) é “e”. =SOMA(A1;A4) soma só duas células."
+        ],
+        [
+         "Conta com vários operadores",
+         "Ordem: ( ), ^, × ÷, + −",
+         "=2+3*2 dá 8, não 10. Resolva parênteses e potência antes."
+        ],
+        [
+         "=PROCV(valor; tabela; coluna; 0)",
+         "Busca na 1ª coluna",
+         "Ache o valor na primeira coluna da tabela e devolva o que está na coluna indicada (contando a partir da primeira)."
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Exemplo</b><br>Em C1 está =A1*$B$1. Copiada para C3, vira =A3*$B$1: o A1 andou duas linhas, o $B$1 ficou travado."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Exemplo</b><br>A1 = 7. =SE(A1>=7;\"Aprovado\";\"Reprovado\") → 7 ≥ 7 é verdadeiro → <b>Aprovado</b>."
+      },
+      {
+       "t": "nota",
+       "html": "Atenção a dois-pontos versus ponto e vírgula e ao sinal ≥ versus >. A FCC monta a alternativa errada exatamente na diferença entre “maior” e “maior ou igual”.",
+       "tom": "pegadinha",
+       "titulo": "Onde a FCC pega"
       }
      ]
     }

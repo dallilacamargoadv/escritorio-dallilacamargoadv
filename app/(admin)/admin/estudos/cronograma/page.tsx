@@ -37,22 +37,23 @@ export default async function CronogramaPage(props: PageProps<"/admin/estudos/cr
         <summary className="cursor-pointer text-e-ink">Como o plano funciona</summary>
         <ul className="mt-3 list-disc space-y-1.5 pl-5">
           <li>
-            <span className="text-e-ink">Segunda a sexta:</span> 2 matérias por dia, em rodízio (as do núcleo da prova aparecem mais).
-            Em cada uma: aquecimento com 5 questões antes de estudar, lei seca, teoria só no que você errou e bateria de questões.
+            <span className="text-e-ink">Todo dia, até a prova:</span> revisão espaçada (o que vence hoje: 1, 7, 15 e 30 dias, depois semanal).
           </li>
           <li>
-            <span className="text-e-ink">Português todo dia</span>, fora das 2 matérias: teoria curta e muitas questões. E 15 minutos da
-            fila da aba Revisão.
+            <span className="text-e-ink">Segunda a sexta:</span> 2 matérias de Direito por dia, em rodízio (as do núcleo aparecem mais).
+            Em cada uma: aquecimento com 5 questões, lei seca do tema (leitura e certo/errado), teoria só no que você errou e bateria de questões.
+          </li>
+          <li>
+            <span className="text-e-ink">Português todo dia</span> (teoria segunda, quarta e sexta) e <span className="text-e-ink">Matemática ou Informática todo dia</span>, alternando.
           </li>
           <li>
             <span className="text-e-ink">Quarta:</span> uma matéria e um simulado de lei seca de uma matéria que você já estudou.
           </li>
           <li>
-            <span className="text-e-ink">Sábado:</span> revisão (fila, laboratório de erros e lei seca grifada) e discursiva.
+            <span className="text-e-ink">Sábado:</span> simuladão cronometrado e correção rápida, classificando cada erro.
           </li>
           <li>
-            <span className="text-e-ink">Domingo:</span> simuladão cronometrado e correção, classificando cada erro. Para uma prova completa,
-            reserve pelo menos 4 horas no domingo.
+            <span className="text-e-ink">Domingo:</span> caderno de erros da semana (site, simuladão e TEC), lei seca desses erros, discursiva com análise do que faltou.
           </li>
         </ul>
       </details>

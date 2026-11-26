@@ -200,14 +200,16 @@ const arred5 = (n: number) => Math.max(5, Math.round(n / 5) * 5);
 
 /**
  * Monta o cronograma de hoje até a véspera da prova (ou 200 dias, se não houver data).
- * Método aprovado em 15/11/2026:
- * - Segunda a sexta: 2 matérias por dia em rodízio (núcleo da prova pesa mais). Cada matéria segue
- *   aquecimento (questões antes de estudar) → lei seca → teoria só no que errou → bateria de questões.
- *   Português fica fora das 2 matérias: 20 a 25 minutos todo dia, teoria curta e muitas questões.
- *   Revisão espaçada curta todo dia (a fila da aba Revisão vence diariamente).
+ * Método revisto em 26/11/2026 (pedido dela: Direito e Português primeiro, revisão todo dia,
+ * matemática e informática sem ficar para trás, erros e subjetiva no domingo):
+ * - Todo dia, inclusive fim de semana: revisão espaçada (questões, cartões e artigos que vencem hoje).
+ * - Segunda a sexta: 2 matérias de Direito em rodízio (núcleo pesa mais). Cada uma segue
+ *   aquecimento → lei seca do tema (leitura + certo/errado) → teoria só no que errou → bateria de questões.
+ *   Português todo dia (teoria segunda, quarta e sexta). Matemática ou Informática todo dia, alternando,
+ *   com o roteiro "como reconhecer e resolver".
  * - Quarta: uma matéria + simulado de lei seca de uma matéria já estudada.
- * - Sábado: revisão (fila, laboratório de erros, lei seca grifada), discursiva e cultura do Estado.
- * - Domingo: simuladão cronometrado + correção classificando cada erro.
+ * - Sábado: simuladão cronometrado + correção rápida.
+ * - Domingo: caderno de erros da semana (inclusive do simuladão e do TEC), discursiva e análise dela, cultura do Estado.
  * Quando a teoria acaba, as matérias do dia viram lei seca + questões.
  */
 export function gerarCronograma(
@@ -262,8 +264,11 @@ export function gerarCronograma(
       resta -= minutos;
     };
 
-    /* ---------- DOMINGO: simuladão ---------- */
-    if (dow === 0) {
+    // revisão espaçada todo dia, até a prova
+    add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Revisão espaçada: a fila de hoje na aba Revisão (questões, cartões e artigos)", minutos: dow === 6 ? 20 : 15 });
+
+    /* ---------- SÁBADO: simuladão ---------- */
+    if (dow === 6) {
       const correcao = resta >= 120 ? 40 : 20;
       const prova = resta - correcao;
       add({
@@ -273,19 +278,18 @@ export function gerarCronograma(
         titulo: prova >= 180 ? "Simuladão FCC: prova completa, cronometrada, sem consulta" : "Simuladão FCC (versão curta): misto de todas as matérias, cronometrado",
         minutos: prova,
       });
-      add({ materia_id: "SIM", topico_id: null, tipo: "questoes", titulo: "Correção do simuladão: classifique cada erro (eles vão para a Revisão)", minutos: correcao });
+      add({ materia_id: "SIM", topico_id: null, tipo: "questoes", titulo: "Correção do simuladão: classifique cada erro (eles vão para o caderno de erros de domingo)", minutos: correcao });
       continue;
     }
 
-    /* ---------- SÁBADO: revisão ---------- */
-    if (dow === 6) {
+    /* ---------- DOMINGO: erros da semana e subjetiva ---------- */
+    if (dow === 0) {
       const disc = resta >= 120 ? 60 : 0;
       const cult = cultura.length && resta >= 200 ? 40 : 0;
-      add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Revisão: a fila inteira da aba Revisão (questões, cartões e artigos)", minutos: Math.max(30, resta - 50 - disc - cult) });
-      add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Laboratório de erros: refaça as erradas da semana e releia o seu caderno de erros", minutos: 25 });
-      add({ materia_id: "REV", topico_id: null, tipo: "lei_seca", titulo: "Lei seca grifada da semana: releia só os trechos marcados", minutos: 25 });
+      add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Caderno de erros da semana: refaça as erradas (site, simuladão e TEC), anote o motivo e o artigo", minutos: Math.max(40, resta - 25 - disc - cult) });
+      add({ materia_id: "REV", topico_id: null, tipo: "lei_seca", titulo: "Lei seca dos erros: releia os artigos que apareceram no caderno de erros", minutos: 25 });
       if (disc) {
-        add({ materia_id: "DISC", topico_id: null, tipo: "discursiva", titulo: "Discursiva cronometrada: estudo de caso (problema, base legal, jurisprudência, solução)", minutos: disc });
+        add({ materia_id: "DISC", topico_id: null, tipo: "discursiva", titulo: "Discursiva cronometrada + análise: nota, o que faltou (tese, base legal, jurisprudência, estrutura)", minutos: disc });
       }
       if (cult) {
         const c = cultura[iCult++ % cultura.length];
@@ -295,20 +299,19 @@ export function gerarCronograma(
     }
 
     /* ---------- SEGUNDA A SEXTA ---------- */
-    add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Revisão espaçada: a fila de hoje na aba Revisão", minutos: 15 });
-
     if (portugues) {
-      const t = (dow === 1 || dow === 4) && filaPt[iPt] ? filaPt[iPt++] : undefined;
+      const t = (dow === 1 || dow === 3 || dow === 5) && filaPt[iPt] ? filaPt[iPt++] : undefined;
       add(
         t
-          ? { materia_id: "A1", topico_id: t.id, tipo: "teoria", titulo: `Português: ${t.titulo} (teoria curta + questões na hora)`, minutos: 25 }
-          : { materia_id: "A1", topico_id: null, tipo: "questoes", titulo: "Português: questões FCC (interpretação e gramática)", minutos: 20 },
+          ? { materia_id: "A1", topico_id: t.id, tipo: "teoria", titulo: `Português: ${t.titulo} (teoria curta + questões na hora)`, minutos: 35 }
+          : { materia_id: "A1", topico_id: null, tipo: "questoes", titulo: "Português: questões FCC (interpretação e gramática)", minutos: 25 },
       );
     }
 
-    if (alternadas.length && (dow === 2 || dow === 5) && resta >= 80) {
+    // matemática e informática todo dia, alternando: roteiro de reconhecimento + questões
+    if (alternadas.length && resta >= 60) {
       const m = alternadas[iAlt++ % alternadas.length];
-      add({ materia_id: m.id, topico_id: null, tipo: "questoes", titulo: `${m.nome}: questões`, minutos: 20 });
+      add({ materia_id: m.id, topico_id: null, tipo: "questoes", titulo: `${m.nome}: roteiro "como reconhecer e resolver" + questões`, minutos: 25 });
     }
 
     // quarta: simulado de lei seca de uma matéria já estudada
