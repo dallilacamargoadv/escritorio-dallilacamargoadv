@@ -535,61 +535,6 @@
        "html": "1) Oferecer a <b>recíproca</b> (q → p) como equivalente. 2) Negar o se, então com outro se, então. 3) Negar o E com outro E (A camiseta não é branca <b>e</b> a bermuda não é preta). 4) Trocar <b>no máximo 3</b> por <b>pelo menos 3</b>: a negação de no máximo 3 é <b>pelo menos 4</b> (mais de 3). 5) Mudar o tempo da frase e esperar que você ajuste ontem e amanhã (FGV 2026)."
       }
      ]
-    },
-    {
-     "titulo": "Na prova: como reconhecer e resolver",
-     "etapa": "banca",
-     "blocos": [
-      {
-       "t": "texto",
-       "html": "Antes de calcular, descubra <b>o que a questão pede</b>: valor lógico, negação ou equivalência. Cada pedido tem uma ferramenta própria. Procure as palavras do enunciado na primeira coluna."
-      },
-      {
-       "t": "tabela",
-       "cab": [
-        "Quando o enunciado diz…",
-        "Pense em…",
-        "Como resolver"
-       ],
-       "linhas": [
-        [
-         "“Qual o valor lógico…”, “é verdadeira se…”",
-         "Tabela dos conectivos",
-         "Troque cada proposição simples por V ou F e aplique a regra do conectivo, de dentro para fora dos parênteses."
-        ],
-        [
-         "“A negação de…”, “não é verdade que…”",
-         "Leis de De Morgan e regra do Mané",
-         "E vira OU (e vice-versa) negando as partes. SE p ENTÃO q nega com <b>p E não q</b> (mantém a primeira, nega a segunda)."
-        ],
-        [
-         "“É equivalente a…”, “de forma equivalente…”",
-         "Contrapositiva ou NEU",
-         "p → q = ~q → ~p (nega as duas e troca a ordem) = ~p ∨ q (nega a primeira, troca SE ENTÃO por OU)."
-        ],
-        [
-         "“Sabendo que é falsa a proposição SE… ENTÃO…”",
-         "O único caso F do condicional",
-         "Se o condicional é F, então a primeira parte é V e a segunda é F. Comece por aí e descubra o resto."
-        ],
-        [
-         "“Quantas linhas tem a tabela-verdade”",
-         "2ⁿ",
-         "Conte as proposições simples diferentes (n) e calcule 2 elevado a n."
-        ]
-       ]
-      },
-      {
-       "t": "texto",
-       "html": "<b>Exemplo</b><br>“A negação de ‘Se chove, então a rua fica molhada’ é…” Pedido = negação de condicional. Ferramenta = regra do Mané: mantém a primeira e nega a segunda. Resposta: <b>Chove e a rua não fica molhada</b>."
-      },
-      {
-       "t": "nota",
-       "html": "A FCC coloca a contrapositiva (que é <b>equivalência</b>) entre as opções de uma questão que pede <b>negação</b>. Negação de condicional nunca tem SE… ENTÃO, sempre tem E.",
-       "tom": "pegadinha",
-       "titulo": "Onde a FCC pega"
-      }
-     ]
     }
    ],
    "questoes": [
@@ -2467,65 +2412,6 @@
        "html": "1) Sublinhe a pergunta (o que lê, o que falta, o total?). 2) Desenhe a barra. 3) Cada \"do restante\" é uma barra nova. 4) Ache quanto vale 1 pedaço. 5) Confira voltando ao enunciado. Agora é com você: as questões desta aula estão logo abaixo, com a explicação de cada alternativa."
       }
      ]
-    },
-    {
-     "titulo": "Na prova: como reconhecer e resolver",
-     "etapa": "banca",
-     "blocos": [
-      {
-       "t": "texto",
-       "html": "Frações, MMC e MDC aparecem disfarçados de história. O segredo é traduzir: <b>“parte de um todo”</b> é fração; <b>“juntos de novo”</b> é MMC; <b>“dividir no maior tamanho igual possível”</b> é MDC."
-      },
-      {
-       "t": "tabela",
-       "cab": [
-        "Quando o enunciado diz…",
-        "Pense em…",
-        "Como resolver"
-       ],
-       "linhas": [
-        [
-         "“Gastou 2/5 do salário e depois 1/3 do que sobrou”",
-         "Fração do resto",
-         "Calcule o que sobrou primeiro (1 − 2/5 = 3/5) e aplique a nova fração <b>sobre o resto</b>: 1/3 de 3/5 = 1/5."
-        ],
-        [
-         "“Voltarão a se encontrar”, “coincidir novamente”, “ao mesmo tempo de novo”",
-         "MMC",
-         "Fatore os intervalos e pegue todos os fatores com o maior expoente."
-        ],
-        [
-         "“Maior tamanho possível”, “sem sobrar”, “grupos iguais com o máximo de…”",
-         "MDC",
-         "Fatore e pegue só os fatores comuns com o menor expoente."
-        ],
-        [
-         "“Restou X reais, quanto tinha no início”",
-         "Volta pela fração que sobrou",
-         "Se sobraram 3/5 e isso vale 300, então 1/5 = 100 e o todo = 500."
-        ],
-        [
-         "Somar ou comparar frações",
-         "Denominador comum",
-         "Use o MMC dos denominadores ou multiplique em cruz para comparar."
-        ]
-       ]
-      },
-      {
-       "t": "texto",
-       "html": "<b>Exemplo</b><br>Dois ônibus saem juntos; um a cada 12 min, outro a cada 18 min. Quando saem juntos de novo? “Juntos de novo” = MMC. 12 = 2²·3, 18 = 2·3². MMC = 2²·3² = <b>36 min</b>."
-      },
-      {
-       "t": "texto",
-       "html": "<b>Exemplo</b><br>Ana gastou 1/4 do que tinha e depois 1/3 do restante; sobraram R$ 300. Restante após o 1º gasto = 3/4. Gastou 1/3 disso = 1/4 do total. Sobrou 3/4 − 1/4 = 1/2 do total = 300. Total = <b>R$ 600</b>."
-      },
-      {
-       "t": "nota",
-       "html": "“Do que sobrou” muda a base. Quem calcula as duas frações sobre o total erra. Sempre pergunte: essa fração é de quê?",
-       "tom": "pegadinha",
-       "titulo": "Onde a FCC pega"
-      }
-     ]
     }
    ],
    "questoes": [
@@ -4012,65 +3898,6 @@
        "html": "1) Uma coluna por grandeza, mesma unidade na mesma coluna. 2) Pergunte: se uma aumenta, a outra aumenta ou diminui? 3) Direta: cruz. Inversa: lado a lado. 4) Confira se a resposta faz sentido (mais gente, menos dias). Abaixo estão 9 questões reais da FCC e 20 autorais (14 só no método dos pacotes), todas com a conta explicada e a pista usada."
       }
      ]
-    },
-    {
-     "titulo": "Na prova: como reconhecer e resolver",
-     "etapa": "banca",
-     "blocos": [
-      {
-       "t": "texto",
-       "html": "Toda questão de razão, proporção e regra de três tem a mesma pergunta escondida: <b>as grandezas andam juntas ou ao contrário?</b> Responder isso antes de montar a conta resolve metade da questão."
-      },
-      {
-       "t": "tabela",
-       "cab": [
-        "Quando o enunciado diz…",
-        "Pense em…",
-        "Como resolver"
-       ],
-       "linhas": [
-        [
-         "“Na razão de 2 para 3”, “para cada 2… há 3…”",
-         "Razão = constante k",
-         "Escreva as partes como 2k e 3k, some e iguale ao total para achar k."
-        ],
-        [
-         "“Dividir proporcionalmente a…”",
-         "Divisão diretamente proporcional",
-         "Some os pesos, divida o total pela soma (dá o k) e multiplique cada peso por k."
-        ],
-        [
-         "“Inversamente proporcional a…”",
-         "Divisão inversa",
-         "Use os inversos dos números (1/2, 1/3…), tire o MMC para virar inteiros e divida como direta."
-        ],
-        [
-         "Mais trabalhadores, menos dias; mais velocidade, menos tempo",
-         "Inversamente proporcional",
-         "Na regra de três, inverta a coluna inversa antes de multiplicar em cruz."
-        ],
-        [
-         "Várias grandezas (operários, horas, dias, peças)",
-         "Regra de três composta",
-         "Isole a grandeza pedida; compare cada outra com ela (direta ou inversa); inverta as inversas e monte uma única fração."
-        ]
-       ]
-      },
-      {
-       "t": "texto",
-       "html": "<b>Exemplo</b><br>6 máquinas fazem um serviço em 10 dias. Em quantos dias 4 máquinas fazem o mesmo serviço? Menos máquinas → mais dias: <b>inversa</b>. x = 10 · 6/4 = <b>15 dias</b>."
-      },
-      {
-       "t": "texto",
-       "html": "<b>Exemplo</b><br>Dividir R$ 1.000 entre A e B na razão de 2 para 3. 2k + 3k = 1.000 → k = 200. A = <b>400</b>, B = <b>600</b>."
-      },
-      {
-       "t": "nota",
-       "html": "A banca escolhe números para que a regra de três direta (errada) dê uma das alternativas. Antes de multiplicar, diga em voz alta: “mais isso, mais ou menos aquilo?”.",
-       "tom": "pegadinha",
-       "titulo": "Onde a FCC pega"
-      }
-     ]
     }
    ],
    "questoes": [
@@ -5543,65 +5370,6 @@
        "tom": "atencao",
        "titulo": "Roteiro para qualquer questão de porcentagem",
        "html": "1) Sublinhe a pergunta: é \"quanto é\", \"que porcentagem\" ou \"qual o total\"? 2) Ache o 100%: o de antes, o grupo, o custo. 3) Mudanças viram fatores; seguidas, multiplique. 4) Valor dado depois da mudança: divida pelo fator. 5) Grupos dentro de grupos: invente 100 ou 1.000. 6) Confira voltando ao enunciado. As questões desta aula estão logo abaixo, com a explicação de cada alternativa e a pista usada."
-      }
-     ]
-    },
-    {
-     "titulo": "Na prova: como reconhecer e resolver",
-     "etapa": "banca",
-     "blocos": [
-      {
-       "t": "texto",
-       "html": "Porcentagem é multiplicação. Troque “aumentar 20%” por <b>× 1,20</b> e “desconto de 20%” por <b>× 0,80</b>. Aumentos e descontos seguidos se multiplicam, nunca se somam."
-      },
-      {
-       "t": "tabela",
-       "cab": [
-        "Quando o enunciado diz…",
-        "Pense em…",
-        "Como resolver"
-       ],
-       "linhas": [
-        [
-         "“Aumento de x%”",
-         "Fator 1 + x/100",
-         "Multiplique o valor por (1 + x/100). Ex.: 15% → × 1,15."
-        ],
-        [
-         "“Desconto de x%”, “redução de x%”",
-         "Fator 1 − x/100",
-         "Multiplique por (1 − x/100). Ex.: 30% → × 0,70."
-        ],
-        [
-         "“Aumentos/descontos sucessivos”",
-         "Produto dos fatores",
-         "Multiplique os fatores. 10% de aumento e 10% de desconto: 1,1 × 0,9 = 0,99 → <b>perda de 1%</b>."
-        ],
-        [
-         "“Qual foi o aumento percentual”",
-         "Variação ÷ valor inicial",
-         "(novo − antigo) ÷ antigo × 100. A base é sempre o valor <b>antes</b>."
-        ],
-        [
-         "“Após desconto de x%, pagou V. Qual o preço original?”",
-         "Volta pelo fator",
-         "Original = V ÷ (1 − x/100). Nunca some x% ao valor pago."
-        ]
-       ]
-      },
-      {
-       "t": "texto",
-       "html": "<b>Exemplo</b><br>Um produto subiu 20% e depois caiu 20%. Variação final? 1,2 × 0,8 = 0,96 → <b>caiu 4%</b>, não voltou ao preço inicial."
-      },
-      {
-       "t": "texto",
-       "html": "<b>Exemplo</b><br>Pagou R$ 170 com 15% de desconto. Original = 170 ÷ 0,85 = <b>R$ 200</b> (e não 170 + 15% = 195,50)."
-      },
-      {
-       "t": "nota",
-       "html": "Quem soma porcentagens sucessivas (+20% − 20% = 0) cai na alternativa errada que a FCC sempre põe. Multiplique os fatores.",
-       "tom": "pegadinha",
-       "titulo": "Onde a FCC pega"
       }
      ]
     }
