@@ -14,6 +14,7 @@ import {
   agendaQuestoes,
   dataBelem,
   ETAPA_FINAL,
+  LIMITE_DIA,
   etapaDoCartao,
   NOVOS_CARTOES_POR_DIA,
   venceCartao,
@@ -126,8 +127,10 @@ export default async function RevisaoPage() {
   const publicadas = new Set([...AULA_POR_ID.entries()].filter(([id, a]) => id.startsWith("A2-") && a.aula.status === "pronta").map(([id]) => id));
   const problema = problemaDoDia(hoje, QUESTOES, respostas, marcadas.size ? marcadas : publicadas, marcadas.size > 0);
 
-  const questoesHoje = qs.filter((q) => q.vence_em <= hoje);
-  const artigosHoje = arts.filter((a) => a.vence_em <= hoje);
+  // Teto diário: os mais atrasados primeiro; o resto entra nos próximos dias.
+  const questoesHoje = qs.filter((q) => q.vence_em <= hoje).slice(0, LIMITE_DIA.questoes);
+  const artigosHoje = arts.filter((a) => a.vence_em <= hoje).slice(0, LIMITE_DIA.artigos);
+  vencidos.splice(LIMITE_DIA.cartoes);
   const proximos = {
     questoes: qs.filter((q) => q.vence_em > hoje && q.vence_em <= semana).length,
     artigos: arts.filter((a) => a.vence_em > hoje && a.vence_em <= semana).length,
