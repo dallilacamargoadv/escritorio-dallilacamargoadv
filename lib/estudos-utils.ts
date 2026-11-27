@@ -218,23 +218,22 @@ export function gerarCronograma(
   estados: Map<string, TopicoEstado>,
 ): NovoItem[] {
   const ativas = MATERIAS.filter((m) => materiaAtiva(m, config) && !FORA_ATE_O_EDITAL.has(m.id));
+  // Teoria nova só para o que ainda não foi estudado. O que já foi visto (estudando, revisar) vai para revisão e questões.
   const pendente = (t: Topico) => {
     const e = estados.get(t.id);
-    return !e?.fora_do_edital && e?.status !== "dominado";
+    return !e?.fora_do_edital && (!e || e.status === "nao_iniciado");
   };
   const principais = ativas.filter((m) => m.fase >= 1 && m.fase <= 3).sort((a, b) => a.fase - b.fase);
   const filaTopicos = new Map(principais.map((m) => [m.id, m.topicos.filter(pendente)]));
   const vistos = new Map(principais.map((m) => [m.id, 0]));
   const credito = new Map(principais.map((m) => [m.id, 0]));
   const portugues = ativas.find((m) => m.id === "A1");
-  const filaPt = portugues ? portugues.topicos.filter(pendente) : [];
   const alternadas = ativas.filter((m) => m.fase === 4);
   const cultura = ativas.filter((m) => m.fase === 5).flatMap((m) => m.topicos.filter(pendente).map((t) => ({ m, t })));
 
   const fim = config.dataProva ? addDaysToDateString(config.dataProva, -1) : addDaysToDateString(hoje, LIMITE_DIAS);
   const total = Math.min(LIMITE_DIAS, diasEntre(hoje, fim));
   const itens: NovoItem[] = [];
-  let iPt = 0;
   let iCult = 0;
   let iAlt = 0;
   let iSimLei = 0;
@@ -300,11 +299,12 @@ export function gerarCronograma(
 
     /* ---------- SEGUNDA A SEXTA ---------- */
     if (portugues) {
-      const t = (dow === 1 || dow === 3 || dow === 5) && filaPt[iPt] ? filaPt[iPt++] : undefined;
+      // Português segue a ordem do curso da professora Adriana (fora do site): aula da vez + questões do mesmo assunto.
+      const teoriaPt = dow === 1 || dow === 3 || dow === 5;
       add(
-        t
-          ? { materia_id: "A1", topico_id: t.id, tipo: "teoria", titulo: `Português: ${t.titulo} (teoria curta + questões na hora)`, minutos: 35 }
-          : { materia_id: "A1", topico_id: null, tipo: "questoes", titulo: "Português: questões FCC (interpretação e gramática)", minutos: 25 },
+        teoriaPt
+          ? { materia_id: "A1", topico_id: null, tipo: "teoria", titulo: "Português: próxima aula da professora Adriana + 10 questões FCC do mesmo assunto", minutos: 40 }
+          : { materia_id: "A1", topico_id: null, tipo: "questoes", titulo: "Português: questões FCC do assunto da última aula da Adriana + refazer os erros", minutos: 25 },
       );
     }
 

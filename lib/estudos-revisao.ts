@@ -6,7 +6,9 @@ import type { Questao, Resposta } from "@/lib/estudos-desempenho";
 export const INTERVALOS = [1, 7, 15, 30, 7, 7, 7, 7] as const;
 /** Passou por todos os intervalos (inclusive a manutenção semanal): o item sai da fila. */
 export const ETAPA_FINAL = INTERVALOS.length;
-export const NOVOS_CARTOES_POR_DIA = 10;
+export const NOVOS_CARTOES_POR_DIA = 5;
+/** Teto diário da revisão (pedido dela, 27/11/2026): o que passar disso fica para os próximos dias, mais antigo primeiro. */
+export const LIMITE_DIA = { questoes: 10, artigos: 8, cartoes: 20 } as const;
 
 const TZ = "America/Belem";
 export function dataBelem(ms: number | string): string {
