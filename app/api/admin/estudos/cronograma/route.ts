@@ -9,11 +9,11 @@ export async function POST() {
   try {
     const [config, estados, estudadas] = await Promise.all([getEstudoConfig(), getTopicoEstados(), getAulasEstudadas()]);
     // aulas dos cadernos ainda não estudadas, por tópico, na ordem do caderno
-    const pendentes = new Map<string, string[]>();
+    const pendentes = new Map<string, { titulo: string; pronta: boolean }[]>();
     for (const c of Object.values(CADERNOS)) {
       for (const a of c.aulas) {
         if (!a.topico_id || estudadas.has(a.id)) continue;
-        pendentes.set(a.topico_id, [...(pendentes.get(a.topico_id) ?? []), a.titulo]);
+        pendentes.set(a.topico_id, [...(pendentes.get(a.topico_id) ?? []), { titulo: a.titulo, pronta: a.status === "pronta" }]);
       }
     }
     const itens = gerarCronograma(todayBelemDateString(), config, estados, pendentes);
