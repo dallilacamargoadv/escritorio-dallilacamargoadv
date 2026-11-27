@@ -1,6 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { updateTopicoEstado, getTopicoEstados } from "@/lib/db-estudos";
-import type { Caderno } from "@/lib/estudos-cadernos";
+import type { Caderno, Secao } from "@/lib/estudos-cadernos";
 import cadernoA2 from "@/content/estudos/cadernos/A2.json";
 import cadernoA3 from "@/content/estudos/cadernos/A3.json";
 import cadernoA4 from "@/content/estudos/cadernos/A4.json";
@@ -11,6 +11,7 @@ import cadernoB3 from "@/content/estudos/cadernos/B3.json";
 import cadernoB5 from "@/content/estudos/cadernos/B5.json";
 import cadernoB6 from "@/content/estudos/cadernos/B6.json";
 import cadernoB7 from "@/content/estudos/cadernos/B7.json";
+import roteiros from "@/content/estudos/cadernos/roteiros-resolucao.json";
 
 /** Cadernos prontos, por matéria. Novo caderno = novo JSON importado aqui. */
 export const CADERNOS: Record<string, Caderno> = {
@@ -25,6 +26,16 @@ export const CADERNOS: Record<string, Caderno> = {
   B6: cadernoB6 as Caderno,
   B7: cadernoB7 as Caderno,
 };
+
+/** Seção "Na prova: como reconhecer e resolver" (Matemática e Informática), guardada à parte e somada ao fim da aula. */
+const ROTEIROS = roteiros as unknown as Record<string, Secao>;
+for (const c of Object.values(CADERNOS)) {
+  c.aulas = c.aulas.map((a) => {
+    const r = ROTEIROS[a.id];
+    const secoes = a.secoes ?? [];
+    return r && !secoes.some((s) => s.titulo === r.titulo) ? { ...a, secoes: [...secoes, r] } : a;
+  });
+}
 export const AULA_POR_ID = new Map(
   Object.values(CADERNOS).flatMap((c) => c.aulas.map((a) => [a.id, { aula: a, caderno: c }] as const)),
 );

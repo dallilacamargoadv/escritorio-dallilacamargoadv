@@ -1,10 +1,10 @@
-// Revisão espaçada (etapa 4): intervalos fixos de 1, 3, 7, 15 e 30 dias.
+// Revisão espaçada: 1, 7, 15 e 30 dias e depois 4 revisões semanais de manutenção (pedido dela, 26/11/2026).
 // Lógica pura, usada no servidor e no navegador.
 import { addDaysToDateString } from "@/lib/atividades-utils";
 import type { Questao, Resposta } from "@/lib/estudos-desempenho";
 
-export const INTERVALOS = [1, 3, 7, 15, 30] as const;
-/** Etapa 5 = passou pelos cinco intervalos: o item sai da fila. */
+export const INTERVALOS = [1, 7, 15, 30, 7, 7, 7, 7] as const;
+/** Passou por todos os intervalos (inclusive a manutenção semanal): o item sai da fila. */
 export const ETAPA_FINAL = INTERVALOS.length;
 export const NOVOS_CARTOES_POR_DIA = 10;
 

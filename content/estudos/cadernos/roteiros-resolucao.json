@@ -1,0 +1,352 @@
+{
+ "A2-a01": {
+  "titulo": "Na prova: como reconhecer e resolver",
+  "etapa": "banca",
+  "blocos": [
+   {
+    "t": "texto",
+    "html": "Antes de calcular, descubra <b>o que a questão pede</b>: valor lógico, negação ou equivalência. Cada pedido tem uma ferramenta própria. Procure as palavras do enunciado na primeira coluna."
+   },
+   {
+    "t": "tabela",
+    "cab": [
+     "Quando o enunciado diz…",
+     "Pense em…",
+     "Como resolver"
+    ],
+    "linhas": [
+     [
+      "“Qual o valor lógico…”, “é verdadeira se…”",
+      "Tabela dos conectivos",
+      "Troque cada proposição simples por V ou F e aplique a regra do conectivo, de dentro para fora dos parênteses."
+     ],
+     [
+      "“A negação de…”, “não é verdade que…”",
+      "Leis de De Morgan e regra do Mané",
+      "E vira OU (e vice-versa) negando as partes. SE p ENTÃO q nega com <b>p E não q</b> (mantém a primeira, nega a segunda)."
+     ],
+     [
+      "“É equivalente a…”, “de forma equivalente…”",
+      "Contrapositiva ou NEU",
+      "p → q = ~q → ~p (nega as duas e troca a ordem) = ~p ∨ q (nega a primeira, troca SE ENTÃO por OU)."
+     ],
+     [
+      "“Sabendo que é falsa a proposição SE… ENTÃO…”",
+      "O único caso F do condicional",
+      "Se o condicional é F, então a primeira parte é V e a segunda é F. Comece por aí e descubra o resto."
+     ],
+     [
+      "“Quantas linhas tem a tabela-verdade”",
+      "2ⁿ",
+      "Conte as proposições simples diferentes (n) e calcule 2 elevado a n."
+     ]
+    ]
+   },
+   {
+    "t": "texto",
+    "html": "<b>Exemplo</b><br>“A negação de ‘Se chove, então a rua fica molhada’ é…” Pedido = negação de condicional. Ferramenta = regra do Mané: mantém a primeira e nega a segunda. Resposta: <b>Chove e a rua não fica molhada</b>."
+   },
+   {
+    "t": "nota",
+    "html": "A FCC coloca a contrapositiva (que é <b>equivalência</b>) entre as opções de uma questão que pede <b>negação</b>. Negação de condicional nunca tem SE… ENTÃO, sempre tem E.",
+    "tom": "pegadinha",
+    "titulo": "Onde a FCC pega"
+   }
+  ]
+ },
+ "A2-a05": {
+  "titulo": "Na prova: como reconhecer e resolver",
+  "etapa": "banca",
+  "blocos": [
+   {
+    "t": "texto",
+    "html": "Frações, MMC e MDC aparecem disfarçados de história. O segredo é traduzir: <b>“parte de um todo”</b> é fração; <b>“juntos de novo”</b> é MMC; <b>“dividir no maior tamanho igual possível”</b> é MDC."
+   },
+   {
+    "t": "tabela",
+    "cab": [
+     "Quando o enunciado diz…",
+     "Pense em…",
+     "Como resolver"
+    ],
+    "linhas": [
+     [
+      "“Gastou 2/5 do salário e depois 1/3 do que sobrou”",
+      "Fração do resto",
+      "Calcule o que sobrou primeiro (1 − 2/5 = 3/5) e aplique a nova fração <b>sobre o resto</b>: 1/3 de 3/5 = 1/5."
+     ],
+     [
+      "“Voltarão a se encontrar”, “coincidir novamente”, “ao mesmo tempo de novo”",
+      "MMC",
+      "Fatore os intervalos e pegue todos os fatores com o maior expoente."
+     ],
+     [
+      "“Maior tamanho possível”, “sem sobrar”, “grupos iguais com o máximo de…”",
+      "MDC",
+      "Fatore e pegue só os fatores comuns com o menor expoente."
+     ],
+     [
+      "“Restou X reais, quanto tinha no início”",
+      "Volta pela fração que sobrou",
+      "Se sobraram 3/5 e isso vale 300, então 1/5 = 100 e o todo = 500."
+     ],
+     [
+      "Somar ou comparar frações",
+      "Denominador comum",
+      "Use o MMC dos denominadores ou multiplique em cruz para comparar."
+     ]
+    ]
+   },
+   {
+    "t": "texto",
+    "html": "<b>Exemplo</b><br>Dois ônibus saem juntos; um a cada 12 min, outro a cada 18 min. Quando saem juntos de novo? “Juntos de novo” = MMC. 12 = 2²·3, 18 = 2·3². MMC = 2²·3² = <b>36 min</b>."
+   },
+   {
+    "t": "texto",
+    "html": "<b>Exemplo</b><br>Ana gastou 1/4 do que tinha e depois 1/3 do restante; sobraram R$ 300. Restante após o 1º gasto = 3/4. Gastou 1/3 disso = 1/4 do total. Sobrou 3/4 − 1/4 = 1/2 do total = 300. Total = <b>R$ 600</b>."
+   },
+   {
+    "t": "nota",
+    "html": "“Do que sobrou” muda a base. Quem calcula as duas frações sobre o total erra. Sempre pergunte: essa fração é de quê?",
+    "tom": "pegadinha",
+    "titulo": "Onde a FCC pega"
+   }
+  ]
+ },
+ "A2-a06": {
+  "titulo": "Na prova: como reconhecer e resolver",
+  "etapa": "banca",
+  "blocos": [
+   {
+    "t": "texto",
+    "html": "Toda questão de razão, proporção e regra de três tem a mesma pergunta escondida: <b>as grandezas andam juntas ou ao contrário?</b> Responder isso antes de montar a conta resolve metade da questão."
+   },
+   {
+    "t": "tabela",
+    "cab": [
+     "Quando o enunciado diz…",
+     "Pense em…",
+     "Como resolver"
+    ],
+    "linhas": [
+     [
+      "“Na razão de 2 para 3”, “para cada 2… há 3…”",
+      "Razão = constante k",
+      "Escreva as partes como 2k e 3k, some e iguale ao total para achar k."
+     ],
+     [
+      "“Dividir proporcionalmente a…”",
+      "Divisão diretamente proporcional",
+      "Some os pesos, divida o total pela soma (dá o k) e multiplique cada peso por k."
+     ],
+     [
+      "“Inversamente proporcional a…”",
+      "Divisão inversa",
+      "Use os inversos dos números (1/2, 1/3…), tire o MMC para virar inteiros e divida como direta."
+     ],
+     [
+      "Mais trabalhadores, menos dias; mais velocidade, menos tempo",
+      "Inversamente proporcional",
+      "Na regra de três, inverta a coluna inversa antes de multiplicar em cruz."
+     ],
+     [
+      "Várias grandezas (operários, horas, dias, peças)",
+      "Regra de três composta",
+      "Isole a grandeza pedida; compare cada outra com ela (direta ou inversa); inverta as inversas e monte uma única fração."
+     ]
+    ]
+   },
+   {
+    "t": "texto",
+    "html": "<b>Exemplo</b><br>6 máquinas fazem um serviço em 10 dias. Em quantos dias 4 máquinas fazem o mesmo serviço? Menos máquinas → mais dias: <b>inversa</b>. x = 10 · 6/4 = <b>15 dias</b>."
+   },
+   {
+    "t": "texto",
+    "html": "<b>Exemplo</b><br>Dividir R$ 1.000 entre A e B na razão de 2 para 3. 2k + 3k = 1.000 → k = 200. A = <b>400</b>, B = <b>600</b>."
+   },
+   {
+    "t": "nota",
+    "html": "A banca escolhe números para que a regra de três direta (errada) dê uma das alternativas. Antes de multiplicar, diga em voz alta: “mais isso, mais ou menos aquilo?”.",
+    "tom": "pegadinha",
+    "titulo": "Onde a FCC pega"
+   }
+  ]
+ },
+ "A2-a07": {
+  "titulo": "Na prova: como reconhecer e resolver",
+  "etapa": "banca",
+  "blocos": [
+   {
+    "t": "texto",
+    "html": "Porcentagem é multiplicação. Troque “aumentar 20%” por <b>× 1,20</b> e “desconto de 20%” por <b>× 0,80</b>. Aumentos e descontos seguidos se multiplicam, nunca se somam."
+   },
+   {
+    "t": "tabela",
+    "cab": [
+     "Quando o enunciado diz…",
+     "Pense em…",
+     "Como resolver"
+    ],
+    "linhas": [
+     [
+      "“Aumento de x%”",
+      "Fator 1 + x/100",
+      "Multiplique o valor por (1 + x/100). Ex.: 15% → × 1,15."
+     ],
+     [
+      "“Desconto de x%”, “redução de x%”",
+      "Fator 1 − x/100",
+      "Multiplique por (1 − x/100). Ex.: 30% → × 0,70."
+     ],
+     [
+      "“Aumentos/descontos sucessivos”",
+      "Produto dos fatores",
+      "Multiplique os fatores. 10% de aumento e 10% de desconto: 1,1 × 0,9 = 0,99 → <b>perda de 1%</b>."
+     ],
+     [
+      "“Qual foi o aumento percentual”",
+      "Variação ÷ valor inicial",
+      "(novo − antigo) ÷ antigo × 100. A base é sempre o valor <b>antes</b>."
+     ],
+     [
+      "“Após desconto de x%, pagou V. Qual o preço original?”",
+      "Volta pelo fator",
+      "Original = V ÷ (1 − x/100). Nunca some x% ao valor pago."
+     ]
+    ]
+   },
+   {
+    "t": "texto",
+    "html": "<b>Exemplo</b><br>Um produto subiu 20% e depois caiu 20%. Variação final? 1,2 × 0,8 = 0,96 → <b>caiu 4%</b>, não voltou ao preço inicial."
+   },
+   {
+    "t": "texto",
+    "html": "<b>Exemplo</b><br>Pagou R$ 170 com 15% de desconto. Original = 170 ÷ 0,85 = <b>R$ 200</b> (e não 170 + 15% = 195,50)."
+   },
+   {
+    "t": "nota",
+    "html": "Quem soma porcentagens sucessivas (+20% − 20% = 0) cai na alternativa errada que a FCC sempre põe. Multiplique os fatores.",
+    "tom": "pegadinha",
+    "titulo": "Onde a FCC pega"
+   }
+  ]
+ },
+ "A3-a01": {
+  "titulo": "Na prova: como reconhecer e resolver",
+  "etapa": "banca",
+  "blocos": [
+   {
+    "t": "texto",
+    "html": "Questão de unidade de medida tem três perguntas: <b>está em bit ou em byte?</b> <b>Qual prefixo (K, M, G, T)?</b> <b>A conta é de tamanho ou de velocidade?</b> Identifique as três antes de calcular."
+   },
+   {
+    "t": "tabela",
+    "cab": [
+     "Quando o enunciado diz…",
+     "Pense em…",
+     "Como resolver"
+    ],
+    "linhas": [
+     [
+      "Letra <b>b</b> minúscula (Mbps, kbps)",
+      "bit, usado em velocidade de rede",
+      "1 byte = 8 bits. Para saber quantos MB por segundo, divida os Mbps por 8."
+     ],
+     [
+      "Letra <b>B</b> maiúscula (KB, MB, GB)",
+      "byte, usado em tamanho de arquivo e memória",
+      "Use a escada: KB → MB → GB → TB, cada degrau × 1.024 (convenção usual em prova)."
+     ],
+     [
+      "“Quantos arquivos cabem…”",
+      "Divisão de tamanhos",
+      "Coloque tudo na mesma unidade e divida o espaço total pelo tamanho do arquivo."
+     ],
+     [
+      "“Quanto tempo para baixar…”",
+      "Tamanho ÷ velocidade",
+      "Converta o tamanho para bits (× 8) ou a velocidade para bytes (÷ 8), depois divida."
+     ],
+     [
+      "“Memória que perde dados ao desligar”",
+      "RAM (volátil)",
+      "ROM, HD e SSD guardam dados sem energia; RAM e cache não."
+     ]
+    ]
+   },
+   {
+    "t": "texto",
+    "html": "<b>Exemplo</b><br>Internet de 80 Mbps baixa um arquivo de 100 MB em quanto tempo (aprox.)? 80 Mbps ÷ 8 = 10 MB por segundo. 100 ÷ 10 = <b>10 segundos</b>."
+   },
+   {
+    "t": "texto",
+    "html": "<b>Exemplo</b><br>Um pendrive de 2 GB guarda quantos arquivos de 512 MB? 2 GB = 2.048 MB. 2.048 ÷ 512 = <b>4 arquivos</b>."
+   },
+   {
+    "t": "nota",
+    "html": "A pegadinha clássica é confundir Mb (megabit) com MB (megabyte). Olhe sempre o tamanho da letra b antes de fazer conta.",
+    "tom": "pegadinha",
+    "titulo": "Onde a FCC pega"
+   }
+  ]
+ },
+ "A3-a04": {
+  "titulo": "Na prova: como reconhecer e resolver",
+  "etapa": "banca",
+  "blocos": [
+   {
+    "t": "texto",
+    "html": "Questão de planilha quase sempre pede o <b>resultado de uma fórmula</b> ou <b>o que acontece ao copiar</b>. Leia a fórmula de dentro para fora e faça a conta numa folha, como se você fosse o Excel."
+   },
+   {
+    "t": "tabela",
+    "cab": [
+     "Quando o enunciado diz…",
+     "Pense em…",
+     "Como resolver"
+    ],
+    "linhas": [
+     [
+      "Fórmula copiada/arrastada para outra célula",
+      "Referência relativa × absoluta",
+      "O que tem $ fica parado. =A1 arrastada uma linha abaixo vira =A2; =$A$1 continua =$A$1; =A$1 trava só a linha."
+     ],
+     [
+      "=SE(teste; valor_se_verdadeiro; valor_se_falso)",
+      "Função SE",
+      "Faça o teste com os números da planilha. Se V, o resultado é o 2º argumento; se F, o 3º."
+     ],
+     [
+      "=SOMA(A1:A4), =MÉDIA(…), =CONT.SE(…)",
+      "Intervalo com dois-pontos",
+      "Dois-pontos (:) é “de… até…”; ponto e vírgula (;) é “e”. =SOMA(A1;A4) soma só duas células."
+     ],
+     [
+      "Conta com vários operadores",
+      "Ordem: ( ), ^, × ÷, + −",
+      "=2+3*2 dá 8, não 10. Resolva parênteses e potência antes."
+     ],
+     [
+      "=PROCV(valor; tabela; coluna; 0)",
+      "Busca na 1ª coluna",
+      "Ache o valor na primeira coluna da tabela e devolva o que está na coluna indicada (contando a partir da primeira)."
+     ]
+    ]
+   },
+   {
+    "t": "texto",
+    "html": "<b>Exemplo</b><br>Em C1 está =A1*$B$1. Copiada para C3, vira =A3*$B$1: o A1 andou duas linhas, o $B$1 ficou travado."
+   },
+   {
+    "t": "texto",
+    "html": "<b>Exemplo</b><br>A1 = 7. =SE(A1>=7;\"Aprovado\";\"Reprovado\") → 7 ≥ 7 é verdadeiro → <b>Aprovado</b>."
+   },
+   {
+    "t": "nota",
+    "html": "Atenção a dois-pontos versus ponto e vírgula e ao sinal ≥ versus >. A FCC monta a alternativa errada exatamente na diferença entre “maior” e “maior ou igual”.",
+    "tom": "pegadinha",
+    "titulo": "Onde a FCC pega"
+   }
+  ]
+ }
+}

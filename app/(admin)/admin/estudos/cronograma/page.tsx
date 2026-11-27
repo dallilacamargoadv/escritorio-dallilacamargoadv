@@ -37,37 +37,35 @@ export default async function CronogramaPage(props: PageProps<"/admin/estudos/cr
         <summary className="cursor-pointer text-e-ink">Como o plano funciona</summary>
         <ul className="mt-3 list-disc space-y-1.5 pl-5">
           <li>
-            <span className="text-e-ink">Segunda a sexta:</span> 2 matérias por dia, em rodízio (as do núcleo da prova aparecem mais).
-            Em cada uma: aquecimento com 5 questões antes de estudar, lei seca, teoria só no que você errou e bateria de questões.
+            <span className="text-e-ink">Todo dia, até a prova:</span> revisão espaçada (o que vence hoje: 1, 7, 15 e 30 dias, depois semanal).
           </li>
           <li>
-            <span className="text-e-ink">Português todo dia</span>, fora das 2 matérias: teoria curta e muitas questões. E 15 minutos da
-            fila da aba Revisão.
+            <span className="text-e-ink">Segunda a sexta:</span> 2 matérias de Direito por dia, em rodízio (as do núcleo aparecem mais).
+            Em cada uma: aquecimento com 5 questões, lei seca do tema (leitura e certo/errado), teoria só no que você errou e bateria de questões.
+          </li>
+          <li>
+            <span className="text-e-ink">Português todo dia</span> (teoria segunda, quarta e sexta) e <span className="text-e-ink">Matemática ou Informática todo dia</span>, alternando.
           </li>
           <li>
             <span className="text-e-ink">Quarta:</span> uma matéria e um simulado de lei seca de uma matéria que você já estudou.
           </li>
           <li>
-            <span className="text-e-ink">Sábado:</span> revisão (fila, laboratório de erros e lei seca grifada) e discursiva.
+            <span className="text-e-ink">Sábado:</span> simuladão cronometrado e correção rápida, classificando cada erro.
           </li>
           <li>
-            <span className="text-e-ink">Domingo:</span> simuladão cronometrado e correção, classificando cada erro. Para uma prova completa,
-            reserve pelo menos 4 horas no domingo.
+            <span className="text-e-ink">Domingo:</span> caderno de erros da semana (site, simuladão e TEC), lei seca desses erros, discursiva com análise do que faltou.
           </li>
         </ul>
       </details>
 
       {atrasados.length > 0 && (
-        <section className="rounded-2xl border border-e-bad bg-e-card p-4">
-          <h2 className="text-[11px] uppercase tracking-[0.14em] text-e-bad">{atrasados.length} blocos ficaram para trás</h2>
-          <p className="mt-1 text-sm text-e-dim">
-            Marque o que você fez mesmo atrasado. O resto não precisa ser recuperado: use &quot;replanejar&quot; acima e o plano se
-            ajusta a partir de hoje.
-          </p>
+        <details className="rounded-2xl border border-e-line bg-e-card p-4">
+          <summary className="cursor-pointer text-sm text-e-dim">{atrasados.length} blocos de dias anteriores sem marcação</summary>
+          <p className="mt-2 text-sm text-e-dim">Se fez, marque. Se não fez, deixe: não acumula e não precisa recuperar.</p>
           <div className="mt-3 max-h-72 overflow-y-auto">
             <BlocosDoDia itens={atrasados} links={linksDosBlocos(atrasados)} vazio="" />
           </div>
-        </section>
+        </details>
       )}
 
       <section>

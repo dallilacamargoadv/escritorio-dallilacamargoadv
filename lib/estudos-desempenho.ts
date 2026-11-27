@@ -242,7 +242,7 @@ export interface Acao {
 }
 /**
  * Escolhe a ação mais útil agora, sempre com a justificativa nos dados.
- * Ordem: erro repetido > muitos blocos atrasados > próximo bloco de hoje > começar o plano.
+ * Ordem: erro repetido > próximo bloco de hoje > começar o plano.
  */
 export function proximaMelhorAcao(c: {
   criticos: TemaCritico[];
@@ -258,14 +258,6 @@ export function proximaMelhorAcao(c: {
       porque: `Você errou ou acertou sem firmeza ${t.erros} de ${t.tentativas} tentativas desse tema nos últimos 45 dias.${tipo} Leia a fonte de cada questão e refaça só esse tema.`,
       href: `/admin/estudos/questoes?materia=${t.materia_id}&tema=${encodeURIComponent(t.tema)}&status=erradas`,
       rotulo: "Treinar esse tema",
-    };
-  }
-  if (c.atrasados >= 6) {
-    return {
-      titulo: "Replanejar o cronograma",
-      porque: `Ficaram ${c.atrasados} blocos para trás. Refazer o plano a partir de hoje evita acumular tudo no mesmo dia.`,
-      href: "/admin/estudos/cronograma",
-      rotulo: "Abrir cronograma",
     };
   }
   if (c.proximoBloco) {
