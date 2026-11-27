@@ -1,17 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { Pause, Play, RotateCcw, Square } from "lucide-react";
-import { addDaysToDateString } from "@/lib/atividades-utils";
 import { diasDosBotoes, rotuloEtapa } from "@/lib/estudos-revisao";
 import type { ProblemaDoDia, Subjetiva } from "@/lib/estudos-revisao-hoje";
-import { formatarData } from "@/lib/estudos-utils";
 import type { CertoErradoLei } from "@/lib/estudos-lei-flash";
 import { LeiSecaFlash } from "@/components/estudos/LeiSecaFlash";
 import { Sparkle } from "@/components/estudos/Sparkle";
-import { BOTAO_PRIMARIO, BOTAO_SECUNDARIO, Card, CardTitulo, Kpi } from "@/components/estudos/ui";
+import { BOTAO_PRIMARIO, BOTAO_SECUNDARIO, Card } from "@/components/estudos/ui";
 
 export interface CartaoFila {
   id: string;
@@ -32,15 +28,6 @@ export interface CartaoFila {
   correta?: number;
   porque?: string[];
 }
-interface QuestaoFila {
-  id: string;
-  materia: string;
-  materia_id: string;
-  tema: string;
-  ref: string;
-  etapa: number;
-  vence_em: string;
-}
 interface ArtigoFila {
   item_id: string;
   ref: string;
@@ -52,7 +39,6 @@ interface ArtigoFila {
   vence_em: string;
 }
 
-const FOCO = 50 * 60;
 const PROBLEMA = 15 * 60;
 
 const dias = (n: number) => (n === 1 ? "amanhã" : `${n} dias`);
@@ -76,7 +62,6 @@ function BotoesTres({ etapa, desabilitado, responder }: { etapa: number; desabil
 }
 
 const corpo = (r: "errei" | "quase" | "acertei") => ({ ok: r !== "errei", quase: r === "quase" });
-const PAUSA = 10 * 60;
 
 function mmss(s: number) {
   const m = Math.floor(s / 60);
@@ -94,156 +79,12 @@ async function enviarRevisao(corpo: object): Promise<string | null> {
   return j?.error ?? "Não consegui salvar agora. Confira a conexão e tente de novo.";
 }
 
-/* ===================== POMODORO 50/10 ===================== */
-
-function Pomodoro({ hoje, historico }: { hoje: string; historico: { data: string; minutos: number }[] }) {
-  const router = useRouter();
-  const [fase, setFase] = useState<"foco" | "pausa">("foco");
-  const [restante, setRestante] = useState(FOCO);
-  const [rodando, setRodando] = useState(false);
-  const [efetivo, setEfetivo] = useState(0);
-  const [pausas, setPausas] = useState(0);
-  const [aviso, setAviso] = useState<string | null>(null);
-  const ultimo = useRef(0);
-  const efetivoRef = useRef(0);
-  const pausasRef = useRef(0);
-  const faseRef = useRef<"foco" | "pausa">("foco");
-
-  async function gravar(seg: number) {
-    const minutos = Math.round(seg / 60);
-    if (minutos < 1) return;
-    const res = await fetch("/api/admin/estudos/pomodoros", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ minutos_efetivos: minutos, pausas: pausasRef.current }),
-    }).catch(() => null);
-    setAviso(res?.ok ? `Bloco salvo: ${minutos} min de tempo efetivo.` : "Não consegui salvar o bloco. Confira a conexão.");
-    router.refresh();
-  }
-
-  useEffect(() => {
-    if (!rodando) return;
-    ultimo.current = Date.now();
-    const t = setInterval(() => {
-      const agora = Date.now();
-      const passou = Math.round((agora - ultimo.current) / 1000);
-      if (passou < 1) return;
-      ultimo.current = agora;
-      if (faseRef.current === "foco") {
-        efetivoRef.current += passou;
-        setEfetivo(efetivoRef.current);
-      }
-      setRestante((r) => Math.max(0, r - passou));
-    }, 250);
-    return () => clearInterval(t);
-  }, [rodando]);
-
-  useEffect(() => {
-    if (restante > 0) return;
-    if (faseRef.current === "foco") {
-      void gravar(efetivoRef.current);
-      efetivoRef.current = 0;
-      pausasRef.current = 0;
-      setEfetivo(0);
-      setPausas(0);
-      faseRef.current = "pausa";
-      setFase("pausa");
-      setRestante(PAUSA);
-    } else {
-      faseRef.current = "foco";
-      setFase("foco");
-      setRestante(FOCO);
-      setRodando(false);
-      setAviso("Pausa terminou. Comece o próximo bloco quando estiver pronta.");
-    }
-    // gravar usa só refs; rodar apenas quando o tempo zera
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [restante]);
-
-  function alternar() {
-    if (rodando && faseRef.current === "foco") {
-      pausasRef.current += 1;
-      setPausas(pausasRef.current);
-    }
-    setAviso(null);
-    setRodando((r) => !r);
-  }
-
-  function encerrar() {
-    setRodando(false);
-    if (faseRef.current === "foco") void gravar(efetivoRef.current);
-    efetivoRef.current = 0;
-    pausasRef.current = 0;
-    setEfetivo(0);
-    setPausas(0);
-    faseRef.current = "foco";
-    setFase("foco");
-    setRestante(FOCO);
-  }
-
-  const minutosHoje = historico.filter((p) => p.data === hoje).reduce((s, p) => s + p.minutos, 0);
-  const dias = Array.from({ length: 7 }, (_, i) => addDaysToDateString(hoje, i - 6));
-  const porDia = dias.map((d) => historico.filter((p) => p.data === d).reduce((s, p) => s + p.minutos, 0));
-  const max = Math.max(60, ...porDia);
-  const total = fase === "foco" ? FOCO : PAUSA;
-
-  return (
-    <Card destaque={rodando && fase === "foco"}>
-      <CardTitulo acao={<span className="text-xs tabular-nums text-e-dim">Hoje: {minutosHoje} min efetivos</span>}>Pomodoro 50/10</CardTitulo>
-      <div className="flex flex-wrap items-center gap-5">
-        <div>
-          <p className="text-[11px] uppercase tracking-[0.14em] text-e-dim">{fase === "foco" ? "Foco" : "Pausa"}</p>
-          <p className="text-4xl font-medium tabular-nums text-e-ink" aria-live="off">
-            {mmss(restante)}
-          </p>
-          <span className="mt-2 block h-1.5 w-44 overflow-hidden rounded-full bg-e-line">
-            <span className="block h-full rounded-full bg-e-accent" style={{ width: `${((total - restante) / total) * 100}%` }} />
-          </span>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          <button type="button" onClick={alternar} className={BOTAO_PRIMARIO}>
-            {rodando ? <Pause size={14} aria-hidden="true" /> : <Play size={14} aria-hidden="true" />}
-            {rodando ? "Pausar" : restante === total ? "Começar" : "Continuar"}
-          </button>
-          {fase === "foco" && efetivo > 0 && (
-            <button type="button" onClick={encerrar} className={BOTAO_SECUNDARIO}>
-              <Square size={12} aria-hidden="true" /> Encerrar e salvar
-            </button>
-          )}
-          {fase === "pausa" && (
-            <button type="button" onClick={() => setRestante(0)} className={BOTAO_SECUNDARIO}>
-              <RotateCcw size={12} aria-hidden="true" /> Pular a pausa
-            </button>
-          )}
-        </div>
-        <div className="ml-auto text-right text-xs text-e-dim">
-          <p>
-            Tempo efetivo do bloco: <span className="tabular-nums text-e-ink">{mmss(efetivo)}</span>
-          </p>
-          <p>Interrupções: {pausas}</p>
-        </div>
-      </div>
-      <div className="mt-4 flex items-end gap-2" aria-label="Minutos efetivos nos últimos 7 dias">
-        {dias.map((d, i) => (
-          <div key={d} className="flex flex-1 flex-col items-center gap-1">
-            <span className="text-[10px] tabular-nums text-e-dim">{porDia[i] || ""}</span>
-            <span className="block w-full rounded-t bg-e-accent/70" style={{ height: `${Math.max(2, (porDia[i] / max) * 48)}px` }} />
-            <span className="text-[10px] text-e-dim">{formatarData(d, { weekday: "short" }).replace(".", "")}</span>
-          </div>
-        ))}
-      </div>
-      {aviso && <p className="mt-3 text-xs text-e-dim">{aviso}</p>}
-      <p className="mt-2 text-[11px] text-e-dim">Só conta o tempo de foco com o relógio andando. Pausas e a pausa de 10 minutos ficam de fora.</p>
-    </Card>
-  );
-}
-
 /* ===================== CARTÕES ===================== */
 
 const LETRA = ["A", "B", "C", "D", "E", "F"];
 const CHIP_MATERIA = "rounded-full border px-3 py-1 text-xs transition-colors duration-150";
 
-function Cartoes({ inicial }: { inicial: CartaoFila[] }) {
+function Cartoes({ inicial, onRestantes }: { inicial: CartaoFila[]; onRestantes?: (n: number) => void }) {
   const [fila, setFila] = useState(inicial);
   const [materia, setMateria] = useState<string | null>(null);
   const [virado, setVirado] = useState(false);
@@ -268,10 +109,10 @@ function Cartoes({ inicial }: { inicial: CartaoFila[] }) {
     setEscolha(null);
     setFeitos((n) => n + 1);
     // errou: volta ao fim da fila de hoje para uma segunda tentativa
-    setFila((f) => {
-      const resto = f.filter((c) => c.id !== atual.id);
-      return r !== "errei" ? resto : [...resto, { ...atual, etapa: 0, novo: false }];
-    });
+    const resto = fila.filter((c) => c.id !== atual.id);
+    const nova = r !== "errei" ? resto : [...resto, { ...atual, etapa: 0, novo: false }];
+    setFila(nova);
+    onRestantes?.(nova.length);
   }
   function trocar(m: string | null) {
     setMateria(m);
@@ -282,8 +123,8 @@ function Cartoes({ inicial }: { inicial: CartaoFila[] }) {
   const temAlts = !!atual?.alts?.length && typeof atual.correta === "number";
 
   return (
-    <Card>
-      <CardTitulo acao={<span className="text-xs tabular-nums text-e-dim">{daVez.length} na fila{deErro ? ` (${deErro} dos seus erros)` : ""} · {feitos} feitos</span>}>Flashcards</CardTitulo>
+    <div>
+      <p className="mb-3 text-xs tabular-nums text-e-dim">{daVez.length} na fila{deErro && deErro < daVez.length ? ` (${deErro} dos seus erros)` : ""} · {feitos} feitos</p>
       {contagem.size > 1 && (
         <div className="mb-3 flex flex-wrap gap-1.5" role="group" aria-label="Revisar por matéria">
           {[[null, fila.length] as const, ...[...contagem.entries()]].map(([m, n]) => (
@@ -360,13 +201,13 @@ function Cartoes({ inicial }: { inicial: CartaoFila[] }) {
           {erro}
         </p>
       )}
-    </Card>
+    </div>
   );
 }
 
 /* ===================== ARTIGOS ===================== */
 
-function Artigos({ inicial }: { inicial: ArtigoFila[] }) {
+function Artigos({ inicial, onRestantes }: { inicial: ArtigoFila[]; onRestantes?: (n: number) => void }) {
   const [fila, setFila] = useState(inicial);
   const [erro, setErro] = useState<string | null>(null);
 
@@ -374,12 +215,14 @@ function Artigos({ inicial }: { inicial: ArtigoFila[] }) {
     const e = await enviarRevisao({ tipo: "artigo", id: a.item_id, ok, etapa: a.etapa });
     if (e) return setErro(e);
     setErro(null);
-    setFila((f) => f.filter((x) => x.item_id !== a.item_id));
+    const resto = fila.filter((x) => x.item_id !== a.item_id);
+    setFila(resto);
+    onRestantes?.(resto.length);
   }
 
   return (
-    <Card>
-      <CardTitulo acao={<span className="text-xs tabular-nums text-e-dim">{fila.length} na fila</span>}>Lei seca em flashcard</CardTitulo>
+    <div>
+      <p className="mb-3 text-xs text-e-dim">Abra um artigo: o texto vem primeiro, você diz se está certo ou errado, e só depois vê a lei.</p>
       {fila.length === 0 ? (
         <p className="flex items-center gap-2 text-sm text-e-dim">
           <Sparkle size={14} /> Nenhum artigo vence hoje.
@@ -414,13 +257,13 @@ function Artigos({ inicial }: { inicial: ArtigoFila[] }) {
           {erro}
         </p>
       )}
-    </Card>
+    </div>
   );
 }
 
 /* ===================== SUBJETIVA DO DIA ===================== */
 
-function SubjetivaDoDia({ dia, subjetiva, proxima }: { dia: boolean; subjetiva: Subjetiva | null; proxima: string }) {
+function SubjetivaDoDia({ dia, subjetiva, proxima, onFeita }: { dia: boolean; subjetiva: Subjetiva | null; proxima: string; onFeita?: () => void }) {
   const [i, setI] = useState(0);
   const [texto, setTexto] = useState("");
   const [conferindo, setConferindo] = useState(false);
@@ -430,17 +273,15 @@ function SubjetivaDoDia({ dia, subjetiva, proxima }: { dia: boolean; subjetiva: 
 
   if (!dia)
     return (
-      <Card>
-        <CardTitulo>Subjetiva do dia</CardTitulo>
+      <div>
         <p className="text-sm text-e-dim">Hoje não tem subjetiva. A próxima é na {proxima}.</p>
-      </Card>
+      </div>
     );
   if (!subjetiva || !subjetiva.perguntas.length)
     return (
-      <Card>
-        <CardTitulo>Subjetiva do dia</CardTitulo>
+      <div>
         <p className="text-sm text-e-dim">Nenhum tema com cartão vence hoje. A subjetiva volta quando a fila tiver um tema.</p>
-      </Card>
+      </div>
     );
 
   const p = subjetiva.perguntas[i];
@@ -453,14 +294,14 @@ function SubjetivaDoDia({ dia, subjetiva, proxima }: { dia: boolean; subjetiva: 
     if (e) return setErro(e);
     setErro(null);
     setFeitas((n) => n + 1);
+    if (feitas + 1 >= subjetiva!.perguntas.length) onFeita?.();
     setTexto("");
     setConferindo(false);
     if (i + 1 < subjetiva!.perguntas.length) setI(i + 1);
   }
 
   return (
-    <Card>
-      <CardTitulo acao={<span className="text-xs tabular-nums text-e-dim">{Math.min(feitas, subjetiva.perguntas.length)} de {subjetiva.perguntas.length}</span>}>Subjetiva do dia</CardTitulo>
+    <div>
       <p className="text-sm text-e-ink">
         Tema que vence hoje: {subjetiva.materia} · {subjetiva.tema}
       </p>
@@ -524,7 +365,7 @@ function SubjetivaDoDia({ dia, subjetiva, proxima }: { dia: boolean; subjetiva: 
           {erro}
         </p>
       )}
-    </Card>
+    </div>
   );
 }
 
@@ -541,15 +382,13 @@ function ProblemaDoDiaCard({ problema }: { problema: ProblemaDoDia | null }) {
 
   if (!problema)
     return (
-      <Card>
-        <CardTitulo>Problema do dia · Matemática e RLM</CardTitulo>
+      <div>
         <p className="text-sm text-e-dim">Ainda não há problema de um assunto que você já viu. Marque como estudada a aula de frações, razão ou porcentagem no caderno.</p>
-      </Card>
+      </div>
     );
   const href = `/admin/estudos/questoes?materia=${problema.materia_id}&id=${encodeURIComponent(problema.questao_id)}`;
   return (
-    <Card>
-      <CardTitulo acao={<span className="text-xs text-e-dim">15 min</span>}>Problema do dia · Matemática e RLM</CardTitulo>
+    <div>
       <p className="text-sm text-e-ink">{problema.tema}</p>
       <p className="mt-1 text-xs text-e-dim">
         Sorteado só entre assuntos que você já viu ({problema.pelasMarcadas ? "aulas marcadas como estudadas" : "aulas já publicadas, nenhuma marcada ainda"}): {problema.temas.join(", ")}. Sem lógica proposicional.
@@ -569,109 +408,176 @@ function ProblemaDoDiaCard({ problema }: { problema: ProblemaDoDia | null }) {
         </div>
       )}
       <p className="mt-3 text-[11px] text-e-dim">Desenhe antes de calcular: traduza a historinha em conta. A correção e o motivo do erro ficam na tela de questões.</p>
-    </Card>
+    </div>
   );
 }
 
-/* ===================== TELA ===================== */
+/* ===================== TELA: O QUE FAZER HOJE ===================== */
+
+interface Passo {
+  id: string;
+  titulo: string;
+  detalhe: string;
+  /** quantos itens tinha ao abrir a página (0 = nada para hoje) */
+  total: number;
+  restante: number;
+  minutos: number;
+  conteudo: ReactNode;
+}
 
 export function RevisaoClient({
-  hoje,
-  questoes,
   artigos,
   cartoes,
-  proximos,
-  pomodoros,
   diaDeSubjetiva,
   subjetiva,
   proximaSubjetiva,
   problema,
+  errosGuardados,
 }: {
-  hoje: string;
-  questoes: QuestaoFila[];
   artigos: ArtigoFila[];
   cartoes: CartaoFila[];
-  proximos: { questoes: number; artigos: number; cartoes: number };
-  pomodoros: { data: string; minutos: number }[];
   diaDeSubjetiva: boolean;
   subjetiva: Subjetiva | null;
   proximaSubjetiva: string;
   problema: ProblemaDoDia | null;
+  errosGuardados: number;
 }) {
-  const total = questoes.length + artigos.length + cartoes.length;
+  const doErro = cartoes.filter((c) => c.doErro);
+  const doTema = cartoes.filter((c) => !c.doErro);
+  const subjetivaPendente = diaDeSubjetiva && !!subjetiva?.perguntas.length && !subjetiva.feita;
+  const [restam, setRestam] = useState<Record<string, number>>({
+    erros: doErro.length,
+    lei: artigos.length,
+    temas: doTema.length,
+    subjetiva: subjetivaPendente ? 1 : 0,
+  });
+  const [aberto, setAberto] = useState<string | null>(null);
+  const marcar = (id: string) => (n: number) => setRestam((r) => ({ ...r, [id]: n }));
+
+  const passos: Passo[] = [
+    {
+      id: "erros",
+      titulo: "Flashcards dos seus erros",
+      detalhe: "responda de novo com as alternativas",
+      total: doErro.length,
+      restante: restam.erros,
+      minutos: Math.ceil(doErro.length * 1.5),
+      conteudo: <Cartoes inicial={doErro} onRestantes={marcar("erros")} />,
+    },
+    {
+      id: "lei",
+      titulo: "Lei seca: certo ou errado",
+      detalhe: "artigos dos seus erros · o texto vem primeiro",
+      total: artigos.length,
+      restante: restam.lei,
+      minutos: artigos.length * 2,
+      conteudo: <Artigos inicial={artigos} onRestantes={marcar("lei")} />,
+    },
+    {
+      id: "temas",
+      titulo: "Flashcards dos temas",
+      detalhe: "os cartões das matérias que vencem hoje",
+      total: doTema.length,
+      restante: restam.temas,
+      minutos: Math.ceil(doTema.length * 0.75),
+      conteudo: <Cartoes inicial={doTema} onRestantes={marcar("temas")} />,
+    },
+  ];
+  if (diaDeSubjetiva)
+    passos.push({
+      id: "subjetiva",
+      titulo: "Subjetiva do dia",
+      detalhe: subjetiva?.perguntas.length ? `${subjetiva.perguntas.length} ${subjetiva.perguntas.length === 1 ? "pergunta" : "perguntas"} · ${subjetiva.tema}` : "nenhum tema vence hoje",
+      total: subjetiva?.perguntas.length ? 1 : 0,
+      restante: restam.subjetiva,
+      minutos: 10,
+      conteudo: <SubjetivaDoDia dia={diaDeSubjetiva} subjetiva={subjetiva} proxima={proximaSubjetiva} onFeita={() => marcar("subjetiva")(0)} />,
+    });
+  if (problema)
+    passos.push({
+      id: "problema",
+      titulo: "Problema do dia · Matemática",
+      detalhe: problema.tema,
+      total: 1,
+      restante: problema.feitoHoje === null ? 1 : 0,
+      minutos: 15,
+      conteudo: <ProblemaDoDiaCard problema={problema} />,
+    });
+
+  const comItens = passos.filter((p) => p.total > 0);
+  const feitos = comItens.filter((p) => p.restante === 0).length;
+  const minutos = passos.filter((p) => p.restante > 0).reduce((s, p) => s + p.minutos, 0);
+  // só o próximo passo pendente fica destacado: é por onde começar
+  const proximo = passos.find((p) => p.total > 0 && p.restante > 0)?.id;
+
   return (
     <div className="space-y-4">
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <Kpi rotulo="Na fila de hoje" valor={String(total)} detalhe={total ? "comece pelas questões" : "fila zerada"} tom={total ? undefined : "ok"} />
-        <Kpi rotulo="Questões" valor={String(questoes.length)} detalhe={`${proximos.questoes} nos próximos 7 dias`} />
-        <Kpi rotulo="Cartões" valor={String(cartoes.length)} detalhe={`${proximos.cartoes} nos próximos 7 dias`} />
-        <Kpi rotulo="Artigos" valor={String(artigos.length)} detalhe={`${proximos.artigos} nos próximos 7 dias`} />
-      </div>
-
-      <Pomodoro hoje={hoje} historico={pomodoros} />
-
-      <div className="grid gap-4 lg:grid-cols-2">
-        <SubjetivaDoDia dia={diaDeSubjetiva} subjetiva={subjetiva} proxima={proximaSubjetiva} />
-        <ProblemaDoDiaCard problema={problema} />
-      </div>
-
       <Card>
-        <CardTitulo acao={<span className="text-xs tabular-nums text-e-dim">{questoes.length} na fila</span>}>Questões que você errou</CardTitulo>
-        {questoes.length === 0 ? (
-          <p className="flex items-center gap-2 text-sm text-e-dim">
-            <Sparkle size={14} /> Nenhuma questão vence hoje.
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <h2 className="text-lg text-e-ink">Hoje você tem que fazer</h2>
+          <span className="text-xs tabular-nums text-e-dim">
+            {feitos} de {comItens.length} feitos{minutos ? ` · uns ${minutos} min` : ""}
+          </span>
+        </div>
+        <span className="mt-3 block h-1.5 overflow-hidden rounded-full bg-e-line" aria-hidden="true">
+          <span className="block h-full rounded-full bg-e-ok transition-all duration-300" style={{ width: `${comItens.length ? (feitos / comItens.length) * 100 : 100}%` }} />
+        </span>
+        {feitos === comItens.length && (
+          <p className="mt-3 flex items-center gap-2 text-sm text-e-ok">
+            <Sparkle size={14} /> Revisão de hoje feita.
           </p>
-        ) : (
-          <>
-            <Link href={`/admin/estudos/questoes?status=erradas&revisao=1&id=${encodeURIComponent(questoes[0].id)}`} className={BOTAO_PRIMARIO}>
-              Refazer a primeira
-            </Link>
-            <div className="mt-3 divide-y divide-e-line rounded-xl border border-e-line">
-              {[...new Set(questoes.map((q) => q.materia))].map((m) => {
-                const da = questoes.filter((q) => q.materia === m);
-                return (
-                  <details key={m} className="group px-3 py-2">
-                    <summary className="flex cursor-pointer list-none flex-wrap items-center justify-between gap-2 text-sm text-e-ink">
-                      <span className="flex items-center gap-2">
-                        <span className="text-e-dim transition-transform duration-150 group-open:rotate-90" aria-hidden="true">›</span>
-                        {m} <span className="text-[11px] text-e-dim">· {da.length}</span>
-                      </span>
-                      <Link
-                        href={`/admin/estudos/questoes?status=erradas&revisao=1&materia=${encodeURIComponent(da[0].materia_id)}&id=${encodeURIComponent(da[0].id)}`}
-                        className="rounded-full border border-e-line px-2.5 py-0.5 text-[11px] text-e-dim hover:border-e-accent hover:text-e-ink"
-                      >
-                        Refazer todas →
-                      </Link>
-                    </summary>
-                    <ul className="pl-5">
-                      {da.map((q) => (
-                        <li key={q.id}>
-                          <Link
-                            href={`/admin/estudos/questoes?status=erradas&revisao=1&materia=${encodeURIComponent(q.materia_id)}&id=${encodeURIComponent(q.id)}`}
-                            className="flex flex-wrap items-baseline justify-between gap-2 py-2 text-sm text-e-ink hover:text-e-glow"
-                          >
-                            <span>{q.tema}</span>
-                            <span className="text-[11px] text-e-dim">
-                              {q.ref} · {rotuloEtapa(q.etapa)}
-                              {q.vence_em < hoje ? ` · venceu ${formatarData(q.vence_em)}` : ""}
-                            </span>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </details>
-                );
-              })}
-            </div>
-          </>
         )}
-        <p className="mt-3 text-[11px] text-e-dim">Acerto com dúvida ou chute conta como erro e mantém a questão na fila.</p>
+        <ol className="mt-3 divide-y divide-e-line">
+          {passos.map((p, i) => {
+            const feito = p.restante === 0;
+            const vazio = p.total === 0;
+            return (
+              <li key={p.id} className="py-3">
+                <div className="flex items-center gap-3">
+                  <span
+                    className={`flex h-7 w-7 flex-none items-center justify-center rounded-full text-xs ${feito ? "bg-e-ok-soft text-e-ok" : "bg-e-card-2 text-e-dim"}`}
+                    aria-hidden="true"
+                  >
+                    {feito ? "✓" : i + 1}
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className={`text-sm ${feito ? "text-e-dim line-through" : "text-e-ink"}`}>{p.titulo}</p>
+                    <p className="text-[11px] text-e-dim">
+                      {vazio ? "nada para hoje" : feito ? "feito" : `${p.restante} ${p.restante === 1 ? "item" : "itens"} · ${p.detalhe}`}
+                    </p>
+                  </div>
+                  {!vazio && (
+                    <button
+                      type="button"
+                      onClick={() => setAberto(aberto === p.id ? null : p.id)}
+                      aria-expanded={aberto === p.id}
+                      className={p.id === proximo && aberto !== p.id ? BOTAO_PRIMARIO : BOTAO_SECUNDARIO}
+                    >
+                      {aberto === p.id ? "Fechar" : feito ? "Ver" : "Começar"}
+                    </button>
+                  )}
+                </div>
+                {/* fica montado depois de aberto, para não perder o ponto da fila ao fechar */}
+                <div className={aberto === p.id ? "mt-4" : "hidden"}>{p.conteudo}</div>
+              </li>
+            );
+          })}
+        </ol>
       </Card>
 
-      <div className="grid gap-4 lg:grid-cols-2">
-        <Cartoes inicial={cartoes} />
-        <Artigos inicial={artigos} />
-      </div>
+      <Card>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <p className="text-sm text-e-ink">Mapa dos erros</p>
+            <p className="text-[11px] text-e-dim">
+              {errosGuardados} {errosGuardados === 1 ? "erro guardado" : "erros guardados"} por matéria e subtema. Refaça quando quiser; eles entram aqui como flashcards, alguns por dia.
+            </p>
+          </div>
+          <Link href="/admin/estudos/mapa-erros" className={BOTAO_SECUNDARIO}>
+            Abrir o mapa →
+          </Link>
+        </div>
+      </Card>
     </div>
   );
 }

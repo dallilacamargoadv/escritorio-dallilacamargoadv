@@ -1,13 +1,9 @@
 import Link from "next/link";
-import { getCronograma, getDiasComBlocoFeito, QUESTAO_POR_ID } from "@/lib/db-estudos";
+import { QUESTAO_POR_ID } from "@/lib/db-estudos";
 import type { Resposta } from "@/lib/estudos-desempenho";
 import { dataBelem, ehFalha } from "@/lib/estudos-revisao";
 import { formatarData, MATERIA_POR_ID } from "@/lib/estudos-utils";
-import { linksDoBloco } from "@/lib/estudos-links";
-import { fonteHtml } from "@/lib/estudos-html";
 import { SUBTEMAS } from "@/lib/estudos-subtemas";
-import { LeiSecaFlash } from "@/components/estudos/LeiSecaFlash";
-import { certoErradoDoArtigo } from "@/lib/estudos-lei-flash";
 import { addDaysToDateString } from "@/lib/atividades-utils";
 import { Card, CardTitulo } from "@/components/estudos/ui";
 
@@ -28,28 +24,12 @@ function linkRefazer(id: string, filtro: Record<string, string>) {
 const CHIP = "rounded-full border border-e-line px-2.5 py-0.5 text-[11px] text-e-dim transition-colors duration-150 hover:border-e-accent hover:text-e-ink";
 
 /**
- * Revisão do último dia de estudo (normalmente ontem): o que foi estudado, as questões erradas
- * nesse dia e a lei seca correspondente (artigos das erradas + blocos de lei seca do plano).
+ * Erros do último dia de estudo (normalmente ontem), por matéria e subtema, para refazer.
+ * Fica no Mapa dos erros (27/11): a Revisão mostra só o que fazer hoje.
  */
-export async function RevisaoDeOntem({ hoje, respostas }: { hoje: string; respostas: Resposta[] }) {
-  let diasFeitos: string[];
-  try {
-    diasFeitos = await getDiasComBlocoFeito();
-  } catch {
-    return null;
-  }
-  const diasResposta = respostas.map((r) => dataBelem(r.respondida_em));
-  const dia = [...new Set([...diasFeitos, ...diasResposta])].filter((d) => d < hoje).sort().at(-1);
+export function RevisaoDeOntem({ hoje, respostas }: { hoje: string; respostas: Resposta[] }) {
+  const dia = [...new Set(respostas.map((r) => dataBelem(r.respondida_em)))].filter((d) => d < hoje).sort().at(-1);
   if (!dia) return null;
-
-  let blocos;
-  try {
-    blocos = (await getCronograma(dia, dia)).filter((b) => b.feito && b.tipo !== "revisao" && b.tipo !== "simulado");
-  } catch {
-    return null;
-  }
-  const estudados = blocos.filter((b) => b.tipo !== "lei_seca");
-  const leiDoPlano = blocos.filter((b) => b.tipo === "lei_seca");
 
   // erradas do dia: uma vez cada questão, mesmo que tenha errado duas vezes
   const erradas = new Map<string, NonNullable<ReturnType<typeof QUESTAO_POR_ID.get>>>();
@@ -62,11 +42,6 @@ export async function RevisaoDeOntem({ hoje, respostas }: { hoje: string; respos
   const refeitaHoje = new Map<string, Resposta>();
   for (const r of respostas) if (dataBelem(r.respondida_em) === hoje && erradas.has(r.questao_id)) refeitaHoje.set(r.questao_id, r);
   const pendentes = [...erradas.keys()].filter((id) => !refeitaHoje.has(id));
-  // lei seca das erradas, sem repetir o mesmo dispositivo
-  const artigos = new Map<string, { ref: string; fonte: string; materia: string }>();
-  for (const q of erradas.values()) {
-    if (q.fonte && q.ref && !artigos.has(q.ref)) artigos.set(q.ref, { ref: q.ref, fonte: q.fonte, materia: q.mat });
-  }
 
   // agrupa por matéria e, dentro dela, por subtema (ou tema, quando a questão não tem subtema)
   const porMateria = new Map<string, Grupo>();
@@ -96,42 +71,20 @@ export async function RevisaoDeOntem({ hoje, respostas }: { hoje: string; respos
   const grupos = [...porMateria.values()].sort((a, b) => b.total - a.total);
   for (const g of grupos) g.subs.sort((a, b) => b.ids.length - a.ids.length);
 
-  if (!estudados.length && !erradas.size && !leiDoPlano.length) return null;
+  if (!erradas.size) return null;
   const ontem = dia === addDaysToDateString(hoje, -1);
   const rotuloDia = ontem ? "ontem" : formatarData(dia, { weekday: "long", day: "2-digit", month: "2-digit" });
 
   return (
-    <Card className="mb-5" destaque>
-      <CardTitulo>Revisão de {rotuloDia}</CardTitulo>
-      <p className="-mt-1 mb-4 text-xs text-e-dim">
-        Antes da fila: releia o que estudou, refaça o que errou (abra só a matéria que for fazer) e vire os flashcards da lei seca. Só entram as questões resolvidas aqui no site.
+    <Card className="mb-4">
+      <CardTitulo>Erros de {rotuloDia} para refazer</CardTitulo>
+      <p className="-mt-1 mb-3 text-xs text-e-dim">
+        Abra só a matéria que for fazer. Eles também entram na revisão de todo dia como flashcards, alguns por dia.
       </p>
 
-      <section className="mb-4">
-        <h3 className="text-[11px] uppercase tracking-[0.14em] text-e-dim">1. O que você estudou ({estudados.length})</h3>
-        {estudados.length ? (
-          <ul className="mt-2 space-y-2">
-            {estudados.map((b) => (
-              <li key={b.id} className="text-sm text-e-ink">
-                {b.titulo}
-                <span className="mt-1 flex flex-wrap gap-1.5">
-                  {linksDoBloco(b).map((l) => (
-                    <Link key={l.href + l.rotulo} href={l.href} className={CHIP}>
-                      {l.rotulo} →
-                    </Link>
-                  ))}
-                </span>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="mt-2 text-sm text-e-dim">Nenhum bloco marcado como feito nesse dia.</p>
-        )}
-      </section>
-
-      <section className="mb-4">
+      <section>
         <h3 className="text-[11px] uppercase tracking-[0.14em] text-e-dim">
-          2. Seus erros, por matéria ({erradas.size}{erradas.size ? `, ${erradas.size - pendentes.length} refeitos hoje` : ""})
+          {erradas.size} {erradas.size === 1 ? "erro" : "erros"}{erradas.size ? `, ${erradas.size - pendentes.length} refeitos hoje` : ""}
         </h3>
         {grupos.length ? (
           <div className="mt-2 divide-y divide-e-line rounded-xl border border-e-line">
@@ -176,30 +129,6 @@ export async function RevisaoDeOntem({ hoje, respostas }: { hoje: string; respos
         )}
       </section>
 
-      <section>
-        <h3 className="text-[11px] uppercase tracking-[0.14em] text-e-dim">3. Lei seca em flashcard</h3>
-        {artigos.size || leiDoPlano.length ? (
-          <div className="mt-2 space-y-2">
-            {[...artigos.values()].map((a) => (
-              <LeiSecaFlash key={a.ref} refLei={a.ref} detalhe={`${a.materia} · do seu erro`} html={fonteHtml(a.fonte)} itens={certoErradoDoArtigo(a.ref)} />
-            ))}
-            {leiDoPlano.map((b) => (
-              <div key={b.id} className="flex flex-wrap items-baseline justify-between gap-2 rounded-xl border border-e-line px-3 py-2 text-sm">
-                <span className="text-e-ink">{b.titulo}</span>
-                <span className="flex flex-wrap gap-1.5">
-                  {linksDoBloco(b).map((l) => (
-                    <Link key={l.href + l.rotulo} href={l.href} className={CHIP}>
-                      {l.rotulo} →
-                    </Link>
-                  ))}
-                </span>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <p className="mt-2 text-sm text-e-dim">Sem lei seca registrada nesse dia.</p>
-        )}
-      </section>
     </Card>
   );
 }

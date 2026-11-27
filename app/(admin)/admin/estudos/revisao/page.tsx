@@ -4,11 +4,10 @@ import {
   getEstadosCartoes,
   QUESTOES,
   getEstadosRevisao,
-  getPomodoros,
   getRespostas,
   QUESTAO_POR_ID,
 } from "@/lib/db-estudos";
-import { addDaysToDateString, todayBelemDateString } from "@/lib/atividades-utils";
+import { todayBelemDateString } from "@/lib/atividades-utils";
 import {
   agendaArtigos,
   agendaQuestoes,
@@ -34,7 +33,6 @@ import {
 } from "@/lib/estudos-revisao-hoje";
 import { Cabecalho } from "@/components/estudos/ui";
 import { RevisaoClient, type CartaoFila } from "@/components/estudos/RevisaoClient";
-import { RevisaoDeOntem } from "@/components/estudos/RevisaoDeOntem";
 
 /** Um nome só por matéria nos botões da fila: baralhos e cartões de erro usam nomes diferentes. */
 const NOME_CURTO: Record<string, string> = {
@@ -55,14 +53,12 @@ const curto = (n: string) => NOME_CURTO[n] ?? n.replace(/^Direito\s+(d[oa]\s+)?/
 
 export default async function RevisaoPage() {
   const hoje = todayBelemDateString();
-  const semana = addDaysToDateString(hoje, 7);
-  let respostas, estadosCartoes, estadosRevisao, pomodoros, aulasEstudadas;
+  let respostas, estadosCartoes, estadosRevisao, aulasEstudadas;
   try {
-    [respostas, estadosCartoes, estadosRevisao, pomodoros, aulasEstudadas] = await Promise.all([
+    [respostas, estadosCartoes, estadosRevisao, aulasEstudadas] = await Promise.all([
       getRespostas(),
       getEstadosCartoes(),
       getEstadosRevisao(),
-      getPomodoros(addDaysToDateString(hoje, -6)),
       getAulasEstudadas(),
     ]);
   } catch {
@@ -74,7 +70,6 @@ export default async function RevisaoPage() {
 
   // Cartões vencidos (já começados) e uma cota diária de cartões novos, alternando os baralhos.
   const vencidos: CartaoFila[] = [];
-  let proxCartoes = 0;
   let novosHoje = 0;
   for (const c of CARTOES) {
     const e = estadosCartoes.get(c.id);
@@ -84,7 +79,6 @@ export default async function RevisaoPage() {
     const vence = venceCartao(e);
     if (etapa >= ETAPA_FINAL || !vence) continue;
     if (vence <= hoje) vencidos.push({ id: c.id, baralho: c.b, materia: curto(c.b), frente: htmlSeguro(c.f), verso: htmlSeguro(c.v), extra: c.x ? htmlSeguro(c.x) : "", etapa, novo: false });
-    else if (vence <= semana) proxCartoes++;
   }
   const porBaralho = new Map<string, typeof CARTOES>();
   for (const c of CARTOES) {
@@ -106,7 +100,6 @@ export default async function RevisaoPage() {
   const errosVencidos: CartaoFila[] = [];
   const errosNovos: CartaoFila[] = [];
   let errosNovosHoje = 0;
-  let proxErros = 0;
   for (const c of erros) {
     const e = estadosCartoes.get(c.id);
     if (e && typeof e.first === "number" && dataBelem(e.first) === hoje) errosNovosHoje++;
@@ -135,7 +128,6 @@ export default async function RevisaoPage() {
     const vence = venceCartao(e);
     if (etapa >= ETAPA_FINAL || !vence) continue;
     if (vence <= hoje) errosVencidos.push({ ...item, etapa, novo: false });
-    else if (vence <= semana) proxErros++;
   }
 
   // Subjetiva do dia (seg, ter, qui, sex): tema com mais itens vencendo hoje.
@@ -159,33 +151,24 @@ export default async function RevisaoPage() {
   const problema = problemaDoDia(hoje, QUESTOES, respostas, marcadas.size ? marcadas : publicadas, marcadas.size > 0);
 
   // Teto diário: os mais atrasados primeiro; o resto entra nos próximos dias.
-  const questoesHoje = qs.filter((q) => q.vence_em <= hoje).slice(0, LIMITE_DIA.questoes);
   const artigosHoje = arts.filter((a) => a.vence_em <= hoje).slice(0, LIMITE_DIA.artigos);
   vencidos.splice(LIMITE_DIA.cartoes);
-  const proximos = {
-    questoes: qs.filter((q) => q.vence_em > hoje && q.vence_em <= semana).length,
-    artigos: arts.filter((a) => a.vence_em > hoje && a.vence_em <= semana).length,
-    cartoes: proxCartoes + proxErros,
-  };
+  const errosGuardados = erros.filter((c) => !c.superado).length;
 
   return (
     <>
       <Cabecalho
         titulo="Revisão"
-        sub="A fila do dia junta questões que você errou, cartões e artigos de lei. Cada acerto empurra o item para 1, 3, 7, 15 e 30 dias. Errou, ele volta para amanhã."
+        sub="Faça os passos em ordem. Cada acerto empurra o item para mais longe; errou, ele volta amanhã."
       />
-      <RevisaoDeOntem hoje={hoje} respostas={respostas} />
       <RevisaoClient
-        hoje={hoje}
-        questoes={questoesHoje.map((q) => ({ id: q.id, materia: q.materia, materia_id: QUESTAO_POR_ID.get(q.id)?.materia_id ?? "", tema: q.tema, ref: q.ref, etapa: q.etapa, vence_em: q.vence_em }))}
         artigos={artigosHoje.map((a) => ({ item_id: a.item_id, ref: a.ref, materia: a.materia, html: fonteHtml(a.fonte), itens: certoErradoDoArtigo(a.ref), questoes: a.questoes.length, etapa: a.etapa, vence_em: a.vence_em }))}
         cartoes={[...errosVencidos, ...vencidos, ...errosNovos, ...novos].filter((c) => !naSubjetiva.has(c.id))}
         diaDeSubjetiva={temSubjetiva(hoje)}
         subjetiva={subjetiva}
         proximaSubjetiva={proximaSubjetiva(hoje)}
         problema={problema}
-        proximos={proximos}
-        pomodoros={pomodoros.map((p) => ({ data: p.data, minutos: p.minutos_efetivos }))}
+        errosGuardados={errosGuardados}
       />
     </>
   );
