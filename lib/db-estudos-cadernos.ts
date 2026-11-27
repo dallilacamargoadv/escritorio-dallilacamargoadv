@@ -28,12 +28,14 @@ export const CADERNOS: Record<string, Caderno> = {
 };
 
 /** Seção "Na prova: como reconhecer e resolver" (Matemática e Informática), guardada à parte e somada ao fim da aula. */
-const ROTEIROS = roteiros as unknown as Record<string, Secao>;
+const ROTEIROS = roteiros as unknown as Record<string, Secao | Secao[]>;
 for (const c of Object.values(CADERNOS)) {
   c.aulas = c.aulas.map((a) => {
     const r = ROTEIROS[a.id];
+    if (!r) return a;
     const secoes = a.secoes ?? [];
-    return r && !secoes.some((s) => s.titulo === r.titulo) ? { ...a, secoes: [...secoes, r] } : a;
+    const novas = (Array.isArray(r) ? r : [r]).filter((x) => !secoes.some((s) => s.titulo === x.titulo));
+    return novas.length ? { ...a, secoes: [...secoes, ...novas] } : a;
   });
 }
 export const AULA_POR_ID = new Map(

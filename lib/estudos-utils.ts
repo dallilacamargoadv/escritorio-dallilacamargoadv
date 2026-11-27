@@ -141,6 +141,16 @@ export function normalizarConfig(valor: unknown): EstudoConfig {
  * até o edital sair. Ambiental, Trabalho, Direitos Humanos, Previdenciário, legislação e
  * conhecimentos do Maranhão. Arquivo: CONCURSO PGE-MA/05 Edital/mapa-estrategico-prioridades.md.
  */
+/** Baterias de exercícios por aula (pedido dela, 27/11): Matemática só avança quando acertar todas com segurança. */
+export const BATERIAS: Record<string, { tema: string; prefixo: string; total: number }> = {
+  "A2-a05": { tema: "Frações, MMC e MDC", prefixo: "rl-fr50-", total: 50 },
+};
+export interface BateriaPendente {
+  tema: string;
+  certas: number;
+  total: number;
+}
+
 export const FORA_ATE_O_EDITAL = new Set(["B1", "B4", "B9", "B10", "B11", "A4", "A5", "A6", "A7"]);
 // A4 e A5 (História e Geografia do MA) entram só no fim de semana, ver `cultura` em gerarCronograma.
 
@@ -227,7 +237,9 @@ export function gerarCronograma(
   config: EstudoConfig,
   estados: Map<string, TopicoEstado>,
   /** aulas dos cadernos ainda não marcadas como estudadas, por tópico do edital, na ordem do caderno */
-  aulasPendentes: Map<string, { titulo: string; pronta: boolean }[]> = new Map(),
+  aulasPendentes: Map<string, { id: string; titulo: string; pronta: boolean }[]> = new Map(),
+  /** baterias ainda não concluídas, por id da aula */
+  baterias: Map<string, BateriaPendente> = new Map(),
 ): NovoItem[] {
   const ativas = MATERIAS.filter((m) => materiaAtiva(m, config) && !FORA_ATE_O_EDITAL.has(m.id));
   // Teoria nova só para o que ainda não foi estudado. O que já foi visto (estudando, revisar) vai para revisão e questões.
@@ -264,14 +276,20 @@ export function gerarCronograma(
   const filaAulas = (m?: Materia) => {
     if (!m) return [];
     const emAndamento = (id: string) => (estados.get(id)?.status ?? "nao_iniciado") !== "nao_iniciado";
-    const lista = m.topicos.flatMap((t) => (aulasPendentes.get(t.id) ?? []).filter((a) => a.pronta).map((a) => ({ id: t.id, titulo: a.titulo, ativo: emAndamento(t.id) })));
+    const lista = m.topicos.flatMap((t) =>
+      (aulasPendentes.get(t.id) ?? []).filter((a) => a.pronta).map((a) => ({ id: t.id, titulo: a.titulo, ativo: emAndamento(t.id), bateria: baterias.get(a.id) })),
+    );
+    // aula com bateria por terminar: fica nela até acertar todas
+    const travada = lista.find((a) => a.bateria);
+    if (travada) return [travada];
     return [...lista.filter((a) => a.ativo), ...lista.filter((a) => !a.ativo)];
   };
   const filaMat = filaAulas(matematica);
   const filaInfo = filaAulas(informatica);
   let iMat = 0;
   let iInfo = 0;
-  let ultimaMat: { id: string; titulo: string } | null = filaMat[0] ?? null;
+  let ultimaMat: (typeof filaMat)[number] | null = filaMat[0] ?? null;
+  const sufixoBateria = (b?: BateriaPendente) => (b ? `, bateria "${b.tema}": ${b.certas} de ${b.total} certas (só avança com as ${b.total})` : "");
 
   const fim = config.dataProva ? addDaysToDateString(config.dataProva, -1) : addDaysToDateString(hoje, LIMITE_DIAS);
   const total = Math.min(LIMITE_DIAS, diasEntre(hoje, fim));
@@ -374,7 +392,7 @@ export function gerarCronograma(
       const m = escolher(new Set());
       if (m && resta >= 75) estudar(m, Math.min(resta - 60, 120), add);
       if (matematica && resta >= 40) {
-        add({ materia_id: "A2", topico_id: ultimaMat?.id ?? null, tipo: "questoes", titulo: `Matemática: ${ultimaMat ? `${ultimaMat.titulo}, ` : ""}refazer as erradas da semana com o roteiro + 10 questões novas`, minutos: 45 });
+        add({ materia_id: "A2", topico_id: ultimaMat?.id ?? null, tipo: "questoes", titulo: `Matemática: ${ultimaMat ? ultimaMat.titulo : "aula da vez"}${sufixoBateria(ultimaMat?.bateria)}, refazer as erradas com as 4 perguntas do roteiro`, minutos: 45 });
       }
       if (cultura.length && resta >= 45) {
         const c = cultura[iCult++ % cultura.length];
@@ -421,7 +439,7 @@ export function gerarCronograma(
     if (diaMat) {
       const a = filaMat.length ? filaMat[Math.min(iMat++, filaMat.length - 1)] : null;
       if (a) ultimaMat = a;
-      add({ materia_id: "A2", topico_id: a?.id ?? null, tipo: "teoria", titulo: `Matemática: aula ${a ? a.titulo : "da vez"} no caderno (leia o roteiro "como reconhecer e resolver" no fim) + 15 questões, escrevendo cada passo`, minutos: 60 });
+      add({ materia_id: "A2", topico_id: a?.id ?? null, tipo: "teoria", titulo: `Matemática: aula ${a ? a.titulo : "da vez"} no caderno (problemas resolvidos no fim)${sufixoBateria(a?.bateria)}`, minutos: 60 });
     }
     if (simLei) {
       add({ materia_id: simLei.id, topico_id: null, tipo: "simulado", titulo: `Simulado de lei seca: ${simLei.nome} (10 questões, cronometrado)`, minutos: resta });
