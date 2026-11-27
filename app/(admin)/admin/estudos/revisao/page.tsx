@@ -16,12 +16,15 @@ import {
   LIMITE_DIA,
   etapaDoCartao,
   NOVOS_CARTOES_POR_DIA,
+  ROTULO_TIPO,
   venceCartao,
+  type Cartao,
 } from "@/lib/estudos-revisao";
 import { fonteHtml, htmlSeguro } from "@/lib/estudos-html";
 import { AULA_POR_ID, getAulasEstudadas } from "@/lib/db-estudos-cadernos";
 import { cartoesDosErros } from "@/lib/estudos-erros-cartoes";
 import { certoErradoDoArtigo } from "@/lib/estudos-lei-flash";
+import { certoErradoJuris, JURIS_CE, NOVOS_JURIS_POR_DIA } from "@/lib/estudos-juris-flash";
 import { lugarComCache, SEM_ASSUNTO } from "@/lib/estudos-cartoes-assunto";
 import {
   escolherSubjetiva,
@@ -51,6 +54,24 @@ const NOME_CURTO: Record<string, string> = {
 };
 const curto = (n: string) => NOME_CURTO[n] ?? n.replace(/^Direito\s+(d[oa]\s+)?/, "");
 
+/** Cartão de tema na fila: tipo, lei seca e "como a FCC cobra" vão para o verso. */
+function itemDoCartao(c: Cartao, etapa: number, novo: boolean): CartaoFila {
+  const fcc = c.fcc ? `<b>Como a FCC cobra:</b> ${htmlSeguro(c.fcc)}` : "";
+  const extra = [c.x ? htmlSeguro(c.x) : "", fcc].filter(Boolean).join("<br>");
+  return {
+    id: c.id,
+    baralho: c.b,
+    materia: curto(c.b),
+    frente: htmlSeguro(c.f),
+    verso: htmlSeguro(c.v),
+    extra,
+    lei: c.lei ? fonteHtml(c.lei) : undefined,
+    tipo: c.k ? ROTULO_TIPO[c.k] : undefined,
+    etapa,
+    novo,
+  };
+}
+
 export default async function RevisaoPage() {
   const hoje = todayBelemDateString();
   let respostas, estadosCartoes, estadosRevisao, aulasEstudadas;
@@ -78,7 +99,7 @@ export default async function RevisaoPage() {
     const etapa = etapaDoCartao(e);
     const vence = venceCartao(e);
     if (etapa >= ETAPA_FINAL || !vence) continue;
-    if (vence <= hoje) vencidos.push({ id: c.id, baralho: c.b, materia: curto(c.b), frente: htmlSeguro(c.f), verso: htmlSeguro(c.v), extra: c.x ? htmlSeguro(c.x) : "", etapa, novo: false });
+    if (vence <= hoje) vencidos.push(itemDoCartao(c, etapa, false));
   }
   const porBaralho = new Map<string, typeof CARTOES>();
   for (const c of CARTOES) {
@@ -86,12 +107,14 @@ export default async function RevisaoPage() {
     if (estadosCartoes.has(c.id) || c.b === "Raciocínio Lógico") continue;
     porBaralho.set(c.b, [...(porBaralho.get(c.b) ?? []), c]);
   }
+  // Cartões de tema das aulas já estudadas entram primeiro (refeitos dos cadernos em 27/11).
+  for (const [b, l] of porBaralho) porBaralho.set(b, [...l].sort((x, y) => Number(!(y.aula && aulasEstudadas.has(y.aula))) - Number(!(x.aula && aulasEstudadas.has(x.aula)))));
   const novos: CartaoFila[] = [];
   const cota = Math.max(0, NOVOS_CARTOES_POR_DIA - novosHoje);
   for (let i = 0; novos.length < cota && [...porBaralho.values()].some((l) => l.length > i); i++) {
     for (const l of porBaralho.values()) {
       const c = l[i];
-      if (c && novos.length < cota) novos.push({ id: c.id, baralho: c.b, materia: curto(c.b), frente: htmlSeguro(c.f), verso: htmlSeguro(c.v), extra: c.x ? htmlSeguro(c.x) : "", etapa: 0, novo: true });
+      if (c && novos.length < cota) novos.push(itemDoCartao(c, 0, true));
     }
   }
 
@@ -150,6 +173,30 @@ export default async function RevisaoPage() {
   const publicadas = new Set([...AULA_POR_ID.entries()].filter(([id, a]) => id.startsWith("A2-") && a.aula.status === "pronta").map(([id]) => id));
   const problema = problemaDoDia(hoje, QUESTOES, respostas, marcadas.size ? marcadas : publicadas, marcadas.size > 0);
 
+  // Jurisprudência em certo ou errado: os vencidos e até 5 novos por dia, só de aulas estudadas
+  // (sem nenhuma marcada, as aulas já publicadas). Itens sem aula entram se a matéria tiver aula estudada.
+  const aulasJuris = new Set(aulasEstudadas.size ? aulasEstudadas.keys() : [...AULA_POR_ID.entries()].filter(([, a]) => a.aula.status === "pronta").map(([id]) => id));
+  const materiasJuris = new Set([...aulasJuris].map((id) => id.split("-")[0]));
+  const jurisVencidos: CartaoFila[] = [];
+  const jurisNovos: CartaoFila[] = [];
+  let jurisNovosHoje = 0;
+  for (const j of JURIS_CE) {
+    const e = estadosCartoes.get(j.id);
+    if (e && typeof e.first === "number" && dataBelem(e.first) === hoje) jurisNovosHoje++;
+  }
+  for (const j of JURIS_CE) {
+    const e = estadosCartoes.get(j.id);
+    const item: CartaoFila = { id: j.id, baralho: j.b, materia: curto(j.b), frente: "", verso: "", extra: "", etapa: 0, novo: !e, ce: certoErradoJuris(j) };
+    if (!e) {
+      const pode = j.aula ? aulasJuris.has(j.aula) : materiasJuris.has(j.materia_id);
+      if (pode && jurisNovos.length < Math.max(0, NOVOS_JURIS_POR_DIA - jurisNovosHoje)) jurisNovos.push(item);
+      continue;
+    }
+    const etapa = etapaDoCartao(e);
+    const vence = venceCartao(e);
+    if (etapa < ETAPA_FINAL && vence && vence <= hoje) jurisVencidos.push({ ...item, etapa });
+  }
+
   // Teto diário: os mais atrasados primeiro; o resto entra nos próximos dias.
   const artigosHoje = arts.filter((a) => a.vence_em <= hoje).slice(0, LIMITE_DIA.artigos);
   vencidos.splice(LIMITE_DIA.cartoes);
@@ -169,6 +216,7 @@ export default async function RevisaoPage() {
         proximaSubjetiva={proximaSubjetiva(hoje)}
         problema={problema}
         errosGuardados={errosGuardados}
+        juris={[...jurisVencidos.slice(0, LIMITE_DIA.cartoes), ...jurisNovos]}
       />
     </>
   );

@@ -27,6 +27,10 @@ export interface CartaoFila {
   alts?: string[];
   correta?: number;
   porque?: string[];
+  /** cartão de tema: Regra, Exceção, Pegadinha FCC ou Jurisprudência */
+  tipo?: string;
+  /** item de jurisprudência em certo ou errado */
+  ce?: CertoErradoLei;
 }
 interface ArtigoFila {
   item_id: string;
@@ -148,6 +152,7 @@ function Cartoes({ inicial, onRestantes }: { inicial: CartaoFila[]; onRestantes?
         <div>
           <p className="text-[11px] text-e-dim">
             {atual.doErro && <span className="mr-2 rounded-full bg-e-bad-soft px-2 py-0.5 uppercase tracking-[0.1em] text-e-bad">Dos meus erros</span>}
+            {atual.tipo && <span className="mr-2 rounded-full bg-e-accent-soft px-2 py-0.5 uppercase tracking-[0.1em] text-e-ink">{atual.tipo}</span>}
             {atual.doErro ? "Responda de novo" : atual.baralho} · {atual.novo ? "novo" : rotuloEtapa(atual.etapa)}
           </p>
           <div className="mt-2 rounded-xl border border-e-line bg-e-card-2 p-4 text-base leading-relaxed text-e-ink" dangerouslySetInnerHTML={{ __html: atual.frente }} />
@@ -193,6 +198,83 @@ function Cartoes({ inicial, onRestantes }: { inicial: CartaoFila[]; onRestantes?
             <button type="button" onClick={() => setVirado(true)} className={`mt-3 ${BOTAO_PRIMARIO}`}>
               Mostrar o verso
             </button>
+          )}
+        </div>
+      )}
+      {erro && (
+        <p role="alert" className="mt-3 text-sm text-e-bad">
+          {erro}
+        </p>
+      )}
+    </div>
+  );
+}
+
+/* ===================== JURISPRUDÊNCIA ===================== */
+
+const TEXTO_JURIS = "font-serif text-[15px] leading-relaxed text-e-ink [&_mark]:rounded [&_mark]:bg-e-accent-soft [&_mark]:px-0.5 [&_mark]:text-e-ink";
+
+/** Súmula ou tese em certo ou errado: o texto vem primeiro; o oficial, com a troca grifada, só depois da resposta. */
+function Juris({ inicial, onRestantes }: { inicial: CartaoFila[]; onRestantes?: (n: number) => void }) {
+  const [fila, setFila] = useState(inicial);
+  const [resposta, setResposta] = useState<boolean | null>(null);
+  const [feitos, setFeitos] = useState(0);
+  const [acertos, setAcertos] = useState(0);
+  const [erro, setErro] = useState<string | null>(null);
+  const [salvando, setSalvando] = useState(false);
+  const atual = fila[0];
+  const it = atual?.ce;
+
+  async function seguir() {
+    if (!atual || !it || resposta === null) return;
+    const ok = resposta === it.certo;
+    setSalvando(true);
+    const e = await enviarRevisao({ tipo: "cartao", id: atual.id, ok });
+    setSalvando(false);
+    if (e) return setErro(e);
+    setErro(null);
+    setResposta(null);
+    setFeitos((n) => n + 1);
+    if (ok) setAcertos((n) => n + 1);
+    const resto = fila.slice(1);
+    setFila(resto);
+    onRestantes?.(resto.length);
+  }
+
+  return (
+    <div>
+      <p className="mb-3 text-xs tabular-nums text-e-dim">
+        {fila.length} na fila · {feitos} feitos{feitos ? ` · ${acertos} certas` : ""}
+      </p>
+      {!atual || !it ? (
+        <p className="flex items-center gap-2 text-sm text-e-dim">
+          <Sparkle size={14} /> Jurisprudência do dia terminada.
+        </p>
+      ) : (
+        <div>
+          <p className="text-[11px] text-e-dim">
+            {atual.materia} · {it.ref} · {atual.novo ? "novo" : rotuloEtapa(atual.etapa)} · Certo ou errado?
+          </p>
+          <div className={`mt-2 rounded-xl border border-e-line bg-e-card-2 p-4 ${TEXTO_JURIS}`} dangerouslySetInnerHTML={{ __html: it.texto }} />
+          {resposta === null ? (
+            <div className="mt-3 flex flex-wrap gap-2">
+              <button type="button" onClick={() => setResposta(true)} className={BOTAO_SECUNDARIO}>
+                Certo
+              </button>
+              <button type="button" onClick={() => setResposta(false)} className={BOTAO_SECUNDARIO}>
+                Errado
+              </button>
+            </div>
+          ) : (
+            <>
+              <p className={`mt-3 text-sm ${resposta === it.certo ? "text-e-ok" : "text-e-bad"}`}>
+                {resposta === it.certo ? "Isso." : "Não."} O texto está {it.certo ? "certo: é o texto oficial." : "errado. O grifo mostra a palavra verdadeira:"}
+              </p>
+              {!it.certo && <div className={`mt-1 border-l-2 border-e-blue/60 pl-3 ${TEXTO_JURIS}`} dangerouslySetInnerHTML={{ __html: it.literal }} />}
+              <button type="button" disabled={salvando} onClick={seguir} className={`mt-3 ${BOTAO_PRIMARIO}`}>
+                {fila.length > 1 ? "Próximo" : "Terminar"}
+              </button>
+            </>
           )}
         </div>
       )}
@@ -433,6 +515,7 @@ export function RevisaoClient({
   proximaSubjetiva,
   problema,
   errosGuardados,
+  juris = [],
 }: {
   artigos: ArtigoFila[];
   cartoes: CartaoFila[];
@@ -441,6 +524,7 @@ export function RevisaoClient({
   proximaSubjetiva: string;
   problema: ProblemaDoDia | null;
   errosGuardados: number;
+  juris?: CartaoFila[];
 }) {
   const doErro = cartoes.filter((c) => c.doErro);
   const doTema = cartoes.filter((c) => !c.doErro);
@@ -448,6 +532,7 @@ export function RevisaoClient({
   const [restam, setRestam] = useState<Record<string, number>>({
     erros: doErro.length,
     lei: artigos.length,
+    juris: juris.length,
     temas: doTema.length,
     subjetiva: subjetivaPendente ? 1 : 0,
   });
@@ -472,6 +557,15 @@ export function RevisaoClient({
       restante: restam.lei,
       minutos: artigos.length * 2,
       conteudo: <Artigos inicial={artigos} onRestantes={marcar("lei")} />,
+    },
+    {
+      id: "juris",
+      titulo: "Jurisprudência: certo ou errado",
+      detalhe: "súmulas e teses das aulas estudadas · o texto vem primeiro",
+      total: juris.length,
+      restante: restam.juris,
+      minutos: Math.ceil(juris.length * 1),
+      conteudo: <Juris inicial={juris} onRestantes={marcar("juris")} />,
     },
     {
       id: "temas",
