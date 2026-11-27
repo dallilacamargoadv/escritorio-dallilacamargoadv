@@ -46,6 +46,8 @@ export interface EstudoConfig {
   incluirCondicionais: string[];
   /** horas diferentes em datas específicas (de/ate inclusive); a última que casar vale */
   excecoes?: ExcecaoHoras[];
+  /** dias inteiros de revisão do que já foi estudado (sem matéria nova) */
+  diasRevisao?: string[];
 }
 
 export interface ExcecaoHoras {
@@ -124,7 +126,14 @@ export function normalizarConfig(valor: unknown): EstudoConfig {
         .slice(0, 20)
         .map((e) => ({ de: e.de, ate: e.ate, minutos: Math.max(0, Math.min(600, Math.round(Number(e.minutos) || 0))) }))
     : [];
-  return { dataProva: data, minutosPorDia: minutos, incluirCondicionais: cond, ...(excecoes.length ? { excecoes } : {}) };
+  const diasRevisao = Array.isArray(v.diasRevisao) ? v.diasRevisao.filter(iso).slice(0, 30) : [];
+  return {
+    dataProva: data,
+    minutosPorDia: minutos,
+    incluirCondicionais: cond,
+    ...(excecoes.length ? { excecoes } : {}),
+    ...(diasRevisao.length ? { diasRevisao } : {}),
+  };
 }
 
 /**
@@ -133,6 +142,7 @@ export function normalizarConfig(valor: unknown): EstudoConfig {
  * conhecimentos do Maranhão. Arquivo: CONCURSO PGE-MA/05 Edital/mapa-estrategico-prioridades.md.
  */
 export const FORA_ATE_O_EDITAL = new Set(["B1", "B4", "B9", "B10", "B11", "A4", "A5", "A6", "A7"]);
+// A4 e A5 (História e Geografia do MA) entram só no fim de semana, ver `cultura` em gerarCronograma.
 
 export function materiaAtiva(m: Materia, config: EstudoConfig): boolean {
   return !m.condicional || config.incluirCondicionais.includes(m.id);
@@ -216,6 +226,8 @@ export function gerarCronograma(
   hoje: string,
   config: EstudoConfig,
   estados: Map<string, TopicoEstado>,
+  /** aulas dos cadernos ainda não marcadas como estudadas, por tópico do edital, na ordem do caderno */
+  aulasPendentes: Map<string, string[]> = new Map(),
 ): NovoItem[] {
   const ativas = MATERIAS.filter((m) => materiaAtiva(m, config) && !FORA_ATE_O_EDITAL.has(m.id));
   // Teoria nova só para o que ainda não foi estudado. O que já foi visto (estudando, revisar) vai para revisão e questões.
@@ -224,18 +236,35 @@ export function gerarCronograma(
     return !e?.fora_do_edital && (!e || e.status === "nao_iniciado");
   };
   const principais = ativas.filter((m) => m.fase >= 1 && m.fase <= 3).sort((a, b) => a.fase - b.fase);
-  const filaTopicos = new Map(principais.map((m) => [m.id, m.topicos.filter(pendente)]));
+  // Fila de teoria por aula: tópico com caderno vira uma unidade por aula não estudada (ex.: só "Remédios
+  // constitucionais", se o resto de direitos fundamentais já foi estudado). Sem caderno, vale o tópico inteiro.
+  const unidades = (m: Materia) =>
+    m.topicos.flatMap((t) => {
+      if (estados.get(t.id)?.fora_do_edital) return [];
+      const aulas = aulasPendentes.get(t.id);
+      if (aulas) return aulas.map((titulo) => ({ id: t.id, titulo }));
+      return pendente(t) ? [{ id: t.id, titulo: t.titulo }] : [];
+    });
+  const filaTopicos = new Map(principais.map((m) => [m.id, unidades(m)]));
   const vistos = new Map(principais.map((m) => [m.id, 0]));
   const credito = new Map(principais.map((m) => [m.id, 0]));
   const portugues = ativas.find((m) => m.id === "A1");
-  const alternadas = ativas.filter((m) => m.fase === 4);
-  const cultura = ativas.filter((m) => m.fase === 5).flatMap((m) => m.topicos.filter(pendente).map((t) => ({ m, t })));
+  const matematica = ativas.find((m) => m.id === "A2");
+  const informatica = ativas.find((m) => m.id === "A3");
+  // História e Geografia do MA voltam no fim de semana (pedido dela em 27/11), mesmo antes do edital.
+  const cultura = MATERIAS.filter((m) => (m.id === "A4" || m.id === "A5") && materiaAtiva(m, config)).flatMap((m) =>
+    m.topicos.filter(pendente).map((t) => ({ m, t })),
+  );
+  const estudadas = principais.filter((m) => m.topicos.some((t) => {
+    const st = estados.get(t.id)?.status;
+    return st && st !== "nao_iniciado";
+  }));
+  const diasRevisao = new Set(config.diasRevisao ?? []);
 
   const fim = config.dataProva ? addDaysToDateString(config.dataProva, -1) : addDaysToDateString(hoje, LIMITE_DIAS);
   const total = Math.min(LIMITE_DIAS, diasEntre(hoje, fim));
   const itens: NovoItem[] = [];
   let iCult = 0;
-  let iAlt = 0;
   let iSimLei = 0;
 
   /** rodízio ponderado: escolhe a matéria com mais crédito acumulado, sem repetir no dia */
@@ -258,12 +287,12 @@ export function gerarCronograma(
     if (t) {
       vistos.set(m.id, (vistos.get(m.id) ?? 0) + 1);
       const aquece = 10;
-      const lei = arred5((bloco - aquece) * 0.35);
-      const teoria = arred5((bloco - aquece) * 0.25);
+      const lei = arred5((bloco - aquece) * 0.3);
+      const teoria = arred5((bloco - aquece) * 0.4);
       const questoes = Math.floor((bloco - aquece - lei - teoria) / 5) * 5;
       add({ materia_id: m.id, topico_id: t.id, tipo: "questoes", titulo: `${m.nome}: aquecimento, 5 questões de ${t.titulo} antes de estudar`, minutos: aquece });
       add({ materia_id: m.id, topico_id: t.id, tipo: "lei_seca", titulo: `${m.nome}: lei seca de ${t.titulo} (grife o que a FCC troca: pode/deve, prazos, competência)`, minutos: lei });
-      add({ materia_id: m.id, topico_id: t.id, tipo: "teoria", titulo: `${m.nome}: ${t.titulo} (teoria só no que você errou ou não entendeu)`, minutos: teoria });
+      add({ materia_id: m.id, topico_id: t.id, tipo: "teoria", titulo: `${m.nome}: ${t.titulo} (aula no caderno, com calma)`, minutos: teoria });
       add({ materia_id: m.id, topico_id: t.id, tipo: "questoes", titulo: `${m.nome}: bateria de questões de ${t.titulo}`, minutos: questoes });
     } else {
       const lei = arred5(bloco * 0.3);
@@ -288,14 +317,33 @@ export function gerarCronograma(
     // revisão espaçada todo dia, até a prova
     add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Revisão espaçada: a fila de hoje na aba Revisão (questões, cartões e artigos)", minutos: dow === 6 ? 20 : 15 });
 
-    /* ---------- SÁBADO: atrasados, simuladão e uma matéria ---------- */
+    /* ---------- DIA DE REVISÃO: só o que já foi estudado ---------- */
+    if (diasRevisao.has(data)) {
+      for (const m of estudadas) {
+        if (resta < 30) break;
+        const vistosM = m.topicos.filter((t) => (estados.get(t.id)?.status ?? "nao_iniciado") !== "nao_iniciado");
+        const temas = vistosM.map((t) => t.titulo).join(", ");
+        const t0 = vistosM[0]?.id ?? null;
+        add({ materia_id: m.id, topico_id: t0, tipo: "lei_seca", titulo: `${m.nome}: lei seca + certo/errado de ${temas} (aba Desafios)`, minutos: 30 });
+        add({ materia_id: m.id, topico_id: t0, tipo: "questoes", titulo: `${m.nome}: questões com jurisprudência e cartões de ${temas}`, minutos: 30 });
+      }
+      if (portugues && resta >= 20) {
+        add({ materia_id: "A1", topico_id: null, tipo: "questoes", titulo: "Português: questões dos assuntos já vistos com a professora Adriana", minutos: 30 });
+      }
+      continue;
+    }
+
+    /* ---------- SÁBADO: dia inteiro ---------- */
     if (dow === 6) {
-      add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Revisão do que ficou para trás: questões erradas das matérias que você já estudou (laboratório de erros)", minutos: 60 });
+      add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Revisão do que ficou para trás: questões erradas das matérias já estudadas (laboratório de erros)", minutos: 60 });
       const prova = resta >= 300 ? 150 : Math.max(60, arred5(resta * 0.4));
       add({ materia_id: "SIM", topico_id: null, tipo: "simulado", titulo: `Simuladão FCC cronometrado (${Math.round(prova / 3)} questões, 3 minutos cada, sem consulta)`, minutos: prova });
-      add({ materia_id: "SIM", topico_id: null, tipo: "questoes", titulo: "Correção do simuladão: classifique cada erro (vão para o caderno de erros de domingo)", minutos: 40 });
+      add({ materia_id: "SIM", topico_id: null, tipo: "questoes", titulo: "Correção do simuladão: classifique cada erro, inclusive chute e dúvida", minutos: 40 });
       const m = escolher(new Set());
-      if (m && resta >= 40) estudar(m, Math.min(resta, 120), add);
+      if (m && resta >= 60) estudar(m, Math.min(resta, 120), add);
+      if (informatica && resta >= 30) {
+        add({ materia_id: "A3", topico_id: null, tipo: "questoes", titulo: "Informática: roteiro \"como reconhecer e resolver\" da aula da vez + questões", minutos: 40 });
+      }
       if (cultura.length && resta >= 30) {
         const c = cultura[iCult++ % cultura.length];
         add({ materia_id: c.m.id, topico_id: c.t.id, tipo: "teoria", titulo: `${c.m.nome}: ${c.t.titulo}`, minutos: Math.min(resta, 50) });
@@ -303,7 +351,7 @@ export function gerarCronograma(
       continue;
     }
 
-    /* ---------- DOMINGO: erros da semana, discursiva e uma matéria ---------- */
+    /* ---------- DOMINGO: dia inteiro ---------- */
     if (dow === 0) {
       add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Caderno de erros da semana: refaça as erradas (site, simuladão e TEC), anote o motivo e o artigo", minutos: 90 });
       add({ materia_id: "REV", topico_id: null, tipo: "lei_seca", titulo: "Lei seca dos erros: releia os artigos que apareceram no caderno de erros", minutos: 30 });
@@ -311,16 +359,19 @@ export function gerarCronograma(
         add({ materia_id: "DISC", topico_id: null, tipo: "discursiva", titulo: "Discursiva cronometrada + análise: nota, o que faltou (tese, base legal, jurisprudência, estrutura)", minutos: 60 });
       }
       const m = escolher(new Set());
-      if (m && resta >= 55) estudar(m, Math.min(resta - 15, 120), add);
+      if (m && resta >= 75) estudar(m, Math.min(resta - 60, 120), add);
+      if (matematica && resta >= 40) {
+        add({ materia_id: "A2", topico_id: null, tipo: "questoes", titulo: "Matemática: refazer as erradas da semana com o roteiro + 10 questões novas", minutos: 45 });
+      }
       if (cultura.length && resta >= 45) {
         const c = cultura[iCult++ % cultura.length];
         add({ materia_id: c.m.id, topico_id: c.t.id, tipo: "teoria", titulo: `${c.m.nome}: ${c.t.titulo}`, minutos: Math.min(resta - 15, 50) });
       }
-      add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Fechamento: olhe a semana que vem no cronograma e anote os 3 pontos fracos da semana", minutos: 15 });
+      add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Fechamento: olhe a semana que vem e anote os 3 pontos fracos da semana", minutos: 15 });
       continue;
     }
 
-    /* ---------- SEGUNDA A SEXTA ---------- */
+    /* ---------- SEGUNDA A SEXTA: no máximo 3 matérias (Português + 2) ---------- */
     if (portugues) {
       // Português segue a ordem do curso da professora Adriana (fora do site): aula da vez + questões do mesmo assunto.
       const teoriaPt = dow === 1 || dow === 3 || dow === 5;
@@ -331,30 +382,34 @@ export function gerarCronograma(
       );
     }
 
-    // matemática e informática todo dia, alternando: roteiro de reconhecimento + questões
-    if (alternadas.length && resta >= 60) {
-      const m = alternadas[iAlt++ % alternadas.length];
-      add({ materia_id: m.id, topico_id: null, tipo: "questoes", titulo: `${m.nome}: roteiro "como reconhecer e resolver" + questões`, minutos: 25 });
+    // terça e quinta: subjetiva curta (a pergunta discursiva do dia na aba Revisão)
+    if (dow === 2 || dow === 4) {
+      add({ materia_id: "DISC", topico_id: null, tipo: "discursiva", titulo: "Subjetiva curta: responda por escrito a pergunta discursiva do dia (aba Revisão)", minutos: 20 });
     }
 
-    // quarta: simulado de lei seca de uma matéria já estudada
-    const jaVistas = principais.filter((m) => (vistos.get(m.id) ?? 0) > 0);
+    // quarta: dia da matemática (uma matéria de Direito + Matemática + simulado de lei seca)
+    const diaMat = dow === 3 && !!matematica;
+    const jaVistas = principais.filter((m) => (vistos.get(m.id) ?? 0) > 0 || estudadas.includes(m));
     const simLei = dow === 3 && jaVistas.length ? jaVistas[iSimLei++ % jaVistas.length] : null;
-    const reservaSim = simLei ? Math.min(40, Math.max(20, arred5(resta * 0.3))) : 0;
+    const reservaSim = simLei ? 30 : 0;
+    const reservaMat = diaMat ? 60 : 0;
 
     const usadas = new Set<string>();
-    const nMaterias = simLei ? 1 : 2;
+    const nMaterias = diaMat ? 1 : 2;
     for (let k = 0; k < nMaterias; k++) {
       const m = escolher(usadas);
       if (!m) break;
       usadas.add(m.id);
-      const bloco = Math.floor((resta - reservaSim) / (nMaterias - k));
+      const bloco = Math.floor((resta - reservaSim - reservaMat) / (nMaterias - k));
       if (bloco < 25) break;
       estudar(m, bloco, add);
     }
 
+    if (diaMat) {
+      add({ materia_id: "A2", topico_id: null, tipo: "teoria", titulo: "Matemática: aula da vez (roteiro \"como reconhecer e resolver\") + 15 questões, escrevendo cada passo", minutos: 60 });
+    }
     if (simLei) {
-      add({ materia_id: simLei.id, topico_id: null, tipo: "simulado", titulo: `Simulado de lei seca: ${simLei.nome} (20 questões, cronometrado)`, minutos: resta });
+      add({ materia_id: simLei.id, topico_id: null, tipo: "simulado", titulo: `Simulado de lei seca: ${simLei.nome} (10 questões, cronometrado)`, minutos: resta });
     }
   }
   return itens;

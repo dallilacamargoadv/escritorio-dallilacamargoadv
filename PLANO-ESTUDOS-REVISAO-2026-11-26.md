@@ -25,3 +25,17 @@ Feito:
 Diagnóstico pelos dados (acerto firme, 15 a 26/11): RLM/Matemática 40%, Civil 40% (só 5 tentativas), Tributário 51%, Administrativo 60%, Português 65%, Processo Civil 65%, Constitucional 68%, Informática sem nenhuma questão respondida. Temas mais fracos: concordância nominal e verbal, crase, conectivos; remessa necessária, intervenção de terceiros, honorários, Fazenda em juízo; limitações ao poder de tributar, crédito tributário; licitações; estruturas lógicas, frações, razão/proporção, porcentagem.
 
 Próximo: mesma seção "como reconhecer e resolver" nas aulas a montar de A2 e A3; montar cronograma a partir do simulado de nivelamento.
+
+## Terceira rodada (27/11/2026)
+
+Feito:
+- Cronograma por aula: o gerador recebe as aulas dos cadernos ainda não marcadas e agenda uma por vez (ex.: só "Remédios constitucionais"). Reestudo = desmarcar a aula no caderno.
+- Semana: até 3 matérias por dia (Português + 2 de Direito); quarta = Matemática 1h + simulado de lei seca; terça e quinta = subjetiva curta; sábado e domingo dia inteiro; História e Geografia do MA só no fim de semana.
+- `diasRevisao` em `estudo_config.geral`: dia só de revisão do que foi estudado (27/11 marcado).
+- Banco: desmarcadas B5-a02, B5-a03 (competência e sujeitos, reestudar), B2-a03, B2-a04 (órgãos e administração indireta, reestudar).
+
+Falta (pedidos dela):
+- Laboratório de erros com mapa por matéria > subtema > artigo, motivo do erro, comentário dela, alternativa certa com porquê e macete, juntando TEC e site.
+- Cadernos que não existem: Português (A1), Financeiro (B8), Trabalho (B10). Tributário (B7) já existe.
+- Mais questões com jurisprudência e detalhe de lei em CF, Adm e PC (o simulado de 27/11 mostrou poucas).
+- Botão "simulado do que já estudei" na aba Simulados (hoje montado à mão).
