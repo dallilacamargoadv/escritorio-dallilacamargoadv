@@ -8,6 +8,7 @@ import { addDaysToDateString } from "@/lib/atividades-utils";
 import { diasDosBotoes, rotuloEtapa } from "@/lib/estudos-revisao";
 import type { ProblemaDoDia, Subjetiva } from "@/lib/estudos-revisao-hoje";
 import { formatarData } from "@/lib/estudos-utils";
+import type { CertoErradoLei } from "@/lib/estudos-lei-flash";
 import { LeiSecaFlash } from "@/components/estudos/LeiSecaFlash";
 import { Sparkle } from "@/components/estudos/Sparkle";
 import { BOTAO_PRIMARIO, BOTAO_SECUNDARIO, Card, CardTitulo, Kpi } from "@/components/estudos/ui";
@@ -45,6 +46,7 @@ interface ArtigoFila {
   ref: string;
   materia: string;
   html: string;
+  itens: CertoErradoLei[];
   questoes: number;
   etapa: number;
   vence_em: string;
@@ -390,6 +392,7 @@ function Artigos({ inicial }: { inicial: ArtigoFila[] }) {
                 refLei={a.ref}
                 detalhe={`${a.materia} · ${rotuloEtapa(a.etapa)} · ${a.questoes} ${a.questoes === 1 ? "questão errada" : "questões erradas"}`}
                 html={a.html}
+                itens={a.itens}
                 abertoInicial={i === 0}
                 rodape={
                   <div className="mt-3 flex flex-wrap gap-2">

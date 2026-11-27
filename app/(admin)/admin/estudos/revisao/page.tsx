@@ -22,6 +22,7 @@ import {
 import { fonteHtml, htmlSeguro } from "@/lib/estudos-html";
 import { AULA_POR_ID, getAulasEstudadas } from "@/lib/db-estudos-cadernos";
 import { cartoesDosErros } from "@/lib/estudos-erros-cartoes";
+import { certoErradoDoArtigo } from "@/lib/estudos-lei-flash";
 import { lugarComCache, SEM_ASSUNTO } from "@/lib/estudos-cartoes-assunto";
 import {
   escolherSubjetiva,
@@ -177,7 +178,7 @@ export default async function RevisaoPage() {
       <RevisaoClient
         hoje={hoje}
         questoes={questoesHoje.map((q) => ({ id: q.id, materia: q.materia, materia_id: QUESTAO_POR_ID.get(q.id)?.materia_id ?? "", tema: q.tema, ref: q.ref, etapa: q.etapa, vence_em: q.vence_em }))}
-        artigos={artigosHoje.map((a) => ({ item_id: a.item_id, ref: a.ref, materia: a.materia, html: fonteHtml(a.fonte), questoes: a.questoes.length, etapa: a.etapa, vence_em: a.vence_em }))}
+        artigos={artigosHoje.map((a) => ({ item_id: a.item_id, ref: a.ref, materia: a.materia, html: fonteHtml(a.fonte), itens: certoErradoDoArtigo(a.ref), questoes: a.questoes.length, etapa: a.etapa, vence_em: a.vence_em }))}
         cartoes={[...errosVencidos, ...vencidos, ...errosNovos, ...novos].filter((c) => !naSubjetiva.has(c.id))}
         diaDeSubjetiva={temSubjetiva(hoje)}
         subjetiva={subjetiva}

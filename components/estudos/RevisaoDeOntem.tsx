@@ -7,6 +7,7 @@ import { linksDoBloco } from "@/lib/estudos-links";
 import { fonteHtml } from "@/lib/estudos-html";
 import { SUBTEMAS } from "@/lib/estudos-subtemas";
 import { LeiSecaFlash } from "@/components/estudos/LeiSecaFlash";
+import { certoErradoDoArtigo } from "@/lib/estudos-lei-flash";
 import { addDaysToDateString } from "@/lib/atividades-utils";
 import { Card, CardTitulo } from "@/components/estudos/ui";
 
@@ -180,7 +181,7 @@ export async function RevisaoDeOntem({ hoje, respostas }: { hoje: string; respos
         {artigos.size || leiDoPlano.length ? (
           <div className="mt-2 space-y-2">
             {[...artigos.values()].map((a) => (
-              <LeiSecaFlash key={a.ref} refLei={a.ref} detalhe={`${a.materia} · do seu erro`} html={fonteHtml(a.fonte)} />
+              <LeiSecaFlash key={a.ref} refLei={a.ref} detalhe={`${a.materia} · do seu erro`} html={fonteHtml(a.fonte)} itens={certoErradoDoArtigo(a.ref)} />
             ))}
             {leiDoPlano.map((b) => (
               <div key={b.id} className="flex flex-wrap items-baseline justify-between gap-2 rounded-xl border border-e-line px-3 py-2 text-sm">
