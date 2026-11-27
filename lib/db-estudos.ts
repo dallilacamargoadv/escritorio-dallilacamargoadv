@@ -1,6 +1,7 @@
 import questoesJson from "@/content/estudos/questoes.json";
 import { SUBTEMA_DA_QUESTAO } from "@/lib/estudos-subtemas";
 import cartoesJson from "@/content/estudos/cartoes.json";
+import { JURIS_POR_ID } from "@/lib/estudos-juris-flash";
 import type { Classificacao, Questao, Resposta } from "@/lib/estudos-desempenho";
 import { normalizarLabConfig, type LabConfig } from "@/lib/estudos-laboratorio";
 import {
@@ -240,7 +241,8 @@ export async function getEstadosCartoes(): Promise<Map<string, EstadoCartao>> {
 export async function revisarCartao(id: string, ok: boolean, hoje: string, opcoes: { quase?: boolean; resp?: string } = {}): Promise<void> {
   // "erro:<questão>" é o cartão gerado de um erro dela (lib/estudos-erros-cartoes.ts)
   const doErro = id.startsWith("erro:") && QUESTAO_POR_ID.has(id.slice(5));
-  if (!CARTAO_POR_ID.has(id) && !doErro) throw new Error("cartão inexistente");
+  // "jce-..." é um item de jurisprudência em certo ou errado (lib/estudos-juris-flash.ts)
+  if (!CARTAO_POR_ID.has(id) && !doErro && !JURIS_POR_ID.has(id)) throw new Error("cartão inexistente");
   const supabase = await createClient();
   const { data: atual } = await supabase.from("estudo_cartoes").select("estado").eq("cartao_id", id).maybeSingle();
   const estado = (atual?.estado ?? {}) as EstadoCartao;

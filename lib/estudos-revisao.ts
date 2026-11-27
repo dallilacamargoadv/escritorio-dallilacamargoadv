@@ -151,7 +151,18 @@ export interface Cartao {
   nv?: 1 | 2 | 3;
   /** assunto do edital (mesmo nome do tema das questões), para revisar por tema */
   tema?: string;
+  /** tipo do cartão de tema (27/11): regra, exceção ou particularidade, pegadinha da FCC, jurisprudência */
+  k?: "regra" | "excecao" | "pegadinha" | "juris";
+  /** aula do caderno de onde o cartão saiu (cartões de tema refeitos em 27/11) */
+  aula?: string;
 }
+
+export const ROTULO_TIPO: Record<NonNullable<Cartao["k"]>, string> = {
+  regra: "Regra",
+  excecao: "Exceção",
+  pegadinha: "Pegadinha FCC",
+  juris: "Jurisprudência",
+};
 
 /** Estado gravado em `estudo_cartoes.estado`. Os cartões migrados usam ms em `due` e `int` (dias). */
 export interface EstadoCartao {
