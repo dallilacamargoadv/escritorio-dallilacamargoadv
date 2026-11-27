@@ -54,65 +54,213 @@
    }
   ]
  },
- "A2-a05": {
-  "titulo": "Na prova: como reconhecer e resolver",
-  "etapa": "banca",
-  "blocos": [
-   {
-    "t": "texto",
-    "html": "Frações, MMC e MDC aparecem disfarçados de história. O segredo é traduzir: <b>“parte de um todo”</b> é fração; <b>“juntos de novo”</b> é MMC; <b>“dividir no maior tamanho igual possível”</b> é MDC."
-   },
-   {
-    "t": "tabela",
-    "cab": [
-     "Quando o enunciado diz…",
-     "Pense em…",
-     "Como resolver"
-    ],
-    "linhas": [
-     [
-      "“Gastou 2/5 do salário e depois 1/3 do que sobrou”",
-      "Fração do resto",
-      "Calcule o que sobrou primeiro (1 − 2/5 = 3/5) e aplique a nova fração <b>sobre o resto</b>: 1/3 de 3/5 = 1/5."
+ "A2-a05": [
+  {
+   "titulo": "Na prova: como reconhecer e resolver",
+   "etapa": "banca",
+   "blocos": [
+    {
+     "t": "texto",
+     "html": "Frações, MMC e MDC aparecem disfarçados de história. O segredo é traduzir: <b>“parte de um todo”</b> é fração; <b>“juntos de novo”</b> é MMC; <b>“dividir no maior tamanho igual possível”</b> é MDC."
+    },
+    {
+     "t": "tabela",
+     "cab": [
+      "Quando o enunciado diz…",
+      "Pense em…",
+      "Como resolver"
      ],
-     [
-      "“Voltarão a se encontrar”, “coincidir novamente”, “ao mesmo tempo de novo”",
-      "MMC",
-      "Fatore os intervalos e pegue todos os fatores com o maior expoente."
-     ],
-     [
-      "“Maior tamanho possível”, “sem sobrar”, “grupos iguais com o máximo de…”",
-      "MDC",
-      "Fatore e pegue só os fatores comuns com o menor expoente."
-     ],
-     [
-      "“Restou X reais, quanto tinha no início”",
-      "Volta pela fração que sobrou",
-      "Se sobraram 3/5 e isso vale 300, então 1/5 = 100 e o todo = 500."
-     ],
-     [
-      "Somar ou comparar frações",
-      "Denominador comum",
-      "Use o MMC dos denominadores ou multiplique em cruz para comparar."
+     "linhas": [
+      [
+       "“Gastou 2/5 do salário e depois 1/3 do que sobrou”",
+       "Fração do resto",
+       "Calcule o que sobrou primeiro (1 − 2/5 = 3/5) e aplique a nova fração <b>sobre o resto</b>: 1/3 de 3/5 = 1/5."
+      ],
+      [
+       "“Voltarão a se encontrar”, “coincidir novamente”, “ao mesmo tempo de novo”",
+       "MMC",
+       "Fatore os intervalos e pegue todos os fatores com o maior expoente."
+      ],
+      [
+       "“Maior tamanho possível”, “sem sobrar”, “grupos iguais com o máximo de…”",
+       "MDC",
+       "Fatore e pegue só os fatores comuns com o menor expoente."
+      ],
+      [
+       "“Restou X reais, quanto tinha no início”",
+       "Volta pela fração que sobrou",
+       "Se sobraram 3/5 e isso vale 300, então 1/5 = 100 e o todo = 500."
+      ],
+      [
+       "Somar ou comparar frações",
+       "Denominador comum",
+       "Use o MMC dos denominadores ou multiplique em cruz para comparar."
+      ]
      ]
-    ]
-   },
-   {
-    "t": "texto",
-    "html": "<b>Exemplo</b><br>Dois ônibus saem juntos; um a cada 12 min, outro a cada 18 min. Quando saem juntos de novo? “Juntos de novo” = MMC. 12 = 2²·3, 18 = 2·3². MMC = 2²·3² = <b>36 min</b>."
-   },
-   {
-    "t": "texto",
-    "html": "<b>Exemplo</b><br>Ana gastou 1/4 do que tinha e depois 1/3 do restante; sobraram R$ 300. Restante após o 1º gasto = 3/4. Gastou 1/3 disso = 1/4 do total. Sobrou 3/4 − 1/4 = 1/2 do total = 300. Total = <b>R$ 600</b>."
-   },
-   {
-    "t": "nota",
-    "html": "“Do que sobrou” muda a base. Quem calcula as duas frações sobre o total erra. Sempre pergunte: essa fração é de quê?",
-    "tom": "pegadinha",
-    "titulo": "Onde a FCC pega"
-   }
-  ]
- },
+    },
+    {
+     "t": "texto",
+     "html": "<b>Exemplo</b><br>Dois ônibus saem juntos; um a cada 12 min, outro a cada 18 min. Quando saem juntos de novo? “Juntos de novo” = MMC. 12 = 2²·3, 18 = 2·3². MMC = 2²·3² = <b>36 min</b>."
+    },
+    {
+     "t": "texto",
+     "html": "<b>Exemplo</b><br>Ana gastou 1/4 do que tinha e depois 1/3 do restante; sobraram R$ 300. Restante após o 1º gasto = 3/4. Gastou 1/3 disso = 1/4 do total. Sobrou 3/4 − 1/4 = 1/2 do total = 300. Total = <b>R$ 600</b>."
+    },
+    {
+     "t": "nota",
+     "html": "“Do que sobrou” muda a base. Quem calcula as duas frações sobre o total erra. Sempre pergunte: essa fração é de quê?",
+     "tom": "pegadinha",
+     "titulo": "Onde a FCC pega"
+    }
+   ]
+  },
+  {
+   "titulo": "Problemas resolvidos: o raciocínio passo a passo",
+   "etapa": "banca",
+   "blocos": [
+    {
+     "t": "texto",
+     "html": "Em toda questão de fração, faça <b>sempre as mesmas 4 perguntas</b>, nesta ordem, escrevendo no papel. Não pule para a conta: a FCC monta as alternativas erradas exatamente com quem pula a pergunta 2.<br><br><b>1. O que a questão diz?</b> Sublinhe os números e as palavras-chave (do total, do restante, de, juntos de novo, maior possível, sobrou).<br><b>2. O que eu penso?</b> Qual é o inteiro de cada fração? É soma, é fração do resto, é divisão, é MMC ou é MDC?<br><b>3. O que eu faço?</b> A conta, passo a passo, um número por linha.<br><b>4. Confiro.</b> Refaço de trás para frente ou somo as partes para ver se dá o total."
+    },
+    {
+     "t": "texto",
+     "html": "Antes dos problemas, três ferramentas que aparecem em todos. Leia devagar, porque o resto depende delas.<br><br><b>Ferramenta 1: “fração de um número”.</b> Para achar 3/8 de 144: <b>divida pelo número de baixo</b> (144 ÷ 8 = 18; isso é 1/8) e <b>multiplique pelo número de cima</b> (18 × 3 = 54; isso é 3/8). Sempre nessa ordem: primeiro divide, depois multiplica.<br><br><b>Ferramenta 2: “o que sobra”.</b> O inteiro é sempre 1, que também se escreve 8/8, 12/12, 5/5 (número de cima igual ao de baixo). Se gastou 3/8, sobrou 8/8 − 3/8 = 5/8.<br><br><b>Ferramenta 3: somar frações com números de baixo diferentes.</b> Não dá para somar 1/4 + 2/3 direto, porque são “pedaços de tamanhos diferentes”. Primeiro transforme as duas em pedaços do mesmo tamanho: ache um número que seja múltiplo de 4 e de 3 (o menor é 12). Depois pergunte: 4 vezes quanto dá 12? 3. Então multiplique em cima e embaixo por 3: 1/4 = 3/12. 3 vezes quanto dá 12? 4. Então 2/3 = 8/12. Agora sim: 3/12 + 8/12 = 11/12 (soma só os de cima; o de baixo fica)."
+    },
+    {
+     "t": "texto",
+     "html": "<b>Problema 1.</b> Um processo tem 240 páginas. Na 1ª semana, leu-se 1/4 dele; na 2ª, 2/3 do que restou. Quantas páginas faltam?<br><br><b>Passo 1.</b> Sublinho as palavras-chave: 1/4 <b>dele</b> (do processo inteiro, 240) e 2/3 <b>do que restou</b>. São dois inteiros diferentes, então são dois passos separados.<br><b>Passo 2.</b> 1/4 de 240 (Ferramenta 1): 240 ÷ 4 = 60. Vezes 1 = 60. Leu 60 páginas na 1ª semana.<br><b>Passo 3.</b> O que restou: 240 − 60 = 180 páginas. <b>Esse 180 é o novo inteiro.</b><br><b>Passo 4.</b> 2/3 de 180: 180 ÷ 3 = 60 (isso é 1/3). 60 × 2 = 120 (isso é 2/3). Leu 120 na 2ª semana.<br><b>Passo 5.</b> Faltam: 180 − 120 = <b>60 páginas</b>.<br><b>Confiro.</b> 60 (1ª semana) + 120 (2ª) + 60 (faltam) = 240 ✓"
+    },
+    {
+     "t": "texto",
+     "html": "<b>Problema 2.</b> Um analista gasta 1/4 do dia em audiências e 2/3 do dia com petições. Que fração do dia sobra?<br><br><b>Passo 1.</b> As duas frações são <b>do dia</b>: o mesmo inteiro. Então posso somar as duas e depois tirar do inteiro.<br><b>Passo 2.</b> Somar 1/4 + 2/3 (Ferramenta 3): múltiplo comum de 4 e 3 = 12. 1/4 = 3/12 e 2/3 = 8/12. Soma: 3/12 + 8/12 = 11/12. Isso é o tempo ocupado.<br><b>Passo 3.</b> O inteiro (o dia todo) é 12/12. Sobra: 12/12 − 11/12 = <b>1/12</b>.<br><b>Confiro.</b> 3/12 + 8/12 + 1/12 = 12/12, o dia inteiro ✓"
+    },
+    {
+     "t": "texto",
+     "html": "<b>Problema 3.</b> Ana gastou 3/8 do que tinha e ficou com R$ 4.000. Quanto tinha?<br><br><b>Passo 1.</b> Quanto sobrou em fração (Ferramenta 2): 8/8 − 3/8 = 5/8. <b>Os R$ 4.000 são os 5/8</b>, não os 3/8.<br><b>Passo 2.</b> 5/8 quer dizer: dividi o dinheiro em 8 pedaços iguais e sobraram 5 pedaços. Esses 5 pedaços valem 4.000.<br><b>Passo 3.</b> Quanto vale 1 pedaço? 4.000 ÷ 5 = 800.<br><b>Passo 4.</b> O total tem 8 pedaços: 8 × 800 = <b>R$ 6.400</b>.<br><b>Confiro.</b> 3/8 de 6.400: 6.400 ÷ 8 = 800; × 3 = 2.400 gastos. 6.400 − 2.400 = 4.000 ✓"
+    },
+    {
+     "t": "texto",
+     "html": "<b>Problema 4.</b> Um servidor gastou 1/3 do salário com aluguel e 1/4 do restante com comida. Sobraram R$ 3.000. Qual o salário?<br><br><b>Passo 1.</b> Dois passos com “restante”. Vou de trás para frente, começando pelo que sei: os R$ 3.000 do fim.<br><b>Passo 2.</b> Na comida ele gastou 1/4 <b>do restante</b>; então desse restante sobraram 3/4. Esses 3/4 valem 3.000.<br><b>Passo 3.</b> 1/4 do restante = 3.000 ÷ 3 = 1.000. O restante inteiro (4/4) = 4 × 1.000 = 4.000. Ou seja, depois do aluguel ele tinha R$ 4.000.<br><b>Passo 4.</b> No aluguel ele gastou 1/3 do salário; então sobraram 2/3. Esses 2/3 valem 4.000.<br><b>Passo 5.</b> 1/3 do salário = 4.000 ÷ 2 = 2.000. O salário inteiro (3/3) = 3 × 2.000 = <b>R$ 6.000</b>.<br><b>Confiro.</b> 1/3 de 6.000 = 2.000 (aluguel), restam 4.000; 1/4 de 4.000 = 1.000 (comida), restam 3.000 ✓"
+    },
+    {
+     "t": "texto",
+     "html": "<b>Problema 5.</b> Uma garrafa tem 3/4 de litro, servida em copinhos de 1/16 de litro. Quantos copinhos?<br><br><b>Passo 1.</b> “Quantos copinhos cabem” é uma <b>divisão</b>: quantas vezes 1/16 cabe dentro de 3/4.<br><b>Passo 2.</b> Jeito visual: 1 litro inteiro dá 16 copinhos (cada um é 1/16). 1/4 de litro dá 16 ÷ 4 = 4 copinhos.<br><b>Passo 3.</b> 3/4 de litro = 3 × 4 = <b>12 copinhos</b>.<br><b>Passo 4.</b> Jeito da regra (mesmo resultado): dividir por uma fração é multiplicar pela fração virada. 3/4 ÷ 1/16 = 3/4 × 16/1 = (3 × 16) ÷ 4 = 48 ÷ 4 = 12.<br><b>Confiro.</b> 12 copinhos × 1/16 = 12/16. Simplificando (÷ 4 em cima e embaixo) = 3/4 ✓"
+    },
+    {
+     "t": "texto",
+     "html": "<b>Problema 6.</b> Dois ônibus saem juntos; um a cada 12 min e outro a cada 18 min. Quando saem juntos de novo?<br><br><b>Passo 1.</b> “Juntos de novo” = primeiro momento em que os dois passam ao mesmo tempo = <b>MMC</b> (mínimo múltiplo comum).<br><b>Passo 2.</b> Jeito mais seguro: listo os horários de cada um. Ônibus A (de 12 em 12): 12, 24, <b>36</b>, 48, 60, 72...<br><b>Passo 3.</b> Ônibus B (de 18 em 18): 18, <b>36</b>, 54, 72...<br><b>Passo 4.</b> O primeiro número que aparece nas duas listas é <b>36 minutos</b>.<br><b>Confiro.</b> 36 ÷ 12 = 3 voltas e 36 ÷ 18 = 2 voltas, as duas exatas ✓. (72 também aparece nas duas, mas é o segundo encontro, não o primeiro.)"
+    },
+    {
+     "t": "texto",
+     "html": "<b>Problema 7.</b> Duas peças de tecido, de 84 m e 120 m, serão cortadas em retalhos iguais, os maiores possíveis, sem sobra. Quanto mede cada retalho?<br><br><b>Passo 1.</b> “Pedaços iguais, o maior possível, sem sobra” = maior número que divide os dois = <b>MDC</b>.<br><b>Passo 2.</b> Listo os divisores de 84 (números que dividem 84 sem sobrar): 1, 2, 3, 4, 6, 7, <b>12</b>, 14, 21, 28, 42, 84.<br><b>Passo 3.</b> Listo os divisores de 120: 1, 2, 3, 4, 5, 6, 8, 10, <b>12</b>, 15, 20, 24, 30, 40, 60, 120.<br><b>Passo 4.</b> O maior que aparece nas duas listas é <b>12 m</b>.<br><b>Confiro.</b> 84 ÷ 12 = 7 retalhos e 120 ÷ 12 = 10 retalhos, sem sobra ✓"
+    },
+    {
+     "t": "nota",
+     "tom": "macete",
+     "titulo": "Como treinar",
+     "html": "Faça a <b>bateria de 50</b> deste assunto (Questões → Raciocínio Lógico e Matemática → tema “Frações, MMC e MDC”), escrevendo as 4 perguntas em cada uma. O cronograma só passa para o próximo assunto de Matemática quando você acertar as 50 com segurança."
+    }
+   ]
+  },
+  {
+   "titulo": "Quem ficou com quanto (partilha) e problemas de datas",
+   "etapa": "banca",
+   "blocos": [
+    {
+     "t": "texto",
+     "html": "Quando a questão fala de várias pessoas dividindo alguma coisa (“Ana resolveu tanto, Caio resolveu tanto a mais, os outros ficaram com o restante”), o segredo é <b>não tentar fazer de cabeça</b>. Monte uma <b>tabela com uma linha por pessoa</b> e preencha na ordem em que a questão dá as informações. Quem você ainda não sabe fica com uma letra.<br><br>Depois traduza cada expressão para conta:"
+    },
+    {
+     "t": "tabela",
+     "cab": [
+      "Quando a questão diz…",
+      "Vira a conta…",
+      "Exemplo"
+     ],
+     "linhas": [
+      [
+       "“tanto a mais que”",
+       "soma",
+       "Caio fez 30 a mais que Ana (25) → 25 + 30 = 55"
+      ],
+      [
+       "“tanto a menos que”",
+       "subtração",
+       "Bia tem 8 a menos que Léo (20) → 20 − 8 = 12"
+      ],
+      [
+       "“o dobro”, “o triplo”",
+       "× 2, × 3",
+       "Verônica fez o dobro de Bruno → V = 2 × B"
+      ],
+      [
+       "“a metade”, “1/3 de”",
+       "÷ 2, ÷ 3",
+       "Recebeu 1/3 de 9.000 → 3.000"
+      ],
+      [
+       "“o restante”, “o que sobrou”",
+       "total − soma de quem já se sabe",
+       "200 − (25 + 55) = 120"
+      ],
+      [
+       "“juntos têm”",
+       "soma das partes",
+       "A + B = 90"
+      ],
+      [
+       "“dividiram igualmente”",
+       "÷ número de pessoas",
+       "120 ÷ 3 = 40 cada"
+      ],
+      [
+       "“em que dia da semana”",
+       "resto da divisão por 7",
+       "100 dias depois de sábado: 100 ÷ 7 = 14, resto 2 → segunda"
+      ]
+     ]
+    },
+    {
+     "t": "texto",
+     "html": "<b>Problema 1.</b> Uma lista tem 200 questões. Ana resolveu 25; Caio resolveu 30 a mais que Ana; Verônica e Bruno resolveram o restante, sendo que Verônica resolveu o dobro de Bruno. Quantas Bruno resolveu?<br><br><b>1. O que a questão diz:</b> total 200; Ana 25; Caio = 30 <b>a mais</b> que Ana; Verônica e Bruno = <b>o restante</b>; Verônica = <b>o dobro</b> de Bruno.<br><b>2. Primeiro quem eu já sei:</b> Caio = 25 + 30 = 55. Ana + Caio = 25 + 55 = 80. Restante = 200 − 80 = <b>120</b> para Verônica e Bruno.<br><b>3. Agora divido os 120 em rodadas:</b> “o dobro” quer dizer que, a cada 1 questão do Bruno, a Verônica faz 2. Então cada rodada tem 1 + 2 = <b>3</b> questões. Quantas rodadas cabem em 120? 120 ÷ 3 = <b>40 rodadas</b>.<br><b>4. Quem ficou com quanto:</b> Bruno faz 1 por rodada → <b>40</b>. Verônica faz 2 por rodada → 2 × 40 = <b>80</b>.<br><b>5. Confiro:</b> 25 + 55 + 80 + 40 = 200 ✓ e 80 é o dobro de 40 ✓.<br><br><b>Travou? Teste um número.</b> Bruno = 30 → Verônica 60 → soma 90 (faltou). Bruno = 40 → Verônica 80 → soma 120 (achou). Com as alternativas na frente, testar cada uma é permitido e seguro."
+    },
+    {
+     "t": "nota",
+     "tom": "macete",
+     "titulo": "O macete das rodadas",
+     "html": "“O dobro” = rodada de 1 + 2 = 3. “O triplo” = rodada de 1 + 3 = 4. “Na razão de 2 para 3” = rodada de 2 + 3 = 5. Divida o que vai ser repartido pelo tamanho da rodada: isso dá o número de rodadas. Depois multiplique pelo que cada um pega por rodada."
+    },
+    {
+     "t": "texto",
+     "html": "<b>Problema 2.</b> Um prêmio de R$ 9.000 foi dividido entre três pessoas: Ana recebeu 1/3 do prêmio; Caio recebeu R$ 1.000 a mais que Ana; Bruno ficou com o restante. Quanto recebeu Bruno?<br><br><b>Passo 1.</b> Ana: 1/3 de 9.000 (Ferramenta 1): 9.000 ÷ 3 = 3.000. Ana = 3.000.<br><b>Passo 2.</b> Caio: “1.000 a mais que Ana” = 3.000 + 1.000 = 4.000.<br><b>Passo 3.</b> Ana + Caio = 3.000 + 4.000 = 7.000.<br><b>Passo 4.</b> Bruno: “o restante” = total − o que já foi = 9.000 − 7.000 = <b>R$ 2.000</b>.<br><b>Confiro.</b> 3.000 + 4.000 + 2.000 = 9.000 ✓"
+    },
+    {
+     "t": "texto",
+     "html": "<b>Problema 3.</b> A e B juntos têm 90 processos; A tem 20 a mais que B. Quantos tem cada um?<br><br><b>Passo 1.</b> Imagine que A devolve os 20 que tem a mais. Agora os dois têm a mesma quantidade, e o total ficou 90 − 20 = 70.<br><b>Passo 2.</b> Os 70 divididos igualmente entre os dois: 70 ÷ 2 = 35. Esse é o B (que nunca teve a mais).<br><b>Passo 3.</b> A = o de B + os 20 a mais = 35 + 20 = <b>55</b>. B = <b>35</b>.<br><b>Confiro.</b> 35 + 55 = 90 ✓ e 55 − 35 = 20 ✓"
+    },
+    {
+     "t": "texto",
+     "html": "<b>Problema 4.</b> Dois plantões coincidiram na segunda-feira, 2 de março. Um se repete a cada 6 dias e o outro a cada 8 dias. Em que data e dia da semana coincidem de novo?<br><br><b>Passo 1.</b> “Coincidir de novo” = MMC. Listo: de 6 em 6: 6, 12, 18, <b>24</b>, 30... De 8 em 8: 8, 16, <b>24</b>, 32... O primeiro comum é 24 dias.<br><b>Passo 2.</b> Data: 2 de março + 24 dias = dia 26. Março tem 31 dias, então 26 ainda é março: <b>26 de março</b>.<br><b>Passo 3.</b> Dia da semana: a semana se repete a cada 7 dias. 24 dias = 3 semanas (21 dias) + 3 dias que sobram.<br><b>Passo 4.</b> As 3 semanas inteiras voltam para segunda. Andando os 3 dias que sobram: terça, quarta, <b>quinta-feira</b>.<br><b>Confiro.</b> 24 ÷ 6 = 4 e 24 ÷ 8 = 3, exatos ✓"
+    },
+    {
+     "t": "texto",
+     "html": "<b>Problema 5.</b> Hoje é sábado. Que dia da semana será daqui a 100 dias?<br><br><b>Passo 1.</b> Quantas semanas inteiras cabem em 100 dias? 7 × 14 = 98. Então são 14 semanas e sobram 100 − 98 = 2 dias.<br><b>Passo 2.</b> As 14 semanas inteiras terminam de novo num sábado.<br><b>Passo 3.</b> Ando os 2 dias que sobraram: domingo (1), <b>segunda-feira</b> (2).<br><b>Confiro.</b> Dia 98 = sábado, 99 = domingo, 100 = segunda ✓"
+    },
+    {
+     "t": "nota",
+     "tom": "atencao",
+     "titulo": "Quando a data vira o mês",
+     "html": "Some os dias e, se passar do último dia do mês, desconte: janeiro 31, fevereiro 28 (29 em ano bissexto), março 31, abril 30, maio 31, junho 30, julho 31, agosto 31, setembro 30, outubro 31, novembro 30, dezembro 31. Ex.: 20 de abril + 15 dias = 35 → 35 − 30 = <b>5 de maio</b>."
+    },
+    {
+     "t": "nota",
+     "tom": "hipotese",
+     "titulo": "E probabilidade?",
+     "html": "Probabilidade e contagem têm aula própria (Análise combinatória e Probabilidade), que ainda está sendo montada. Ela entra na sua fila de Matemática depois de frações e porcentagem."
+    }
+   ]
+  }
+ ],
  "A2-a06": {
   "titulo": "Na prova: como reconhecer e resolver",
   "etapa": "banca",
