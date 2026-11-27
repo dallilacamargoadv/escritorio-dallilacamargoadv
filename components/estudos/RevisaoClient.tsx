@@ -8,6 +8,8 @@ import { addDaysToDateString } from "@/lib/atividades-utils";
 import { diasDosBotoes, rotuloEtapa } from "@/lib/estudos-revisao";
 import type { ProblemaDoDia, Subjetiva } from "@/lib/estudos-revisao-hoje";
 import { formatarData } from "@/lib/estudos-utils";
+import type { TreinoLei } from "@/lib/estudos-lei-flash";
+import { LeiSecaFlash } from "@/components/estudos/LeiSecaFlash";
 import { Sparkle } from "@/components/estudos/Sparkle";
 import { BOTAO_PRIMARIO, BOTAO_SECUNDARIO, Card, CardTitulo, Kpi } from "@/components/estudos/ui";
 
@@ -23,10 +25,17 @@ export interface CartaoFila {
   lei?: string;
   /** cartão do baralho "Dos meus erros" */
   doErro?: boolean;
+  /** matéria, para separar a fila */
+  materia?: string;
+  /** cartões de erro: alternativas para responder de novo, a certa e o porquê de cada uma */
+  alts?: string[];
+  correta?: number;
+  porque?: string[];
 }
 interface QuestaoFila {
   id: string;
   materia: string;
+  materia_id: string;
   tema: string;
   ref: string;
   etapa: number;
@@ -37,6 +46,7 @@ interface ArtigoFila {
   ref: string;
   materia: string;
   html: string;
+  treino: TreinoLei[];
   questoes: number;
   etapa: number;
   vence_em: string;
@@ -230,13 +240,22 @@ function Pomodoro({ hoje, historico }: { hoje: string; historico: { data: string
 
 /* ===================== CARTÕES ===================== */
 
+const LETRA = ["A", "B", "C", "D", "E", "F"];
+const CHIP_MATERIA = "rounded-full border px-3 py-1 text-xs transition-colors duration-150";
+
 function Cartoes({ inicial }: { inicial: CartaoFila[] }) {
   const [fila, setFila] = useState(inicial);
+  const [materia, setMateria] = useState<string | null>(null);
   const [virado, setVirado] = useState(false);
+  const [escolha, setEscolha] = useState<number | null>(null);
   const [feitos, setFeitos] = useState(0);
   const [erro, setErro] = useState<string | null>(null);
   const [salvando, setSalvando] = useState(false);
-  const atual = fila[0];
+  const daVez = materia ? fila.filter((c) => (c.materia ?? c.baralho) === materia) : fila;
+  const atual = daVez[0];
+  // matérias na ordem em que aparecem na fila, com quantos cartões cada
+  const contagem = new Map<string, number>();
+  for (const c of fila) contagem.set(c.materia ?? c.baralho, (contagem.get(c.materia ?? c.baralho) ?? 0) + 1);
 
   async function responder(r: "errei" | "quase" | "acertei") {
     if (!atual) return;
@@ -246,33 +265,89 @@ function Cartoes({ inicial }: { inicial: CartaoFila[] }) {
     if (e) return setErro(e);
     setErro(null);
     setVirado(false);
+    setEscolha(null);
     setFeitos((n) => n + 1);
     // errou: volta ao fim da fila de hoje para uma segunda tentativa
-    setFila((f) => (r !== "errei" ? f.slice(1) : [...f.slice(1), { ...f[0], etapa: 0, novo: false }]));
+    setFila((f) => {
+      const resto = f.filter((c) => c.id !== atual.id);
+      return r !== "errei" ? resto : [...resto, { ...atual, etapa: 0, novo: false }];
+    });
   }
-  const deErro = fila.filter((c) => c.doErro).length;
+  function trocar(m: string | null) {
+    setMateria(m);
+    setVirado(false);
+    setEscolha(null);
+  }
+  const deErro = daVez.filter((c) => c.doErro).length;
+  const temAlts = !!atual?.alts?.length && typeof atual.correta === "number";
 
   return (
     <Card>
-      <CardTitulo acao={<span className="text-xs tabular-nums text-e-dim">{fila.length} na fila{deErro ? ` (${deErro} dos seus erros)` : ""} · {feitos} feitos</span>}>Cartões</CardTitulo>
+      <CardTitulo acao={<span className="text-xs tabular-nums text-e-dim">{daVez.length} na fila{deErro ? ` (${deErro} dos seus erros)` : ""} · {feitos} feitos</span>}>Flashcards</CardTitulo>
+      {contagem.size > 1 && (
+        <div className="mb-3 flex flex-wrap gap-1.5" role="group" aria-label="Revisar por matéria">
+          {[[null, fila.length] as const, ...[...contagem.entries()]].map(([m, n]) => (
+            <button
+              key={m ?? "todas"}
+              type="button"
+              onClick={() => trocar(m)}
+              aria-pressed={materia === m}
+              className={`${CHIP_MATERIA} ${materia === m ? "border-e-accent text-e-ink" : "border-e-line text-e-dim hover:text-e-ink"}`}
+            >
+              {m ?? "Todas"} · {n}
+            </button>
+          ))}
+        </div>
+      )}
       {!atual ? (
         <p className="flex items-center gap-2 text-sm text-e-dim">
-          <Sparkle size={14} /> Cartões do dia terminados.
+          <Sparkle size={14} /> {materia ? `Cartões de ${materia} terminados.` : "Cartões do dia terminados."}
         </p>
       ) : (
         <div>
           <p className="text-[11px] text-e-dim">
             {atual.doErro && <span className="mr-2 rounded-full bg-e-bad-soft px-2 py-0.5 uppercase tracking-[0.1em] text-e-bad">Dos meus erros</span>}
-            {atual.baralho} · {atual.novo ? "novo" : rotuloEtapa(atual.etapa)}
+            {atual.doErro ? "Responda de novo" : atual.baralho} · {atual.novo ? "novo" : rotuloEtapa(atual.etapa)}
           </p>
           <div className="mt-2 rounded-xl border border-e-line bg-e-card-2 p-4 text-base leading-relaxed text-e-ink" dangerouslySetInnerHTML={{ __html: atual.frente }} />
+          {temAlts && (
+            <ul className="mt-2 space-y-1.5">
+              {atual.alts!.map((a, i) => {
+                const marca =
+                  escolha === null ? "border-e-line hover:border-e-accent" : i === atual.correta ? "border-e-ok bg-e-ok/10" : i === escolha ? "border-e-bad bg-e-bad-soft" : "border-e-line opacity-60";
+                return (
+                  <li key={i}>
+                    <button
+                      type="button"
+                      disabled={escolha !== null}
+                      onClick={() => (setEscolha(i), setVirado(true))}
+                      className={`flex w-full gap-2 rounded-xl border px-3 py-2 text-left text-sm text-e-ink transition-colors duration-150 ${marca}`}
+                    >
+                      <span className="text-e-dim">{LETRA[i]})</span>
+                      <span dangerouslySetInnerHTML={{ __html: a }} />
+                    </button>
+                    {escolha !== null && (i === escolha || i === atual.correta) && atual.porque?.[i] && (
+                      <p className="mt-1 pl-3 text-xs text-e-dim" dangerouslySetInnerHTML={{ __html: atual.porque[i] }} />
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          )}
           {virado ? (
             <>
+              {temAlts && escolha !== null && (
+                <p className={`mt-3 text-sm ${escolha === atual.correta ? "text-e-ok" : "text-e-bad"}`}>
+                  {escolha === atual.correta ? "Acertou desta vez. Se foi com dúvida, marque Quase." : `Ainda não: a certa é a ${LETRA[atual.correta!]}.`}
+                </p>
+              )}
               <div className="mt-2 rounded-xl border border-e-accent/40 p-4 text-base leading-relaxed text-e-ink" dangerouslySetInnerHTML={{ __html: atual.verso }} />
               {atual.lei && <div className="mt-2 border-l-2 border-e-blue/60 pl-3 font-serif text-[15px] leading-relaxed text-e-ink [&_mark]:rounded [&_mark]:bg-e-accent-soft [&_mark]:px-0.5" dangerouslySetInnerHTML={{ __html: atual.lei }} />}
               {atual.extra && <p className="mt-2 text-xs text-e-dim" dangerouslySetInnerHTML={{ __html: atual.extra }} />}
               <BotoesTres etapa={atual.novo ? -1 : atual.etapa} desabilitado={salvando} responder={responder} />
             </>
+          ) : temAlts ? (
+            <p className="mt-3 text-xs text-e-dim">Escolha uma alternativa para virar o cartão.</p>
           ) : (
             <button type="button" onClick={() => setVirado(true)} className={`mt-3 ${BOTAO_PRIMARIO}`}>
               Mostrar o verso
@@ -293,54 +368,43 @@ function Cartoes({ inicial }: { inicial: CartaoFila[] }) {
 
 function Artigos({ inicial }: { inicial: ArtigoFila[] }) {
   const [fila, setFila] = useState(inicial);
-  const [aberto, setAberto] = useState<string | null>(inicial[0]?.item_id ?? null);
   const [erro, setErro] = useState<string | null>(null);
 
   async function responder(a: ArtigoFila, ok: boolean) {
     const e = await enviarRevisao({ tipo: "artigo", id: a.item_id, ok, etapa: a.etapa });
     if (e) return setErro(e);
     setErro(null);
-    const resto = fila.filter((x) => x.item_id !== a.item_id);
-    setFila(resto);
-    setAberto(resto[0]?.item_id ?? null);
+    setFila((f) => f.filter((x) => x.item_id !== a.item_id));
   }
 
   return (
     <Card>
-      <CardTitulo acao={<span className="text-xs tabular-nums text-e-dim">{fila.length} na fila</span>}>Artigos de lei</CardTitulo>
+      <CardTitulo acao={<span className="text-xs tabular-nums text-e-dim">{fila.length} na fila</span>}>Lei seca em flashcard</CardTitulo>
       {fila.length === 0 ? (
         <p className="flex items-center gap-2 text-sm text-e-dim">
           <Sparkle size={14} /> Nenhum artigo vence hoje.
         </p>
       ) : (
         <ul className="space-y-2">
-          {fila.map((a) => (
-            <li key={a.item_id} className="rounded-xl border border-e-line bg-e-card-2">
-              <button
-                type="button"
-                onClick={() => setAberto(aberto === a.item_id ? null : a.item_id)}
-                aria-expanded={aberto === a.item_id}
-                className="flex w-full flex-wrap items-baseline justify-between gap-2 px-4 py-3 text-left"
-              >
-                <span className="text-sm text-e-ink">{a.ref}</span>
-                <span className="text-[11px] text-e-dim">
-                  {a.materia} · {rotuloEtapa(a.etapa)} · {a.questoes} {a.questoes === 1 ? "questão errada" : "questões erradas"}
-                </span>
-              </button>
-              {aberto === a.item_id && (
-                <div className="border-t border-e-line px-4 py-3">
-                  <p className="text-[11px] text-e-dim">Leia em voz baixa e repare no trecho marcado. Ele foi o ponto da questão.</p>
-                  <div className="mt-2 font-serif text-[15px] leading-relaxed text-e-ink [&_mark]:rounded [&_mark]:bg-e-accent-soft [&_mark]:px-0.5 [&_mark]:text-e-ink" dangerouslySetInnerHTML={{ __html: a.html }} />
+          {fila.map((a, i) => (
+            <li key={a.item_id}>
+              <LeiSecaFlash
+                refLei={a.ref}
+                detalhe={`${a.materia} · ${rotuloEtapa(a.etapa)} · ${a.questoes} ${a.questoes === 1 ? "questão errada" : "questões erradas"}`}
+                html={a.html}
+                treino={a.treino}
+                abertoInicial={i === 0}
+                rodape={
                   <div className="mt-3 flex flex-wrap gap-2">
                     <button type="button" onClick={() => responder(a, true)} className={BOTAO_PRIMARIO}>
-                      Li e lembrava
+                      Lembrava
                     </button>
                     <button type="button" onClick={() => responder(a, false)} className={BOTAO_SECUNDARIO}>
                       Não lembrava, volta amanhã
                     </button>
                   </div>
-                </div>
-              )}
+                }
+              />
             </li>
           ))}
         </ul>
@@ -562,24 +626,43 @@ export function RevisaoClient({
             <Link href={`/admin/estudos/questoes?status=erradas&revisao=1&id=${encodeURIComponent(questoes[0].id)}`} className={BOTAO_PRIMARIO}>
               Refazer a primeira
             </Link>
-            <ul className="mt-3 divide-y divide-e-line">
-              {questoes.map((q) => (
-                <li key={q.id}>
-                  <Link
-                    href={`/admin/estudos/questoes?status=erradas&revisao=1&id=${encodeURIComponent(q.id)}`}
-                    className="flex flex-wrap items-baseline justify-between gap-2 py-2.5 text-sm text-e-ink hover:text-e-glow"
-                  >
-                    <span>
-                      {q.materia} · {q.tema}
-                    </span>
-                    <span className="text-[11px] text-e-dim">
-                      {q.ref} · {rotuloEtapa(q.etapa)}
-                      {q.vence_em < hoje ? ` · venceu ${formatarData(q.vence_em)}` : ""}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="mt-3 divide-y divide-e-line rounded-xl border border-e-line">
+              {[...new Set(questoes.map((q) => q.materia))].map((m) => {
+                const da = questoes.filter((q) => q.materia === m);
+                return (
+                  <details key={m} className="group px-3 py-2">
+                    <summary className="flex cursor-pointer list-none flex-wrap items-center justify-between gap-2 text-sm text-e-ink">
+                      <span className="flex items-center gap-2">
+                        <span className="text-e-dim transition-transform duration-150 group-open:rotate-90" aria-hidden="true">›</span>
+                        {m} <span className="text-[11px] text-e-dim">· {da.length}</span>
+                      </span>
+                      <Link
+                        href={`/admin/estudos/questoes?status=erradas&revisao=1&materia=${encodeURIComponent(da[0].materia_id)}&id=${encodeURIComponent(da[0].id)}`}
+                        className="rounded-full border border-e-line px-2.5 py-0.5 text-[11px] text-e-dim hover:border-e-accent hover:text-e-ink"
+                      >
+                        Refazer todas →
+                      </Link>
+                    </summary>
+                    <ul className="pl-5">
+                      {da.map((q) => (
+                        <li key={q.id}>
+                          <Link
+                            href={`/admin/estudos/questoes?status=erradas&revisao=1&materia=${encodeURIComponent(q.materia_id)}&id=${encodeURIComponent(q.id)}`}
+                            className="flex flex-wrap items-baseline justify-between gap-2 py-2 text-sm text-e-ink hover:text-e-glow"
+                          >
+                            <span>{q.tema}</span>
+                            <span className="text-[11px] text-e-dim">
+                              {q.ref} · {rotuloEtapa(q.etapa)}
+                              {q.vence_em < hoje ? ` · venceu ${formatarData(q.vence_em)}` : ""}
+                            </span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                );
+              })}
+            </div>
           </>
         )}
         <p className="mt-3 text-[11px] text-e-dim">Acerto com dúvida ou chute conta como erro e mantém a questão na fila.</p>

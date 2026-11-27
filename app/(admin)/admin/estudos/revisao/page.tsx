@@ -22,6 +22,7 @@ import {
 import { fonteHtml, htmlSeguro } from "@/lib/estudos-html";
 import { AULA_POR_ID, getAulasEstudadas } from "@/lib/db-estudos-cadernos";
 import { cartoesDosErros } from "@/lib/estudos-erros-cartoes";
+import { treinoDoArtigo } from "@/lib/estudos-lei-flash";
 import { lugarComCache, SEM_ASSUNTO } from "@/lib/estudos-cartoes-assunto";
 import {
   escolherSubjetiva,
@@ -34,6 +35,23 @@ import {
 import { Cabecalho } from "@/components/estudos/ui";
 import { RevisaoClient, type CartaoFila } from "@/components/estudos/RevisaoClient";
 import { RevisaoDeOntem } from "@/components/estudos/RevisaoDeOntem";
+
+/** Um nome só por matéria nos botões da fila: baralhos e cartões de erro usam nomes diferentes. */
+const NOME_CURTO: Record<string, string> = {
+  "Língua Portuguesa": "Português",
+  "Português (verbos)": "Português",
+  "Direito Constitucional": "Constitucional",
+  "Direito Administrativo": "Administrativo",
+  "Lei 9.784 (lei seca)": "Administrativo",
+  "Direito Tributário": "Tributário",
+  "Reforma tributária": "Tributário",
+  "Direito Processual Civil": "Processo Civil",
+  "Direito Civil": "Civil",
+  "Direito do Trabalho": "Trabalho",
+  "Direito Financeiro": "Financeiro",
+  "Raciocínio Lógico e Matemática": "Raciocínio Lógico",
+};
+const curto = (n: string) => NOME_CURTO[n] ?? n.replace(/^Direito\s+(d[oa]\s+)?/, "");
 
 export default async function RevisaoPage() {
   const hoje = todayBelemDateString();
@@ -65,7 +83,7 @@ export default async function RevisaoPage() {
     const etapa = etapaDoCartao(e);
     const vence = venceCartao(e);
     if (etapa >= ETAPA_FINAL || !vence) continue;
-    if (vence <= hoje) vencidos.push({ id: c.id, baralho: c.b, frente: htmlSeguro(c.f), verso: htmlSeguro(c.v), extra: c.x ? htmlSeguro(c.x) : "", etapa, novo: false });
+    if (vence <= hoje) vencidos.push({ id: c.id, baralho: c.b, materia: curto(c.b), frente: htmlSeguro(c.f), verso: htmlSeguro(c.v), extra: c.x ? htmlSeguro(c.x) : "", etapa, novo: false });
     else if (vence <= semana) proxCartoes++;
   }
   const porBaralho = new Map<string, typeof CARTOES>();
@@ -79,7 +97,7 @@ export default async function RevisaoPage() {
   for (let i = 0; novos.length < cota && [...porBaralho.values()].some((l) => l.length > i); i++) {
     for (const l of porBaralho.values()) {
       const c = l[i];
-      if (c && novos.length < cota) novos.push({ id: c.id, baralho: c.b, frente: htmlSeguro(c.f), verso: htmlSeguro(c.v), extra: c.x ? htmlSeguro(c.x) : "", etapa: 0, novo: true });
+      if (c && novos.length < cota) novos.push({ id: c.id, baralho: c.b, materia: curto(c.b), frente: htmlSeguro(c.f), verso: htmlSeguro(c.v), extra: c.x ? htmlSeguro(c.x) : "", etapa: 0, novo: true });
     }
   }
 
@@ -95,8 +113,20 @@ export default async function RevisaoPage() {
   }
   for (const c of erros) {
     const e = estadosCartoes.get(c.id);
-    const h = htmlDoCartaoErro(c);
-    const item = { id: c.id, baralho: h.baralho, frente: h.frente, verso: h.verso, extra: h.extra, lei: h.lei, doErro: true };
+    const h = htmlDoCartaoErro(c, QUESTAO_POR_ID.get(c.questao_id));
+    const item = {
+      id: c.id,
+      baralho: h.baralho,
+      materia: curto(c.materia),
+      frente: h.frente,
+      verso: h.verso,
+      extra: h.extra,
+      lei: h.lei,
+      doErro: true,
+      alts: h.alts,
+      correta: h.correta,
+      porque: h.porque,
+    };
     if (!e) {
       if (!c.superado && errosNovos.length < Math.max(0, NOVOS_ERROS_POR_DIA - errosNovosHoje)) errosNovos.push({ ...item, etapa: -1, novo: true });
       continue;
@@ -147,8 +177,8 @@ export default async function RevisaoPage() {
       <RevisaoDeOntem hoje={hoje} respostas={respostas} />
       <RevisaoClient
         hoje={hoje}
-        questoes={questoesHoje.map((q) => ({ id: q.id, materia: q.materia, tema: q.tema, ref: q.ref, etapa: q.etapa, vence_em: q.vence_em }))}
-        artigos={artigosHoje.map((a) => ({ item_id: a.item_id, ref: a.ref, materia: a.materia, html: fonteHtml(a.fonte), questoes: a.questoes.length, etapa: a.etapa, vence_em: a.vence_em }))}
+        questoes={questoesHoje.map((q) => ({ id: q.id, materia: q.materia, materia_id: QUESTAO_POR_ID.get(q.id)?.materia_id ?? "", tema: q.tema, ref: q.ref, etapa: q.etapa, vence_em: q.vence_em }))}
+        artigos={artigosHoje.map((a) => ({ item_id: a.item_id, ref: a.ref, materia: a.materia, html: fonteHtml(a.fonte), treino: treinoDoArtigo(a.ref), questoes: a.questoes.length, etapa: a.etapa, vence_em: a.vence_em }))}
         cartoes={[...errosVencidos, ...vencidos, ...errosNovos, ...novos].filter((c) => !naSubjetiva.has(c.id))}
         diaDeSubjetiva={temSubjetiva(hoje)}
         subjetiva={subjetiva}

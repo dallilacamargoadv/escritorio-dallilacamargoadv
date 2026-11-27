@@ -44,7 +44,7 @@ export default async function QuestoesPage(props: PageProps<"/admin/estudos/ques
   const pedida = s("id");
   const atual = (pedida && lista.find((q) => q.id === pedida)) || lista.find((q) => !ultima.has(q.id)) || lista[0] || null;
   const revisao = s("revisao") === "1";
-  const ids = revisao ? filaDaRevisao(respostas, atual?.id ?? null) : lista.map((q) => q.id);
+  const ids = revisao ? filaDaRevisao(respostas, atual?.id ?? null, { materia, tema, subtema }) : lista.map((q) => q.id);
   const materias = [...new Set(QUESTOES.map((q) => q.materia_id))].map((id) => ({
     id,
     nome: MATERIA_POR_ID.get(id)?.nome ?? id,
@@ -82,7 +82,8 @@ export default async function QuestoesPage(props: PageProps<"/admin/estudos/ques
  * Fila da revisão: as erradas que vencem hoje mais os erros do último dia de estudo ainda não refeitos hoje.
  * A matéria da questão aberta vem primeiro, para dar para zerar uma matéria de uma vez.
  */
-function filaDaRevisao(respostas: Resposta[], atual: string | null): string[] {
+/** Fila da revisão; com matéria/tema/subtema na URL ("Refazer todas de Português"), só os dessa parte. */
+function filaDaRevisao(respostas: Resposta[], atual: string | null, filtro: { materia: string; tema: string; subtema: string }): string[] {
   const hoje = todayBelemDateString();
   const feitasHoje = new Set(respostas.filter((r) => dataBelem(r.respondida_em) === hoje).map((r) => r.questao_id));
   const vencidas = agendaQuestoes(respostas, QUESTAO_POR_ID)
@@ -91,7 +92,11 @@ function filaDaRevisao(respostas: Resposta[], atual: string | null): string[] {
     .map((q) => q.id);
   const dia = respostas.map((r) => dataBelem(r.respondida_em)).filter((d) => d < hoje).sort().at(-1);
   const deOntem = respostas.filter((r) => dataBelem(r.respondida_em) === dia && ehFalha(r)).map((r) => r.questao_id);
-  const fila = [...new Set([...vencidas, ...deOntem])].filter((id) => QUESTAO_POR_ID.has(id) && (id === atual || !feitasHoje.has(id)));
+  const dentro = (id: string) => {
+    const q = QUESTAO_POR_ID.get(id);
+    return !!q && (!filtro.materia || q.materia_id === filtro.materia) && (!filtro.tema || q.tema === filtro.tema) && (!filtro.subtema || q.subtema === filtro.subtema);
+  };
+  const fila = [...new Set([...vencidas, ...deOntem])].filter((id) => dentro(id) && (id === atual || !feitasHoje.has(id)));
   if (atual && !fila.includes(atual)) fila.unshift(atual);
   const materia = atual ? QUESTAO_POR_ID.get(atual)?.materia_id : undefined;
   return [...fila.filter((id) => QUESTAO_POR_ID.get(id)?.materia_id === materia), ...fila.filter((id) => QUESTAO_POR_ID.get(id)?.materia_id !== materia)];
