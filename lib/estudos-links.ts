@@ -115,7 +115,8 @@ export function linksDoBloco(item: CronogramaItem): LinkBloco[] {
       return doTema(caderno(), questoes, cartoes, temaTrilha ? leiSeca : null);
     case "questoes":
       if (item.materia_id === "SIM") return [{ rotulo: "Simulados", href: `${BASE}/simulados` }, { rotulo: "Revisão", href: `${BASE}/revisao` }];
-      return doTema(questoes, erradas, cartoes);
+      // Matemática e Informática: o bloco de questões também abre a aula (ela pediu o "como resolver" à mão).
+      return doTema(item.materia_id === "A2" || item.materia_id === "A3" ? caderno() : null, questoes, erradas, cartoes);
     case "simulado":
       return [{ rotulo: "Simulados", href: `${BASE}/simulados` }];
     case "discursiva":

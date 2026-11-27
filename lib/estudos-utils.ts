@@ -227,7 +227,7 @@ export function gerarCronograma(
   config: EstudoConfig,
   estados: Map<string, TopicoEstado>,
   /** aulas dos cadernos ainda não marcadas como estudadas, por tópico do edital, na ordem do caderno */
-  aulasPendentes: Map<string, string[]> = new Map(),
+  aulasPendentes: Map<string, { titulo: string; pronta: boolean }[]> = new Map(),
 ): NovoItem[] {
   const ativas = MATERIAS.filter((m) => materiaAtiva(m, config) && !FORA_ATE_O_EDITAL.has(m.id));
   // Teoria nova só para o que ainda não foi estudado. O que já foi visto (estudando, revisar) vai para revisão e questões.
@@ -242,7 +242,7 @@ export function gerarCronograma(
     m.topicos.flatMap((t) => {
       if (estados.get(t.id)?.fora_do_edital) return [];
       const aulas = aulasPendentes.get(t.id);
-      if (aulas) return aulas.map((titulo) => ({ id: t.id, titulo }));
+      if (aulas) return aulas.map((a) => ({ id: t.id, titulo: a.titulo }));
       return pendente(t) ? [{ id: t.id, titulo: t.titulo }] : [];
     });
   const filaTopicos = new Map(principais.map((m) => [m.id, unidades(m)]));
@@ -260,6 +260,18 @@ export function gerarCronograma(
     return st && st !== "nao_iniciado";
   }));
   const diasRevisao = new Set(config.diasRevisao ?? []);
+  // Matemática e Informática: fila das aulas prontas ainda não estudadas, começando pelo tópico em andamento.
+  const filaAulas = (m?: Materia) => {
+    if (!m) return [];
+    const emAndamento = (id: string) => (estados.get(id)?.status ?? "nao_iniciado") !== "nao_iniciado";
+    const lista = m.topicos.flatMap((t) => (aulasPendentes.get(t.id) ?? []).filter((a) => a.pronta).map((a) => ({ id: t.id, titulo: a.titulo, ativo: emAndamento(t.id) })));
+    return [...lista.filter((a) => a.ativo), ...lista.filter((a) => !a.ativo)];
+  };
+  const filaMat = filaAulas(matematica);
+  const filaInfo = filaAulas(informatica);
+  let iMat = 0;
+  let iInfo = 0;
+  let ultimaMat: { id: string; titulo: string } | null = filaMat[0] ?? null;
 
   const fim = config.dataProva ? addDaysToDateString(config.dataProva, -1) : addDaysToDateString(hoje, LIMITE_DIAS);
   const total = Math.min(LIMITE_DIAS, diasEntre(hoje, fim));
@@ -342,7 +354,8 @@ export function gerarCronograma(
       const m = escolher(new Set());
       if (m && resta >= 60) estudar(m, Math.min(resta, 120), add);
       if (informatica && resta >= 30) {
-        add({ materia_id: "A3", topico_id: null, tipo: "questoes", titulo: "Informática: roteiro \"como reconhecer e resolver\" da aula da vez + questões", minutos: 40 });
+        const a = filaInfo.length ? filaInfo[Math.min(iInfo++, filaInfo.length - 1)] : null;
+        add({ materia_id: "A3", topico_id: a?.id ?? null, tipo: "teoria", titulo: `Informática: ${a ? `aula ${a.titulo}` : "aula da vez"} no caderno (com o roteiro "como reconhecer e resolver") + questões`, minutos: 40 });
       }
       if (cultura.length && resta >= 30) {
         const c = cultura[iCult++ % cultura.length];
@@ -361,7 +374,7 @@ export function gerarCronograma(
       const m = escolher(new Set());
       if (m && resta >= 75) estudar(m, Math.min(resta - 60, 120), add);
       if (matematica && resta >= 40) {
-        add({ materia_id: "A2", topico_id: null, tipo: "questoes", titulo: "Matemática: refazer as erradas da semana com o roteiro + 10 questões novas", minutos: 45 });
+        add({ materia_id: "A2", topico_id: ultimaMat?.id ?? null, tipo: "questoes", titulo: `Matemática: ${ultimaMat ? `${ultimaMat.titulo}, ` : ""}refazer as erradas da semana com o roteiro + 10 questões novas`, minutos: 45 });
       }
       if (cultura.length && resta >= 45) {
         const c = cultura[iCult++ % cultura.length];
@@ -406,7 +419,9 @@ export function gerarCronograma(
     }
 
     if (diaMat) {
-      add({ materia_id: "A2", topico_id: null, tipo: "teoria", titulo: "Matemática: aula da vez (roteiro \"como reconhecer e resolver\") + 15 questões, escrevendo cada passo", minutos: 60 });
+      const a = filaMat.length ? filaMat[Math.min(iMat++, filaMat.length - 1)] : null;
+      if (a) ultimaMat = a;
+      add({ materia_id: "A2", topico_id: a?.id ?? null, tipo: "teoria", titulo: `Matemática: aula ${a ? a.titulo : "da vez"} no caderno (leia o roteiro "como reconhecer e resolver" no fim) + 15 questões, escrevendo cada passo`, minutos: 60 });
     }
     if (simLei) {
       add({ materia_id: simLei.id, topico_id: null, tipo: "simulado", titulo: `Simulado de lei seca: ${simLei.nome} (10 questões, cronometrado)`, minutos: resta });
