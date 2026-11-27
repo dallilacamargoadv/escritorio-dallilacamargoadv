@@ -1,0 +1,621 @@
+{
+ "materia_id": "B8",
+ "titulo": "Financeiro",
+ "subtitulo": "Da atividade financeira do Estado aos precatórios, com a LRF, a Lei 4.320 e o olhar da PGE-MA.",
+ "fontes": [
+  "Material EBEJI de Direito Financeiro (2026)",
+  "CF, Lei 4.320/1964, LRF e Constituição do Maranhão, textos vigentes"
+ ],
+ "aulas": [
+  {
+   "id": "B8-a01",
+   "topico_id": "B8-01",
+   "numero": 1,
+   "titulo": "Atividade financeira do Estado",
+   "status": "pronta",
+   "fonte": "Material EBEJI: A atividade financeira do Estado (2026), itens 1 a 5; CF, Lei 4.320/1964, LRF e Constituição do Maranhão, textos vigentes",
+   "resumo": [
+    "Atividade financeira: ações do Estado para obter recursos e realizar os gastos das necessidades públicas. Quatro fenômenos: receita, despesa, orçamento e crédito público. É instrumental (meio).",
+    "Direito Financeiro: normas que disciplinam a atividade financeira. É autônomo em face do Tributário (art. 24, I; princípios próprios; Capítulo II do Título VI, arts. 163 a 169).",
+    "Fontes formais principais: CF, LCs (LRF, Lei 4.320 com status de LC), leis ordinárias (PPA, LDO, LOA), leis delegadas, MP (vedada em orçamento, salvo crédito extraordinário). Secundárias: decretos, resoluções, atos e decisões dos Tribunais de Contas, decisões judiciais. Material: Ciência das Finanças.",
+    "Competência concorrente (art. 24, I e II): União, normas gerais; Estados, suplementar; sem norma geral, plena; lei federal posterior suspende a estadual contrária. Municípios: art. 30, I a III. CE-MA, art. 133.",
+    "ADI 2.238 (LRF): inconstitucionais o art. 9º, § 3º, os arts. 56 e 57, caput, e o art. 23, § 2º; interpretação conforme no art. 23, § 1º (sem redução de vencimentos).",
+    "Legalidade: despesa só com autorização legislativa (art. 167); crédito extraordinário por MP só para despesa imprevisível e urgente (ADI 4.048). Art. 113 do ADCT vale para todos os entes. Estatais sob o Tribunal de Contas sem exigir dano (MS 25.092 e 25.181)."
+   ],
+   "secoes": [
+    {
+     "titulo": "De onde vem: o Estado precisa de dinheiro e de regras para usá-lo",
+     "etapa": "origem",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Todo serviço público custa. Para manter a máquina e atender às <b>necessidades públicas</b> (saúde, segurança, educação, justiça), o Estado, isto é, cada ente da Federação, precisa <b>conseguir</b> dinheiro, <b>planejar</b> como vai gastar, <b>gastar</b> e, quando o que arrecadou não basta, <b>tomar emprestado</b>. Esse conjunto de ações é a <b>atividade financeira do Estado</b>: as ações que o Estado desempenha para obter recursos para o seu sustento e realizar os gastos que executam as necessidades públicas."
+      },
+      {
+       "t": "passos",
+       "nos": [
+        {
+         "titulo": "Receita",
+         "sub": "obter"
+        },
+        {
+         "titulo": "Orçamento",
+         "sub": "planejar"
+        },
+        {
+         "titulo": "Despesa",
+         "sub": "gastar"
+        },
+        {
+         "titulo": "Crédito",
+         "sub": "tomar emprestado"
+        }
+       ],
+       "passos": [
+        {
+         "no": 0,
+         "texto": "<b>Receita pública.</b> Formas, condições e limites para obter dinheiro: tributos, exploração do próprio patrimônio, transferências. É o tópico B8-03."
+        },
+        {
+         "no": 1,
+         "texto": "<b>Orçamento público.</b> A delimitação responsável de receitas e despesas em um dado exercício. É lei (PPA, LDO, LOA), aprovada pelo Legislativo. Tópico B8-02."
+        },
+        {
+         "no": 2,
+         "texto": "<b>Despesa pública.</b> Formas, condições e limites para gastar o dinheiro público e os métodos de dispêndio. Gastar exige autorização em lei (CF, art. 167, II). Tópico B8-04."
+        },
+        {
+         "no": 3,
+         "texto": "<b>Crédito público.</b> Se a receita não cobre os gastos, o Estado pode tomar empréstimos para buscar o equilíbrio entre receitas e despesas. Vira dívida pública. Tópico B8-07."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "macete",
+       "titulo": "A fórmula do EBEJI",
+       "html": "Atividade financeira = <b>receita + despesa + orçamento + crédito público</b> (lição de Harrison Leite). Se a questão listar só três, desconfie."
+      },
+      {
+       "t": "texto",
+       "html": "A atividade financeira é <b>instrumental</b> (atividade-meio): o Estado não arrecada por arrecadar. O dinheiro serve para atingir os objetivos da República (CF, art. 3º). E é regida pelo <b>direito público</b>, com legalidade em cada passo: arrecadar, gastar e endividar-se dependem de lei."
+      },
+      {
+       "t": "virar",
+       "cartas": [
+        {
+         "frente": "Fiscal",
+         "sub": "encher o caixa",
+         "verso": "A finalidade predominante é <b>arrecadar</b>.",
+         "detalhe": "Exemplos: IR, ICMS, IPVA."
+        },
+        {
+         "frente": "Extrafiscal",
+         "sub": "mudar condutas",
+         "verso": "A finalidade predominante é <b>intervir</b>: estimular ou desestimular comportamentos, regular a economia.",
+         "detalhe": "Exemplos: II, IE, IPI, IOF; IPTU progressivo no tempo (CF, art. 182, § 4º, II); Imposto Seletivo (CF, art. 153, VIII). Tributo extrafiscal também arrecada: o que muda é a finalidade principal."
+        },
+        {
+         "frente": "Parafiscal",
+         "sub": "outro cobra",
+         "verso": "A lei dá a capacidade de cobrar a uma pessoa <b>diferente</b> do ente que instituiu, e o dinheiro fica com ela para as finalidades dela.",
+         "detalhe": "Exemplo: anuidades dos conselhos profissionais (a da OAB não é tributo, segundo o STF)."
+        }
+       ]
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "Meio, não fim",
+       "html": "\"A atividade financeira é atividade-fim do Estado\": <b>errado</b>. Ela é instrumental. Outra: \"o Direito Financeiro e a atividade financeira são a mesma coisa\": <b>errado</b>. A atividade é o fato; o Direito Financeiro é o conjunto de normas que a disciplina."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: o Direito Financeiro, sua autonomia e suas fontes",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "O <b>Direito Financeiro</b> é o conjunto de normas jurídicas que estuda e disciplina a atividade financeira do Estado. Ele é <b>autônomo</b> em relação ao Direito Tributário por três razões que a banca gosta de pedir: (1) tem sistema próprio de normas, com competência legislativa própria (CF, art. 24, I, que lista \"tributário\" e \"financeiro\" separados); (2) tem princípios específicos; (3) recebe tratamento apartado na própria CF, que lhe dá um capítulo: Título VI, Capítulo II, \"Das Finanças Públicas\", arts. 163 a 169."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "",
+        "Ciência das Finanças",
+        "Direito Financeiro",
+        "Direito Tributário"
+       ],
+       "linhas": [
+        [
+         "Natureza",
+         "Pré-jurídica: economia, política, indicadores sociais",
+         "Jurídica e normativa",
+         "Jurídica e normativa"
+        ],
+        [
+         "Pergunta que responde",
+         "Qual a melhor forma de arrecadar e gastar?",
+         "Quais são as regras para obter, planejar, gastar e tomar emprestado?",
+         "Quais são as regras da relação Fisco × contribuinte?"
+        ],
+        [
+         "Alcance",
+         "Toda a atividade financeira, sob ângulo não jurídico",
+         "Receita, despesa, orçamento, crédito, fiscalização",
+         "Só a receita derivada tributária"
+        ],
+        [
+         "Cria norma?",
+         "Não. É fonte material",
+         "Sim",
+         "Sim"
+        ]
+       ]
+      },
+      {
+       "t": "texto",
+       "html": "<b>Fontes.</b> As <b>formais</b> exteriorizam os fatos financeiros por meio de normas ou decisões; as <b>materiais</b> exprimem os próprios fatos financeiros. As formais se dividem em principais e secundárias, conforme a relevância."
+      },
+      {
+       "t": "tabela",
+       "cab": [
+        "Tipo",
+        "Quais são",
+        "O que observar"
+       ],
+       "linhas": [
+        [
+         "Formais principais",
+         "CF (arts. 163 a 169); leis complementares (LRF, LC 101/2000; Lei 4.320/1964); leis ordinárias (PPA, LDO, LOA); leis delegadas; medida provisória",
+         "MP é vedada em PPA, LDO, orçamento e créditos adicionais e suplementares, salvo crédito extraordinário (CF, art. 167, § 3º)"
+        ],
+        [
+         "Formais secundárias",
+         "Decretos; resoluções do Congresso ou de uma das Casas; atos normativos (resoluções dos Tribunais de Contas); decisões administrativas (dos Tribunais de Contas); decisões judiciais (precedentes do STF e do STJ)",
+         "Decreto só regulamenta, sem inovar. Tribunal de Contas não exerce função jurisdicional: suas decisões são administrativas"
+        ],
+        [
+         "Materiais",
+         "Ciência das Finanças",
+         "Atividade pré-normativa: liga o Direito Financeiro à realidade econômica do país"
+        ]
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 163",
+       "texto": "Art. 163. Lei complementar disporá sobre:\nI - ==finanças públicas==;\nII - dívida pública externa e interna, incluída a das autarquias, fundações e demais entidades controladas pelo Poder Público;\nIII - concessão de garantias pelas entidades públicas;\nIV - emissão e resgate de títulos da dívida pública;\nV - fiscalização financeira da administração pública direta e indireta;\nVI - operações de câmbio realizadas por órgãos e entidades da União, dos Estados, do Distrito Federal e dos Municípios;\nVII - compatibilização das funções das instituições oficiais de crédito da União, resguardadas as características e condições operacionais plenas das voltadas ao desenvolvimento regional.\nVIII - ==sustentabilidade da dívida==, especificando:\na) indicadores de sua apuração;\nb) níveis de compatibilidade dos resultados fiscais com a trajetória da dívida;\nc) trajetória de convergência do montante da dívida com os limites definidos em legislação;\nd) medidas de ajuste, suspensões e vedações;\ne) planejamento de alienação de ativos com vistas à redução do montante da dívida.\nIX - condições e limites para concessão, ampliação ou prorrogação de ==incentivo ou benefício de natureza tributária==.\nParágrafo único. A lei complementar de que trata o inciso VIII do caput deste artigo pode autorizar a aplicação das vedações previstas no art. 167-A desta Constituição."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Dois incisos novos",
+       "html": "O inciso VIII (sustentabilidade da dívida) veio da EC 109/2021 e o inciso IX (limites para incentivo ou benefício tributário) da EC 135/2024. Materiais mais antigos não trazem o IX."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 165, § 9º, I e II",
+       "texto": "§ 9º Cabe à lei complementar:\nI - dispor sobre o ==exercício financeiro==, a vigência, os prazos, a elaboração e a organização do plano plurianual, da lei de diretrizes orçamentárias e da lei orçamentária anual;\nII - estabelecer normas de ==gestão financeira e patrimonial== da administração direta e indireta bem como condições para a instituição e funcionamento de ==fundos==."
+      },
+      {
+       "t": "lei",
+       "ref": "Lei 4.320/1964, art. 1º",
+       "texto": "Art. 1º Esta lei estatui ==normas gerais de direito financeiro== para elaboração e contrôle dos orçamentos e balanços da União, dos Estados, dos Municípios e do Distrito Federal"
+      },
+      {
+       "t": "lei",
+       "ref": "LRF, art. 1º, caput e § 1º",
+       "texto": "Art. 1o Esta Lei Complementar estabelece normas de finanças públicas voltadas para a ==responsabilidade na gestão fiscal==, com amparo no Capítulo II do Título VI da Constituição.\nA responsabilidade na gestão fiscal pressupõe a ==ação planejada e transparente==, em que se previnem riscos e corrigem desvios capazes de afetar o equilíbrio das contas públicas"
+      },
+      {
+       "t": "texto",
+       "html": "A <b>Lei 4.320/1964</b> nasceu como lei ordinária, mas foi <b>recepcionada com status de lei complementar</b>, porque a CF/88 reserva essa matéria à LC (arts. 163 e 165, § 9º). Consequência prática: só LC a altera. A <b>LRF</b> é a lei complementar que concretiza o art. 165, § 9º, e as leis temporárias do sistema (PPA, LDO, LOA) devem se fundamentar nela. As duas convivem: a LRF não revogou a Lei 4.320."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 62, § 1º, I, d",
+       "texto": "§ 1º É vedada a edição de medidas provisórias sobre matéria:\nI – relativa a:\nd) planos plurianuais, diretrizes orçamentárias, orçamento e créditos adicionais e suplementares, ==ressalvado o previsto no art. 167, § 3º==;"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 167, § 3º",
+       "texto": "§ 3º A abertura de crédito extraordinário somente será admitida para atender a despesas ==imprevisíveis e urgentes==, como as decorrentes de guerra, comoção interna ou calamidade pública, observado o disposto no art. 62."
+      },
+      {
+       "t": "leia",
+       "ref": "CF, arts. 163 a 169",
+       "motivo": "Leitura corrida do capítulo Das Finanças Públicas, só para conhecer o mapa. Os detalhes vêm nas próximas aulas."
+      }
+     ]
+    },
+    {
+     "titulo": "Como funciona: quem legisla sobre Direito Financeiro",
+     "etapa": "regra",
+     "blocos": [
+      {
+       "t": "lei",
+       "ref": "CF, art. 24, I e II, §§ 1º a 4º",
+       "texto": "I - direito tributário, ==financeiro==, penitenciário, econômico e urbanístico;\nII - ==orçamento==;\n§ 1º No âmbito da legislação concorrente, a competência da União limitar-se-á a estabelecer ==normas gerais==.\n§ 2º A competência da União para legislar sobre normas gerais não exclui a competência ==suplementar== dos Estados.\n§ 3º Inexistindo lei federal sobre normas gerais, os Estados exercerão a ==competência legislativa plena==, para atender a suas peculiaridades.\n§ 4º A superveniência de lei federal sobre normas gerais ==suspende a eficácia== da lei estadual, no que lhe for contrário."
+      },
+      {
+       "t": "escada",
+       "degraus": [
+        {
+         "titulo": "União",
+         "sub": "normas gerais",
+         "texto": "Só normas gerais (§ 1º). Exemplos: Lei 4.320/1964 e LRF. Quando a União, a pretexto de norma geral, entra no espaço dos outros entes, a lei é questionada no STF (foi o caso da LRF, ADI 2.238)."
+        },
+        {
+         "titulo": "Estados e DF",
+         "sub": "suplementar",
+         "texto": "Normas específicas para as suas peculiaridades, respeitando as normas gerais (§ 2º). É a competência <b>suplementar complementar</b>."
+        },
+        {
+         "titulo": "Sem norma geral",
+         "sub": "competência plena",
+         "texto": "Se não houver lei federal de normas gerais, o Estado legisla plenamente para atender às suas peculiaridades (§ 3º). É a competência <b>cumulativa</b> (suplementar supletiva)."
+        },
+        {
+         "titulo": "Lei federal superveniente",
+         "sub": "suspende",
+         "texto": "Se a União edita depois a norma geral, a lei estadual tem a <b>eficácia suspensa</b> no que for contrário (§ 4º). Não é revogação: se a lei federal cair, a estadual volta a produzir efeitos."
+        },
+        {
+         "titulo": "Municípios",
+         "sub": "art. 30",
+         "texto": "Não estão no art. 24, e a doutrina majoritária diz que não têm competência concorrente em Direito Financeiro. Mas o STF admite que legislem sobre interesse local e suplementem a legislação federal e estadual no que couber (art. 30, I e II), e o art. 30, III, lhes dá a aplicação das próprias rendas, com prestação de contas."
+        }
+       ]
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 30, I a III",
+       "texto": "I - legislar sobre assuntos de interesse local;\nII - ==suplementar a legislação federal e a estadual== no que couber;\nIII - instituir e arrecadar os tributos de sua competência, bem como ==aplicar suas rendas==, sem prejuízo da obrigatoriedade de prestar contas e publicar balancetes nos prazos fixados em lei;"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "RE 194.704, Plenário, red. p/ acórdão Min. Edson Fachin, j. 29/06/2017",
+       "tese": "Na dúvida sobre a competência legislativa, prefere-se a interpretação que não tolha a competência dos entes menores (presumption against preemption). Só uma lei federal ou estadual que, de forma clara, adequada e razoável, exclua o poder de complementação (clear statement rule) afasta essa presunção. O interesse local do art. 30, I, é o preponderante, não o exclusivo."
+      },
+      {
+       "t": "lei",
+       "ref": "Constituição do Maranhão, art. 133",
+       "texto": "Art. 133. Lei complementar disporá sobre finanças públicas, observados os princípios estabelecidos na Constituição Federal e em lei complementar federal."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "CF × Constituição do Maranhão",
+       "html": "O art. 133 da CE-MA repete o desenho do art. 163 da CF: lei complementar estadual sobre finanças públicas, presa aos princípios da CF e às normas gerais da LC federal. A PGE-MA trabalha exatamente nessa camada: a lei estadual não pode contrariar a LRF nem a Lei 4.320."
+      },
+      {
+       "t": "texto",
+       "html": "<b>O julgamento da LRF (ADI 2.238).</b> O STF disse que a LRF é <b>formalmente constitucional</b> (o processo legislativo foi respeitado) e manteve a maior parte dela, mas derrubou quatro pontos que a FCC adora:"
+      },
+      {
+       "t": "abrir",
+       "cartas": [
+        {
+         "tag": "Inconstitucional",
+         "titulo": "Art. 9º, § 3º",
+         "texto": "Autorizava o <b>Executivo</b> a limitar empenho do Legislativo, do Judiciário e do MP se eles não o fizessem no prazo. O STF viu hierarquização indevida dos outros Poderes ao Executivo, contrária à separação de Poderes e à autonomia financeira deles."
+        },
+        {
+         "tag": "Inconstitucional",
+         "titulo": "Arts. 56 e 57, caput",
+         "texto": "Mandavam o Tribunal de Contas dar <b>parecer prévio</b> também sobre as contas do Legislativo, do Judiciário e do MP. Pela CF (arts. 71 e seguintes), só as contas do chefe do Executivo recebem parecer prévio e são julgadas pelo Legislativo; as dos demais administradores o Tribunal de Contas <b>julga</b>."
+        },
+        {
+         "tag": "Interpretação conforme",
+         "titulo": "Art. 23, § 1º",
+         "texto": "Inconstitucionalidade parcial sem redução de texto: é vedada a leitura que permita <b>reduzir valores</b> de função ou cargo provido. Extinguir cargos e funções continua possível."
+        },
+        {
+         "tag": "Inconstitucional",
+         "titulo": "Art. 23, § 2º",
+         "texto": "Permitia <b>reduzir a jornada com redução proporcional de vencimentos</b> quando estourado o limite de pessoal. Fere a irredutibilidade de vencimentos (CF, art. 37, XV)."
+        }
+       ]
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 2.238, Plenário, Rel. Min. Alexandre de Moraes, j. 24/06/2020 (Info 983)",
+       "tese": "É inconstitucional qualquer interpretação da LRF que permita reduzir vencimentos de servidores para adequar despesas com pessoal, e é inconstitucional o art. 23, § 2º, que facultava a redução temporária da jornada com adequação dos vencimentos."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Decisões recentes do STF sobre competência e normas gerais</b> (todas citadas no material do EBEJI):"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 5.598/DF, Rel. Min. Rosa Weber, j. 27/03/2023 (Info 1088)",
+       "tese": "Lei distrital que calcula o limite da despesa com pessoal de forma contrária à LRF é inconstitucional: viola a competência da União para normas gerais (art. 24, I, II e §§ 1º a 4º) e o equilíbrio fiscal (art. 169)."
+      },
+      {
+       "t": "lei",
+       "ref": "ADCT, art. 113",
+       "texto": "Art. 113. A proposição legislativa que crie ou altere despesa obrigatória ou renúncia de receita deverá ser acompanhada da ==estimativa do seu impacto orçamentário e financeiro==."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 6.303/RR, Rel. Min. Roberto Barroso, j. 11/03/2022 (Info 1046); ADI 6.090/RR, Rel. Min. Dias Toffoli, j. 13/06/2023 (Info 1098)",
+       "tese": "O art. 113 do ADCT (EC 95/2016) vale para todos os entes, não só para a União. É inconstitucional lei estadual que concede benefício fiscal, ou vantagens e aumento a servidores, sem a prévia estimativa de impacto orçamentário e financeiro."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADIs 5.361/DF e 5.463/DF, Rel. Min. Nunes Marques, j. 21/11/2023 (Info 1117); ADI 5.457/AM, j. 19/12/2023 (Info 1121)",
+       "tese": "É constitucional a LC 151/2015, que destina depósitos judiciais e administrativos prioritariamente ao pagamento de precatórios. Mas é inconstitucional lei estadual que manda usar depósitos de processos de pessoas jurídicas de direito privado da Administração indireta: exorbita a norma geral e ofende a propriedade dessas entidades."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 2.037/RS, Rel. Min. Nunes Marques, j. 02/10/2023 (Info 1112)",
+       "tese": "É inconstitucional lei estadual que obriga incluir na LOA as escolhas da população em consulta direta sobre investimentos regionais e municipais: limita a iniciativa do chefe do Executivo (arts. 61, § 1º, II, b, e 165, III)."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 6.308/RR, Rel. Min. Roberto Barroso, j. 03/06/2022 (Info 1057); ADI 6.670 MC/DF, Rel. Min. Gilmar Mendes, j. 30/04/2021 (Info 1015)",
+       "tese": "Emendas parlamentares impositivas estaduais anteriores às ECs 86/2015 e 100/2019 são inconstitucionais, e a Constituição estadual não pode fixar limite de emendas impositivas diferente do art. 166 da CF."
+      }
+     ]
+    },
+    {
+     "titulo": "Exceções e limites: princípios e fiscalização da atividade financeira",
+     "etapa": "excecao",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "<b>Legalidade.</b> No Direito Financeiro ela tem dois ângulos. (1) A <b>despesa</b>: só se gasta com prévia autorização legislativa, na própria LOA, em créditos adicionais ou em operações de crédito. (2) O <b>orçamento</b>: é lei formal, aprovada pelo Legislativo, e só lei o altera. Leia os incisos que a FCC troca:"
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 167, II, III, V, VI e VIII",
+       "texto": "II - a realização de despesas ou a assunção de obrigações diretas que ==excedam os créditos orçamentários ou adicionais==;\nIII - a realização de operações de créditos que excedam o montante das despesas de capital, ressalvadas as autorizadas mediante créditos suplementares ou especiais com finalidade precisa, aprovados pelo Poder Legislativo por ==maioria absoluta==;\nV - a abertura de crédito suplementar ou especial ==sem prévia autorização legislativa== e sem indicação dos recursos correspondentes;\nVI - a transposição, o remanejamento ou a transferência de recursos de uma categoria de programação para outra ou de um órgão para outro, sem prévia autorização legislativa;\nVIII - a utilização, ==sem autorização legislativa específica==, de recursos dos orçamentos fiscal e da seguridade social para suprir necessidade ou cobrir déficit de empresas, fundações e fundos, inclusive dos mencionados no art. 165, § 5º;"
+      },
+      {
+       "t": "texto",
+       "html": "A única despesa sem autorização legislativa prévia é a do <b>crédito extraordinário</b>, aberto por medida provisória (art. 167, § 3º, combinado com o art. 62, § 1º, I, d). E o STF interpreta esse caminho de forma restritiva:"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 4.048 MC, Plenário (DJe 22/02/2011)",
+       "tese": "Além da relevância e urgência do art. 62, o crédito extraordinário exige despesa <b>imprevisível e urgente</b>. Esses requisitos têm interpretação mais restritiva que os do art. 62 e o STF pode controlá-los: guerra, comoção interna e calamidade pública são vetores de interpretação. Crédito aberto por MP para despesas correntes comuns, sem imprevisibilidade nem urgência, desvirtua a Constituição (MP 405/2007, Lei 11.658/2008 suspensa)."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 165, caput e I a III",
+       "texto": "Art. 165. Leis de ==iniciativa do Poder Executivo== estabelecerão:\nI - o plano plurianual;\nII - as diretrizes orçamentárias;\nIII - os orçamentos anuais."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 48, II",
+       "texto": "II - ==plano plurianual, diretrizes orçamentárias, orçamento anual==, operações de crédito, dívida pública e emissões de curso forçado;"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADI 7.643 MC-Ref/PB, Rel. Min. Alexandre de Moraes, j. 18/06/2024 (Info 1140)",
+       "tese": "O chefe do Executivo tem iniciativa exclusiva em matéria orçamentária. Emendas parlamentares só valem se tiverem pertinência com o projeto e não interferirem excessivamente na execução orçamentária."
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "ADPF 1.012/PA, Rel. Min. Edson Fachin, j. 12/12/2022 (Info 1079)",
+       "tese": "São inconstitucionais decisões judiciais que penhoram ou bloqueiam receitas públicas destinadas a contratos de gestão para pagar despesas estranhas ao objeto deles: violam separação de Poderes, legalidade orçamentária, eficiência e continuidade do serviço público."
+      },
+      {
+       "t": "nota",
+       "tom": "hipotese",
+       "titulo": "Olhar da procuradoria",
+       "html": "Na PGE-MA, a ADPF 1.012 é argumento de defesa: quando um juízo bloqueia verba vinculada a contrato de gestão ou a outra finalidade para pagar dívida alheia, a tese é a violação da legalidade orçamentária e da separação de Poderes."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Economicidade.</b> Com o mínimo de recursos, o máximo de satisfação das necessidades públicas. Vale na elaboração do orçamento e na execução do gasto, e é um dos critérios da fiscalização do art. 70."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 70, caput",
+       "texto": "Art. 70. A fiscalização contábil, financeira, orçamentária, operacional e patrimonial da União e das entidades da administração direta e indireta, quanto à ==legalidade, legitimidade, economicidade==, aplicação das subvenções e renúncia de receitas, será exercida pelo Congresso Nacional, mediante controle externo, e pelo sistema de controle interno de cada Poder."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Transparência.</b> Permite que a população fiscalize a gestão. A LRF lista os instrumentos (art. 48) e manda deixar as contas do chefe do Executivo disponíveis durante todo o exercício (art. 49). Com a LC 156/2016, quem descumpre os deveres de divulgação fica sujeito ao art. 51, § 2º: proibição de receber transferências voluntárias e de contratar operações de crédito (salvo refinanciamento do principal da dívida mobiliária)."
+      },
+      {
+       "t": "lei",
+       "ref": "LRF, art. 48, caput",
+       "texto": "Art. 48. São ==instrumentos de transparência da gestão fiscal==, aos quais será dada ampla divulgação, inclusive em meios eletrônicos de acesso público: os planos, orçamentos e leis de diretrizes orçamentárias; as prestações de contas e o respectivo parecer prévio; o Relatório Resumido da Execução Orçamentária e o Relatório de Gestão Fiscal; e as versões simplificadas desses documentos."
+      },
+      {
+       "t": "lei",
+       "ref": "CF, art. 163-A",
+       "texto": "Art. 163-A. A União, os Estados, o Distrito Federal e os Municípios disponibilizarão suas informações e dados contábeis, orçamentários e fiscais, conforme periodicidade, formato e sistema estabelecidos pelo órgão central de contabilidade da União, de forma a garantir a ==rastreabilidade, a comparabilidade e a publicidade== dos dados coletados, os quais deverão ser divulgados em meio eletrônico de amplo acesso público."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Responsabilidade fiscal.</b> A LRF fixa metas, limites e condições para o gasto público, com sanções ao administrador que descumpre. O núcleo é o art. 1º, § 1º (ação planejada e transparente, prevenção de riscos, correção de desvios). Será o tema da aula B8-05."
+      },
+      {
+       "t": "texto",
+       "html": "<b>Fiscalização pelos Tribunais de Contas.</b> O STF entendia que as estatais só se sujeitavam ao Tribunal de Contas quando houvesse dano ao Erário (MS 23.627). A posição mudou:"
+      },
+      {
+       "t": "juris",
+       "tribunal": "STF",
+       "ref": "MS 25.092 (DJ 17/03/2006) e MS 25.181 (DJ 16/06/2006)",
+       "tese": "Empresas públicas e sociedades de economia mista estão sujeitas à fiscalização do Tribunal de Contas independentemente de dano ao Erário, mesmo com empregados celetistas (nova leitura do art. 71, II, da CF; superados os MS 23.627 e 23.875)."
+      },
+      {
+       "t": "nota",
+       "tom": "atencao",
+       "titulo": "Terceiro setor",
+       "html": "O EBEJI cita acórdão do TJDFT (602.832, 2012): organização social que gere recursos públicos presta contas e se sujeita ao controle da Administração e do Tribunal de Contas. É decisão de tribunal local, não do STF: use como reforço, não como precedente vinculante."
+      }
+     ]
+    },
+    {
+     "titulo": "Como a FCC cobra",
+     "etapa": "banca",
+     "blocos": [
+      {
+       "t": "texto",
+       "html": "Não há questão FCC deste tema nas provas guardadas na pasta. O padrão esperado é o da PGE-AM: frase da lei ou da tese com uma palavra trocada. As trocas mais prováveis estão abaixo."
+      },
+      {
+       "t": "nota",
+       "tom": "pegadinha",
+       "titulo": "O que pode cair assim",
+       "html": "1) Competência para legislar sobre Direito Financeiro: <b>concorrente</b> (União, Estados e DF), não privativa da União. 2) Lei federal posterior <b>suspende</b> a eficácia da estadual contrária, não revoga. 3) Lei 4.320: lei ordinária com <b>status de LC</b>. 4) MP sobre créditos adicionais: vedada, <b>salvo crédito extraordinário</b>, com imprevisibilidade e urgência controláveis pelo STF. 5) Atividade financeira: receita, despesa, orçamento e <b>crédito público</b>. 6) Ciência das Finanças: <b>fonte material</b>, pré-jurídica. 7) Decisão de Tribunal de Contas: fonte formal <b>secundária</b>, administrativa. 8) LRF: Executivo <b>não pode</b> limitar empenho dos outros Poderes (art. 9º, § 3º, inconstitucional); <b>não</b> há redução de jornada com redução de vencimento (art. 23, § 2º). 9) Art. 113 do ADCT vale para <b>todos os entes</b>. 10) Estatal se sujeita ao Tribunal de Contas <b>sem</b> necessidade de dano ao Erário."
+      },
+      {
+       "t": "vf",
+       "itens": [
+        {
+         "texto": "A atividade financeira do Estado compreende receita, despesa, orçamento e crédito público.",
+         "v": true,
+         "porque": "Os quatro fenômenos da atividade financeira."
+        },
+        {
+         "texto": "Compete privativamente à União legislar sobre direito financeiro.",
+         "v": false,
+         "porque": "Concorrente: CF, art. 24, I."
+        },
+        {
+         "texto": "A superveniência de lei federal sobre normas gerais revoga a lei estadual no que lhe for contrário.",
+         "v": false,
+         "porque": "Suspende a eficácia (art. 24, § 4º)."
+        },
+        {
+         "texto": "A Ciência das Finanças é fonte material do Direito Financeiro.",
+         "v": true,
+         "porque": "É atividade pré-normativa que liga o Direito Financeiro à realidade econômica."
+        },
+        {
+         "texto": "As decisões dos Tribunais de Contas são fontes formais principais do Direito Financeiro, pois têm natureza jurisdicional.",
+         "v": false,
+         "porque": "São fontes secundárias e administrativas: o Tribunal de Contas não exerce jurisdição."
+        },
+        {
+         "texto": "É inconstitucional a norma da LRF que autorizava o Executivo a limitar o empenho dos demais Poderes que não o fizessem no prazo.",
+         "v": true,
+         "porque": "ADI 2.238: art. 9º, § 3º, inconstitucional."
+        },
+        {
+         "texto": "O art. 113 do ADCT, que exige estimativa de impacto orçamentário e financeiro, aplica-se apenas à União.",
+         "v": false,
+         "porque": "ADI 6.303 e ADI 6.090: vale para todos os entes."
+        },
+        {
+         "texto": "A sociedade de economia mista só se sujeita ao Tribunal de Contas se houver dano ao Erário.",
+         "v": false,
+         "porque": "MS 25.092 e 25.181: sujeita-se independentemente de dano."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "questoes": [
+    "fin-af-01",
+    "fin-af-02",
+    "fin-af-03",
+    "fin-af-04",
+    "fin-af-05",
+    "fin-af-06",
+    "fin-af-07",
+    "fin-af-08",
+    "fin-af-09",
+    "fin-af-10",
+    "fin-af-11",
+    "fin-af-12",
+    "fin-af-13",
+    "fin-af-14"
+   ]
+  },
+  {
+   "id": "B8-a02",
+   "topico_id": "B8-02",
+   "numero": 2,
+   "titulo": "Orçamento público",
+   "status": "a_montar"
+  },
+  {
+   "id": "B8-a03",
+   "topico_id": "B8-03",
+   "numero": 3,
+   "titulo": "Receita pública",
+   "status": "a_montar"
+  },
+  {
+   "id": "B8-a04",
+   "topico_id": "B8-04",
+   "numero": 4,
+   "titulo": "Despesa pública",
+   "status": "a_montar"
+  },
+  {
+   "id": "B8-a05",
+   "topico_id": "B8-05",
+   "numero": 5,
+   "titulo": "Responsabilidade fiscal (LRF)",
+   "status": "a_montar"
+  },
+  {
+   "id": "B8-a06",
+   "topico_id": "B8-06",
+   "numero": 6,
+   "titulo": "Controle e fiscalização",
+   "status": "a_montar"
+  },
+  {
+   "id": "B8-a07",
+   "topico_id": "B8-07",
+   "numero": 7,
+   "titulo": "Precatórios e dívida pública",
+   "status": "a_montar"
+  },
+  {
+   "id": "B8-a08",
+   "topico_id": "B8-08",
+   "numero": 8,
+   "titulo": "Federalismo fiscal",
+   "status": "a_montar"
+  }
+ ],
+ "glossario": [
+  [
+   "Atividade financeira",
+   "Ações do Estado para obter, planejar, gastar e tomar emprestado recursos para as necessidades públicas."
+  ],
+  [
+   "Crédito público",
+   "Empréstimo tomado pelo Estado quando a receita não cobre a despesa. Gera dívida pública."
+  ],
+  [
+   "Fonte material",
+   "O que dá conteúdo às normas sem ser norma: no Direito Financeiro, a Ciência das Finanças."
+  ],
+  [
+   "Norma geral",
+   "Regra nacional editada pela União na competência concorrente, que Estados e Municípios devem respeitar."
+  ],
+  [
+   "Crédito extraordinário",
+   "Autorização de despesa para gasto imprevisível e urgente (guerra, comoção interna, calamidade). Pode vir por MP."
+  ],
+  [
+   "Renúncia de receita",
+   "Benefício que reduz a arrecadação (isenção, anistia, remissão). Exige estimativa de impacto (ADCT, art. 113)."
+  ]
+ ]
+}

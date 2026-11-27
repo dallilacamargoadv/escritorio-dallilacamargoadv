@@ -11,6 +11,7 @@ import cadernoB3 from "@/content/estudos/cadernos/B3.json";
 import cadernoB5 from "@/content/estudos/cadernos/B5.json";
 import cadernoB6 from "@/content/estudos/cadernos/B6.json";
 import cadernoB7 from "@/content/estudos/cadernos/B7.json";
+import cadernoB8 from "@/content/estudos/cadernos/B8.json";
 import roteiros from "@/content/estudos/cadernos/roteiros-resolucao.json";
 
 /** Cadernos prontos, por matéria. Novo caderno = novo JSON importado aqui. */
@@ -25,6 +26,7 @@ export const CADERNOS: Record<string, Caderno> = {
   B5: cadernoB5 as Caderno,
   B6: cadernoB6 as Caderno,
   B7: cadernoB7 as Caderno,
+  B8: cadernoB8 as Caderno,
 };
 
 /** Seção "Na prova: como reconhecer e resolver" (Matemática e Informática), guardada à parte e somada ao fim da aula. */
