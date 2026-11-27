@@ -250,6 +250,28 @@ export function gerarCronograma(
     return melhor;
   }
 
+  type Add = (it: Omit<NovoItem, "data" | "ordem">) => void;
+  /** Um bloco de matéria: tópico novo (aquecimento, lei seca, teoria, questões) ou, sem tópico novo, lei seca + questões. */
+  function estudar(m: Materia, bloco: number, add: Add) {
+    const fila = filaTopicos.get(m.id) ?? [];
+    const t = fila.shift();
+    if (t) {
+      vistos.set(m.id, (vistos.get(m.id) ?? 0) + 1);
+      const aquece = 10;
+      const lei = arred5((bloco - aquece) * 0.35);
+      const teoria = arred5((bloco - aquece) * 0.25);
+      const questoes = Math.floor((bloco - aquece - lei - teoria) / 5) * 5;
+      add({ materia_id: m.id, topico_id: t.id, tipo: "questoes", titulo: `${m.nome}: aquecimento, 5 questões de ${t.titulo} antes de estudar`, minutos: aquece });
+      add({ materia_id: m.id, topico_id: t.id, tipo: "lei_seca", titulo: `${m.nome}: lei seca de ${t.titulo} (grife o que a FCC troca: pode/deve, prazos, competência)`, minutos: lei });
+      add({ materia_id: m.id, topico_id: t.id, tipo: "teoria", titulo: `${m.nome}: ${t.titulo} (teoria só no que você errou ou não entendeu)`, minutos: teoria });
+      add({ materia_id: m.id, topico_id: t.id, tipo: "questoes", titulo: `${m.nome}: bateria de questões de ${t.titulo}`, minutos: questoes });
+    } else {
+      const lei = arred5(bloco * 0.3);
+      add({ materia_id: m.id, topico_id: null, tipo: "lei_seca", titulo: `${m.nome}: lei seca dos pontos que mais caem`, minutos: lei });
+      add({ materia_id: m.id, topico_id: null, tipo: "questoes", titulo: `${m.nome}: questões FCC e refazer os erros`, minutos: Math.floor((bloco - lei) / 5) * 5 });
+    }
+  }
+
   for (let d = 0; d <= total; d++) {
     const data = addDaysToDateString(hoje, d);
     const dow = diaDaSemana(data);
@@ -266,34 +288,35 @@ export function gerarCronograma(
     // revisão espaçada todo dia, até a prova
     add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Revisão espaçada: a fila de hoje na aba Revisão (questões, cartões e artigos)", minutos: dow === 6 ? 20 : 15 });
 
-    /* ---------- SÁBADO: simuladão ---------- */
+    /* ---------- SÁBADO: atrasados, simuladão e uma matéria ---------- */
     if (dow === 6) {
-      const correcao = resta >= 120 ? 40 : 20;
-      const prova = resta - correcao;
-      add({
-        materia_id: "SIM",
-        topico_id: null,
-        tipo: "simulado",
-        titulo: prova >= 180 ? "Simuladão FCC: prova completa, cronometrada, sem consulta" : "Simuladão FCC (versão curta): misto de todas as matérias, cronometrado",
-        minutos: prova,
-      });
-      add({ materia_id: "SIM", topico_id: null, tipo: "questoes", titulo: "Correção do simuladão: classifique cada erro (eles vão para o caderno de erros de domingo)", minutos: correcao });
+      add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Revisão do que ficou para trás: questões erradas das matérias que você já estudou (laboratório de erros)", minutos: 60 });
+      const prova = resta >= 300 ? 150 : Math.max(60, arred5(resta * 0.4));
+      add({ materia_id: "SIM", topico_id: null, tipo: "simulado", titulo: `Simuladão FCC cronometrado (${Math.round(prova / 3)} questões, 3 minutos cada, sem consulta)`, minutos: prova });
+      add({ materia_id: "SIM", topico_id: null, tipo: "questoes", titulo: "Correção do simuladão: classifique cada erro (vão para o caderno de erros de domingo)", minutos: 40 });
+      const m = escolher(new Set());
+      if (m && resta >= 40) estudar(m, Math.min(resta, 120), add);
+      if (cultura.length && resta >= 30) {
+        const c = cultura[iCult++ % cultura.length];
+        add({ materia_id: c.m.id, topico_id: c.t.id, tipo: "teoria", titulo: `${c.m.nome}: ${c.t.titulo}`, minutos: Math.min(resta, 50) });
+      }
       continue;
     }
 
-    /* ---------- DOMINGO: erros da semana e subjetiva ---------- */
+    /* ---------- DOMINGO: erros da semana, discursiva e uma matéria ---------- */
     if (dow === 0) {
-      const disc = resta >= 120 ? 60 : 0;
-      const cult = cultura.length && resta >= 200 ? 40 : 0;
-      add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Caderno de erros da semana: refaça as erradas (site, simuladão e TEC), anote o motivo e o artigo", minutos: Math.max(40, resta - 25 - disc - cult) });
-      add({ materia_id: "REV", topico_id: null, tipo: "lei_seca", titulo: "Lei seca dos erros: releia os artigos que apareceram no caderno de erros", minutos: 25 });
-      if (disc) {
-        add({ materia_id: "DISC", topico_id: null, tipo: "discursiva", titulo: "Discursiva cronometrada + análise: nota, o que faltou (tese, base legal, jurisprudência, estrutura)", minutos: disc });
+      add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Caderno de erros da semana: refaça as erradas (site, simuladão e TEC), anote o motivo e o artigo", minutos: 90 });
+      add({ materia_id: "REV", topico_id: null, tipo: "lei_seca", titulo: "Lei seca dos erros: releia os artigos que apareceram no caderno de erros", minutos: 30 });
+      if (resta >= 120) {
+        add({ materia_id: "DISC", topico_id: null, tipo: "discursiva", titulo: "Discursiva cronometrada + análise: nota, o que faltou (tese, base legal, jurisprudência, estrutura)", minutos: 60 });
       }
-      if (cult) {
+      const m = escolher(new Set());
+      if (m && resta >= 55) estudar(m, Math.min(resta - 15, 120), add);
+      if (cultura.length && resta >= 45) {
         const c = cultura[iCult++ % cultura.length];
-        add({ materia_id: c.m.id, topico_id: c.t.id, tipo: "teoria", titulo: `${c.m.nome}: ${c.t.titulo}`, minutos: cult });
+        add({ materia_id: c.m.id, topico_id: c.t.id, tipo: "teoria", titulo: `${c.m.nome}: ${c.t.titulo}`, minutos: Math.min(resta - 15, 50) });
       }
+      add({ materia_id: "REV", topico_id: null, tipo: "revisao", titulo: "Fechamento: olhe a semana que vem no cronograma e anote os 3 pontos fracos da semana", minutos: 15 });
       continue;
     }
 
@@ -327,23 +350,7 @@ export function gerarCronograma(
       usadas.add(m.id);
       const bloco = Math.floor((resta - reservaSim) / (nMaterias - k));
       if (bloco < 25) break;
-      const fila = filaTopicos.get(m.id) ?? [];
-      const t = fila.shift();
-      if (t) {
-        vistos.set(m.id, (vistos.get(m.id) ?? 0) + 1);
-        const aquece = 10;
-        const lei = arred5((bloco - aquece) * 0.35);
-        const teoria = arred5((bloco - aquece) * 0.25);
-        const questoes = Math.floor((bloco - aquece - lei - teoria) / 5) * 5;
-        add({ materia_id: m.id, topico_id: t.id, tipo: "questoes", titulo: `${m.nome}: aquecimento, 5 questões de ${t.titulo} antes de estudar`, minutos: aquece });
-        add({ materia_id: m.id, topico_id: t.id, tipo: "lei_seca", titulo: `${m.nome}: lei seca de ${t.titulo} (grife o que a FCC troca: pode/deve, prazos, competência)`, minutos: lei });
-        add({ materia_id: m.id, topico_id: t.id, tipo: "teoria", titulo: `${m.nome}: ${t.titulo} (teoria só no que você errou ou não entendeu)`, minutos: teoria });
-        add({ materia_id: m.id, topico_id: t.id, tipo: "questoes", titulo: `${m.nome}: bateria de questões de ${t.titulo}`, minutos: questoes });
-      } else {
-        const lei = arred5(bloco * 0.3);
-        add({ materia_id: m.id, topico_id: null, tipo: "lei_seca", titulo: `${m.nome}: lei seca dos pontos que mais caem`, minutos: lei });
-        add({ materia_id: m.id, topico_id: null, tipo: "questoes", titulo: `${m.nome}: questões FCC e refazer os erros`, minutos: Math.floor((bloco - lei) / 5) * 5 });
-      }
+      estudar(m, bloco, add);
     }
 
     if (simLei) {

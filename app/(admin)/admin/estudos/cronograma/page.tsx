@@ -50,10 +50,10 @@ export default async function CronogramaPage(props: PageProps<"/admin/estudos/cr
             <span className="text-e-ink">Quarta:</span> uma matéria e um simulado de lei seca de uma matéria que você já estudou.
           </li>
           <li>
-            <span className="text-e-ink">Sábado:</span> simuladão cronometrado e correção rápida, classificando cada erro.
+            <span className="text-e-ink">Sábado:</span> 1 hora de revisão do que ficou para trás (erros das matérias já estudadas), simuladão de 2h30 com 3 minutos por questão, correção, uma matéria e um tema do Maranhão.
           </li>
           <li>
-            <span className="text-e-ink">Domingo:</span> caderno de erros da semana (site, simuladão e TEC), lei seca desses erros, discursiva com análise do que faltou.
+            <span className="text-e-ink">Domingo:</span> caderno de erros da semana (site, simuladão e TEC), lei seca desses erros, discursiva com análise, uma matéria e o fechamento da semana.
           </li>
         </ul>
       </details>
