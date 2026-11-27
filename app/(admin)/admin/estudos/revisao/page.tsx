@@ -70,7 +70,8 @@ export default async function RevisaoPage() {
   }
   const porBaralho = new Map<string, typeof CARTOES>();
   for (const c of CARTOES) {
-    if (estadosCartoes.has(c.id)) continue;
+    // Matemática é exercício, não cartão (pedido dela, 27/11): o baralho de Raciocínio Lógico não entra como novo.
+    if (estadosCartoes.has(c.id) || c.b === "Raciocínio Lógico") continue;
     porBaralho.set(c.b, [...(porBaralho.get(c.b) ?? []), c]);
   }
   const novos: CartaoFila[] = [];
