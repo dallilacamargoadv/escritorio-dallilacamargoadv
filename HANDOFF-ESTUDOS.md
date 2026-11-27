@@ -7,6 +7,7 @@ Documento único da área de estudos do painel: arquitetura, modelo de dados, re
 Área privada em `/admin/estudos` (mesmo login, mesmo PWA do painel) para a preparação da Dallila para Analista Jurídico da PGE-MA (Concurso Unificado do Maranhão, banca FCC, fase pré-edital). Ela substitui aos poucos a plataforma antiga, que é um Artifact (`CONCURSO PGE-MA/plataforma/rumo-pge-ma.html`). A plataforma antiga **não foi alterada** e continua funcionando.
 
 Princípios combinados com ela:
+- **Explicação sempre passo a passo, sem pular conta (pedido dela, 27/11/2026).** Em Matemática (e em tudo que tiver raciocínio), mostrar como se resolve: passos numerados, uma conta por passo, o porquê de cada passo (ex.: por que divide por 3), e a conferência no fim. Nada de "3B = 120 → B = 40" sem explicar. Preferir caminhos visuais (listar múltiplos e divisores, rodadas, pedaços) a fórmulas soltas. Vale para aulas, questões (campo `why` da correta) e cartões. Matemática não ganha cartões: é bateria de exercícios (50 por assunto, só avança com as 50 certas, `BATERIAS` em `lib/estudos-utils.ts`).
 - Nada inventado: lei, jurisprudência, estatística de banca e datas do concurso só com fonte. Hipótese aparece como hipótese.
 - Estatística da banca só a partir de provas reais da FCC. As 486 questões do banco são autorais "no estilo FCC" e servem para treino, não para estatística de banca.
 - Prontidão, nunca "chance de aprovação".
