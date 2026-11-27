@@ -4,6 +4,8 @@ import { getRespostas, QUESTAO_POR_ID } from "@/lib/db-estudos";
 import { BARALHO_ERROS, cartoesDosErros, mapaDosErros, rotuloMotivo, type NoSubtema } from "@/lib/estudos-erros-cartoes";
 import { htmlSeguro } from "@/lib/estudos-html";
 import { Cabecalho, Card } from "@/components/estudos/ui";
+import { RevisaoDeOntem } from "@/components/estudos/RevisaoDeOntem";
+import { todayBelemDateString } from "@/lib/atividades-utils";
 
 const tom = (pendentes: number) => (pendentes ? "bg-e-bad-soft text-e-bad" : "bg-e-ok-soft text-e-ok");
 const contagem = (vezes: number, pendentes: number) => `${vezes} ${vezes === 1 ? "erro" : "erros"} · ${pendentes ? `${pendentes} ainda errando` : "superado"}`;
@@ -26,6 +28,7 @@ export default async function MapaErrosPage(props: PageProps<"/admin/estudos/map
         titulo="Mapa dos erros"
         sub="Seus erros agrupados por matéria, tema e subtema. Abra um subtema para ver as questões, o motivo, a sua nota e a regra, e revise os cartões só dele."
       />
+      <RevisaoDeOntem hoje={todayBelemDateString()} respostas={respostas} />
       {!m ? (
         <Card>
           <p className="text-sm text-e-dim">Nenhum erro ainda. Quando você errar uma questão e disser o motivo, ela aparece aqui.</p>

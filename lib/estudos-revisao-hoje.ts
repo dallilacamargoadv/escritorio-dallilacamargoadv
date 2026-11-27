@@ -11,21 +11,24 @@ import { dataBelem, ETAPA_FINAL, etapaDoCartao, type Cartao, type EstadoCartao }
 
 export const NOVOS_ERROS_POR_DIA = 5;
 
-/** Frente: o enunciado e o que ela marcou. Verso: por que está errado e o certo. Extra: motivo, nota e regra. */
-export function htmlDoCartaoErro(c: CartaoErro) {
+/**
+ * Flashcard do erro (27/11): a frente é a questão inteira com as alternativas, para responder de novo.
+ * O verso traz o que ela marcou antes, por que estava errado e o certo. Extra: motivo, nota e regra.
+ */
+export function htmlDoCartaoErro(c: CartaoErro, q?: Questao) {
   const p = c.pegadinhas[0];
   const rotulo = (t: string) => `<span class="block text-[11px] uppercase tracking-[0.14em] text-e-dim">${t}</span>`;
   const itens = c.itens.length ? `<br>${c.itens.map(htmlSeguro).join("<br>")}` : "";
   const frente =
     `<span class="block text-[11px] text-e-dim">${htmlSeguro(`${c.materia} · ${c.grupoNome} · ${c.ref}`)}</span>` +
-    `<span class="mt-1 block">${htmlSeguro(c.enun)}${itens}</span>` +
-    (p
-      ? `<span class="mt-3 block border-l-2 border-e-bad/60 pl-3 text-sm">Você marcou: “${htmlSeguro(p.marcada)}”${p.vezes > 1 ? ` (${p.vezes} vezes)` : ""}</span>` +
-        `<span class="mt-2 block text-sm text-e-dim">Por que está errado? Qual é o certo? Responda de cabeça antes de virar.</span>`
-      : `<span class="mt-3 block text-sm text-e-dim">Você acertou sem firmeza. Qual é a resposta certa e por quê?</span>`);
+    `<span class="mt-1 block">${htmlSeguro(c.enun)}${itens}</span>`;
   const verso =
-    (p ? `${rotulo("Por que está errado")}<span class="mt-1 block border-l-2 border-e-bad/60 pl-3">${htmlSeguro(p.texto)}</span>` : "") +
-    `<span class="${p ? "mt-3 " : ""}block">${rotulo("O certo")}</span><span class="mt-1 block border-l-2 border-e-ok/60 pl-3">${htmlSeguro(c.certa)}</span>`;
+    (p
+      ? `${rotulo(`Você marcou antes${p.vezes > 1 ? ` (${p.vezes} vezes)` : ""}`)}<span class="mt-1 block border-l-2 border-e-bad/60 pl-3">“${htmlSeguro(p.marcada)}”: ${htmlSeguro(p.texto)}</span>`
+      : `${rotulo("Antes")}<span class="mt-1 block text-e-dim">Você acertou sem firmeza.</span>`) +
+    `<span class="mt-3 block">${rotulo("O certo")}</span><span class="mt-1 block border-l-2 border-e-ok/60 pl-3">${htmlSeguro(c.certa)}</span>`;
+  const alts = q?.alts?.length ? q.alts.map(htmlSeguro) : [];
+  const porque = q?.why?.length ? q.why.map(htmlSeguro) : [];
   const nota = c.notas.at(-1);
   const extra = [
     `Motivo: ${c.motivos.map(rotuloMotivo).join(", ")} · ${c.vezes === 1 ? "1 erro" : `${c.vezes} erros`}${c.superado ? " · já acertou firme depois" : ""}.`,
@@ -34,7 +37,17 @@ export function htmlDoCartaoErro(c: CartaoErro) {
   ]
     .filter(Boolean)
     .join("<br><br>");
-  return { frente, verso, extra, lei: c.fonte ? fonteHtml(c.fonte) : "", fcc: c.alerta ? htmlSeguro(c.alerta) : "", baralho: BARALHO_ERROS };
+  return {
+    frente,
+    verso,
+    extra,
+    lei: c.fonte ? fonteHtml(c.fonte) : "",
+    fcc: c.alerta ? htmlSeguro(c.alerta) : "",
+    baralho: BARALHO_ERROS,
+    alts,
+    correta: q && alts.length ? q.c : undefined,
+    porque,
+  };
 }
 
 /* ===================== SUBJETIVA DO DIA ===================== */
